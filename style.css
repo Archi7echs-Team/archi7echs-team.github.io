@@ -1,23 +1,64 @@
 :root {
   color-scheme: light dark;
   font-family: "Poppins", sans-serif;
+  color: light-dark(#222, #e0e0e0);
+  --font-color: light-dark(#222, #e0e0e0);
   --max-width: 700px;
   --border-color: light-dark(#222, #ccc);
+  --animation-speed: 100;
+  --slide-ease: cubic-bezier(0.86, 0, 0.07, 1);
+  --slide-duration: calc(400ms * 100 / var(--animation-speed));
+  --slide-delay: calc(450ms * 100 / var(--animation-speed));
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem 2rem;
+  min-height: 100%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 100%;
+  width: auto;
   max-width: var(--max-width);
   margin: auto;
   padding: 0 16px;
 }
 
+.name {
+  fill: light-dark(#222, #e0e0e0);
+  padding: 12px;
+  min-width: 230px;
+  max-width: 500px;
+}
+
 header {
   max-width: var(--max-width);
-  width: 100%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -33,7 +74,7 @@ input {
 .accordion-container {
   margin: auto;
   padding: 0;
-  width: 100%;
+  width: auto;
   list-style: none;
 }
 
@@ -55,6 +96,28 @@ input {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover {
   background-color: light-dark(#d3d3d3, #2b2b2b);
+}
+
+.title {
+  margin: 0;
+}
+
+.title::before {
+  --chevron-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath fill='red' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E");
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0.5rem;
+  aspect-ratio: 320 / 512;
+  display: inline-block;
+  margin-right: 0.75rem;
+  transform: rotate(var(--d, 0deg));
+  transition: transform var(--slide-ease) var(--slide-duration);
+  mask-image: var(--chevron-icon);
+  mask-size: 100% 100%;
+  -webkit-mask-image: var(--chevron-icon);
+  -webkit-mask-size: 100% 100%;
+  background-color: var(--font-color);
 }
 
 .accordion-label {
@@ -80,17 +143,23 @@ input:not(:checked) ~ .accordion-content {
   max-height: 0;
 }
 
+input:checked ~ .accordion-label .title::before {
+  --d: 90deg;
+}
+
+input:not(:checked) ~ .accordion-label .title::before {
+  --d: 0deg;
+  transition: transform var(--slide-ease) var(--slide-duration) var(--slide-delay);}
+
 .accordion-content > div {
   margin: 0;
   padding-bottom: 0.85em;
 }
 
-
 .tabbed {
   overflow-x: hidden; /* so we could easily hide the radio inputs */
   margin: auto;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
   width: 100%;
 }
 
@@ -102,6 +171,7 @@ input:not(:checked) ~ .accordion-content {
 .tabs {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: left;
   margin: auto;
@@ -122,10 +192,9 @@ input:not(:checked) ~ .accordion-content {
   margin-top: auto;
   display: block;
   height: 100%;
+  min-height: 100%;
   margin-bottom: -1px;
-  margin-top: -1px;
   padding: 12px 15px;
-  border-bottom: 1px solid var(--border-color);
   background-color: inherit;
   font-size: 12px;
   font-weight: 600;
@@ -151,11 +220,16 @@ input:not(:checked) ~ .accordion-content {
 .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
 .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
 .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
-.tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
-  border-bottom-color: light-dark(#fff, #121212);
+.tabbed
+  [type="radio"]:nth-of-type(5):checked
+  ~ .tabs
+  .tab:nth-of-type(5)
+  label {
+  border-bottom: 2px solid light-dark(#fff, #121212);
   border-top: 1px solid #b721ff;
   background: light-dark(#fff, #121212);
   color: light-dark(#222, #ffffff);
+  text-decoration: underline;
 }
 
 .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
