@@ -103,7 +103,7 @@ input:not(:checked) ~ .accordion-content {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   margin: auto;
   height: auto;
   background-color: inherit;
