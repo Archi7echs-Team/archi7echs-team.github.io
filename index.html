@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archi7echs</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 style="margin: auto 0; padding: 10px">Archi7echs</h1>
+      <img
+        src="img/logo_ufficiale_nobg.png"
+        alt="logo"
+        style="width: 100px; padding: 10px"
+      />
+    </header>
+
+    <div class="container">
+      <div class="accordion-container">
+        <div class="accordion">
+          <input type="checkbox" id="acc1" />
+          <label class="accordion-label" for="acc1">
+            <h3 style="margin: 0">Chi siamo</h3>
+          </label>
+          <div class="accordion-content">
+            <div>
+              Elenco dei membri del gruppo:
+              <ul>
+                <li>Gabriele Checchinato</li>
+                <li>Leonardo Lucato</li>
+                <li>Giacomo Pesenato</li>
+                <li>Francesco Pozzobon</li>
+                <li>Giovanni Salvò</li>
+                <li>Gioele Scandaletti</li>
+                <li>Pietro Valdagno</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="checkbox" id="acc2" />
+          <label class="accordion-label" for="acc2">
+            <h3 style="margin: 0">Il progetto</h3>
+          </label>
+          <div class="accordion-content">
+            <div>
+              Lorem ipsum dolor sit amet con <br />
+              sectetur, adipisicing elit. Ipsum, reiciendis! Lorem ipsum dolor
+              sit amet consectetur, adipisicing elit. Ipsum, reiciendis! Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
+              reiciendis! Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Ipsum, reiciendis! Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Ipsum, reiciendis!
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabbed">
+        <input type="radio" id="tab1" name="css-tabs" checked />
+        <input type="radio" id="tab2" name="css-tabs" />
+        <input type="radio" id="tab3" name="css-tabs" />
+
+        <ul class="tabs">
+          <li class="tab"><label for="tab1">Documenti interni</label></li>
+          <li class="tab"><label for="tab2">Documenti esterni</label></li>
+          <li class="tab"><label for="tab3">Architettura</label></li>
+        </ul>
+
+        <div class="tab-content">
+          <h4>Candidatura</h4>
+          <ul>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 1</a>
+            </li>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 2</a>
+            </li>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content">
+          <ul>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 1</a>
+            </li>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 2</a>
+            </li>
+            <li>
+              <a href="docs/verbali interni/TemplateSWE.pdf">Documento 3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content">
+          <h4>Zombie lipsum</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+            quod, voluptates, quae, quos, doloremque quia quibusdam voluptatem
+            dolorum quas quidem. Quisquam quod, voluptates, quae, quos,
+            doloremque quia quibusdam voluptatem dolorum quas quidem. Quisquam
+            quod, voluptates, quae, quos, doloremque quia quibusdam voluptatem
+            dolorum
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
