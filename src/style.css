@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #e65c00;
+  --secondary-color: #cd7f32;
+  --tertiary-color: #b87333;
+  --dark-color: #2a2a2a;
+  --light-color: white;
+  --background-color: #2a2a2a;
+  --text-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin: 0px 20px;
+}
+
+.brand {
+  max-height: 75px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.nav {
+  background-color: #e65c00;
+  padding: 15px 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.file-list {
+  background-color: var(--background-color);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  border: 2px solid white;
+}
+
+.card-title {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: var(--background-color);
+  padding: 0 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.category {
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.file-item {
+  background: linear-gradient(135deg, #cd7f32 0%, #b87333 100%);
+  margin: 10px 0;
+  padding: 12px 20px 12px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: skew(-10deg);
+  transform-origin: top;
+}
+
+.file-item:hover {
+  opacity: 0.8;
+}
+
+.file-item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.indent {
+  margin-left: 30px;
+}

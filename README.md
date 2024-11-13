@@ -1,7 +1,3 @@
 # archi7echs-team.github.io
 
-git add --all
-
-git commit -m "Initial commit"
-
-git push -u origin main
+Repo per creare la page, si aggiorna in automatico dalla repos docs grazie all'uso delle github actions

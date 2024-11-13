@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="391.58mm" height="391.58mm" version="1.1" viewBox="0 0 391.58 391.58" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    :root {
+        <!-- fill-color: #e6e6e6; -->
+        --fill-color: #f0f0f0;
+        --stroke-color: #202020;
+        --stroke-width: 8;
+    }
+    </style>
+<g transform="translate(76.465 71.702)">
+<g transform="translate(-185.25 -127.57)">
+<circle
+cx="304.58" cy="252.06" r="158.09" fill="none" stroke="var(--stroke-color)" stroke-width="var(--stroke-width)"/>
+<path d="m304.58 59.168a192.49 192.49 0 0 0-192.49 192.49 192.49 192.49 0 0 0 192.49 192.49 192.49 192.49 0 0 0 192.49-192.49 192.49 192.49 0 0 0-192.49-192.49zm0 34.799a158.09 158.09 0 0 1 158.09 158.09 158.09 158.09 0 0 1-158.09 158.09 158.09 158.09 0 0 1-158.09-158.09 158.09 158.09 0 0 1 158.09-158.09z"
+fill="var(--fill-color)" stroke="var(--stroke-color)" stroke-width="var(--stroke-width)"/>
+<circle transform="rotate(87.309)" cx="265.68" cy="-292.44" r="174.94" fill="none" stroke="var(--stroke-color)" stroke-dasharray="var(--stroke-width), calc(var(--stroke-width)*2)" stroke-width="var(--stroke-width)"/>
+
+<g fill="var(--fill-color)" stroke="var(--stroke-color)" stroke-width="var(--stroke-width)">
+<path d="m147.92 272.11a158.09 158.09 0 0 0 4.9356 24.326h303.44a158.09 158.09 0 0 0 4.9356-24.326z"
+/>
+<path d="m309.76 296.44-38.697 144.42a192.49 192.49 0 0 0 24.476 2.6443l39.406-147.06z"/>
+<path d="m334.94 296.44-39.406 147.06a192.49 192.49 0 0 0 9.0413 0.64647 192.49 192.49 0 0 0 16.164-0.72709l39.385-146.98z"/>
+<path d="m304.58 93.967-158.09 158.09a158.09 158.09 0 0 0 0 5.2e-4 158.09 158.09 0 0 0 3.4484 30.954l154.64-154.64 154.64 154.64a158.09 158.09 0 0 0 3.4484-30.954z"/>
+<path d="m304.58 93.967-189.78 189.78c1.5884 9.4614 3.8621 18.685 6.7774 27.625l183-183 183 183c2.9153-8.9398 5.1885-18.164 6.7768-27.626z"/>
+<path d="m304.58 157.33-174.81 174.81a192.49 192.49 0 0 0 12.151 22.252l162.66-162.66 162.7 162.7a192.49 192.49 0 0 0 12.12-22.282z"/>
+<path d="m200.78 232.16-24.326 24.326h256.24l-24.326-24.326z"/>
+<rect x="294.14" y="86.375" width="25.983" height="8.3587" stroke-linejoin="bevel" stroke-width="5" stroke="none"/>
+</g>
+
+<path d="m181.46 152.88a158.09 158.09 0 0 1 121.06-58.901 158.09 158.09 0 0 1 122.55 55.743" fill="none" stroke="var(--stroke-color)" stroke-width="var(--stroke-width)"/>
+</g>
+</g>
+</svg>
+<!-- This is a comment in the SVG file -->
