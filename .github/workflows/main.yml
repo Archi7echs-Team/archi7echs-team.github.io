@@ -1,0 +1,129 @@
+name: Compile Typst documents
+on:
+  push:
+    branches:
+      - sources
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: checkout the builds repo
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: master
+          token: ${{secrets.ORG_PUSH_TOKEN}} # yeah i know this is a _bad_ workaround
+
+      - name: move master to runner.temp
+        run: |
+          mv master "${RUNNER_TEMP}"
+      - name: restore timestamps
+        uses: chetan/git-restore-mtime-action@v2
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          separator: ","
+          files: |
+            documents/**/*.typ
+
+      - name: print changed files
+        run: |
+          echo ${{ steps.changed-files.outputs.all_changed_files }}
+
+      - name: delete ignored and unchanged typst documents
+        run: |
+          shopt -s globstar
+          ls documents/**/*.typ > .all
+          echo ${{ steps.changed-files.outputs.all_changed_files }} | tr "," "\n" | sort > .changed
+          comm -23 .all .changed >> .typstignore
+          while IFS= read -r f; do rm -rf "${f}"; done < .typstignore
+
+      - uses: typst-community/setup-typst@v3
+
+      - name: typst compile
+        run: |
+          find documents -type f -name "*.typ" -exec typst compile --root . {} \;
+
+      - name: set timestamp and version for builds of changed files and replace the old ones in the local copy of `master`
+        run: |
+          shopt -s globstar
+          for f in documents/**/*.typ; do
+            [[ ! -f "$f" ]] && continue # skip if nothing to build
+            rm -f "${RUNNER_TEMP}/master/${f%.typ}"*
+            touch -amd "$( date -R -r "$f" )" "${f%.typ}.pdf"
+            rsync -aR "${f%.typ}.pdf" "${RUNNER_TEMP}/master"
+          done
+
+      - name: push to builds repo
+        run: |
+          pushd "${RUNNER_TEMP}/master"
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "$(date)" || continue
+          git push
+        env:
+          TZ: Europe/Rome
+
+      - name: Upload website files
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs
+          path: ${{ runner.temp }}/master/documents
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: compile
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - name: checkout the builds repo
+        uses: actions/checkout@v4
+        with:
+          ref: website
+          token: ${{secrets.ORG_PUSH_TOKEN}}
+
+      - name: Download website files
+        uses: actions/download-artifact@v4
+        with:
+          name: "docs"
+          path: documents
+
+      - name: show files
+        run: |
+          ls -R .
+
+      - name: Run format.py and remove it
+        run: |
+          python3 format.py
+          rm format.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
