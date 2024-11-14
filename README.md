@@ -1,3 +1,5 @@
 # archi7echs-team.github.io
 
-Repo per creare la page, si aggiorna in automatico dalla repos docs grazie all'uso delle github actions
+Branch per creare la page, si aggiorna in automatico dalla repos docs grazie all'uso delle github actions
+Visita il sito:
+[archi7echs-team.github.io](archi7echs-team.github.io)
