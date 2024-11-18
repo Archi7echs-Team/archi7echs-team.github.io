@@ -42,7 +42,7 @@
       inset: 6pt,
       [#strong[Autore:] Francesco Pozzobon],
       [#strong[Tipologia Documento:] Interno],
-      [#strong[Ultima Modifica:] 18/11/2024 09:00],
+      [#strong[Ultima Modifica:] 18/11/2024 10:10],
       [#strong[Stato:] Bozza],
     )]
   )
@@ -175,9 +175,14 @@ Per allinearsi agli standard visti a lezione si è deciso, d'ora in poi, di util
 - y: minor release
 - z: correzioni 
 
-Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, in modo parallelo alle commit.
-Ogni correzione che viene applicata da un revisione richiede un incremento del valore di tipo _z_. 
-Per i documenti più corposi si prevende di incrementare il valore _x_ qual'ora la modifica porti il documento ad una versione completa.  
+Per i documenti più corposi: \
+- Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, in modo parallelo alle commit.
+- Ogni correzione che viene applicata da un revisione richiede un incremento del valore di tipo _z_. 
+- L'incremento del valore _x_ qual'ora la modifica porti il documento ad una versione completa.  
+
+Per i verbali: \
+- Alla prima stesura il verbale assume la versione 1.0.0
+- Sarà cura del revisiore definire, in fase di correzione, il tipo di modifica (se minor o correzione) ed, in caso di richiesta di correzioni al redatore del documento, dovrà indicare nel messaggio della pull request il nuovo numero di versione da assegnare
 
 Non essendoci altri argomenti da discutere l’incontro del team Archi7echs è terminato alle 17:00. \
 Seguirà convocazione nel gruppo Telegram per il prossimo incontro del gruppo. \
