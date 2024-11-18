@@ -42,7 +42,7 @@
       inset: 6pt,
       [#strong[Autore:] Francesco Pozzobon],
       [#strong[Tipologia Documento:] Interno],
-      [#strong[Ultima Modifica:] 18/11/2024 10:10],
+      [#strong[Ultima Modifica:] 18/11/2024 16:50],
       [#strong[Stato:] Bozza],
     )]
   )
@@ -64,7 +64,7 @@
         align: (col, row) => (center, center, center, center, center, center,).at(col),
         inset: 6pt,
         table.header([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*], [*Approvazione*]),
-        [1.0.0], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [], [],
+        [0.0.1], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [], [],
     )
     <tab:my_label>
   ]
@@ -175,14 +175,15 @@ Per allinearsi agli standard visti a lezione si è deciso, d'ora in poi, di util
 - y: minor release
 - z: correzioni 
 
-Per i documenti più corposi: \
-- Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, in modo parallelo alle commit.
-- Ogni correzione che viene applicata da un revisione richiede un incremento del valore di tipo _z_. 
-- L'incremento del valore _x_ qual'ora la modifica porti il documento ad una versione completa.  
-
 Per i verbali: \
-- Alla prima stesura il verbale assume la versione 1.0.0
-- Sarà cura del revisiore definire, in fase di correzione, il tipo di modifica (se minor o correzione) ed, in caso di richiesta di correzioni al redatore del documento, dovrà indicare nel messaggio della pull request il nuovo numero di versione da assegnare
+- Alla prima stesura il verbale assume la versione 0.0.1
+- Sarà cura del revisiore definire, in fase di correzione, indicare nel messaggio nella pull request le correzioni da applicare
+
+Per tutti gli altri documenti : \
+- Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, per aggiunte e correzioni.
+- L'incremento del valore _y_ è necessario quando viene completata la stesura di una parte del documento
+- L'incremento del valore _x_ avviene quando il documento viene rivisto, corretto nella sua totalità.  
+
 
 Non essendoci altri argomenti da discutere l’incontro del team Archi7echs è terminato alle 17:00. \
 Seguirà convocazione nel gruppo Telegram per il prossimo incontro del gruppo. \
