@@ -101,7 +101,6 @@ body {
 .file-item {
   background: linear-gradient(135deg, #cd7f32 0%, #b87333 100%);
   margin: 10px 0;
-  padding: 12px 20px 12px 40px;
   border-radius: 8px;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -130,6 +129,7 @@ body {
   text-decoration: none;
   display: block;
   width: 100%;
+  padding: 12px 20px 12px 40px;
 }
 
 .indent {
