@@ -42,7 +42,7 @@
       inset: 6pt,
       [#strong[Autore:] Francesco Pozzobon],
       [#strong[Tipologia Documento:] Interno],
-      [#strong[Ultima Modifica:] 15/11/2024 11:15],
+      [#strong[Ultima Modifica:] 18/11/2024 09:00],
       [#strong[Stato:] Bozza],
     )]
   )
@@ -170,6 +170,14 @@ La suddivisione dei ruoli è stata effettuata in base a quanto riportato nel doc
 Visto che la principale attività nelle prime fasi di lavoro è la redazione dei documenti, è stato deciso di assegnare il ruolo di verificatore a due componenti del team.
 
 == Varie ed eventuali
+Per allinearsi agli standard visti a lezione si è deciso, d'ora in poi, di utilizzare il versionamento dei documenti tramite identificativo x.y.z dove:
+- x: major version
+- y: minor release
+- z: correzioni 
+
+Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, in modo parallelo alle commit.
+Ogni correzione che viene applicata da un revisione richiede un incremento del valore di tipo _z_. 
+Per i documenti più corposi si prevende di incrementare il valore _x_ qual'ora la modifica porti il documento ad una versione completa.  
 
 Non essendoci altri argomenti da discutere l’incontro del team Archi7echs è terminato alle 17:00. \
 Seguirà convocazione nel gruppo Telegram per il prossimo incontro del gruppo. \
@@ -188,7 +196,9 @@ Seguirà convocazione nel gruppo Telegram per il prossimo incontro del gruppo. \
     [1],[Project Board],[Tenere aggiornato lo stato delle issue nell'apposita sezione Github],
     [1],[Gestione repo],[Creazione Milestones per rispettive fasi e Label per le issue],
     [2],[Prossime azioni],[Redazione Norme di Progetto e Analisi dei Requisiti ],
-    [3], [Repository], [Migrazione repository documentale alla repository del sito]
+    [3], [Repository], [Migrazione repository documentale alla repository del sito],
+    [Varie], [Storico revisioni], [Indicatore x.y.z]
+
 )
 
 = TODO
