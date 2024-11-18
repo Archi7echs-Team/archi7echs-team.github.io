@@ -43,7 +43,7 @@
       [#strong[Autore:] Francesco Pozzobon],
       [#strong[Tipologia Documento:] Interno],
       [#strong[Ultima Modifica:] 18/11/2024 16:50],
-      [#strong[Stato:] Bozza],
+      [#strong[Stato:] Approvato],
     )]
   )
   #pagebreak(weak: true)
@@ -64,7 +64,7 @@
         align: (col, row) => (center, center, center, center, center, center,).at(col),
         inset: 6pt,
         table.header([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*], [*Approvazione*]),
-        [0.0.1], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [], [],
+        [0.0.1], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [Gabriele Checchinato], [Gabriele Checchinato],
     )
     <tab:my_label>
   ]
@@ -146,11 +146,11 @@ Questa fase di progetto, denominata Require and Tecnology Baseline (RTB) prevede
   - Glossario
   - Analisi del Requisiti
 
-Si decide di procedere con l'inizio della stesura delle *Norme di Progetto* e dell' *Analisi dei Requisiti* documento che sarà oggetto di revisione nel corso della prossima call con l'azienda.
+Si decide di procedere con l'inizio della stesura delle *Norme di Progetto* e dell' *Analisi dei Requisiti*, documento che sarà oggetto di revisione nel corso della prossima call con l'azienda.
 
 == Presentazione Github Actions
 Gioele Scandaletti illustra al team le Github Actions ultimate che consentono sia la compilazione automatica dei file redatti con Typst che la pubblicazione dei documenti nel #link("https://archi7echs-team.github.io/")[#text(blue)[sito web del gruppo]]\
-Si decide si spostare la repo contenente la documentazione nella repo del sito in modo da aver entrambe le cose nello stesso posto.
+Si decide di spostare la repo contenente la documentazione in quella del sito, in modo da aver entrambe le cose nello stesso posto.
 
 == Suddivisione ruoli
 #table(
@@ -170,19 +170,19 @@ La suddivisione dei ruoli è stata effettuata in base a quanto riportato nel doc
 Visto che la principale attività nelle prime fasi di lavoro è la redazione dei documenti, è stato deciso di assegnare il ruolo di verificatore a due componenti del team.
 
 == Varie ed eventuali
-Per allinearsi agli standard visti a lezione si è deciso, d'ora in poi, di utilizzare il versionamento dei documenti tramite identificativo x.y.z dove:
+Per allinearsi agli standard visti a lezione si è deciso, d'ora in poi, di utilizzare il versionamento dei documenti tramite identificativo x.y.z dove ogni lettera rappresenta:
 - x: major version
 - y: minor release
-- z: correzioni 
+- z: patch e additions
 
 Per i verbali: \
 - Alla prima stesura il verbale assume la versione 0.0.1
-- Sarà cura del revisiore definire, in fase di correzione, indicare nel messaggio nella pull request le correzioni da applicare
+- Sarà cura del revisiore definire nel messaggio della pull request le correzioni da applicare
 
 Per tutti gli altri documenti : \
-- Alla prima stesura di un documento viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, per aggiunte e correzioni.
+- Alla prima stesura viene applicata la versione 0.1.0, procedendo in modo incrementale, aumentando il valore _z_, per aggiunte e correzioni.
 - L'incremento del valore _y_ è necessario quando viene completata la stesura di una parte del documento
-- L'incremento del valore _x_ avviene quando il documento viene rivisto, corretto nella sua totalità.  
+- L'incremento del valore _x_ avviene quando il documento viene rivisto e corretto nella sua totalità.  
 
 
 Non essendoci altri argomenti da discutere l’incontro del team Archi7echs è terminato alle 17:00. \
