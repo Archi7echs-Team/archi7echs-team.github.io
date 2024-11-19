@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #e65c00;
-  --secondary-color: #d88654;
-  --tertiary-color: #b87333;
-  --dark-color: #1f1f1f;
-  --background-color: #2a2a2a;
-  --text-color: #eaeaea;
-  --nav-color: #4a4a4a;
-  --link-color: #ff8c1a;
-  --link-hover-color: #e65c00;
-  --link-visited-color: #cd7f32;
-  --link-active-color: #b87333;
+  --primary-color: #3498db; /* Sky blue */
+  --secondary-color: #5dade2; /* Soft blue */
+  --tertiary-color: #2874a6; /* Deep blue */
+  --dark-color: #1c2833; /* Dark navy */
+  --background-color: #2e4053; /* Steel blue */
+  --text-color: #ecf0f1; /* Light white-blue */
+  --nav-color: #243447; /* Darker navy-gray for better contrast */
+  --link-color: #4aa3df; /* Brighter blue for visibility */
+  --link-hover-color: #2f8ec1; /* Medium sky blue for hover */
+  --link-visited-color: #22648a; /* Muted deep blue for visited */
+  --link-active-color: #1b4f6b; /* Darker blue for active */
 }
 
 * {
@@ -120,7 +120,7 @@ a:active {
 }
 
 .file-item {
-  background: linear-gradient(135deg, #cd7f32 0%, #b87333 100%);
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--tertiary-color) 100%);
   margin: 10px 0;
   border-radius: 8px;
   cursor: pointer;
@@ -174,7 +174,7 @@ a:active {
 }
 
 #glossary section {
-  margin-bottom: 20px;
+  margin: 0 20px 10px 10px;
   padding: 15px;
   border: 1px solid #444;
   border-radius: 8px;
