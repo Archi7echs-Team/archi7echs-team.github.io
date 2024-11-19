@@ -1,79 +1,210 @@
-#let horizontalrule = [
-  #line(start: (0%, 0%), end: (100%, 0%))
-]
+#import "//templates/common.typ": *
 
-#set text(lang: "it", font:"New Computer Modern")
-#set align(left)
+#let getSurname(a) = {
+  return a.split().at(-1)
+}
 
-#let title(t) = text(size: 22pt, top-edge: 0pt)[== #t]
-#let subtitle(st) = text(size: 18pt, bottom-edge: 0pt)[#emph[#st]]
+#let sortBySurname(a) = {
+  let a = (a,).flatten().dedup()
+  if a.last() == false {
+    a.pop()
+    return a
+  }
+  return a.sorted(key: getSurname)
+}
 
-#set text(size: 12pt)
-#set par(justify: true)
+#let dateReplacer(x) = x.replace("-", "/")
 
-// pagina 0
-#page(background: align(bottom + right, image("//img/logounipd.png", width: 80%)))[
-  #set align(center)
-  #figure(image(width: 50%, "//img/logo.png"))
+#let dateParser(s) = {
+  let tmp = s.split(regex("[-/]"))
+  return datetime(day: int(tmp.at(0)), month: int(tmp.at(1)), year: int(tmp.at(2)))
+}
+
+#let conf(
+  title: none,
+  subtitle: none,
+  author: none,
+  state: none,
+  intern: true,
+  show_outline: true,
+  outline_depth: none,
+  changelog: none,
+  paper: "a4",
+  margin: (x: 2cm, y: 2.5cm),
+  lang: "it",
+  font: "New Computer Modern",
+  fontsize: 12pt,
+  justify: true,
+  heading_numbers: "1.1)",
   
-  #v(2em)
-  
-  #text(size: 16pt)[Archi7echs - archi7echs\@gmail.com] \
-  
-  Progetto di #strong[Ingegneria del Software] \
-  A.A. 2024/2025 \
-
-  #align(horizon)[
-  #horizontalrule
-  #v(12pt)
-  #title[Titolo Documento]
-  #subtitle[Sottotitolo]
-  #v(12pt)
-  #horizontalrule
-  ]
-  #figure(
-    placement:bottom,
-    [#table(
-      columns: (auto, 1fr),
-      stroke: none,
-      align: (col, row) => (left, right,).at(col),
-      inset: 6pt,
-      [#strong[Autore:] Nome Cognome],
-      [#strong[Tipologia Documento:] Interno],
-      [#strong[Ultima Modifica:] 25/09/2024 10:04],
-      [#strong[Stato:] Released],
-    )]
-  )
-  #pagebreak(weak: true)
-]
-
-#set page(numbering: "1")
-#counter(page).update(1)
-
-
-#set align(left)
-
-== Tabella delle Revisioni <tabella-delle-revisioni>
-#v(1em)
-#align(center)[
-  #figure[
-    #table(
-        columns: 6,
-        align: (col, row) => (center, center, center, center, left, center,).at(col),
-        inset: 6pt,
-        table.header([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*], [*Approvazione*]),
-        [1], [ff], [#lorem(2)], [g], [w], [r],
-        [0.3], [dd], [#lorem(2)], [rr], [w], [r],
-        [0.2], [ss], [#lorem(2)], [e], [we], [f],
-        [0.1], [xx], [#lorem(2)], [w], [w], [f],
+  doc,
+  ) = {
+    set page(
+      paper: paper,
+      margin: margin,
     )
-    <tab:my_label>
+    
+    set text(
+      lang: lang,
+      font: font,
+      size: fontsize
+    )
+
+    set heading(numbering: heading_numbers)
+
+    set par(justify: justify)
+
+    set align(left)
+
+    set pagebreak(weak: true)
+
+    let date = changelog.at(1, default: none);
+    let version = changelog.at(0, default: none);
+
+    set document(author: author, title: title, date: dateParser(date))
+    
+// Pagina 0
+    page(
+      background: align(bottom + right, image(g.logounipd, width: 80%))
+    )[
+      #set align(center)
+      
+      #figure(image(width: 50%, g.logo))
+      
+      #v(2em)
+      
+      #text(size: 16pt)[Archi7echs - #link("mailto:"+g.mail)] \
+      
+      Progetto di #strong[Ingegneria del Software] \
+      A.A. 2024/2025 \
+    
+      #align(horizon)[  
+        #horizontalrule
+        #v(24pt)
+        #text(size: 22pt, top-edge: 0pt, weight: 700, title)
+        
+        #text(size: 18pt, bottom-edge: 0pt, style: "italic", subtitle)
+        #v(12pt)
+        #horizontalrule
+      ]
+      
+      #figure(
+        placement:bottom,
+        [#grid(
+          columns: (auto, 1fr),
+          align: (col, row) => (left, right,).at(col),
+          inset: 6pt,
+          [#strong[Autore:] #author],
+          [#strong[Tipologia Documento:] #ternary(intern, "Interno", "Esterno")],
+          [#strong[Ultima Modifica:] #dateReplacer(date)],
+          [#strong[Stato:] #state],
+        )]
+      )
+
   ]
-]
 
-#set par(justify:true)
-= Prima sezione documento <prima-sezione-documento> \
-#lorem(50)
+  //fine prima pagina
+  
+  set page(numbering: "1")
+  counter(page).update(1)
+  
+  let changelog_header = ([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*], [*Approvazione*])
 
-== Subsection <subsection> \
-#lorem(100)
+    changelog = changelog_header + changelog;
+    heading(
+      outlined: false,
+      numbering: none,
+      [Tabella delle revisioni]
+    )
+    table(
+      fill: (_, row) => if calc.odd(row) { rgb("#fbf1d0") } else { white },
+      inset: 0.5em,
+      columns: (auto,)*2 + (1fr,) + (auto,)*3, 
+      ..changelog.map(el => text(size: 0.8em)[
+        #par(justify: false,
+          if type(el) == array {
+            sortBySurname(el).join([,\ ])
+          } else {
+            el
+          }
+        )
+      ]),
+    )
+
+  pb()
+
+  if show_outline == true {
+    outline(depth: outline_depth, indent: 1em)
+    pagebreak()
+  }
+
+
+  set text(hyphenate: true)
+  set enum(indent: 12pt)
+  set list(indent: 12pt)
+  
+  doc
+}
+
+
+#let issue_to_link(id) = {
+  return link(g.org+"/"+g.docs+"/issues/"+str(id))[\##id]
+}
+  
+#let todo(t) = {
+  let todo_header = ([*Rif. Issue*], [*Assegnatario*], [*TODO*])
+  let map_issue(r, t) = {
+    t.enumerate().map(a => if r.contains(a.first()) and type(a.last()) == array { return issue_to_link(a.last().last()) } else { a.last() }) 
+  }
+  let r = array.range(0, t.len(), step: todo_header.len())
+  t = todo_header + map_issue(r, t)
+
+  align(center,
+    block(width: 100%,
+      table(
+        fill: (_, row) => if calc.odd(row) { rgb("#fbf1d0") } else { white },
+        inset: 0.5em,
+        columns: (auto, auto, 1fr),
+        align: center,
+        ..t.map(el => [
+          #par(justify: false,
+            if type(el) == array {
+              sortBySurname(el).join([,\ ])
+            } else {
+              el
+            }
+          )
+        ]),
+      )
+    )
+  )
+}
+
+#let decisioni(t) = {
+  table(
+    fill: (_, row) => if calc.odd(row) { rgb("#fbf1d0") } else { white },
+    columns: (auto, auto, 1fr),
+  align: center,
+  inset: 6pt,
+  table.header([*Pt.*], [*Argomento*], [*Decisione*]),
+  ..t)
+  
+}
+
+#let glossario(w) = link("https://archi7echs-team.github.io/glossario.html#" + upper(w).at(0))[#w#sub(text(blue)[G])]
+
+// copy this in your file and edit
+
+#show: conf.with(
+  title: "Il titolo del documento",
+  subtitle: "Il sottotitolo",
+  author: "Il Goat",
+  state: "Rilasciato",
+  show_outline: true,
+  outline_depth: 1,
+  changelog: (
+    "1.1", "29-10-2024",  "Correzioni", p.checchinato, p.lucato, p.lucato,
+    "1.0", "28-10-2024",  "Prima stesura documento", "Team " + emph(g.name), p.lucato, p.lucato,
+  )
+)
+
