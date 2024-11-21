@@ -4,15 +4,15 @@
   title: "Verbale incontro 19/11/2024",
   subtitle: "Documento interno - verbale nr. 7",
   author: "Francesco Pozzobon",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "21-11-2024",  "Prima stesura documento", p.pozzobon, "", "",
+    "0.0.1", "21-11-2024",  "Prima stesura documento", p.pozzobon, p.salvo, p.salvo,
   )
 )
 
-_A seguito dell'attività Diario di Bordo svolta in aula nella mattinata di martedì 12/11/2024 si decide di convocare una call per discutere di quanto segue:_
+_A seguito dell'attività Diario di Bordo svolta in aula nella mattinata di martedì 12/11/2024 e della riunione del 13/11/2024 si decide di convocare una call per discutere di quanto segue:_
 
 
 = Ordine del Giorno
@@ -72,12 +72,12 @@ In riferimento alla suddivisione ruoli effettuata nel precedente incontro si org
 - *Glossario*:
   - documento e pagina Web con la definizione dei termini usati nei documenti
   - il verificatore aggiunge mano a mano sul glossario le parole e, successivamente, saranno aggiunte le definizioni. _In questo periodo tale attività non è considerata prioritaria, è necessario solo tracciare le parole che richiedono definizione._
-  - gestione automatizzata della sezione relativa del sito Web, a cura di #p.pesenato, programmatore
+  - gestione automatizzata della sezione relativa del sito Web, a cura di #p.pesenato, progettista
   - i termini vengono di volta in volta inseriti dai redattori dei documenti
 
 == Metodologia gestione del progetto
 Il team decide, all'unanimità, di utilizzare *Agile SCRUM* per la gestione del progetto. Tale scelta è stata intrapresa, nonostante la possibilità che era stata sollevata da Alex Beggiato di Sanmarco Informatica, di utilizzare la metologia _Waterfall_ visto che le richieste del progetto sono tutte chiare fin da subito in quanto Agile consente di suddividere il lavoro in periodi con obiettivi definiti per ogni membro in ciascun *periodo*. \
-Si concorda quindi di suddividere il progetto in unità definite *periodi*, e non sprint, in quanto il team si riserva la possibilità di concordare ad hoc la durata di ogni periodo in base alle esigenze. \ La repo, attraverso la Milestones, viene organizzata di conseguenza creando la Milestone relativa a questa prima fase.
+Si concorda quindi di suddividere il progetto in unità definite *periodi*, e non sprint, in quanto il team si riserva la possibilità di concordare ad hoc la durata di ogni periodo in base alle esigenze. Rimanendo comunque tra una e tre settimane. \ La repo, attraverso la funzionalità "Milestones", viene organizzata di conseguenza creando la Milestone relativa a questa prima fase.
 
 == Nuovo template documentazione
 Gioele Scandaletti illustra il nuovo template per i documenti che consente, oltre a risparmiare circa 300 linee in ogni file Typst, un layout di tabella più semplice da leggere rispetto al precedente. \
@@ -105,7 +105,7 @@ Seguirà convocazione via Telegram per il prossimo incontro. \
   [1], [Glossario - sezione nel sito web], [A cura di Giacomo Pesenato],
   [2], [Metodologia gestione progetto], [Agile SCRUM - con divisione in *periodi*],
   [3], [Documenti Typst], [Nuovo template attivo da utilizzare in ogni nuovo documento],
-  [4], [Prossimo incontro con azienda],[Settimana prossiama - chiedere ad Alex Beggiato disponibilità]
+  [4], [Prossimo incontro con azienda],[Settimana prossima - chiedere ad Alex Beggiato disponibilità]
 ))
 
 
