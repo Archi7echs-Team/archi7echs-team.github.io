@@ -6,17 +6,18 @@
   subtitle: "",
   author: "Il team",
   state: "Bozza",
+  intern: false,
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.0", "18-11-2024",  "Prima introduzione PdP", p.lucato, "", "",
+    "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato, p.checchinato,
   )
 )
 
 #let costo_ora = (res: 30, amm: 20, ver: 15, proge: 25, progr: 15, ana: 25)
 
 = Introduzione
-Il #glossario("PdP") è il documento che fornisce una guida strutturata per l'esecuzione e il monitoraggio continuo del #glossario("progetto"), fino al suo completamento. Lo scopo è quello di assicurare che ci sia una chiara comprensione degli obiettivi, delle attività pianificate, dei ruoli e delle risorse investite durante gli sprint effettuati. Questo permette al team e allo stakeholder di avere un singolo documento dove potersi allineare con lo stato di avanzamento del #glossario("progetto").
+Il #glossario("PdP") è il documento che fornisce una guida strutturata per l'esecuzione e il monitoraggio continuo del #glossario("progetto"), fino al suo completamento. Lo scopo è quello di assicurare che ci sia una chiara comprensione degli obiettivi, delle #glossario("attività") pianificate, dei ruoli e delle risorse investite durante gli sprint effettuati. Questo permette al team e allo stakeholder di avere un singolo documento dove potersi allineare con lo stato di avanzamento del #glossario("progetto").
 
 
 == Glossario
@@ -35,13 +36,13 @@ L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi
 = Informazioni del progetto
 
 == Introduzione
-Questa sezione elenca tutte le informazioni utili del progetto, con le eventuali modifiche nelle sezioni apposite effettuate con l'integrazione/cambiamenti.
+Questa sezione elenca tutte le informazioni utili del #glossario("progetto"), con le eventuali modifiche nelle sezioni apposite effettuate con l'integrazione/cambiamenti.
 
 
 
 == Date di consegna del progetto
 === Introduzione
-Il #glossario("progetto") durante l'arco della progettazione e sviluppo potrà subire diverse modificazioni. In questa sezione dunque saranno segnalate tutte le modifiche relative alle date di consegna preventivate per il documento dell'RTB e del PB
+Il #glossario("progetto") durante l'arco della progettazione e sviluppo potrà subire diversi cambiamenti. In questa sezione dunque saranno segnalate tutte le modifiche relative alle date di consegna preventivate per il documento dell'#glossario("RTB") e del #glossario("PB")
 
 === Prima stesura - 19-11-2024
 In base a quanto riportato in questo documento e le difficoltà incontrate, gli obiettivi che il gruppo si impegna di raggiungere e rispettare sono soggetti ad un limite di tempo, con le date riportate di seguito:
@@ -50,7 +51,7 @@ In base a quanto riportato in questo documento e le difficoltà incontrate, gli 
     columns: (2fr, 1fr),
     align: center,
     inset: 6pt,
-    table.header([*Accettazione milestone*], [*Data*], ),
+    table.header([*Accettazione #glossario("milestone")*], [*Data*], ),
       [#glossario("RTB")- Requirements and Technology Baseline], [15/01/2025], 
     [#glossario("PB") - Product Baseline], [25/03/2025], 
 )
@@ -96,11 +97,11 @@ La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del
 \
 
 === Scelta della metodologia da utilizzare <scelta_metodologia>
-Per il progetto è stata scelta la metodologia Agile-Scrum come framework operativo. Questa decisione si basa sulla necessità di affrontare la complessità del progetto in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
-Le motivazioni per l'adozione di Agile-Scrum
-+ *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del progetto, rispondendo prontamente a nuove esigenze o priorità. Ogni periodo rappresenta un ciclo breve e pianificabile, garantendo un processo continuo di revisione e miglioramento.
+Per il #glossario("progetto") è stata scelta la metodologia Agile-Scrum come framework operativo. Questa decisione si basa sulla necessità di affrontare la complessità del #glossario("progetto") in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
+Le motivazioni per l'adozione di Agile-Scrum sono:
++ *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del #glossario("progetto"), rispondendo prontamente a nuove esigenze o priorità. Ogni periodo rappresenta un ciclo breve e pianificabile, garantendo un processo continuo di revisione e miglioramento.
 + *Focus sul Valore*: Il lavoro viene suddiviso in User Stories prioritarie, permettendo di concentrarsi sulle funzionalità che portano il massimo valore agli utenti finali. L’approccio iterativo facilita la consegna frequente di incrementi tangibili e utilizzabili del prodotto.
-+ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante comunicazioni veloci (vie brevi), Sprint Planning (pianificazione del periodo), e Sprint Review (retrospettiva del periodo) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, mantenendo alta la trasparenza.
++ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del periodo), e Sprint Review (retrospettiva del periodo) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, mantenendo alta la trasparenza.
 + *Gestione dei Rischi*: I rischi vengono identificati e gestiti continuamente, riducendo la probabilità di fallimenti significativi. Il formato iterativo consente di testare e validare frequentemente le ipotesi. Questo, se applicato correttamente, garantisce di aggiungere/modificare la _@gestione_dei_rischi _, relativa alla gestione dei rischi, non solo in base a "periodi brevi" ma soprattutto anche a "lungo raggio".
 + *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi esterni, nuove funzionalità da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
 
