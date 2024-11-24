@@ -5,12 +5,12 @@
   title: "Piano di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, "", "",
+    "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo, p.salvo,
     "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato, p.checchinato,
     
   )
@@ -106,7 +106,7 @@ Le motivazioni per l'adozione di Agile-Scrum sono:
 + *Gestione dei Rischi*: I rischi vengono identificati e gestiti continuamente, riducendo la probabilità di fallimenti significativi. Il formato iterativo consente di testare e validare frequentemente le ipotesi. Questo, se applicato correttamente, garantisce di aggiungere/modificare la _@gestione_dei_rischi _, relativa alla gestione dei rischi, non solo in base a "periodi brevi" ma soprattutto anche a "lungo raggio".
 + *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi esterni, nuove funzionalità da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
 
-== Introduzione
+== Introduzione struttura per descrizione dei periodi
 In questa sezione viene descritta la modalità utilizzata dal gruppo per la descrizione di ogni singolo periodo.
 Avendo adottato la metodologia Agile-Scrum (_@scelta_metodologia _), è importante documentare le informazioni chiave, così da poter monitorare i progressi, facilitare la riflessione e il miglioramento continuo. Per garantire queste caratteristiche, una singola descrizione è composta da due componenti: la pianificazione e l'esito effettivo.
 
