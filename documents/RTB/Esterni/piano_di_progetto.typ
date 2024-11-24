@@ -5,12 +5,14 @@
   title: "Piano di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo, p.salvo,
     "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato, p.checchinato,
+    
   )
 )
 
@@ -19,9 +21,8 @@
 = Introduzione
 Il #glossario("PdP") è il documento che fornisce una guida strutturata per l'esecuzione e il monitoraggio continuo del #glossario("progetto"), fino al suo completamento. Lo scopo è quello di assicurare che ci sia una chiara comprensione degli obiettivi, delle #glossario("attività") pianificate, dei ruoli e delle risorse investite durante gli sprint effettuati. Questo permette al team e allo stakeholder di avere un singolo documento dove potersi allineare con lo stato di avanzamento del #glossario("progetto").
 
-
 == Glossario
-All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel gloassario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
+All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
 
 == Il capitolato
 L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi quantità di dati attraverso una rappresentazione visiva in 3D. I dati ricevuti saranno visualizzati sotto forma di istogrammi tridimensionali, con supporto per rotazione, pan, zoom e selezione interattiva delle barre. Gli utenti principali della piattaforma saranno le aziende che necessitano di strumenti avanzati per l’analisi e la visualizzazione di dati, utilizzabili sia internamente che per la comunicazione con clienti e stakeholder.
@@ -105,11 +106,7 @@ Le motivazioni per l'adozione di Agile-Scrum sono:
 + *Gestione dei Rischi*: I rischi vengono identificati e gestiti continuamente, riducendo la probabilità di fallimenti significativi. Il formato iterativo consente di testare e validare frequentemente le ipotesi. Questo, se applicato correttamente, garantisce di aggiungere/modificare la _@gestione_dei_rischi _, relativa alla gestione dei rischi, non solo in base a "periodi brevi" ma soprattutto anche a "lungo raggio".
 + *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi esterni, nuove funzionalità da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
 
-= Gestione dei rischi <gestione_dei_rischi> 
-
-= Descrizione di un periodo
-
-== Introduzione
+== Introduzione struttura per descrizione dei periodi
 In questa sezione viene descritta la modalità utilizzata dal gruppo per la descrizione di ogni singolo periodo.
 Avendo adottato la metodologia Agile-Scrum (_@scelta_metodologia _), è importante documentare le informazioni chiave, così da poter monitorare i progressi, facilitare la riflessione e il miglioramento continuo. Per garantire queste caratteristiche, una singola descrizione è composta da due componenti: la pianificazione e l'esito effettivo.
 
@@ -174,7 +171,6 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
     [NomeX],[0],[0],[0],[1],[0],[0],[€ #(1*costo_ora.proge)],
     [*Costo per ruolo*],[0],[€ #(2*costo_ora.amm)],[€ #(2*costo_ora.ver)],[€ #(1*costo_ora.proge)],[0],[0],[#text(blue)[*€ #(30+40+25)*] (#text(green)[-€ 5])],
 )
-#pagebreak()
 *Esempio stato di avanzamento*:
 
 #{
@@ -185,3 +181,66 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
   //TODO: cambiare il colore delle sezioni del grafico: da fare in rosso, fatto in verde
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento RTB/PB", display_style: "hor-legend-chart")
 }
+
+= Gestione dei rischi <gestione_dei_rischi> 
+== Introduzione
+La gestione dei rischi è un'attività fondamentale per il successo del #glossario("progetto"). Essa permette di identificare, analizzare e gestire i potenziali problemi che potrebbero influenzare negativamente il raggiungimento degli obiettivi. In questa sezione vengono elencati i rischi individuati e le strategie adottate per mitigarli.
+
+== Rischi individuati
+=== Introduzione
+In questa sezione vengono elencati i rischi individuati dal team durante la fase di analisi del #glossario("progetto"). Per ciascun rischio vengono specificati la probabilità di occorrenza, l'impatto sul #glossario("progetto") e le strategie adottate per mitigarlo. Questa sezione verrà aggiornata nel caso si verificassero situazioni non identificate in precedenza in modo da garantire una gestione efficace dei rischi, con l'obiettivo di minimizzare le possibili conseguenze negative.
+
+=== Problemi interni al team
+==== Rischio 1 - Problemi di comunicazione
+- *Identificativo*: RI-1
+- *Descrizione*: difficoltà di comunicazione tra i membri del team, con conseguente ritardo nella consegna delle attività.
+- *Probabilità*: alta
+- *Impatto*: medio
+- *Strategie di mitigazione*: il responsabile dovrà occuparsi di organizzare meeting periodici e attuare un'assegnazione chiara dei compiti.
+
+=== Rischio 2 - Problemi personali dei membri del team
+- *Identificativo*: RI-2
+- *Descrizione*: difficoltà di gestione dei propri impegni personali (università, lavoro, impegni personali, ecc...)
+- *Probabilità*: alta
+- *Impatto*: alto
+- *Strategie di mitigazione*: il responsabile dovrà essere in grado di gestire le attività in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. E' importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
+
+==== Rischio 3 - Problemi di coordinamento
+- *Identificativo*: RI-3
+- *Descrizione*: difficoltà nel coordinamento delle attività tra i membri del team, con conseguente sovrapposizione di compiti e ritardi nella consegna.
+- *Probabilità*: media
+- *Impatto*: alto
+- *Strategie di mitigazione*: il responsabile dovrà dare definizioni più chiare dei ruoli e delle responsabilità con una pianificazione dettagliata delle attività.
+
+=== Rischio 4 - Mancanza di conoscenze tecniche
+- *Identificativo*: RI-4
+- *Descrizione*: difficoltà nell'implementazione delle funzionalità richieste, con conseguente ritardo nella consegne.
+- *Probabilità*: media
+- *Impatto*: alto
+- *Strategie di mitigazione*: lo studio individuale è parte fondamentale del processo di "allenamento" che caratterizza l'apprendimento di ogni componente del team. Se previsto, una mitigazione possibile è l'organizzazione "straordinaria" di un meeting con l'azienda per una breve consulenza. Nel caso si verificassero casi molto particolari, è possibile affiancare un componente del team con maggiore esperienza.
+
+=== Rischio 5 - Mancanza di allineamento sugli obiettivi
+- *Identificativo*: RI-5
+- *Descrizione*: mancanza di chiarezza sugli obiettivi del #glossario("progetto"), con conseguente disallineamento tra i membri del team. Si identifica tramite la consegna di attività non conformi a quanto pianificato o richiesto.
+- *Probabilità*: media
+- *Impatto*: alto
+- *Strategie di mitigazione*: il responsabile si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
+
+
+=== Problemi esterni al team
+==== Rischio 1 - Problemi di comunicazione con l'azienda
+- *Identificativo*: RE-1
+- *Descrizione*: difficoltà di comunicazione con l'azienda che potrebbe ritardare una risposta o un meeting richiesto.
+- *Probabilità*: media/bassa (dipende dalla comunicazione con l'azienda)
+- *Impatto*: alto
+- *Strategie di mitigazione*: il responsabile dovrà occuparsi di organizzare meeting periodici, ma soprattutto dovrà ragionare in modo "proattivo" e non "reattivo" per evitare che la comunicazione con l'azienda possa essere un problema. 
+
+==== Rischio 2 - Utilizzo di librerie di terze parti
+- *Identificativo*: RE-2
+- *Descrizione*: molto spesso capita che quando si utilizza una libreria di terze parti, si possano incontrare problemi di compatibilità o di implementazione, non attribuibili direttamente al team.
+- *Probabilità*: media
+- *Impatto*: media
+- *Strategie di mitigazione*: una soluzione possibile è quella di chiedere un confronto con l'azienda che, data la maggiore esperienza, potrebbe fornire un'alternativa valida o un supporto per la risoluzione del problema.
+
+
+
