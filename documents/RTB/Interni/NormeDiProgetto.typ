@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.2.0", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, "","",
+    "0.1.1", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, p.checchinato,p.checchinato,
     "0.1.0", "24-11-2024",  "Redatta la suddivisione del documento", p.pozzobon, p.checchinato, p.checchinato,
   )
 )
