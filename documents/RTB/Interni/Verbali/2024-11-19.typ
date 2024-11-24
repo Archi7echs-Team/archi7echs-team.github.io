@@ -21,7 +21,6 @@ _A seguito dell'attività Diario di Bordo svolta in aula nella mattinata di mart
 + Metodologia gestione del progetto
 + Nuovo template documentazione
 + Prossimo incontro con azienda
-+ Suddivisione ruoli
 + Varie ed eventuali
 
 = Dettagli dell'incontro
