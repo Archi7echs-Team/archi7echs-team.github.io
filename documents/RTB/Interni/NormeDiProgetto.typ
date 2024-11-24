@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.0", "22-11-2024",  "Redatta sezione Introduzione", p.pozzobon, "", "",
+    "0.1.0", "24-11-2024",  "Redatta sezione Introduzione", p.pozzobon, p.checchinato, p.checchinato,
   )
 )
 
