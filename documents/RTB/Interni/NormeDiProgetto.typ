@@ -5,11 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, "","",
+    "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo, p.salvo,
     "0.1.1", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, p.checchinato,p.checchinato,
     "0.1.0", "24-11-2024",  "Redatta la suddivisione del documento", p.pozzobon, p.checchinato, p.checchinato,
   )
@@ -53,15 +53,15 @@ L'indice si aggiorna automaticamente in base alle sezioni di Typst, per il detta
 
 _ Per la gestione della tabella delle revisioni si fa riferimento all'apposita sezione, @tabella_revisioni, di questo documento. _ 
 ==== Allegato
-Questo template viene utilizzato per la redazione degli allegati ai verbali (interni ed esterni). E' compito di chi redige l'allegato indicare, nell'apposita sezione nell'intestazione del documento:
+Questo #glossario("template") viene utilizzato per la redazione degli allegati ai verbali (#glossario("interni") ed #glossario("esterni")). E' compito di chi redige l'allegato indicare, nell'apposita sezione nell'intestazione del documento:
 - numero allegato (num progressivo riferito al verbale)
-- numero di verbale (esplicitando se interno o esterno)
+- numero di verbale (esplicitando se #glossario("interno") o #glossario("esterno"))
 - data del verbale
 
 Il documento di questa tipologia viene inserito nello stesso documento del verbale.
 
 ==== Carta intestata
-Questo template viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
+Questo #glossario("template") viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
 E' compito di chi redige il documento indicare, nell'apposita sezione:
 - destinario del documento
 - mezzo di invio del documento
@@ -69,7 +69,7 @@ E' compito di chi redige il documento indicare, nell'apposita sezione:
 
 
 === Redazione dei verbali
-La modalità di redazione dei verbali interni ed esterni è la medesima. \
+La modalità di redazione dei verbali #glossario("interni") ed #glossario("esterni") è la medesima. \
 Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare, in ordine:
 - breve sezione, scritta in _italic_ con motivo e modalità della convocazione
 - #glossario("ordine del giorno")
@@ -83,10 +83,10 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
 Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra OdG ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
-- una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il Rdocumento, l'argomento e la decisione presa
+- una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la decisione presa.
 - una tabella #glossario("TODO") con riferimento alle #glossario("issue") create relativamente alle decisioni prese. In quest'utlima è necessario indicare #glossario("ID") della #glossario("issue"), assegnatario (se presente, in caso contrario "-"), descrizione del #glossario("task").
 
-Alla fine del documento deve essere indicato Luogo e Data,inserimento sempre Padova come luogo, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
+Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
 
 === Registro delle modifiche e versionamento <tabella_revisioni>
 La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessarrio indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
