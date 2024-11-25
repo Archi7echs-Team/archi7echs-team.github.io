@@ -61,7 +61,7 @@ Questo template viene utilizzato per la redazione degli allegati ai verbali (int
 Il documento di questa tipologia viene inserito nello stesso documento del verbale.
 
 ==== Carta intestata
-Questo template viene utilizzato utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
+Questo template viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
 E' compito di chi redige il documento indicare, nell'apposita sezione:
 - destinario del documento
 - mezzo di invio del documento
@@ -83,13 +83,13 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
 Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra OdG ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
-- una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la descisione presa
-- una tabella #glossario("TODO") con riferimento alle #glossario("issue") create relativamente alle decisioni prese. In quest'utlima è necessario indicare #glossario("ID") della #glossario("issue"), assegnatario (se presente, in caso contrario "-", descrizione del #glossario("task").
+- una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il Rdocumento, l'argomento e la decisione presa
+- una tabella #glossario("TODO") con riferimento alle #glossario("issue") create relativamente alle decisioni prese. In quest'utlima è necessario indicare #glossario("ID") della #glossario("issue"), assegnatario (se presente, in caso contrario "-"), descrizione del #glossario("task").
 
 Alla fine del documento deve essere indicato Luogo e Data,inserimento sempre Padova come luogo, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
 
 === Registro delle modifiche 
-La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessarrio indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . E' compito del #glossario("revisore"), oltre ad inserire il proprio nome nell'apposita cella, verificare che il numero di versione sia corretto. E' compito di quest'utlimo, quindi, valutare l'incremento del valore _y_. L'incremento del valore _x_ avviene, nello specifico del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
+La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessarrio indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
 
 == Verifica e Revisione della documentazione
 
