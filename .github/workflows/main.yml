@@ -30,7 +30,7 @@ jobs:
 
       - name: copy glossario.typ in the tmp/upload
         run: |
-          mkdir --parents "${RUNNER_TEMP}/upload"; cp documents/RTB/glossario.typ $_ ;
+          mkdir --parents "${RUNNER_TEMP}/upload"; cp documents/RTB/Interni/glossario.typ $_ ;
 
       - name: Get changed files
         id: changed-files
