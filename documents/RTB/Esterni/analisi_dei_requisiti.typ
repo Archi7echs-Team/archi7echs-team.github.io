@@ -3,13 +3,13 @@
 #show: conf.with(
   title: "Analisi dei Requisiti",
   author: "Team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.0", "21-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, (p.salvo), "",
+    "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, (p.salvo), p.salvo,
   )
 )
 
