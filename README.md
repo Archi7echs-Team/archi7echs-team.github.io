@@ -1,6 +1,6 @@
 # Archi7echs - Documentazione
 
-In questo branch sono presenti i file sorgenti, per maggiori informazioni e per visualizzare i file `.pdf` recarsi sul branch `master` o, preferibilmente, sul sito https://archi7echs-team.github.io/docs/.
+In questo branch sono presenti i file sorgenti, per maggiori informazioni e per visualizzare i file `.pdf` recarsi sul branch `master` o, preferibilmente, sul sito [https://archi7echs-team.github.io](https://archi7echs-team.github.io/).
 
 ## Componenti del gruppo
 
