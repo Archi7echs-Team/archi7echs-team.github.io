@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo, p.salvo,
     "0.1.1", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, p.checchinato,p.checchinato,
     "0.1.0", "24-11-2024",  "Redatta la suddivisione del documento", p.pozzobon, p.checchinato, p.checchinato,
@@ -100,44 +101,46 @@ Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazio
 + ```bash git checkout sources``` --- per spostarsi sul branch di lavoro
 + ```bash git checkout -B <nome_branch>``` --- per creare un nuovo branch di lavoro, partendo dal branch di lavoro sources
 + Crea dei file o modifica i file esistenti
-+ ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati in staging
++ ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
 + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
++ ```bash git push --set-upstream origin <nome_branch>``` --- per caricare il nuovo branch e le modifiche sul repository remoto
 + Aprire la #glossario("Pull Request") 
  - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del repository
  - La #glossario("Pull Request") può essere aperta andando nella pagina "Pull Requests", impostando "nome_branch" come branch sorgente e "sources" come branch di destinazione. Premere successivamente il pulsante "Create #glossario("Pull Request")"
- -  *ATTENZIONE*. Impostare il merge al branch _sources_ (lo fa in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
-+ Una volta creata la #glossario("Pull Request") si assegna il #glossario("verificatore") nella sezione "Reviewer" a destra della pagina della #glossario("Pull Request"), le labels, il project e la #glossario("milestone") se presenti.
-+ Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina della #glossario("Pull Request"). Questo permette di chiudere tutte le issue associate una volta che la #glossario("Pull Request") è stata approvata.
- - *ATTENZIONE*. L'impostazione delle issue va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio dell'effettuazione del link tra issue e #glossario("Pull Request").
-Il merge verso il branch _sources_ verrà effettuata dal verificatore solo dopo la modifica/verificazione del documento.
+ -  *ATTENZIONE*. Impostare il merge al branch _sources_ (viene selezionato in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
++ Una volta creata, si assegna il #glossario("verificatore") nella sezione "Reviewers" a destra della pagina della #glossario("Pull Request"), le labels, la board sotto la voce project e la #glossario("milestone") se presenti.
++ Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina per la modifica della stessa. Questo permette di chiudere tutte le issue associate una volta che la #glossario("Pull Request") è stata approvata.
+ - *ATTENZIONE*. L'impostazione delle issue va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio del link tra issue e #glossario("Pull Request").
+Il merge verso il branch _sources_ verrà effettuata dal verificatore solo dopo la modifica/verifica del documento.
 
 ==== Verificatore
-Questa sezione presenta tutte le istruzioni che vengono applicate, dal momento in cui il documento è stato modificato fino alla sua verifica.
+Questa sezione presenta tutte le istruzioni a cui attenersi, dal momento in cui il documento è stato modificato fino alla sua verifica.
 + ```bash git pull``` --- per scaricare le ultime modifiche
 + ```bash git checkout <nome_branch>``` --- per spostarsi sul branch dove ci sono le modifiche da verificare
 + Controlla i documenti che sono stati modificati
  - Se ci sono errori di battitura o sintattici, corregge il documento in locale procedendo poi con i commit
- + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati in staging
+ + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
  + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
  + ```bash git push``` --- per caricare le modifiche sul branch
-+ Decide se approvare o meno la #glossario("Pull Request")
- - Se decide di non approvare per mancanza di informazioni importanti, dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto
++ Decidere se approvare o meno la #glossario("Pull Request")
+ - Se si decide di non approvarla per mancanza di informazioni importanti, si dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto
  + Premere su "Add your review" in alto a destra
  + Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
  + Premere su "Submit review"
-+ Se decide di approvare la #glossario("Pull Request") procede con il merge
- - Premere su "Add your review" in alto a destra
- - Premere su "Review changes" e selezionare "Approve"
- - Premere su "Submit review"
- - Premere su "Merge pull request" e successivamente su "Confirm merge"
-+ Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il branch di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutili.
+ + Attendere che il #glossario("relatore") apporti le modifiche richieste
+ - Se si decide di approvare la #glossario("Pull Request"), procedere con i segenti passaggi per il merge
+ + Premere su "Add your review" in alto a destra
+ + Premere su "Review changes" e selezionare "Approve"
+ + Premere su "Submit review"
+ + Premere su "Merge pull request" e successivamente su "Confirm merge"
++ Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutili.
 
 = Management
 == Gestione dell'assegnazione dei ruoli
 
 == Gestione della board
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
-La board è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
+Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
 + *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le attività che devono essere svolte
 + *In Progress*: attività in corso di svolgimento
 + *In review*: attività completata e in attesa di verifica
@@ -145,8 +148,8 @@ La board è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'
 === Processo di utilizzo board
 + Assegnazione di un'attività: l'attività viene assegnata a un membro del team
   - Se c'è la presenza di un "sottogruppo" di lavoro, le decisioni relative al come suddividere le attività saranno a carico del "responsabile" del sottogruppo. Si attua quindi una sorta di "divide et impera" per garantire una maggiore efficienza e una migliore gestione delle attività.
-+ Inizio dell'attività: il membro del team assegnato sposta l'attività la card dalla colonna *To Do* a *In Progress*
++ Inizio dell'attività: il membro del team assegnato sposta l'attività dalla colonna *To Do* a *In Progress*
 + Completamento dell'attività: il membro del team sposta la card dalla colonna *In Progress* a *In review*
-+ Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata (_ @tabella_revisioni _), per la struttura data alla #glossario("repository") l'attività verrà spostata in automatico da *In review* a *Done* 
++ Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata, per la struttura data alla #glossario("repository"),l'attività verrà spostata in automatico da *In review* a *Done* 
 
-Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità alle attività, in modo da garantire che quelle più importanti siano svolte per prime.
+Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
