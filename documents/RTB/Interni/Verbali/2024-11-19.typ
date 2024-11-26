@@ -8,8 +8,8 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.2", "24-11-2024",  "Rimozione punto OdG errato", p.pozzobon, p.salvo, p.salvo,
-    "0.0.1", "21-11-2024",  "Prima stesura documento", p.pozzobon, p.salvo, p.salvo,
+    "0.0.2", "24-11-2024",  "Rimozione punto OdG errato", p.pozzobon, p.salvo,
+    "0.0.1", "21-11-2024",  "Prima stesura documento", p.pozzobon, p.salvo,
   )
 )
 

@@ -10,8 +10,8 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo, p.salvo,
-    "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato, p.checchinato,
+    "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo,
+    "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato,
     
   )
 )
