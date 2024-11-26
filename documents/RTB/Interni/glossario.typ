@@ -21,6 +21,7 @@
         Unità di lavoro specifica e misurabile che deve essere svolta per raggiungere un obiettivo o completare una fase di un progetto. Ogni attività è caratterizzata da un insieme di risorse, una durata stimata, un responsabile e una sequenza logica rispetto ad altre attività.
         
         = B
+        
         - Backlog
         Elenco ordinato e continuamente aggiornato di attività, requisiti, funzionalità o lavori da completare in un progetto, tipicamente utilizzato nei metodi di gestione Agile. Il backlog rappresenta una sorta di "to-do list" dinamica che evolve in base alle priorità e alle necessità del progetto o del prodotto.
         

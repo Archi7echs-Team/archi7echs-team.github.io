@@ -80,6 +80,7 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
 - verbale, specificando:
   - presenze
 
+
 Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra OdG ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):

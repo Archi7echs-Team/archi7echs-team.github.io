@@ -13,6 +13,7 @@
   )
 )
 
+
 _A seguito dell'attività Diario di Bordo svolta in aula nella mattinata di martedì 12/11/2024 e della riunione del 13/11/2024 si decide di convocare una call per discutere di quanto segue:_
 
 

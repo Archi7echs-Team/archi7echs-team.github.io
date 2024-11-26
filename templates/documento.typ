@@ -118,7 +118,7 @@
     numbering: none,
     [Tabella delle revisioni]
   )
-  set par(justify: false)
+
   table(
     fill: (_, row) => if calc.odd(row) { rgb("#fbf1d0") } else { white },
     inset: 0.5em,
