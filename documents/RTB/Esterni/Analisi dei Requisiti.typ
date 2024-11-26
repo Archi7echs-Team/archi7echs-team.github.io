@@ -9,7 +9,8 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, (p.salvo), p.salvo,
+    "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
+    "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
   )
 )
 
@@ -77,3 +78,85 @@ Il prodotto deve essere progettato per poter rappresentare  dati, in un modello 
 //            react  angular frontend
 
 #pagebreak(weak: true)
+
+= Casi d'uso
+== Obiettivi
+Un caso d’uso rappresenta in modo formale le funzionalità di un sistema, illustrando le attività svolte durante un’interazione. \
+Questa sezione mira a descrivere in dettaglio i casi d’uso individuati dopo l’analisi del capitolato, colloqui con il proponente e discussioni tra i membri del progetto.
+
+== Attori
+La considerazione fondamentale, risultato di un colloquio con l'azienda proponente, è che l'attore del sistema che verrà realizzato è unico. Questo attore è la persona che interagisce direttamente con la piattaforma, visualizzando i dati e utilizzando le funzionalità di interazione con i grafici tridimensionali.
+
+== Schema logico Casi d'Uso
+
+//[Inserire Diagramma qua]
+
+Ogni caso d'uso è presentato seguendo la seguente struttura logica:
+- *Descrizione*: una breve descrizione del caso d'uso che identifica chiaramente la funzione che il sistema deve svolgere.
+- *Attore*: l’entità che interagisce col sistema, è un’entità esterna su cui non si possono effettuare modifiche.
+- *Precondizioni*: le condizioni che definiscono lo stato iniziale del sistema e degli attori prima che l'interazione inizi.
+- *Postcondizioni*: le condizioni che descrivono lo stato finale del sistema.
+- *Scenario principale*: la sequenza di passi standard che descrive l'interazione principale tra l'attore e il sistema per completare un caso d’uso.
+
+//[Inserire Diagramma o qua]
+
+== Gestione degli errori(?)
+//eventuale, tenere si no?
+
+== Elenco casi d'uso
+//Può andar bene una cosa del genere?
+=== UC 1 - Visualizzazione interattiva dei dati
+- *Descrizione: * L'utente può visualizzare i dati in un grafico 3D interattivo con barre verticali. 
+- *Attore: * Utente finale
+- *Precondizioni: * I dati devono essere già caricati nel sistema (tramite tabella, database SQL o API REST). L'interfaccia web deve essere accessibile e funzionante.
+- *Postcondizioni: *I dati vengono rappresentati in forma di grafico interattivo.
+- *Scenario Principale: *
+    + L'utente accede all'applicazione web.
+    + L'utente seleziona la modalità di visualizzazione dei dati (caricamento manuale, SQL, API).
+    + I dati vengono trasformati in coordinate (x, y, z) e rappresentati come barre 3D.
+    + L'utente utilizza comandi per ruotare, zoomare o spostare la vista sul grafico
+\
+=== UC 2 - Visualizzazione Dati
+- *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o opacizzare barre con valori superiori o inferiori.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico 3D è generato ed accessibile.
+- *Postcondizioni: * Opacizzazione di alcune barre a discapito di altre per certi valori
+- *Scenario Principale: *
+    + L'utente passa il cursore del mouse sopra una barra per vedere il valore.
+    + L'utente clicca su una barra per selezionarla.
+    + L'applicazione aggiorna la visualizzazione opacizzando o nascondendo barre con valori superiori/inferiori a quella selezionata
+\
+=== UC 3 - Visualizzazione del valore medio globale
+
+- *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * 
+  - Viene mostrato il piano medio globale.
+  - L'utente può interagire con le barre rispetto al piano.
+- *Scenario Principale: *
+    + L'utente clicca sull'opzione "Mostra piano medio" nel menu dell'interfaccia.
+    + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
+    + L'utente seleziona barre sopra o sotto il piano per nasconderle o opacizzarle.
+\
+=== UC 4 - Caricamento manuale dati tramite interfaccia
+- *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati.
+- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
+- *Scenario Principale: *
+    + L'utente accede alla modalità "Inserimento dati".
+    + L'utente compila i campi della tabella con coordinate x, y e valori z.
+    + L'utente clicca su "Genera grafico".
+    + L'applicazione traduce i dati nel grafico 3D.
+\
+=== UC 4.1 - Caricamento automatico dati tramite API
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite API
+- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
+- *Scenario Principale: *
+    + L'utente accede alla modalità "Inserimento dati".
+    + L'utente inserisce le API da cui prendere i dati.
+    + L'utente clicca su "Genera grafico".
+    + L'applicazione traduce i dati nel grafico 3D.
