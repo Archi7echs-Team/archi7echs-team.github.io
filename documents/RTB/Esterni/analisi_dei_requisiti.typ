@@ -9,8 +9,8 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.2.0", "22-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), (p.checchinato, p.salvo), "",
-    "0.1.0", "21-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, (p.checchinato, p.salvo), "",
+    "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
+    "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
   )
 )
 
@@ -157,6 +157,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente accede alla modalità "Inserimento dati".
-    + L'utente incolla le API da cui prendere i dati.
+    + L'utente inserisce le API da cui prendere i dati.
     + L'utente clicca su "Genera grafico".
     + L'applicazione traduce i dati nel grafico 3D.
