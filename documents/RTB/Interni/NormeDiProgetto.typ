@@ -106,7 +106,7 @@ Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazio
  - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del repository
  - La #glossario("Pull Request") può essere aperta andando nella pagina "Pull Requests", impostando "nome_branch" come branch sorgente e "sources" come branch di destinazione. Premere successivamente il pulsante "Create #glossario("Pull Request")"
  -  *ATTENZIONE*. Impostare il merge al branch _sources_ (lo fa in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
-+ Una volta creata la #glossario("Pull Request") si assegna il #glossario("verificatore") nella sezione "Reviewer" a destra della pagina della #glossario("Pull Request")
++ Una volta creata la #glossario("Pull Request") si assegna il #glossario("verificatore") nella sezione "Reviewer" a destra della pagina della #glossario("Pull Request"), le labels, il project e la #glossario("milestone") se presenti.
 + Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina della #glossario("Pull Request"). Questo permette di chiudere tutte le issue associate una volta che la #glossario("Pull Request") è stata approvata.
  - *ATTENZIONE*. L'impostazione delle issue va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio dell'effettuazione del link tra issue e #glossario("Pull Request").
 Il merge verso il branch _sources_ verrà effettuata dal verificatore solo dopo la modifica/verificazione del documento.
