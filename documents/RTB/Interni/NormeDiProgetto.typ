@@ -94,6 +94,43 @@ La tabella contenete il #glossario("registro delle modifiche"), situata a pagina
 == Verifica e Revisione della documentazione
 Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Compito del revisore è anche quello di controllare i corretti riferimenti del #glossario("Glossario"), aggiornando i riferimenti di parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). 
 === Processo per la verifica della documentazione <processo_verifica>
+Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
+==== Relatore
++ ```bash git pull``` --- per scaricare le ultime modifiche
++ ```bash git checkout sources``` --- per spostarsi sul branch di lavoro
++ ```bash git checkout -B <nome_branch>``` --- per creare un nuovo branch di lavoro, partendo dal branch di lavoro sources
++ Crea dei file o modifica i file esistenti
++ ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati in staging
++ ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
++ Aprire la #glossario("Pull Request") 
+ - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del repository
+ - La #glossario("Pull Request") può essere aperta andando nella pagina "Pull Requests", impostando "nome_branch" come branch sorgente e "sources" come branch di destinazione. Premere successivamente il pulsante "Create #glossario("Pull Request")"
+ -  *ATTENZIONE*. Impostare il merge al branch _sources_ (lo fa in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
++ Una volta creata la #glossario("Pull Request") si assegna il #glossario("verificatore") nella sezione "Reviewer" a destra della pagina della #glossario("Pull Request")
++ Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina della #glossario("Pull Request"). Questo permette di chiudere tutte le issue associate una volta che la #glossario("Pull Request") è stata approvata.
+ - *ATTENZIONE*. L'impostazione delle issue va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio dell'effettuazione del link tra issue e #glossario("Pull Request").
+Il merge verso il branch _sources_ verrà effettuata dal verificatore solo dopo la modifica/verificazione del documento.
+
+==== Verificatore
+Questa sezione presenta tutte le istruzioni che vengono applicate, dal momento in cui il documento è stato modificato fino alla sua verifica.
++ ```bash git pull``` --- per scaricare le ultime modifiche
++ ```bash git checkout <nome_branch>``` --- per spostarsi sul branch dove ci sono le modifiche da verificare
++ Controlla i documenti che sono stati modificati
+ - Se ci sono errori di battitura o sintattici, corregge il documento in locale procedendo poi con i commit
+ + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati in staging
+ + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
+ + ```bash git push``` --- per caricare le modifiche sul branch
++ Decide se approvare o meno la #glossario("Pull Request")
+ - Se decide di non approvare per mancanza di informazioni importanti, dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto
+ + Premere su "Add your review" in alto a destra
+ + Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
+ + Premere su "Submit review"
++ Se decide di approvare la #glossario("Pull Request") procede con il merge
+ - Premere su "Add your review" in alto a destra
+ - Premere su "Review changes" e selezionare "Approve"
+ - Premere su "Submit review"
+ - Premere su "Merge pull request" e successivamente su "Confirm merge"
++ Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il branch di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutili.
 
 = Management
 == Gestione dell'assegnazione dei ruoli
