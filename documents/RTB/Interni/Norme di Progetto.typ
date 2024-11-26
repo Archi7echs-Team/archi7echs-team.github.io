@@ -9,10 +9,10 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato, p.checchinato,
-    "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo, p.salvo,
-    "0.1.1", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, p.checchinato,p.checchinato,
-    "0.1.0", "24-11-2024",  "Redatta la suddivisione del documento", p.pozzobon, p.checchinato, p.checchinato,
+    "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
+    "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
+    "0.1.1", "24-11-2024",  "Redatta sezione Introduzione", p.lucato, p.checchinato,
+    "0.1.0", "24-11-2024",  "Redatta la suddivisione del documento", p.pozzobon, p.checchinato,
   )
 )
 
