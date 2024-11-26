@@ -28,6 +28,10 @@ jobs:
       - name: restore timestamps
         uses: chetan/git-restore-mtime-action@v2
 
+      - name: copy glossario.typ in the tmp/upload
+        run: |
+          mkdir --parents "${RUNNER_TEMP}/upload"; cp documents/RTB/Interni/glossario.typ $_ ;
+
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v40
@@ -75,6 +79,9 @@ jobs:
         env:
           TZ: Europe/Rome
 
+      - name: mv glossario.typ from tmp/upload to tmp/master/documents
+        run: |
+          mv "${RUNNER_TEMP}/upload/glossario.typ" "${RUNNER_TEMP}/master/documents/RTB"
       - name: Upload website files
         uses: actions/upload-artifact@v4
         with:
@@ -113,6 +120,9 @@ jobs:
 
       - name: Run format.py and remove it
         run: |
+          python3 format_glossario.py
+          rm format_glossario.py
+          rm documents/RTB/glossario.typ
           python3 format.py
           rm format.py
 
