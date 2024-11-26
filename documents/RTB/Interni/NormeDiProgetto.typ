@@ -93,8 +93,23 @@ La tabella contenete il #glossario("registro delle modifiche"), situata a pagina
 
 == Verifica e Revisione della documentazione
 Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Compito del revisore è anche quello di controllare i corretti riferimenti del #glossario("Glossario"), aggiornando i riferimenti di parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). 
+=== Processo per la verifica della documentazione <processo_verifica>
 
 = Management
 == Gestione dell'assegnazione dei ruoli
 
 == Gestione della board
+Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
+La board è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
++ *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le attività che devono essere svolte
++ *In Progress*: attività in corso di svolgimento
++ *In review*: attività completata e in attesa di verifica
++ *Done*: attività completata e verificata
+=== Processo di utilizzo board
++ Assegnazione di un'attività: l'attività viene assegnata a un membro del team
+  - Se c'è la presenza di un "sottogruppo" di lavoro, le decisioni relative al come suddividere le attività saranno a carico del "responsabile" del sottogruppo. Si attua quindi una sorta di "divide et impera" per garantire una maggiore efficienza e una migliore gestione delle attività.
++ Inizio dell'attività: il membro del team assegnato sposta l'attività la card dalla colonna *To Do* a *In Progress*
++ Completamento dell'attività: il membro del team sposta la card dalla colonna *In Progress* a *In review*
++ Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata (_ @tabella_revisioni _), per la struttura data alla #glossario("repository") l'attività verrà spostata in automatico da *In review* a *Done* 
+
+Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità alle attività, in modo da garantire che quelle più importanti siano svolte per prime.
