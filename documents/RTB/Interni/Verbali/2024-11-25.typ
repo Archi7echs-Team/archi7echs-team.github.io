@@ -4,11 +4,11 @@
   title: "Verbale incontro 25/11/2024",
   subtitle: "Documento interno - verbale nr. 8",
   author: "Francesco Pozzobon",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "26-11-2024",  "Prima stesura documento", p.pozzobon, "",
+    "0.0.1", "26-11-2024",  "Prima stesura documento", p.pozzobon, p.valdagno,
   )
 )
 
@@ -67,7 +67,7 @@ Durante l'incontro previsto per domani con Alex Beggiato, si relazionerà quanto
 
 
 == Gestione tabella delle revisioni
-Si analizza la problematica della colonna 'Approvazione' contenente nella tabella delle revisioni dei documenti. Il team decide all'unanimità di rimuovere tale colonna e, nell'effettivo, modificando il template ```bash documento.typ```. Si decide, visto che al momento sono stati resi rilasciati solo 3 verbali (2 interni ed 1 esterno), di aggiornare tali documenti.
+Si analizza la problematica della colonna 'Approvazione' presente nella tabella delle revisioni dei documenti. Il team decide all'unanimità di rimuovere tale colonna e, di conseguenza, modificare il template ```bash documento.typ```. Si decide, visto che al momento sono stati resi rilasciati solo 3 verbali (2 interni ed 1 esterno), di aggiornare tali documenti.
 
 == Uniformare stile di scrittura - nome file
 #p.checchinato solleva il problema del nome dei file con sintassi differente, alcuni con gli spazi, altri invece con i "-". Il team decide di nominare i file con gli spazi. I file, creati fino ad ora e appartenenti alla fase #glossario("RTB"), devono essere rinominati.
