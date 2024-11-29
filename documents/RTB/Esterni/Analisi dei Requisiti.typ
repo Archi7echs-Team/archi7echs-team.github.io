@@ -70,7 +70,12 @@ Il prodotto deve essere progettato per poter rappresentare  dati, in un modello 
 - *[Opzionale] Visualizzazione del valore medio del singolo elemento*: il sistema deve consentire di visualizzare un piano parallelo alla base, che rappresenta il valore medio di un singolo elemento di un asse (X o Y).
 
 == Caratteristiche Utente
-//Da aggiungere in seguito quando sarà più chiaro
+L'utilizzatore di 3Dataviz appartiene a due distinte categorie di utenti:
+- Esperto $arrow.r$ utente specializzato nell'analisi e interpretazione dei dati che, per una migliore visualizzazione, che sceglie l'applicativo per visualizzare grafici 3D di un set di dati per una migliore comprensione. Padroneggia buone o ottime conoscenze sull'utilizzo del dispositivo con cui utilizza la Web App. La maggior parte degli utenti appartenenti a questa categoria conosce e ha già utilizzato altri applicativi per la visualizzazione grafica di dati.
+-  Generico $arrow.r$ utente senza specifiche conoscenze nel campo dell'analisi dei dati che però vuole visualizzare un grafico 3D di un set di dati. Possiede conoscenze di base sull'utilizzo del dispositivo con cui utilizza la Web App
+
+L'accesso alla #glossario("Web App") avviene principalmente attraverso un computer, per garantire una migliore visualizzazione del grafico e sfruttare al massimo le funzionalità, non si esclude però che l'utente possa effettuare l'accesso anche da un dispositivo mobile (smartphone o tablet), soprattutto se il set di dati è limitato. \
+
 
 == Tecnologie
 //concordare durante una riunione 
