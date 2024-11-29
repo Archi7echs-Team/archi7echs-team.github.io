@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon),"",
+    "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
     "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
   )
@@ -163,7 +163,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione traduce i dati nel grafico 3D.
 
     = Requisiti
-    == Tracciamento 
+    == Identificazione 
     Un #glossario("requisito") possiede 2 distinte caratteristiche:
     - *Tipologia* $arrow.r$ indica il tipo di requisito, ovvero:
       - *F* Funzionale
@@ -174,7 +174,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - *2* Desiderabile
       - *3* Opzionale   
 
-    Ogni #glossario("requisito") viene quindi identificati da un #glossario("codice univoco") strutturato come segue:
+    Ogni #glossario("requisito") viene quindi identificato da un #glossario("codice univoco") strutturato come segue:
     #align(center)[*Tipologia.Classificazione.NumProgressivo*] \
     Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra. _NumProgressivo_ è un intero che aumenta con ogni requisito della medesima classe.
 
@@ -189,7 +189,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
         table.header([*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*]),
         [F.1.1], [@uc1 \ #glossario("UC")1], [L'utente deve poter visualizzare i dati in un grafico 3D interattivo con barre verticali], [1 - Obbligatorio],
         [F.1.2], [@uc2 \ #glossario("UC")2], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
-        [F.1.3], [@uc3 \ #glossario("UC")3], [L’utente deve poter attivare un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio],
+        [F.1.3], [@uc3 \ #glossario("UC")3], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio],
         [F.1.4], [@uc4 \ #glossario("UC")4], [L'utente, per generare il grafico, deve poter inserire i dati manualmente tramite un'apposita sezione tabellare nell'interfaccia web], [1 - Obbligatorio],
         [F.1.5], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di selezionare una sorgente esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
     )
