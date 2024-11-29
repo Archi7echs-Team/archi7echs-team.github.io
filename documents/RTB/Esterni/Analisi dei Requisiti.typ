@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
     "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
   )
@@ -105,7 +106,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 
 == Elenco casi d'uso
 //Può andar bene una cosa del genere?
-=== UC 1 - Visualizzazione interattiva dei dati
+=== UC 1 - Visualizzazione interattiva dei dati <uc1>
 - *Descrizione: * L'utente può visualizzare i dati in un grafico 3D interattivo con barre verticali. 
 - *Attore: * Utente finale
 - *Precondizioni: * I dati devono essere già caricati nel sistema (tramite tabella, database SQL o API REST). L'interfaccia web deve essere accessibile e funzionante.
@@ -116,7 +117,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + I dati vengono trasformati in coordinate (x, y, z) e rappresentati come barre 3D.
     + L'utente utilizza comandi per ruotare, zoomare o spostare la vista sul grafico
 \
-=== UC 2 - Visualizzazione Dati
+=== UC 2 - Visualizzazione Dati <uc2>
 - *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o opacizzare barre con valori superiori o inferiori.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
@@ -126,7 +127,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su una barra per selezionarla.
     + L'applicazione aggiorna la visualizzazione opacizzando o nascondendo barre con valori superiori/inferiori a quella selezionata
 \
-=== UC 3 - Visualizzazione del valore medio globale
+=== UC 3 - Visualizzazione del valore medio globale <uc3>
 
 - *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale.
 - *Attore: * Utente finale
@@ -139,7 +140,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
     + L'utente seleziona barre sopra o sotto il piano per nasconderle o opacizzarle.
 \
-=== UC 4 - Caricamento manuale dati tramite interfaccia
+=== UC 4 - Caricamento manuale dati tramite interfaccia <uc4>
 - *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati.
@@ -150,7 +151,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su "Genera grafico".
     + L'applicazione traduce i dati nel grafico 3D.
 \
-=== UC 4.1 - Caricamento automatico dati tramite API
+=== UC 4.1 - Caricamento automatico dati tramite API <uc5>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite API
@@ -160,3 +161,38 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente inserisce le API da cui prendere i dati.
     + L'utente clicca su "Genera grafico".
     + L'applicazione traduce i dati nel grafico 3D.
+
+    = Requisiti
+    == Identificazione 
+    Un #glossario("requisito") possiede 2 distinte caratteristiche:
+    - *Tipologia* $arrow.r$ indica il tipo di requisito, ovvero:
+      - *F* Funzionale
+      - *Q* Qualità
+      - *V* Vincolo
+    - *Classificazione* $arrow.r$ indica, secondo tre livelli, la categoria del requisito in base all'importanza.  \ L'ordine è decrescente in base all'importanza del requisito:
+      - *1* Obbligatorio
+      - *2* Desiderabile
+      - *3* Opzionale   
+
+    Ogni #glossario("requisito") viene quindi identificato da un #glossario("codice univoco") strutturato come segue:
+    #align(center)[*Tipologia.Classificazione.NumProgressivo*] \
+    Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra. _NumProgressivo_ è un intero che aumenta con ogni requisito della medesima classe.
+
+    == Requisiti funzionali
+
+    #align(center)[
+  #figure[
+    #table(
+        columns: (auto, auto, auto, auto),
+        align: (col, row) => (center, center, center, center,).at(col),
+        inset: 6pt,
+        table.header([*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*]),
+        [F.1.1], [@uc1 \ #glossario("UC")1], [L'utente deve poter visualizzare i dati in un grafico 3D interattivo con barre verticali], [1 - Obbligatorio],
+        [F.1.2], [@uc2 \ #glossario("UC")2], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
+        [F.1.3], [@uc3 \ #glossario("UC")3], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio],
+        [F.1.4], [@uc4 \ #glossario("UC")4], [L'utente, per generare il grafico, deve poter inserire i dati manualmente tramite un'apposita sezione tabellare nell'interfaccia web], [1 - Obbligatorio],
+        [F.1.5], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di selezionare una sorgente esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
+    )
+    <tab:reqFunzionali>
+  ]
+]
