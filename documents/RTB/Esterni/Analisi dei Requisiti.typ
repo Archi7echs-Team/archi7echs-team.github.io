@@ -76,6 +76,8 @@ L'utilizzatore di #glossario("3Dataviz") appartiene a due distinte categorie di 
 - Esperto $arrow.r$ utente specializzato nell'analisi e interpretazione dei dati che, per una migliore visualizzazione, sceglie l'applicativo per visualizzare grafici 3D di un #glossario("set di dati") per una migliore comprensione. Padroneggia buone o ottime conoscenze sull'utilizzo del dispositivo con cui utilizza la #glossario("Web App"). La maggior parte degli utenti appartenenti a questa categoria conosce e ha già utilizzato altri applicativi per la visualizzazione grafica di dati.
 -  Generico $arrow.r$ utente senza specifiche conoscenze nel campo dell'analisi dei dati che però vuole visualizzare un #glossario("set di dati") di un set di dati. Possiede conoscenze di base sull'utilizzo del dispositivo con cui utilizza #glossario("Web App").
 
+L'applicativo dovrà quindi presentare un'interfaccia semplice ma completa, per permettere ad entrambe le tipologie di utenti di utilizzare la #glossario("Web App") secondo le esigenze descritte sopra.
+
 L'accesso alla #glossario("Web App") avviene principalmente attraverso un computer, per garantire una migliore visualizzazione del grafico e sfruttare al massimo le funzionalità, non si esclude, però, che l'utente possa effettuare l'accesso anche da un dispositivo mobile (smartphone o tablet), soprattutto se il set di dati è limitato. \
 
 
