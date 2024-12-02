@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, "",
+    "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
     "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
     "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
@@ -71,10 +71,10 @@ Il prodotto deve essere progettato per poter rappresentare  dati, in un modello 
 
 - *[Opzionale] Visualizzazione del valore medio del singolo elemento*: il sistema deve consentire di visualizzare un piano parallelo alla base, che rappresenta il valore medio di un singolo elemento di un asse (X o Y).
 
-== Caratteristiche Utente
+== Caratteristiche utente
 L'utilizzatore di #glossario("3Dataviz") appartiene a due distinte categorie di utenti:
-- Esperto $arrow.r$ utente specializzato nell'analisi e interpretazione dei dati che, per una migliore visualizzazione, sceglie l'applicativo per visualizzare grafici 3D di un #glossario("set di dati") per una migliore comprensione. Padroneggia buone o ottime conoscenze sull'utilizzo del dispositivo con cui utilizza la #glossario("Web App"). La maggior parte degli utenti appartenenti a questa categoria conosce e ha già utilizzato altri applicativi per la visualizzazione grafica di dati.
--  Generico $arrow.r$ utente senza specifiche conoscenze nel campo dell'analisi dei dati che però vuole visualizzare un #glossario("set di dati") di un set di dati. Possiede conoscenze di base sull'utilizzo del dispositivo con cui utilizza #glossario("Web App").
+- Esperto $arrow.r$ utente specializzato nell'analisi e interpretazione dei dati che, per una migliore visualizzazione e una migliore comprensione, sceglie l'applicativo per visualizzare grafici 3D di un #glossario("set di dati"). Padroneggia buone o ottime conoscenze sull'uso del dispositivo con cui utilizza la #glossario("Web App"). La maggior parte degli utenti appartenenti a questa categoria conosce e ha già utilizzato altri applicativi per la visualizzazione grafica di dati.
+-  Generico $arrow.r$ utente senza specifiche conoscenze nel campo dell'analisi dei dati che però vuole visualizzare un grafico 3D di un #glossario("set di dati"). Possiede conoscenze di base sull'uso del dispositivo con cui utilizza la #glossario("Web App").
 
 L'applicativo dovrà quindi presentare un'interfaccia semplice ma completa, per permettere ad entrambe le tipologie di utenti di utilizzare la #glossario("Web App") secondo le esigenze descritte sopra.
 
