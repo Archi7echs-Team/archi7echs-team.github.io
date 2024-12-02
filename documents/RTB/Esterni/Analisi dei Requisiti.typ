@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, "",
     "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
     "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
