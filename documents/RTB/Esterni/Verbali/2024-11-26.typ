@@ -21,7 +21,6 @@ _A seguito del lavoro svolto da parte del team e del impegno preso con l'azienda
 + Revisione Stato Avanzamento Lavori (SAL)
 + Domande e chiarimenti
 + Varie ed eventuali
-+ Decisioni
 
 = Dettagli dell'incontro
 
