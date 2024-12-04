@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "29-11-2024",  "Prima stesura documento", p.salvo,"",
+    "0.0.1", "04-11-2024",  "Prima stesura documento", p.salvo,"",
   )
 )
 
@@ -90,6 +90,11 @@ Il team si riunirà dopo la riunione per discutere di quanto emerso e per decide
   [3],[Prossimo incontro],[Confermare orario dell'incontro del 11/12/2024]
 ))
 
+= TODO
+
+#todo((
+  (56,), (p.checchinato), [Aggiunta sezione about]
+))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'OdG._
 
