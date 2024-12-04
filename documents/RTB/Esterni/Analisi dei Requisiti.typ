@@ -123,7 +123,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente accede all'applicazione web.
     + L'utente seleziona la modalità di visualizzazione dei dati (caricamento manuale, SQL, API).
     + I dati vengono trasformati in coordinate (x, y, z) e rappresentati come barre 3D.
-    + L'utente utilizza comandi per ruotare, zoomare o spostare la vista sul grafico
+    + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione
 \
 === UC 2 - Visualizzazione Dati <uc2>
 - *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o opacizzare barre con valori superiori o inferiori.
@@ -135,7 +135,44 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su una barra per selezionarla.
     + L'applicazione aggiorna la visualizzazione opacizzando o nascondendo barre con valori superiori/inferiori a quella selezionata
 \
-=== UC 3 - Visualizzazione del valore medio globale <uc3>
+
+=== UC 3 Strumenti visualizzazione dati - ROTAZIONE <uc3>
+- *Descrizione: * L'utente, attraverso l'apposita barra degli strumenti, può ruotare il grafico
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico 3D è generato ed accessibile.
+- *Postcondizioni: * Rotazione del grafico per consentire una migliore visualizzazione dei dati di interesse dell'utente
+- *Scenario Principale: *
+  + L'utente clicca sullo strumento di rotazione, situato nella barra degli strumenti
+  + L'applicazione consente la rotazione della visualizzazione attraverso il mouse
+  + L'utente, volendo, può resettare la visualizzazione a quella di partenza
+
+=== UC 4 - Strumenti visualizzazione dati - PAN <uc4>
+- *Descrizione: * L'utente, attraverso l'apposita barra degli strumenti, può concentrare la visualizzazione su un'apposita area del grafico
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico 3D è generato ed accessibile.
+- *Postcondizioni: * Visualizzazione di una sola determinata area del grafico, senza modificarne il contenuto
+- *Scenario Principale: *
+  + L'utente clicca sullo strumento pan, situato nella barra degli strumenti
+  + L'applicazione contente la visualizzazione di una determinata area del grafico selezionata dall'utente con il mouse
+  + L'utente, volendo, può resettare la visualizzazione a quella di partenza
+
+=== UC 5 - Strumenti visualizzazione dati - Zoom <uc5>
+- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire liberamente la visualizzazione e spostarsi nella relativa sottosezione visualizzata
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico 3D è generato ed accessibile.
+- *Postcondizioni: * Visualizzazione ingrandita di una sezione del grafico 
+- *Scenario Principale: *
+  + L'utente, attraverso le gesture del mouse o trackpad/touchpad ingrandisce e restringe la visualizzazione 
+  + L'utente, volendo, può resettare la visualizzazione a quella di partenza
+
+=== UC 6 - Strumenti visualizzazione dati - Auto posizionamento <uc6>
+- *Descrizione: * 
+- *Attore: * 
+- *Precondizioni: *
+- *Postcondizioni: * 
+- *Scenario Principale: *
+
+=== UC 7 - Visualizzazione del valore medio globale <uc7>
 
 - *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale.
 - *Attore: * Utente finale
@@ -148,7 +185,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
     + L'utente seleziona barre sopra o sotto il piano per nasconderle o opacizzarle.
 \
-=== UC 4 - Caricamento manuale dati tramite interfaccia <uc4>
+=== UC 8.1 - Caricamento manuale dati tramite interfaccia <uc8.1>
 - *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati.
@@ -159,7 +196,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su "Genera grafico".
     + L'applicazione traduce i dati nel grafico 3D.
 \
-=== UC 4.1 - Caricamento automatico dati tramite API <uc5>
+=== UC 8.2 - Caricamento automatico dati tramite API <uc8.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite API
@@ -197,9 +234,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
         table.header([*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*]),
         [F.1.1], [@uc1 \ #glossario("UC")1], [L'utente deve poter visualizzare i dati in un grafico 3D interattivo con barre verticali], [1 - Obbligatorio],
         [F.1.2], [@uc2 \ #glossario("UC")2], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
-        [F.1.3], [@uc3 \ #glossario("UC")3], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio],
-        [F.1.4], [@uc4 \ #glossario("UC")4], [L'utente, per generare il grafico, deve poter inserire i dati manualmente tramite un'apposita sezione tabellare nell'interfaccia web], [1 - Obbligatorio],
-        [F.1.5], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di selezionare una sorgente esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
+        [F.1.7], [@uc7 \ #glossario("UC")3], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio],
+        [F.1.8], [@uc8.1 \ #glossario("UC")4], [L'utente, per generare il grafico, deve poter inserire i dati manualmente tramite un'apposita sezione tabellare nell'interfaccia web], [1 - Obbligatorio],
+        [F.1.9], [@uc8.2 \ #glossario("UC")5], [L'utente deve essere in grado di selezionare una sorgente esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
     )
     <tab:reqFunzionali>
   ]
