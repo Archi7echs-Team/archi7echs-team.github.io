@@ -4,12 +4,12 @@
   title: "Verbale incontro 26/11/2024",
   subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 4",
   author: "Giovanni Salvò",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "04-11-2024",  "Prima stesura documento", p.salvo, p.valdagno,
+    "0.0.1", "05-11-2024",  "Prima stesura documento", p.salvo, (p.valdagno,p.checchinato),
   )
 )
 
@@ -87,7 +87,7 @@ Il team si riunirà dopo la riunione per discutere di quanto emerso e per decide
   [1],[Descrizione repository],[Inserire descrizione per specificare che si tratta di un progetto universitario],
   [1],[Gestione repository],[Verrà discusso durante il prossimo incontro come gestire la parte di codice],
   [2],[#glossario("PoC")],[Creazione di un simil-#glossario("PoC") per capire in modo più profondo le tecnologie e i requisiti],
-  [3],[Prossimo incontro],[Confermare orario dell'incontro del'11/12/2024]
+  [3],[Prossimo incontro],[Confermare orario dell'incontro del'10/12/2024]
 ))
 
 = TODO
