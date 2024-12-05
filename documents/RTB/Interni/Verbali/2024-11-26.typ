@@ -4,11 +4,11 @@
   title: "Verbale incontro 26/11/2024",
   subtitle: "Documento interno - verbale nr. 9",
   author: "Giovanni Salvò",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "03-11-2024",  "Prima stesura documento", p.salvo, "",
+    "0.0.1", "03-12-2024",  "Prima stesura documento", p.salvo, p.valdagno,
   )
 )
 
@@ -32,7 +32,7 @@ _E' stata convocata una riunione online del Team a seguito della chiamata con l'
 
 = Verbale
  
-L'incontro inizia, come da programma alle ore 16.10. Sono presenti seguenti i componenti del team:
+L'incontro inizia, come da programma alle ore 16.10. Sono presenti i seguenti componenti del team:
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
