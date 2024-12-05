@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "05-11-2024",  "Prima stesura documento", p.salvo, (p.valdagno,p.checchinato),
+    "0.0.1", "05-12-2024",  "Prima stesura documento", p.salvo, (p.valdagno,p.checchinato),
   )
 )
 
@@ -77,7 +77,7 @@ Viene informata l'azienda che i primi test per la scelta delle tecnologie da uti
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l’incontro è terminato alle 16:00. \
-Viene indicato come prossimo #glossario("SAL") il giorno 11/12/2024 con orario da specificare. \
+Viene indicato come prossimo #glossario("SAL") il giorno 10/12/2024 con orario da specificare. \
 Il team si riunirà dopo la riunione per discutere di quanto emerso e per decidere gli argomenti da affrontare nel prossimo periodo.
 
 = Decisioni
