@@ -119,8 +119,8 @@ Padova, 26 novembre 2024
     columns: (auto, 1fr),
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
-    [Per Sanmarco Informatica:\ /*Alex Beggiato \
+    [Per Sanmarco Informatica:\ Alex Beggiato \
     #place(center, image("//img/smi_sign.png", width: 120%))
-    */],
+    ],
   )]
 )
