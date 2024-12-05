@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.1.4","04-12-2024","Continuazione casi d'uso",p.pozzobon,"",
     "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
     "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
@@ -124,8 +125,30 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente seleziona la modalità di visualizzazione dei dati (caricamento manuale, SQL, API).
     + I dati vengono trasformati in coordinate (x, y, z) e rappresentati come barre 3D.
     + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione
-\
-=== UC 2 - Visualizzazione Dati <uc2>
+
+=== UC 2.1 - Caricamento manuale dati tramite interfaccia <uc2.1>
+- *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati.
+- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
+- *Scenario Principale: *
+    + L'utente accede alla modalità "Inserimento dati".
+    + L'utente compila i campi della tabella con coordinate x, y e valori z.
+    + L'utente clicca su "Genera grafico".
+    + L'applicazione traduce i dati nel grafico 3D.
+
+=== UC 2.2 - Caricamento automatico dati tramite API <uc2.2>
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite API
+- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
+- *Scenario Principale: *
+    + L'utente accede alla modalità "Inserimento dati".
+    + L'utente inserisce le API da cui prendere i dati.
+    + L'utente clicca su "Genera grafico".
+    + L'applicazione traduce i dati nel grafico 3D.
+
+=== UC 3 - Visualizzazione Dati <uc3>
 - *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o opacizzare barre con valori superiori o inferiori.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
@@ -134,9 +157,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente passa il cursore del mouse sopra una barra per vedere il valore.
     + L'utente clicca su una barra per selezionarla.
     + L'applicazione aggiorna la visualizzazione opacizzando o nascondendo barre con valori superiori/inferiori a quella selezionata
-\
 
-=== UC 3 Strumenti visualizzazione dati - ROTAZIONE <uc3>
+
+=== UC 4 Strumenti visualizzazione dati - ROTAZIONE <uc4>
 - *Descrizione: * L'utente, attraverso l'apposita barra degli strumenti, può ruotare il grafico
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
@@ -146,7 +169,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione consente la rotazione della visualizzazione attraverso il mouse
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
-=== UC 4 - Strumenti visualizzazione dati - PAN <uc4>
+=== UC 5 - Strumenti visualizzazione dati - PAN <uc5>
 - *Descrizione: * L'utente, attraverso l'apposita barra degli strumenti, può concentrare la visualizzazione su un'apposita area del grafico
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
@@ -156,7 +179,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione contente la visualizzazione di una determinata area del grafico selezionata dall'utente con il mouse
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
-=== UC 5 - Strumenti visualizzazione dati - Zoom <uc5>
+=== UC 6 - Strumenti visualizzazione dati - Zoom <uc6>
 - *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire liberamente la visualizzazione e spostarsi nella relativa sottosezione visualizzata
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
@@ -165,14 +188,16 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente, attraverso le gesture del mouse o trackpad/touchpad ingrandisce e restringe la visualizzazione 
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
-=== UC 6 - Strumenti visualizzazione dati - Auto posizionamento <uc6>
-- *Descrizione: * 
-- *Attore: * 
-- *Precondizioni: *
-- *Postcondizioni: * 
+=== UC 7 - Strumenti visualizzazione dati - Auto posizionamento <uc7>
+- *Descrizione: * L'utente, attraverso l'apposito bottone nella sezione degli strumenti, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico 3D è generato, accessibile e l'utente ha personalizzato, mediante strumenti, la visualizzazione
+- *Postcondizioni: * Reset della visualizzazione del grafico a quella di default
 - *Scenario Principale: *
+  + L'utente, attraverso gli strumenti messi a disposizione, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione
+  + L'utente, volendo, può nuovamente personalizzare la visualizzazione attraverso gli strumenti senza dover ricaricare il grafico
 
-=== UC 7 - Visualizzazione del valore medio globale <uc7>
+=== UC 8 - Visualizzazione del valore medio globale <uc8>
 
 - *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale.
 - *Attore: * Utente finale
@@ -184,28 +209,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca sull'opzione "Mostra piano medio" nel menu dell'interfaccia.
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
     + L'utente seleziona barre sopra o sotto il piano per nasconderle o opacizzarle.
-\
-=== UC 8.1 - Caricamento manuale dati tramite interfaccia <uc8.1>
-- *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
-- *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è in modalità di inserimento dati.
-- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
-- *Scenario Principale: *
-    + L'utente accede alla modalità "Inserimento dati".
-    + L'utente compila i campi della tabella con coordinate x, y e valori z.
-    + L'utente clicca su "Genera grafico".
-    + L'applicazione traduce i dati nel grafico 3D.
-\
-=== UC 8.2 - Caricamento automatico dati tramite API <uc8.2>
-- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
-- *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite API
-- *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
-- *Scenario Principale: *
-    + L'utente accede alla modalità "Inserimento dati".
-    + L'utente inserisce le API da cui prendere i dati.
-    + L'utente clicca su "Genera grafico".
-    + L'applicazione traduce i dati nel grafico 3D.
 
     = Requisiti
     == Identificazione 
