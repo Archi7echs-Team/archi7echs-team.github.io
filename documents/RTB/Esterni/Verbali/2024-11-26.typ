@@ -9,11 +9,11 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "04-11-2024",  "Prima stesura documento", p.salvo,"",
+    "0.0.1", "04-11-2024",  "Prima stesura documento", p.salvo, p.valdagno,
   )
 )
 
-_A seguito del lavoro svolto da parte del team e del impegno preso con l'azienda di aggiornarsi una volta ogni 2/3 settimane si decide, una volta contattato Alex Beggiato (System Architect Team Leader) di convocare una call con il seguente ordine del giorno:_
+_A seguito del lavoro svolto da parte del team e dell'impegno preso con l'azienda di aggiornarsi una volta ogni 2/3 settimane si decide, una volta contattato Alex Beggiato (System Architect Team Leader), di convocare una call con il seguente ordine del giorno:_
 
 
 = Ordine del Giorno
@@ -32,7 +32,7 @@ _A seguito del lavoro svolto da parte del team e del impegno preso con l'azienda
 
 = Verbale
  
-L'incontro inizia, come da programma alle ore 15.00. Sono presenti seguenti i componenti del team:
+L'incontro inizia, come da programma alle ore 15.00. Sono presenti i seguenti componenti del team:
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
@@ -72,7 +72,7 @@ Infine, su suggerimento di Alex Beggiato, è stato proposto di inserire un discl
 
 
 == Domande e chiarimenti
-#p.pesenato chiede in che modo la gestione degli errori dovrà essere inserita nell' #glossario("AdR") e viene confermato il pensiero iniziale di aggiungrli agli use cases ma non nei requisiti.
+#p.pesenato chiede in che modo la gestione degli errori dovrà essere inserita nell' #glossario("AdR") e viene confermato il pensiero iniziale di aggiungerli agli use cases ma non nei requisiti.
 Viene informata l'azienda che i primi test per la scelta delle tecnologie da utilizzare sono iniziati e viene chiesto se la creazione di un simil-#glossario("PoC") possa aiutare nell'individuazione di casi d'uso ancora non trovati. Alex conferma che lo scopo del #glossario("PoC") è proprio questo. #p.valdagno chiede delucidazioni sul ruolo dell'utente, che viene identificato come utente standard in assenza di una fase di accesso. Infine, vengono poste domande relative alla gestione di dati significativamente distanti dalla media di quelli inseriti.
 
 == Varie ed eventuali
@@ -87,7 +87,7 @@ Il team si riunirà dopo la riunione per discutere di quanto emerso e per decide
   [1],[Descrizione repository],[Inserire descrizione per specificare che si tratta di un progetto universitario],
   [1],[Gestione repository],[Verrà discusso durante il prossimo incontro come gestire la parte di codice],
   [2],[#glossario("PoC")],[Creazione di un simil-#glossario("PoC") per capire in modo più profondo le tecnologie e i requisiti],
-  [3],[Prossimo incontro],[Confermare orario dell'incontro del 11/12/2024]
+  [3],[Prossimo incontro],[Confermare orario dell'incontro del'11/12/2024]
 ))
 
 = TODO
