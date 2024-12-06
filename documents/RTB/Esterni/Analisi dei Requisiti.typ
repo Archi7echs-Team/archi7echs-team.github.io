@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.4","05-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon,"",
+    "0.1.4","06-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, p.valdagno,
     "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
     "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
     "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
@@ -169,22 +169,22 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
 === UC 5 - Strumenti visualizzazione dati - PAN <uc5>
-- *Descrizione: * L'utente, attraverso la selezione con il mouse, può concentrare la visualizzazione su un'apposita area del grafico
+- *Descrizione: * L'utente, attraverso la selezione con il mouse, può focalizzare la visualizzazione su un'apposita area del grafico
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
-- *Postcondizioni: * Visualizzazione di una sola determinata area del grafico, senza modificarne il contenuto
+- *Postcondizioni: * Visualizzazione di una determinata area del grafico, senza modificarne il contenuto
 - *Scenario Principale: *
   + L'utente seleziona una determinata area del grafico
-  + L'applicazione contente la visualizzazione di una determinata area del grafico selezionata
+  + L'applicazione consente la visualizzazione della determinata area del grafico selezionata
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
 === UC 6 - Strumenti visualizzazione dati - Zoom <uc6>
-- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire liberamente la visualizzazione e spostarsi nella relativa sottosezione visualizzata
+- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione e navigare nella relativa sezione visualizzata
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico 3D è generato ed accessibile.
-- *Postcondizioni: * Visualizzazione ingrandita di una sezione del grafico 
+- *Postcondizioni: * Visualizzazione ingrandita o ridotta di una sezione del grafico 
 - *Scenario Principale: *
-  + L'utente, attraverso le gesture del mouse o trackpad/touchpad ingrandisce e restringe la visualizzazione 
+  + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico
   + L'utente, volendo, può resettare la visualizzazione a quella di partenza
 
 === UC 7 - Strumenti visualizzazione dati - Auto posizionamento <uc7>
@@ -240,8 +240,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
         [F.1.4], [@uc3 \ #glossario("UC")3], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
         [F.1.5], [@uc4 \ #glossario("UC")4], [L'utente deve essere in grado di ruotare liberamente la visualizzazione del grafico ], [1 - Obbligatorio],
         [F.1.6], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
-        [F.1.7], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire o restringere la visualizzazione del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
-        [F.1.8], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado, a seguito di personalizzazione della visualizzazione, di reimpostare la visualizzazione del grafico a quella di default ], [1 - Obbligatorio],
+        [F.1.7], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire o ridurre la visualizzazione del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
+        [F.1.8], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado, a seguito di personalizzazione della visualizzazione, di ripristinare la visualizzazione di default del grafico], [1 - Obbligatorio],
         [F.1.9], [@uc8 \ #glossario("UC")8], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio]
     )
     <tab:reqFunzionali>
