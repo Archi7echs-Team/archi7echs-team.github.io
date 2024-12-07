@@ -140,9 +140,9 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
 #{
   let plot = plot(data: (
     (0, "Responsabile - " + perc(0,5)),
-    (2, "Amministratore - " + perc(2,5)),
-    (2, "Verificatore - " + perc(2,5)),
-    (1, "Progettista - " + perc(1,5)),
+    (40, "Amministratore - " + perc(2,5)),
+    (40, "Verificatore - " + perc(2,5)),
+    (20, "Progettista - " + perc(1,5)),
     (0, "Programmatore - " + perc(0,5)),
     (0, "Analista - " + perc(0,5)),
   ))
@@ -181,8 +181,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
     (40, "Non fatto - " + perc(40,100)),
     (60, "Fatto - " + perc(60,100)),
   ))
-  //TODO: cambiare il colore delle sezioni del grafico: da fare in rosso, fatto in verde
-  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo X", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo X", display_style: "hor-legend-chart",colors: (red, green))
 }
 
 = Gestione dei rischi <gestione_dei_rischi> 
@@ -305,12 +304,12 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 
 #{
   let plot = plot(data: (
-    (4, "Responsabile - " + perc(4,33)),
-    (3, "Amministratore - " + perc(3,33)),
-    (11, "Verificatore - " + perc(11,33)),
-    (5, "Progettista - " + perc(5,33)),
-    (5, "Programmatore - " + perc(5,33)),
-    (5, "Analista - " + perc(5,33)),
+    (12.12, "Responsabile - " + perc(4,33)),
+    (9.09, "Amministratore - " + perc(3,33)),
+    (33.33, "Verificatore - " + perc(11,33)),
+    (15.15, "Progettista - " + perc(5,33)),
+    (15.15, "Programmatore - " + perc(5,33)),
+    (15.15, "Analista - " + perc(5,33)),
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
@@ -365,12 +364,12 @@ Cambiamenti operativi e gestionali individuati:
 
 #{
   let plot = plot(data: (
-    (4, "Responsabile - " + perc(4,38)),
-    (7, "Amministratore - " + perc(7,38)),
-    (11, "Verificatore - " + perc(11,38)),
+    (10.53, "Responsabile - " + perc(4,38)),
+    (18.42, "Amministratore - " + perc(7,38)),
+    (28.95, "Verificatore - " + perc(11,38)),
     (0, "Progettista - " + perc(0,38)),
-    (5, "Programmatore - " + perc(5,38)),
-    (11, "Analista - " + perc(11,38)),
+    (13.16, "Programmatore - " + perc(5,38)),
+    (28.95, "Analista - " + perc(11,38)),
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
@@ -379,11 +378,11 @@ Cambiamenti operativi e gestionali individuati:
 *Progresso delle attività*:\
 #{
   let plot = plot(data: (
-    (40, "Non fatto - " + perc(4,34)),
-    (60, "Fatto - " + perc(30,34)),
+    (11.76, "Non fatto - " + perc(4,34)),
+    (88.24, "Fatto - " + perc(30,34)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 1", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 1", display_style: "hor-legend-chart",colors: (red, green))
 }
 
 
