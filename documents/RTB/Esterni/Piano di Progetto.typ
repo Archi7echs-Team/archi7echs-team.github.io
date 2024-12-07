@@ -119,7 +119,7 @@ Avendo adottato la metodologia Agile-Scrum (_@scelta_metodologia _), è importan
 + *Descrizione obiettivi*: individua la sezione contenente una breve descrizione del periodo e degli obiettivi da raggiungere.
 + *Possibili rischi*: identifica la sezione in cui si pensano quali rischi possono occorrere durante il periodo. Questo è molto importante per tutto il team in quanto garantisce una visione generale delle problematiche che potrebbero essere incontrate e risolte tramite la gestione dei rischi.
 + *Tabella preventivo*: identifica la tabella con l'impegno in ore che ogni componente del gruppo decide di dedicare al determinato ruolo
-+ *Suddivisione ore*: viene identificato da un grafico a torta che visualizza la percentuale dedicata ai ruoli in base al totale delle ore preventivate del periodo.
++ *Distribuzione preventivata delle ore*: il grafico a torta rappresenta la suddivisione percentuale delle ore preventivate per ciascun ruolo, calcolata rispetto al totale delle ore pianificate per il periodo considerato.
 === Esempio punti 6,7
 *Esempio tabella preventivo*:
 #table(
@@ -147,7 +147,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
     (0, "Analista - " + perc(0,5)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
 }
 
 
@@ -155,9 +155,10 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
 
 + *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. E' molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
 + *Problematiche non attese*: identifica la sezione in cui vengono elencate tutte quelle problematiche che non erano state considerate durante la fase preliminare o nelle fasi preliminari di periodi precedenti.
-+ *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il periodo. Questo permette di avere un feedback immediato sullo stato del #glossario("progetto"), con relativo incremento/decremento o invarianza del costo totale del periodo.
++ *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il periodo. Questo permette di avere un feedback immediato sullo stato del #glossario("progetto") e di capire se le azioni intraprese sono state efficaci o meno.
 + *Possibili cambiamenti*: identifica la sezione in cui vengono discussi dei miglioramenti presi in considerazione in base a quanto rilevato durante il periodo affrontato. In questa parte il team ritiene molto importante identificare _tutti_ i cambiamenti da attuare, dunque non solo quelli per il periodo successivo ma anche (e soprattutto) in visione "a lungo raggio".
 + *Tabella esito effettivo*: identifica la tabella che riporta il quantitativo di ore utilizzate nell'effettivo. Questo permettere di avere un feedback immediato sullo stato del #glossario("progetto"), con relativo incremento/decremento o invarianza del costo totale del periodo.
++ *Distribuzione effettiva delle ore*: il grafico a torta mostra la reale distribuzione delle ore impiegate per i vari ruoli, calcolata in base ai dati effettivi raccolti al termine del periodo. Questo consente di confrontare quanto previsto con quanto realmente accaduto.
 + *Progresso delle attività* : in questa sezione verrà creato un grafico a torta che identifica la percentuale di #glossario("attività") svolte in base a tutte quelle presenti nel #glossario("backlog") della #glossario("milestone") del periodo.\
 
 === Esempio punti 4,5
@@ -177,7 +178,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
 
 #{
   let plot = plot(data: (
-    (40, "Da fare - " + perc(40,100)),
+    (40, "Non fatto - " + perc(40,100)),
     (60, "Fatto - " + perc(60,100)),
   ))
   //TODO: cambiare il colore delle sezioni del grafico: da fare in rosso, fatto in verde
@@ -292,33 +293,33 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
     table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
     [Gabriele Checchinato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
     [Leonardo Lucato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
-    [Giacomo Pesenato],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.proge)],
+    [Giacomo Pesenato],[0],[0],[0],[5],[0],[0],[€ #(5*costo_ora.proge)],
     [Francesco Pozzobon],[0],[3],[0],[0],[0],[0],[€ #(3*costo_ora.amm)],
     [Giovanni Salvò],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
-    [Gioele Scandaletti],[0],[0],[0],[0],[0],[0],[€ #(0*costo_ora.progr)],
+    [Gioele Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
     [Pietro Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(3*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ #(5*costo_ora.proge)],[0],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(90+120+125+60+75+125)*]],
+    [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(3*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ #(5*costo_ora.proge)],[€ #(5*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(120+60+165+125+75+125)*]],
   )
 ]
-*Suddivisione ore*:\ // da mettere a posto
+*Distribuzione preventivata delle ore*:\ // da mettere a posto
 
 #{
   let plot = plot(data: (
-    (4, "Responsabile - " + perc(4,60)),
-    (3, "Amministratore - " + perc(3,60)),
-    (11, "Verificatore - " + perc(11,60)),
-    (5, "Progettista - " + perc(5,60)),
-    (0, "Programmatore - " + perc(0,60)),
-    (0, "Analista - " + perc(5,60)),
+    (4, "Responsabile - " + perc(4,33)),
+    (3, "Amministratore - " + perc(3,33)),
+    (11, "Verificatore - " + perc(11,33)),
+    (5, "Progettista - " + perc(5,33)),
+    (5, "Programmatore - " + perc(5,33)),
+    (5, "Analista - " + perc(5,33)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
 }
 
 === Esito
 *Obiettivi non raggiunti*:\
 
-Nel periodo appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del progetto. Di seguito vengono elencati gli obiettivi non completati:
+Nel periodo appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del progetto. Di seguito vengono elencate le task non completati:
 
 - *Stesura dell'andamento del primo periodo nel Piano di Progetto*: questa attività non è stata completata in quanto si è ritenuto che fosse compito del responsabile del periodo successivo. La decisione è stata presa per ottimizzare i tempi e concentrare gli sforzi su altre attività.
 - *Gestione dell’assegnazione dei ruoli nelle Norme di Progetto*: non è stata realizzata la sezione dedicata all’assegnazione dei ruoli per mancanza di tempo.
@@ -332,38 +333,58 @@ Durante il periodo non sono state riscontrate problematiche non attese.
 *Mitigazione rischi verificati*:\
 Durante il periodo sono stati riscontrati alcuni rischi preventivati. Di seguito vengono descritte le azioni intraprese per mitigarli:
 
-- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: la gestione dei problemi personali dei membri del team è stata affrontata con una pianificazione flessibile. I compiti sono stati assegnati in base alla disponibilità di ciascun membro, con l’obiettivo di non sovraccaricare nessuno. È stata inoltre incoraggiata una comunicazione aperta, affinché eventuali difficoltà fossero tempestivamente condivise. Questa gestione ha permesso di mantenere il lavoro in corso, limitando i ritardi e garantendo che le attività venissero comunque portate a termine senza compromettere la qualità del lavoro.
-
-- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]: per evitare disallineamenti e sovrapposizioni di compiti, è stata realizzata una pianificazione chiara delle attività, con una definizione precisa dei ruoli e delle responsabilità all’interno del team. Ogni membro era consapevole delle proprie scadenze e degli obiettivi da raggiungere. La costante supervisione e il monitoraggio da parte del responsabile hanno permesso di mantenere un buon coordinamento, riducendo l’impatto del rischio. Sebbene ci siano stati occasionali rallentamenti, il rischio di scarsa coordinazione è stato contenuto, con minimi disagi nel flusso di lavoro.
-
-- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: il rischio di mancanza di conoscenze tecniche è stato gestito principalmente attraverso lo studio individuale e l’autoapprendimento. In caso di necessità, sono stati programmati incontri con l’azienda per acquisire consulenze specifiche, e i membri più esperti hanno supportato quelli meno esperti. Questa strategia ha permesso al team di superare le difficoltà tecniche senza compromettere le tempistiche. Nonostante le sfide iniziali, l’impatto complessivo è stato contenuto grazie all’impegno del team e all’affiancamento reciproco.
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: i problemi personali sono stati gestiti con una pianificazione flessibile, assegnando i compiti in base alla disponibilità dei membri per evitare sovraccarichi. La comunicazione aperta ha permesso di affrontare tempestivamente eventuali difficoltà, mantenendo un equilibrio nelle attività del team. L’impatto è stato contenuto, con ritardi minimi che non hanno compromesso la qualità complessiva del lavoro.
+- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]: il rischio di disallineamenti e sovrapposizioni di compiti è stato gestito attraverso una pianificazione chiara delle attività e una definizione precisa di ruoli e responsabilità. Ogni membro ha lavorato con consapevolezza delle proprie scadenze e obiettivi, mentre la supervisione costante da parte del responsabile ha garantito un buon livello di coordinamento. L’impatto è stato contenuto, con rallentamenti occasionali che non hanno generato significativi disagi nel flusso di lavoro.
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: il rischio è stato affrontato attraverso lo studio individuale e l’autoapprendimento. In caso di difficoltà, i membri con maggiore esperienza hanno supportato quelli con meno competenze, organizzando momenti di confronto e formazione interna. Grazie a questa collaborazione, l’impatto è stato limitato, consentendo al team di rispettare le scadenze e di affrontare efficacemente le problematiche tecniche emerse.
 
 *Possibili cambiamenti*:\
-In base a quanto emerso durante il periodo, il team ha individuato alcuni possibili cambiamenti da attuare per migliorare la gestione e l’organizzazione del lavoro. Di seguito vengono elencate le modifiche previste:
-
-- Migliorare la pianificazione delle attività: è necessario definire con maggiore precisione le scadenze e le priorità, per evitare sovrapposizioni e ritardi. Sarà inoltre utile prevedere un margine di tempo aggiuntivo per gestire eventuali imprevisti e garantire la consegna puntuale delle attività.
-- Incrementare la comunicazione interna: per evitare disallineamenti e problemi di coordinamento, è importante mantenere una comunicazione costante tra i membri del team. Sarà utile organizzare meeting periodici e colloqui individuali per condividere aggiornamenti e discutere eventuali difficoltà.
-- Rafforzare la formazione tecnica: per superare le diffic tecniche, è necessario investire maggiormente nella formazione individuale e nell’autoapprendimento. Sarà utile organizzare sessioni di studio condiviso e incontri con l’azienda per acquisire competenze specifiche. Inoltre, il team si impegnerà a supportarsi reciprocamente, condividendo le conoscenze e le esperienze per superare le difficoltà tecniche.
-
-*Tabella esito effettivo*:\ // to do
+Durante il periodo affrontato, il team ha identificato alcuni aspetti da migliorare per ottimizzare il lavoro nelle fasi successive del progetto e garantire una maggiore efficienza a lungo termine.\
+Cambiamenti operativi e gestionali individuati:
+- *Pianificazione più dettagliata*: è emerso che una pianificazione più approfondita delle attività, con micro-obiettivi settimanali, potrebbe facilitare il monitoraggio del progresso e l’identificazione tempestiva di eventuali criticità.
+- *Rafforzamento della comunicazione interna*: incentivare incontri regolari per confrontarsi sui progressi, evidenziare difficoltà e ridefinire priorità. Questo permetterà di mantenere una maggiore coesione e coordinazione tra i membri del team.
+#pagebreak();
+*Tabella esito effettivo*:\ 
 #align(center)[
   #table(
     columns: (auto, auto, auto, auto, auto, auto, auto, auto),
     align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
     inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-    [Gabriele Checchinato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
-    [Leonardo Lucato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
-    [Giacomo Pesenato],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.proge)],
-    [Francesco Pozzobon],[0],[3],[0],[0],[0],[0],[€ #(3*costo_ora.amm)],
-    [Giovanni Salvò],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
-    [Gioele Scandaletti],[0],[0],[0],[0],[0],[0],[€ #(0*costo_ora.progr)],
-    [Pietro Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(3*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ #(5*costo_ora.proge)],[0],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(90+120+125+60+75+125)*]],
+    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+    [Gabriele\ Checchinato],[0],[0],[7(#text(red)[+1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+    [Leonardo\ Lucato],[4],[2(#text(red)[+2])],[0],[0],[0],[0],[€ #(4*costo_ora.res+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+    [Giacomo\ Pesenato],[0],[0],[0],[0(#text(green)[-5])],[0],[6(#text(red)[+6])],[€ #(6*costo_ora.ana) (#text(red)[+€ #(25)])],
+    [Francesco\ Pozzobon],[0],[5(#text(red)[+2])],[0],[0],[0],[0],[€ #(5*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+    [Giovanni\ Salvò],[0],[0],[4(#text(green)[-1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
+    [Gioele\ Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
+    [Pietro\ Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+    [*Costo\ per ruolo*],[€ #(4*costo_ora.res)],[€ #(7*costo_ora.amm) (#text(red)[+€ #(4*costo_ora.amm)])],[€ #(11*costo_ora.ver)],[€ #(0) (#text(green)[-€ #(5*costo_ora.proge)])],[€ #(5*costo_ora.progr)],[€ #(11*costo_ora.ana) (#text(red)[+€ #(6*costo_ora.ana)])],[#text(blue)[*€ #(120+140+165+0+75+275)*]],
   )
 ]
 
-*Progresso delle attività*:\ // to do
+*Distribuzione effettiva delle ore*:\
+
+#{
+  let plot = plot(data: (
+    (4, "Responsabile - " + perc(4,38)),
+    (7, "Amministratore - " + perc(7,38)),
+    (11, "Verificatore - " + perc(11,38)),
+    (0, "Progettista - " + perc(0,38)),
+    (5, "Programmatore - " + perc(5,38)),
+    (11, "Analista - " + perc(11,38)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+}
+#pagebreak();
+*Progresso delle attività*:\
+#{
+  let plot = plot(data: (
+    (40, "Non fatto - " + perc(4,34)),
+    (60, "Fatto - " + perc(30,34)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 1", display_style: "hor-legend-chart")
+}
 
 
 
