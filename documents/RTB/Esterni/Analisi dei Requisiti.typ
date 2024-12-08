@@ -148,6 +148,17 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su "Genera grafico".
     + L'applicazione traduce i dati nel grafico 3D.
 
+=== UC 2.3 - Caricamento automatico dati tramite connessione a database SQL <uc2.3>
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite connessione a database SQL
+- *Postcondizioni: * I dati, una volta recuperati dalla sorgente, vengono salvati temporaneamente e utilizzati per creare il grafico.
+- *Scenario Principale: *
+    + L'utente accede alla modalità "Inserimento dati".
+    + L'utente si collega al database SQL e, mediante query, estrae i dati di proprio interesse
+    + L'utente clicca su "Genera grafico".
+    + L'applicazione traduce i dati nel grafico 3D.
+
 === UC 3 - Visualizzazione Dati <uc3>
 - *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o opacizzare barre con valori superiori o inferiori.
 - *Attore: * Utente finale
@@ -236,13 +247,14 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
         table.header([*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*]),
         [F.1.1], [@uc1 \ #glossario("UC")1], [L'utente deve poter visualizzare i dati in un grafico 3D interattivo con barre verticali], [1 - Obbligatorio],
         [F.1.2], [@uc2.1 \ #glossario("UC")2.1], [L'utente, per generare il grafico, deve poter inserire i dati manualmente tramite un'apposita sezione tabellare nell'interfaccia web], [1 - Obbligatorio],
-        [F.1.3], [@uc2.2 \ #glossario("UC")2.2], [L'utente deve essere in grado di selezionare una sorgente esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
-        [F.1.4], [@uc3 \ #glossario("UC")3], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
-        [F.1.5], [@uc4 \ #glossario("UC")4], [L'utente deve essere in grado di ruotare liberamente la visualizzazione del grafico ], [1 - Obbligatorio],
-        [F.1.6], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
-        [F.1.7], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire o ridurre la visualizzazione del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
-        [F.1.8], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado, a seguito di personalizzazione della visualizzazione, di ripristinare la visualizzazione di default del grafico], [1 - Obbligatorio],
-        [F.1.9], [@uc8 \ #glossario("UC")8], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio]
+        [F.1.3], [@uc2.2 \ #glossario("UC")2.2], [L'utente deve essere in grado di selezionare una sorgente API esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
+        [F.1.4], [@uc2.3 \ #glossario("UC")2.3], [L'utente deve essere in grado di selezionare una sorgente SQL esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
+        [F.1.5], [@uc3 \ #glossario("UC")3], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o opacizzare barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
+        [F.1.6], [@uc4 \ #glossario("UC")4], [L'utente deve essere in grado di ruotare liberamente la visualizzazione del grafico ], [1 - Obbligatorio],
+        [F.1.7], [@uc5 \ #glossario("UC")5], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
+        [F.1.8], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire o ridurre la visualizzazione del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
+        [F.1.9], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado, a seguito di personalizzazione della visualizzazione, di ripristinare la visualizzazione di default del grafico], [1 - Obbligatorio],
+        [F.1.10], [@uc8 \ #glossario("UC")8], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio]
     )
     <tab:reqFunzionali>
   ]
