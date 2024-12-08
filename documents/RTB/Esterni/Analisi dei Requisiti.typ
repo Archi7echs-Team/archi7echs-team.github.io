@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.1.5","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, "",
     "0.1.4","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
     "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
