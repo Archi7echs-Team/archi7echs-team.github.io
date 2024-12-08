@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.2", "30-11-2024",  "Stesura andamento primo periodo", p.checchinato, "",
+    "0.1.2", "08-12-2024",  "Stesura andamento primo periodo", p.checchinato, p.valdagno,
     "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo,
     "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato,
     
@@ -200,7 +200,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Impatto*: medio
 - *Strategie di mitigazione*: il responsabile dovrà occuparsi di organizzare meeting periodici e attuare un'assegnazione chiara dei compiti.
 
-=== Rischio 2 - Problemi personali dei membri del team <RI-2>
+==== Rischio 2 - Problemi personali dei membri del team <RI-2>
 - *Identificativo*: RI-2
 - *Descrizione*: difficoltà di gestione dei propri impegni personali (università, lavoro, impegni personali, ecc...)
 - *Probabilità*: alta
@@ -214,14 +214,14 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Impatto*: alto
 - *Strategie di mitigazione*: il responsabile dovrà dare definizioni più chiare dei ruoli e delle responsabilità con una pianificazione dettagliata delle attività.
 
-=== Rischio 4 - Mancanza di conoscenze tecniche <RI-4>
+==== Rischio 4 - Mancanza di conoscenze tecniche <RI-4>
 - *Identificativo*: RI-4
 - *Descrizione*: difficoltà nell'implementazione delle funzionalità richieste, con conseguente ritardo nella consegne.
 - *Probabilità*: media
 - *Impatto*: alto
 - *Strategie di mitigazione*: lo studio individuale è parte fondamentale del processo di "allenamento" che caratterizza l'apprendimento di ogni componente del team. Se previsto, una mitigazione possibile è l'organizzazione "straordinaria" di un meeting con l'azienda per una breve consulenza. Nel caso si verificassero casi molto particolari, è possibile affiancare un componente del team con maggiore esperienza.
 
-=== Rischio 5 - Mancanza di allineamento sugli obiettivi <RI-5>
+==== Rischio 5 - Mancanza di allineamento sugli obiettivi <RI-5>
 - *Identificativo*: RI-5
 - *Descrizione*: mancanza di chiarezza sugli obiettivi del #glossario("progetto"), con conseguente disallineamento tra i membri del team. Si identifica tramite la consegna di attività non conformi a quanto pianificato o richiesto.
 - *Probabilità*: media
@@ -262,7 +262,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
       [Progettista(Prt)], [Giacomo Pesenato]
   )
 ]
-*Obbiettivi*:\
+*Obiettivi*:\
 Nel primo periodo del progetto, il team si concentrerà principalmente sull’organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’Analisi dei Requisiti e del Glossario. Durante questo periodo, ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
 
 Gli obiettivi principali di questa fase sono quindi:
@@ -317,20 +317,18 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 
 === Esito
 *Obiettivi non raggiunti*:\
-
-Nel periodo appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del progetto. Di seguito vengono elencate le task non completati:
+Nel periodo appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del progetto. Di seguito vengono elencate le task non completate:
 
 - *Stesura dell'andamento del primo periodo nel Piano di Progetto*: questa attività non è stata completata in quanto si è ritenuto che fosse compito del responsabile del periodo successivo. La decisione è stata presa per ottimizzare i tempi e concentrare gli sforzi su altre attività.
 - *Gestione dell’assegnazione dei ruoli nelle Norme di Progetto*: non è stata realizzata la sezione dedicata all’assegnazione dei ruoli per mancanza di tempo.
-- *Sezione sui requisiti nell’Analisi dei Requisiti*: la parte relativa alla descrizione dei requisiti non è stata sviluppata per motivi di tempo. Si è preferito concentrarsi su altre attività e lasciarla in sospeso.
+- *Sezione sui requisiti nell’Analisi dei Requisiti*: la parte relativa all'identificazione e descrizione dei requisiti non è stata sviluppata per motivi di tempo. Si è preferito concentrarsi su altre attività e lasciarla in sospeso.
 - *Inizio del tracciamento dei requisiti nell’Analisi dei Requisiti*: la creazione della sezione per il tracciamento dei requisiti non è stata portata avanti anch'essa per mancanza di tempo e quindi si è deciso di rimandarla.
 
 *Problematiche non attese*:\
-
 Durante il periodo non sono state riscontrate problematiche non attese.
 
 *Mitigazione rischi verificati*:\
-Durante il periodo sono stati riscontrati alcuni rischi preventivati. Di seguito vengono descritte le azioni intraprese per mitigarli:
+Durante il periodo sono stati riscontrati alcuni dei rischi preventivati. Di seguito vengono descritte le azioni intraprese per mitigarli:
 
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: i problemi personali sono stati gestiti con una pianificazione flessibile, assegnando i compiti in base alla disponibilità dei membri per evitare sovraccarichi. La comunicazione aperta ha permesso di affrontare tempestivamente eventuali difficoltà, mantenendo un equilibrio nelle attività del team. L’impatto è stato contenuto, con ritardi minimi che non hanno compromesso la qualità complessiva del lavoro.
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]: il rischio di disallineamenti e sovrapposizioni di compiti è stato gestito attraverso una pianificazione chiara delle attività e una definizione precisa di ruoli e responsabilità. Ogni membro ha lavorato con consapevolezza delle proprie scadenze e obiettivi, mentre la supervisione costante da parte del responsabile ha garantito un buon livello di coordinamento. L’impatto è stato contenuto, con rallentamenti occasionali che non hanno generato significativi disagi nel flusso di lavoro.
@@ -352,11 +350,11 @@ Cambiamenti operativi e gestionali individuati:
     [Gabriele\ Checchinato],[0],[0],[7(#text(red)[+1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
     [Leonardo\ Lucato],[4],[2(#text(red)[+2])],[0],[0],[0],[0],[€ #(4*costo_ora.res+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
     [Giacomo\ Pesenato],[0],[0],[0],[0(#text(green)[-5])],[0],[6(#text(red)[+6])],[€ #(6*costo_ora.ana) (#text(red)[+€ #(25)])],
-    [Francesco\ Pozzobon],[0],[5(#text(red)[+2])],[0],[0],[0],[0],[€ #(5*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+    [Francesco\ Pozzobon],[1(#text(red)[+1])],[5(#text(red)[+2])],[0],[0],[0],[0],[€ #(5*costo_ora.amm+1*costo_ora.res) (#text(red)[+€ #(2*costo_ora.amm+1*costo_ora.res)])],
     [Giovanni\ Salvò],[0],[0],[4(#text(green)[-1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
     [Gioele\ Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
     [Pietro\ Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [*Costo\ per ruolo*],[€ #(4*costo_ora.res)],[€ #(7*costo_ora.amm) (#text(red)[+€ #(4*costo_ora.amm)])],[€ #(11*costo_ora.ver)],[€ #(0) (#text(green)[-€ #(5*costo_ora.proge)])],[€ #(5*costo_ora.progr)],[€ #(11*costo_ora.ana) (#text(red)[+€ #(6*costo_ora.ana)])],[#text(blue)[*€ #(120+140+165+0+75+275)*]],
+    [*Costo\ per ruolo*],[€ #(5*costo_ora.res) (#text(red)[+€ #(1*costo_ora.res)])],[€ #(7*costo_ora.amm) (#text(red)[+€ #(4*costo_ora.amm)])],[€ #(11*costo_ora.ver)],[€ #(0) (#text(green)[-€ #(5*costo_ora.proge)])],[€ #(5*costo_ora.progr)],[€ #(11*costo_ora.ana) (#text(red)[+€ #(6*costo_ora.ana)])],[#text(blue)[*€ #(150+140+165+0+75+275)*] (+#text(red)[*€ #(30+80+0-125+0+150)*])],
   )
 ]
 
@@ -364,12 +362,12 @@ Cambiamenti operativi e gestionali individuati:
 
 #{
   let plot = plot(data: (
-    (10.53, "Responsabile - " + perc(4,38)),
-    (18.42, "Amministratore - " + perc(7,38)),
-    (28.95, "Verificatore - " + perc(11,38)),
-    (0, "Progettista - " + perc(0,38)),
-    (13.16, "Programmatore - " + perc(5,38)),
-    (28.95, "Analista - " + perc(11,38)),
+    (12.82, "Responsabile - " + perc(5,39)),
+    (17.95, "Amministratore - " + perc(7,39)),
+    (28.21, "Verificatore - " + perc(11,39)),
+    (0, "Progettista - " + perc(0,39)),
+    (12.82, "Programmatore - " + perc(5,39)),
+    (28.21, "Analista - " + perc(11,39)),
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
