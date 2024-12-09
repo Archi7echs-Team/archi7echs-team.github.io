@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.1.3", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
     "0.1.2", "08-12-2024",  "Stesura andamento primo periodo", p.checchinato, p.valdagno,
     "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo,
     "0.1.0", "23-11-2024",  "Prima introduzione PdP", p.lucato, p.checchinato,
@@ -230,7 +231,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 
 ==== Rischio 6 - Sovraccarico di lavoro <RI-6>
 - *Identificativo*: RI-6
-- *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridotta efficienza.
+- *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridurre l'efficienza.
 - *Probabilità*: media
 - *Impatto*: alto
 - *Strategie di mitigazione*: pianificare una distribuzione equa dei compiti e monitorare regolarmente lo stato di avanzamento delle attività, adattando il carico in base alla disponibilità di ciascun membro.
@@ -240,7 +241,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: calo di motivazione dei membri del team, che potrebbe compromettere la qualità del lavoro svolto.
 - *Probabilità*: bassa
 - *Impatto*: medio
-- *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e organizzare attività di team building.
+- *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e promuovere attività di team building.
 
 #pagebreak();
 
