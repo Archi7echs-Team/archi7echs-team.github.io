@@ -228,6 +228,28 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Impatto*: alto
 - *Strategie di mitigazione*: il responsabile si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
 
+==== Rischio 6 - Sovraccarico di lavoro <RI-6>
+- *Identificativo*: RI-6
+- *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridotta efficienza.
+- *Probabilità*: media
+- *Impatto*: alto
+- *Strategie di mitigazione*: pianificare una distribuzione equa dei compiti e monitorare regolarmente lo stato di avanzamento delle attività, adattando il carico in base alla disponibilità di ciascun membro.
+
+==== Rischio 7 - Problemi di motivazione <RI-7>
+- *Identificativo*: RI-7
+- *Descrizione*: calo di motivazione dei membri del team, che potrebbe compromettere la qualità del lavoro svolto.
+- *Probabilità*: bassa
+- *Impatto*: medio
+- *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e organizzare attività di team building.
+
+#pagebreak();
+
+==== Rischio 8 - Assenza di un membro del team per malattia o altri impegni <RI-8>
+- *Identificativo*: RI-8
+- *Descrizione*: un membro del team potrebbe assentarsi a causa di malattia o di un impegno, compromettendo le scadenze e aumentando il carico di lavoro per gli altri membri.
+- *Probabilità*: media
+- *Impatto*: alto
+- *Strategie di mitigazione*: prevedere una documentazione accurata e aggiornata delle attività svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
 
 === Problemi esterni al team
 ==== Rischio 1 - Problemi di comunicazione con l'azienda <RE-1>
@@ -241,8 +263,16 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Identificativo*: RE-2
 - *Descrizione*: molto spesso capita che quando si utilizza una libreria di terze parti, si possano incontrare problemi di compatibilità o di implementazione, non attribuibili direttamente al team.
 - *Probabilità*: media
-- *Impatto*: media
+- *Impatto*: medio
 - *Strategie di mitigazione*: una soluzione possibile è quella di chiedere un confronto con l'azienda che, data la maggiore esperienza, potrebbe fornire un'alternativa valida o un supporto per la risoluzione del problema.
+
+==== Rischio 3 - Ritardi nelle consegne da parte di terzi <RE-3>
+- *Identificativo*: RE-3
+- *Descrizione*: ritardi nella fornitura di materiale, dati o feedback necessari per il proseguimento delle attività del team.
+- *Probabilità*: media
+- *Impatto*: medio
+- *Strategie di mitigazione*: identificare con anticipo le dipendenze da terze parti e predisporre soluzioni alternative in caso di ritardi.
+
 = Periodi
 == Periodo 1
 === Pianificazione
