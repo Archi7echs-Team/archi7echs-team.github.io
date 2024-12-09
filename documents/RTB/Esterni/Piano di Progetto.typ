@@ -269,7 +269,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 ==== Rischio 3 - Ritardi nelle consegne da parte di terzi <RE-3>
 - *Identificativo*: RE-3
 - *Descrizione*: ritardi nella fornitura di materiale, dati o feedback necessari per il proseguimento delle attività del team.
-- *Probabilità*: media
+- *Probabilità*: bassa
 - *Impatto*: medio
 - *Strategie di mitigazione*: identificare con anticipo le dipendenze da terze parti e predisporre soluzioni alternative in caso di ritardi.
 
