@@ -4,11 +4,11 @@
   title: "Verbale incontro 04/12/2024",
   subtitle: "Documento interno - verbale nr. 10",
   author: "Giovanni Salvò",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "09-12-2024",  "Prima stesura documento", p.salvo, "",
+    "0.0.1", "09-12-2024",  "Prima stesura documento", p.salvo, p.valdagno,
   )
 )
 
@@ -24,7 +24,7 @@ _A seguito dell'attività Diario di Bordo svolta in aula nella mattinata di lune
 
 = Dettagli dell'incontro
 
-*Data e ora convocazione* Mercoledì 26/11/2024 - ore 15.10 \
+*Data e ora convocazione* Mercoledì 04/12/2024 - ore 15.10 \
 
 *Luogo* Online - Piattaforma Discord \
 
@@ -42,7 +42,7 @@ L'incontro inizia, come da programma alle ore 15.10. Sono presenti i seguenti co
 - #p.valdagno
 
 #p.salvo si propone come verbalizzante dell’incontro. \
-#p.lucato, in qualità di responsabile di progetto, prende la parola e si procede alla discussione in ordine dei punti all’ordine del giorno.
+#p.checchinato, in qualità di responsabile di progetto, prende la parola e si procede alla discussione in ordine dei punti all’ordine del giorno.
 #pb()
 
 
@@ -57,14 +57,14 @@ L'incontro inizia, come da programma alle ore 15.10. Sono presenti i seguenti co
 
 
 == Dimostrazione simil-#glossario("PoC") dai membri del team
-Durante l'incontro vengono mostrate le aggiunte al simil-#glossario("PoC") di #p.lucato tra cui migliorie al piano medio e alle label applicate alle colonne. A seguire #p.pesenato mostra le modifiche applicate al suo simil-#glossario("PoC") tra cui la funzionalità del hover della colonna. #p.scandaletti espone le sue difficoltà nella creazione del simil-#glossario("PoC") tramite Angular a causa della complessità della tecnologia e del suo stato di salute nella scorsa settimana. \ 
+Durante l'incontro #p.lucato mostra le aggiunte al simil-#glossario("PoC") da lui realizzato, tra cui migliorie al piano medio e alle label applicate alle colonne. A seguire #p.pesenato mostra le modifiche applicate al suo simil-#glossario("PoC") tra cui la funzionalità del hover della colonna. #p.scandaletti espone le sue difficoltà nella creazione del simil-#glossario("PoC") tramite Angular a causa della complessità della tecnologia e del suo stato di salute nella scorsa settimana. \ 
 Vengono esposti problemi nell'uso delle API da parte di #p.lucato che trovano aiuto da parte di #p.pesenato che si propone per trovare la soluzione nel suo simil-#glossario("PoC").
 
 == Spiegazione rendicontazione ore e cruscotto
-#p.pozzobon mostra il lavoro fatto nel documento #glossario("AdR") e spiega il funzionamento del documento #glossario("Google Sheets") in cui ogni membro dovrà inserire le ore produttive effettuate giorno per giorno, periodo per periodo, per portare a una rendicontazione ore dinamica e immediata. Inoltre, mostra al team il cruscotto realizzato tramite #glossario("Grafana") che riunisce tutti i dati importanti da #glossario("GitHub") e #glossario("Google Sheets") per dare una visione immediata dello stato del progetto sia come costi e ore ma anche come issue aperte e chiuse.
+#p.pozzobon illustra il lavoro svolto nel documento #glossario("AdR") e spiega il funzionamento del documento #glossario("Google Sheets") in cui ogni membro dovrà inserire le ore produttive effettuate giorno per giorno, periodo per periodo, per portare a una rendicontazione ore dinamica e immediata. Inoltre, mostra al team il cruscotto realizzato tramite #glossario("Grafana") che riunisce tutti i dati importanti da #glossario("GitHub") e #glossario("Google Sheets") per dare una visione immediata dello stato del progetto sia come costi e ore ma anche come issue aperte e chiuse.
 
 == Discussioni sullo stato del lavoro e di come procedere
-Il team discute su come gestire il codice in #glossario("repo") e su come gestire le issue a esso collegate. #p.checchinato fa luce sulla necessità di inserire il responsabile come verificatore finale nelle #glossario("PR") dei documenti. Il team concorda su questa proposta. Il team discute sullo stato del lavoro e su come procedere nella stesura dei documenti a regola d'arte
+Il team discute su come gestire il codice in #glossario("repo") e su come gestire le issue a esso collegate. #p.checchinato fa luce sulla necessità di inserire il responsabile come verificatore finale nelle #glossario("PR") dei documenti. Il team concorda su questa proposta. Il team discute lo stato del lavoro e le modalità per procedere nella stesura dei documenti a regola d'arte
 
 == Varie ed eventuali
 
