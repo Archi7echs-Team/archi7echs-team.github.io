@@ -5,10 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Approvato",
+  state: "Bozza",
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.1.5", "10-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", p.salvo,"",
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
     "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
@@ -140,6 +141,7 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 
 = Management
 == Gestione dell'assegnazione dei ruoli
+Il team assegna i ruoli principalmente basandosi sulla preferenza dell'individuo. Il membro deve essere trasparente e comunicare la sua disponibilità nel periodo che si affronterà, questo è utile per assicurarsi che il membro abbia abbastanza tempo per affrontare in modo corretto il ruolo. I ruoli devono ruotare per permettere a ogni persona di eseguire il ruolo almeno una volta durante il progetto. Inoltre una persona non può ricoprire lo stesso ruolo per due periodi diversi contigui. Nel caso non ci siano preferenze per molteplici membri lasciando ruoli non coperti l'assegnazione viene decisa basandosi sui ruoli precedentemente coperti e sulla disponibilità del singolo membro.
 
 == Gestione della board
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
