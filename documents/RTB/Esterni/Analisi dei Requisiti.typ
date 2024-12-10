@@ -168,7 +168,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * Il sistema controlla l'importazione ed, in caso di errori (formato errato, indisponibilità della risorsa, errore nella sorgente) notifica l'utente
 - *Scenario Principale: *
     + L'utente seleziona la modalità di inserimento dati.
-    + Il sistema verifica che i dati vengono importati correttamente e, in caso contrario, avvisa l'utente con un messaggio
+    + Il sistema verifica che i dati siano importati correttamente e, in caso contrario, avvisa l'utente con un messaggio.
 
 === UC 4 - Gestione errori visualizzazione dati <uc4>
 - *Descrizione: * Il sistema verifica che il grafico venga #glossario("renderizzato") correttamente.
@@ -177,7 +177,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * Il sistema avvisa l'utente attraverso un messaggio nel caso in cui il grafico non venga #glossario("renderizzato") correttamente
 - *Scenario Principale: *
     + I dati vengono caricati correttamente.
-    + Il sistema verifica che il grafico venga #glossario("renderizzato") correttamente e, in caso contrario, avvisa l'utente con un messaggio
+    + Il sistema verifica che il grafico venga #glossario("renderizzato") correttamente e, in caso contrario, avvisa l'utente con un messaggio.
 
 === UC 5 - Visualizzazione Dati <uc5>
 - *Descrizione: * L'utente seleziona un elemento del grafico per nascondere o #glossario("opacizzare barre") con valori superiori o inferiori.
