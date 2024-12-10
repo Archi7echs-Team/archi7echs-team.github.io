@@ -8,8 +8,8 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
-            "0.1.1", "10-2-2024",  "Aggiunti termini e definizioni", p.salvo, "",
-            "0.1.0", "19-11-2024",  "Prima stesura documento", p.pesenato, p.salvo,
+            "0.1.1", "10-12-2024",  "Aggiunti termini e definizioni", p.salvo, "",
+            "0.1.0", "19-11-2024",  "Prima stesura documento", p.pesenato, "",
           )
         )
         
