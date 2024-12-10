@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.6","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimento glossario",p.pozzobon, "",
+    "0.1.6","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.5","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.4","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
@@ -111,9 +111,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario principale*: la sequenza di passi standard che descrive l'interazione principale tra l'attore e il sistema per completare un caso d’uso.
 
 //[Inserire Diagramma o qua]
-
-== Gestione degli errori(?)
-//eventuale, tenere si no?
 
 == Elenco casi d'uso
 //Può andar bene una cosa del genere?
@@ -275,7 +272,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
         [F.1.9], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
         [F.1.10], [@uc8 \ #glossario("UC")8], [L'utente deve essere in grado di ingrandire o ridurre la visualizzazione del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
         [F.1.11], [@uc9 \ #glossario("UC")9], [L'utente deve essere in grado, a seguito di personalizzazione della visualizzazione, di ripristinare la visualizzazione di default del grafico], [1 - Obbligatorio],
-        [F.1.11], [@uc10 \ #glossario("UC")10], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio]
+        [F.1.12], [@uc10 \ #glossario("UC")10], [L’utente deve poter attivare la visualizzazione di un piano parallelo alla base del grafico per mostrare il valore medio globale], [1 - Obbligatorio]
     )
     <tab:reqFunzionali>
   ]
