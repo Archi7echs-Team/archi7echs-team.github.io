@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.5", "10-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", p.salvo,"",
+    "0.1.5", "12-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon) ,"",
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
     "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
@@ -146,7 +146,7 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 = Management
 
 == Gestione dell'assegnazione dei ruoli
-Il team distribuisce i ruoli ad ogni periodo, in accordo coi membri. L'obiettivo è garantire l'assegnazione di ogni ruolo a ciascun individuo, lungo il corso del progetto. \
+Il team distribuisce, in accordo con i membri, i ruoli ad ogni periodo. L'obiettivo è garantire a ciascun componente del gruppo, secondo un criterio di rotazione, l'assegnazione di ogni compito durante lo svolgimento del progetto. \
 I criteri che vengono considerati ad ogni scelta sono i seguenti:
 - disponibilità dei singoli nel periodo seguente
 - ruoli precedentemente coperti
@@ -179,6 +179,7 @@ Nel dettaglio la figura dell'Amministratore si occupa di:
 - Scrittura e aggiornamento delle Norme di Progetto
 - Sostituire il Responsabile in caso di sua temporanea assenza
 - Aggiornare il glossario
+- Approvare, dopo la verifica, i documenti redatti o modificati dal Responsabile
 
 === Analista
 Figura con il compito di analisi ed illustrazione tecnica del problema. E' richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
