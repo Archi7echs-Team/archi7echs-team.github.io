@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "11-12-2024",  "Prima stesura documento", p.checchinato, "",
+    "0.0.1", "12-12-2024",  "Prima stesura documento", p.checchinato, "",
   )
 )
 
@@ -52,11 +52,10 @@ L'incontro inizia, come da programma alle ore 15.00. Sono presenti i seguenti co
 })
 
 == Presentazione regola protezione branch
-#p.checchinato per conto di #p.salvo presenta la regola di protezione branch che verrà adottata d'ora in poi.
-Essa prevede la protezione del branch _sources_ da parte di commit diretti, obbligando la creazione di un branch di sviluppo per ogni feature. Inoltre il merge di un branch potrà essere effettuato solo dalla persona che avrà il ruolo di #glossario("responsabile") nel periodo.
+#p.checchinato, per conto di #p.salvo, presenta la regola di protezione del branch sources, che impedirà i commit diretti. Sarà obbligatoria la creazione di un branch di sviluppo per ogni feature, con il merge consentito solo previa approvazione del #glossario("verificatore") e del #glossario("responsabile") in quel momento.
 
 == Discussione post-#glossario("SAL") con Sanmarco Informatica
-#p.lucato e #p.pesenato si ritengono soddisfatti del feedback ricevuto dall'azienda Sanmarco Informatica sui loro simil-#glossario("PoC"). Essi continueranno il loro lavoro utilizzando il framework cypress, consigliato dall'azienda per la realizzazione dei test. #p.pozzobon si ritiene anch'esso soddisfatto della risposta ricevuta e si appresta a continuare il suo lavoro nel documento dell'analisi dei requisiti con l'inserimento dei casi d'uso relativi alla gestione degli errori.
+#p.lucato e #p.pesenato si ritengono soddisfatti del feedback ricevuto dall'azienda Sanmarco Informatica sui loro simil-#glossario("PoC"). Essi continueranno il loro lavoro utilizzando i framework Vitest,Playwright e Cypress, quest'ultimo consigliato dall'azienda, per la realizzazione dei test. #p.pozzobon si ritiene anch'esso soddisfatto della risposta ricevuta e si appresta a continuare il suo lavoro nel documento dell'analisi dei requisiti con l'inserimento dei casi d'uso relativi alla gestione degli errori.
 
 == Definizione dei ruoli e passaggio di consegne
 
@@ -86,7 +85,7 @@ Si convoca il prossimo incontro per martedì 17/12/2024 alle ore 15:00 per discu
 = Decisioni
 #decisioni((
   [1],[Protezione branch],[Adottare la regola di protezione branch],
-  [2],[Post-SAL],[Continuare il lavoro del simil-#glossario("POC") con la parte di test],
+  [2],[Post-SAL],[Continuare il lavoro con la parte di test],
   [3],[Definizione ruoli],[Assegnati i ruoli per il terzo periodo]
 ))
 
@@ -95,7 +94,7 @@ Si convoca il prossimo incontro per martedì 17/12/2024 alle ore 15:00 per discu
   (72,), (p.valdagno), [Piano di progetto: stesura secondo periodo],
   (73,), (p.salvo), [Redazione verbale esterno 2024-12-09],
   (74,), (p.checchinato), [Redazione verbale interno 2024-12-10],
-  (75,), (""), [Fix Analisi dei Requisiti: Attori]
+  (75,), ("Analista"), [Fix Analisi dei Requisiti: Attori]
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'OdG._
