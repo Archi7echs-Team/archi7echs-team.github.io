@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.1.5", "13-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, "",
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
     "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
