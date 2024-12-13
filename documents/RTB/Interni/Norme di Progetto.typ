@@ -32,6 +32,20 @@ Il documento è stato redatto con riferimento alla seguente documentazione.
 === Slide del corso IS
 - Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard ISO 12207:1995 -  _Ultimo accesso al documento 22/11/2024_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 22/11/2024_
+
+= Processi Primari
+
+= Strumenti
+Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei membri del team:
+- *Gruppo Telegram* per le comunicazioni rapide ed informali
+- *Canale Discord* per le riunioni del gruppo in videoconferenza e le comunicazioni ufficiali, organizzate nei relativi sotto-canali
+- *Gmail* per le comunicazioni ufficiali con il committente
+- *Google Chat* per le comunicazioni con l'azienda proponente
+- *Google Meet* per le riunioni in conferenza con l'azienda proponente
+- *Google Drive e suite Google Documenti* per l'archiviazione e la modifica dei file condivisi del gruppo, quali:
+  - Foglio appunti riunioni
+  - Foglio ore condiviso
+
 = Processi di Supporto
 == Documentazione 
 Questa sezione tratta le norme per la redazione della documentazione del gruppo, in linea con l'organizzazione del team, allineando lo stile e la gestione delle revisioni.
