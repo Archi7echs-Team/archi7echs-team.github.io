@@ -4,11 +4,11 @@
   title: "Verbale incontro 10/12/2024",
   subtitle: "Documento interno - verbale nr. 11",
   author: p.checchinato,
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "12-12-2024",  "Prima stesura documento", p.checchinato, "",
+    "0.0.1", "12-12-2024",  "Prima stesura documento", p.checchinato, p.scandaletti,
   )
 )
 
@@ -55,7 +55,7 @@ L'incontro inizia, come da programma alle ore 15.00. Sono presenti i seguenti co
 #p.checchinato, per conto di #p.salvo, presenta la regola di protezione del branch sources, che impedirà i commit diretti. Sarà obbligatoria la creazione di un branch di sviluppo per ogni feature, con il merge consentito solo previa approvazione del #glossario("verificatore") e del #glossario("responsabile") in quel momento.
 
 == Discussione post-#glossario("SAL") con Sanmarco Informatica
-#p.lucato e #p.pesenato si ritengono soddisfatti del feedback ricevuto dall'azienda Sanmarco Informatica sui loro simil-#glossario("PoC"). Essi continueranno il loro lavoro utilizzando i framework Vitest,Playwright e Cypress, quest'ultimo consigliato dall'azienda, per la realizzazione dei test. #p.pozzobon si ritiene anch'esso soddisfatto della risposta ricevuta e si appresta a continuare il suo lavoro nel documento dell'analisi dei requisiti con l'inserimento dei casi d'uso relativi alla gestione degli errori.
+#p.lucato e #p.pesenato si ritengono soddisfatti del feedback ricevuto dall'azienda Sanmarco Informatica sui loro simil-#glossario("PoC"). Essi continueranno il loro lavoro utilizzando i framework Vitest, Playwright e Cypress, quest'ultimo consigliato dall'azienda, per la realizzazione dei test. #p.pozzobon si ritiene anch'esso soddisfatto della risposta ricevuta e si appresta a continuare il suo lavoro nel documento dell'analisi dei requisiti con l'inserimento dei casi d'uso relativi alla gestione degli errori.
 
 == Definizione dei ruoli e passaggio di consegne
 
