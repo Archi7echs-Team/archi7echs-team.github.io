@@ -8,12 +8,12 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "12-12-2024",  "Prima stesura documento", p.checchinato, p.scandaletti,
+    "0.0.1", "15-12-2024",  "Prima stesura documento", p.checchinato, (p.scandaletti,p.valdagno),
   )
 )
 
 
-_A seguito dell'incontro con l'azienda Sanmarco Informatica svoltasi nel pomeriggio di lunedì 09/12/2024 e della fine del secondo periodo si decide di convocare una riunione per discutere di quanto segue:_
+_A seguito dell'incontro con l'azienda Sanmarco Informatica svoltosi nel pomeriggio di lunedì 09/12/2024 e della fine del secondo periodo si decide di convocare una riunione per discutere di quanto segue:_
 
 = Ordine del Giorno
 + Presentazione regola protezione branch 
@@ -39,7 +39,7 @@ L'incontro inizia, come da programma alle ore 15.00. Sono presenti i seguenti co
 - #p.valdagno
 
 #p.checchinato si propone come verbalizzante dell’incontro.\
-#p.checchinato, in qualità di responsabile di progetto, prende la parola e si procede alla discussione in ordine dei punti all’ordine del giorno.
+#p.checchinato, in qualità di responsabile di progetto del secondo periodo, prende la parola e si procede alla discussione in ordine dei punti all’ordine del giorno.
 #pb()
 
 #set heading(numbering: (..nums) => {
