@@ -9,7 +9,8 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.5", "13-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, "",
+    "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, "",
+    "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
     "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
@@ -161,6 +162,61 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 
 = Management
 == Gestione dell'assegnazione dei ruoli
+Il team distribuisce, in accordo con i membri, i ruoli ad ogni periodo. L'obiettivo è garantire a ciascun componente del gruppo, secondo un criterio di rotazione, l'assegnazione di ogni compito durante lo svolgimento del progetto. \
+I criteri che vengono considerati ad ogni scelta sono i seguenti:
+- disponibilità dei singoli nel periodo seguente
+- ruoli precedentemente coperti
+- tendenza ad alternare i ruoli tra due periodi contigui
+- possibilità di lasciare ruoli non coperti se non necessari per la fase successivamente
+- possibilità di assegnare uno stesso ruolo a più membri se necessario
+
+Vengono di seguito descritti i 6 ruoli previsti per lo sviluppo del progetto.
+
+=== Responsabile
+La figura di riferimento del gruppo e che lo rappresenta all'esterno, si
+occupa del coordinamento e gestione delle risorse.  \
+Nel dettaglio la figura del Responsabile si occupa di:
+- Organizzare il periodo di riferimento, assegnando ruoli e creando #glossario("issue")
+- Monitorare l'andamento del #glossario("periodo") in corso mediante analisi della #glossario("Project board") e raccogliendo feedback dai diretti interessati
+- Organizzare e condurre le riunioni interne del team
+- Illustrare, durante i #glossario("SAL") periodici con il proponente, il lavoro svolto dal gruppo 
+- Predisporre il #glossario("diario di bordo")
+- Valutare e gestire i rischi
+- Approvare modifiche alla documentazione, secondo l'apposito procedimento
+- Stesura del #glossario("PdP") con previsioni e retrospettive
+
+=== Amministratore
+Figura con il compito di assicurare l’efficienza, gestione e controllo dell’ambiente IT di lavoro nonché di supporto alla figura del Responsabile. \
+Nel dettaglio la figura dell'Amministratore si occupa di:
+- Controllare e garantire il corretto funzionamento della #glossario("repository")
+- Studiare i processi interni per renderli più efficienti
+- Garantire la sicurezza della #glossario("repository")
+- Aggiornare il foglio ore relativamente al periodo in corso
+- Scrittura e aggiornamento delle Norme di Progetto
+- Sostituire il Responsabile in caso di sua temporanea assenza
+- Aggiornare il glossario
+- Approvare, dopo la verifica, i documenti redatti o modificati dal Responsabile
+
+=== Analista
+Figura con il compito di analisi ed illustrazione tecnica del problema. E' richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
+Nel dettaglio la figura dell'Analista si occupa di:
+- Studiare il dominio e individuare gli #glossario("UC")
+- Redigere l'#glossario("AdR") in tutte le sue sezioni
+- Supportare le figure del Progettista e del Programmatore
+
+=== Progettista
+Figura con il compito di individuare e determinare le scelte realizzative. E' richiesto, da parte di questa figura, competenze tecniche e tecnologiche aggiornate.
+
+=== Programmatore
+Figura con il compito di seguire la fase di codifica. Ha la responsabilità della realizzazione e mantenimento del codice. Questa figura richiede competenze tecniche ma deleghe limitate.
+
+=== Verificatore
+Figura a supporto di ogni attività del progetto. Sono richieste conoscenze e competenze tecniche e la conoscenza dettagliata delle Norme di Progetto del gruppo. \
+Nel dettaglio la figura del Verificatore si occupa di:
+- Controllare che la documentazione redatta sia corretta, senza errori ortografici, di contenuto e che rispetti le Norme di Progetto
+- Mandare in approvazione i documenti al responsabile di progetto
+
+Per le attività in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
 
 == Gestione della board
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
