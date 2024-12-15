@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon) , (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
     "0.1.3", "26-11-2024",  "Redatta gestione della board e istruzioni per la redazione/verifica dei documenti", p.lucato, p.checchinato,
     "0.1.2", "25-11-2024",  "Redatta sottosezione Documentazione", p.pozzobon, p.salvo,
@@ -31,7 +32,9 @@ Il documento è stato redatto con riferimento alla seguente documentazione.
 - Riferimento al capitolato 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
 === Slide del corso IS
 - Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard ISO 12207:1995 -  _Ultimo accesso al documento 22/11/2024_
-- Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 22/11/2024_
+- Riferimento alle slide IS: *_Gestione
+di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 12/12/2024_
+- Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
 = Processi di Supporto
 == Documentazione 
 Questa sezione tratta le norme per la redazione della documentazione del gruppo, in linea con l'organizzazione del team, allineando lo stile e la gestione delle revisioni.
@@ -96,9 +99,11 @@ La tabella contenete il #glossario("registro delle modifiche"), situata a pagina
 
 == Verifica e Revisione della documentazione
 Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile") inoltre, dovrà svolgere lo stesso lavoro dopo la conferma del #glossario("verificatore") per garantire l'approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterà temporaneamente il ruolo di #glossario("responsabile") per questo compito.
+
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
-==== Relatore
+
+==== Redattore
 + ```bash git pull``` --- per scaricare le ultime modifiche
 + ```bash git checkout sources``` --- per spostarsi sul branch di lavoro
 + ```bash git checkout -B <nome_branch>``` --- per creare un nuovo branch di lavoro, partendo dal branch di lavoro sources
@@ -139,7 +144,63 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 + Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutilizzati. 
 
 = Management
+
 == Gestione dell'assegnazione dei ruoli
+Il team distribuisce, in accordo con i membri, i ruoli ad ogni periodo. L'obiettivo è garantire a ciascun componente del gruppo, secondo un criterio di rotazione, l'assegnazione di ogni compito durante lo svolgimento del progetto. \
+I criteri che vengono considerati ad ogni scelta sono i seguenti:
+- disponibilità dei singoli nel periodo seguente
+- ruoli precedentemente coperti
+- tendenza ad alternare i ruoli tra due periodi contigui
+- possibilità di lasciare ruoli non coperti se non necessari per la fase successivamente
+- possibilità di assegnare uno stesso ruolo a più membri se necessario
+
+Vengono di seguito descritti i 6 ruoli previsti per lo sviluppo del progetto.
+
+=== Responsabile
+La figura di riferimento del gruppo e che lo rappresenta all'esterno, si
+occupa del coordinamento e gestione delle risorse.  \
+Nel dettaglio la figura del Responsabile si occupa di:
+- Organizzare il periodo di riferimento, assegnando ruoli e creando #glossario("issue")
+- Monitorare l'andamento del #glossario("periodo") in corso mediante analisi della #glossario("Project board") e raccogliendo feedback dai diretti interessati
+- Organizzare e condurre le riunioni interne del team
+- Illustrare, durante i #glossario("SAL") periodici con il proponente, il lavoro svolto dal gruppo 
+- Predisporre il #glossario("diario di bordo")
+- Valutare e gestire i rischi
+- Approvare modifiche alla documentazione, secondo l'apposito procedimento
+- Stesura del #glossario("PdP") con previsioni e retrospettive
+
+=== Amministratore
+Figura con il compito di assicurare l’efficienza, gestione e controllo dell’ambiente IT di lavoro nonché di supporto alla figura del Responsabile. \
+Nel dettaglio la figura dell'Amministratore si occupa di:
+- Controllare e garantire il corretto funzionamento della #glossario("repository")
+- Studiare i processi interni per renderli più efficienti
+- Garantire la sicurezza della #glossario("repository")
+- Aggiornare il foglio ore relativamente al periodo in corso
+- Scrittura e aggiornamento delle Norme di Progetto
+- Sostituire il Responsabile in caso di sua temporanea assenza
+- Aggiornare il glossario
+- Approvare, dopo la verifica, i documenti redatti o modificati dal Responsabile
+
+=== Analista
+Figura con il compito di analisi ed illustrazione tecnica del problema. E' richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
+Nel dettaglio la figura dell'Analista si occupa di:
+- Studiare il dominio e individuare gli #glossario("UC")
+- Redigere l'#glossario("AdR") in tutte le sue sezioni
+- Supportare le figure del Progettista e del Programmatore
+
+=== Progettista
+Figura con il compito di individuare e determinare le scelte realizzative. E' richiesto, da parte di questa figura, competenze tecniche e tecnologiche aggiornate.
+
+=== Programmatore
+Figura con il compito di seguire la fase di codifica. Ha la responsabilità della realizzazione e mantenimento del codice. Questa figura richiede competenze tecniche ma deleghe limitate.
+
+=== Verificatore
+Figura a supporto di ogni attività del progetto. Sono richieste conoscenze e competenze tecniche e la conoscenza dettagliata delle Norme di Progetto del gruppo. \
+Nel dettaglio la figura del Verificatore si occupa di:
+- Controllare che la documentazione redatta sia corretta, senza errori ortografici, di contenuto e che rispetti le Norme di Progetto
+- Mandare in approvazione i documenti al responsabile di progetto
+
+Per le attività in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
 
 == Gestione della board
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
@@ -148,6 +209,7 @@ Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'atti
 + *In Progress*: attività in corso di svolgimento
 + *In review*: attività completata e in attesa di verifica
 + *Done*: attività completata e verificata
+
 === Processo di utilizzo board
 + Assegnazione di un'attività: l'attività viene assegnata a un membro del team
   - Se c'è la presenza di un "sottogruppo" di lavoro, le decisioni relative al come suddividere le attività saranno a carico del "responsabile" del sottogruppo. Si attua quindi una sorta di "divide et impera" per garantire una maggiore efficienza e una migliore gestione delle attività.
