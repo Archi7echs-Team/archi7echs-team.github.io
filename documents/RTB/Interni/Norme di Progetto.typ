@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,p.salvo,
+    "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
@@ -253,7 +253,7 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 ==== Stili del testo
 - *Grassetto*: evidenzia informazioni chiave come definizioni, titoli di sezioni o termini importanti.
 - *Corsivo*: evidenzia parole tecniche o concetti introdotti per la prima volta.
-- *Glossario*: i termini inseriti nel glossario sono contrassegnati da una #text(blue)[G] blu sotto la parola. Ad esempio, il termine #glossario("verificatore") appare con una #text(blue)[G] blu sotto di esso.
+- *Glossario*: i termini inseriti nel glossario sono contrassegnati da una #text(blue)[G] blu in pedice. Ad esempio, il termine #glossario("verificatore") appare con una #text(blue)[G] blu sotto di esso.
 - *Link*: i collegamenti ipertestuali sono visualizzati in blu, come nel caso del link nella sezione #link(<Riferimenti>)[1.3]
 - *Titoli*: seguono una gerarchia fino al livello H4, con formattazione coerente (H1, H2, H3, H4).
 - *Font e dimensioni*: il font scelto è Roboto Serif, con una dimensione di 12 pt per il corpo del testo, e interlinea 1,5.
