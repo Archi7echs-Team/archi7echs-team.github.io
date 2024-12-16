@@ -5,11 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,"",
+    "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,p.salvo,
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
