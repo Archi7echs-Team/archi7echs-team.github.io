@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.4", "15-12-2024", "Stesura andamento secondo periodo", p.valdagno, "",
+    "0.1.4", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, p.salvo,
     "0.1.3", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
     "0.1.2", "08-12-2024",  "Stesura andamento primo periodo", p.checchinato, p.valdagno,
     "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo,
