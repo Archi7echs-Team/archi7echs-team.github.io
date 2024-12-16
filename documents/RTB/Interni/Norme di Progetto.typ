@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.1.7", "16-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, "",
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
@@ -89,7 +90,7 @@ Il documento di questa tipologia viene inserito nello stesso documento del verba
 ==== Carta intestata
 Questo #glossario("template") viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
 E' compito di chi redige il documento indicare, nell'apposita sezione:
-- destinario del documento
+- destinatario del documento
 - mezzo di invio del documento
 - oggetto del documento
 
@@ -111,15 +112,15 @@ Dopo le presenze si procede con il riassunto della discussione dei relativi punt
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
 - una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la decisione presa.
-- una tabella #glossario("TODO") con riferimento alle #glossario("issue") create relativamente alle decisioni prese. In quest'utlima è necessario indicare #glossario("ID") della #glossario("issue"), assegnatario (se presente, in caso contrario "-"), descrizione del #glossario("task").
+- una tabella #glossario("TODO") con riferimento alle #glossario("issue") create relativamente alle decisioni prese. In quest'ultima è necessario indicare #glossario("ID") della #glossario("issue"), assegnatario (se presente, in caso contrario "-"), descrizione del #glossario("task").
 
 Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
 
 === Registro delle modifiche e versionamento <tabella_revisioni>
-La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessarrio indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
+La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessario indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
 
 == Verifica e Revisione della documentazione
-Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile") inoltre, dovrà svolgere lo stesso lavoro dopo la conferma del #glossario("verificatore") per garantire l'approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterà temporaneamente il ruolo di #glossario("responsabile") per questo compito.
+Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile") inoltre, dovrà svolgere lo stesso lavoro dopo la conferma del #glossario("verificatore") per garantire l'approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito.
 
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
@@ -156,7 +157,7 @@ Questa sezione presenta tutte le istruzioni a cui attenersi, dal momento in cui 
  + Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
  + Premere su "Submit review"
  + Attendere che il #glossario("relatore") apporti le modifiche richieste
- - Se si decide di approvare la #glossario("Pull Request"), procedere con i segenti passaggi per il merge
+ - Se si decide di approvare la #glossario("Pull Request"), procedere con i seguenti passaggi per il merge
  + Premere su "Add your review" in alto a destra
  + Premere su "Review changes" e selezionare "Approve"
  + Premere su "Submit review"
@@ -239,3 +240,62 @@ Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'atti
 + Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata, per la struttura data alla #glossario("repository"),l'attività verrà spostata in automatico da *In review* a *Done* 
 
 Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
+
+= Processi organizzativi
+E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei task ed eventuali rischi annessi. 
+
+== Gestione dei processi
+Un #glossario("processo") è un insieme di attività correlate  e coese che trasformano bisogni (input) in prodotti (output) secondo specifiche regole. \
+
+L'intero ciclo di vita di ogni processo è supportato dalla gestione di questo mediante il sistema di #glossario("Issue") di #glossario("Github"). 
+
+La gestione di un processo è composta da diverse fasi:
+ + Identificazione e definizione
+ + Pianificazione
+ + Monitoraggio
+ + Gestione dei rischi
+ + Retrospettiva
+
+=== Identificazione e definizione di processi
+Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima attività che compone il progetto, indipendente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
+
+==== Identificazione mediante sistema Issue di Github 
+Ogni processo viene identificato da:
+- *ID*, generato automaticamente dal sistema
+- *Nome* 
+- *Descrizione*, se necessaria
+- *Membro* (o membri) del team assegnati
+- *#glossario("Label")*, fondamentale per identificare l'appartenenza del processo. Ogni #glossario("label") si riferisce alla relativa parte di documentazione/codifica di cui il processo fa parte. Nel dettaglio:
+  - AdR
+  - Agg_sito
+  - Candidatura
+  - Fix, per indicare la correzione di un errore ed è obbligatorio associare una seconda label che identifichi l'appartenenza del processo
+  - Glossario
+  - NdP
+  - PdP
+  - V.E.
+  - V.I.
+- *Progetto*, configurazione di Github necessaria per poter gestire la issue mediante la #glossario("Project Board")
+- *#glossario("Milestone")*, per identificare il periodo a cui il processo è associato
+=== Pianificazione 
+Ogni processo viene associato ad un #glossario("periodo"), indicato nel sistema di #glossario("Issue") come #glossario("Milestone"). 
+Tale associazione consente di identificare il processo dentro una fase, definita da una data di inizio ed una fine, definendo quindi un termine massimo di completamento, salvo specifica indicazione a preventivo o motivazione a consuntivo. Tale gestione consente inoltre di avere una visione su tutti i processi, consentendo il monitoraggio e la retrospettiva del periodo stesso con stime di tempi, risorse e costi necessari per il completamento delle #glossario("Issue").
+
+=== Monitoraggio
+E' necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. E' a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
+- *Todo*, #glossario("Issue") creata ma non ancora iniziata
+- *In progress*, #glossario("Issue") in lavorazione
+- *In review*, #glossario("Issue") completata e in attesa di verifica
+- *Done*, #glossario("Issue") terminata
+
+La board permette al responsabile di progetto di intervenire tempestivamente in caso di problematiche che sono sorte o stanno per sorgere. \
+E' compito del responsabile di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
+Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del processo è tenuto ad avvisare tutto il team e sarà cura del responsabile trovare una soluzione al problema presentato.
+
+=== Gestione dei rischi
+Ogni processo può essere soggetto a rischi, indicati nel Piano di Progetto. Una corretta prevenzione e gestione dei rischi, come indicato al punto precedente, richiede il corretto e tempestivo aggiornamento di una board. \
+Il responsabile di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), nella #glossario("retrospettiva") del periodo.
+
+=== Retrospettiva
+Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
+Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
