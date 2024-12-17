@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.4", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, p.salvo,
+    "0.1.4", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, (p.salvo,p.pozzobon),
     "0.1.3", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
     "0.1.2", "08-12-2024",  "Stesura andamento primo periodo", p.checchinato, p.valdagno,
     "0.1.1", "23-11-2024",  "Stesura Gestione dei Rischi", p.lucato, p.salvo,
@@ -295,7 +295,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
   )
 ]
 *Obiettivi*:\
-Nel primo periodo del progetto, il team si concentrerà principalmente sull’organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’Analisi dei Requisiti e del Glossario. Durante questo periodo, ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
+Nel primo periodo del progetto, il team si concentrerà principalmente sull'organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’Analisi dei Requisiti e del Glossario. Durante questo periodo, ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
 
 Gli obiettivi principali di questa fase sono quindi:
 
@@ -434,7 +434,7 @@ Cambiamenti operativi e gestionali individuati:
   )
 ]
 *Obiettivi*:\
-Nel secondo periodo del progetto, il team proseguirà con la redazione dei documenti iniziati nel periodo precedente e in parallello si dedicherà allo sviluppo di più simil-#glossario("PoC") per studiare le tecnologie proposte dal #glossario("capitolato") e allo stesso tempo per affiancare e porre ulteriori basi all'attività di analisi.
+Nel secondo periodo del progetto il team proseguirà con la redazione dei documenti iniziati nel periodo precedente e, in parallelo, si dedicherà allo sviluppo di più simil-#glossario("PoC") per studiare le tecnologie proposte dal #glossario("capitolato") e, allo stesso tempo, per affiancare e porre ulteriori basi all'attività di analisi.
 
 Gli obiettivi principali di questa fase sono quindi:
 
@@ -501,15 +501,15 @@ Durante il periodo oltre alla problematica non attesa sono stati riscontrati alc
 
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: il rischio è stato affrontato attraverso lo studio individuale e l’autoapprendimento. Essendo un rischio previsto l’impatto è stato limitato e non ha causato problemi significativi.
 - #link(<RI-8>)[*RI-8 - Assenza di un membro del team per malattia o altri impegni*]: il rischio è stato gestito ridistribuendo le ore del membro assente tra gli altri membri del team, cercando di evitare sovraccarichi. Sebbene l'impatto sia stato significativo, causando rallentamenti nello studio delle tecnologie, il team è riuscito a contenere le conseguenze grazie a una gestione efficace della situazione.
-- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*]: il rischio è stato affrontato attraverso lo studio individuale e il confrontro tra i programmatori. Anche in questo caso l'impatto è stato limitato e non ha causato problemi significativi.
+- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*]: il rischio è stato affrontato attraverso lo studio individuale e il confronto tra i programmatori. Anche in questo caso l'impatto è stato limitato e non ha causato problemi significativi.
 
 
 *Possibili cambiamenti*:\
 Il rallentamento che si è verificato è un aspetto critico su cui il team ha riflettuto per comprendere quali soluzioni adottare nei prossimi periodi. Il team quindi ha identificato alcuni aspetti da migliorare per ottimizzare il lavoro e garantire una maggiore efficienza a lungo termine.\
 Cambiamenti operativi e gestionali individuati:
 - *Comprensione dello stato di avanzamento*: il team deve aver consapevolezza dello stato di avanzamento del progetto e di conseguenza gestire le ore in modo tale da intervenire dove c'è più bisogno o dove ci sono rallentamenti. 
-- *Distribuzione controllata delle attività*: il team si è reso conto che può essere molto utile dividere le attività dei periodi in due parti in modo tale da pianificare delle attività da completare nella prima parte del periodo e, solo in caso queste siano state completate, pianificarne altre per la seconda parte, così da avere una visione più controllata dell'andamento ed evitare che vengano create attività che rischiano di essere rimandate ai periodi successivi.
-- *Gestione delle attività rimandate*: se un periodo inizia con delle attività rimandate dal periodo precedente è fondamentale dare loro priorità, in modo tale da evitare che vengano rimandate ulterioriormente.
+- *Distribuzione controllata delle attività*: il team si è reso conto che può essere molto utile dividere le attività dei periodi in due parti in modo tale da pianificare delle attività da completare nella prima parte del periodo e, solo in caso queste siano state completate, pianificarne altre per la seconda parte, in modo da avere una visione controllata dell'andamento ed evitare che vengano create attività che rischiano di essere rimandate ai periodi successivi.
+- *Gestione delle attività rimandate*: se un periodo inizia con delle attività rimandate dal periodo precedente è fondamentale dare loro priorità, in modo tale da evitare che vengano rimandate ulteriormente.
 
 
 *Tabella esito effettivo*:\ 
