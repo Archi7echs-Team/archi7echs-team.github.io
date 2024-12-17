@@ -224,7 +224,7 @@ Nel dettaglio la figura del Verificatore si occupa di:
 
 Per le attività in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
 
-== Gestione della board
+== Gestione della board <gestione_board>
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
 Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
 + *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le attività che devono essere svolte
@@ -240,6 +240,50 @@ Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'atti
 + Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata, per la struttura data alla #glossario("repository"),l'attività verrà spostata in automatico da *In review* a *Done* 
 
 Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
+
+== Gestione e Analisi delle ore di lavoro
+
+La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore dedicato, che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con Grafana, un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e funzionalità.
+
+=== Struttura e utilizzo del foglio ore
+Il foglio ore si compone di due parti principali:
++ *Riepilogo dei Costi* (sezione sinistra)
+	- Questa sezione fornisce un quadro complessivo delle ore totali e dei costi associati ai vari ruoli svolti nei vari periodi.
+	- Colonne principali:
+	 - *Ruolo*: elenca i ruoli ricoperti (es. Responsabile, Amministratore, Verificatore, ecc.).
+  - *Periodo X*: numero di ore svolte per ruolo nel periodo X.
+	 - *Tot. h*: somma delle ore svolte per ciascun ruolo.
+	 - *€/ora*: tariffa oraria di ciascun ruolo.
+	 - *Costo*: calcolo del costo totale ottenuto moltiplicando le ore svolte per la tariffa oraria.
+	- Questa sezione consente di monitorare immediatamente i costi associati a ciascun ruolo e verificare se i tempi e i budget sono in linea con le previsioni.
++ *Tabella Oraria per Periodo* (sezione destra)
+	- La sezione a destra è suddivisa in *periodi di riferimento*, ciascuno indicato con un numero progressivo e date specifiche.
+	- *Colonne principali*:
+	 - *Data*: rappresenta il giorno specifico per cui vengono registrate le ore.
+	 - *Ruoli*: ciascun ruolo ha una colonna dedicata (es. Responsabile, Amministratore, Verificatore, ecc.).
+	 - *Ore svolte*: l’utente inserisce manualmente le ore svolte per ogni ruolo, in corrispondenza della data indicata.
+	 - Al termine del periodo, il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
+=== Integrazione con Grafana
+I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un servizio di monitoraggio che permette di visualizzare l’andamento del progetto attraverso grafici e dashboard interattive. Questo collegamento permette di avere un’analisi più approfondita e visiva delle attività svolte. La dashboard di Grafana è suddivisa in diverse sezioni chiave:
++ *Stato delle Issue*
+	- Grafana monitora le attività del repository GitHub, mostrando:
+	 - *Issue aperte e chiuse* in un grafico a torta.
+	 - *Issue in corso, in revisione e completate* evidenziando il loro stato attuale.
++ Riepilogo di tutte le *pull request* e in che stato si trovano
++ Stato dell *board* di GitHub (#link(<gestione_board>)[*4.2 Gestione della board*])
++ *Andamento Ore e Costi*
+ - Questa sezione fornisce un confronto visivo tra le *ore previste* e le *ore effettivamente* svolte per ciascun ruolo.
+ - Il grafico in basso a sinistra evidenzia:
+  - *Ore Previste*: rappresentate in giallo.
+	 - *Ore Effettive*: rappresentate in verde.
++ *Andamento Costi Preventivati vs Effettivi*
+	- In basso a destra, un grafico a linea mostra:
+	 - *Costi Preventivati*: i costi stimati durante la pianificazione del periodo.
+	 - *Costi Effettivi*: i costi registrati a fine periodo.
+	- Questo confronto permette di valutare eventuali scostamenti rispetto al piano iniziale e di adottare misure correttive.
++ *Riepilogo delle Attività*
+ - Nella sezione centrale una tabella riporta i ruoli assegnati per il periodo corrente.
+	
 
 == Norme tipografiche
 
