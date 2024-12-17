@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "11-12-2024",  "Prima stesura documento", p.salvo, "",
+    "0.0.1", "11-12-2024",  "Prima stesura documento", p.salvo, p.scandaletti,
   )
 )
 
@@ -49,35 +49,36 @@ Si procede alla discussione in ordine dei punti all’ordine del giorno.
 #pb()
 
 
-#set heading(numbering: (..nums) => {
-  nums = nums.pos()
-  if nums.len() == 1 {
-    return numbering("1)", ..nums)
-  } else {
-    return "Punto " + numbering("1 -", nums.last())
-  }
-})
-
-
+#ordine_del_giorno([
 == Revisione #glossario("SAL") con Sanmarco Informatica
-#p.checchinato inizia l'incontro mostrando all'azienda di aver seguito il loro consiglio di inserire un riferimento nella sezione "about", della repository #glossario("GitHub"), che si tratta di un progetto universitario e che non verranno accettate commit da persone esterne al gruppo. Viene passata la parola a #p.pozzobon che spiega quanto fatto nel documento #glossario("AdR") riguardante la sezione #glossario("UC"). Si decide di iniziare la presentazione dei simil-#glossario("PoC") svolti dai membri del team. #p.lucato condivide lo schermo e mostra il suo simil-#glossario("PoC") con le classiche funzionalità di un ambiente 3D, la #glossario("funzionalità") di #glossario("hover") e la #glossario("funzionalità") del piano medio oltre ad altre #glossario("funzionalità"). Spiega come ha realizzato tutto usando React e Three.js con cattura dei dati da un database Postgres. #p.pesenato invece illustra il suo simil-#glossario("PoC") realizzato tramite Svelte e Threlte, libreria per l'uso di Three.js su Svelte. Le funzionalità mostrate sono le stesse. #p.scandaletti invece esprime le difficolta incontrate nell’uso di Angular.
+Viene mostrata all'azienda l'aggiunta da parte di #p.checchinato, sotto loro consiglio, di un riferimento nella sezione "about" della repository #glossario("GitHub"), che spiega la natura universitaria del progetto e che non verranno accettati commit da persone esterne al gruppo. \
+#p.pozzobon condivide quanto fatto nel documento #glossario("AdR") riguardante la sezione #glossario("UC"). \
+Vengono presentati i simil-#glossario("PoC") preparati dai membri del team.
+- #p.lucato illustra il suo simil-#glossario("PoC"), scritto con _React_ e la libreria Javascript _Three.js_, che presenta le classiche #glossario("funzionalità") di navigazione in un ambiente 3D. Permette anche la possibilità di mostrare dati specifici, tramite l' #glossario("hover") e il rendering del piano medio. La cattura dei dati per popolare il grafico 3D utilizza un database _Postgres_.
+- #p.pesenato illustra il suo simil-#glossario("PoC") realizzato tramite Svelte e Threlte, libreria di componenti volta a ottimizzare l'uso di _Three.js_ in applicazioni _Svelte_. Le funzionalità mostrate sono le stesse.
+- #p.scandaletti esprime invece le difficolta riscontrate nell’uso di _Angular_ e, in particolare, nella compatibilità con la libreria _Three.js_.
 
 == Domande e chiarimenti
-#p.lucato chiede se i test debbano essere presenti nel #glossario("PoC") e se il referente aziendale avesse consigli su come realizzarli. Viene consigliato di utilizzare cypress per effettuare i test anche se sono presenti molteplici strade. Viene chiesto come gestire la lista dei bug e delle loro fix. Proposta la creazione di un documento contenente la lista dei bug incontrati con la loro soluzione per ovviare alla presenza di più repository separate. Alex Beggiato chiede se ci sia una data limite per decidere la tecnologia da usare per la creazione del #glossario("PoC"). Il team risponde dicendo che non è ancora stata decisa una data limite. Il team chiede se i simil-#glossario("PoC") siano adatti come #glossario("PoC") e Alex risponde in modo positivo consigliando però alcune migliorie.
+#p.lucato chiede se i test debbano essere presenti nel #glossario("PoC") e se il referente aziendale avesse consigli su come realizzarli.
+Viene suggerito l'utilizzo del framework di testing _Cypress_, senza escludere la possibilità di utilizzare tecnologie differenti. Inoltre viene confermato che i test non sono necessari per il #glossario("PoC") \
+Viene chiesto come gestire la lista dei bug e delle loro fix, nasce la proposta di creare un documento specifico contenente l'elenco dei bug incontrati e delle loro rispettive soluzioni, per evitare di distribuire informazioni su più repository separate. \
+Alex Beggiato chiede se ci sia una data limite per decidere la tecnologia da usare per la creazione del #glossario("PoC"), ricevendo una risposta negativa da parte del team.
+Il team chiede se i simil-#glossario("PoC") siano adatti come base per il #glossario("PoC") finale, Beggiato risponde in maniera positiva, consigliando alcune migliorie necessarie.
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l’incontro è terminato alle 17:15. \
-Viene indicato come prossimo #glossario("SAL") il giorno 23/12/2024 con orario da specificare. \
+Viene indicato come prossimo #glossario("SAL") il giorno 23/12/2024 con orario da determinare successivamente. \
 Il team si riunirà dopo la riunione per discutere di quanto emerso e per decidere gli argomenti da affrontare nel prossimo periodo.
+])
 
 = Decisioni
 
 #decisioni((
   [1],[Documenti],[Continuare stesura delle sezioni mancanti],
   [1],[Simil-#glossario("PoC") \ con Angular],[Sviluppare il simil-#glossario("PoC") con Angular per aver una conoscenza di tutte le tecnologie proposte],
-  [2],[Test],[Ricercare modalità per svolgere i test e informasi su Cypress],
-  [2],[Scelta tecnologia],[Decidere una data entro cui aver scelto la tecnologia da usare in modo definitivo],
-  [3],[Prossimo incontro],[Confermare orario dell'incontro del'23/12/2024 o se chiedere altra data]
+  [2],[Test],[Ricercare modalità per svolgere i test e informarsi su Cypress],
+  [2],[Scelta tecnologia],[Decidere una data entro cui decidere la tecnologia da usare in maniera definitiva],
+  [3],[Prossimo incontro],[Stabilire orario dell'incontro del 23/12/2024 o trovare una nuova data]
 ))
 
 = TODO
