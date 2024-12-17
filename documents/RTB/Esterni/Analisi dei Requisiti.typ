@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.7","17-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, "",
+    "0.1.7","17-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, p.salvo,
     "0.1.6","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.5","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.4","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
@@ -32,7 +32,7 @@ In particolare gli obiettivi del documento sono:
 - *Ridurre ambiguità*: serve come punto di riferimento condiviso tra membri del team di sviluppo e #glossario("proponente") dunque non deve contenere ambiguità.
 - *Garantire il tracciamento dei requisiti*: consente di mappare le esigenze del #glossario("proponente") attraverso l’identificazione, la classificazione e l’ordinamento di casi d’uso e corrispettivi requisiti.
 - *Fornire una base per la progettazione*: il documento enuncia le richieste dunque fornisce una base alla progettazione che invece si occupa dell’individuazione di una soluzione adeguata.
-- *Verifica dei requisiti*: il processo di #glossario("verifica") ha lo scopo di garantire che i requisiti siano corretti, completi e consistenti e quindi che il documento non abbia aspettative contradditorie.
+- *Verifica dei requisiti*: il processo di #glossario("verifica") ha lo scopo di garantire che i requisiti siano corretti, completi e consistenti e quindi che il documento non abbia aspettative contraddittorie.
 - *Validazione dei requisti*: attività strettamente collegata all’#glossario("analisi dei requisiti") che consiste nell’accertare che il prodotto rispecchi le richieste del #glossario("proponente"). #glossario("Validazione") e #glossario("analisi dei requisiti") sono attività collegate in quanto affermare che un #glossario("requisito")  fa quello che deve fare significa anche descrivere il #glossario("requisito") .
 
 == Glossario
