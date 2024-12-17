@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "11-12-2024",  "Prima stesura documento", p.salvo, p.scandaletti,
+    "0.0.1", "17-12-2024",  "Prima stesura documento", p.salvo, (p.scandaletti,p.valdagno),
   )
 )
 
@@ -54,7 +54,7 @@ Si procede alla discussione in ordine dei punti all’ordine del giorno.
 Viene mostrata all'azienda l'aggiunta da parte di #p.checchinato, sotto loro consiglio, di un riferimento nella sezione "about" della repository #glossario("GitHub"), che spiega la natura universitaria del progetto e che non verranno accettati commit da persone esterne al gruppo. \
 #p.pozzobon condivide quanto fatto nel documento #glossario("AdR") riguardante la sezione #glossario("UC"). \
 Vengono presentati i simil-#glossario("PoC") preparati dai membri del team.
-- #p.lucato illustra il suo simil-#glossario("PoC"), scritto con _React_ e la libreria Javascript _Three.js_, che presenta le classiche #glossario("funzionalità") di navigazione in un ambiente 3D. Permette anche la possibilità di mostrare dati specifici, tramite l' #glossario("hover") e il rendering del piano medio. La cattura dei dati per popolare il grafico 3D utilizza un database _Postgres_.
+- #p.lucato illustra il suo simil-#glossario("PoC"), scritto con _React_ e la libreria Javascript _Three.js_, che presenta le classiche #glossario("funzionalità") di navigazione in un ambiente 3D. Permette anche la possibilità di mostrare dati specifici, tramite l' #glossario("hover") e il rendering del piano medio. L'acquisizione dei dati per popolare il grafico 3D utilizza un database _Postgres_.
 - #p.pesenato illustra il suo simil-#glossario("PoC") realizzato tramite Svelte e Threlte, libreria di componenti volta a ottimizzare l'uso di _Three.js_ in applicazioni _Svelte_. Le funzionalità mostrate sono le stesse.
 - #p.scandaletti esprime invece le difficolta riscontrate nell’uso di _Angular_ e, in particolare, nella compatibilità con la libreria _Three.js_.
 
@@ -77,7 +77,7 @@ Il team si riunirà dopo la riunione per discutere di quanto emerso e per decide
   [1],[Documenti],[Continuare stesura delle sezioni mancanti],
   [1],[Simil-#glossario("PoC") \ con Angular],[Sviluppare il simil-#glossario("PoC") con Angular per aver una conoscenza di tutte le tecnologie proposte],
   [2],[Test],[Ricercare modalità per svolgere i test e informarsi su Cypress],
-  [2],[Scelta tecnologia],[Decidere una data entro cui decidere la tecnologia da usare in maniera definitiva],
+  [2],[Scelta tecnologia],[Fissare una data entro cui decidere la tecnologia da usare in maniera definitiva],
   [3],[Prossimo incontro],[Stabilire orario dell'incontro del 23/12/2024 o trovare una nuova data]
 ))
 
