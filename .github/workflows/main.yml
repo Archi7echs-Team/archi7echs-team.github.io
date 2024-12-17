@@ -30,7 +30,7 @@ jobs:
 
       - name: copy glossario.typ in the tmp/upload
         run: |
-          mkdir --parents "${RUNNER_TEMP}/upload"; cp documents/RTB/Interni/glossario.typ $_ ;
+          mkdir --parents "${RUNNER_TEMP}/upload"; cp documents/RTB/Interni/Glossario.typ $_ ;
 
       - name: Get changed files
         id: changed-files
@@ -81,7 +81,7 @@ jobs:
 
       - name: mv glossario.typ from tmp/upload to tmp/master/documents
         run: |
-          mv "${RUNNER_TEMP}/upload/glossario.typ" "${RUNNER_TEMP}/master/documents/RTB"
+          mv "${RUNNER_TEMP}/upload/Glossario.typ" "${RUNNER_TEMP}/master/documents/RTB"
       - name: Upload website files
         uses: actions/upload-artifact@v4
         with:
@@ -122,7 +122,7 @@ jobs:
         run: |
           python3 format_glossario.py
           rm format_glossario.py
-          rm documents/RTB/glossario.typ
+          rm documents/RTB/Glossario.typ
           python3 format.py
           rm format.py
 
