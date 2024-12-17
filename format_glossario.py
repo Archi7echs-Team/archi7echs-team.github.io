@@ -5,7 +5,7 @@ with open("glossario_template.html", "r") as file:
     start = file.read()
 
 INIT_PATH = "documents"
-FILENAME = "glossario.typ"
+FILENAME = "Glossario.typ"
 FILE_TEMPLATE = '<p><strong>{word}:</strong> {meaning}</p>\n'
 
 '''
