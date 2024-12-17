@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.8", "17-12-2024", "Stesura comunicazione interna del team", p.pozzobon,"",
+    "0.1.8", "17-12-2024", "Stesura comunicazione interna del team", p.pozzobon,p.salvo,
     "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
@@ -172,8 +172,8 @@ La comunicazione interna del gruppo, fondamentale per lo svolgimento del progett
 - Comunicazione *asincrona*
 
 === Comunicazione sincrona
-Il team, per allinearsi, si riuscine online il *martedì pomeriggio* della settimana in cui non è previsto l'incontro con l'azienda #glossario("proponente"). In questa riunione ogni membro del team relaziona quanto fatto nel periodo in corso, evidenziando eventuali criticità o fattori di rallentamento nello sviluppo dei task. Viene poi fatta una mini retrospettiva complessiva che consente di assumere eventuali decisioni per la prevenzione o risoluzione di problematiche non previste. Durante questo incontro viene aggiornata la #glossario("project board") con le nuove issue assegnate i membri. Al termine di ogni incontro sarà cura dell'amministratore redigere apposito #glossario("verbale interno"). \
-E' a cura del responsabile di progetto valutare, concordando con il gruppo, eventuali riunioni di allineamento aggiuntive.  \ 
+Il team, per allinearsi, si riunisce online il *martedì pomeriggio* della settimana in cui non è previsto l'incontro con l'azienda #glossario("proponente"). In questa riunione ogni membro del team relaziona quanto fatto nel periodo in corso, evidenziando eventuali criticità o fattori di rallentamento nello sviluppo dei task. Viene poi fatta una mini retrospettiva complessiva che consente di assumere eventuali decisioni per la prevenzione o risoluzione di problematiche non previste. Durante questo incontro viene aggiornata la #glossario("project board") con le nuove issue assegnate i membri. Al termine di ogni incontro sarà cura dell'amministratore redigere apposito #glossario("verbale interno"). \
+È a cura del responsabile di progetto valutare, concordando con il gruppo, eventuali riunioni di allineamento aggiuntive.  \ 
 Ogni incontro dovrà, in ogni caso, essere preceduto da convocazione mediante i canali di messaggistica del team.
 
 ==== Strumenti
