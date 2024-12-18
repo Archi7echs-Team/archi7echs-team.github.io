@@ -5,10 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Approvato",
+  state: "Bozza",
   show_outline: true,
   outline_depth: 4,
   changelog: (
+	"0.1.8", "18-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato,"",
     "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
@@ -243,7 +244,7 @@ Sarà compito del #glossario("responsabile") del #glossario("progetto") controll
 
 == Gestione e Analisi delle ore di lavoro
 
-La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore dedicato, che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con Grafana, un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e funzionalità.
+La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite Google Sheets, che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con Grafana, un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e funzionalità.
 
 === Struttura e utilizzo del foglio ore
 Il foglio ore si compone di due parti principali:
@@ -269,8 +270,8 @@ I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un serv
 	- Grafana monitora le attività del repository GitHub, mostrando:
 	 - *Issue aperte e chiuse* in un grafico a torta.
 	 - *Issue in corso, in revisione e completate* evidenziando il loro stato attuale.
-+ Riepilogo di tutte le *pull request* e in che stato si trovano
-+ Stato dell *board* di GitHub (#link(<gestione_board>)[*4.2 Gestione della board*])
++ Riepilogo di tutte le *pull request* e in che stato si trovano.
++ Stato dell *board* di GitHub (#link(<gestione_board>)[*4.2 Gestione della board*]).
 + *Andamento Ore e Costi*
  - Questa sezione fornisce un confronto visivo tra le *ore previste* e le *ore effettivamente* svolte per ciascun ruolo.
  - Il grafico in basso a sinistra evidenzia:
