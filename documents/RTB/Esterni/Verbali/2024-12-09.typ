@@ -4,12 +4,12 @@
   title: "Verbale incontro 09/12/2024",
   subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 5",
   author: "Giovanni Salvò",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.1", "17-12-2024",  "Prima stesura documento", p.salvo, (p.scandaletti,p.valdagno),
+    "0.0.1", "18-12-2024",  "Prima stesura documento", p.salvo, (p.scandaletti,p.valdagno),
   )
 )
 
@@ -107,8 +107,8 @@ Padova, 09 dicembre 2024
     columns: (auto, 1fr),
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
-    [Per Sanmarco Informatica:\ /*Alex Beggiato \
-    #place(center, image("//img/smi_sign.png", width: 120%))*/
+    [Per Sanmarco Informatica:\ Alex Beggiato \
+    #place(center, image("//img/smi_sign.png", width: 120%))
     ],
   )]
 )
