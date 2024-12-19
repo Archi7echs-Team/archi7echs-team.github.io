@@ -9,7 +9,10 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.7", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
+		"0.1.10", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
+    "0.1.9", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
+    "0.1.8", "17-12-2024", "Stesura comunicazione interna del team", p.pozzobon,(p.salvo,p.valdagno),
+    "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
@@ -28,7 +31,7 @@ Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il q
 
 == Glossario 
 All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "#text(blue)[G]" in colore blu. Facendo click sul collegamento si aprirà una scheda del browser con il glossario 
-== Riferimenti
+== Riferimenti <Riferimenti>
 Il documento è stato redatto con riferimento alla seguente documentazione.
 === Link al capitolato C5 - 3Dataviz
 - Riferimento al capitolato 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
@@ -165,6 +168,33 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 + Premere su "Merge pull request" e successivamente su "Confirm merge"
 + Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutilizzati. 
 
+== Comunicazione interna
+La comunicazione interna del gruppo, fondamentale per lo svolgimento del progetto e allineamento dei task, si divide in due categorie:
+- Comunicazione *sincrona*
+- Comunicazione *asincrona*
+
+=== Comunicazione sincrona
+Il team, per allinearsi, si riunisce online il *martedì pomeriggio* della settimana in cui non è previsto l'incontro con l'azienda #glossario("proponente"). In questa riunione ogni membro del team relaziona quanto fatto nel periodo in corso, evidenziando eventuali criticità o fattori di rallentamento nello sviluppo dei task. Viene poi fatta una mini retrospettiva complessiva che consente di assumere eventuali decisioni per la prevenzione o risoluzione di problematiche non previste. Durante questo incontro viene aggiornata la #glossario("project board") con le nuove issue assegnate ai membri. Al termine di ogni incontro sarà cura dell'amministratore redigere apposito #glossario("verbale interno"). \
+È a cura del responsabile di progetto valutare, concordando con il gruppo, eventuali riunioni di allineamento aggiuntive.  \ 
+Ogni incontro dovrà, in ogni caso, essere preceduto da convocazione mediante i canali di messaggistica del team.
+
+==== Strumenti
+Le riunioni online del team avvengono attraverso la piattaforma *#glossario("Discord")*. \
+Le convocazioni avvengono invece, nei seguenti canali di messaggistica :
+- *#glossario("Discord")*, canale di comunicazione ufficiale del team
+- *#glossario("Telegram")*, canale di comunicazione informale del team
+
+=== Comunicazione asincrona
+La comunicazione asincrona avviene sia tra tutto il team che tra i singoli componenti, attraverso i canali di comunicazione del gruppo e le piattaforme di messaggistica. \
+Questo tipo di comunicazione risulta fondamentale per consentire il corretto proseguimento dei task senza il vincolo delle sole riunione.
+
+==== Strumenti
+Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggistica messi a disposizione, ovvero:
+- *#glossario("Discord")*, canale di comunicazione ufficiale del team
+- *#glossario("Telegram")*, canale di comunicazione informale del team
+
+Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in modalità di messaggistica o riunione online scegliendo tra le piattaforme gratuite presenti in rete.
+
 = Management
 
 == Gestione dell'assegnazione dei ruoli
@@ -224,7 +254,7 @@ Nel dettaglio la figura del Verificatore si occupa di:
 
 Per le attività in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
 
-== Gestione della board
+== Gestione della board <gestione_board>
 Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
 Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
 + *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le attività che devono essere svolte
@@ -241,6 +271,71 @@ Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'atti
 
 Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
 
+== Gestione e Analisi delle ore di lavoro
+
+La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite Google Sheets, che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con Grafana, un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e funzionalità.
+
+=== Struttura e utilizzo del foglio ore
+Il foglio ore si compone di due parti principali:
++ *Riepilogo dei Costi* (sezione sinistra)
+	- Questa sezione fornisce un quadro complessivo delle ore totali e dei costi associati ai vari ruoli svolti nei vari periodi.
+	- *Colonne principali*:
+		- *Ruolo*: elenca i ruoli ricoperti (es. Responsabile, Amministratore, Verificatore, ecc.).
+		- *Periodo X*: numero di ore svolte per ruolo nel periodo X.
+		- *Tot. h*: somma delle ore svolte per ciascun ruolo.
+		- *€/ora*: tariffa oraria di ciascun ruolo.
+		- *Costo*: calcolo del costo totale ottenuto moltiplicando le ore svolte per la tariffa oraria.
+	- Questa sezione consente di monitorare immediatamente i costi associati a ciascun ruolo e verificare se i tempi e i budget sono in linea con le previsioni.
++ *Tabella Oraria per Periodo* (sezione destra)
+	- La sezione a destra è suddivisa in *periodi di riferimento*, ciascuno indicato con un numero progressivo e date specifiche.
+	- *Colonne principali*:
+		- *Data*: rappresenta il giorno specifico per cui vengono registrate le ore.
+		- *Ruoli*: ciascun ruolo ha una colonna dedicata (es. Responsabile, Amministratore, Verificatore, ecc.).
+		- *Ore svolte*: l’utente inserisce manualmente le ore svolte per ogni ruolo, in corrispondenza della data indicata.
+	- Al termine del periodo, il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
+=== Integrazione con Grafana
+I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un servizio di monitoraggio che permette di visualizzare l’andamento del progetto attraverso grafici e dashboard interattive. Questo collegamento permette di avere un’analisi più approfondita e visiva delle attività svolte. La dashboard di Grafana è suddivisa in diverse sezioni chiave:
++ *Stato delle Issue*
+	- Grafana monitora le attività del repository GitHub, mostrando:
+	 - *Issue aperte e chiuse* in un grafico a torta.
+	 - *Issue in corso, in revisione e completate* evidenziando il loro stato attuale.
++ Riepilogo di tutte le *pull request* e in che stato si trovano.
++ Stato della *board* di GitHub (#link(<gestione_board>)[*4.2 Gestione della board*]).
++ *Andamento Ore e Costi*
+ - Questa sezione fornisce un confronto visivo tra le *ore previste* e le *ore effettivamente* svolte per ciascun ruolo.
+ - Il grafico in basso a sinistra evidenzia:
+  - *Ore Previste*: rappresentate in giallo.
+	 - *Ore Effettive*: rappresentate in verde.
++ *Andamento Costi Preventivati vs Effettivi*
+	- In basso a destra, un grafico a linea mostra:
+	 - *Costi Preventivati*: i costi stimati durante la pianificazione del periodo.
+	 - *Costi Effettivi*: i costi registrati a fine periodo.
+	- Questo confronto permette di valutare eventuali scostamenti rispetto al piano iniziale e di adottare misure correttive.
++ *Riepilogo delle Attività*
+ - Nella sezione centrale una tabella riporta i ruoli assegnati per il periodo corrente.
+	
+  
+== Norme tipografiche
+
+I documenti devono rispettare standard tipografici e sintattici uniformi per garantire chiarezza e coerenza. Di seguito, si riportano le regole principali da seguire.
+
+=== Regole Sintattiche
+==== Nomi dei file
+- I documenti iniziano con una lettera maiuscola.
+- Il nome del documento è composto dalle parole che indicano il tipo e l’argomento principale del documento. Se il nome è formato da più parole, queste devono essere separate da spazi (es. Norme di Progetto, Piano di Progetto).
+- I verbali seguono il formato AAAA-MM-GG, dove AAAA-MM-GG rappresenta la data dell’incontro a cui il verbale si riferisce.
+==== Stili del testo
+- *Grassetto*: evidenzia informazioni chiave come definizioni, titoli di sezioni o termini importanti.
+- *Corsivo*: evidenzia parole tecniche o concetti introdotti per la prima volta.
+- *Glossario*: i termini inseriti nel glossario sono contrassegnati da una #text(blue)[G] blu in pedice. Ad esempio, il termine #glossario("verificatore") appare con una #text(blue)[G] blu sotto di esso.
+- *Link*: i collegamenti ipertestuali sono visualizzati in blu, come nel caso del link nella sezione #link(<Riferimenti>)[1.3]
+- *Titoli*: seguono una gerarchia fino al livello H4, con formattazione coerente (H1, H2, H3, H4).
+- *Font e dimensioni*: il font scelto è Roboto Serif, con una dimensione di 12 pt per il corpo del testo, e interlinea 1,5.
+- *Margini*: i margini sono impostati a 2 cm sui lati orizzontali e 2,5 cm sui lati verticali.
+- *Elenchi*:
+	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o attività che non sono sequenziali.
+	- *Elenchi numerati*: devono essere utilizzati quando si descrivono attività che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
+  
 = Processi organizzativi
 E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei task ed eventuali rischi annessi. 
 
