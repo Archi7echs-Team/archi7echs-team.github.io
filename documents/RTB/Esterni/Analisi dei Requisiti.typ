@@ -3,19 +3,20 @@
 #show: conf.with(
   title: "Analisi dei Requisiti",
   author: "Team",
-  state: "Approvato",
+  state: "Bozza",
   intern: false,
   show_outline: true,
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.7","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
-    "0.1.6","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
-    "0.1.5","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, (p.valdagno,p.checchinato),
-    "0.1.4","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
-    "0.1.3", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
-    "0.1.2", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
-    "0.1.1", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
+    "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, "",
+    "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
+    "0.5.2","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
+    "0.5.1","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, (p.valdagno,p.checchinato),
+    "0.5.0","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
+    "0.4.0", "02-12-2024", "Stesura sottosezione caratteristiche utente", p.pozzobon, p.valdagno,
+    "0.3.0", "29-11-2024",  "Stesura introduzione sezione Requisiti-Identificazione e Requisiti funzionali secondo UC", (p.pozzobon), p.valdagno,
+    "0.2.0", "26-11-2024",  "Stesura sezione casi d'uso", (p.valdagno, p.scandaletti, p.pesenato), p.salvo,
     "0.1.0", "25-11-2024",  "Prima stesura introduzione e descrizione prodotto", p.valdagno, p.salvo,
   )
 )
@@ -86,9 +87,12 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 
 
 == Tecnologie
-//concordare durante una riunione 
-//Capitolato Threejs d3js per dati
-//            react  angular frontend
+- *Svelte*: un #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
+- *Threlte*: una #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene 3D reattive e interattive.
+- *Three.js*: una #glossario("libreria") JavaScript per la creazione di grafica 3D nel browser. Three.js fornisce un'#glossario("API") semplice per costruire e animare scene 3D. Verrà utilizzato maggiormente per la linearizzazione dei dati all'interno del grafico.
+- *Vitest*: un framework di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di unità.
+- *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili
+
 
 #pagebreak(weak: true)
 
