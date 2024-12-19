@@ -5,12 +5,12 @@
   title: "Piano di Qualifica",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, "",
+    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, p.salvo,
   )
 )
 
@@ -20,7 +20,7 @@ L'obiettivo del #glossario("PdQ") è descrivere l'insieme delle procedure di #gl
 Dato che il miglioramento continuo è uno degli elementi chiave dei sistemi di qualità i contenuti del documento saranno modificati e ampliati nel corso nel tempo.
 
 == Glossario
-All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
+All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario.
 
 == Riferimenti
 === Link al capitolato C5 - 3Dataviz
