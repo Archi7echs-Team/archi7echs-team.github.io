@@ -9,7 +9,8 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-		"0.1.9", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
+		"0.1.10", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
+    "0.1.9", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
     "0.1.8", "17-12-2024", "Stesura comunicazione interna del team", p.pozzobon,(p.salvo,p.valdagno),
     "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
@@ -154,15 +155,15 @@ Questa sezione presenta tutte le istruzioni a cui attenersi, dal momento in cui 
  + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
  + ```bash git push``` --- per caricare le modifiche sul branch
 + Decidere se approvare o meno la #glossario("Pull Request")
- - Se si decide di non approvarla per mancanza di informazioni importanti, si dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto
- + Premere su "Add your review" in alto a destra
- + Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
- + Premere su "Submit review"
- + Attendere che il #glossario("relatore") apporti le modifiche richieste
- - Se si decide di approvare la #glossario("Pull Request"), procedere con i seguenti passaggi per il merge
- + Premere su "Add your review" in alto a destra
- + Premere su "Review changes" e selezionare "Approve"
- + Premere su "Submit review"
+ - Se si decide di non approvarla per mancanza di informazioni importanti, si dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto:
+ 	+ Premere su "Add your review" in alto a destra
+ 	+ Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
+ 	+ Premere su "Submit review"
+ 	+ Attendere che il #glossario("relatore") apporti le modifiche richieste
+ - Se si decide di approvare la #glossario("Pull Request"), procedere con i seguenti passaggi per il merge:
+ 	+ Premere su "Add your review" in alto a destra
+ 	+ Premere su "Review changes" e selezionare "Approve"
+ 	+ Premere su "Submit review"
 Tutte le istruzioni sopra descritte sono valide anche per il #glossario("responsabile") che dovrà inoltre seguire le indicazioni riportate di seguito (quest'ultime devono essere ignorate dal #glossario("verificatore")).
 + Premere su "Merge pull request" e successivamente su "Confirm merge"
 + Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutilizzati. 
@@ -313,7 +314,7 @@ I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un serv
 + *Riepilogo delle Attività*
  - Nella sezione centrale una tabella riporta i ruoli assegnati per il periodo corrente.
 	
-
+  
 == Norme tipografiche
 
 I documenti devono rispettare standard tipografici e sintattici uniformi per garantire chiarezza e coerenza. Di seguito, si riportano le regole principali da seguire.
@@ -334,3 +335,63 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 - *Elenchi*:
 	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o attività che non sono sequenziali.
 	- *Elenchi numerati*: devono essere utilizzati quando si descrivono attività che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
+  
+= Processi organizzativi
+E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei task ed eventuali rischi annessi. 
+
+== Gestione dei processi
+Un #glossario("processo") è un insieme di attività correlate  e coese che trasformano bisogni (input) in prodotti (output) secondo specifiche regole. \
+
+L'intero ciclo di vita di ogni processo è supportato dalla gestione di questo mediante il sistema di #glossario("Issue") di #glossario("Github"). 
+
+La gestione di un processo è composta da diverse fasi:
+ + Identificazione e definizione
+ + Pianificazione
+ + Monitoraggio
+ + Gestione dei rischi
+ + Retrospettiva
+
+=== Identificazione e definizione di processi
+Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima attività che compone il progetto, indipendentemente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
+
+==== Identificazione mediante sistema Issue di Github 
+Ogni processo viene identificato da:
+- *ID*, generato automaticamente dal sistema
+- *Nome* 
+- *Descrizione*, se necessaria
+- *Membro* (o membri) del team assegnati
+- *#glossario("Label")*, fondamentale per identificare l'appartenenza del processo. Ogni #glossario("label") si riferisce alla relativa parte di documentazione/codifica di cui il processo fa parte. Nel dettaglio:
+  - AdR
+  - Agg_sito
+  - Candidatura
+  - Fix, per indicare la correzione di un errore ed è obbligatorio associare una seconda label che identifichi l'appartenenza del processo
+  - Glossario
+  - NdP
+  - PdP
+  - PdQ
+  - V.E.
+  - V.I.
+- *Progetto*, configurazione di Github necessaria per poter gestire la issue mediante la #glossario("Project Board")
+- *#glossario("Milestone")*, per identificare il periodo a cui il processo è associato
+=== Pianificazione 
+Ogni processo viene associato ad un #glossario("periodo"), indicato nel sistema di #glossario("Issue") come #glossario("Milestone"). 
+Tale associazione consente di identificare il processo dentro una fase, definita da una data di inizio ed una fine, definendo quindi un termine massimo di completamento, salvo specifica indicazione a preventivo o motivazione a consuntivo. Tale gestione consente inoltre di avere una visione su tutti i processi, consentendo il monitoraggio e la retrospettiva del periodo stesso con stime di tempi, risorse e costi necessari per il completamento delle #glossario("Issue").
+
+=== Monitoraggio
+E' necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. E' a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
+- *Todo*, #glossario("Issue") creata ma non ancora iniziata
+- *In progress*, #glossario("Issue") in lavorazione
+- *In review*, #glossario("Issue") completata e in attesa di verifica
+- *Done*, #glossario("Issue") terminata
+
+La board permette al responsabile di progetto di intervenire tempestivamente in caso di problematiche che sono sorte o stanno per sorgere. \
+E' compito del responsabile di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
+Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del processo è tenuto ad avvisare tutto il team e sarà cura del responsabile trovare una soluzione al problema presentato.
+
+=== Gestione dei rischi
+Ogni processo può essere soggetto a rischi, indicati nel Piano di Progetto. Una corretta prevenzione e gestione dei rischi, come indicato al punto precedente, richiede il corretto e tempestivo aggiornamento di una board. \
+Il responsabile di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), in quest'ultimo nella sezione di #glossario("retrospettiva") del periodo.
+
+=== Retrospettiva
+Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
+Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
