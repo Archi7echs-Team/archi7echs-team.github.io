@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.7", "16-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, "",
+    "0.1.7", "16-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, p.scandaletti,
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
@@ -152,15 +152,15 @@ Questa sezione presenta tutte le istruzioni a cui attenersi, dal momento in cui 
  + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
  + ```bash git push``` --- per caricare le modifiche sul branch
 + Decidere se approvare o meno la #glossario("Pull Request")
- - Se si decide di non approvarla per mancanza di informazioni importanti, si dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto
- + Premere su "Add your review" in alto a destra
- + Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
- + Premere su "Submit review"
- + Attendere che il #glossario("relatore") apporti le modifiche richieste
- - Se si decide di approvare la #glossario("Pull Request"), procedere con i seguenti passaggi per il merge
- + Premere su "Add your review" in alto a destra
- + Premere su "Review changes" e selezionare "Approve"
- + Premere su "Submit review"
+ - Se si decide di non approvarla per mancanza di informazioni importanti, si dovrà rifiutare la #glossario("Pull Request") e indicare i motivi del rifiuto:
+ 	+ Premere su "Add your review" in alto a destra
+ 	+ Premere su "Review changes" e selezionare "Request changes", scrivendo i motivi del rifiuto
+ 	+ Premere su "Submit review"
+ 	+ Attendere che il #glossario("relatore") apporti le modifiche richieste
+ - Se si decide di approvare la #glossario("Pull Request"), procedere con i seguenti passaggi per il merge:
+ 	+ Premere su "Add your review" in alto a destra
+ 	+ Premere su "Review changes" e selezionare "Approve"
+ 	+ Premere su "Submit review"
 Tutte le istruzioni sopra descritte sono valide anche per il #glossario("responsabile") che dovrà inoltre seguire le indicazioni riportate di seguito (quest'ultime devono essere ignorate dal #glossario("verificatore")).
 + Premere su "Merge pull request" e successivamente su "Confirm merge"
 + Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutilizzati. 
@@ -294,7 +294,7 @@ Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del
 
 === Gestione dei rischi
 Ogni processo può essere soggetto a rischi, indicati nel Piano di Progetto. Una corretta prevenzione e gestione dei rischi, come indicato al punto precedente, richiede il corretto e tempestivo aggiornamento di una board. \
-Il responsabile di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), nella #glossario("retrospettiva") del periodo.
+Il responsabile di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), in quest'ultimo nella sezione di #glossario("retrospettiva") del periodo.
 
 === Retrospettiva
 Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
