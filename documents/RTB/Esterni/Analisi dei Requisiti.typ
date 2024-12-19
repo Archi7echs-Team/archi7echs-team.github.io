@@ -177,7 +177,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + I dati vengono caricati correttamente.
     + Il sistema verifica che il grafico venga #glossario("renderizzato") correttamente e, in caso contrario, avvisa l'utente con un messaggio.
 
-=== UC 5.1 - Visualizzazione durante hover di una barra <uc5.1>
+=== UC 5.1 - Visualizzazione informazioni durante hover di una barra <uc5.1>
 - *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -186,7 +186,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente passa il cursore del mouse sopra una barra per vedere il valore.
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra
     
-=== UC 5.2 - Visualizzazione con click di una barra <uc5.2>
+=== UC 5.2 - Opacizzazione con click di una barra <uc5.2>
 - *Descrizione: * L'utente preme sopra una barra del grafico e opacizza quella barra specifica
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -275,7 +275,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     [F.1.4], [@uc2.3 \ #glossario("UC")2.3], [L'utente deve essere in grado di selezionare una sorgente #glossario("SQL") esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
     [F.1.5], [@uc3 \ #glossario("UC")3], [Il sistema controlla che i dati vengano importati correttamente dalla #glossario("sorgente dati") selezionata dall'utente. In caso contrario viene visualizzato un messaggio di errore ], [1 - Obbligatorio],
     [F.1.6], [@uc4 \ #glossario("UC")4], [Il sistema controlla che, una volta caricati correttamente i dati, il grafico venga #glossario("renderizzato") correttamente. In caso contrario viene visualizzato un messaggio di errore ], [1 - Obbligatorio],
-    [F.1.7], [@uc5.1 \ #glossario("UC")5.1], [L'utente deve essere in grado di selezionare un elemento del grafico per nascondere o #glossario("opacizzare") barre verticali con valori superiori o inferiori ], [1 - Obbligatorio],
+    [F.1.7], [@uc5.1 \ #glossario("UC")5.1], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.], [1 - Obbligatorio],
     [F.1.8], [@uc5.2 \ #glossario("UC")5.2], [L'utente preme sopra una barra del grafico e opacizza quella barra specifica], [1 - Obbligatorio],
     [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ruotare liberamente la visualizzazione del grafico ], [1 - Obbligatorio],
     [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
