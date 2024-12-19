@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-		"0.1.8", "18-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, p.scandaletti,
+		"0.1.8", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.1.7", "16-12-2024", "Stesura norme tipografiche", p.checchinato,(p.salvo,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
@@ -250,7 +250,7 @@ La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondam
 Il foglio ore si compone di due parti principali:
 + *Riepilogo dei Costi* (sezione sinistra)
 	- Questa sezione fornisce un quadro complessivo delle ore totali e dei costi associati ai vari ruoli svolti nei vari periodi.
-	- Colonne principali:
+	- *Colonne principali*:
 		- *Ruolo*: elenca i ruoli ricoperti (es. Responsabile, Amministratore, Verificatore, ecc.).
 		- *Periodo X*: numero di ore svolte per ruolo nel periodo X.
 		- *Tot. h*: somma delle ore svolte per ciascun ruolo.
@@ -263,7 +263,7 @@ Il foglio ore si compone di due parti principali:
 		- *Data*: rappresenta il giorno specifico per cui vengono registrate le ore.
 		- *Ruoli*: ciascun ruolo ha una colonna dedicata (es. Responsabile, Amministratore, Verificatore, ecc.).
 		- *Ore svolte*: l’utente inserisce manualmente le ore svolte per ogni ruolo, in corrispondenza della data indicata.
-		- Al termine del periodo, il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
+	- Al termine del periodo, il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
 === Integrazione con Grafana
 I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un servizio di monitoraggio che permette di visualizzare l’andamento del progetto attraverso grafici e dashboard interattive. Questo collegamento permette di avere un’analisi più approfondita e visiva delle attività svolte. La dashboard di Grafana è suddivisa in diverse sezioni chiave:
 + *Stato delle Issue*
