@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.1.7", "16-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, p.scandaletti,
+    "0.1.7", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
     "0.1.6", "15-12-2024", "Stesura processi primari-comunicazioni con proponente e strumenti", p.pozzobon, (p.salvo,p.valdagno),
     "0.1.5", "15-12-2024", "Redatta sezione Gestione dell'assegnazione ruoli", (p.salvo,p.pozzobon), (p.scandaletti,p.valdagno),
     "0.1.4", "10-12-2024", "Fix sezione Verifica e Revisione della documentazione", p.salvo, (p.valdagno,p.checchinato),
@@ -257,7 +257,7 @@ La gestione di un processo è composta da diverse fasi:
  + Retrospettiva
 
 === Identificazione e definizione di processi
-Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima attività che compone il progetto, indipendente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
+Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima attività che compone il progetto, indipendentemente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
 
 ==== Identificazione mediante sistema Issue di Github 
 Ogni processo viene identificato da:
@@ -273,6 +273,7 @@ Ogni processo viene identificato da:
   - Glossario
   - NdP
   - PdP
+  - PdQ
   - V.E.
   - V.I.
 - *Progetto*, configurazione di Github necessaria per poter gestire la issue mediante la #glossario("Project Board")
