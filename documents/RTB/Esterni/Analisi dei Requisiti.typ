@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.1.7","17-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, p.salvo,
+    "0.1.7","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
     "0.1.6","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.5","08-12-2024","Fix UC - aggiunto reperimento dati da SQL",p.pozzobon, (p.valdagno,p.checchinato),
     "0.1.4","07-12-2024","Continuazione casi d'uso e aggiunta req. funzionali",p.pozzobon, (p.valdagno,p.checchinato),
@@ -184,7 +184,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x
 - *Scenario Principale: *
     + L'utente passa il cursore del mouse sopra una barra per vedere il valore.
-    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra
+    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra.
     
 === UC 5.2 - Opacizzazione con click di una barra <uc5.2>
 - *Descrizione: * L'utente preme sopra una barra del grafico e opacizza quella barra specifica
@@ -193,7 +193,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * La barra premuta diventa opacizzata (trasparente)
 - *Scenario Principale: *
     + L'utente clicca su una barra per selezionarla.
-    + L'applicazione aggiorna la visualizzazione opacizzando la barra premuta
+    + L'applicazione aggiorna la visualizzazione opacizzando la barra selezionata.
 
 === UC 6 Strumenti visualizzazione dati - ROTAZIONE <uc6>
 - *Descrizione: * L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione
@@ -275,7 +275,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     [F.1.4], [@uc2.3 \ #glossario("UC")2.3], [L'utente deve essere in grado di selezionare una sorgente #glossario("SQL") esterna per il reperimento automatico dei dati volto alla generazione e visualizzazione del grafico], [1 - Obbligatorio],
     [F.1.5], [@uc3 \ #glossario("UC")3], [Il sistema controlla che i dati vengano importati correttamente dalla #glossario("sorgente dati") selezionata dall'utente. In caso contrario viene visualizzato un messaggio di errore ], [1 - Obbligatorio],
     [F.1.6], [@uc4 \ #glossario("UC")4], [Il sistema controlla che, una volta caricati correttamente i dati, il grafico venga #glossario("renderizzato") correttamente. In caso contrario viene visualizzato un messaggio di errore ], [1 - Obbligatorio],
-    [F.1.7], [@uc5.1 \ #glossario("UC")5.1], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.], [1 - Obbligatorio],
+    [F.1.7], [@uc5.1 \ #glossario("UC")5.1], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
     [F.1.8], [@uc5.2 \ #glossario("UC")5.2], [L'utente preme sopra una barra del grafico e opacizza quella barra specifica], [1 - Obbligatorio],
     [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ruotare liberamente la visualizzazione del grafico ], [1 - Obbligatorio],
     [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado di visualizzare solamente una determinata area del grafico per una maggiore comprensione dei dati], [1 - Obbligatorio],
