@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, p.salvo,
+    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
 )
 
