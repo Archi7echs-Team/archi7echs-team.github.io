@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, "",
+    "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, p.salvo,
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.9.0", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
     "0.8.0", "17-12-2024", "Stesura comunicazione interna del team", p.pozzobon,(p.salvo,p.valdagno),
