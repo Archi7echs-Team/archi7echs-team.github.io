@@ -4,11 +4,11 @@
   title: "Verbale incontro 10/12/2024",
   subtitle: "Documento interno - verbale nr. 12",
   author: p.checchinato,
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "19-12-2024",  "Prima stesura documento", p.checchinato, "",
+    "0.1.0", "19-12-2024",  "Prima stesura documento", p.checchinato, p.scandaletti,
   )
 )
 
@@ -69,7 +69,7 @@ Durante la riunione, il team ha discusso delle tecnologie da adottare per lo svi
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l’incontro del team Archi7echs è terminato alle 16:00. \
-Si convoca il prossimo incontro per martedì 10/12/2024 alle ore 15:00 per discutere di quanto svolto durante la settimana. \
+Si convoca il prossimo incontro per lunedì 23/12/2024 alle ore 15:00 per discutere di quanto svolto durante la settimana. \
 
 
 = Decisioni
@@ -90,9 +90,9 @@ Si convoca il prossimo incontro per martedì 10/12/2024 alle ore 15:00 per discu
   (95,), (p.lucato), [Analisi dei Requisiti: aggiunta UC visualizzazione dati maggiori/minori della media],
   (96,), ("Analista"), [Analisi dei Requisiti: continuazione gestione degli errori],
   (99,), (p.checchinato), [Redazione verbale interno 2024-12-17],
-  (100,), (""), [Fix versionamento Analisi dei Requisiti],
-  (101,), (""), [Fix versionamento Norme di Progetto],
-  (102,), (""), [Fix versionamento Piano di Progetto],
+  (100,), (p.pesenato), [Fix versionamento Analisi dei Requisiti],
+  (101,), (p.pozzobon), [Fix versionamento Norme di Progetto],
+  (102,), (p.valdagno), [Fix versionamento Piano di Progetto],
   (103,), (p.valdagno), [Piano di Qualifica: Introduzione],
   (106,), (p.scandaletti),[Fix aggiunta termini e definizioni al glossario]
 ))
