@@ -3,13 +3,13 @@
 #show: conf.with(
   title: "Analisi dei Requisiti",
   author: "Team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.0", "23-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), "",
+    "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), p.salvo,
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
     "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
     "0.5.2","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
@@ -94,7 +94,7 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 == Tecnologie
 - *Svelte*: un #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
 - *Threlte*: una #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene 3D reattive e interattive.
-- *D3.js*: una #glossario("libreria") JavaScript per la creazione di grafica 3D nel browser. D3.js fornisce un'#glossario("API") semplice per costruire e animare scene 3D. Tuttavia nel progetto verrà utilizzato maggiormente per la linearizzazione dei dati all'interno del grafico.
+- *D3.js*: una #glossario("libreria") JavaScript per la creazione di grafica 3D nel browser. D3.js fornisce un'#glossario("API") semplice per costruire e animare scene 3D. Tuttavia nel progetto verrà utilizzato maggiormente per la normalizzazione dei dati all'interno del grafico.
 - *Vitest*: un #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di unità.
 - *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili.
 
