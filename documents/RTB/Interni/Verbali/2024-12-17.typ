@@ -1,14 +1,14 @@
 #import "/templates/documento.typ": *
 
 #show: conf.with(
-  title: "Verbale incontro 10/12/2024",
+  title: "Verbale incontro 17/12/2024",
   subtitle: "Documento interno - verbale nr. 12",
   author: p.checchinato,
   state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "19-12-2024",  "Prima stesura documento", p.checchinato, p.scandaletti,
+    "0.1.0", "23-12-2024",  "Prima stesura documento", p.checchinato, (p.scandaletti,p.valdagno),
   )
 )
 
