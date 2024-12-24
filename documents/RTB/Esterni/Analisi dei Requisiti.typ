@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), p.salvo,
+    "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
     "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
     "0.5.2","10-12-2024","Aggiunti UC gestione errori e aggiunta riferimenti glossario",p.pozzobon, (p.valdagno,p.checchinato),
@@ -119,7 +119,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni*: le condizioni che definiscono lo stato iniziale del sistema e degli attori prima che l'interazione inizi.
 - *Postcondizioni*: le condizioni che descrivono lo stato finale del sistema.
 - *Scenario principale*: la sequenza di passi standard che descrive l'interazione principale tra l'attore e il sistema per completare un caso d’uso.
-- *Scenari alternativi*: rappresentano dei casi particolari, ovvero quando durante uno dei passi dello scenario principale non è andato a buon fine ed è dunque necessario specificare come comportarsi in queste circostanze
+- *Scenari alternativi*: rappresentano dei casi particolari, ovvero quando uno dei passi dello scenario principale non è andato a buon fine ed è dunque necessario specificare come comportarsi in queste circostanze.
 
 //[Inserire Diagramma o qua]
 
@@ -134,27 +134,27 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente accede all'applicazione web.
     + L'utente seleziona la modalità di inserimento dei dati (caricamento manuale, #glossario("SQL"), #glossario("API")). (@uc2)
     + Il grafico viene generato in base ai dati precedentemente caricati.
-    + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione
+    + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione.
 
 === UC 2 - Caricamento dati per la generazione del grafico <uc2>
-- *Descrizione: * L'utente deve avere la possibilità di inserire dei dati da poter visualizzare nel grafico
+- *Descrizione: * L'utente deve avere la possibilità di inserire dei dati da poter visualizzare nel grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
-    + L'utente accede alla sezione di inserimento dei dati
-    + L'utente seleziona il metodo di caricamento dati
-      - Tramite interfaccia (@uc2.1)
-      - Tramite API (@uc2.2)
-      - Tramite connessione database SQL (@uc2.3)
-      - Tramite file .csv (@uc2.4)
-    + Il sistema salva i dati
+    + L'utente accede alla sezione di inserimento dei dati.
+    + L'utente seleziona il metodo di caricamento dati:
+      - Tramite interfaccia (@uc2.1);
+      - Tramite API (@uc2.2);
+      - Tramite connessione database SQL (@uc2.3);
+      - Tramite file .csv (@uc2.4).
+    + Il sistema salva i dati.
 
 
 === UC 2.1 - Caricamento manuale dei dati tramite interfaccia <uc2.1>
 - *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
@@ -169,196 +169,196 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   - Visualizzazione dell'errore emptyField (@uc15)
 
 ==== UC 2.1.1 - L'utente inserisce il campo X <uc2.1.1>
-- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse x
+- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse x.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
-- *Postcondizioni: * L'utente ha inserito il valore x di un nuovo dato
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
+- *Postcondizioni: * L'utente ha inserito il valore x di un nuovo dato.
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo x
 
 ==== UC 2.1.2 - L'utente inserisce il campo Y <uc2.1.2>
-- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y
+- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
-- *Postcondizioni: * L'utente ha inserito il valore y di un nuovo dato
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
+- *Postcondizioni: * L'utente ha inserito il valore y di un nuovo dato.
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
-    + L'utente compila il campo y
+    + L'utente compila il campo y.
 
 ==== UC 2.1.3 - L'utente inserisce il campo Z <uc2.1.3>
-- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z
+- *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
-- *Postcondizioni: * L'utente ha inserito il valore z di un nuovo dato
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
+- *Postcondizioni: * L'utente ha inserito il valore z di un nuovo dato.
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo z
 
 === UC 2.2 - Caricamento automatico dati tramite #glossario("API") <uc2.2>
-- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") come metodo di caricamento
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") come metodo di caricamento.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite #glossario("API")
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite #glossario("API").
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente accede alla modalità "Inserimento dati".
     + L'utente inserisce le #glossario("API") da cui prendere i dati.
-    + L'utente, se necessario, inserisce un #glossario("API") #glossario("token")
+    + L'utente, se necessario, inserisce un #glossario("API") #glossario("token").
       - @uc2.2.1
     + L'utente clicca su un bottone per caricare i nuovi dati.
     + L'applicazione salva i nuovi dati.
 - *Scenari alternativi:* 
-  - Visualizzazione errore tooMuchData (@uc12)  
-  - Visualizzazione errore apiTimeOut (@uc14)
-  - Visualizzazione errore endPointNotFound (@uc16)
-  - Visualizzazione errore unauthorized (@uc17)
+  - Visualizzazione errore tooMuchData (@uc12);  
+  - Visualizzazione errore apiTimeOut (@uc14);
+  - Visualizzazione errore endPointNotFound (@uc16);
+  - Visualizzazione errore unauthorized (@uc17).
 
 ==== UC 2.2.1 - L'utente inserisce il campo #glossario("API") #glossario("token") <uc2.2.1>
-- *Descrizione: * L'utente desidera caricare i dati tramite #glossario("API") che necessità però di un #glossario("API") #glossario("token"), fornito dall'utente
+- *Descrizione: * L'utente desidera caricare i dati tramite #glossario("API") che necessità però di un #glossario("API") #glossario("token"), fornito dall'utente.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente
-- *Postcondizioni: * L'utente ha inserito il valore dell'#glossario("API") #glossario("token") di un nuovo dato
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
+- *Postcondizioni: * L'utente ha inserito il valore dell'#glossario("API") #glossario("token") di un nuovo dato.
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
-    + L'utente inserisce il link all'#glossario("API")
-    + L'utente inserisce l'#glossario("API") #glossario("token")
+    + L'utente inserisce il link all'#glossario("API").
+    + L'utente inserisce l'#glossario("API") #glossario("token").
 
 
 === UC 2.3 - Caricamento automatico dati tramite connessione a database SQL <uc2.3>
-- *Descrizione: * L'utente decide di inserire automaticamente i dati tramite database come metodo di caricamento
+- *Descrizione: * L'utente decide di inserire automaticamente i dati tramite database come metodo di caricamento.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite connessione a database #glossario("SQL")
+- *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite connessione a database #glossario("SQL").
 - *Postcondizioni: * I dati, una volta recuperati dalla sorgente, vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
-    + L'utente decide di inserire i dati tramite database
-    + L'utente preme sul bottone dedicato al caricamento
-    + L'applicazione traduce i dati nel grafico #glossario("3D").
+    + L'utente decide di inserire i dati tramite database.
+    + L'utente preme sul bottone dedicato al caricamento.
+    + L'applicazione elabora i dati nel grafico #glossario("3D").
 
 === UC 2.4 - Caricamento automatico dati tramite file .csv <uc2.4>
-- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è in modalità di inserimento da file #glossario(".csv")
+- *Precondizioni: * L'applicazione è in modalità di inserimento da file #glossario(".csv").
 - *Postcondizioni: * I dati, una volta recuperati dalla sorgente, vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
-    + L'utente decide di inserire i dati tramite file .csv
+    + L'utente decide di inserire i dati tramite file .csv.
     + L'utente seleziona il file #glossario(".csv") da cui prendere i dati.
     + L'utente clicca su un bottone per caricare i nuovi dati.
     + L'applicazione salva i nuovi dati.
 - *Scenari Alternativi:* 
-  - Errore tooMuchData (@uc12)  
-  - Errore invalidCsv (@uc13)
+  - Errore tooMuchData (@uc12);  
+  - Errore invalidCsv (@uc13).
 
 === UC 3 Strumenti visualizzazione dati - Rotazione <uc3>
 - *Descrizione: * L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione
-- *Attore: * Utente finale
+- *Attore: * Utente finale.
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Rotazione del grafico per consentire una migliore visualizzazione dei dati di interesse dell'utente
+- *Postcondizioni: * Rotazione del grafico per consentire una migliore visualizzazione dei dati di interesse dell'utente.
 - *Scenario Principale: *
-  + L'utente seleziona la modalità "Rotazione" dal menù apposito
-  + L'utente attraverso le gesture del mouse si sposta nel grafico 
+  + L'utente seleziona la modalità "Rotazione" dal menù apposito.
+  + L'utente attraverso le gesture del mouse si sposta nel grafico.
 
 === UC 4 - Strumenti visualizzazione dati - PAN orizzontale <uc4>
-- *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente
+- *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Spostamento in orizzontale del grafico avvenuto con successo
+- *Postcondizioni: * Spostamento in orizzontale del grafico avvenuto con successo.
 - *Scenario Principale: *
   + L'utente clicca sul pulsante per attivare la modalità PAN orizzontale.
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
-  + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente
+  + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente.
 
 === UC 5 - Strumenti visualizzazione dati - PAN verticale <uc5>
-- *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente
+- *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Spostamento in verticale del grafico avvenuto con successo
+- *Postcondizioni: * Spostamento in verticale del grafico avvenuto con successo.
 - *Scenario Principale: *
   + L'utente clicca sul pulsante per attivare la modalità PAN.
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
-  + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente
+  + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente.
 
   
 === UC 6 - Strumenti visualizzazione dati - Zoom <uc6>
-- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione
+- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Visualizzazione ingrandita o ridotta di una sezione del grafico 
+- *Postcondizioni: * Visualizzazione ingrandita o ridotta di una sezione del grafico.
 - *Scenario Principale: *
   + L'utente clicca sul pulsante per attivare la modalità Zoom.
   + L'applicazione abilita la modalità Zoom.
-  + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico
+  + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico.
 
 === UC 7 - Strumenti visualizzazione dati - Auto posizionamento <uc7>
-- *Descrizione: * L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo
+- *Descrizione: * L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico #glossario("3D") è generato, #glossario("accessibile") e l'utente ha personalizzato, mediante strumenti, la visualizzazione
-- *Postcondizioni: * Reset della visualizzazione del grafico a quella di default
+- *Precondizioni: * Il grafico #glossario("3D") è generato, #glossario("accessibile") e l'utente ha personalizzato, mediante strumenti, la visualizzazione.
+- *Postcondizioni: * Reset della visualizzazione del grafico a quella di default.
 - *Scenario Principale: *
-  + L'utente, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione
+  + L'utente, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione.
 
 === UC 8 - Visualizzazione informazioni durante hover di una barra <uc8>
 - *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali
+- *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 - *Scenario Principale: *
     + L'utente passa il cursore del mouse sopra una barra.
-    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali
+    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 
 === UC 9 - Click su una barra del grafico<uc9>
 - *Descrizione: * L'utente preme sopra ad una barra, accede ad ulteriori funzionalità scegliendo tra quelle proposte.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Visualizzazione delle informazioni della barra e possibilità di filtraggio ulteriore in base alla barra selezionata
+- *Postcondizioni: * Visualizzazione delle informazioni della barra e possibilità di filtraggio ulteriore in base alla barra selezionata.
 - *Scenario Principale: *
     + L'utente preme sopra ad una barra del grafico.
     + L'applicazione fornisce le seguenti possibilità:
-      - Visualizzazione delle informazioni relative alla barra premuta
-      - Possibilità di applicare filtri al grafico in base alla barra premuta
+      - Visualizzazione delle informazioni relative alla barra premuta;
+      - Possibilità di applicare filtri al grafico in base alla barra premuta.
     
 ==== UC 9.1 - Visualizzazione informazioni dopo click di una barra <uc9.1>
 - *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico
-- *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali
+- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 - *Scenario Principale: *
-    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali
+    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 
 ==== UC 9.2 - Scelta dell'opacizzazione di una barra selezionata<uc9.2>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico
-- *Postcondizioni: * L'utente seleziona l'opacizzazione della barra selezionata
+- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Postcondizioni: * L'utente seleziona l'opacizzazione della barra selezionata.
 - *Scenario Principale: *
-    + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione
-    + L'utente modifica l'opacizzazione a piacere
+    + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione.
+    + L'utente modifica l'opacizzazione a piacere.
 
 ==== UC 9.3 - Opacizzazione dei dati con valore minore di una barra selezionata<uc9.3>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico
-- *Postcondizioni: * Il grafico ha i dati con valore minore del valore della barra selezionata opacizzati
+- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Postcondizioni: * Il grafico ha i dati con valore minore del valore della barra selezionata opacizzati.
 - *Scenario Principale: *
-    + L'utente preme sul bottone dedicato all'applicazione del filtro
-    + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata
+    + L'utente preme sul bottone dedicato all'applicazione del filtro.
+    + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
 
 ==== UC 9.4 Opacizzazione dei dati con valore maggiore di una barra selezionata<uc9.4>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico
-- *Postcondizioni: * Il grafico ha i dati con valore maggiore del valore della barra selezionata opacizzati
+- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Postcondizioni: * Il grafico ha i dati con valore maggiore del valore della barra selezionata opacizzati.
 - *Scenario Principale: *
-    + L'utente preme sul bottone dedicato all'applicazione del filtro
-    + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata
+    + L'utente preme sul bottone dedicato all'applicazione del filtro.
+    + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata.
 
 ==== UC 9.5 Reimpostare la visualizzazione della barra selezionata<uc9.5>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico e può aver applicato dei filtri alla barra
-- *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati
+- *Precondizioni: * L'utente ha premuto su una barra del grafico e può aver applicato dei filtri alla barra.
+- *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati.
 - *Scenario Principale: *
-    + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati
-    + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica)
+    + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
+    + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
       
 === UC 10 - Visualizzazione del valore medio globale <uc10>
 
@@ -367,171 +367,171 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Viene mostrato il piano medio globale.
 - *Scenario Principale: *
-    + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale
+    + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale.
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
 
 === UC 11 - Visualizzazione dati maggiori della media globale <uc11>
 
-- *Descrizione: * L'utente può visualizzare i soli dati che sono maggiori della media globale
+- *Descrizione: * L'utente può visualizzare i soli dati che sono maggiori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati solo i dati maggiori della media globale, opacizzando di conseguenza i valori minori della media globale
+- *Postcondizioni: * Vengono visualizzati solo i dati maggiori della media globale, opacizzando di conseguenza i valori minori della media globale.
 - *Scenario Principale: *
-    + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale
-    + L'applicazione opacizza tutti i dati minori della media globale
+    + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale.
+    + L'applicazione opacizza tutti i dati minori della media globale.
     
 === UC 12 - Visualizzazione dati minori della media globale <uc12>
 
-- *Descrizione: * L'utente può visualizzare i soli dati che sono minori della media globale
+- *Descrizione: * L'utente può visualizzare i soli dati che sono minori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati solo i dati minori della media globale, opacizzando di conseguenza i valori maggiori della media globale
+- *Postcondizioni: * Vengono visualizzati solo i dati minori della media globale, opacizzando di conseguenza i valori maggiori della media globale.
 - *Scenario Principale: *
-    + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale
-    + L'applicazione opacizza tutti i dati maggiori della media globale
+    + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale.
+    + L'applicazione opacizza tutti i dati maggiori della media globale.
 
 === UC 13 - Visualizzazione dati con altezza compresa tra un intervallo <uc13>
 
-- *Descrizione: * L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori (che può essere aperto o chiuso)
+- *Descrizione: * L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori (che può essere aperto o chiuso).
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato
+- *Postcondizioni: * Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
-    + L'utente inserisce il minimo (se necessario) dell'intervallo
-    + L'utente inserisce il massimo (se necessario) dell'intervallo
-    + L'utente applica il filtro
-    + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato
+    + L'utente inserisce il minimo (se necessario) dell'intervallo.
+    + L'utente inserisce il massimo (se necessario) dell'intervallo.
+    + L'utente applica il filtro.
+    + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenari Alternativi: *
-    - Visualizzazione dell'errore invalidArguments (@uc11)
+    - Visualizzazione dell'errore invalidArguments (@uc11).
 
 === UC 14 - Visualizzazione della media in base al valore di X<uc14>
 
-- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato
+- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato
+- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse X
-    + L'utente applica il filtro
-    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato
+    + L'utente seleziona un valore dell'asse X.
+    + L'utente applica il filtro.
+    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
 
 === UC 15 - Visualizzazione della media in base al valore di Z<uc15>
 
-- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato
+- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato
+- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse Z
-    + L'utente applica il filtro
-    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato
+    + L'utente seleziona un valore dell'asse Z.
+    + L'utente applica il filtro.
+    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
 
 === UC 16 - Visualizzazione degli N valori maggiori<uc16>
 
-- *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più alto
+- *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più alto.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più alto
+- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più alto.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, applica il filtro
-    + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto
+    + L'utente, tramite un bottone specifico, applica il filtro.
+    + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
 
 === UC 17 - Visualizzazione degli N valori minori<uc17>
 
-- *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più basso
+- *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più basso.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più basso
+- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più basso.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, applica il filtro
-    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso
+    + L'utente, tramite un bottone specifico, applica il filtro.
+    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
 
 === UC 18 - Reset dei filtri applicati alla visualizzazione dei dati<uc18>
 
-- *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default
+- *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri
-- *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato
+- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
+- *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, reimposta le impostazioni di default 
-    + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato   
+    + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
+    + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
 
 === UC 19 - Esportazione di un grafico<uc19>
 
-- *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi 
+- *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri
-- *Postcondizioni: * Tutte le informazioni del grafico vengono salvate in un file .csv
+- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
+- *Postcondizioni: * Tutte le informazioni del grafico vengono salvate in un file .csv.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, decide di esportare il grafico
-    + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato
+    + L'utente, tramite un bottone specifico, decide di esportare il grafico.
+    + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato.
 
 === UC 20 - Creazione di un'istantanea del grafico<uc20>
 
-- *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico
+- *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati
-- *Postcondizioni: * Viene salvata un'immagine istantanea del grafico
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * Viene salvata un'immagine istantanea del grafico.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico
-    + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva 
+    + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
+    + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva.
     
 === UC 21 - Visualizzazione errore invalidArguments <uc21>
 
-- *Descrizione: * L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore
+- *Descrizione: * L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative
+- *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
 - *Postcondizioni: * 
-  - L'utente viene avvisato graficamente dell'errore nella compilazione dell'input
+  - L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 - *Scenario Principale: *
-    + L'utente inserisce dei dati all'interno del campo d'inserimento
-    + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input
+    + L'utente inserisce dei dati all'interno del campo d'inserimento.
+    + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 
 === UC 22 - Visualizzazione Errore tooMuchData <uc22>
 
-- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata
+- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
-- *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso
+- *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
 - *Postcondizioni: * 
-  - L'utente viene avvisato del fatto che la quantità di dati ricevuti è maggiore della soglia massima supportata
+  - L'utente viene avvisato del fatto che la quantità di dati ricevuti è maggiore della soglia massima supportata.
 - *Scenario Principale: *
-    + L'utente decide l'input dei dati (file, database, api, ecc...)
-    + L'utente cerca di caricare i dati
-    + L'utente viene avvisato che il numero di dati ricevuti superano la soglia massima supportata e che quindi i dati non sono stati caricati
+    + L'utente decide l'input dei dati (file, database, api, ecc...).
+    + L'utente cerca di caricare i dati.
+    + L'utente viene avvisato che il numero di dati ricevuti supera la soglia massima supportata e che quindi i dati non sono stati caricati.
 
 === UC 23 - Visualizzazione errore invalidCsv <uc23>
 
-- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta
+- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
-- *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso
+- *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
 - *Postcondizioni: * 
-  - L'utente viene avvisato dell'errore di caricamento dei dati, in quanto il file non è formattato correttamente 
+  - L'utente viene avvisato dell'errore di caricamento dei dati, in quanto il file non è formattato correttamente.
 - *Scenario Principale: *
-    + L'utente decide l'input dei dati (file csv)
-    + L'utente cerca di caricare i dati
-    + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati    
+    + L'utente decide l'input dei dati (file csv).
+    + L'utente cerca di caricare i dati.
+    + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati.
 
 === UC 24 - Visualizzazione errore apiTimeout <uc24>
 
-- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite
-- *Precondizioni: * L'utente ha inserito l'#glossario("API") da cui recuperare i dati e ne ha richiesto l'invio
+- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite.
+- *Precondizioni: * L'utente ha inserito l'#glossario("API") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
-  - L'utente viene avvisato del fatto che l'endpoint fornito non ha risposto entro un tempo limite di timeout
+  - L'utente viene avvisato del fatto che l'endpoint fornito non ha risposto entro un tempo limite di timeout.
 - *Scenario Principale: *
-    + L'utente decide l'input dei dati (#glossario("API"))
-    + L'utente preme il bottone per caricare i dati
-    + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout
+    + L'utente decide l'input dei dati (#glossario("API")).
+    + L'utente preme il bottone per caricare i dati.
+    + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 
 === UC 25 - Visualizzazione errore emptyField <uc25>
 
-- *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto
+- *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha cercato di lasciare un input vuoto
+- *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
 - *Postcondizioni: * 
-  - L'utente viene avvisato graficamente dell'errore nella compilazione dell'input
+  - L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 - *Scenario Principale: *
-    + L'utente lascia un input vuoto
-    + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input
+    + L'utente lascia un input vuoto.
+    + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 
     
 = Requisiti
