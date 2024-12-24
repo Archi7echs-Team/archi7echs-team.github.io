@@ -33,7 +33,7 @@
              
     set par(justify: justify)
     box(height: 120pt)[
-      #place(left + horizon, image(height: 100%, "//img/logo.png"))
+      #place(left + horizon, image(height: 100%, "/img/logo.png"))
       #h(1fr)
       #place(right + horizon)[
         #block[

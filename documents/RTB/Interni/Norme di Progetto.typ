@@ -1,4 +1,4 @@
-#import "//templates/documento.typ": *
+#import "/templates/documento.typ": *
 #import "@preview/plotst:0.2.0": *
 
 #show: conf.with(

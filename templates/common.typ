@@ -11,8 +11,8 @@
   mail: "archi7echs@gmail.com",
   website: "https://archi7echs-team.github.io/",
   org: "https://github.com/Archi7echs-Team",
-  logo: "//img/logo.png",
-  logounipd: "//img/logounipd.png",
+  logo: "/img/logo.png",
+  logounipd: "/img/logounipd.png",
   docs: "archi7echs-team.github.io"
 )
 
@@ -22,7 +22,7 @@
   pesenato: "Giacomo Pesenato",
   pozzobon: "Francesco Pozzobon",
   salvo: "Giovanni Salvò",
-  scandaletti: "Gioele Scandaletti ",
+  scandaletti: "Gioele Scandaletti",
   valdagno: "Pietro Valdagno",
   vardanega: "Prof. Tullio Vardanega",
   cardin: "Prof. Riccardo Cardin",
