@@ -1,4 +1,4 @@
-        #import "//templates/documento.typ": *
+        #import "/templates/documento.typ": *
         
         #show: conf.with(
           title: "Glossario",
