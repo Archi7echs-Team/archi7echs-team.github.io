@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "27-12-2024",  "Prima stesura documento", p.checchinato, "",
+    "0.1.0", "01-01-2025",  "Prima stesura documento", p.checchinato, "",
   )
 )
 
@@ -87,7 +87,7 @@ Successivamente i membri del team presenti si scambiano i compiti e le informazi
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l'incontro del team Archi7echs è terminato alle 16:25. \
-Si convoca il prossimo incontro per martedì 31/12/2024 alle ore 15:00 per discutere di quanto svolto durante la settimana.\
+Il giorno della prossima riunione non è stato stabilito, considerando le vacanze natalizie. La data verrà definita successivamente in base alle disponibilità del team.\
 
 = Decisioni
 #decisioni((
@@ -99,8 +99,9 @@ Si convoca il prossimo incontro per martedì 31/12/2024 alle ore 15:00 per discu
 
 = TODO
 #todo((
-  (107,), (p.checchinato), [Redazione verbale interno 2024-12-23],
-  (108,), (p.pozzobon), [Redazione verbale esterno 2024-12-23],
+  (114,), (p.checchinato), [Redazione verbale interno 2024-12-23],
+  (115,), (p.pozzobon), [Redazione verbale esterno 2024-12-23],
+  (116,), (p.pozzobon), [Piano di progetto: stesura terzo periodo],
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'OdG._
