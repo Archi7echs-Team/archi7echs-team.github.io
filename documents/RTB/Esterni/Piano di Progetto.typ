@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.5.0", "02-01-2024", "Stesura terzo periodo", p.pozzobon,"",
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
     "0.4.0", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, (p.salvo,p.pozzobon),
     "0.3.1", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
@@ -556,6 +557,136 @@ Cambiamenti operativi e gestionali individuati:
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 2", display_style: "hor-legend-chart",colors: (red, green))
+}
+
+== Periodo 3
+=== Pianificazione
+*Periodo*: 11/11/2024 - 25/12/2024\
+*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+#align(center)[
+  #table(
+    columns: 2,
+    align: (col, row) => (center, center).at(col),
+    inset: 6pt,
+    table.header([*Ruolo*], [*Membri*]),
+      [Responsabile(Re)],[#p.valdagno],
+      [Amministratore(Am)],[#p.checchinato, #p.pozzobon],
+      [Analista(An)],[#p.lucato,#p.pesenato],
+      [Programmatore(Prg)],[#p.pesenato],
+      [Verificatore(Ve)],[#p.salvo,#p.scandaletti],
+      [Progettista(Prt)], [_non presente_]
+  )
+]
+*Obiettivi*:\
+Durante il terzo periodo l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il periodo scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, prof. #p.cardin.
+
+Gli obiettivi principali di questa fase sono quindi:
+
+- Proseguire con la stesura delle #glossario("Norme di Progetto"), con relative sezioni nei #glossario("Processi Organizzativi") e #glossario("Processi di Supporto").
+- Concentrarsi sull'#glossario("Analisi dei Requisiti"), assegnando tale compito ai membri del team che si sono concentrati sul test delle varie tecnologie in modo da definire l'apposita sezione e proseguire con gli #glossario("UC").
+- Aggiornare il glossario con i termini significativi individuati e raccolti durante il periodo, con particolare attenzione alla #glossario("issue") non terminata nel periodo precedente
+
+*Possibili rischi*:\
+I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
+
+*Tabella preventivo*:\ // to do
+#align(center)[
+  #table(
+    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+    inset: 6pt,
+    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+    [Gabriele\ Checchinato],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+    [Leonardo\ Lucato],[0],[0],[0],[0],[0],[6],[€ #(6*costo_ora.ana)],
+    [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
+    [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+    [Giovanni\ Salvò],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
+    [Gioele\ Scandaletti],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
+    [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+    [*Costo per ruolo*],[€ #(6*costo_ora.res)],[€ #(10*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ - ],[€ #(2*costo_ora.progr)],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(180+200+105+30+250)*]],
+  )
+]
+*Distribuzione preventivata delle ore*:\ 
+
+#{
+  let plot = plot(data: (
+    (17, "Responsabile - " + perc(17,100)),
+    (29, "Amministratore - " + perc(29,100)),
+    (20, "Verificatore - " + perc(20,100)),
+    (0, "Progettista - " + perc(0,100)),
+    (6, "Programmatore - " + perc(6,100)),
+    (29, "Analista - " + perc(29,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito
+*Obiettivi non raggiunti*:\
+Di seguito sono elencate le #glossario("task") non completate
+
+- *Aggiornamento del glossario*: l'attività, creata ancora durante il primo periodo, non è nuovamente stata presa in carico.
+
+- *Fix aggiunta termini e definizioni al glossario*: attività del periodo in corso associata al glossario. Prevede l'aggiunta di eventuali nuovi termini contrassegnati al glossario del team.
+
+*Problematiche non attese*:\
+Durante il terzo periodo appena concluso si è verificato il seguente rischio che non era stato preventivato:
+
+- #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue"), già etichettata come critica visto il non completamento nel primo periodo.
+
+*Mitigazione rischi verificati*:\
+Durante il periodo oltre alla problematica non attesa, non si sono verificati rischi che erano stati preventivati.
+
+*Possibili cambiamenti*:\
+La non presa in carico e termine dell'#glossario("issue") riferita al glossario e facente in origina parte del primo Periodo indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, nel particolare: 
+
+- *Gestione delle priorità a livello di issue*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del periodo devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del responsabile del progetto verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del task. Per questo tipo di attività si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+
+*Tabella esito effettivo*:\ 
+#align(center)[
+  #table(
+    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+    inset: 6pt,
+    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+    [Gabriele\ Checchinato],[0.75(#text(red)[+0.25])],[5],[0],[0],[0],[0],[€ #(0.75*costo_ora.res+5*costo_ora.amm) (#text(red)[+€ #(0.25*costo_ora.res)])],
+    [Leonardo\ Lucato],[0],[0],[0],[0],[0],[8(#text(red)[+2])],[€ #(8*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],
+    [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
+    [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+    [Giovanni\ Salvò],[0],[0],[3(#text(green)[-0.5])],[0],[0],[0],[€ #(3*costo_ora.ver) (#text(green)[-€ #(0.55*costo_ora.ver)])],
+    [Gioele\ Scandaletti],[0],[0],[4.5 (#text(red)[+1])],[0],[0],[0],[€ #(4.5*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+    [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+    [*Costo\ per ruolo*],[€ #(6.25*costo_ora.res) (#text(red)[+€ #(0.25*costo_ora.res)])],[€ #(10*costo_ora.amm)],[€ #(7.5*costo_ora.ver) (#text(red)[+€ #(0.5*costo_ora.ver)])],[€ -],[€ #(2*costo_ora.progr) ],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(187.5+200+112.5+0+30+300)*] (#text(red)[*+€ #(15+50)*])],
+  )
+]
+
+#pagebreak();
+
+*Distribuzione effettiva delle ore*:\
+
+#{
+  let plot = plot(data: (
+    (16.56, "Responsabile - " + perc(6.25,37.75)),
+    (26.49, "Amministratore - " + perc(10,37.75)),
+    (19.87, "Verificatore - " + perc(7.5,37.75)),
+    (0, "Progettista - " + perc(0,37.75)),
+    (5.3, "Programmatore - " + perc(2,37.75)),
+    (31.79, "Analista - " + perc(12,37.75)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+}
+
+*Progresso delle attività*:\
+#{
+  let plot = plot(data: (
+    (7.41, "Non fatto - " + perc(2,27)),
+    (92.59, "Fatto - " + perc(25,27)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 3", display_style: "hor-legend-chart",colors: (red, green))
 }
 
   
