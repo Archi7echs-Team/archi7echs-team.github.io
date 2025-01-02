@@ -4,12 +4,12 @@
   title: "Verbale incontro 23/12/2024",
   subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 6",
   author: "Francesco Pozzobon",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "31-12-2024",  "Prima stesura documento", p.pozzobon, "",
+    "0.1.0", "31-12-2024",  "Prima stesura documento", p.pozzobon, p.pesenato,
   )
 )
 
