@@ -68,7 +68,7 @@ Durante la riunione si è discusso dell'imminente periodo di vacanze natalizie e
 
 == Definizione dei ruoli e passaggio di consegne
 
-Essendo la fine del terzo periodo, si procede alla definizione dei ruoli per il quarto periodo. Ecco i ruoli assegnati:
+Essendo la fine del terzo periodo, si procede alla definizione dei ruoli per il quarto periodo. La nuova assegnazione dei ruoli è la seguente:
 
 #table(
   columns: (1fr, 1fr),
@@ -102,6 +102,11 @@ Il giorno della prossima riunione non è stato stabilito, considerando le vacanz
   (114,), (p.checchinato), [Redazione verbale interno 2024-12-23],
   (115,), (p.pozzobon), [Redazione verbale esterno 2024-12-23],
   (116,), (p.pozzobon), [Piano di progetto: stesura terzo periodo],
+  (118,), (p.checchinato), [AdR: inizio UML UC],
+  (119,), (p.lucato), [NdP - documentazione da consegnare ],
+  (120,), (p.lucato), [AdR - sezione diagrammi casi d'uso e diagrammi delle classi],
+  (121,), (p.lucato), [AdR - sistemazione UC],
+  (122,), (p.valdagno), [NdP - Standard di qualità],
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'OdG._
