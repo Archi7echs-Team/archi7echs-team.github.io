@@ -4,11 +4,11 @@
   title: "Verbale incontro 23/12/2024",
   subtitle: "Documento interno - verbale nr. 13",
   author: p.checchinato,
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "01-01-2025",  "Prima stesura documento", p.checchinato, "",
+    "0.1.0", "01-01-2025",  "Prima stesura documento", p.checchinato, p.lucato,
   )
 )
 
