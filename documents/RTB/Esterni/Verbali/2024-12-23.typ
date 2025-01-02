@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "31-12-2024",  "Prima stesura documento", p.pozzobon, "",
+    "0.1.0", "02-12-2024",  "Prima stesura documento", p.pozzobon, "",
   )
 )
 
@@ -74,7 +74,9 @@ A seguito di questa riunione, puramente a scopo #glossario("SAL"), non è stata 
 */
 
 = TODO
-Da questa riunione non è scaturita la creazione di issue collegate direttamente a decisioni o consigli del proponente.
+#todo((
+  (121,), (p.lucato), [AdR - sistemazione UC e inserimento tabelle riferimenti]
+))
 
 
 #v(3em)
