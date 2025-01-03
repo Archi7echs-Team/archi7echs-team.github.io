@@ -8,9 +8,9 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
-            "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno),
+            "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
             "0.1.1", "10-12-2024",  "Aggiunti termini e definizioni", p.salvo, p.scandaletti,
-            "0.1.0", "19-11-2024",  "Prima stesura documento", p.pesenato, "",
+            "0.1.0", "19-11-2024",  "Prima stesura documento", p.pesenato, p.pozzobon,
           )
         )
         
