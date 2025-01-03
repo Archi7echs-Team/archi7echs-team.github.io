@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, "",
+    "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, p.pesenato,
     "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, (p.salvo,p.valdagno),
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.9.0", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
@@ -229,8 +229,8 @@ Rappresenta un legame "parte di" tra due classi. In questa relazione, una classe
 \ \
 #figure(
   image("/img/ndp/aggregazioneclassi.png", width: 80%),
-  caption: [Identificare la relazione aggragazione tra classi],
-) <aggragazioneclasse>
+  caption: [Identificare la relazione aggregazione tra classi],
+) <aggregazioneclasse>
 Quindi in questo esempio B è parte di A.
 
 ==== Composizione
