@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.5.0", "02-01-2025", "Stesura terzo periodo", p.pozzobon,"",
+    "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, p.lucato,
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
     "0.4.0", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, (p.salvo,p.pozzobon),
     "0.3.1", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
@@ -578,7 +578,7 @@ Cambiamenti operativi e gestionali individuati:
   )
 ]
 *Obiettivi*:\
-Durante il terzo periodo l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il periodo scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, prof. #p.cardin.
+Durante il terzo periodo l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il periodo scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
 
 Gli obiettivi principali di questa fase sono quindi:
 
