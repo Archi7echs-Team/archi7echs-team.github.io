@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, p.pesenato,
     "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
     "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
@@ -75,12 +76,11 @@ Il prodotto deve essere progettato per poter rappresentare  dati, in un modello 
 - *Opacizzazione o nascondimento delle barre*:  il sistema deve offrire la possibilità di opacizzare o nascondere le barre con valori superiori o inferiori rispetto a:
   - una barra selezionata;
   - il valore medio globale rappresentato dal piano visualizzato.
- Inoltre, deve permettere di lasciare visibili o non opacizzati solo i valori di minimo o di massimo delle y, ossia i punti estremi. //CHIEDERE ALL'AZIENDA LE COORDINATE X,Y,Z
+ Inoltre, deve permettere di lasciare visibili o non opacizzati solo i valori di minimo o di massimo delle y, ossia i punti estremi.
 
 - *Visualizzazione dei valori corrispondenti a una barra*: il sistema deve consentire di visualizzare i valori corrispondenti a una barra quando questa è soggetta a un evento "#glossario("hover")" del mouse.
 
-- *[Opzionale] Visualizzazione del valore medio del singolo elemento*: il sistema deve consentire di visualizzare un piano parallelo alla base, che rappresenta il valore medio di un singolo elemento di un asse (X o Z). //CHIEDERE ALL'AZIENDA LE COORDINATE X,Y,Z
-
+- *[Opzionale] Visualizzazione del valore medio del singolo elemento*: il sistema deve consentire di visualizzare un piano parallelo alla base, che rappresenta il valore medio di un singolo elemento di un asse (X o Z). 
 == Caratteristiche utente
 L'utilizzatore di #glossario("3Dataviz") appartiene a due distinte categorie di utenti:
 - Esperto $arrow.r$ utente specializzato nell'analisi e interpretazione dei dati che, per una migliore visualizzazione e una migliore comprensione, sceglie l'applicativo per visualizzare grafici 3D di un #glossario("set di dati"). Padroneggia buone o ottime conoscenze sull'uso del dispositivo con cui utilizza la #glossario("Web App"). La maggior parte degli utenti appartenenti a questa categoria conosce e ha già utilizzato altri applicativi per la visualizzazione grafica di dati.
@@ -124,7 +124,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 //[Inserire Diagramma o qua]
 
 == Elenco casi d'uso
-//Può andar bene una cosa del genere?
+
 === UC 1 - Visualizzazione interattiva dei dati <uc1>
 - *Descrizione: * L'utente può visualizzare i dati in un grafico #glossario("3D") interattivo con barre verticali. 
 - *Attore: * Utente finale
@@ -165,8 +165,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su un bottone per caricare il nuovo dato.
     + L'applicazione salva il nuovo dato.
 - *Scenari Alternativi:* 
-  - Visualizzazione dell'errore invalidArguments (@uc11)
-  - Visualizzazione dell'errore emptyField (@uc15)
+  - Visualizzazione dell'errore invalidArguments (@uc21)
+  - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.1 - L'utente inserisce il campo X <uc2.1.1>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse x.
@@ -196,33 +196,19 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo z
 
 === UC 2.2 - Caricamento automatico dati tramite #glossario("API") <uc2.2>
-- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") come metodo di caricamento.
+- *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") (da quelle proposte in una lista) come metodo di caricamento .
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite #glossario("API").
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente accede alla modalità "Inserimento dati".
-    + L'utente inserisce le #glossario("API") da cui prendere i dati.
-    + L'utente, se necessario, inserisce un #glossario("API") #glossario("token").
-      - @uc2.2.1
+    + L'utente seleziona un'#glossario("API") (da quelle proposte in una lista) da cui prendere i dati.
     + L'utente clicca su un bottone per caricare i nuovi dati.
     + L'applicazione salva i nuovi dati.
 - *Scenari alternativi:* 
-  - Visualizzazione errore tooMuchData (@uc12);  
-  - Visualizzazione errore apiTimeOut (@uc14);
-  - Visualizzazione errore endPointNotFound (@uc16);
-  - Visualizzazione errore unauthorized (@uc17).
-
-==== UC 2.2.1 - L'utente inserisce il campo #glossario("API") #glossario("token") <uc2.2.1>
-- *Descrizione: * L'utente desidera caricare i dati tramite #glossario("API") che necessità però di un #glossario("API") #glossario("token"), fornito dall'utente.
-- *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
-- *Postcondizioni: * L'utente ha inserito il valore dell'#glossario("API") #glossario("token") di un nuovo dato.
-- *Scenario Principale: *
-    + L'utente entra nella sezione "Inserimento dati".
-    + L'utente inserisce il link all'#glossario("API").
-    + L'utente inserisce l'#glossario("API") #glossario("token").
-
+  - L'#glossario("API") è un servizio esterno e in quanto tale potrebbe non rispondere in un tempo limite oppure potrebbe cambiare inaspettatamente la risposta
+    + Visualizzazione errore tooMuchData (@uc22);  
+    + Visualizzazione errore apiTimeOut (@uc24);
 
 === UC 2.3 - Caricamento automatico dati tramite connessione a database SQL <uc2.3>
 - *Descrizione: * L'utente decide di inserire automaticamente i dati tramite database come metodo di caricamento.
@@ -245,8 +231,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente clicca su un bottone per caricare i nuovi dati.
     + L'applicazione salva i nuovi dati.
 - *Scenari Alternativi:* 
-  - Errore tooMuchData (@uc12);  
-  - Errore invalidCsv (@uc13).
+  - L'utente potrebbe inserire un file .csv in cui la formattazione interna è errata, oppure contiene troppi dati, superando la soglia massima consentita
+    + Errore tooMuchData (@uc22);  
+    + Errore invalidCsv (@uc23).
 
 === UC 3 Strumenti visualizzazione dati - Rotazione <uc3>
 - *Descrizione: * L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione
@@ -402,7 +389,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente applica il filtro.
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenari Alternativi: *
-    - Visualizzazione dell'errore invalidArguments (@uc11).
+    - Visualizzazione dell'errore invalidArguments (@uc21).
 
 === UC 14 - Visualizzazione della media in base al valore di X<uc14>
 
@@ -487,7 +474,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente inserisce dei dati all'interno del campo d'inserimento.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 
-=== UC 22 - Visualizzazione Errore tooMuchData <uc22>
+=== UC 22 - Visualizzazione errore tooMuchData <uc22>
 
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
@@ -564,37 +551,180 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.3.3], [@uc2.1.2 \ #glossario("UC")2.1.2], [L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y], [3 - Opzionale],
   [F.3.4], [@uc2.1.3 \ #glossario("UC")2.1.3], [L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z], [3 - Opzionale],
   [F.1.3], [@uc2.2 \ #glossario("UC")2.2], [L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") come metodo di caricamento], [1 - Obbligatorio],
-  [F.1.4], [@uc2.2.1 \ #glossario("UC")2.2.1], [L'utente desidera caricare i dati tramite #glossario("API") che necessita però di un #glossario("API") #glossario("token"), fornito dall'utente], [1 - Obbligatorio],
-  [F.1.5], [@uc2.3 \ #glossario("UC")2.3], [L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file #glossario("SQL") come metodo di caricamento], [1 - Obbligatorio],
-  [F.1.6], [@uc2.4 \ #glossario("UC")2.4], [L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento], [1 - Obbligatorio],
-  [F.1.7], [@uc3 \ #glossario("UC")3], [L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione], [1 - Obbligatorio],
-  [F.1.8], [@uc4 \ #glossario("UC")4], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente], [1 - Obbligatorio],
-  [F.1.9], [@uc5 \ #glossario("UC")5], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente], [1 - Obbligatorio],
-  [F.1.10], [@uc6 \ #glossario("UC")6], [L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione], [1 - Obbligatorio],
-  [F.1.11], [@uc7 \ #glossario("UC")7], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
-  [F.1.12], [@uc8 \ #glossario("UC")8], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
-  [F.1.13], [@uc9 \ #glossario("UC")9], [L'utente preme sopra ad una barra, accede ad ulteriori funzionalità scegliendo tra quelle proposte.], [1 - Obbligatorio],
-  [F.1.14], [@uc9.1 \ #glossario("UC")9.1], [L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra], [1 - Obbligatorio],
-  [F.1.15], [@uc9.2 \ #glossario("UC")9.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
-  [F.1.16], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
-  [F.1.17], [@uc9.4 \ #glossario("UC")9.4], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
-  [F.1.18], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
-  [F.1.19], [@uc10 \ #glossario("UC")10], [L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
-  [F.1.20], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
-  [F.1.21], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
-  [F.1.22], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
-  [F.1.23], [@uc14 \ #glossario("UC")14], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
-  [F.1.24], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
-  [F.1.25], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare all'interno del grafico gli N dati con valore più alto], [1 - Obbligatorio],
-  [F.1.26], [@uc17 \ #glossario("UC")17], [L'utente può visualizzare all'interno del grafico gli N dati con valore più basso], [1 - Obbligatorio],
-  [F.1.27], [@uc18 \ #glossario("UC")18], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
+  [F.1.4], [@uc2.3 \ #glossario("UC")2.3], [L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file #glossario("SQL") come metodo di caricamento], [1 - Obbligatorio],
+  [F.1.5], [@uc2.4 \ #glossario("UC")2.4], [L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento], [1 - Obbligatorio],
+  [F.1.6], [@uc3 \ #glossario("UC")3], [L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione], [1 - Obbligatorio],
+  [F.1.7], [@uc4 \ #glossario("UC")4], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente], [1 - Obbligatorio],
+  [F.1.8], [@uc5 \ #glossario("UC")5], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente], [1 - Obbligatorio],
+  [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione], [1 - Obbligatorio],
+  [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
+  [F.1.11], [@uc8 \ #glossario("UC")8], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
+  [F.1.12], [@uc9 \ #glossario("UC")9], [L'utente preme sopra ad una barra, accede ad ulteriori funzionalità scegliendo tra quelle proposte.], [1 - Obbligatorio],
+  [F.1.13], [@uc9.1 \ #glossario("UC")9.1], [L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra], [1 - Obbligatorio],
+  [F.1.14], [@uc9.2 \ #glossario("UC")9.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
+  [F.1.15], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
+  [F.1.16], [@uc9.4 \ #glossario("UC")9.4], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
+  [F.1.17], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
+  [F.1.18], [@uc10 \ #glossario("UC")10], [L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
+  [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
+  [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
+  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
+  [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
+  [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
+  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare all'interno del grafico gli N dati con valore più alto], [1 - Obbligatorio],
+  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può visualizzare all'interno del grafico gli N dati con valore più basso], [1 - Obbligatorio],
+  [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
   [F.2.1], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
   [F.2.2], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
-  [F.1.28], [@uc21 \ #glossario("UC")21], [L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
-  [F.1.29], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
-  [F.1.30], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta], [1 - Obbligatorio],
-  [F.1.31], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.32], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto], [1 - Obbligatorio],
+  [F.1.27], [@uc21 \ #glossario("UC")21], [L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
+  [F.1.28], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
+  [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta], [1 - Obbligatorio],
+  [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
+  [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
+]
+
+#pb()
+
+=== Requisiti qualitativi
+#align(center)[
+  #table(
+  columns: (auto, auto, auto),
+  align: (col, row) => (center, center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice*], [*Descrizione*], [*Classificazione*]),
+    [Q.1.1],[Devono essere consegnati i diagrammi UML relativi agli use cases del progetto],[1 - Obbligatorio],
+    [Q.1.2],[Deve essere consegnata la lista dei bug che sono stati risolti durante le fasi di sviluppo],[1 - Obbligatorio],
+    [Q.1.3],[Deve essere consegnato lo schema del design relativo alla base di dati (se utilizzata) o alle API richiamate (se utilizzate) ],[1 - Obbligatorio],
+    [Q.1.4],[Deve essere consegnato tutto il codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice (Github) ],[1 - Obbligatorio],
+    [Q.1.5],[Deve essere consegnata la documentazione relativa ai casi di test gestiti e le relative reportistiche ],[1 - Obbligatorio],
+    [Q.1.6],[Per l'intero periodo necessario per portare a termine il progetto è doveroso seguire le regole imposte nel documento _Norme di Progetto_],[1 - Obbligatorio],
+  )
+    <tab:reqQualitativi>
+]
+
+=== Requisiti di vincolo
+#align(center)[
+  #table(
+  columns: (auto, auto, auto),
+  align: (col, row) => (center, center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice*], [*Descrizione*], [*Classificazione*]),
+  [V.1.1], [L'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000 dati ], [1 - Obbligatorio],
+  )
+    <tab:reqVincolo>
+]
+#pb()
+
+
+== Tracciamento dei requisiti
+=== Codice - Fonte
+Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovvero descrive la "provenienza" di un caso d'uso che può essere dalla descrizione del capitolato, da una decisione interna al gruppo, da una decisione approvata dall'azienda.
+#align(center)[
+  #table(
+  columns: (auto, auto),
+  align: (col, row) => (center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice*], [*Fonte*],),
+  [F.1.1], [Capitolato, UC1],
+  [F.1.2], [Capitolato, UC2],
+  [F.3.1], [Capitolato, UC2.1 ],
+  [F.3.2], [Decisione interna, UC2.1.1],
+  [F.3.3], [Decisione interna, UC2.1.2],
+  [F.3.4], [Decisione interna, UC2.1.3],
+  [F.1.3], [Capitolato, UC2.2],
+  [F.1.4], [Capitolato, UC2.3],
+  [F.1.5], [Decisione interna, UC2.4],
+  [F.1.6], [Capitolato, UC3],
+  [F.1.7], [Capitolato, UC4],
+  [F.1.8], [Capitolato, UC5],
+  [F.1.9], [Capitolato, UC6],
+  [F.1.10], [Capitolato, UC7],
+  [F.1.11], [Capitolato, UC8],
+  [F.1.12], [Decisione interna, UC9],
+  [F.1.13], [Decisione interna, UC9.1],
+  [F.1.14], [Capitolato, UC9.2],
+  [F.1.15], [Capitolato, UC9.3],
+  [F.1.16], [Capitolato, UC9.4],
+  [F.1.17], [Decisione interna, UC9.5],
+  [F.1.18], [Capitolato, UC10],
+  [F.1.19], [Capitolato, UC11],
+  [F.1.20], [Capitolato, UC12],
+  [F.1.21], [Decisione interna, UC13],
+  [F.1.22], [Capitolato, UC14],
+  [F.1.23], [Capitolato, UC15],
+  [F.1.24], [Capitolato, UC16],
+  [F.1.25], [Capitolato, UC17],
+  [F.1.26], [Decisione interna, UC18],
+  [F.1.27], [Decisione interna, UC19, UC2.1],
+  [F.2.1], [Decisione interna, UC20, UC2.1],
+  [F.2.2], [Decisione interna, UC21],
+  [F.1.28], [Decisione interna, UC22, UC2.2, UC2.4],
+  [F.1.29], [Decisione interna, UC23, UC2.4],
+  [F.1.30], [Decisione interna, UC24, UC2.2],
+  [F.1.31], [Decisione interna, UC25, UC2.1],
+  [Q.1.1], [Capitolato],
+  [Q.1.2], [Capitolato],
+  [Q.1.3], [Capitolato],
+  [Q.1.4], [Capitolato],
+  [Q.1.5], [Capitolato],
+  [Q.1.6], [Capitolato],
+  [V.1.1], [Decisione interna/esterna],
+  )
+    <tab:codicefonte>
+]
+
+
+=== Fonte - Codice
+Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da quella fonte. La tabella "Codice - Fonte" insieme a questa tabella "Fonte - Codice" permette di ricercare i casi d'uso in maniera più precisa e veloce, mantenendo un ordine che garantisce una lettura del documento ottimale
+#align(center)[
+  #table(
+  columns: (auto, auto),
+  align: (col, row) => (center, center,).at(col),
+  inset: 6pt,
+  table.header([*Fonte*], [*Codice*],),
+  [Capitolato], [F.1.1,\ F.1.2,\ F.3.1,\ F.1.3,\ F.1.4,\ F.1.6,\ F.1.7,\ F.1.8,\ F.1.9,\ F.1.10,\ F.1.11,\ F.1.14,\ F.1.15,\ F.1.16,\ F.1.18,\ F.1.19,\ F.1.20,\ F.1.22,\ F.1.23,\ F.1.24,\ F.1.25,\ Q.1.1,\ Q.1.2,\ Q.1.3,\ Q.1.4,\ Q.1.5,\ Q.1.6 ],
+  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.12,\ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26,\ F.2.1,\ F.2.2,\ F.1.27,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31,\ V.1.1],
+  [UC1],[F.1.1],
+  [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5 \ F.1.27, F.1.31, F.1.28, F.1.30, F.1.29 ],
+  [UC3],[F.1.6],
+  [UC4],[F.1.7],
+  [UC5],[F.1.8],
+  [UC6],[F.1.9],
+  [UC7],[F.1.10],
+  [UC8],[F.1.11],
+  [UC9\ e sotto requisiti],[F.1.12, F.1.13, F.1.14, F.1.15, F.1.16, F.1.17],
+  [UC10],[F.1.18],
+  [UC11],[F.1.19],
+  [UC12],[F.1.20],
+  [UC13],[F.1.21],
+  [UC14],[F.1.22],
+  [UC15],[F.1.23],
+  [UC16],[F.1.24],
+  [UC17],[F.1.25],
+  [UC18],[F.1.26],
+  [UC19],[F.2.1],
+  [UC20],[F.2.2],
+  [UC21],[F.1.27],
+  [UC22],[F.1.28],
+  [UC23],[F.1.29],
+  [UC24],[F.1.30],
+  [UC25],[F.1.31],
+  )
+    <tab:fontecodice>
+]
+
+=== Riepilogo tabelle
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
+  [Funzionale],[31],[2],[3],
+  [Qualità],[6],[0],[0],
+  [Vincolo],[1],[0],[0],
+  )
+    <tab:riepilogo>
 ]
