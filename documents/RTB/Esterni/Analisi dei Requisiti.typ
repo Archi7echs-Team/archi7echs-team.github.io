@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, "",
+    "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, p.pesenato,
     "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
     "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
@@ -124,7 +124,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 //[Inserire Diagramma o qua]
 
 == Elenco casi d'uso
-//Può andar bene una cosa del genere?
+
 === UC 1 - Visualizzazione interattiva dei dati <uc1>
 - *Descrizione: * L'utente può visualizzare i dati in un grafico #glossario("3D") interattivo con barre verticali. 
 - *Attore: * Utente finale
@@ -597,7 +597,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
     [Q.1.1],[Devono essere consegnati i diagrammi UML relativi agli use cases del progetto],[1 - Obbligatorio],
     [Q.1.2],[Deve essere consegnata la lista dei bug che sono stati risolti durante le fasi di sviluppo],[1 - Obbligatorio],
     [Q.1.3],[Deve essere consegnato lo schema del design relativo alla base di dati (se utilizzata) o alle API richiamate (se utilizzate) ],[1 - Obbligatorio],
-    [Q.1.4],[Deve essere consegnato tutto il codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice (Gitub) ],[1 - Obbligatorio],
+    [Q.1.4],[Deve essere consegnato tutto il codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice (Github) ],[1 - Obbligatorio],
     [Q.1.5],[Deve essere consegnata la documentazione relativa ai casi di test gestiti e le relative reportistiche ],[1 - Obbligatorio],
     [Q.1.6],[Per l'intero periodo necessario per portare a termine il progetto è doveroso seguire le regole imposte nel documento _Norme di Progetto_],[1 - Obbligatorio],
   )
@@ -670,7 +670,7 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [Q.1.4], [Capitolato],
   [Q.1.5], [Capitolato],
   [Q.1.6], [Capitolato],
-  [V.1.6], [Decisione interna/esterna],
+  [V.1.1], [Decisione interna/esterna],
   )
     <tab:codicefonte>
 ]
@@ -685,7 +685,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   inset: 6pt,
   table.header([*Fonte*], [*Codice*],),
   [Capitolato], [F.1.1,\ F.1.2,\ F.3.1,\ F.1.3,\ F.1.4,\ F.1.6,\ F.1.7,\ F.1.8,\ F.1.9,\ F.1.10,\ F.1.11,\ F.1.14,\ F.1.15,\ F.1.16,\ F.1.18,\ F.1.19,\ F.1.20,\ F.1.22,\ F.1.23,\ F.1.24,\ F.1.25,\ Q.1.1,\ Q.1.2,\ Q.1.3,\ Q.1.4,\ Q.1.5,\ Q.1.6 ],
-  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.12,\ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26,\ F.2.1,\ F.2.2,\ F.1.27,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31,\ V.1.6],
+  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.12,\ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26,\ F.2.1,\ F.2.2,\ F.1.27,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31,\ V.1.1],
   [UC1],[F.1.1],
   [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5 \ F.1.27, F.1.31, F.1.28, F.1.30, F.1.29 ],
   [UC3],[F.1.6],
