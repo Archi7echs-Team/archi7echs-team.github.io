@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.13.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, (p.lucato, p.pozzobon),
     "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, (p.pesenato, p.pozzobon),
     "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, (p.salvo,p.valdagno),
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
@@ -688,3 +689,66 @@ Il responsabile di progetto, al verificarsi di una situazione di rischio, è ten
 Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
 Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
 
+
+#pb()
+
+= Standard di qualità
+Per una corretta gestione del #glossario("ciclo di vita") del progetto e per garantire la qualità dei processi e del prodotto software verranno adottati i seguenti standard internazionali sviluppati dall'#glossario("ISO"):
+ - *#glossario("ISO/IEC 9126")*: lo standard per la valutazione della qualità del prodotto software. Questo modello consente di analizzare e valutare il software in base a caratteristiche fondamentali, quali funzionalità, affidabilità, usabilità, efficienza, manutenibilità e portabilità. Queste caratteristiche sono misurabili attraverso delle metriche. La scelta di questo standard riflette l’obiettivo di fornire un prodotto che soddisfi pienamente le specifiche richieste del progetto. \
+ - *#glossario("ISO/IEC 12207:1995")*: lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto. \
+ Questa combinazione di standard consente di bilanciare l'attenzione sulla qualità del prodotto con un approccio metodico alla gestione dei processi, assicurando un risultato finale che sia funzionale, efficiente e conforme alle migliore pratiche internazionali. 
+
+ == Modello di qualità secondo Standard ISO/IEC 9126
+ Di seguito vengono elencate e descritte le categorie fondamentali che classificano il modello. Ciascuna di queste è caratterizzata a sua volta da delle sotto-caratteristiche. Una delle sotto-caratteristiche comuni a tutte le categorie è la *conformità*, che si riferisce alla capacità del software di rispettare standard tecnici, norme e regolamenti relativi alla specifica caratteristica.
+ 
+ === Funzionalità
+ È la capacità del software di fornire funzioni che soddisfino i requisiti specificati o impliciti, con sotto-caratteristiche come:
+ - *Adeguatezza*: è la capacità del software di fornire un appropriato insieme di funzioni per soddisfare i requisiti specifici dell'utente.
+ - *Accuratezza*: è la capacità del software di fornire i risultati corretti in modo tale che corrispondano a quanto richiesto.
+ - *Interoperabilità*: è la capacità del software di interagire ed operare con altri sistemi.
+ - *Sicurezza*: è la capacità del software di proteggere informazioni e dati da accessi non autorizzati.
+
+ === Affidabilità
+ Misura la capacità del software di mantenere un livello di prestazioni specificato in determinate condizioni, anche in presenza di errori, per un periodo di tempo stabilito. Le sue sotto-caratteristiche sono:
+ - *Maturità*: è la capacità del software di gestire in modo stabile le operazioni, evitando errori, malfunzionamenti e risultati non corretti.
+ - *Tolleranza agli errori*: è la capacità di mantenere prestazioni specificate anche in caso di errori.
+ - *Recuperabilità*: è la capacità del software di ripristinare un livello appropriato di prestazioni in caso di errori.
+
+ === Usabilità
+È la capacità del software di essere compreso, appreso e utilizzato dall'utente in condizioni specifiche. Le sotto-caratteristiche dell'usabilità sono:
+ - *Comprensibilità*: è la facilità con la quale l'utente può capire le funzionalità disponibili e come queste possono essere utilizzate per raggiungere i propri obiettivi. Include la chiarezza dell'interfaccia utente e delle informazioni presentate.
+ - *Apprendibilità*: è la facilità con la quale gli utenti possono apprendere come utilizzare il sistema.
+ - *Operabilità*: è la capacità del software di consentire agli utenti di operare e controllare il sistema senza difficoltà.
+ - *Attrattiva*: è la capacità del software di essere gradevole  per l'utente che ne fa uso, attraverso elementi di piacevolezza come aspetti grafici o interattivi.
+
+ === Efficienza 
+ È la capacità del software di fornire prestazioni adeguate rispetto alle risorse utilizzate, in condizioni specifiche. Le sotto-caratteristiche dell'efficienza sono:
+ - *Comportamento temporale*: è la capacità di fornire adeguati tempi di risposta ed elaborazione durante l'esecuzione. 
+ - *Utilizzo delle risorse*: è la capacità del software di utilizzare la quantità appropriata di risorse del sistema.
+ 
+ === Manutenibilità 
+ È la facilità con cui un sistema software può essere modificato per correggere difetti e migliorare le prestazioni. Le sue sotto-caratteristiche sono:
+ - *Analizzabilità*: è la facilità con la quale è possibile analizzare il codice per localizzare un errore o un difetto nello stesso.
+ - *Modificabilità*: è la facilità con cui il software può essere modificato per aggiungere nuove funzionalità o per cambiare quelle esistenti.
+ - *Stabilità*: è la capacità del software di evitare nuovi errori o difetti durante o dopo una modifica.
+ - *Testabilità*: è la facilità con cui il software può essere testato per verificare la correttezza delle modifiche. È fondamentale per garantire che non vengano introdotti difetti e che il sistema funzioni come previsto.
+ 
+ === Portabilità 
+ È la facilità con cui un software può essere trasferito da un ambiente a un altro. Le sue sotto-caratteristiche sono:
+ - *Adattabilità*: è la capacità del software di essere modificato per adattarsi a nuovi ambienti senza necessitare di grandi modifiche.
+ - *Installabilità*: è la facilità con cui il software può essere installato in un nuovo ambiente.
+ - *Coesistenza*: è la capacità del software di funzionare correttamente insieme ad altri sistemi o software già presenti nello stesso ambiente, senza causare conflitti o interferenze.
+ - *Sostituibilità*: è la facilità con cui il software può sostituire o essere sostituito da altre applicazioni nello stesso ambiente.
+
+ == Suddivisione dei processi secondo Standard ISO/IEC 12207:1995
+ === Processi primari
+ Sono i processi che comprendono le attività direttamente legate allo sviluppo del software, si occupano quindi della realizzazione, distribuzione e manutenzione del prodotto software. \
+ L'obiettivo di questi processi è garantire che il prodotto sia consegnato e mantenuto secondo i requisiti.
+ 
+ === Processi di supporto
+ Sono i processi che includono la gestione dei documenti e dei processi di controllo della qualità, dunque non producono direttamente il software, ma forniscono attività e servizi necessari per garantire la qualità ed efficacia. \
+ L'obiettivo di questi processi è garantire che i processi primari funzionino in modo fluido e il prodotto finale soddisfi gli standard richiesti.
+ 
+ === Processi organizzativi 
+ Sono i processi che coprono gli aspetti manageriali e di gestione delle risorse dunque forniscono la struttura e le pratiche a livello organizzativo per gestire e migliorare i processi primari e di supporto. \
+ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di supportare lo sviluppo, la gestione e il miglioramento continuo dei processi e dei prodotti.
