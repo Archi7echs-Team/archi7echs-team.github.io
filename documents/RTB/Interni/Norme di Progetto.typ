@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, p.pesenato,
+    "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, (p.pesenato, p.pozzobon),
     "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, (p.salvo,p.valdagno),
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.9.0", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
@@ -79,7 +79,7 @@ Documento che serve al team per descrivere come è stata garantita l'efficienza 
 - *Metriche per garantire la qualità del prodotto*: verifica e validazione per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
 
 = Standard UML per la stesura di alcuni documenti
-All'interno dell'analisi dei requisiti è ovviamente di fondamentale importanza la presenza dei casi d'uso, descritti come: 
+All'interno dell'analisi dei requisiti è di fondamentale importanza la presenza dei casi d'uso, descritti come: 
 - *Descrizione*: una breve descrizione del caso d'uso che identifica chiaramente la funzione che il sistema deve svolgere.
 - *Attore*: l’entità che interagisce col sistema, è un’entità esterna su cui non si possono effettuare modifiche.
 - *Precondizioni*: le condizioni che definiscono lo stato iniziale del sistema e degli attori prima che l'interazione inizi.
