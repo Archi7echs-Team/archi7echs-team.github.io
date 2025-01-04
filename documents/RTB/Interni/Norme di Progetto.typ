@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, (p.pesenato, p.pozzobon),
     "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, (p.salvo,p.valdagno),
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.9.0", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
@@ -42,8 +43,256 @@ Il documento è stato redatto con riferimento alla seguente documentazione.
 di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 12/12/2024_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
 
-= Processi Primari
+= Documentazione da consegnare
+In questa sezione vengono indicati i documenti che saranno consegnati all'azienda proponente _Sanmarco Infomatica_ e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 
+== Analisi dei Requisiti
+All'interno vengono definite le funzionalità che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
+- *Casi d'uso*: che rappresentano in modo formale le funzionalità di un sistema, illustrando le attività svolte durante un’interazione
+- *UML casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
+- *Requisiti*: ovvero l'insieme delle funzionalità richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
+
+== Lettera di presentazione
+Quando si deve consegnare quanto fatto (RTB o PB) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in repo. E' dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla revisione di tutta la documentazione/materiale fatta fino a quel momento. All'interno della _Lettera di presentazione_ ci deve essere:
+- *Introduzione*: per indicare lo scopo del documento
+- *Link alla documentazione*: un puntatore che riporta alla repo del gruppo, dov'è possibile reperire tutta la documentazione
+- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia interni che esterni che il gruppo ha redatto durante il periodo, la documentazione "interna" e la documentazione "esterna".
+- *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
+
+== Piano di Progetto
+Documento fondamentale per il gruppo, che permette di eseguire delle buone retrospettive, con un automiglioramento sia per il breve che per il lungo termine. All'interno del documento ci devono essere i seguenti punti:
+- *Analisi dei rischi*: ovviamente è indispensabile per una buona pianificazione di ogni singolo periodo, per avere già delle tecniche e strategie da applicare quando 
+- *Informazioni del progetto*: ovvero tutte quelle informazioni che è bene tenere traccia (e anche modificare in futuro).
+  - Tempi di consegna previsti
+  - Costi previsti
+  - Struttura della pianificazione di un periodo
+  - Struttura di quanto accaduto nell'effettivo durante un periodo
+- *Lista dei periodi*: ovvero l'insieme tra il preventivo e il consuntivo, di quello che è accaduto, quello che è andato quanto pianificato e soprattutto quello che invece non era stato pianificato, fondamentale per l'automiglioramento
+
+== Piano di qualifica
+Documento che serve al team per descrivere come è stata garantita l'efficienza durante il progetto. Questo serve per garantire ai committenti, all'azienda proponente e al team, che ci sono dei processi selezionati solo allo scopo di verificare che quanto fatto sia di ottima qualità, che sono state investite quantità di risorse ottime e che il prodotto rispetti le aspettative richieste. All'interno del documento dunque devono essere presenti:
+- *Test del prodotto*: per garantire che il prodotto soddisfi quanto proposto dai committenti e dall'azienda proponente è necessario eseguire una serie di test che, solo dopo il loro test positivo, è possibile dichiarare un prodotto "soddisfacente"
+  - *Test di sistema*
+  - *Test di integrazione*
+  - *Test di unità*
+- *Metriche per garantire la qualità dei processi*: verifica e validazione dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
+- *Metriche per garantire la qualità del prodotto*: verifica e validazione per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
+
+= Standard UML per la stesura di alcuni documenti
+All'interno dell'analisi dei requisiti è di fondamentale importanza la presenza dei casi d'uso, descritti come: 
+- *Descrizione*: una breve descrizione del caso d'uso che identifica chiaramente la funzione che il sistema deve svolgere.
+- *Attore*: l’entità che interagisce col sistema, è un’entità esterna su cui non si possono effettuare modifiche.
+- *Precondizioni*: le condizioni che definiscono lo stato iniziale del sistema e degli attori prima che l'interazione inizi.
+- *Postcondizioni*: le condizioni che descrivono lo stato finale del sistema.
+- *Scenario principale*: la sequenza di passi standard che descrive l'interazione principale tra l'attore e il sistema per completare un caso d’uso.
+- *Scenari alternativi*: rappresentano dei casi particolari, ovvero quando uno dei passi dello scenario principale non è andato a buon fine ed è dunque necessario specificare come comportarsi in queste circostanze.
+
+Per tutti quei casi d'uso che interagiscono con altri è molto importante inserire il _diagramma del caso d'uso_
+
+== Diagramma casi d'uso
+I diagrammi dei casi d'uso sono una rappresentazione visiva utilizzata nell'ingegneria del software per descrivere le interazioni tra gli utenti (attori) e un sistema o applicazione. Fanno parte del linguaggio di modellazione UML e si concentrano su ciò che il sistema deve fare dal punto di vista dell'utente, piuttosto che sul "come" viene implementato.
+I diagrammi dei casi d'uso, dunque, aiutano a identificare e documentare i requisiti funzionali del sistema, mostrando cosa deve essere fatto per soddisfare le esigenze degli utenti.
+
+- *Chiarezza nella comunicazione*: Forniscono una rappresentazione semplice e intuitiva, comprensibile sia per i team tecnici che per i non tecnici, come stakeholder e clienti.
+- *Base per ulteriori sviluppi*: Servono come punto di partenza per altre attività di progettazione e sviluppo, come la definizione dei diagrammi di sequenza, di attività o di stato.
+- *Riduzione delle ambiguità*: I diagrammi forniscono una visione chiara delle funzionalità del sistema, evitando fraintendimenti e malintesi tra i vari membri del team.
+- *Strumento di comunicazione universale*: Sono una rappresentazione standardizzata e riconosciuta che facilita la collaborazione tra persone con competenze e background diversi.
+
+Per descrivere un caso d'uso con un suo diagramma dunque, il team utilizza uno standard, indicato nelle sezioni successive
+=== Identificare un caso d'uso
+Un caso d'uso è una descrizione di una funzionalità o servizio specifico offerto da un sistema, visto dal punto di vista dell'utente (attore esterno). Rappresenta un obbiettivo che un attore cerca di raggiungere attraverso l'interazione con il sistema. Viene rappresentato tramite un semplice ovale con un nome al suo interno. La sua nomenclatura è del tipo "UC N - Nome caso d'uso"
+\ \
+#figure(
+  image("/img/ndp/casoduso.png", width: 40%),
+  caption: [Identificare un caso d'uso],
+) <casoduso>
+\
+E' possibile inoltre identificare un sottocaso d'uso. La nomenclatura è del tipo "UC N.n - Nome sottocaso d'uso" dove si intende che è è il sottocaso n del caso d'uso N
+#figure(
+  image("/img/ndp/sottocasoduso.png", width: 40%),
+  caption: [Identificare un sottocaso d'uso],
+) <sottocasoduso>
+\
+=== Identificare un attore
+Un attore è un'entità esterna che interagisce con un sistema o applicazione per raggiungere un obiettivo specifico. L’attore rappresenta un "omino stilizzato" che utilizza o interagisce con il sistema modellato, ma non fa parte del sistema stesso.
+\ \
+#figure(
+  image("/img/ndp/attore.png", width: 20%),
+  caption: [Identificare un attore],
+) <attore>
+
+=== Identificare la webapp (sistema)
+Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottocasi) d'uso vengono inseriti. E' rappresentato da un semplice rettangolo con all'interno i casi d'uso e all'esterno l'attore
+\ \
+#figure(
+  image("/img/ndp/sistema.png", width: 40%),
+  caption: [Identificare la webapp (sistema)],
+) <sistema>
+
+=== Identificare le relazioni 
+Le relazioni nei diagrammi dei casi d’uso descrivono come gli elementi del sistema interagiscono tra loro. In particolare, rappresentano le connessioni tra attori e casi d’uso, oppure tra diversi casi d’uso. Servono a chiarire il comportamento del sistema, mostrando le dipendenze, le collaborazioni e le estensioni delle funzionalità. Ci sono vari tipi di relazioni: associazione, inclusione, estensione e generalizzazione.
+
+==== Associazione
+Collega un attore a un caso d’uso, indicando che l’attore interagisce con quel caso. E' rappresentato da una semplice linea
+\ \
+#figure(
+  image("/img/ndp/associazione.png", width: 60%),
+  caption: [Identificare la relazione associazione ],
+) <associazione>
+\ \ \
+==== Inclusione
+Indica che un caso d’uso include un altro caso come parte del suo flusso principale e si utilizza per evitare ripetizioni di azioni comuni a più casi d’uso. Viene rappresentata da una freccia tratteggiata con etichetta «include».
+\ \ 
+#figure(
+  image("/img/ndp/inclusione.png", width: 85%),
+  caption: [Identificare la relazione inclusione],
+) <inclusione>
+
+\
+==== Estensione (e condizioni)
+Indica che un caso d’uso può estendere un altro caso d'uso aggiungendo comportamenti opzionali o condizionali. In sostanza quindi aumenta le funzionalità di uno use case. E' rappresentata da una freccia tratteggiata con etichetta «extend».\
+Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso che estende. 
+\ \ 
+#figure(
+  image("/img/ndp/estensione.png", width: 85%),
+  caption: [Identificare la relazione estensione],
+) <estensione>
+In questo caso dunque, il caso d'uso N ha ora delle funzionalità (condizionate dalla condizione) del caso d'uso M. \
+Per indicare una condizione è sufficiente collegare alla freccia tratteggiata con scritto "extend" un commento con inscritta la condizione
+
+==== Generalizzazione
+Lo scopo principale è quello di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
+
+Esistono quindi due tipi di generalizzazioni: generalizzazione tra attori e generalizzazioni tra use case
+
+#figure(
+  image("/img/ndp/generalizzazioneattori.png", width: 10%),
+  caption: [Identificare la relazione generalizzazione tra attori],
+) <generalizzazioneattori>
+\ \ \
+#figure(
+  image("/img/ndp/generalizzazionecasiduso.png", width: 30%),
+  caption: [Identificare la relazione generalizzazione tra casi d'uso],
+) <generalizzazionecasiduso>
+
+Dunque i figli possono aggiungere delle funzionalità rispetto ai padri oppure modificarne il comportamento
+
+
+== Diagramma delle classi
+Nei futuri documenti, durante le fasi di progettazione, sarà necessario rappresentare graficamente non più solo quello che l'utente desidera poter fare (interazioni con il sistema) ma anche come lo si andrà ad implementare. A questo scopo è quindi fondamentale impostare delle regole UML per la rappresentazione delle classi tramite diagrammi. Le funzionalità principali sono:
+- *Modellare la struttura del sistema*: Forniscono una visione dettagliata di come le entità del sistema (classi) sono definite e come interagiscono tra loro.
+- *Progettazione e Documentazione*: Sono utili durante la fase di progettazione per definire l’architettura del software e durante lo sviluppo per documentare il sistema.
+- *Supporto per il Codice*: Possono essere utilizzati durante la fase di sviluppo per scrivere il codice o per comprendere e modificare un sistema esistente.
+- *Facilitare la Comunicazione*: Rappresentano un linguaggio comune tra sviluppatori, analisti, progettisti e stakeholder.
+
+Come per i diagrammi UML per i casi d'uso, il team utilizzerà degli "standard" per la scrittura dei diagrammi delle classi, descritti nelle sezioni successive
+=== Identificare una classe
+Una classe in UML è rappresentata come un rettangolo diviso in tre sezioni:
+- *Nome della classe*: La prima sezione contiene il nome della classe, scritto in grassetto e centrato (in corsivo se la classe è astratta).
+- *Attributi*: La seconda sezione elenca le proprietà della classe, indicando il tipo di dati e la visibilità (es. privato o pubblico).
+  \ La definizione è: \ _Visibilità nome : tipo [molteplicità] = default {proprietà aggiuntive}_
+- *Metodi*: La terza sezione elenca i metodi o le operazioni che la classe può eseguire, specificandone i parametri e il tipo di ritorno.
+\ 
+#figure(
+  image("/img/ndp/classe.png", width: 60%),
+  caption: [Identificare una classe],
+) <classe>
+Il simbolo che c'è prima di un'attributo è detto _visibilità_ e può essere di 4 tipi:
+- *+* indica che la visibilità è pubblica
+- *-* indica che la visibilità è privata
+- *\#* indica che la visibilità è protetta
+- *∼* indica che la visibilità è di package
+\
+Le _proprietà aggiuntive_ possono essere:
+- _Orderd_ : Per array o vettori
+- _Unordered_: Per gli insiemi
+
+=== Identificare le relazioni
+Come per quanto riguarda gli UML per i casi d'uso, le relazioni tra classi sono molto importanti per indicare come si "relazionano" tra loro.
+
+==== Associazione
+Identifica che un'istanza di una classe è legata a una o più istanze di un'altra classe. Viene identificata da una semplice linea continua orientata.\ 
+#figure(
+  image("/img/ndp/associazioneclassi.png", width: 80%),
+  caption: [Identificare la relazione associazione tra classi],
+) <associazioneclasse>
+
+Alla fine della freccia è possibile indicare la _molteplicità_:\
+- *1* (uno a uno): Un oggetto di una classe è associato a un solo oggetto dell'altra.
+- *0..1* (zero o uno): Un oggetto di una classe può essere associato a nessun oggetto o 1 oggetto dell'altra classe.
+- *0..\** (zero o più): Un oggetto di una classe può essere associato a nessun oggetto o a più oggetti dell'altra classe.
+- *1..\** (uno o più): Almeno un oggetto di una classe è associato a uno o più oggetti dell'altra.
+- *n* (es. 3): Un numero specifico di associazioni.
+
+==== Aggregazione
+Rappresenta un legame "parte di" tra due classi. In questa relazione, una classe (il "tutto") è composta da una o più istanze di un'altra classe (le "parti"), ma le "parti" possono esistere indipendentemente dal "tutto". Dunque un oggetto è composto da altri oggetti, ma le parti possono avere una vita indipendente e non sono distrutte quando il tutto viene eliminato. Viene indicato con una linea e un rombo vuoto vicino alla classe che è parte di un'altra classe
+\ \
+#figure(
+  image("/img/ndp/aggregazioneclassi.png", width: 80%),
+  caption: [Identificare la relazione aggregazione tra classi],
+) <aggregazioneclasse>
+Quindi in questo esempio B è parte di A.
+
+==== Composizione
+E' una relazione simile all'aggregazione, con il sostanziale cambiamento che una classe fa parte di un'altra classe, ma non può esistere indipendentemente, ma solo se fa parte dell'altra classe. Viene rappresentato tramite una linea con un rombo pieno alla fine.
+\ \
+#figure(
+  image("/img/ndp/composizioneclassi.png", width: 75%),
+  caption: [Identificare la relazione composizione tra classi],
+) <composizioneclasse>
+\ 
+Quindi in questo esempio B è parte della classe A ma B non può esistere indipendentemente, ma solo come parte di A
+
+==== Generalizzazione
+_A generalizza B, se ogni oggetto di B è anche un oggetto di A_\
+Il concetto è quello dell'ereditarietà della programmazione ad oggetti dove ci sono classi che ereditano da altre (chiamate classi figlie o sottoclassi). Viene identificata da una freccia con la punta vuota.
+\ \
+#figure(
+  image("/img/ndp/generalizzazioneclassi.png", width: 80%),
+  caption: [Identificare la relazione generalizzazione tra classi],
+) <generalizzazioneclasse>
+Quindi in questo esempio B è figlia di A (superclasse)
+
+==== Dipendenza
+La _definizione_ è: _Si ha dipendenza tra due elementi di un diagramma se la modifica alla definizione del primo (fornitore) può cambiare la definizione del secondo (client)_.
+*E' importante che le dipendenze siano minimizzate (_loose coupling_)*.\
+Indica che una classe utilizza l'altra per svolgere una funzione specifica o per accedere a un servizio. In altre parole, una classe dipende da un'altra quando un cambiamento nella classe dipendente potrebbe influenzare la classe che dipende da essa. E' quindi una relazione "debole" grazie al suo basso grado di accoppiamento. E' identificato da una freccia tratteggiata orientata.
+\ \
+#figure(
+  image("/img/ndp/dipendenzaclassi.png", width: 80%),
+  caption: [Identificare la relazione dipendenza tra classi],
+) <dipendenzaclasse>
+
+Quindi un cambiamento in B _potrebbe_ influenzare un cambiamento in A, ma un cambiamento in A _non influenza_ B.
+
+=== Classi di associazione
+Aggiungono attributi e operazioni alle associazioni. Sono utilizzate per rappresentare informazioni aggiuntive o comportamenti specifici che appartengono a una relazione tra due (o più) classi, ma che non sono strettamente parte di nessuna delle due classi connesse. Per la rappresentazione è una classe (rettangolo) collegata alla linea di associazione tramite una linea tratteggiata. \ \
+
+#figure(
+  image("/img/ndp/classidiassociazione.png", width: 80%),
+  caption: [Identificare le classi di associazione],
+) <classidiassociazione>
+\
+=== Interfacce
+L'interfaccia è una classe priva di implementazione. Una classe _realizza_ un'interfaccia se ne implementa le operazioni. Con UML 2.x viene identificata come un cerchio (_"Ball" notation_)
+#figure(
+  image("/img/ndp/interfacciaclassi.png", width: 80%),
+  caption: [Identificare le classi di associazione],
+) <interfacciaclassi>
+In questo caso la classe A implementa la funzione "funz" dell'interfaccia "Interfaccia" che non ha la sua implementazione
+
+E' possible inoltre dichiarare il fatto che una classe ha la necessità di "collegarsi" con un'interfaccia per poter accedere ad alcune funzionalità. Ad esempio: 
+
+#figure(
+  image("/img/ndp/interfaccerichieste.png", width: 100%),
+  caption: [Identificare le classi di associazione],
+) <interfaccerichieste>
+
+Questo significa che il _singleton_ PagamentoFactory ha bisogno (require) dell'interfaccia _IPagamento_ per "accedere" a _Bonifico_.
+
+#pb()
+
+= Processi Primari
 == Comunicazione con l'azienda proponente
 Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
 Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il periodo secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
@@ -61,6 +310,7 @@ Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei me
   - Foglio appunti riunioni
   - Foglio ore condiviso
 
+#pb()
 = Processi di Supporto
 == Documentazione 
 Questa sezione tratta le norme per la redazione della documentazione del gruppo, in linea con l'organizzazione del team, allineando lo stile e la gestione delle revisioni.
@@ -166,8 +416,9 @@ Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pu
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
 
 ==== Redattore
-+ ```bash git pull``` --- per scaricare le ultime modifiche
+
 + ```bash git checkout sources``` --- per spostarsi sul branch di lavoro
++ ```bash git pull``` --- per scaricare le ultime modifiche
 + ```bash git checkout -B <nome_branch>``` --- per creare un nuovo branch di lavoro, partendo dal branch di lavoro sources
 + Crea dei file o modifica i file esistenti
 + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
@@ -231,6 +482,8 @@ Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggis
 - *#glossario("Telegram")*, canale di comunicazione informale del team
 
 Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in modalità di messaggistica o riunione online scegliendo tra le piattaforme gratuite presenti in rete.
+
+#pb()
 
 = Management
 
@@ -372,7 +625,9 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 - *Elenchi*:
 	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o attività che non sono sequenziali.
 	- *Elenchi numerati*: devono essere utilizzati quando si descrivono attività che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
-  
+
+
+#pb() 
 = Processi organizzativi
 E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei task ed eventuali rischi annessi. 
 
@@ -432,3 +687,4 @@ Il responsabile di progetto, al verificarsi di una situazione di rischio, è ten
 === Retrospettiva
 Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
 Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
+
