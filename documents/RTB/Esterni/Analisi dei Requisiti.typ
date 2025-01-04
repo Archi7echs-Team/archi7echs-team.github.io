@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, p.pesenato,
+    "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, (p.pesenato, p.pozzobon),
     "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
     "0.5.3","19-12-2024","Riscrittura UC5 in UC5.1 e UC5.2",p.lucato, (p.salvo,p.valdagno),
