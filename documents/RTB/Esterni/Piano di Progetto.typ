@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, p.lucato,
+    "0.5.0", "03-01-2025", "Stesura terzo periodo", (p.pozzobon, p.lucato, p.scandaletti),
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
     "0.4.0", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, (p.salvo,p.pozzobon),
     "0.3.1", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
@@ -561,7 +561,7 @@ Cambiamenti operativi e gestionali individuati:
 
 == Periodo 3
 === Pianificazione
-*Periodo*: 11/11/2024 - 25/12/2024\
+*Periodo*: 11/11/2024 - 25/12/20\24\
 *Ruoli*: Viene riportata di seguito la suddivisione del periodo
 #align(center)[
   #table(
@@ -571,9 +571,9 @@ Cambiamenti operativi e gestionali individuati:
     table.header([*Ruolo*], [*Membri*]),
       [Responsabile(Re)],[#p.valdagno],
       [Amministratore(Am)],[#p.checchinato, #p.pozzobon],
-      [Analista(An)],[#p.lucato,#p.pesenato],
+      [Analista(An)],[#p.lucato, #p.pesenato],
       [Programmatore(Prg)],[#p.pesenato],
-      [Verificatore(Ve)],[#p.salvo,#p.scandaletti],
+      [Verificatore(Ve)],[#p.salvo, #p.scandaletti],
       [Progettista(Prt)], [_non presente_]
   )
 ]
