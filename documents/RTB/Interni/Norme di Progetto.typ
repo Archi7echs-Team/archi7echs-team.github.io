@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.12.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, "",
+    "0.12.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, p.lucato,
     "0.11.0", "20-12-2024", "Stesura acronimi e abbreviazioni. Ristrutturazione versionamento ", p.pozzobon, (p.salvo,p.valdagno),
 		"0.10.0", "19-12-2024", "Stesura gestione e analisi ore lavorative", p.checchinato, (p.scandaletti,p.valdagno),
     "0.9.0", "19-12-2024", "Stesura processi organizzativi-gestione dei processi e correzioni", p.pozzobon, (p.scandaletti,p.valdagno),
@@ -471,14 +471,14 @@ Per una corretta gestione del #glossario("ciclo di vita") del progetto e per gar
  - *Utilizzo delle risorse*: è la capacità del software di utilizzare la quantità appropriata di risorse del sistema.
  
  === Manutenibilità 
- È la facilità con cui un sistema software può essere modificato per correggere difetti e migliorare le prestazioni. Le sue sotto-caratterstiche sono:
+ È la facilità con cui un sistema software può essere modificato per correggere difetti e migliorare le prestazioni. Le sue sotto-caratteristiche sono:
  - *Analizzabilità*: è la facilità con la quale è possibile analizzare il codice per localizzare un errore o un difetto nello stesso.
  - *Modificabilità*: è la facilità con cui il software può essere modificato per aggiungere nuove funzionalità o per cambiare quelle esistenti.
  - *Stabilità*: è la capacità del software di evitare nuovi errori o difetti durante o dopo una modifica.
  - *Testabilità*: è la facilità con cui il software può essere testato per verificare la correttezza delle modifiche. È fondamentale per garantire che non vengano introdotti difetti e che il sistema funzioni come previsto.
  
  === Portabilità 
- È la facilità con cui un software può essere trasferito da un ambiente a un altro. Le sue sotto-caratterstiche sono:
+ È la facilità con cui un software può essere trasferito da un ambiente a un altro. Le sue sotto-caratteristiche sono:
  - *Adattabilità*: è la capacità del software di essere modificato per adattarsi a nuovi ambienti senza necessitare di grandi modifiche.
  - *Installabilità*: è la facilità con cui il software può essere installato in un nuovo ambiente.
  - *Coesistenza*: è la capacità del software di funzionare correttamente insieme ad altri sistemi o software già presenti nello stesso ambiente, senza causare conflitti o interferenze.
