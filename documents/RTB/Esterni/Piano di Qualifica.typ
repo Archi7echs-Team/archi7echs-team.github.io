@@ -38,7 +38,33 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 = Metodologie di testing
 In questa sezione vengono descritte le modalità di identificazione dei test che verranno applicati al progetto per controllare il rispetto delle metriche e l'implementazione degli #glossario("UC") individuati nell' #glossario("AdR"). \
 I test si suddividono in:
+- *Test di Unità*: i test effettuati su singole #glossario("unità") software del progetto. Questi test vengono implementati direttamente dai membri del team con il ruolo di #glossario("programmatore") e, successivamente, eseguiti automaticamente.
+- *Test di Integrazione*: i test applicati alle componenti individuate nel design , indispensabile per rilevare difetti di progettazione architetturale, assicurano infatti la corretta integrazione tra le molteplici parte che compongono il #glossario("prodotto software").
+- *Test di Sistema*: assicura il corretto funzionamento del sistema durante l'esecuzione del #glossario("prodotto software").
+- *Test di Accettazione*: servono per verificare che il prodotto finale soddisfi tutti i requisiti indicati nel #glossario("capitolato"). 
 
 == Identificazione dei test
+Ogni test viene identificato da un codice univoco composto come di seguito:
+#align(center)[T.Tipologia.IdentificativoUnivoco]
+
+Dove: \
+*Tipologia* indica il tipo di test, secondo quanto sopra, ovvero:
+- *U*, per indicare i test di Unità
+- *I*, per indicare i test di Integrazione
+- *S*, per indicare i test di Sistema
+- *A*, per indicare i test di Accettazione
+
+Ogni test è associato ad uno *stato* che può essere:
+- *V*, il test è stato verificato
+- *NE*, il test non è stato eseguito
+- *NI*, il test non è ancora stato implementato
+
+== Test di Unità
+
+== Test di Integrazione
+
+== Test di Sistema
+
+== Test di Accettazione
 
 
