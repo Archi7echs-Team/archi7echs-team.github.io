@@ -138,6 +138,7 @@
   pb()
 
   if show_outline == true {
+    show outline.entry.where(level: 1): strong
     outline(depth: outline_depth, indent: 1em)
     pagebreak()
   }
