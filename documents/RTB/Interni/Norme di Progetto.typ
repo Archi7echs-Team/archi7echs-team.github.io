@@ -49,7 +49,14 @@ di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.p
 
 = Processi Primari
 == Fornitura
-INSERIRE SCOPO
+=== Introduzione
+Secondo lo standard ISO/IEC 12207:1995, lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto. Dunque il processo si concentra sul monitoraggio e sulla gestione delle attività svolte dal team durante le varie fasi del progetto, dalla concezione iniziale fino alla consegna, assicurandosi che il prodotto finale rispetti i requisiti concordati con il committente, oltre a essere realizzato entro i tempi e i costi stabiliti.
+
+=== Comunicazione con l'azienda proponente
+Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
+Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il periodo secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
+Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine periodo, fermo restando di non superare, salvo esplicite motivazioni, le due settimane dall'incontro precedente. \
+Durante tale incontro, con relativo #glossario("verbale esterno"), il responsabile del periodo in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
 
 === Documentazione da consegnare
 In questa sezione vengono indicati i documenti che saranno consegnati all'azienda proponente _Sanmarco Infomatica_ e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
@@ -85,12 +92,6 @@ Documento che serve al team per descrivere come è stata garantita l'efficienza 
   - *Test di unità*
 - *Metriche per garantire la qualità dei processi*: verifica e validazione dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
 - *Metriche per garantire la qualità del prodotto*: verifica e validazione per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
-
-== Comunicazione con l'azienda proponente
-Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
-Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il periodo secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
-Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine periodo, fermo restando di non superare, salvo esplicite motivazioni, le due settimane dall'incontro precedente. \
-Durante tale incontro, con relativo #glossario("verbale esterno"), il responsabile del periodo in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
 
 == Strumenti
 Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei membri del team:
