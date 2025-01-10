@@ -3,13 +3,13 @@
 #show: conf.with(
   title: "Analisi dei Requisiti",
   author: "Team",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.2", "10-01-2025", "Modifica UC 1, UC 2, UC 2.1, UC 2.1.1, UC 2.1.2, UC 2.1.3, UC 14, UC 15  ", p.checchinato,"",
+    "0.7.2", "10-01-2025", "Modifica UC 1, UC 2, UC 2.1, UC 2.1.1, UC 2.1.2, UC 2.1.3, UC 14, UC 15  ", p.checchinato,p.lucato,
     "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, (p.pesenato, p.pozzobon),
     "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
     "0.6.0", "19-12-2024", "Aggiunta sezione tecnologie, fix versioni ", p.pesenato, (p.scandaletti,p.valdagno),
@@ -178,8 +178,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo x
 - *Scenari Alternativi*
-  - Visualizzazione dell'errore invalidArguments (@uc21)
-  - Visualizzazione dell'errore emptyField (@uc25)
+  - L'utente potrebbe inserire un valore non valido per l'asse x:
+    - Visualizzazione dell'errore invalidArguments (@uc21)
+    - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.2 - L'utente inserisce il campo Y <uc2.1.2>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y.
@@ -190,8 +191,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo y.
 - *Scenari Alternativi*
-  - Visualizzazione dell'errore invalidArguments (@uc21)
-  - Visualizzazione dell'errore emptyField (@uc25)
+  - L'utente potrebbe inserire un valore non valido per l'asse y:
+    - Visualizzazione dell'errore invalidArguments (@uc21)
+    - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.3 - L'utente inserisce il campo Z <uc2.1.3>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z.
@@ -202,8 +204,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo z
 - *Scenari Alternativi*
-  - Visualizzazione dell'errore invalidArguments (@uc21)
-  - Visualizzazione dell'errore emptyField (@uc25)
+  - L'utente potrebbe inserire un valore non valido per l'asse z:
+    - Visualizzazione dell'errore invalidArguments (@uc21)
+    - Visualizzazione dell'errore emptyField (@uc25)
 
 === UC 2.2 - Caricamento automatico dati tramite #glossario("API") <uc2.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") (da quelle proposte in una lista) come metodo di caricamento .
