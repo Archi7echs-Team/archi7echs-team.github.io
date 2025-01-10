@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, "",
+    "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, p.pesenato,
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
     "0.13.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, (p.lucato, p.pozzobon),
     "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, (p.pesenato, p.pozzobon),
@@ -59,7 +59,7 @@ Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di 
 Durante tale incontro, con relativo #glossario("verbale esterno"), il responsabile del periodo in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
 
 === Documentazione da consegnare
-In questa sezione vengono indicati i documenti che saranno consegnati all'azienda proponente _Sanmarco Infomatica_ e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
+In questa sezione vengono indicati i documenti che saranno consegnati all'azienda proponente _Sanmarco Informatica_ e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 
 ==== Analisi dei Requisiti
 All'interno vengono definite le funzionalità che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
@@ -318,8 +318,8 @@ Rappresenta un legame "parte di" tra due classi. In questa relazione, una classe
 \ \
 #figure(
   image("/img/ndp/aggregazioneclassi.png", width: 80%),
-  caption: [Identificare la relazione aggragazione tra classi],
-) <aggragazioneclasse>
+  caption: [Identificare la relazione aggregazione tra classi],
+) <aggregazione>
 Quindi in questo esempio B è parte di A.
 
 ===== Composizione
