@@ -9,6 +9,7 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
+            "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
             "0.1.1", "10-12-2024",  "Aggiunti termini e definizioni", p.salvo, p.scandaletti,
             "0.1.0", "19-11-2024",  "Prima stesura documento", p.pesenato, p.pozzobon,
@@ -252,6 +253,9 @@
         = U
         - UC
         Acronimo di _Use Case_ (Caso d’uso): scenario che descrive le interazioni tra utenti (attori) e sistema per raggiungere un obiettivo specifico.
+
+        - Unità
+        Minimo componente di un prodotto software dotato di funzionamento autonomo
 
         = V
         - Validazione
