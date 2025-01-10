@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, p.pesenato,
+    "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
     "0.13.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, (p.lucato, p.pozzobon),
     "0.12.0", "02-01-2024", "Diagrammi UML (casi d'uso e classi). Documentazione da consegnare ", p.lucato, (p.pesenato, p.pozzobon),
