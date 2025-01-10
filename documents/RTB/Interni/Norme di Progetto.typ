@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.14.0", "10-01-2025", "Stesura metriche di qualità e riscrittura introduzione e scopo della sezione fornitura", p.valdagno, (p.pesenato,p.pozzobon),
     "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
     "0.13.0", "04-01-2025", "Stesura standard di qualità", p.valdagno, (p.lucato, p.pozzobon),
@@ -50,7 +51,10 @@ di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.p
 = Processi Primari
 == Fornitura
 === Introduzione
-Secondo lo standard ISO/IEC 12207:1995, lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto. Dunque il processo si concentra sul monitoraggio e sulla gestione delle attività svolte dal team durante le varie fasi del progetto, dalla concezione iniziale fino alla consegna, assicurandosi che il prodotto finale rispetti i requisiti concordati con il committente, oltre a essere realizzato entro i tempi e i costi stabiliti.
+Secondo lo standard #glossario("ISO/IEC 12207:1995"), la fornitura viene definita come un insieme strutturato di attività e processi per la gestione e lo sviluppo del progetto e quindi per realizzare il prodotto software richiesto dal committente.
+
+=== Scopo
+Il processo si concentra sul monitoraggio e sulla gestione delle attività svolte dal team durante le varie fasi del progetto, dalla concezione iniziale fino alla consegna, assicurandosi che il prodotto finale rispetti i requisiti concordati con il committente, oltre a essere realizzato entro i tempi e i costi stabiliti. In questo modo viene garantita una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto.
 
 === Comunicazione con l'azienda proponente
 Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
@@ -757,3 +761,178 @@ L'obiettivo di questi processi è garantire che i processi primari funzionino in
 Sono i processi che coprono gli aspetti manageriali e di gestione delle risorse dunque forniscono la struttura e le pratiche a livello organizzativo per gestire e migliorare i processi primari e di supporto. \
 L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di supportare lo sviluppo, la gestione e il miglioramento continuo dei processi e dei prodotti.
 
+#pb()
+
+ = Metriche di qualità
+ Le metriche di qualità sono misure oggettive e quantificabili per valutare e monitorare la qualità dei processi di sviluppo e del prodotto software. Servono dunque a garantire che il software soddisfi i requisiti richiesti e rispetti gli standard di qualità stabiliti, inoltre permettono di controllare l'andamento del progetto e quindi di individuare eventuali aree critiche dove adottare procedure di miglioramento. \
+ Le due categorie principali sono:
+ - *metriche di qualità del processo*: valutano la qualità dei processi di sviluppo e gestione;
+ - *metriche di qualità del prodotto*: valutano direttamente le caratteristiche del software.
+
+ == Metriche di qualità del processo
+ Ogni metrica di questa sezione verrà identificata come segue:
+ #align(center)[*MPC.NumProgressivo*] 
+ Dove *MPC* è l'abbreviazione di #strong[M]etriche di qualità del #strong[P]ro#strong[C]esso e *NumProgressivo* è un intero che aumenta con ogni metrica. \
+ Le formule di alcune di queste metriche utilizzano il valore #glossario("BAC"), che sta per _Budget At Completion_, ossia il costo totale pianificato per completare il progetto.
+ === Processi primari
+ - *MPC1*:
+  - *Nome*: Schedule Adherence (*SA*)
+  - *Descrizione*: percentuale di attività completate entro le scadenze stabilite.
+  - *Obiettivo*: misurare quanto il progetto rispetta i tempi previsti.
+  - *Formula*: _SA = #math.frac("attività completate in tempo", "attività pianificate") x 100_
+
+- *MPC2*:
+  - *Nome*: Earned Value (*EV*)
+  - *Descrizione*: rappresenta il valore del lavoro effettivamente completato fino a quel periodo.
+  - *Obiettivo*: misurare il progresso del progetto.
+  - *Formula*: _EV = lavoro completato(%) x #glossario("BAC")_
+  
+- *MPC3*:
+  - *Nome*: Planned Value (*PV*)
+  - *Descrizione*: rappresenta il valore del lavoro pianificato da completare entro una determinata data.
+  - *Obiettivo*: determinare quanto lavoro dovrebbe essere completato in un certo momento del progetto.
+  - *Formula*: _PV = lavoro pianificato(%) x #glossario("BAC")_
+  
+- *MPC4*:
+  - *Nome*: Schedule Variance (*SV*)
+  - *Descrizione*: differenza tra il valore del lavoro completato e quello pianificato fino a un dato momento del progetto.
+  - *Obiettivo*: rilevare la presenza di ritardi rispetto al piano iniziale, permettendo di intervenire tempestivamente.
+  - *Formula*: _SV = EV - PV_
+
+- *MPC5*:
+  - *Nome*: Actual Cost (*AC*)
+  - *Descrizione*: rappresenta il costo effettivo sostenuto per il lavoro completato fino a una data specifica.
+  - *Obiettivo*: fornire una visione chiara delle spese effettive.
+  - *Formula*: _somma dei costi effettivi_ (dato ricavabile dall'esito dei periodi nel #glossario("PdP"))
+
+- *MPC6*:
+  - *Nome*: Cost Performance Index (*CPI*)
+  - *Descrizione*: misura l'efficienza dei costi di un progetto, confrontando il valore guadagnato (EV) con il costo effettivo (AC).
+  - *Obiettivo*: fornire un'indicazione dell'efficacia nell'uso delle risorse economiche.
+  - *Formula*: _CPI = #math.frac("EV", "AC")_
+
+- *MPC7*:
+  - *Nome*: Estimated At Completion (*EAC*)
+  - *Descrizione*: stima il costo totale previsto per completare il progetto, tenendo conto del rendimento attuale.
+  - *Obiettivo*: fornire una previsione aggiornata dei costi finali del progetto.
+  - *Formula*: _EAC = #math.frac("BAC", "CPI")_
+
+- *MPC8*:
+  - *Nome*: Estimated To Complete (*ETC*)
+  - *Descrizione*: rappresenta la stima dei costi necessari per completare il lavoro rimanente di un progetto.
+  - *Obiettivo*: fornire una previsione dei costi futuri.
+  - *Formula*: _ETC = EAC - AC_
+
+=== Processi di supporto
+- *MPC9*:
+  - *Nome*: Percentuale di Casi di Test Superati (*PCTS*)
+  - *Descrizione*: misura la percentuale di casi di test eseguiti che hanno avuto esito positivo rispetto al totale dei casi di test eseguiti.
+  - *Obiettivo*: valutare l'efficacia dei test nel garantire che il software soddisfi i requisiti e non presenti errori.
+  - *Formula*: _PCTS = #math.frac("casi di test superati", "casi di test eseguiti") x 100_
+
+- *MPC10*:
+  - *Nome*: Percentuale di Metriche Soddisfatte (*PMS*)
+  - *Descrizione*: misura la percentuale di metriche di qualità che sono state soddisfatte.
+  - *Obiettivo*: valutare in modo globale il livello di qualità raggiunto.
+  - *Formula*: _PMS = #math.frac("metriche soddisfatte", "metriche totali") x 100_
+
+=== Processi organizzativi
+- *MPC11*:
+  - *Nome*: Rischi Non Previsti (*RNP*)
+  - *Descrizione*: rappresenta il numero di rischi non previsti rilevati durante il progetto.
+  - *Obiettivo*: ridurre il numero di rischi imprevisti, migliorando pianificazione e gestione.
+
+== Metriche di qualità del prodotto
+ Ogni metrica di questa sezione verrà identificata come segue:
+ #align(center)[*MPD.NumProgressivo*] 
+ Dove *MPD* è l'abbreviazione di #strong[M]etriche di qualità del #strong[P]ro#strong[D]otto e *NumProgressivo* è un intero che aumenta con ogni metrica.
+
+=== Funzionalità
+- *MPD1*:
+  - *Nome*: Requisiti Obbligatori Soddisfatti (*ROBS*)
+  - *Descrizione*: percentuale di requisiti obbligatori soddisfatti.
+  - *Obiettivo*: valutare il grado di soddisfacimento dei requisiti richiesti per il progetto.
+  - *Formula*: _ROBS = #math.frac("requisiti obbligatori soddisfatti", "requisiti obbligatori totali") x 100_
+
+- *MPD2*:
+  - *Nome*: Requisiti Desiderabili Soddisfatti (*RDS*)
+  - *Descrizione*: percentuale di requisiti desiderabili soddisfatti.
+  - *Obiettivo*: valutare il grado di soddisfacimento dei requisiti richiesti per il progetto.
+  - *Formula*: _ROS = #math.frac("requisiti desiderabili soddisfatti", "requisiti desiderabili totali") x 100_
+
+- *MPD3*:
+  - *Nome*: Requisiti Opzionali Soddisfatti (*ROPS*)
+  - *Descrizione*: percentuale di requisiti opzionali soddisfatti.
+  - *Obiettivo*: valutare il grado di soddisfacimento dei requisiti richiesti per il progetto.
+  - *Formula*: _ROS = #math.frac("requisiti opzionali soddisfatti", "requisiti opzionali totali") x 100_
+
+=== Affidabilità
+- *MPD4*:
+  - *Nome*: Code Coverage (*CC*)
+  - *Descrizione*: percentuale di codice coperto dai test rispetto al totale del codice sviluppato.
+  - *Obiettivo*: valutare l'efficacia del processo di testing e il livello di qualità assicurato dal processo.
+  - *Formula*: _CC = #math.frac("linee di codice testate", "linee di codice totali") x 100_
+  
+- *MPD5*:
+  - *Nome*: Indice Gulpease (*MIG*)
+  - *Descrizione*: è una metrica che misura la leggibilità di un testo in lingua italiana, basandosi sulla lunghezza delle parole e delle frasi.
+  - *Obiettivo*: garantire che la documentazione prodotta sia chiara e accessibile, evitando testi complessi.
+  - *Formula*: _MIG = 89 + #math.frac("300·(numero frasi) - 10·(numero lettere) ", "numero parole")_
+
+- *MPD6*:
+  - *Nome*: Failure Density (*FD*)
+  - *Descrizione*: rappresenta il numero di errori rilevati per unità di codice.
+  - *Obiettivo*: valutare la qualità del codice e ridurre il numero di errori.
+  - *Formula*: _FD = #math.frac("numero errori rilevati", "linee di codice totali") x 100_
+
+- *MPD7*:
+  - *Nome*: Statement Coverage (*SC*)
+  - *Descrizione*: indica la percentuale di istruzioni del codice eseguite almeno una volta durante i test.
+  - *Obiettivo*: misurare la copertura dei test.
+  - *Formula*: _SC = #math.frac("istruzioni eseguite", "istruzioni totali") x 100_
+
+- *MPD8*:
+  - *Nome*: Branch Coverage (*BC*)
+  - *Descrizione*: misura la percentuale di ramificazioni eseguite almeno una volta durante i test rispetto al totale delle ramificazioni presenti nel codice.
+  - *Obiettivo*: garantire che tutte le possibili diramazioni del codice siano state testate per identificare eventuali errori nei percorsi condizionali.
+  - *Formula*: _BC = #math.frac("ramificazioni eseguite", "ramificazioni totali") x 100_
+
+- *MPD9*:
+  - *Nome*: Correttezza Ortografica (*CO*)
+  - *Descrizione*: misura il numero di errori ortografici presenti all'interno di un documento del progetto.
+  - *Obiettivo*: garantire una documentazione chiara, migliorando la leggibilità.
+
+=== Usabilità
+- *MPD10*:
+  - *Nome*: Facilità di Utilizzo (*FU*)
+  - *Descrizione*: valuta quanto il software sia semplice da utilizzare per gli utenti.
+  - *Obiettivo*: garantire un'esperienza utente positiva.
+
+- *MPD11*:
+  - *Nome*: Tempo di Apprendimento (*TA*)
+  - *Descrizione*: misura il tempo necessario affinché un nuovo utente apprenda come utilizzare il sistema.
+  - *Obiettivo*: ridurre il tempo richiesto per apprendere le funzionalità del sistema.
+
+=== Efficienza
+- *MPD12*:
+  - *Nome*: Tempo Medio di Risposta (*TMR*)
+  - *Descrizione*: misura il tempo medio che il sistema impiega per rispondere a una richiesta .
+  - *Obiettivo*: ottimizzare i tempi di risposta per garantire una migliore esperienza utente.
+  - *Formula*: _TMR = #math.frac("somma tempi di risposta delle richieste", "numero totale di richieste")_
+
+- *MPD13*:
+  - *Nome*: Utilizzo delle Risorse (*UR*)
+  - *Descrizione*: indica l'efficienza del software in termini di utilizzo delle risorse durante l'esecuzione.
+  - *Obiettivo*: monitorare l'efficienza nell'uso delle risorse.
+
+=== Manutenibilità
+- *MPD14*:
+  - *Nome*: Complessità Ciclomatica (*V(G)*)
+  - *Descrizione*: misura la complessità di un programma in base al numero di percorsi indipendenti nel flusso di controllo del codice.
+  - *Obiettivo*: fornire un'indicazione della difficoltà di test e manutenzione del codice, identificando eventuali porzioni di codice troppo complesse.
+  - *Formula*: _V(G) = E - N + 2P_ 
+   \ dove:
+   - E: numero di archi del grafo (transizioni tra nodi);
+   - N: numero di nodi del grafo (istruzioni o blocchi di codice);
+   - P: numero di componenti connesse (numero di funzioni o moduli del programma).
+   
