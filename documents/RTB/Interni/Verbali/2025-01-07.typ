@@ -4,11 +4,11 @@
   title: "Verbale incontro 07/01/2024",
   subtitle: "Documento interno - verbale nr. 14",
   author: p.valdagno,
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "10-01-2025",  "Prima stesura documento", p.valdagno, "",
+    "0.1.0", "10-01-2025",  "Prima stesura documento", p.valdagno, p.pesenato,
   )
 )
 
@@ -35,6 +35,7 @@ L'incontro inizia, come da programma alle ore 14.30. Sono presenti i seguenti co
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
+- #p.pozzobon
 - #p.salvo
 - #p.scandaletti
 - #p.valdagno
