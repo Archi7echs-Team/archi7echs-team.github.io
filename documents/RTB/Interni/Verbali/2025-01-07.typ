@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "10-01-2025",  "Prima stesura documento", p.valdagno, p.pesenato,
+    "0.1.0", "10-01-2025",  "Prima stesura documento", p.valdagno, (p.pesenato,p.pozzobon),
   )
 )
 
@@ -31,7 +31,7 @@ _A seguito del periodo delle vacanze di Natale e del superamento della metà del
 
 = Verbale
 
-L'incontro inizia, come da programma alle ore 14.30. Sono presenti i seguenti componenti del team:
+L'incontro inizia, come da programma alle ore 14.30. Sono presenti tutti i membri del team:
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
