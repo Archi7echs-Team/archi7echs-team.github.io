@@ -66,5 +66,38 @@ Ogni test è associato ad uno *stato* che può essere:
 == Test di Sistema
 
 == Test di Accettazione
-
+#align(center)[
+  #table(
+  columns: (auto, auto, auto),
+  align: (col, row) => (center, center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice identificativo*], [*Descrizione*], [*Stato*]),
+  [T.A.1], [Verificare che l'utente, dopo il caricamento della webapp, visualizzi il menu dedicato alle sezioni per il caricamento dati, per la visualizzazione dei dati e per il salvataggio], [NI],
+  [T.A.2], [Verificare che l'utente, dopo il caricamento della webapp, visualizzi il menu dedicato a tutti i possibili strumenti per lo spostamento della telecamera], [NI],
+  [T.A.3], [Verificare che l'utente possa caricare i dati manualmente tramite interfaccia grafica], [NI],
+  [T.A.4], [Verificare che l'utente possa caricare i dati tramite un file .csv], [NI],
+  [T.A.5], [Verificare che l'utente possa caricare i dati tramite una connessione ad un database SQL], [NI],
+  [T.A.6], [Verificare che l'utente possa caricare i dati tramite una connessione ad un API esterno], [NI],
+  [T.A.7], [Verificare che l'utente, una volta inseriti i dati, visualizzi le barre relative ai dati nelle posizioni corrette], [NI],
+  [T.A.8], [Verificare che l'utente, una volta premuta una barra, si apra il relativo menu per la modifica una barra specifica], [NI],
+  [T.A.9], [Verificare che l'utente, una volta premuta una barra, visualizzi le informazioni corrette relative alla barra premuta], [NI],
+  [T.A.10], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di modificare la sua opacizzazione], [NI],
+  [T.A.11], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di opacizzare tutte le barre che hanno un valore minore di quello della barra premuta], [NI],
+  [T.A.12], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di opacizzare tutte le barre che hanno un valore maggiore di quello della barra premuta], [NI],
+  [T.A.13], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di resettare i filtri applicati per la sola barra premuta], [NI],
+  [T.A.14], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di visualizzare un piano che identifica la media globale], [NI],
+  [T.A.15], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di opacizzare tutte le barre che hanno valore maggiore della media globale], [NI],
+  [T.A.16], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di opacizzare tutte le barre che hanno valore minore della media globale], [NI],
+  [T.A.17], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di opacizzare tutte le barre che hanno valore compreso tra un intervallo scelto dall'utente], [NI],
+  [T.A.18], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di visualizzare un piano che identifica la media relativa ad un asse X selezionato], [NI],
+  [T.A.7], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di visualizzare un piano che identifica la media relativa ad un asse Z selezionato], [NI],
+  [T.A.19], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di visualizzare le N barre con il valore maggiore, con N selezionato dall'utente], [NI],
+  [T.A.20], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di visualizzare le N barre con il valore minore, con N selezionato dall'utente], [NI],
+  [T.A.21], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di eliminare tutti i filtri applicati al grafico], [NI],
+  [T.A.22], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di esportare il grafico], [NI],
+  [T.A.23], [Verificare che l'utente, una volta caricata la webapp, abbia la possibilità di effettuare e salvare un'istantanea del grafico], [NI],
+  [T.A.24], [Verificare che l'utente, durante l'interazione la webapp ed il grafico, venga avvisato degli errori nel caso di un uso improprio o di un'anomalia], [NI],
+  )
+    <tab:testdiaccettazione>
+]
 
