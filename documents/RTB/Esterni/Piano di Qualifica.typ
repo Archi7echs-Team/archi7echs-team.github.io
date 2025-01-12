@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
+    "0.2.0", "11-01-2025", "Stesura sez. Metodologie di testing, sottose. identificazione dei test, test di sistema e test di accettazione", p.pozzobon, "",    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
 )
 
@@ -31,8 +31,8 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 - Riferimento alle slide IS: *_Qualità del software_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T07.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T07.pdf]] - _Ultimo accesso al documento 19/12/2024_
 - Riferimento alle slide IS: *_Qualità di processo_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf]] - _Ultimo accesso al documento 19/12/2024_
 - Riferimento alle slide IS: *_Verifica e validazione:_*
- - *_Introduzione_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf]] \ - _Ultimo accesso al documento 19/12/2024_
- - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 19/12/2024_
+ - *_Introduzione_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf]] \ - _Ultimo accesso al documento 09/01/2025_
+ - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 08/01/2025_
  - *_Analisi dinamica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T011.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T11.pdf]] \ - _Ultimo accesso al documento 19/12/2024_
 
 = Metodologie di testing
@@ -59,10 +59,7 @@ Ogni test è associato ad uno *stato* che può essere:
 - *NE*, il test non è stato eseguito
 - *NI*, il test non è ancora stato implementato
 
-//Test di Unità e Test di Integrazione forse devono essere fatti dopo, in quanto si possono fare solo dopo aver scritto il codice e averlo integrato con il resto del progetto.
-== Test di Unità
-
-== Test di Integrazione
+//Test di Unità e Test di Integrazione devono essere fatti dopo, in quanto si possono fare solo dopo aver scritto il codice e averlo integrato con il resto del progetto.
 
 == Test di Sistema
 #align(center)[
