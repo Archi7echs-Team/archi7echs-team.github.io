@@ -10,7 +10,8 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.2.0", "11-01-2025", "Stesura sez. Metodologie di testing, sottose. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), "",    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
+    "0.2.0", "11-01-2025", "Stesura sez. Metodologie di testing, sottose. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), "",    
+    "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
 )
 
