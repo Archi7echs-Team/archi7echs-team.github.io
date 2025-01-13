@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, "",
     "0.2.0", "13-01-2025", "Stesura sez. Metodologie di testing, sottosez. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), (p.pesenato,p.valdagno),    
     "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
