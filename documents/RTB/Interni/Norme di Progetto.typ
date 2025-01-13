@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.14.1", "12-01-2025", "Aggiunta sottosezione Management - Gestione immagini", p.scandaletti, (p.pesenato, p.pozzobon),
     "0.14.0", "10-01-2025", "Stesura metriche di qualità e riscrittura introduzione e scopo della sezione fornitura", p.valdagno, (p.pesenato,p.pozzobon),
     "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
@@ -636,6 +637,9 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o attività che non sono sequenziali.
 	- *Elenchi numerati*: devono essere utilizzati quando si descrivono attività che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
 
+== Gestione immagini
+- Ogni immagine presente nei documenti deve essere salvata nella cartella _img_
+- Per ogni documento che utilizzi immagini non condivise con altri documenti, è necessario creare una sottocartella con il nome del suddetto documento in cui inserire le immagini ad esso relative
 
 #pb() 
 = Processi organizzativi
