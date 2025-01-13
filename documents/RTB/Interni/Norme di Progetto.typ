@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.14.2", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, (p.pesenato,p.pozzobon),
     "0.14.1", "12-01-2025", "Aggiunta sottosezione Management - Gestione immagini", p.scandaletti, (p.pesenato, p.pozzobon),
     "0.14.0", "10-01-2025", "Stesura metriche di qualità e riscrittura introduzione e scopo della sezione fornitura", p.valdagno, (p.pesenato,p.pozzobon),
     "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
@@ -682,6 +683,9 @@ Ogni processo viene identificato da:
 === Pianificazione 
 Ogni processo viene associato ad un #glossario("periodo"), indicato nel sistema di #glossario("Issue") come #glossario("Milestone"). 
 Tale associazione consente di identificare il processo dentro una fase, definita da una data di inizio ed una fine, definendo quindi un termine massimo di completamento, salvo specifica indicazione a preventivo o motivazione a consuntivo. Tale gestione consente inoltre di avere una visione su tutti i processi, consentendo il monitoraggio e la retrospettiva del periodo stesso con stime di tempi, risorse e costi necessari per il completamento delle #glossario("Issue").
+
+==== Diagramma di Gantt
+Per una corretta pianificazione e gestione delle issue, è compito di ogni assegnatario delle issue andare a indicare la _start date_ e la _end date_ nella relative sezione di #glossario("Github"), in modo tale che la project board mostri automaticamente il diagramma di Gantt con le tempistiche di inizio e fine del processo.
 
 === Monitoraggio
 E' necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. E' a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
