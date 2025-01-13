@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, (p.pesenato, p.pozzobon),
     "0.2.0", "13-01-2025", "Stesura sez. Metodologie di testing, sottosez. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), (p.pesenato,p.valdagno),    
     "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
@@ -35,6 +36,152 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
  - *_Introduzione_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf]] \ - _Ultimo accesso al documento 09/01/2025_
  - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 08/01/2025_
  - *_Analisi dinamica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T011.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T11.pdf]] \ - _Ultimo accesso al documento 19/12/2024_
+
+=== Standard
+- *_#glossario("ISO/IEC 12207:1995")_*: #link("https://en.wikipedia.org/wiki/ISO/IEC_12207")[#text(blue)[https://en.wikipedia.org/wiki/ISO/IEC_12207]] \ - _Ultimo accesso al documento 13/01/2025_
+- *_#glossario("ISO/IEC 9126")_*:  - *_#glossario("ISO 12207:1995")_*: #link("https://en.wikipedia.org/wiki/ISO/IEC_9126")[#text(blue)[https://en.wikipedia.org/wiki/ISO/IEC_9126]] \ - _Ultimo accesso al documento 13/01/2025_
+
+#pb()
+ 
+= Obiettivi metrici di qualità
+Per valutare la qualità del software e l'efficacia dei processi vengono adottate delle metriche che sono elencate nella sezione _Metriche di qualità_ del documento _Norme di Progetto_. \ 
+In questa sezione vengono elencati i valori che le metriche devono rispettare affinché siano considerate accettate o pienamente soddisfatte.
+
+== Qualità di processo
+La qualità di processo ha un ruolo fondamentale per assicurare che tutte le attività vengano svolte in modo controllato, efficiente e coerente con gli obiettivi prefissati.
+Stabilire quali metriche di qualità del processo utilizzare consente di ottenere misurazioni oggettive e quantificabili per monitorare l'efficacia e l'efficienza dei processi. Inoltre, definire valori accettabili e preferibili fornisce un criterio chiaro per valutare se le prestazioni dei processi soddisfano le aspettative o richiedono interventi correttivi.
+
+=== Processi primari
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore preferibile*]),
+    [*MPC1*],[Schedule Adherence (*SA*)],[$ >= 90% $],[100%],
+    [*MPC2*],[Earned Value (*EV*)],[$ >= 0 $
+],[$ <= "EAC" $],
+    [*MPC3*],[Planned Value (*PV*)],[$ >= 0 $],[$ <= #glossario("BAC") $],
+    [*MPC4*],[Schedule Variance (*SV*)],[$ >= -8% $
+],[$ >= 0 $],
+    [*MPC5*],[Actual Cost (*AC*)],[$ >= 0 $
+],[$ <= "EAC" $],
+    [*MPC6*],[Cost Performance Index (*CPI*)],[± 10% ],[0%],
+    [*MPC7*],[Estimated At Completion (*EAC*)],[±5% rispetto al #glossario("BAC")],[Pari al #glossario("BAC")],
+    [*MPC8*],[Estimated To Complete (*ETC*)],[$ >= 0 $
+],[$ <= "EAC" $],
+  )
+    <tab:metricheProcessiPrimari>
+]
+ #align(center)[Tabella 1: Valori accettabili e preferibili per le metriche dei processi primari.] 
+
+=== Processi di supporto
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*],[*Valore accettabile*], [*Valore preferibile*]),
+    [*MPC9*],[Percentuale di Casi di Test Superati (*PCTS*)],[80%],[100%],
+    [*MPC10*],[Percentuale di Metriche Soddisfatte (*PMS*)],[85%],[100%],
+  )
+    <tab:metricheProcessiSupporto>
+]
+ #align(center)[Tabella 2: Valori accettabili e preferibili per le metriche dei processi di supporto.] 
+
+=== Processi organizzativi
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*], [*Valore  accettabile*], [*Valore preferibile*]),
+    [*MPC11*],[Rischi Non Previsti (*RNP*)],[$ <=3 $],[0],
+  )
+    <tab:metricheProcessiOrganizzativi>
+]
+ #align(center)[Tabella 3: Valori accettabili e preferibili per le metriche dei processi organizzativi.] 
+
+== Qualità di prodotto
+La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
+Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori consente di misurare in modo oggettivo caratteristiche fondamentali come funzionalità, affidabilità, usabilità, efficienza e manutenibilità. Tali metriche permettono di monitorare se il prodotto soddisfa gli standard richiesti e di intervenire tempestivamente nel caso in cui alcuni parametri risultino al di sotto dei livelli accettabili.
+
+
+=== Funzionalità
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*], [*Valore  accettabile*], [*Valore preferibile*]),
+    [*MPD1*],[Requisiti Obbligatori Soddisfatti (*ROBS*)],[100%],[100%],
+    [*MPD2*],[Requisiti Desiderabili Soddisfatti (*RDS*)],[$ >= 50%$],[100%],
+    [*MPD3*],[Requisiti Opzionali Soddisfatti (*ROPS*)],[$ >= 0% $],[100%],
+  )
+    <tab:metricheFunzionalità>
+]
+ #align(center)[Tabella 4: Valori accettabili e preferibili per le metriche di funzionalità.] 
+
+=== Affidabilità
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*],[*Valore accettabile*], [*Valore preferibile*]),
+    [*MPD4*],[Code Coverage (*CC*)],[$ >=80% $],[100%],
+    [*MPD5*],[Indice Gulpease (*MIG*)],[$ >= 50 $],[$ >= 80 $],
+    [*MPD6*],[Failure Density (*FD*)],[$ <=10% $],[0%],
+    [*MPD7*],[Statement Coverage (*SC*)],[$ >= 80% $],[$ >= 90% $],
+    [*MPD8*],[Branch Coverage (*BC*)],[$ >= 70% $],[$ >= 80% $],
+    [*MPD9*],[Correttezza Ortografica (*CO*)],[0 errori],[0 errori],
+  )
+    <tab:metricheAffidabilità>
+]
+ #align(center)[Tabella 5: Valori accettabili e preferibili per le metriche di affidabilità.] 
+
+=== Usabilità
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*],[*Valore accettabile*], [*Valore preferibile*]),
+    [*MPD10*],[Facilità di Utilizzo (*FU*)],[$ <= 10 "click" $],[$ <= 5 "click" $],
+    [*MPD11*],[Tempo di Apprendimento (*TA*)],[$ <= 15 "minuti" $],[$ <= 5 "minuti" $],
+  )
+    <tab:metricheUsabilità>
+]
+ #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di usabilità.] 
+ 
+=== Efficienza
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*], [*Valore  accettabile*], [*Valore preferibile*]),
+    [*MPD12*],[Tempo Medio di Risposta (*TMR*)],[$ <= 10 "secondi" $],[$ <= 4 "secondi" $],
+    [*MPD13*],[Utilizzo delle Risorse (*UR*)],[$ >= 75% $],[100%],
+  )
+    <tab:metricheEfficienza>
+]
+ #align(center)[Tabella 7: Valori accettabili e preferibili per le metriche di efficienza.] 
+
+=== Manutenibilità
+#align(center)[
+  #table(
+  columns: (auto, auto, auto, auto),
+  align: (col, row) => (center, center, center, center).at(col),
+  inset: 6pt,
+  table.header([*Metrica*], [*Nome*], [*Valore accettabile*], [*Valore preferibile*]),
+    [*MPD14*],[Complessità Ciclomatica (*V(G)*)],[$ <=8 $],[$ <= 4$],
+  )
+    <tab:metricheManutenibilità>
+]
+ #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di manutenibilità.] 
+
+#pb()
 
 = Metodologie di testing
 In questa sezione vengono descritte le modalità di identificazione dei test che verranno applicati al progetto per controllare il rispetto delle metriche e l'implementazione degli #glossario("UC") individuati nell' #glossario("AdR"). \
