@@ -5,11 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.14.1", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, "",
+    "0.14.1", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, p.pesenato,
     "0.14.0", "10-01-2025", "Stesura metriche di qualità e riscrittura introduzione e scopo della sezione fornitura", p.valdagno, (p.pesenato,p.pozzobon),
     "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
