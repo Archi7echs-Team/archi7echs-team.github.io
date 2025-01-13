@@ -4,12 +4,12 @@
   title: "Verbale incontro 10/01/2025",
   subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 7",
   author: "Pietro Valdagno",
-  state: "Bozza",
+  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "12-01-2025",  "Prima stesura documento", p.valdagno, "",
+    "0.1.0", "12-01-2025",  "Prima stesura documento", p.valdagno, p.pesenato,
   )
 )
 
