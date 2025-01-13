@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.2.0", "11-01-2025", "Stesura sez. Metodologie di testing, sottosez. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), p.pesenato,    
+    "0.2.0", "13-01-2025", "Stesura sez. Metodologie di testing, sottosez. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), (p.pesenato,p.valdagno),    
     "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
   )
 )
@@ -40,8 +40,8 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 In questa sezione vengono descritte le modalità di identificazione dei test che verranno applicati al progetto per controllare il rispetto delle metriche e l'implementazione degli #glossario("UC") individuati nell' #glossario("AdR"). \
 I test si suddividono in:
 - *Test di Unità*: i test effettuati su singole #glossario("unità") software del progetto. Questi test vengono implementati direttamente dai membri del team con il ruolo di #glossario("programmatore") e, successivamente, eseguiti automaticamente.
-- *Test di Integrazione*: i test applicati alle componenti individuate nel design , indispensabile per rilevare difetti di progettazione architetturale, assicurano infatti la corretta integrazione tra le molteplici parte che compongono il #glossario("prodotto software").
-- *Test di Sistema*: assicura il corretto funzionamento del sistema durante l'esecuzione del #glossario("prodotto software"). Nello specifico lo scopo di questi test è quello di verificare che il sistema soddisfi i requisiti specificati nel documento dell'_Analisi dei Requisiti_.
+- *Test di Integrazione*: i test applicati alle componenti individuate nel design , indispensabile per rilevare difetti di progettazione architetturale, assicurano infatti la corretta integrazione tra le molteplici parti che compongono il #glossario("prodotto software").
+- *Test di Sistema*: assicurano il corretto funzionamento del sistema durante l'esecuzione del #glossario("prodotto software"). Nello specifico lo scopo di questi test è quello di verificare che il sistema soddisfi i requisiti specificati nel documento dell'_Analisi dei Requisiti_.
 - *Test di Accettazione*: servono per verificare che il prodotto finale soddisfi tutti i requisiti indicati nel #glossario("capitolato"). 
 
 == Identificazione dei test
@@ -85,7 +85,7 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.S.14], [Verificare che l'utente può resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo tramite un apposito bottone],[F.1.10] ,[NI],
   [T.S.15], [Verificare che l'utente, posizionando il cursore sopra una barra del grafico riesca a visualizzare le informazioni di quella barra],[F.1.11] ,[NI],
   [T.S.16], [Verificare che l'utente, premendo sopra ad una barra, visualizzi una sezione apposita per scegliere tra alcune delle ulteriori funzionalità ],[F.1.12] ,[NI],
-  [T.S.17], [Verificare che l'utente, una volta premuta una barra, vengano visualizzate le sue informazioni ],[F.1.13] ,[NI],
+  [T.S.17], [Verificare che l'utente, una volta premuta una barra, riesca a visualizzare le informazioni di quella barra],[F.1.13] ,[NI],
   [T.S.18], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di modificarne l'opacizzazione],[F.1.14] ,[NI],
   [T.S.19], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata],[F.1.15] ,[NI],
   [T.S.20], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di opacizzare tutti i dati che hanno valore maggiore del valore della barra selezionata],[F.1.16] ,[NI],
@@ -101,9 +101,9 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.S.30], [Verificare che l'utente possa eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default, tramite un apposito bottone],[F.1.26] ,[NI],
   [T.S.31], [Verificare che l'utente possa esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati ed i filtri relativi],[F.2.1 - Desiderabile] ,[NI],
   [T.S.32], [Verificare che l'utente possa effettuare uno "screenshot" del grafico],[F.2.2 - Desiderabile] ,[NI],
-  [T.S.33], [Verificare che l'utente venga avvertito graficamente nel caso abbia inserito un un input non conforme alle aspettative],[F.1.27] ,[NI],
+  [T.S.33], [Verificare che l'utente venga avvertito graficamente nel caso abbia inserito un input non conforme alle aspettative],[F.1.27] ,[NI],
   [T.S.34], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a caricare un quantitativo di dati (manualmente o automaticamente) che superano il numero massimo supportato],[F.1.28] ,[NI],
-  [T.S.35], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a caricare un file .csv con la formattazione interna con corretta],[F.1.29] ,[NI],
+  [T.S.35], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a caricare un file .csv con la formattazione interna non corretta],[F.1.29] ,[NI],
   [T.S.36], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a caricare dei dati tramite #glossario("API") che però non ha risposto alla richiesta entro un tempo limite],[F.1.30] ,[NI],
   [T.S.37], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a lasciare un input vuoto, quando invece è richiesto obbligatoriamente un valore],[F.1.31] ,[NI],
   [T.S.38], [Verificare che l'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000],[V.1.1] ,[NI],
@@ -127,7 +127,7 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.A.7], [Verificare che l'utente possa caricare i dati tramite una connessione ad un database SQL], [NI],
   [T.A.8], [Verificare che l'utente possa caricare i dati tramite una connessione ad un API esterno], [NI],
   [T.A.9], [Verificare che l'utente, una volta inseriti i dati, visualizzi le barre relative ai dati nelle posizioni corrette], [NI],
-  [T.A.10], [Verificare che l'utente, una volta premuta una barra, si apra il relativo menu per la modifica una barra specifica], [NI],
+  [T.A.10], [Verificare che, una volta che l'utente ha premuto una barra, si apra il relativo menu per la modifica della barra specifica], [NI],
   [T.A.11], [Verificare che l'utente, una volta premuta una barra, visualizzi le informazioni corrette relative alla barra premuta], [NI],
   [T.A.12], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di modificare la sua opacizzazione], [NI],
   [T.A.13], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di opacizzare tutte le barre che hanno un valore minore di quello della barra premuta], [NI],
