@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "12-01-2025",  "Prima stesura documento", p.valdagno, p.pesenato,
+    "0.1.0", "12-01-2025",  "Prima stesura documento", p.valdagno, (p.pesenato, p.pozzobon),
   )
 )
 
@@ -32,7 +32,7 @@ _A seguito del periodo delle vacanze di Natale e dell'impegno preso con l'aziend
 
 = Verbale
  
-L'incontro inizia, come da programma alle ore 16.00. Sono presenti i seguenti componenti del team:
+L'incontro inizia, come da programma alle ore 16.00. Sono presenti i seguenti tutti i membri del team:
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
@@ -64,6 +64,7 @@ Alex Beggiato  sottolinea l'importanza di non realizzare casi d'uso e diagrammi 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l’incontro è terminato alle 17:00. \
 Non viene indicato il giorno preciso del prossimo incontro ma viene comunque suggerito che avvenga entro la fine del mese. \
+Il team si impegna a contattare l'azienda dopo la riunione interna di settimana prossima.
 ])
 
 = Decisioni
