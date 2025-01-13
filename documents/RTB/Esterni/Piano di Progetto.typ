@@ -10,7 +10,8 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.5.0", "03-01-2025", "Stesura terzo periodo", (p.pozzobon, p.lucato, p.scandaletti),
+    "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
+    "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
     "0.4.0", "16-12-2024", "Stesura andamento secondo periodo", p.valdagno, (p.salvo,p.pozzobon),
     "0.3.1", "09-12-2024", "Aggiunti nuovi rischi individuati", p.checchinato, p.valdagno,
