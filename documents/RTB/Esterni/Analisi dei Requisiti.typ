@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.7.3", "13-01-2025", "Aggiunta UC da 19 a 26 e fix UC 2,10", p.salvo,p.pesenato,
     "0.7.2", "10-01-2025", "Modifica UC 1, UC 2, UC 2.1, UC 2.1.1, UC 2.1.2, UC 2.1.3, UC 14, UC 15  ", p.checchinato,(p.lucato, p.pozzobon),
     "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, (p.pesenato, p.pozzobon),
     "0.7.0", "24-12-2024", "Ristrutturazione generale, continuazione con l'aggiunta degli UC", (p.lucato,p.pesenato), (p.salvo,p.valdagno),
@@ -129,11 +130,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 1 - Visualizzazione interattiva dei dati <uc1>
 - *Descrizione: * L'utente può visualizzare i dati in un grafico #glossario("3D") interattivo con barre verticali. 
 - *Attore: * Utente finale
-- *Precondizioni: * I dati devono essere già caricati nel sistema. L'interfaccia web deve essere #glossario("accessibile") e funzionante.
+- *Precondizioni: * I dati devono essere già caricati nel sistema (tramite tabella, database #glossario("SQL") o #glossario("API REST")). L'interfaccia web deve essere #glossario("accessibile") e funzionante.
 - *Postcondizioni: *I dati vengono rappresentati in forma di grafico interattivo.
 - *Scenario Principale: *
     + L'utente accede all'applicazione web.
-    + L'utente visualizza il grafico #glossario("3D").
+    + L'utente seleziona la modalità di inserimento dei dati (caricamento manuale, #glossario("SQL"), #glossario("API")). (@uc2)
+    + Il grafico viene generato in base ai dati precedentemente caricati.
     + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione.
 
 === UC 2 - Caricamento dati per la generazione del grafico <uc2>
@@ -143,13 +145,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente accede alla sezione di inserimento dei dati.
-    + L'utente seleziona il metodo di caricamento dati.
+    + L'utente seleziona il metodo di caricamento dati:
+      - Tramite interfaccia (@uc2.1);
+      - Tramite API (@uc2.2);
+      - Tramite connessione database SQL (@uc2.3);
+      - Tramite file .csv (@uc2.4).
     + Il sistema salva i dati.
-- *Scenari Alternativi*
-  - Caricamento manuale dei dati tramite interfaccia (@uc2.1)
-  - Caricamento automatico dati tramite #glossario("API") (@uc2.2)
-  - Caricamento automatico dati tramite connessione a database SQL (@uc2.3)
-  - Caricamento automatico dati tramite file .csv (@uc2.4)
+
 
 === UC 2.1 - Caricamento manuale dei dati tramite interfaccia <uc2.1>
 - *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
@@ -166,7 +168,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva il nuovo dato.
 - *Scenari Alternativi:* 
   - Visualizzazione dell'errore tooMuchData (@uc22)
-  - Visualizzazione dell'errore invalidArguments (@uc21)
   - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.1 - L'utente inserisce il campo X <uc2.1.1>
@@ -177,10 +178,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo x
-- *Scenari Alternativi*
-  - L'utente potrebbe inserire un valore non valido per l'asse x:
-    - Visualizzazione dell'errore invalidArguments (@uc21)
-    - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.2 - L'utente inserisce il campo Y <uc2.1.2>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y.
@@ -190,10 +187,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo y.
-- *Scenari Alternativi*
-  - L'utente potrebbe inserire un valore non valido per l'asse y:
-    - Visualizzazione dell'errore invalidArguments (@uc21)
-    - Visualizzazione dell'errore emptyField (@uc25)
 
 ==== UC 2.1.3 - L'utente inserisce il campo Z <uc2.1.3>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z.
@@ -203,10 +196,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo z
-- *Scenari Alternativi*
-  - L'utente potrebbe inserire un valore non valido per l'asse z:
-    - Visualizzazione dell'errore invalidArguments (@uc21)
-    - Visualizzazione dell'errore emptyField (@uc25)
 
 === UC 2.2 - Caricamento automatico dati tramite #glossario("API") <uc2.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") (da quelle proposte in una lista) come metodo di caricamento .
@@ -232,6 +221,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente decide di inserire i dati tramite database.
     + L'utente preme sul bottone dedicato al caricamento.
     + L'applicazione elabora i dati nel grafico #glossario("3D").
+- *Scenari Alternativi:* 
+  - Il #glossario("DB") non risponde per motivi di rete
+    + Errore networkError (@uc26).
 
 === UC 2.4 - Caricamento automatico dati tramite file .csv <uc2.4>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento.
@@ -362,7 +354,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       
 === UC 10 - Visualizzazione del valore medio globale <uc10>
 
-- *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale.
+- *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale. L'utente può con lo stesso metodo disattivare la visualizzazione del piano.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Viene mostrato il piano medio globale.
@@ -414,9 +406,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente seleziona un valore dell'asse X.
     + L'utente applica il filtro.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
-- *Scenari Alternativi*
-  - Visualizzazione dell'errore invalidArguments (@uc21)
-  - Visualizzazione dell'errore emptyField (@uc25)
 
 === UC 15 - Visualizzazione della media in base al valore di Z<uc15>
 
@@ -428,9 +417,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente seleziona un valore dell'asse Z.
     + L'utente applica il filtro.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
-- *Scenari Alternativi*
-  - Visualizzazione dell'errore invalidArguments (@uc21)
-  - Visualizzazione dell'errore emptyField (@uc25)
 
 === UC 16 - Visualizzazione degli N valori maggiori<uc16>
 
@@ -539,6 +525,17 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente lascia un input vuoto.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 
+=== UC 26 - Visualizzazione errore networkError <uc26>
+
+- *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
+- *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
+- *Postcondizioni: * 
+  - L'utente viene avvisato del fatto che il #glossario("DB") fornito non ha risposto entro un tempo limite di timeout.
+- *Scenario Principale: *
+    + L'utente decide l'input dei dati (#glossario("DB")).
+    + L'utente preme il bottone per caricare i dati.
+    + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
+
     
 = Requisiti
 == Identificazione 
@@ -584,7 +581,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.15], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
   [F.1.16], [@uc9.4 \ #glossario("UC")9.4], [L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
   [F.1.17], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
-  [F.1.18], [@uc10 \ #glossario("UC")10], [L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
+  [F.1.18], [@uc10 \ #glossario("UC")10], [L'utente attiva o disattiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
   [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
   [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
   [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
@@ -600,6 +597,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta], [1 - Obbligatorio],
   [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
   [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto], [1 - Obbligatorio],
+  [F.1.32], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al database], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
 ]
