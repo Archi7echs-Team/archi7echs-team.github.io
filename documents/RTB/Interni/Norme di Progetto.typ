@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.14.1", "14-01-2025", "Riscrittura relazione di estensione con extension points", p.scandaletti, p.lucato,
     "0.14.0", "10-01-2025", "Stesura metriche di qualità e riscrittura introduzione e scopo della sezione fornitura", p.valdagno, (p.pesenato,p.pozzobon),
     "0.13.2", "09-01-2025", "Riorganizzazione di alcune sezioni", p.lucato, (p.pesenato,p.pozzobon),
     "0.13.1", "06-01-2025", "Fix - correzione ortografico Introduzione", p.pozzobon, (p.pesenato,p.valdagno),
@@ -251,7 +252,7 @@ Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso
   caption: [Identificare la relazione estensione],
 ) <estensione>
 
-In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle funzionalità specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso esteso può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
+In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle funzionalità specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso da estendere può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
 
 ===== Generalizzazione
 Lo scopo principale è quello di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
