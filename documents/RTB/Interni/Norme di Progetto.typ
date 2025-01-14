@@ -250,8 +250,8 @@ Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso
   image("/img/ndp/estensione.png", width: 85%),
   caption: [Identificare la relazione estensione],
 ) <estensione>
-In questo caso dunque, il caso d'uso N ha ora delle funzionalità (condizionate dalla condizione) del caso d'uso M. \
-Per indicare una condizione è sufficiente collegare alla freccia tratteggiata con scritto "extend" un commento con inscritta la condizione
+
+In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle funzionalità specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso esteso può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
 
 ===== Generalizzazione
 Lo scopo principale è quello di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
