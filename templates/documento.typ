@@ -27,6 +27,8 @@
   state: none,
   intern: true,
   show_outline: true,
+  show_images_list: false,
+  show_tables_list: false,
   outline_depth: none,
   changelog: none,
   paper: "a4",
@@ -141,6 +143,22 @@
     show outline.entry.where(level: 1): strong
     outline(depth: outline_depth, indent: 1em)
     pagebreak()
+  }
+
+  if show_images_list == true {
+    outline(
+      title: "Lista della immagini",
+      target: figure.where(kind: image),
+    )
+  }
+  if show_tables_list == true {
+    outline(
+      title: "Lista delle tabelle",
+      target: figure.where(kind: table),
+    )
+  }
+  if show_images_list == true or show_tables_list == true {
+    pb()
   }
   
   set text(hyphenate: true)
