@@ -9,6 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.7.4", "19-01-2025", "Aggiunta immagini degli UC e modifica tabelle riferimenti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.3", "13-01-2025", "Aggiunta UC da 19 a 26 e fix UC 2,10", p.salvo,p.pesenato,
     "0.7.2", "10-01-2025", "Modifica UC 1, UC 2, UC 2.1, UC 2.1.1, UC 2.1.2, UC 2.1.3, UC 14, UC 15  ", p.checchinato,(p.lucato, p.pozzobon),
     "0.7.1", "02-01-2025", "Sistemazione UC. Aggiunta tabelle requisiti qualitativi, requisiti di vincolo e il tracciamento dei requisiti", p.lucato, (p.pesenato, p.pozzobon),
@@ -138,6 +139,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Il grafico viene generato in base ai dati precedentemente caricati.
     + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione.
 
+#figure(
+  image("/img/adr/UC 1.png", width: 80%),
+  caption: [Visualizzazione interattiva dei dati],
+) <imgUC1>
+\
+
 === UC 2 - Caricamento dati per la generazione del grafico <uc2>
 - *Descrizione: * L'utente deve avere la possibilità di inserire dei dati da poter visualizzare nel grafico.
 - *Attore: * Utente finale
@@ -151,7 +158,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Tramite connessione database SQL (@uc2.3);
       - Tramite file .csv (@uc2.4).
     + Il sistema salva i dati.
-
+#figure(
+  image("/img/adr/UC 2.png", width: 110%),
+  caption: [Caricamento dati per la generazione del grafico],
+) <imgUC2>
+\
 
 === UC 2.1 - Caricamento manuale dei dati tramite interfaccia <uc2.1>
 - *Descrizione: * L'utente inserisce manualmente i dati in una tabella tramite l'interfaccia web per generare il grafico.
@@ -169,6 +180,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenari Alternativi:* 
   - Visualizzazione dell'errore tooMuchData (@uc22)
   - Visualizzazione dell'errore emptyField (@uc25)
+#figure(
+  image("/img/adr/UC 2_1.png", width: 110%),
+  caption: [Caricamento manuale dei dati tramite interfaccia],
+) <imgUC2.1>
+\
 
 ==== UC 2.1.1 - L'utente inserisce il campo X <uc2.1.1>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse x.
@@ -178,6 +194,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo x
+#figure(
+  image("/img/adr/UC 2_1_1.png", width: 80%),
+  caption: [L'utente inserisce il campo X],
+) <imgUC2.1.1>
+\
 
 ==== UC 2.1.2 - L'utente inserisce il campo Y <uc2.1.2>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse y.
@@ -187,6 +208,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo y.
+#figure(
+  image("/img/adr/UC 2_1_2.png", width: 80%),
+  caption: [L'utente inserisce il campo Y],
+) <imgUC2.1.2>
+\
 
 ==== UC 2.1.3 - L'utente inserisce il campo Z <uc2.1.3>
 - *Descrizione: * L'utente desidera caricare i dati manualmente e deve essere in grado di inserire il valore dell'asse z.
@@ -196,6 +222,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente entra nella sezione "Inserimento dati".
     + L'utente compila il campo z
+#figure(
+  image("/img/adr/UC 2_1_3.png", width: 80%),
+  caption: [L'utente inserisce il campo Z],
+) <imgUC2.1.3>
+\
 
 === UC 2.2 - Caricamento automatico dati tramite #glossario("API") <uc2.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona una #glossario("API") (da quelle proposte in una lista) come metodo di caricamento .
@@ -211,6 +242,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   - L'#glossario("API") è un servizio esterno e in quanto tale potrebbe non rispondere in un tempo limite oppure potrebbe cambiare inaspettatamente la risposta
     + Visualizzazione errore tooMuchData (@uc22);  
     + Visualizzazione errore apiTimeOut (@uc24);
+#figure(
+  image("/img/adr/UC 2_2.png", width: 100%),
+  caption: [Caricamento automatico dati tramite #glossario("API")],
+) <imgUC2.2>
+\
 
 === UC 2.3 - Caricamento automatico dati tramite connessione a database SQL <uc2.3>
 - *Descrizione: * L'utente decide di inserire automaticamente i dati tramite database come metodo di caricamento.
@@ -224,6 +260,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenari Alternativi:* 
   - Il #glossario("DB") non risponde per motivi di rete
     + Errore networkError (@uc26).
+#figure(
+  image("/img/adr/UC 2_3.png", width: 100%),
+  caption: [Caricamento automatico dati tramite connessione a database SQL],
+) <imgUC2.3>
+\
 
 === UC 2.4 - Caricamento automatico dati tramite file .csv <uc2.4>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico e seleziona un file .csv come metodo di caricamento.
@@ -239,6 +280,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   - L'utente potrebbe inserire un file .csv in cui la formattazione interna è errata, oppure contiene troppi dati, superando la soglia massima consentita
     + Errore tooMuchData (@uc22);  
     + Errore invalidCsv (@uc23).
+#figure(
+  image("/img/adr/UC 2_4.png", width: 100%),
+  caption: [Caricamento automatico dati tramite file .csv],
+) <imgUC2.4>
+\
 
 === UC 3 Strumenti visualizzazione dati - Rotazione <uc3>
 - *Descrizione: * L'utente, mediante spostamento del mouse all'interno del grafico, può ruotare la visualizzazione
@@ -248,6 +294,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
   + L'utente seleziona la modalità "Rotazione" dal menù apposito.
   + L'utente attraverso le gesture del mouse si sposta nel grafico.
+#figure(
+  image("/img/adr/UC 3.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - Rotazione],
+) <imgUC3>
+\
 
 === UC 4 - Strumenti visualizzazione dati - PAN orizzontale <uc4>
 - *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente.
@@ -258,7 +309,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente clicca sul pulsante per attivare la modalità PAN orizzontale.
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente.
-
+#figure(
+  image("/img/adr/UC 4.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - PAN orizzontale],
+) <imgUC4>
+\
 === UC 5 - Strumenti visualizzazione dati - PAN verticale <uc5>
 - *Descrizione: * L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente.
 - *Attore: * Utente finale
@@ -268,7 +323,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente clicca sul pulsante per attivare la modalità PAN.
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente.
-
+#figure(
+  image("/img/adr/UC 5.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - PAN verticale],
+) <imgUC5>
+\
   
 === UC 6 - Strumenti visualizzazione dati - Zoom <uc6>
 - *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione.
@@ -279,6 +338,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente clicca sul pulsante per attivare la modalità Zoom.
   + L'applicazione abilita la modalità Zoom.
   + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico.
+#figure(
+  image("/img/adr/UC 6.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - Zoom],
+) <imgUC6>
+\
 
 === UC 7 - Strumenti visualizzazione dati - Auto posizionamento <uc7>
 - *Descrizione: * L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo.
@@ -287,6 +351,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * Reset della visualizzazione del grafico a quella di default.
 - *Scenario Principale: *
   + L'utente, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione.
+#figure(
+  image("/img/adr/UC 7.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - Auto posizionamento],
+) <imgUC7>
+\
 
 === UC 8 - Visualizzazione informazioni durante hover di una barra <uc8>
 - *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.
@@ -296,6 +365,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente passa il cursore del mouse sopra una barra.
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
+#figure(
+  image("/img/adr/UC 8.png", width: 80%),
+  caption: [Visualizzazione informazioni durante hover di una barra],
+) <imgUC8>
+\
 
 === UC 9 - Click su una barra del grafico<uc9>
 - *Descrizione: * L'utente preme sopra ad una barra, accede ad ulteriori funzionalità scegliendo tra quelle proposte.
@@ -307,6 +381,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione fornisce le seguenti possibilità:
       - Visualizzazione delle informazioni relative alla barra premuta;
       - Possibilità di applicare filtri al grafico in base alla barra premuta.
+#figure(
+  image("/img/adr/UC 9.png", width: 80%),
+  caption: [Click su una barra del grafico],
+) <imgUC9>
+\
     
 ==== UC 9.1 - Visualizzazione informazioni dopo click di una barra <uc9.1>
 - *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra.
@@ -315,6 +394,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 - *Scenario Principale: *
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
+#figure(
+  image("/img/adr/UC 9_1.png", width: 80%),
+  caption: [Visualizzazione informazioni dopo click di una barra],
+) <imgUC9.1>
+\
 
 ==== UC 9.2 - Scelta dell'opacizzazione di una barra selezionata<uc9.2>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione.
@@ -324,6 +408,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione.
     + L'utente modifica l'opacizzazione a piacere.
+#figure(
+  image("/img/adr/UC 9_2.png", width: 80%),
+  caption: [Scelta dell'opacizzazione di una barra selezionata],
+) <imgUC9.2>
+\
 
 ==== UC 9.3 - Opacizzazione dei dati con valore minore di una barra selezionata<uc9.3>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti i dati che hanno valore minore del valore della barra selezionata.
@@ -333,6 +422,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
+#figure(
+  image("/img/adr/UC 9_3.png", width: 80%),
+  caption: [Opacizzazione dei dati con valore minore di una barra selezionata],
+) <imgUC9.3>
+\
 
 ==== UC 9.4 Opacizzazione dei dati con valore maggiore di una barra selezionata<uc9.4>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di opacizzare tutti gli altri dati che hanno valore maggiore del valore della barra selezionata.
@@ -342,6 +436,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata.
+#figure(
+  image("/img/adr/UC 9_4.png", width: 80%),
+  caption: [Opacizzazione dei dati con valore maggiore di una barra selezionata],
+) <imgUC9.4>
+\
 
 ==== UC 9.5 Reimpostare la visualizzazione della barra selezionata<uc9.5>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default.
@@ -351,9 +450,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
     + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
+#figure(
+  image("/img/adr/UC 9_5.png", width: 80%),
+  caption: [Reimpostare la visualizzazione della barra selezionata],
+) <imgUC9.5>
+\
       
 === UC 10 - Visualizzazione del valore medio globale <uc10>
-
 - *Descrizione: * L'utente attiva la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale. L'utente può con lo stesso metodo disattivare la visualizzazione del piano.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -361,9 +464,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale.
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
+#figure(
+  image("/img/adr/UC 10.png", width: 80%),
+  caption: [Visualizzazione del valore medio globale],
+) <imgUC10>
+\
 
 === UC 11 - Visualizzazione dati maggiori della media globale <uc11>
-
 - *Descrizione: * L'utente può visualizzare i soli dati che sono maggiori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -371,9 +478,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale.
     + L'applicazione opacizza tutti i dati minori della media globale.
+#figure(
+  image("/img/adr/UC 11.png", width: 80%),
+  caption: [Visualizzazione dati maggiori della media globale],
+) <imgUC11>
+\
     
 === UC 12 - Visualizzazione dati minori della media globale <uc12>
-
 - *Descrizione: * L'utente può visualizzare i soli dati che sono minori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -381,9 +492,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale.
     + L'applicazione opacizza tutti i dati maggiori della media globale.
+#figure(
+  image("/img/adr/UC 12.png", width: 80%),
+  caption: [Visualizzazione dati minori della media globale],
+) <imgUC12>
+\
 
 === UC 13 - Visualizzazione dati con altezza compresa tra un intervallo <uc13>
-
 - *Descrizione: * L'utente può visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori (che può essere aperto o chiuso).
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -395,9 +510,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenari Alternativi: *
     - Visualizzazione dell'errore invalidArguments (@uc21).
-
+#figure(
+  image("/img/adr/UC 13.png", width: 100%),
+  caption: [Visualizzazione dati con altezza compresa tra un intervallo],
+) <imgUC13>
+\
+  
 === UC 14 - Visualizzazione della media in base al valore di X<uc14>
-
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -406,9 +525,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente seleziona un valore dell'asse X.
     + L'utente applica il filtro.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
+#figure(
+  image("/img/adr/UC 14.png", width: 100%),
+  caption: [Visualizzazione della media in base al valore di X],
+) <imgUC14>
+\
 
 === UC 15 - Visualizzazione della media in base al valore di Z<uc15>
-
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -417,9 +540,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente seleziona un valore dell'asse Z.
     + L'utente applica il filtro.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
+#figure(
+  image("/img/adr/UC 15.png", width: 100%),
+  caption: [Visualizzazione della media in base al valore di Z],
+) <imgUC15>
+\
 
 === UC 16 - Visualizzazione degli N valori maggiori<uc16>
-
 - *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più alto.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -427,9 +554,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
     + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
+#figure(
+  image("/img/adr/UC 16.png", width: 80%),
+  caption: [Visualizzazione degli N valori maggiori],
+) <imgUC16>
+\
 
-=== UC 17 - Visualizzazione degli N valori minori<uc17>
-
+=== UC 17 - Visualizzazione degli N valori minori <uc17>
 - *Descrizione: * L'utente può visualizzare all'interno del grafico gli N dati con valore più basso.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -437,9 +568,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
     +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
+#figure(
+  image("/img/adr/UC 17.png", width: 80%),
+  caption: [Visualizzazione degli N valori minori],
+) <imgUC17>
+\
 
-=== UC 18 - Reset dei filtri applicati alla visualizzazione dei dati<uc18>
-
+=== UC 18 - Reset dei filtri applicati alla visualizzazione dei dati <uc18>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
@@ -447,9 +582,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
     + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
+#figure(
+  image("/img/adr/UC 18.png", width: 80%),
+  caption: [Reset dei filtri applicati alla visualizzazione dei dati],
+) <imgUC18>
+\
 
-=== UC 19 - Esportazione di un grafico<uc19>
-
+=== UC 19 - Esportazione di un grafico <uc19>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
@@ -457,9 +596,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, decide di esportare il grafico.
     + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato.
+#figure(
+  image("/img/adr/UC 19.png", width: 80%),
+  caption: [Esportazione di un grafico],
+) <imgUC19>
+\
 
-=== UC 20 - Creazione di un'istantanea del grafico<uc20>
-
+=== UC 20 - Creazione di un'istantanea del grafico <uc20>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -467,9 +610,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
     + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva.
+#figure(
+  image("/img/adr/UC 20.png", width: 80%),
+  caption: [Creazione di un'istantanea del grafico],
+) <imgUC20>
+\
     
 === UC 21 - Visualizzazione errore invalidArguments <uc21>
-
 - *Descrizione: * L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
@@ -478,9 +625,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente inserisce dei dati all'interno del campo d'inserimento.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
+#figure(
+  image("/img/adr/UC 21.png", width: 80%),
+  caption: [Visualizzazione errore invalidArguments],
+) <imgUC21>
+\
 
 === UC 22 - Visualizzazione errore tooMuchData <uc22>
-
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -490,9 +641,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente decide l'input dei dati (file, database, api, ecc...).
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il numero di dati ricevuti supera la soglia massima supportata e che quindi i dati non sono stati caricati.
+#figure(
+  image("/img/adr/UC 22.png", width: 80%),
+  caption: [Visualizzazione errore tooMuchData],
+) <imgUC22>
+\
 
 === UC 23 - Visualizzazione errore invalidCsv <uc23>
-
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -502,9 +657,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente decide l'input dei dati (file csv).
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati.
+#figure(
+  image("/img/adr/UC 23.png", width: 80%),
+  caption: [Visualizzazione errore invalidCsv],
+) <imgUC23>
+\
 
 === UC 24 - Visualizzazione errore apiTimeout <uc24>
-
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una #glossario("API") che però non ha risposto alla richiesta entro un tempo limite.
 - *Precondizioni: * L'utente ha inserito l'#glossario("API") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -513,9 +672,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente decide l'input dei dati (#glossario("API")).
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
+#figure(
+  image("/img/adr/UC 24.png", width: 80%),
+  caption: [Visualizzazione errore apiTimeout],
+) <imgUC24>
+\
 
 === UC 25 - Visualizzazione errore emptyField <uc25>
-
 - *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
@@ -524,9 +687,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'utente lascia un input vuoto.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
+#figure(
+  image("/img/adr/UC 25.png", width: 80%),
+  caption: [Visualizzazione errore emptyField],
+) <imgUC25>
+\
 
 === UC 26 - Visualizzazione errore networkError <uc26>
-
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
 - *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -535,7 +702,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente decide l'input dei dati (#glossario("DB")).
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
-
+#figure(
+  image("/img/adr/UC 26.png", width: 80%),
+  caption: [Visualizzazione errore networkError],
+) <imgUC26>
+\
+  
     
 = Requisiti
 == Identificazione 
@@ -681,6 +853,7 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.1.29], [Decisione interna, UC23, UC2.4],
   [F.1.30], [Decisione interna, UC24, UC2.2],
   [F.1.31], [Decisione interna, UC25, UC2.1],
+  [F.1.32], [Decisione interna, UC26, UC2.3],
   [Q.1.1], [Capitolato],
   [Q.1.2], [Capitolato],
   [Q.1.3], [Capitolato],
@@ -702,9 +875,9 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   inset: 6pt,
   table.header([*Fonte*], [*Codice*],),
   [Capitolato], [F.1.1,\ F.1.2,\ F.3.1,\ F.1.3,\ F.1.4,\ F.1.6,\ F.1.7,\ F.1.8,\ F.1.9,\ F.1.10,\ F.1.11,\ F.1.14,\ F.1.15,\ F.1.16,\ F.1.18,\ F.1.19,\ F.1.20,\ F.1.22,\ F.1.23,\ F.1.24,\ F.1.25,\ Q.1.1,\ Q.1.2,\ Q.1.3,\ Q.1.4,\ Q.1.5,\ Q.1.6 ],
-  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.12,\ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26,\ F.2.1,\ F.2.2,\ F.1.27,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31,\ V.1.1],
+  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.12,\ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26,\ F.2.1,\ F.2.2,\ F.1.27,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31, \ F.1.32 \ V.1.1],
   [UC1],[F.1.1],
-  [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5 \ F.1.27, F.1.31, F.1.28, F.1.30, F.1.29 ],
+  [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5 \ F.1.27, F.1.31, F.1.28, F.1.30, F.1.29, F.1.32 ],
   [UC3],[F.1.6],
   [UC4],[F.1.7],
   [UC5],[F.1.8],
@@ -728,6 +901,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   [UC23],[F.1.29],
   [UC24],[F.1.30],
   [UC25],[F.1.31],
+  [UC26],[F.1.32],
   )
     <tab:fontecodice>
 ]
@@ -739,7 +913,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
-  [Funzionale],[31],[2],[3],
+  [Funzionale],[32],[2],[3],
   [Qualità],[6],[0],[0],
   [Vincolo],[1],[0],[0],
   )
