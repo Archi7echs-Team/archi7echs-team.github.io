@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, (p.pesenato, p.pozzobon),
     "0.2.0", "13-01-2025", "Stesura sez. Metodologie di testing, sottosez. identificazione dei test, test di sistema e test di accettazione", (p.pozzobon, p.lucato), (p.pesenato,p.valdagno),    
     "0.1.0", "19-12-2024", "Stesura introduzione", p.valdagno, (p.salvo, p.pozzobon),
@@ -67,8 +68,10 @@ Stabilire quali metriche di qualità del processo utilizzare consente di ottener
     [*MPC5*],[Actual Cost (*AC*)],[$ >= 0 $
 ],[$ <= "EAC" $],
     [*MPC6*],[Cost Performance Index (*CPI*)],[± 10% ],[0%],
-    [*MPC7*],[Estimated At Completion (*EAC*)],[±5% rispetto al #glossario("BAC")],[Pari al #glossario("BAC")],
-    [*MPC8*],[Estimated To Complete (*ETC*)],[$ >= 0 $
+    [*MPC7*],[Cost Variance (*CV*)],[$ >= -8% $
+],[$ >= 0 $],
+    [*MPC8*],[Estimated At Completion (*EAC*)],[±5% rispetto al #glossario("BAC")],[Pari al #glossario("BAC")],
+    [*MPC9*],[Estimated To Complete (*ETC*)],[$ >= 0 $
 ],[$ <= "EAC" $],
   )
     <tab:metricheProcessiPrimari>
@@ -82,8 +85,8 @@ Stabilire quali metriche di qualità del processo utilizzare consente di ottener
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Metrica*], [*Nome*],[*Valore accettabile*], [*Valore preferibile*]),
-    [*MPC9*],[Percentuale di Casi di Test Superati (*PCTS*)],[80%],[100%],
-    [*MPC10*],[Percentuale di Metriche Soddisfatte (*PMS*)],[85%],[100%],
+    [*MPC10*],[Percentuale di Casi di Test Superati (*PCTS*)],[80%],[100%],
+    [*MPC11*],[Percentuale di Metriche Soddisfatte (*PMS*)],[85%],[100%],
   )
     <tab:metricheProcessiSupporto>
 ]
@@ -96,7 +99,7 @@ Stabilire quali metriche di qualità del processo utilizzare consente di ottener
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Metrica*], [*Nome*], [*Valore  accettabile*], [*Valore preferibile*]),
-    [*MPC11*],[Rischi Non Previsti (*RNP*)],[$ <=3 $],[0],
+    [*MPC12*],[Rischi Non Previsti (*RNP*)],[$ <=3 $],[0],
   )
     <tab:metricheProcessiOrganizzativi>
 ]

@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.17.0", "14-01-2025", "Riscrittura relazione di estensione con extension points", p.scandaletti, (p.lucato, p.pozzobon),
     "0.16.0", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, (p.pesenato,p.pozzobon),
     "0.15.0", "12-01-2025", "Aggiunta sottosezione Management - Gestione immagini", p.scandaletti, (p.pesenato, p.pozzobon),
@@ -821,32 +822,38 @@ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di
   - *Formula*: _CPI = #math.frac("EV", "AC")_
 
 - *MPC7*:
+  - *Nome*: Cost Variance (*CV*)
+  - *Descrizione*: misura la differenza tra il valore guadagnato (EV) e il costo effettivo (AC), un valore negativo indica che si è oltre il budget previsto, mentre un valore positivo indica un risparmio rispetto ai costi pianificati.
+  - *Obiettivo*: monitorare l'aderenza al budget pianificato.
+  - *Formula*: _CV = EV - AC_
+
+- *MPC8*:
   - *Nome*: Estimated At Completion (*EAC*)
   - *Descrizione*: stima il costo totale previsto per completare il progetto, tenendo conto del rendimento attuale.
   - *Obiettivo*: fornire una previsione aggiornata dei costi finali del progetto.
   - *Formula*: _EAC = #math.frac("BAC", "CPI")_
 
-- *MPC8*:
+- *MPC9*:
   - *Nome*: Estimated To Complete (*ETC*)
   - *Descrizione*: rappresenta la stima dei costi necessari per completare il lavoro rimanente di un progetto.
   - *Obiettivo*: fornire una previsione dei costi futuri.
   - *Formula*: _ETC = EAC - AC_
 
 === Processi di supporto
-- *MPC9*:
+- *MPC10*:
   - *Nome*: Percentuale di Casi di Test Superati (*PCTS*)
   - *Descrizione*: misura la percentuale di casi di test eseguiti che hanno avuto esito positivo rispetto al totale dei casi di test eseguiti.
   - *Obiettivo*: valutare l'efficacia dei test nel garantire che il software soddisfi i requisiti e non presenti errori.
   - *Formula*: _PCTS = #math.frac("casi di test superati", "casi di test eseguiti") x 100_
 
-- *MPC10*:
+- *MPC11*:
   - *Nome*: Percentuale di Metriche Soddisfatte (*PMS*)
   - *Descrizione*: misura la percentuale di metriche di qualità che sono state soddisfatte.
   - *Obiettivo*: valutare in modo globale il livello di qualità raggiunto.
   - *Formula*: _PMS = #math.frac("metriche soddisfatte", "metriche totali") x 100_
 
 === Processi organizzativi
-- *MPC11*:
+- *MPC12*:
   - *Nome*: Rischi Non Previsti (*RNP*)
   - *Descrizione*: rappresenta il numero di rischi non previsti rilevati durante il progetto.
   - *Obiettivo*: ridurre il numero di rischi imprevisti, migliorando pianificazione e gestione.
