@@ -4,11 +4,11 @@
   title: "Verbale incontro 14/01/2025",
   subtitle: "Documento interno - verbale nr. 15",
   author: p.salvo,
-  state: "Bozza",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "20-01-2025",  "Prima stesura documento", p.salvo, "",
+    "0.1.0", "20-01-2025",  "Prima stesura documento", p.salvo, p.lucato,
   )
 )
 
@@ -58,7 +58,7 @@ Durante la riunione, #p.salvo illustra al gruppo i diagrammi UML che ha migliora
 Le modifiche eseguite ai diagrammi sono state inoltre accompagnate da delle modifiche agli #glossario("UC") a cui i diagrammi fanno riferimento, le quali vengono anch'esse esposte.
 
 == Discussione su ore eseguite e sullo stato del progetto
-Il team discute sul numero di ore eseguite in ogni ruolo persona per persona e di quante ore sono state eseguite di quelle disponibili. Inoltre il team discute dello stato del progetto osservando ogni documento.
+Il team discute sul numero di ore eseguite in ogni ruolo persona per persona e di quante ore sono state eseguite di quelle disponibili. Osservando queste tabelle si riscontra un buona gestione delle ore _totali_ dedicate (con il relativo costo effettivo) in linea con quanto previsto. Alcune valutazioni di ore preventivate di qualche ruolo _specifico_ invece andrà rivista, in quanto, nella prima fase di preventivo si è stati troppo restrittivi. Inoltre il team discute dello stato del progetto osservando ogni documento. Si osserva che alcuni documenti devono ancora essere ultimati e aggiornati come gli UML e l'Analisi dei Requisiti.
 
 == Definizione dei ruoli e passaggio di consegne
 Essendo la fine del quarto periodo, si procede alla definizione dei ruoli per il quinto periodo. La nuova assegnazione dei ruoli è la seguente:
