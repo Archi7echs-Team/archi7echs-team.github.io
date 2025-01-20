@@ -1,7 +1,7 @@
 #import "/templates/documento.typ": *
 
 #show: conf.with(
-  title: "Verbale incontro 12/01/2025",
+  title: "Verbale incontro 14/01/2025",
   subtitle: "Documento interno - verbale nr. 15",
   author: p.salvo,
   state: "Bozza",
