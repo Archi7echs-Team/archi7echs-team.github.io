@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, p.lucato,
+    "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
     "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
@@ -710,7 +710,7 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
   )
 ]
 *Obiettivi*:\
-Durante il quarto periodo l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormento aggiornate le #glossario("Norme di Progetto").
+Durante il quarto periodo l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
 
 In particolare, gli obiettivi principali di questa fase sono:
 - Ampliare la stesura delle #glossario("Norme di Progetto") con particolare attenzione alle metriche di qualità e la documentazione da consegnare.
