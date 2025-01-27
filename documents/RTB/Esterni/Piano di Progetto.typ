@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
     "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
@@ -688,6 +689,132 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 3", display_style: "hor-legend-chart",colors: (red, green))
+}
+
+== Periodo 4
+=== Pianificazione
+*Periodo*: 26/12/2024 - 13/1/20\25\
+*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+#align(center)[
+  #table(
+    columns: 2,
+    align: (col, row) => (center, center).at(col),
+    inset: 6pt,
+    table.header([*Ruolo*], [*Membri*]),
+      [Responsabile(Re)],[#p.pozzobon],
+      [Amministratore(Am)],[#p.valdagno, #p.scandaletti],
+      [Analista(An)],[#p.checchinato, #p.salvo],
+      [Programmatore(Prg)],[_non presente_],
+      [Verificatore(Ve)],[#p.pesenato, #p.lucato],
+      [Progettista(Prt)], [_non presente_]
+  )
+]
+*Obiettivi*:\
+Durante il quarto periodo l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
+
+In particolare, gli obiettivi principali di questa fase sono:
+- Ampliare la stesura delle #glossario("Norme di Progetto") con particolare attenzione alle metriche di qualità e la documentazione da consegnare.
+- Per il #glossario("Piano di Qualifica") verrà completata la sezione relativa ai test e gli obiettivi di qualità.
+- Per quanto riguarda invece l'#glossario("Analisi dei Requisiti") verranno completati i diagrammi #glossario("UML") in vista della revisione con il #p.cardin.
+
+*Possibili rischi*:\
+I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
+
+*Tabella preventivo*:\ // to do
+#align(center)[
+  #table(
+    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+    inset: 6pt,
+    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+    [Gabriele\ Checchinato],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+    [Leonardo\ Lucato],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
+    [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
+    [Francesco\ Pozzobon],[8],[1],[0],[0],[0],[0],[€ #(8*costo_ora.res+1*costo_ora.amm)],
+    [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+    [Gioele\ Scandaletti],[0],[6],[0],[0],[0],[0],[€ #(6 * costo_ora.amm)],
+    [Pietro\ Valdagno],[0],[9],[0],[0],[0],[0],[€ #(9*costo_ora.amm)],
+    [*Costo per ruolo*],[€ #(8*costo_ora.res)],[€ #(16*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ - ],[€ - ],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(240+320+165+250)*]],
+  )
+]
+*Distribuzione preventivata delle ore*:\ 
+
+#{
+  let plot = plot(data: (
+    (18, "Responsabile - " + perc(18,100)),
+    (36, "Amministratore - " + perc(36,100)),
+    (24, "Verificatore - " + perc(24,100)),
+    (0, "Progettista - " + perc(0,100)),
+    (0, "Programmatore - " + perc(0,100)),
+    (22, "Analista - " + perc(22,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito
+*Obiettivi non raggiunti*:\
+Di seguito sono elencate le #glossario("task") non completate
+
+- *Fix template*: l'attività non è stata completata entro la fine del periodo
+
+*Problematiche non attese*:\
+Durante il quarto periodo appena concluso si è verificato il seguente rischio che non era stato preventivato:
+
+- #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue").
+*Mitigazione rischi verificati*:\
+Durante il periodo oltre alla problematica non attesa, si è verificato una variazione importante dei costi da quanto preventivato che potrebbe avere delle ripercussioni nei periodi successivi. Al momento non causa particolari conseguenze dal punto di vista del costo preventivato in quanto le ore che dobbiamo dedicare al progetto sono ancora molte, tuttavia è corretto segnalarlo e tenerlo in considerazione per i periodi futuri
+
+*Possibili cambiamenti*:\
+La non presa in carico e termine dell'#glossario("issue") riferita al fix del template indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
+
+- *Gestione delle priorità a livello di issue*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del periodo devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del responsabile del progetto verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del task. Per questo tipo di attività si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo periodo. Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del periodo, analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
+
+*Tabella esito effettivo*:\ 
+#align(center)[
+  #table(
+    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+    inset: 6pt,
+    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+    [Gabriele\ Checchinato],[0],[1(#text(red)[+1])],[0],[0],[0],[4(#text(green)[-1])],[€ #(4*costo_ora.ana+1*costo_ora.amm) (#text(green)[-€ #(1*costo_ora.ana - 1*costo_ora.amm)])],
+    [Leonardo\ Lucato],[0],[4(#text(red)[+4])],[4(#text(green)[-1])],[0],[0],[3(#text(red)[+3])],[€ #(4*costo_ora.amm+4*costo_ora.ver+3*costo_ora.ana) (#text(red)[+€ #(3*costo_ora.ana+4*costo_ora.amm -1*costo_ora.ver)])],
+    [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
+    [Francesco\ Pozzobon],[7.75(#text(green)[-0.25])],[2.25(#text(red)[+1.25])],[0],[0],[0],[0],[€ #(7.75*costo_ora.res+2.25*costo_ora.amm) (#text(red)[+€ #(1.25*costo_ora.amm - 0.25*costo_ora.res)])],
+    [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana) ],
+    [Gioele\ Scandaletti],[0],[7(#text(red)[+1])],[0],[0],[0],[0],[€ #(7*costo_ora.amm) (#text(red)[+€ #(1*costo_ora.amm)])],
+    [Pietro\ Valdagno],[0.75 (#text(red)[+0.75]) ],[9],[0.5(#text(red)[+0.5])],[0],[0],[0],[€ #(0.75*costo_ora.res+9*costo_ora.amm+0.5*costo_ora.ver) (#text(red)[+€ #(0.75*costo_ora.res+0.5*costo_ora.ver)])],
+    [*Costo\ per ruolo*],[€ #(8.5*costo_ora.res) (#text(red)[+€ #(0.5*costo_ora.res)])],[€ #(23.25*costo_ora.amm) (#text(red)[+€ #(7.25*costo_ora.amm)])],[€ #(10.5*costo_ora.ver) (#text(green)[-€ #(0.5*costo_ora.ver)])],[€ -],[€ -],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(255+465+157.5+300)*] (#text(red)[*+€ #(15+145-7.5+50)*])],
+  )
+]
+
+#pagebreak();
+
+*Distribuzione effettiva delle ore*:
+#{
+  let plot = plot(data: (
+    (16.92, "Responsabile - " + perc(8.5,50.25)),
+    (46.27, "Amministratore - " + perc(23.25,50.25)),
+    (20.9, "Verificatore - " + perc(10.5,50.25)),
+    (0, "Progettista - " + perc(0,50.25)),
+    (0, "Programmatore - " + perc(0,50.25)),
+    (23.88, "Analista - " + perc(12,50.25)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+}
+
+*Progresso delle attività*:\
+#{
+  let plot = plot(data: (
+    (1.96, "Non fatto - " + perc(1,51)),
+    (98.04, "Fatto - " + perc(50,51)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 4", display_style: "hor-legend-chart",colors: (red, green))
 }
 
   
