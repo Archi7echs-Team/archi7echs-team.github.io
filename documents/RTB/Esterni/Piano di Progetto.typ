@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.6.0", "18-01-2025", "Stesura quarto periodo", p.pesenato, "",
+    "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, p.lucato,
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
     "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
     "0.4.1", "23-12-2024", "Fix versioni tabella delle revisioni", p.valdagno, (p.scandaletti,p.checchinato),
@@ -765,13 +765,13 @@ Durante il quarto periodo appena concluso si è verificato il seguente rischio c
 
 - #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue").
 *Mitigazione rischi verificati*:\
-Durante il periodo oltre alla problematica non attesa, si è verificato una variazione importante dei costi da quanto preventivato che potrebbe avere delle ripercussioni nei periodi successivi. Al momento non causa particolari problematiche dal punto di vista del costo preventivato in quanto le ore che dobbiamo dedicare al progetto sono ancora molte, tuttavia è corretto segnalarlo e tenerlo in considerazione per i periodi futuri
+Durante il periodo oltre alla problematica non attesa, si è verificato una variazione importante dei costi da quanto preventivato che potrebbe avere delle ripercussioni nei periodi successivi. Al momento non causa particolari conseguenze dal punto di vista del costo preventivato in quanto le ore che dobbiamo dedicare al progetto sono ancora molte, tuttavia è corretto segnalarlo e tenerlo in considerazione per i periodi futuri
 
 *Possibili cambiamenti*:\
 La non presa in carico e termine dell'#glossario("issue") riferita al fix del template indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
 
 - *Gestione delle priorità a livello di issue*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del periodo devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del responsabile del progetto verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del task. Per questo tipo di attività si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
-- *Gestione delle ore preventivate*: una soluzione può essere una riunione settimanale, durante la quale il team analizza le ore effettivamente spese e le confronta con quelle preventivate. Eventuali scostamenti significativi devono essere immediatamente segnalati e documentati.
+- *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo periodo. Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del periodo, analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
 
 *Tabella esito effettivo*:\ 
 #align(center)[
