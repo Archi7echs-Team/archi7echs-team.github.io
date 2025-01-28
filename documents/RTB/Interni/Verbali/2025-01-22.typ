@@ -4,10 +4,11 @@
   title: "Verbale incontro 22/01/2025",
   subtitle: "Documento interno - verbale nr. 16",
   author: p.salvo,
+  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, "",
+    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, p.checchinato,
   )
 )
 
@@ -61,7 +62,7 @@ Le modifiche richieste vengono esplicitate a #p.valdagno che sarà l'addetto all
 Il team discute sui miglioramenti necessari per la terminazione del #glossario("PoC"). Tra i miglioramenti necessari ne vengono particolarmente individuati due, l'aggiunta di barre dello stesso colore per y uguale e etichette con i nomi degli assi, oltre a un miglioramento generale del grafico.
 
 == Discussione su come organizzare riunioni future
-#p.pesenato chiede al team di pensare alle possibili date per riunioni future in vista della fine del periodo e della necessita di effettuare la candidatura per #glossario("RTB"). Il team concorda con una riunione indicativamente il 30/01/2025 con conseguente invio di lettera di candidatura il 31/01/2025.
+#p.pesenato chiede al team di pensare alle possibili date per riunioni future in vista della fine del periodo e della necessita di effettuare la candidatura per l'#glossario("RTB"). Il team concorda con una riunione indicativamente il 30/01/2025 con conseguente invio di lettera di candidatura il 31/01/2025.
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l'incontro del team Archi7echs è terminato alle 15:50. \
