@@ -71,7 +71,7 @@ Il team si impegna a contattare l'azienda dopo la riunione interna di settimana 
 
 #decisioni((
   [1],[#glossario("AdR")],[Apportare le modifiche suggerite riguardo a #glossario("UC") e diagrammi UML],
-  [2],[Requisiti di vincolo],[Stabilire le dimensioni massime dei file .cvs],
+  [2],[Requisiti di vincolo],[Stabilire le dimensioni massime dei file .csv],
   [4],[Prossimo incontro],[Stabilire la data e l'orario del prossimo incontro],
 )) 
 
