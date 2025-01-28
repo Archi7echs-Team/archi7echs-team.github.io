@@ -55,7 +55,7 @@ Alex Beggiato sottolinea l'importanza di soffermarsi sul #glossario("UC") che sp
 #p.valdagno chiede delucidazioni sulla grandezza in bytes e se essa sia un requisito di vincolo o no. #p.salvo illustra i cambiamenti fatti a seguito dei consigli forniti da Alex Alex Beggiato nella scorsa riunione con l'azienda.
 
 == Allineamento su tempistiche per RTB
-Alex Beggiato chiede le tempistiche e un chiarimento su cio che aspetta il team. #p.pesenato essendo il responsabile risponde facendo presente la volonta del gruppo di presentare la candidatura al #glossario("RTB") entro la fine di gennaio.
+Alex Beggiato chiede le tempistiche e un chiarimento su ciò che aspetta il team. #p.pesenato essendo il responsabile risponde facendo presente la volontà del gruppo di presentare la candidatura al #glossario("RTB") entro la fine di gennaio.
 
 == Domande su PoC
 #p.scandaletti chiede chiarimenti sui colori assegnati alle colonne del grafico e su come rappresentare le label per gli assi.
