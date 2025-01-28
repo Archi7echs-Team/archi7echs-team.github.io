@@ -753,7 +753,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * 
   - L'utente viene avvisato del fatto che il #glossario("DB") fornito non ha risposto entro un tempo limite di timeout.
 - *Scenario Principale: *
-    + L'utente decide l'input dei dati (#glossario("DB")).
+    + L'utente decide l'input dei dati (ad esempio #glossario("DB")).
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 
@@ -840,7 +840,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.28], [@uc21 \ #glossario("UC")21], [L'utente ha inserito dei dati all'interno di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
   [F.1.29], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
   [F.1.30], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che il file .csv da lui selezionato ha una  formattazione interna non corretta], [1 - Obbligatorio],
-  [F.1.31], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite uan chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
+  [F.1.31], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
   [F.1.32], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'interno di un input che non può essere vuoto], [1 - Obbligatorio],
   [F.1.33], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al database], [1 - Obbligatorio],
   [F.1.34], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che il file .csv da lui selezionato ha un peso che supera il limite consentito], [1 - Obbligatorio],
@@ -877,7 +877,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   inset: 6pt,
   table.header([*Codice*], [*Descrizione*], [*Classificazione*]),
   [V.1.1], [L'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000 dati ], [1 - Obbligatorio],
-  [V.1.2], [L'applicazione deve supportare un massimo di 300 elementi per le coordinate X e Z mantendo il limite di 1000 dati (es. con 300 righe, il massimo numero di colonne sarà pari a 3)], [1 - Obbligatorio],
+  [V.1.2], [L'applicazione deve supportare un massimo di 300 elementi per le coordinate X e Z mantenendo il limite di 1000 dati (es. con 300 righe, il massimo numero di colonne sarà pari a 3)], [1 - Obbligatorio],
   [V.1.3], [L'applicazione deve supportare il caricamento dati da un file .csv che pesa al massimo 10 MB ], [1 - Obbligatorio],
   )
     <tab:reqVincolo>
