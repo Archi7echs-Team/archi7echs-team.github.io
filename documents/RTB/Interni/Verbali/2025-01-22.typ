@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, p.checchinato,
+    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, (p.checchinato, p.pesenato),
   )
 )
 
