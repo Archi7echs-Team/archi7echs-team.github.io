@@ -52,7 +52,7 @@ Si procede alla discussione in ordine dei punti all’ordine del giorno.
 == Revisione #glossario("SAL") con Sanmarco Informatica
 #p.valdagno, in qualità di analista, apre la riunione con un riassunto su quello che il gruppo ha svolto sull'#glossario("AdR") a seguito di discussioni interne avute e grazie alla chiamata effettuata con il #p.cardin.\ 
 Alex Beggiato sottolinea l'importanza di soffermarsi sul #glossario("UC") che specifica la selezione del file .csv che contiene un'imprecisione e si sofferma sul funzionamento dei file .csv e della presenza di molteplici separatori accettati.\
-#p.valdagno chiede delucidazioni sulla grandezza in bytes e se essa sia un requisito di vincolo o no. #p.salvo illustra i cambiamenti fatti a seguito dei consigli forniti da Alex Alex Beggiato nella scorsa riunione con l'azienda.
+#p.valdagno chiede delucidazioni sulla grandezza in bytes e se essa sia un requisito di vincolo o no. #p.salvo illustra i cambiamenti fatti a seguito dei consigli forniti da Alex Beggiato nella scorsa riunione con l'azienda.
 
 == Allineamento su tempistiche per RTB
 Alex Beggiato chiede le tempistiche e un chiarimento su ciò che aspetta il team. #p.pesenato essendo il responsabile risponde facendo presente la volontà del gruppo di presentare la candidatura al #glossario("RTB") entro la fine di gennaio.
