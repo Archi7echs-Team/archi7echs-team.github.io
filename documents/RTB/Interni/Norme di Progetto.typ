@@ -5,10 +5,11 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, "",
+    "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, p.lucato,
     "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.17.0", "14-01-2025", "Riscrittura relazione di estensione con extension points", p.scandaletti, (p.lucato, p.pozzobon),
     "0.16.0", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, (p.pesenato,p.pozzobon),
@@ -128,7 +129,7 @@ Il documento cardine dell’attività di analisi è l'#glossario("AdR") composta
 La modalità con cui vengono descritti i casi d'uso e i requisiti sono specificati all'interno del documento #glossario("AdR").
 
 === Attività di progettazione
-L'attività di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare l’attività di codifica per facilitare l’attività. L’obiettivo dell’attività di progettazione è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
+L'attività di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’attività di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
 
 Il documento cardine dell’attività di analisi composto da:
 - *Introduzione*: presentazione del documento
@@ -332,7 +333,7 @@ Il simbolo che c'è prima di un'attributo è detto _visibilità_ e può essere d
 - *∼* indica che la visibilità è di package
 \
 Le _proprietà aggiuntive_ possono essere:
-- _Orderd_ : Per array o vettori
+- _Ordered_ : Per array o vettori
 - _Unordered_: Per gli insiemi
 
 ==== Identificare le relazioni
@@ -455,7 +456,7 @@ Nella documentazione prodotta dal gruppo vengono utilizzati, vista la ripetizion
 
 
 == Verifica e Revisione della documentazione
-Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile") in quanto tale dovrà andare a verificare il lavoro svolto dal #glossario("verificatore") e inoltre dovrà leggere i cambiamenti per garantire l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito.
+Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra tabella delle revisioni ha la colonna "Verifica" con 2 nomi: il primo è il verificatore, mentre il secondo è il responsabile.
 
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
@@ -529,7 +530,7 @@ Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggis
 Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in modalità di messaggistica o riunione online scegliendo tra le piattaforme gratuite presenti in rete.
 
 == Validazione
-L’attività di validazione viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’attività di validazione è anche attraverso l’interazione diretta con il committente di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso sia funzionante correttamente avendo quindi un prodotto software pronto al rilascio.
+L’attività di validazione viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’attività di validazione è anche, attraverso l’interazione diretta con il committente, di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso funzioni correttamente avendo quindi un prodotto software pronto al rilascio. Dunque potremmo definire questa attività come il processo di accertamento che il prodotto software soddisfi i requisiti specificati e che sia conforme all’uso previsto, come spuntare una checklist di controllo.
 
 == Qualità
 L’attività di gestione della qualità è un processo ampiamente descritto nel documento #glossario("PdQ").
@@ -773,7 +774,9 @@ Ogni singolo processo è parte integrante della retrospettiva del periodo, dove 
 Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
 
 === Miglioramento
-L’attività di miglioramento si svolge identificando le aree adatte a un miglioramento e alla successiva ricerca per migliorare le aree identificate. L’obiettivo dell’attività è un miglioramento costante sia a livello di tempo che a livello di qualità in ogni processo. L’identificazione si materializza attraverso la retrospettiva svolta durante ogni riunione grazie anche al cruscotto. 
+L'attività di miglioramento è un aspetto fondamentale per garantire efficienza e qualità dei processi. Si identificano tutte quelle "aree" che necessitano degli accorgimenti che possono interessare questioni tempistiche e/o di qualità apportando quindi le dovute modifiche necessarie.
+L’identificazione si materializza attraverso la retrospettiva svolta durante ogni riunione (ampiamente descritto all'interno del #glossario("PdP")) e anche grazie al cruscotto che permette di avere una visione d'insieme dei processi e delle issue in corso.
+  
 
 === Formazione
 L’attività di formazione è necessaria per avere un gruppo con conoscenze allineate e adatte per la realizzazione del progetto. L’obiettivo dell’attività è un gruppo con membri capaci di ricoprire ogni ruolo all’interno del gruppo avendo conseguito un livello di conoscenza generale adatto.
