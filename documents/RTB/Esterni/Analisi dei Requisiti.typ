@@ -155,7 +155,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente accede alla sezione di inserimento dei dati.
     + L'utente seleziona il metodo di caricamento dati:
       - Tramite interfaccia (@uc2.1);
-      - Tramite API (@uc2.2);
+      - Tramite chiamata all'API esterna Weather Forecast (@uc2.2);
       - Tramite connessione database SQL (@uc2.3);
       - Tramite file .csv (@uc2.4).
     + Il sistema salva i dati.
@@ -243,7 +243,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC2.1.3>
 \
 
-=== UC 2.2 - Caricamento automatico dati tramite chiamata #glossario("API") <uc2.2>
+=== UC 2.2 - Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast <uc2.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico selezionando la chiamata all'#glossario("API") esterna Weather Forecast di Open-Meteo come metodo di caricamento.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite chiamata ad #glossario("API") esterna.
