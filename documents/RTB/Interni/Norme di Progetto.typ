@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, (p.lucato, p.pesenato),
     "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.17.0", "14-01-2025", "Riscrittura relazione di estensione con extension points", p.scandaletti, (p.lucato, p.pozzobon),
     "0.16.0", "12-01-2025", "Aggiunta sottosezione Diagramma di Gantt", p.scandaletti, (p.pesenato,p.pozzobon),
@@ -111,6 +112,37 @@ Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei me
 - *Google Drive e suite Google Documenti* per l'archiviazione e la modifica dei file condivisi del gruppo, quali:
   - Foglio appunti riunioni
   - Foglio ore condiviso
+
+== Sviluppo
+=== Introduzione
+Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito come un insieme strutturato di attività di analisi, progettazione, codifica, integrazione, testing, installazione ed accettazione dei requisiti richiesti dal committente.
+
+=== Attività di analisi
+L'attività di analisi viene svolta tramite l'analisi dei requisiti dagli analisi prevedendo l'identificazione, la raccolta e l'analisi dei requisiti funzionali e non del sistema e del software. L'obiettivo dell'attività di analisi è la comprensione e la definizione in modo esaustivo delle esigenze del cliente e del sistema. Inoltre, essa identificando i requisiti può facilitare la realizzazione dei requisiti e fornire una stima di costi e tempo.
+
+Il documento cardine dell’attività di analisi è l'#glossario("AdR") composta da:
+- *Introduzione*: presentazione del documento
+- *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, funzionalità, caratteristiche utente e tecnologie usate
+- *Casi d'uso*: funzionalità offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi UML che seguono uno standard
+- *Requisiti*: ovvero l'insieme delle funzionalità richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
+
+La modalità con cui vengono descritti i casi d'uso e i requisiti sono specificati all'interno del documento #glossario("AdR").
+
+=== Attività di progettazione
+L'attività di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’attività di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
+
+Il documento cardine dell’attività di analisi composto da:
+- *Introduzione*: presentazione del documento
+- *Tecnologie usate*: definisce che tecnologie e che librerie di terze parti sono state usate.
+- *Architettura*: definisce i componenti e le interazioni del sistema sia in modo testuale che grafico seguendo lo standard
+- *Requisiti soddisfatti*: un riassunto sullo stato di completamento dei requisiti identificati precedentemente
+
+La modalità con cui vengono descritti i vari componenti dell’architettura è specificata nel documento.
+
+=== Attività di codifica
+L'attività di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’attività di progettazione. L’obiettivo dell’attività di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l’architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
+
+L'attività di codifica deve seguire le metriche definite nel #glossario("PdQ"). 
 
 #pb()
 = Processi di Supporto
@@ -301,7 +333,7 @@ Il simbolo che c'è prima di un'attributo è detto _visibilità_ e può essere d
 - *∼* indica che la visibilità è di package
 \
 Le _proprietà aggiuntive_ possono essere:
-- _Orderd_ : Per array o vettori
+- _Ordered_ : Per array o vettori
 - _Unordered_: Per gli insiemi
 
 ==== Identificare le relazioni
@@ -424,7 +456,7 @@ Nella documentazione prodotta dal gruppo vengono utilizzati, vista la ripetizion
 
 
 == Verifica e Revisione della documentazione
-Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile") inoltre, dovrà svolgere lo stesso lavoro dopo la conferma del #glossario("verificatore") per garantire l'approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito.
+Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra tabella delle revisioni ha la colonna "Verifica" con 2 nomi: il primo è il verificatore, mentre il secondo è il responsabile.
 
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
@@ -497,8 +529,41 @@ Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggis
 
 Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in modalità di messaggistica o riunione online scegliendo tra le piattaforme gratuite presenti in rete.
 
-#pb()
+== Validazione
+L’attività di validazione viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’attività di validazione è anche, attraverso l’interazione diretta con il committente, di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso funzioni correttamente avendo quindi un prodotto software pronto al rilascio. Dunque potremmo definire questa attività come il processo di accertamento che il prodotto software soddisfi i requisiti specificati e che sia conforme all’uso previsto, come spuntare una checklist di controllo.
 
+== Qualità
+L’attività di gestione della qualità è un processo ampiamente descritto nel documento #glossario("PdQ").
+
+== Configurazione
+L’attività di gestione della configurazione è un processo che norma l’identificazione, organizzazione e controllo delle modifiche agli “artefatti” durante il loro ciclo di vita.
+
+=== Repository
+Le #glossario("repository") del team archi7echs sono:
+- *archi7echs-team.github.io*: repository usata per il versionamento, gestione e sviluppo dei file sorgente relativi alla documentazione nel branch sources, per generare la pagina web viene usato il branch website mentre i documenti compilati si possono trovare nel branch master \ Riferimento: #link("https://github.com/Archi7echs-Team/archi7echs-team.github.io")[#text(blue)[https://github.com/Archi7echs-Team/archi7echs-team.github.io]] - _Ultimo accesso al link 29/01/2025_
+- *PoC*: repository usata per il #glossario("PoC") \ Riferimento: #link("https://github.com/Archi7echs-Team/PoC")[#text(blue)[https://github.com/Archi7echs-Team/PoC]] - _Ultimo accesso al link 29/01/2025_
+
+=== Struttura repository
+La struttura del branch master è (le directory sono segnate in grassetto):
+- *documents*
+  - *Candidatura*
+    - *Verbali*
+    - Analisi capitolati
+    - Lettera Candidatura
+    - Preventivo
+  - *RTB*
+    - *Esterni*
+      - *Verbali*
+      - Analisi dei requisiti
+      - Piano di Progetto
+      - Piano di Qualifica
+    - *Interni*
+      - *Verbali*
+      - Glossario
+      - Norme di Progetto
+
+
+#pb()
 = Management
 
 == Gestione dell'assegnazione dei ruoli
@@ -707,6 +772,17 @@ Il responsabile di progetto, al verificarsi di una situazione di rischio, è ten
 === Retrospettiva
 Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
 Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
+
+=== Miglioramento
+L'attività di miglioramento è un aspetto fondamentale per garantire efficienza e qualità dei processi. Si identificano tutte quelle "aree" che necessitano degli accorgimenti che possono interessare questioni tempistiche e/o di qualità apportando quindi le dovute modifiche necessarie.
+L’identificazione si materializza attraverso la retrospettiva svolta durante ogni riunione (ampiamente descritto all'interno del #glossario("PdP")) e anche grazie al cruscotto che permette di avere una visione d'insieme dei processi e delle issue in corso.
+  
+
+=== Formazione
+L’attività di formazione è necessaria per avere un gruppo con conoscenze allineate e adatte per la realizzazione del progetto. L’obiettivo dell’attività è un gruppo con membri capaci di ricoprire ogni ruolo all’interno del gruppo avendo conseguito un livello di conoscenza generale adatto.
+\ L’attività si divide in due modalità: 
+-	*Individuale*: ogni membro si impegnerà a raggiungere un livello di conoscenze adatto per ricoprire ogni ruolo in modo autonomo
+-	*Di gruppo*: per gruppo si intende anche due persone, nel caso l’attività individuale non sia consigliata o normalmente essa si svolge nel cambio dei ruoli passando le conoscenze maturate durante il periodo al gruppo o al singolo che andrà a ricoprire il ruolo.
 
 #pb()
 = Standard di qualità
