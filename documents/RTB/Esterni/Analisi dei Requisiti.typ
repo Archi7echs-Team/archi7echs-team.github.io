@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, p.lucato,
+    "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.4", "19-01-2025", "Aggiunta immagini degli UC e modifica tabelle riferimenti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.3", "13-01-2025", "Aggiunta UC da 19 a 26 e fix UC 2,10", p.salvo,p.pesenato,
     "0.7.2", "10-01-2025", "Modifica UC 1, UC 2, UC 2.1, UC 2.1.1, UC 2.1.2, UC 2.1.3, UC 14, UC 15  ", p.checchinato,(p.lucato, p.pozzobon),
