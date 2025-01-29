@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, p.checchinato,
+    "0.1.0", "28-01-2025",  "Prima stesura documento", p.salvo, (p.checchinato, p.pesenato),
   )
 )
 
@@ -63,7 +63,7 @@ Alex Beggiato chiede le tempistiche e un chiarimento su ciò che aspetta il team
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l’incontro è terminato alle 17:30. \
-Non viene indicato il giorno preciso del prossimo incontro ma viene comunque suggerito che avvenga dopo la candidatura per la fase #glossario("RTB"). \
+Il prossimo incontro #glossario("SAL") è stato programmato per il giorno 05/02/2025 alle ore 16:00. \
 Il team si impegna a contattare l'azienda dopo la riunione interna di settimana prossima.
 ])
 
@@ -72,7 +72,6 @@ Il team si impegna a contattare l'azienda dopo la riunione interna di settimana 
 #decisioni((
   [1],[#glossario("AdR")],[Apportare le modifiche suggerite riguardo a #glossario("UC") e diagrammi UML],
   [2],[Requisiti di vincolo],[Stabilire le dimensioni massime dei file .csv],
-  [4],[Prossimo incontro],[Stabilire la data e l'orario del prossimo incontro],
 )) 
 
 
