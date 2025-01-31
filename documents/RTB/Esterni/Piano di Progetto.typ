@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
     "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
@@ -29,16 +30,16 @@
 Il #glossario("PdP") è il documento che fornisce una guida strutturata per l'esecuzione e il monitoraggio continuo del #glossario("progetto"), fino al suo completamento. Lo scopo è quello di assicurare che ci sia una chiara comprensione degli obiettivi, delle #glossario("attività") pianificate, dei ruoli e delle risorse investite durante gli sprint effettuati. Questo permette al team e allo stakeholder di avere un singolo documento dove potersi allineare con lo stato di avanzamento del #glossario("progetto").
 
 == Glossario
-All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
+All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
 
 == Il capitolato
-L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi quantità di dati attraverso una rappresentazione visiva in 3D. I dati ricevuti saranno visualizzati sotto forma di istogrammi tridimensionali, con supporto per rotazione, pan, zoom e selezione interattiva delle barre. Gli utenti principali della piattaforma saranno le aziende che necessitano di strumenti avanzati per l’analisi e la visualizzazione di dati, utilizzabili sia internamente che per la comunicazione con clienti e stakeholder.
+L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi quantità di dati attraverso una rappresentazione visiva in #glossario("3D"). I dati ricevuti saranno visualizzati sotto forma di istogrammi tridimensionali, con supporto per rotazione, pan, zoom e selezione interattiva delle barre. Gli utenti principali della #glossario("piattaforma") saranno le aziende che necessitano di strumenti avanzati per l’analisi e la visualizzazione di dati, utilizzabili sia internamente che per la comunicazione con clienti e stakeholder.
 
 == Riferimenti utili
 === Link al capitolato C5 - 3Dataviz
-- Riferimento al capitolato 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]]
+- Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]]
 === Slide del corso IS
-- Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]]
+- Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]]
 - Riferimento alle slide IS: *_Gestione di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]]
 
 = Informazioni del progetto
@@ -72,16 +73,16 @@ Questa sezione tiene traccia delle eventuali modifiche che vengono apportate all
 
 === Dopo la candidatura del 04/11/2024
 
-La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del capitolato. Il costo totale preventivato è di €12.530 (*limite invalicabile*) suddiviso in:
+La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del #glossario("capitolato"). Il costo totale preventivato è di €12.530 (*limite invalicabile*) suddiviso in:
 
 #table(
     columns: (1fr, auto, auto, auto, auto),
     align: (col, row) => (center, center, center, center, center).at(col),
     inset: 6pt,
     table.header([*Ruolo*], [*Costo/h*], [*Ore*],[*Costo ruolo*], [*Ore/Membro*]),
-    [Responsabile], [30€], [63h], [1890€], [9h],
-    [Amministratore], [20€], [56h], [1120€], [8h],
-    [Verificatore], [15€], [154h], [2310€], [22h],
+    [#glossario("Responsabile")], [30€], [63h], [1890€], [9h],
+    [#glossario("Amministratore")], [20€], [56h], [1120€], [8h],
+    [#glossario("Verificatore")], [15€], [154h], [2310€], [22h],
     [Progettista], [25€], [105h], [2625€], [15h],
     [Programmatore], [15€], [189h], [2835€], [27h],
     [Analista], [25€], [70h], [1750€], [10h]
@@ -105,27 +106,27 @@ La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del
 \
 
 === Scelta della metodologia da utilizzare <scelta_metodologia>
-Per il #glossario("progetto") è stata scelta la metodologia Agile-Scrum come framework operativo. Questa decisione si basa sulla necessità di affrontare la complessità del #glossario("progetto") in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
+Per il #glossario("progetto") è stata scelta la metodologia Agile-Scrum come #glossario("framework") operativo. Questa decisione si basa sulla necessità di affrontare la complessità del #glossario("progetto") in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
 Le motivazioni per l'adozione di Agile-Scrum sono:
-+ *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del #glossario("progetto"), rispondendo prontamente a nuove esigenze o priorità. Ogni periodo rappresenta un ciclo breve e pianificabile, garantendo un processo continuo di revisione e miglioramento.
-+ *Focus sul Valore*: Il lavoro viene suddiviso in User Stories prioritarie, permettendo di concentrarsi sulle funzionalità che portano il massimo valore agli utenti finali. L’approccio iterativo facilita la consegna frequente di incrementi tangibili e utilizzabili del prodotto.
-+ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del periodo), e Sprint Review (retrospettiva del periodo) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, mantenendo alta la trasparenza.
++ *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del #glossario("progetto"), rispondendo prontamente a nuove esigenze o priorità. Ogni #glossario("periodo") rappresenta un ciclo breve e pianificabile, garantendo un #glossario("processo") continuo di #glossario("revisione") e miglioramento.
++ *Focus sul Valore*: Il lavoro viene suddiviso in User Stories prioritarie, permettendo di concentrarsi sulle #glossario("funzionalità") che portano il massimo valore agli utenti finali. L’approccio iterativo facilita la consegna frequente di incrementi tangibili e utilizzabili del prodotto.
++ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del #glossario("periodo")), e Sprint Review (#glossario("retrospettiva") del #glossario("periodo")) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, mantenendo alta la trasparenza.
 + *Gestione dei Rischi*: I rischi vengono identificati e gestiti continuamente, riducendo la probabilità di fallimenti significativi. Il formato iterativo consente di testare e validare frequentemente le ipotesi. Questo, se applicato correttamente, garantisce di aggiungere/modificare la _@gestione_dei_rischi _, relativa alla gestione dei rischi, non solo in base a "periodi brevi" ma soprattutto anche a "lungo raggio".
-+ *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi esterni, nuove funzionalità da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
++ *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi #glossario("esterni"), nuove #glossario("funzionalità") da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
 
 == Introduzione struttura per descrizione dei periodi
-In questa sezione viene descritta la modalità utilizzata dal gruppo per la descrizione di ogni singolo periodo.
+In questa sezione viene descritta la modalità utilizzata dal gruppo per la descrizione di ogni singolo #glossario("periodo").
 Avendo adottato la metodologia Agile-Scrum (_@scelta_metodologia _), è importante documentare le informazioni chiave, così da poter monitorare i progressi, facilitare la riflessione e il miglioramento continuo. Per garantire queste caratteristiche, una singola descrizione è composta da due componenti: la pianificazione e l'esito effettivo.
 
 == Struttura della pianificazione
 
-+ *Titolo*: identifica il periodo (es. Periodo1, ID-Periodo, ecc...)
-+ *Periodo*: identifica la data d'inizio e di fine 
++ *Titolo*: identifica il #glossario("periodo") (es. Periodo1, #glossario("ID")-#glossario("Periodo"), ecc...)
++ *#glossario("Periodo")*: identifica la data d'inizio e di fine 
 + *Ruoli*: identifica una tabella con i ruoli assegnati
-+ *Descrizione obiettivi*: individua la sezione contenente una breve descrizione del periodo e degli obiettivi da raggiungere.
-+ *Possibili rischi*: identifica la sezione in cui si pensano quali rischi possono occorrere durante il periodo. Questo è molto importante per tutto il team in quanto garantisce una visione generale delle problematiche che potrebbero essere incontrate e risolte tramite la gestione dei rischi.
++ *Descrizione obiettivi*: individua la sezione contenente una breve descrizione del #glossario("periodo") e degli obiettivi da raggiungere.
++ *Possibili rischi*: identifica la sezione in cui si pensano quali rischi possono occorrere durante il #glossario("periodo"). Questo è molto importante per tutto il team in quanto garantisce una visione generale delle problematiche che potrebbero essere incontrate e risolte tramite la gestione dei rischi.
 + *Tabella preventivo*: identifica la tabella con l'impegno in ore che ogni componente del gruppo decide di dedicare al determinato ruolo
-+ *Distribuzione preventivata delle ore*: il grafico a torta rappresenta la suddivisione percentuale delle ore preventivate per ciascun ruolo, calcolata rispetto al totale delle ore pianificate per il periodo considerato.
++ *Distribuzione preventivata delle ore*: il grafico a torta rappresenta la suddivisione percentuale delle ore preventivate per ciascun ruolo, calcolata rispetto al totale delle ore pianificate per il #glossario("periodo") considerato.
 === Esempio punti 6,7
 *Esempio tabella preventivo*:
 #table(
@@ -141,7 +142,7 @@ Avendo adottato la metodologia Agile-Scrum (_@scelta_metodologia _), è importan
 )
 Il *Costo persona* viene ricavato tramite una somma (per riga) delle moltiplicazioni tra le ore effettuate dei ruoli e il loro rispettivo costo per ora.\
 Il *Costo per ruolo* viene ricavato tramite una somma (per colonna) delle ore dedicate al ruolo moltiplicato per il suo costo orario.\
-Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
+Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").\
 *Esempio suddivisione ore*:
 #{
   let plot = plot(data: (
@@ -161,11 +162,11 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
 
 + *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. E' molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
 + *Problematiche non attese*: identifica la sezione in cui vengono elencate tutte quelle problematiche che non erano state considerate durante la fase preliminare o nelle fasi preliminari di periodi precedenti.
-+ *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il periodo. Questo permette di avere un feedback immediato sullo stato del #glossario("progetto") e di capire se le azioni intraprese sono state efficaci o meno.
-+ *Possibili cambiamenti*: identifica la sezione in cui vengono discussi dei miglioramenti presi in considerazione in base a quanto rilevato durante il periodo affrontato. In questa parte il team ritiene molto importante identificare _tutti_ i cambiamenti da attuare, dunque non solo quelli per il periodo successivo ma anche (e soprattutto) in visione "a lungo raggio".
-+ *Tabella esito effettivo*: identifica la tabella che riporta il quantitativo di ore utilizzate nell'effettivo. Questo permettere di avere un feedback immediato sullo stato del #glossario("progetto"), con relativo incremento/decremento o invarianza del costo totale del periodo.
-+ *Distribuzione effettiva delle ore*: il grafico a torta mostra la reale distribuzione delle ore impiegate per i vari ruoli, calcolata in base ai dati effettivi raccolti al termine del periodo. Questo consente di confrontare quanto previsto con quanto realmente accaduto.
-+ *Progresso delle attività* : in questa sezione verrà creato un grafico a torta che identifica la percentuale di #glossario("attività") svolte in base a tutte quelle presenti nel #glossario("backlog") della #glossario("milestone") del periodo.\
++ *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il #glossario("periodo"). Questo permette di avere un feedback immediato sullo stato del #glossario("progetto") e di capire se le azioni intraprese sono state efficaci o meno.
++ *Possibili cambiamenti*: identifica la sezione in cui vengono discussi dei miglioramenti presi in considerazione in base a quanto rilevato durante il #glossario("periodo") affrontato. In questa parte il team ritiene molto importante identificare _tutti_ i cambiamenti da attuare, dunque non solo quelli per il #glossario("periodo") successivo ma anche (e soprattutto) in visione "a lungo raggio".
++ *Tabella esito effettivo*: identifica la tabella che riporta il quantitativo di ore utilizzate nell'effettivo. Questo permettere di avere un feedback immediato sullo stato del #glossario("progetto"), con relativo incremento/decremento o invarianza del costo totale del #glossario("periodo").
++ *Distribuzione effettiva delle ore*: il grafico a torta mostra la reale distribuzione delle ore impiegate per i vari ruoli, calcolata in base ai dati effettivi raccolti al termine del #glossario("periodo"). Questo consente di confrontare quanto previsto con quanto realmente accaduto.
++ *Progresso delle #glossario("attività")* : in questa sezione verrà creato un grafico a torta che identifica la percentuale di #glossario("attività") svolte in base a tutte quelle presenti nel #glossario("backlog") della #glossario("milestone") del #glossario("periodo").\
 
 === Esempio punti 4,5
 *Esempio tabella esito effettivo*:
@@ -192,7 +193,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del periodo.\
 
 = Gestione dei rischi <gestione_dei_rischi> 
 == Introduzione
-La gestione dei rischi è un'attività fondamentale per il successo del #glossario("progetto"). Essa permette di identificare, analizzare e gestire i potenziali problemi che potrebbero influenzare negativamente il raggiungimento degli obiettivi. In questa sezione vengono elencati i rischi individuati e le strategie adottate per mitigarli.
+La gestione dei rischi è un'#glossario("attività") fondamentale per il successo del #glossario("progetto"). Essa permette di identificare, analizzare e gestire i potenziali problemi che potrebbero influenzare negativamente il raggiungimento degli obiettivi. In questa sezione vengono elencati i rischi individuati e le strategie adottate per mitigarli.
 
 == Rischi individuati
 === Introduzione
@@ -201,52 +202,52 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 === Problemi interni al team
 ==== Rischio 1 - Problemi di comunicazione <RI-1>
 - *Identificativo*: RI-1
-- *Descrizione*: difficoltà di comunicazione tra i membri del team, con conseguente ritardo nella consegna delle attività.
+- *Descrizione*: difficoltà di comunicazione tra i membri del team, con conseguente ritardo nella consegna delle #glossario("attività").
 - *Probabilità*: alta
 - *Impatto*: medio
-- *Strategie di mitigazione*: il responsabile dovrà occuparsi di organizzare meeting periodici e attuare un'assegnazione chiara dei compiti.
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà occuparsi di organizzare meeting periodici e attuare un'assegnazione chiara dei compiti.
 
 ==== Rischio 2 - Problemi personali dei membri del team <RI-2>
 - *Identificativo*: RI-2
 - *Descrizione*: difficoltà di gestione dei propri impegni personali (università, lavoro, impegni personali, ecc...)
 - *Probabilità*: alta
 - *Impatto*: alto
-- *Strategie di mitigazione*: il responsabile dovrà essere in grado di gestire le attività in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. E' importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà essere in grado di gestire le #glossario("attività") in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. E' importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
 
 ==== Rischio 3 - Problemi di coordinamento <RI-3>
 - *Identificativo*: RI-3
-- *Descrizione*: difficoltà nel coordinamento delle attività tra i membri del team, con conseguente sovrapposizione di compiti e ritardi nella consegna.
+- *Descrizione*: difficoltà nel coordinamento delle #glossario("attività") tra i membri del team, con conseguente sovrapposizione di compiti e ritardi nella consegna.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: il responsabile dovrà dare definizioni più chiare dei ruoli e delle responsabilità con una pianificazione dettagliata delle attività.
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà dare definizioni più chiare dei ruoli e delle responsabilità con una pianificazione dettagliata delle #glossario("attività").
 
 ==== Rischio 4 - Mancanza di conoscenze tecniche <RI-4>
 - *Identificativo*: RI-4
-- *Descrizione*: difficoltà nell'implementazione delle funzionalità richieste, con conseguente ritardo nella consegne.
+- *Descrizione*: difficoltà nell'implementazione delle #glossario("funzionalità") richieste, con conseguente ritardo nella consegne.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: lo studio individuale è parte fondamentale del processo di "allenamento" che caratterizza l'apprendimento di ogni componente del team. Se previsto, una mitigazione possibile è l'organizzazione "straordinaria" di un meeting con l'azienda per una breve consulenza. Nel caso si verificassero casi molto particolari, è possibile affiancare un componente del team con maggiore esperienza.
+- *Strategie di mitigazione*: lo studio individuale è parte fondamentale del #glossario("processo") di "allenamento" che caratterizza l'apprendimento di ogni componente del team. Se previsto, una mitigazione possibile è l'organizzazione "straordinaria" di un meeting con l'azienda per una breve consulenza. Nel caso si verificassero casi molto particolari, è possibile affiancare un componente del team con maggiore esperienza.
 
 ==== Rischio 5 - Mancanza di allineamento sugli obiettivi <RI-5>
 - *Identificativo*: RI-5
-- *Descrizione*: mancanza di chiarezza sugli obiettivi del #glossario("progetto"), con conseguente disallineamento tra i membri del team. Si identifica tramite la consegna di attività non conformi a quanto pianificato o richiesto.
+- *Descrizione*: mancanza di chiarezza sugli obiettivi del #glossario("progetto"), con conseguente disallineamento tra i membri del team. Si identifica tramite la consegna di #glossario("attività") non conformi a quanto pianificato o richiesto.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: il responsabile si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
+- *Strategie di mitigazione*: il #glossario("responsabile") si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
 
 ==== Rischio 6 - Sovraccarico di lavoro <RI-6>
 - *Identificativo*: RI-6
 - *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridurre l'efficienza.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: pianificare una distribuzione equa dei compiti e monitorare regolarmente lo stato di avanzamento delle attività, adattando il carico in base alla disponibilità di ciascun membro.
+- *Strategie di mitigazione*: pianificare una distribuzione equa dei compiti e monitorare regolarmente lo stato di avanzamento delle #glossario("attività"), adattando il carico in base alla disponibilità di ciascun membro.
 
 ==== Rischio 7 - Problemi di motivazione <RI-7>
 - *Identificativo*: RI-7
 - *Descrizione*: calo di motivazione dei membri del team, che potrebbe compromettere la qualità del lavoro svolto.
 - *Probabilità*: bassa
 - *Impatto*: medio
-- *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e promuovere attività di team building.
+- *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e promuovere #glossario("attività") di team building.
 
 #pagebreak();
 
@@ -255,7 +256,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: un membro del team potrebbe assentarsi a causa di malattia o di un impegno, compromettendo le scadenze e aumentando il carico di lavoro per gli altri membri.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: prevedere una documentazione accurata e aggiornata delle attività svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
+- *Strategie di mitigazione*: prevedere una documentazione accurata e aggiornata delle #glossario("attività") svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
 
 === Problemi esterni al team
 ==== Rischio 1 - Problemi di comunicazione con l'azienda <RE-1>
@@ -263,18 +264,18 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: difficoltà di comunicazione con l'azienda che potrebbe ritardare una risposta o un meeting richiesto.
 - *Probabilità*: media/bassa (dipende dalla comunicazione con l'azienda)
 - *Impatto*: alto
-- *Strategie di mitigazione*: il responsabile dovrà occuparsi di organizzare meeting periodici, ma soprattutto dovrà ragionare in modo "proattivo" e non "reattivo" per evitare che la comunicazione con l'azienda possa essere un problema. 
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà occuparsi di organizzare meeting periodici, ma soprattutto dovrà ragionare in modo "proattivo" e non "reattivo" per evitare che la comunicazione con l'azienda possa essere un problema. 
 
 ==== Rischio 2 - Utilizzo di librerie di terze parti <RE-2>
 - *Identificativo*: RE-2
-- *Descrizione*: molto spesso capita che quando si utilizza una libreria di terze parti, si possano incontrare problemi di compatibilità o di implementazione, non attribuibili direttamente al team.
+- *Descrizione*: molto spesso capita che quando si utilizza una #glossario("libreria") di terze parti, si possano incontrare problemi di compatibilità o di implementazione, non attribuibili direttamente al team.
 - *Probabilità*: media
 - *Impatto*: medio
 - *Strategie di mitigazione*: una soluzione possibile è quella di chiedere un confronto con l'azienda che, data la maggiore esperienza, potrebbe fornire un'alternativa valida o un supporto per la risoluzione del problema.
 
 ==== Rischio 3 - Ritardi nelle consegne da parte di terzi <RE-3>
 - *Identificativo*: RE-3
-- *Descrizione*: ritardi nella fornitura di materiale, dati o feedback necessari per il proseguimento delle attività del team.
+- *Descrizione*: ritardi nella fornitura di materiale, dati o feedback necessari per il proseguimento delle #glossario("attività") del team.
 - *Probabilità*: bassa
 - *Impatto*: medio
 - *Strategie di mitigazione*: identificare con anticipo le dipendenze da terze parti e predisporre soluzioni alternative in caso di ritardi.
@@ -282,8 +283,8 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 = Periodi
 == Periodo 1
 === Pianificazione
-*Periodo*: 05/11/2024 - 26/11/2024\
-*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+*#glossario("Periodo")*: 05/11/2024 - 26/11/2024\
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
 #align(center)[
   #table(
     columns: 2,
@@ -299,20 +300,20 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
   )
 ]
 *Obiettivi*:\
-Nel primo periodo del progetto, il team si concentrerà principalmente sull'organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’Analisi dei Requisiti e del Glossario. Durante questo periodo, ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
+Nel primo #glossario("periodo") del #glossario("progetto"), il team si concentrerà principalmente sull'organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’#glossario("Analisi dei Requisiti") e del Glossario. Durante questo #glossario("periodo"), ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
 
 Gli obiettivi principali di questa fase sono quindi:
 
-- Iniziare la stesura del Piano di Progetto, Norme di Progetto, Analisi dei Requisiti e Glossario.
+- Iniziare la stesura del Piano di Progetto, Norme di Progetto, #glossario("Analisi dei Requisiti") e Glossario.
 - Definire il way of working del team per garantire una gestione chiara e produttiva.
 - Iniziare la creazione del Glossario e inserire i primi termini e concetti fondamentali.
-- Automatizzare la compilazione dei documenti, così che il PDF risultante sia disponibile sia sulla repository GitHub che sul sito del team creato tramite GitHub Pages.
-- Pianificare e realizzare i primi passi per la gestione efficace delle attività del team.
+- Automatizzare la compilazione dei documenti, così che il PDF risultante sia disponibile sia sulla #glossario("repository") #glossario("GitHub") che sul sito del team creato tramite #glossario("GitHub") Pages.
+- Pianificare e realizzare i primi passi per la gestione efficace delle #glossario("attività") del team.
 
 
 
 *Possibili rischi*:\
-I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
@@ -353,27 +354,27 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 
 === Esito
 *Obiettivi non raggiunti*:\
-Nel periodo appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del progetto. Di seguito vengono elencate le task non completate:
+Nel #glossario("periodo") appena concluso, alcuni obiettivi non sono stati raggiunti. È fondamentale comprendere le motivazioni per migliorare la pianificazione e la gestione futura del #glossario("progetto"). Di seguito vengono elencate le #glossario("task") non completate:
 
-- *Stesura dell'andamento del primo periodo nel Piano di Progetto*: questa attività non è stata completata in quanto si è ritenuto che fosse compito del responsabile del periodo successivo. La decisione è stata presa per ottimizzare i tempi e concentrare gli sforzi su altre attività.
+- *Stesura dell'andamento del primo #glossario("periodo") nel Piano di Progetto*: questa #glossario("attività") non è stata completata in quanto si è ritenuto che fosse compito del #glossario("responsabile") del #glossario("periodo") successivo. La decisione è stata presa per ottimizzare i tempi e concentrare gli sforzi su altre #glossario("attività").
 - *Gestione dell’assegnazione dei ruoli nelle Norme di Progetto*: non è stata realizzata la sezione dedicata all’assegnazione dei ruoli per mancanza di tempo.
-- *Sezione sui requisiti nell’Analisi dei Requisiti*: la parte relativa all'identificazione e descrizione dei requisiti non è stata sviluppata per motivi di tempo. Si è preferito concentrarsi su altre attività e lasciarla in sospeso.
-- *Inizio del tracciamento dei requisiti nell’Analisi dei Requisiti*: la creazione della sezione per il tracciamento dei requisiti non è stata portata avanti anch'essa per mancanza di tempo e quindi si è deciso di rimandarla.
+- *Sezione sui requisiti nell’#glossario("Analisi dei Requisiti")*: la parte relativa all'identificazione e descrizione dei requisiti non è stata sviluppata per motivi di tempo. Si è preferito concentrarsi su altre #glossario("attività") e lasciarla in sospeso.
+- *Inizio del tracciamento dei requisiti nell’#glossario("Analisi dei Requisiti")*: la creazione della sezione per il tracciamento dei requisiti non è stata portata avanti anch'essa per mancanza di tempo e quindi si è deciso di rimandarla.
 
 *Problematiche non attese*:\
-Durante il periodo non sono state riscontrate problematiche non attese.
+Durante il #glossario("periodo") non sono state riscontrate problematiche non attese.
 
 *Mitigazione rischi verificati*:\
-Durante il periodo sono stati riscontrati alcuni dei rischi preventivati. Di seguito vengono descritte le azioni intraprese per mitigarli:
+Durante il #glossario("periodo") sono stati riscontrati alcuni dei rischi preventivati. Di seguito vengono descritte le azioni intraprese per mitigarli:
 
-- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: i problemi personali sono stati gestiti con una pianificazione flessibile, assegnando i compiti in base alla disponibilità dei membri per evitare sovraccarichi. La comunicazione aperta ha permesso di affrontare tempestivamente eventuali difficoltà, mantenendo un equilibrio nelle attività del team. L’impatto è stato contenuto, con ritardi minimi che non hanno compromesso la qualità complessiva del lavoro.
-- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]: il rischio di disallineamenti e sovrapposizioni di compiti è stato gestito attraverso una pianificazione chiara delle attività e una definizione precisa di ruoli e responsabilità. Ogni membro ha lavorato con consapevolezza delle proprie scadenze e obiettivi, mentre la supervisione costante da parte del responsabile ha garantito un buon livello di coordinamento. L’impatto è stato contenuto, con rallentamenti occasionali che non hanno generato significativi disagi nel flusso di lavoro.
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: i problemi personali sono stati gestiti con una pianificazione flessibile, assegnando i compiti in base alla disponibilità dei membri per evitare sovraccarichi. La comunicazione aperta ha permesso di affrontare tempestivamente eventuali difficoltà, mantenendo un equilibrio nelle #glossario("attività") del team. L’impatto è stato contenuto, con ritardi minimi che non hanno compromesso la qualità complessiva del lavoro.
+- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]: il rischio di disallineamenti e sovrapposizioni di compiti è stato gestito attraverso una pianificazione chiara delle #glossario("attività") e una definizione precisa di ruoli e responsabilità. Ogni membro ha lavorato con consapevolezza delle proprie scadenze e obiettivi, mentre la supervisione costante da parte del #glossario("responsabile") ha garantito un buon livello di coordinamento. L’impatto è stato contenuto, con rallentamenti occasionali che non hanno generato significativi disagi nel flusso di lavoro.
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: il rischio è stato affrontato attraverso lo studio individuale e l’autoapprendimento. In caso di difficoltà, i membri con maggiore esperienza hanno supportato quelli con meno competenze, organizzando momenti di confronto e formazione interna. Grazie a questa collaborazione, l’impatto è stato limitato, consentendo al team di rispettare le scadenze e di affrontare efficacemente le problematiche tecniche emerse.
 
 *Possibili cambiamenti*:\
-Durante il periodo affrontato, il team ha identificato alcuni aspetti da migliorare per ottimizzare il lavoro nelle fasi successive del progetto e garantire una maggiore efficienza a lungo termine.\
+Durante il #glossario("periodo") affrontato, il team ha identificato alcuni aspetti da migliorare per ottimizzare il lavoro nelle fasi successive del #glossario("progetto") e garantire una maggiore efficienza a lungo termine.\
 Cambiamenti operativi e gestionali individuati:
-- *Pianificazione più dettagliata*: è emerso che una pianificazione più approfondita delle attività, con micro-obiettivi settimanali, potrebbe facilitare il monitoraggio del progresso e l’identificazione tempestiva di eventuali criticità.
+- *Pianificazione più dettagliata*: è emerso che una pianificazione più approfondita delle #glossario("attività"), con micro-obiettivi settimanali, potrebbe facilitare il monitoraggio del progresso e l’identificazione tempestiva di eventuali criticità.
 - *Rafforzamento della comunicazione interna*: incentivare incontri regolari per confrontarsi sui progressi, evidenziare difficoltà e ridefinire priorità. Questo permetterà di mantenere una maggiore coesione e coordinazione tra i membri del team.
 #pagebreak();
 *Tabella esito effettivo*:\ 
@@ -409,7 +410,7 @@ Cambiamenti operativi e gestionali individuati:
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
 }
 #pagebreak();
-*Progresso delle attività*:\
+*Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
     (11.76, "Non fatto - " + perc(4,34)),
@@ -421,8 +422,8 @@ Cambiamenti operativi e gestionali individuati:
 
 == Periodo 2
 === Pianificazione
-*Periodo*: 27/11/2024 - 10/12/2024\
-*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+*#glossario("Periodo")*: 27/11/2024 - 10/12/2024\
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
 #align(center)[
   #table(
     columns: 2,
@@ -438,19 +439,19 @@ Cambiamenti operativi e gestionali individuati:
   )
 ]
 *Obiettivi*:\
-Nel secondo periodo del progetto il team proseguirà con la redazione dei documenti iniziati nel periodo precedente e, in parallelo, si dedicherà allo sviluppo di più simil-#glossario("PoC") per studiare le tecnologie proposte dal #glossario("capitolato") e, allo stesso tempo, per affiancare e porre ulteriori basi all'attività di analisi.
+Nel secondo #glossario("periodo") del #glossario("progetto") il team proseguirà con la redazione dei documenti iniziati nel #glossario("periodo") precedente e, in parallelo, si dedicherà allo sviluppo di più simil-#glossario("PoC") per studiare le tecnologie proposte dal #glossario("capitolato") e, allo stesso tempo, per affiancare e porre ulteriori basi all'#glossario("attività") di analisi.
 
 Gli obiettivi principali di questa fase sono quindi:
 
-- Terminare le #glossario("task") non completate nel primo periodo.
+- Terminare le #glossario("task") non completate nel primo #glossario("periodo").
 - Proseguire con la stesura del #glossario("Piano di Progetto"), #glossario("Norme di Progetto") e #glossario("Analisi dei Requisiti").
-- Aggiornare il glossario con i termini significativi individuati e raccolti durante il periodo.
+- Aggiornare il glossario con i termini significativi individuati e raccolti durante il #glossario("periodo").
 - Studiare e comprendere le tecnologie proposte dal #glossario("capitolato") per confrontare le possibili soluzioni e successivamente approfondire meglio l'analisi.
 
 
 
 *Possibili rischi*:\
-I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
@@ -490,18 +491,18 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 
 === Esito
 *Obiettivi non raggiunti*:\
-Il periodo appena concluso ha avuto un rallentamento, in particolare nella stesura dei documenti. Questo aspetto era già stato preso in considerazione in quanto il ruolo di programmatore è stato assegnato a più membri, tuttavia è doveroso sottolineare che il rallentamento è stato maggiore rispetto al previsto. Di seguito sono elencate le #glossario("task") non completate
+Il #glossario("periodo") appena concluso ha avuto un rallentamento, in particolare nella stesura dei documenti. Questo aspetto era già stato preso in considerazione in quanto il ruolo di #glossario("programmatore") è stato assegnato a più membri, tuttavia è doveroso sottolineare che il rallentamento è stato maggiore rispetto al previsto. Di seguito sono elencate le #glossario("task") non completate
 
-- *Gestione dell’assegnazione dei ruoli nelle #glossario("Norme di Progetto")*: l'attività non è stata verificata in quanto il materiale da controllare è stato consegnato troppo tardi, di conseguenza l'attività non si può considerare completata.
-- *Aggiornamento del glossario*: l'attività non è stata completata, sono state raccolti i termini da inserire nel glossario ma non sono state fornite le definizioni.
+- *Gestione dell’assegnazione dei ruoli nelle #glossario("Norme di Progetto")*: l'#glossario("attività") non è stata verificata in quanto il materiale da controllare è stato consegnato troppo tardi, di conseguenza l'#glossario("attività") non si può considerare completata.
+- *Aggiornamento del glossario*: l'#glossario("attività") non è stata completata, sono state raccolti i termini da inserire nel glossario ma non sono state fornite le definizioni.
 
 *Problematiche non attese*:\
-Nel periodo si sono verificate delle problematiche non attese:
+Nel #glossario("periodo") si sono verificate delle problematiche non attese:
 
 - #link(<RI-8>)[*RI-8 - Assenza di un membro del team per malattia o altri impegni*]
 
 *Mitigazione rischi verificati*:\
-Durante il periodo oltre alla problematica non attesa sono stati riscontrati alcuni dei rischi preventivati. Di seguito vengono descritte le azioni di mitigazione intraprese:
+Durante il #glossario("periodo") oltre alla problematica non attesa sono stati riscontrati alcuni dei rischi preventivati. Di seguito vengono descritte le azioni di mitigazione intraprese:
 
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: il rischio è stato affrontato attraverso lo studio individuale e l’autoapprendimento. Essendo un rischio previsto l’impatto è stato limitato e non ha causato problemi significativi.
 - #link(<RI-8>)[*RI-8 - Assenza di un membro del team per malattia o altri impegni*]: il rischio è stato gestito ridistribuendo le ore del membro assente tra gli altri membri del team, cercando di evitare sovraccarichi. Sebbene l'impatto sia stato significativo, causando rallentamenti nello studio delle tecnologie, il team è riuscito a contenere le conseguenze grazie a una gestione efficace della situazione.
@@ -511,9 +512,9 @@ Durante il periodo oltre alla problematica non attesa sono stati riscontrati alc
 *Possibili cambiamenti*:\
 Il rallentamento che si è verificato è un aspetto critico su cui il team ha riflettuto per comprendere quali soluzioni adottare nei prossimi periodi. Il team quindi ha identificato alcuni aspetti da migliorare per ottimizzare il lavoro e garantire una maggiore efficienza a lungo termine.\
 Cambiamenti operativi e gestionali individuati:
-- *Comprensione dello stato di avanzamento*: il team deve aver consapevolezza dello stato di avanzamento del progetto e di conseguenza gestire le ore in modo tale da intervenire dove c'è più bisogno o dove ci sono rallentamenti. 
-- *Distribuzione controllata delle attività*: il team si è reso conto che può essere molto utile dividere le attività dei periodi in due parti in modo tale da pianificare delle attività da completare nella prima parte del periodo e, solo in caso queste siano state completate, pianificarne altre per la seconda parte, in modo da avere una visione controllata dell'andamento ed evitare che vengano create attività che rischiano di essere rimandate ai periodi successivi.
-- *Gestione delle attività rimandate*: se un periodo inizia con delle attività rimandate dal periodo precedente è fondamentale dare loro priorità, in modo tale da evitare che vengano rimandate ulteriormente.
+- *Comprensione dello stato di avanzamento*: il team deve aver consapevolezza dello stato di avanzamento del #glossario("progetto") e di conseguenza gestire le ore in modo tale da intervenire dove c'è più bisogno o dove ci sono rallentamenti. 
+- *Distribuzione controllata delle #glossario("attività")*: il team si è reso conto che può essere molto utile dividere le #glossario("attività") dei periodi in due parti in modo tale da pianificare delle #glossario("attività") da completare nella prima parte del #glossario("periodo") e, solo in caso queste siano state completate, pianificarne altre per la seconda parte, in modo da avere una visione controllata dell'andamento ed evitare che vengano create #glossario("attività") che rischiano di essere rimandate ai periodi successivi.
+- *Gestione delle #glossario("attività") rimandate*: se un #glossario("periodo") inizia con delle #glossario("attività") rimandate dal #glossario("periodo") precedente è fondamentale dare loro priorità, in modo tale da evitare che vengano rimandate ulteriormente.
 
 
 *Tabella esito effettivo*:\ 
@@ -551,7 +552,7 @@ Cambiamenti operativi e gestionali individuati:
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
 }
 
-*Progresso delle attività*:\
+*Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
     (13.79, "Non fatto - " + perc(4,29)),
@@ -563,8 +564,8 @@ Cambiamenti operativi e gestionali individuati:
 
 == Periodo 3
 === Pianificazione
-*Periodo*: 11/11/2024 - 25/12/20\24\
-*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+*#glossario("Periodo")*: 11/11/2024 - 25/12/20\24\
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
 #align(center)[
   #table(
     columns: 2,
@@ -580,16 +581,16 @@ Cambiamenti operativi e gestionali individuati:
   )
 ]
 *Obiettivi*:\
-Durante il terzo periodo l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il periodo scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
+Durante il terzo #glossario("periodo") l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il #glossario("periodo") scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
 
 Gli obiettivi principali di questa fase sono quindi:
 
 - Proseguire con la stesura delle #glossario("Norme di Progetto"), con relative sezioni nei #glossario("Processi Organizzativi") e #glossario("Processi di Supporto").
 - Concentrarsi sull'#glossario("Analisi dei Requisiti"), assegnando tale compito ai membri del team che si sono concentrati sul test delle varie tecnologie in modo da definire l'apposita sezione e proseguire con gli #glossario("UC").
-- Aggiornare il glossario con i termini significativi individuati e raccolti durante il periodo, con particolare attenzione alla #glossario("issue") non terminata nel periodo precedente
+- Aggiornare il glossario con i termini significativi individuati e raccolti durante il #glossario("periodo"), con particolare attenzione alla #glossario("issue") non terminata nel #glossario("periodo") precedente
 
 *Possibili rischi*:\
-I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
 
@@ -629,22 +630,22 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 *Obiettivi non raggiunti*:\
 Di seguito sono elencate le #glossario("task") non completate
 
-- *Aggiornamento del glossario*: l'attività, creata ancora durante il primo periodo, non è nuovamente stata presa in carico.
+- *Aggiornamento del glossario*: l'#glossario("attività"), creata ancora durante il primo #glossario("periodo"), non è nuovamente stata presa in carico.
 
-- *Fix aggiunta termini e definizioni al glossario*: attività del periodo in corso associata al glossario. Prevede l'aggiunta di eventuali nuovi termini contrassegnati al glossario del team.
+- *Fix aggiunta termini e definizioni al glossario*: #glossario("attività") del #glossario("periodo") in corso associata al glossario. Prevede l'aggiunta di eventuali nuovi termini contrassegnati al glossario del team.
 
 *Problematiche non attese*:\
-Durante il terzo periodo appena concluso si è verificato il seguente rischio che non era stato preventivato:
+Durante il terzo #glossario("periodo") appena concluso si è verificato il seguente rischio che non era stato preventivato:
 
-- #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue"), già etichettata come critica visto il non completamento nel primo periodo.
+- #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue"), già etichettata come critica visto il non completamento nel primo #glossario("periodo").
 
 *Mitigazione rischi verificati*:\
-Durante il periodo oltre alla problematica non attesa, non si sono verificati rischi che erano stati preventivati.
+Durante il #glossario("periodo") oltre alla problematica non attesa, non si sono verificati rischi che erano stati preventivati.
 
 *Possibili cambiamenti*:\
-La non presa in carico e termine dell'#glossario("issue") riferita al glossario e facente in origina parte del primo Periodo indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, nel particolare: 
+La non presa in carico e termine dell'#glossario("issue") riferita al glossario e facente in origina parte del primo #glossario("Periodo") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, nel particolare: 
 
-- *Gestione delle priorità a livello di issue*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del periodo devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del responsabile del progetto verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del task. Per questo tipo di attività si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 
 *Tabella esito effettivo*:\ 
 #align(center)[
@@ -681,7 +682,7 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
 }
 
-*Progresso delle attività*:\
+*Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
     (7.41, "Non fatto - " + perc(2,27)),
@@ -693,8 +694,8 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
 
 == Periodo 4
 === Pianificazione
-*Periodo*: 26/12/2024 - 13/1/20\25\
-*Ruoli*: Viene riportata di seguito la suddivisione del periodo
+*#glossario("Periodo")*: 26/12/2024 - 13/1/20\25\
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
 #align(center)[
   #table(
     columns: 2,
@@ -710,15 +711,15 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
   )
 ]
 *Obiettivi*:\
-Durante il quarto periodo l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
+Durante il quarto #glossario("periodo") l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
 
 In particolare, gli obiettivi principali di questa fase sono:
 - Ampliare la stesura delle #glossario("Norme di Progetto") con particolare attenzione alle metriche di qualità e la documentazione da consegnare.
 - Per il #glossario("Piano di Qualifica") verrà completata la sezione relativa ai test e gli obiettivi di qualità.
-- Per quanto riguarda invece l'#glossario("Analisi dei Requisiti") verranno completati i diagrammi #glossario("UML") in vista della revisione con il #p.cardin.
+- Per quanto riguarda invece l'#glossario("Analisi dei Requisiti") verranno completati i diagrammi #glossario("UML") in vista della #glossario("revisione") con il #p.cardin.
 
 *Possibili rischi*:\
-I rischi che ci aspettiamo di incontrare durante questo periodo sono:
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
 
@@ -758,20 +759,20 @@ I rischi che ci aspettiamo di incontrare durante questo periodo sono:
 *Obiettivi non raggiunti*:\
 Di seguito sono elencate le #glossario("task") non completate
 
-- *Fix template*: l'attività non è stata completata entro la fine del periodo
+- *Fix #glossario("template")*: l'#glossario("attività") non è stata completata entro la fine del #glossario("periodo")
 
 *Problematiche non attese*:\
-Durante il quarto periodo appena concluso si è verificato il seguente rischio che non era stato preventivato:
+Durante il quarto #glossario("periodo") appena concluso si è verificato il seguente rischio che non era stato preventivato:
 
 - #link(<RI-5>)[*RI-5 - Mancanza di allineamento sugli obiettivi*], verificatosi per la mancanza di presa in carico e completamento di una #glossario("issue").
 *Mitigazione rischi verificati*:\
-Durante il periodo oltre alla problematica non attesa, si è verificato una variazione importante dei costi da quanto preventivato che potrebbe avere delle ripercussioni nei periodi successivi. Al momento non causa particolari conseguenze dal punto di vista del costo preventivato in quanto le ore che dobbiamo dedicare al progetto sono ancora molte, tuttavia è corretto segnalarlo e tenerlo in considerazione per i periodi futuri
+Durante il #glossario("periodo") oltre alla problematica non attesa, si è verificato una variazione importante dei costi da quanto preventivato che potrebbe avere delle ripercussioni nei periodi successivi. Al momento non causa particolari conseguenze dal punto di vista del costo preventivato in quanto le ore che dobbiamo dedicare al #glossario("progetto") sono ancora molte, tuttavia è corretto segnalarlo e tenerlo in considerazione per i periodi futuri
 
 *Possibili cambiamenti*:\
-La non presa in carico e termine dell'#glossario("issue") riferita al fix del template indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
+La non presa in carico e termine dell'#glossario("issue") riferita al fix del #glossario("template") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
 
-- *Gestione delle priorità a livello di issue*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del periodo devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del responsabile del progetto verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del task. Per questo tipo di attività si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
-- *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo periodo. Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del periodo, analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo #glossario("periodo"). Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del #glossario("periodo"), analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
 
 *Tabella esito effettivo*:\ 
 #align(center)[
@@ -807,7 +808,7 @@ La non presa in carico e termine dell'#glossario("issue") riferita al fix del te
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
 }
 
-*Progresso delle attività*:\
+*Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
     (1.96, "Non fatto - " + perc(1,51)),
