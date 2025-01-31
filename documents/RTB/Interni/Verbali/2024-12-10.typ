@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.0.2", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, "",
+    "0.0.2", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, p.pozzobon,
     "0.0.1", "15-12-2024",  "Prima stesura documento", p.checchinato, (p.scandaletti,p.valdagno),
   )
 )

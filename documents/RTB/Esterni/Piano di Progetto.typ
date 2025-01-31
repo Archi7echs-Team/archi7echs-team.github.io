@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, "",
+    "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, p.pozzobon,
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
     "0.5.0", "03-01-2025", "Stesura terzo periodo", p.pozzobon, (p.lucato, p.scandaletti),
