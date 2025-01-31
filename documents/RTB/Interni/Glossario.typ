@@ -9,6 +9,7 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
+            "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, "",
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
             "0.1.1", "10-12-2024",  "Aggiunti termini e definizioni", p.salvo, p.scandaletti,
@@ -355,6 +356,9 @@
         - Verbale interno
         Documento redatto durante una riunione interna, che riassume le decisioni prese, le attività discusse e i punti di azione.
         
+        - Verbali interni
+        Plurale di _Verbale interno_.
+
         - Verbalizzante
         Figura responsabile della stesura del verbale di una riunione.
         
