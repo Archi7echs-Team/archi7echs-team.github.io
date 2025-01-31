@@ -9,7 +9,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, p.pozzobon,
+    "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.4", "19-01-2025", "Aggiunta immagini degli UC e modifica tabelle riferimenti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.3", "13-01-2025", "Aggiunta UC da 19 a 26 e fix UC 2,10", p.salvo,p.pesenato,
