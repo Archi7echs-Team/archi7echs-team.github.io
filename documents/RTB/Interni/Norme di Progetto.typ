@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, "",
     "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, (p.lucato, p.pesenato),
     "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.17.0", "14-01-2025", "Riscrittura relazione di estensione con extension points", p.scandaletti, (p.lucato, p.pozzobon),
@@ -37,16 +38,16 @@
 = Introduzione
 == Finalità del documento
 L'obiettivo del documento è quello di definire le linee guida del gruppo per garantire un lavoro, fortemente asincrono, uniforme, coerente e di qualità. Per garantire la gestione del prodotto, composto da software e documentazione, è necessario un approccio strutturato al #glossario("ciclo di vita"). \
-Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il quale identifica i processi di un ciclo di vita di un software, secondo una struttura modulare con relativa responsabilità su ciascun processo. \
+Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il quale identifica i processi di un #glossario("ciclo di vita") di un software, secondo una struttura modulare con relativa responsabilità su ciascun processo. \
 
 == Glossario 
-All'interno del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "#text(blue)[G]" in colore blu. Facendo click sul collegamento si aprirà una scheda del browser con il glossario 
+All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "#text(blue)[G]" in colore blu. Facendo click sul collegamento si aprirà una scheda del browser con il glossario 
 == Riferimenti <Riferimenti>
 Il documento è stato redatto con riferimento alla seguente documentazione.
 === Link al capitolato C5 - 3Dataviz
-- Riferimento al capitolato 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
+- Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
 === Slide del corso IS
-- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard ISO 12207:1995 -  _Ultimo accesso al documento 22/11/2024_
+- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard #glossario("ISO 12207:1995") -  _Ultimo accesso al documento 22/11/2024_
 - Riferimento alle slide IS: *_Gestione
 di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 12/12/2024_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
@@ -56,56 +57,56 @@ di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.p
 = Processi Primari
 == Fornitura
 === Introduzione
-Secondo lo standard #glossario("ISO/IEC 12207:1995"), la fornitura viene definita come un insieme strutturato di attività e processi per la gestione e lo sviluppo del progetto e quindi per realizzare il prodotto software richiesto dal committente.
+Secondo lo standard #glossario("ISO/IEC 12207:1995"), la fornitura viene definita come un insieme strutturato di #glossario("attività") e processi per la gestione e lo sviluppo del progetto e quindi per realizzare il prodotto software richiesto dal committente.
 
 === Scopo
-Il processo si concentra sul monitoraggio e sulla gestione delle attività svolte dal team durante le varie fasi del progetto, dalla concezione iniziale fino alla consegna, assicurandosi che il prodotto finale rispetti i requisiti concordati con il committente, oltre a essere realizzato entro i tempi e i costi stabiliti. In questo modo viene garantita una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto.
+Il processo si concentra sul monitoraggio e sulla gestione delle #glossario("attività") svolte dal team durante le varie fasi del progetto, dalla concezione iniziale fino alla consegna, assicurandosi che il prodotto finale rispetti i requisiti concordati con il committente, oltre a essere realizzato entro i tempi e i costi stabiliti. In questo modo viene garantita una visione completa e coerente della gestione delle #glossario("attività") durante l’intero #glossario("ciclo di vita") del progetto.
 
 === Comunicazione con l'azienda proponente
 Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
-Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il periodo secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
-Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine periodo, fermo restando di non superare, salvo esplicite motivazioni, le due settimane dall'incontro precedente. \
-Durante tale incontro, con relativo #glossario("verbale esterno"), il responsabile del periodo in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
+Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il #glossario("periodo") secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
+Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine #glossario("periodo"), fermo restando di non superare, salvo esplicite motivazioni, le due settimane dall'incontro precedente. \
+Durante tale incontro, con relativo #glossario("verbale esterno"), il #glossario("responsabile") del #glossario("periodo") in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
 
 === Documentazione da consegnare
 In questa sezione vengono indicati i documenti che saranno consegnati all'azienda proponente _Sanmarco Informatica_ e ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin.
 
 ==== Analisi dei Requisiti
-All'interno vengono definite le funzionalità che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
-- *Casi d'uso*: che rappresentano in modo formale le funzionalità di un sistema, illustrando le attività svolte durante un’interazione
-- *UML casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
-- *Requisiti*: ovvero l'insieme delle funzionalità richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
+All'#glossario("interno") vengono definite le #glossario("funzionalità") che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
+- *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un’interazione
+- *#glossario("UML") casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
+- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
 
 ==== Lettera di presentazione
-Quando si deve consegnare quanto fatto (RTB o PB) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in repo. E' dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla revisione di tutta la documentazione/materiale fatta fino a quel momento. All'interno della _Lettera di presentazione_ ci deve essere:
+Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). E' dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
 - *Introduzione*: per indicare lo scopo del documento
-- *Link alla documentazione*: un puntatore che riporta alla repo del gruppo, dov'è possibile reperire tutta la documentazione
-- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia interni che esterni che il gruppo ha redatto durante il periodo, la documentazione "interna" e la documentazione "esterna".
+- *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
+- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
 - *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
 
 ==== Piano di Progetto
-Documento fondamentale per il gruppo, che permette di eseguire delle buone retrospettive, con un automiglioramento sia per il breve che per il lungo termine. All'interno del documento ci devono essere i seguenti punti:
-- *Analisi dei rischi*: ovviamente è indispensabile per una buona pianificazione di ogni singolo periodo, per avere già delle tecniche e strategie da applicare quando 
+Documento fondamentale per il gruppo, che permette di eseguire delle buone retrospettive, con un automiglioramento sia per il breve che per il lungo termine. All'#glossario("interno") del documento ci devono essere i seguenti punti:
+- *Analisi dei rischi*: ovviamente è indispensabile per una buona pianificazione di ogni singolo #glossario("periodo"), per avere già delle tecniche e strategie da applicare quando 
 - *Informazioni del progetto*: ovvero tutte quelle informazioni che è bene tenere traccia (e anche modificare in futuro).
   - Tempi di consegna previsti
   - Costi previsti
-  - Struttura della pianificazione di un periodo
-  - Struttura di quanto accaduto nell'effettivo durante un periodo
+  - Struttura della pianificazione di un #glossario("periodo")
+  - Struttura di quanto accaduto nell'effettivo durante un #glossario("periodo")
 - *Lista dei periodi*: ovvero l'insieme tra il preventivo e il consuntivo, di quello che è accaduto, quello che è andato quanto pianificato e soprattutto quello che invece non era stato pianificato, fondamentale per l'automiglioramento
 
 ==== Piano di qualifica
-Documento che serve al team per descrivere come è stata garantita l'efficienza durante il progetto. Questo serve per garantire ai committenti, all'azienda proponente e al team, che ci sono dei processi selezionati solo allo scopo di verificare che quanto fatto sia di ottima qualità, che sono state investite quantità di risorse ottime e che il prodotto rispetti le aspettative richieste. All'interno del documento dunque devono essere presenti:
+Documento che serve al team per descrivere come è stata garantita l'efficienza durante il progetto. Questo serve per garantire ai committenti, all'azienda proponente e al team, che ci sono dei processi selezionati solo allo scopo di verificare che quanto fatto sia di ottima qualità, che sono state investite quantità di risorse ottime e che il prodotto rispetti le aspettative richieste. All'#glossario("interno") del documento dunque devono essere presenti:
 - *Test del prodotto*: per garantire che il prodotto soddisfi quanto proposto dai committenti e dall'azienda proponente è necessario eseguire una serie di test che, solo dopo il loro test positivo, è possibile dichiarare un prodotto "soddisfacente"
   - *Test di sistema*
   - *Test di integrazione*
-  - *Test di unità*
-- *Metriche per garantire la qualità dei processi*: verifica e validazione dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
-- *Metriche per garantire la qualità del prodotto*: verifica e validazione per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
+  - *Test di #glossario("unità")*
+- *Metriche per garantire la qualità dei processi*: verifica e #glossario("validazione") dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
+- *Metriche per garantire la qualità del prodotto*: verifica e #glossario("validazione") per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
 
 == Strumenti
 Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei membri del team:
-- *Gruppo Telegram* per le comunicazioni rapide ed informali
-- *Canale Discord* per le riunioni del gruppo in videoconferenza e le comunicazioni ufficiali, organizzate nei relativi sotto-canali
+- *Gruppo #glossario("Telegram")* per le comunicazioni rapide ed informali
+- *Canale #glossario("Discord")* per le riunioni del gruppo in videoconferenza e le comunicazioni ufficiali, organizzate nei relativi sotto-canali
 - *Gmail* per le comunicazioni ufficiali con il committente
 - *Google Chat* per le comunicazioni con l'azienda proponente
 - *Google Meet* per le riunioni in conferenza con l'azienda proponente
@@ -115,23 +116,23 @@ Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei me
 
 == Sviluppo
 === Introduzione
-Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito come un insieme strutturato di attività di analisi, progettazione, codifica, integrazione, testing, installazione ed accettazione dei requisiti richiesti dal committente.
+Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito come un insieme strutturato di #glossario("attività") di analisi, progettazione, codifica, integrazione, testing, installazione ed accettazione dei requisiti richiesti dal committente.
 
 === Attività di analisi
-L'attività di analisi viene svolta tramite l'analisi dei requisiti dagli analisi prevedendo l'identificazione, la raccolta e l'analisi dei requisiti funzionali e non del sistema e del software. L'obiettivo dell'attività di analisi è la comprensione e la definizione in modo esaustivo delle esigenze del cliente e del sistema. Inoltre, essa identificando i requisiti può facilitare la realizzazione dei requisiti e fornire una stima di costi e tempo.
+L'#glossario("attività") di analisi viene svolta tramite l'#glossario("analisi dei requisiti") dagli analisi prevedendo l'identificazione, la raccolta e l'#glossario("analisi dei requisiti") funzionali e non del sistema e del software. L'obiettivo dell'#glossario("attività") di analisi è la comprensione e la definizione in modo esaustivo delle esigenze del cliente e del sistema. Inoltre, essa identificando i requisiti può facilitare la realizzazione dei requisiti e fornire una stima di costi e tempo.
 
-Il documento cardine dell’attività di analisi è l'#glossario("AdR") composta da:
+Il documento cardine dell’#glossario("attività") di analisi è l'#glossario("AdR") composta da:
 - *Introduzione*: presentazione del documento
-- *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, funzionalità, caratteristiche utente e tecnologie usate
-- *Casi d'uso*: funzionalità offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi UML che seguono uno standard
-- *Requisiti*: ovvero l'insieme delle funzionalità richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
+- *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, #glossario("funzionalità"), caratteristiche utente e tecnologie usate
+- *Casi d'uso*: #glossario("funzionalità") offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi #glossario("UML") che seguono uno standard
+- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
 
-La modalità con cui vengono descritti i casi d'uso e i requisiti sono specificati all'interno del documento #glossario("AdR").
+La modalità con cui vengono descritti i casi d'uso e i requisiti sono specificati all'#glossario("interno") del documento #glossario("AdR").
 
 === Attività di progettazione
-L'attività di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’attività di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
+L'#glossario("attività") di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’#glossario("attività") di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
 
-Il documento cardine dell’attività di analisi composto da:
+Il documento cardine dell’#glossario("attività") di analisi composto da:
 - *Introduzione*: presentazione del documento
 - *Tecnologie usate*: definisce che tecnologie e che librerie di terze parti sono state usate.
 - *Architettura*: definisce i componenti e le interazioni del sistema sia in modo testuale che grafico seguendo lo standard
@@ -140,7 +141,7 @@ Il documento cardine dell’attività di analisi composto da:
 La modalità con cui vengono descritti i vari componenti dell’architettura è specificata nel documento.
 
 === Attività di codifica
-L'attività di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’attività di progettazione. L’obiettivo dell’attività di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l’architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
+L'#glossario("attività") di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’#glossario("attività") di progettazione. L’obiettivo dell’#glossario("attività") di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l’architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
 
 L'attività di codifica deve seguire le metriche definite nel #glossario("PdQ"). 
 
@@ -164,9 +165,9 @@ Nella prima pagina del documento devono essere indicati, oltre a titolo e sottot
 L'aggiornamento di autore e tipologia del documento è a cura del #glossario("redattore") del documento.  \
 Lo stato del documento viene posto in _Bozza_ dal #glossario("redattore") e aggiornato dal #glossario("verificatore") quando il documento raggiunge una versione che ne consente l'#glossario("approvazione") e #glossario("rilascio"). \
 L'ultima modifica viene aggiornata automaticamente ad ogni modifica della #glossario("Tabella delle revisioni"), prendendo la data dell'ultima #glossario("revisione") come data di ultima modifica. \
-L'indice si aggiorna automaticamente in base alle sezioni di Typst, per il dettaglio su come suddividere correttamente il documento in sezioni e sottosezioni si rimanda alla documentazione ufficiale di Typst.
+L'indice si aggiorna automaticamente in base alle sezioni di #glossario("Typst"), per il dettaglio su come suddividere correttamente il documento in sezioni e sottosezioni si rimanda alla documentazione ufficiale di #glossario("Typst").
 
-_ Per la gestione della tabella delle revisioni si fa riferimento all'apposita sezione, @tabella_revisioni, di questo documento. _ 
+_ Per la gestione della #glossario("tabella delle revisioni") si fa riferimento all'apposita sezione, @tabella_revisioni, di questo documento. _ 
 ==== Allegato
 Questo #glossario("template") viene utilizzato per la redazione degli allegati ai verbali (#glossario("interni") ed #glossario("esterni")). E' compito di chi redige l'allegato indicare, nell'apposita sezione nell'intestazione del documento:
 - numero allegato (num progressivo riferito al verbale)
@@ -176,7 +177,7 @@ Questo #glossario("template") viene utilizzato per la redazione degli allegati a
 Il documento di questa tipologia viene inserito nello stesso documento del verbale.
 
 ==== Carta intestata
-Questo #glossario("template") viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario esterno. \
+Questo #glossario("template") viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario #glossario("esterno"). \
 E' compito di chi redige il documento indicare, nell'apposita sezione:
 - destinatario del documento
 - mezzo di invio del documento
@@ -196,7 +197,7 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
   - presenze
 
 
-Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra OdG ed orario di fine dell'incontro.
+Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra #glossario("OdG") ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
 - una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la decisione presa.
@@ -205,10 +206,10 @@ Il verbale deve inoltre contenere, nella relativa sezione del #glossario("templa
 Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
 
 === Registro delle modifiche e versionamento <tabella_revisioni>
-La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in revisione. E' necessario indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di revisione: #glossario("RTB") e #glossario("PB"). 
+La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in #glossario("revisione"). E' necessario indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di #glossario("revisione"): #glossario("RTB") e #glossario("PB"). 
 
 == Standard UML per la stesura di alcuni documenti
-All'interno dell'analisi dei requisiti è ovviamente di fondamentale importanza la presenza dei casi d'uso, descritti come: 
+All'#glossario("interno") dell'#glossario("analisi dei requisiti") è ovviamente di fondamentale importanza la presenza dei casi d'uso, descritti come: 
 - *Descrizione*: una breve descrizione del caso d'uso che identifica chiaramente la funzione che il sistema deve svolgere.
 - *Attore*: l’entità che interagisce col sistema, è un’entità esterna su cui non si possono effettuare modifiche.
 - *Precondizioni*: le condizioni che definiscono lo stato iniziale del sistema e degli attori prima che l'interazione inizi.
@@ -219,24 +220,24 @@ All'interno dell'analisi dei requisiti è ovviamente di fondamentale importanza 
 Per tutti quei casi d'uso che interagiscono con altri è molto importante inserire il _diagramma del caso d'uso_
 
 === Diagramma casi d'uso
-I diagrammi dei casi d'uso sono una rappresentazione visiva utilizzata nell'ingegneria del software per descrivere le interazioni tra gli utenti (attori) e un sistema o applicazione. Fanno parte del linguaggio di modellazione UML e si concentrano su ciò che il sistema deve fare dal punto di vista dell'utente, piuttosto che sul "come" viene implementato.
+I diagrammi dei casi d'uso sono una rappresentazione visiva utilizzata nell'ingegneria del software per descrivere le interazioni tra gli utenti (attori) e un sistema o applicazione. Fanno parte del linguaggio di modellazione #glossario("UML") e si concentrano su ciò che il sistema deve fare dal punto di vista dell'utente, piuttosto che sul "come" viene implementato.
 I diagrammi dei casi d'uso, dunque, aiutano a identificare e documentare i requisiti funzionali del sistema, mostrando cosa deve essere fatto per soddisfare le esigenze degli utenti.
 
 - *Chiarezza nella comunicazione*: Forniscono una rappresentazione semplice e intuitiva, comprensibile sia per i team tecnici che per i non tecnici, come stakeholder e clienti.
-- *Base per ulteriori sviluppi*: Servono come punto di partenza per altre attività di progettazione e sviluppo, come la definizione dei diagrammi di sequenza, di attività o di stato.
-- *Riduzione delle ambiguità*: I diagrammi forniscono una visione chiara delle funzionalità del sistema, evitando fraintendimenti e malintesi tra i vari membri del team.
+- *Base per ulteriori sviluppi*: Servono come punto di partenza per altre #glossario("attività") di progettazione e sviluppo, come la definizione dei diagrammi di sequenza, di #glossario("attività") o di stato.
+- *Riduzione delle ambiguità*: I diagrammi forniscono una visione chiara delle #glossario("funzionalità") del sistema, evitando fraintendimenti e malintesi tra i vari membri del team.
 - *Strumento di comunicazione universale*: Sono una rappresentazione standardizzata e riconosciuta che facilita la collaborazione tra persone con competenze e background diversi.
 
 Per descrivere un caso d'uso con un suo diagramma dunque, il team utilizza uno standard, indicato nelle sezioni successive
 ==== Identificare un caso d'uso
-Un caso d'uso è una descrizione di una funzionalità o servizio specifico offerto da un sistema, visto dal punto di vista dell'utente (attore esterno). Rappresenta un obbiettivo che un attore cerca di raggiungere attraverso l'interazione con il sistema. Viene rappresentato tramite un semplice ovale con un nome al suo interno. La sua nomenclatura è del tipo "UC N - Nome caso d'uso"
+Un caso d'uso è una descrizione di una #glossario("funzionalità") o servizio specifico offerto da un sistema, visto dal punto di vista dell'utente (attore #glossario("esterno")). Rappresenta un obbiettivo che un attore cerca di raggiungere attraverso l'interazione con il sistema. Viene rappresentato tramite un semplice ovale con un nome al suo #glossario("interno"). La sua nomenclatura è del tipo "#glossario("UC") N - Nome caso d'uso"
 \ \
 #figure(
   image("/img/ndp/casoduso.png", width: 40%),
   caption: [Identificare un caso d'uso],
 ) <casoduso>
 \
-E' possibile inoltre identificare un sottocaso d'uso. La nomenclatura è del tipo "UC N.n - Nome sottocaso d'uso" dove si intende che è è il sottocaso n del caso d'uso N
+E' possibile inoltre identificare un sottocaso d'uso. La nomenclatura è del tipo "#glossario("UC") N.n - Nome sottocaso d'uso" dove si intende che è è il sottocaso n del caso d'uso N
 #figure(
   image("/img/ndp/sottocasoduso.png", width: 40%),
   caption: [Identificare un sottocaso d'uso],
@@ -251,7 +252,7 @@ Un attore è un'entità esterna che interagisce con un sistema o applicazione pe
 ) <attore>
 
 ==== Identificare la webapp (sistema)
-Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottocasi) d'uso vengono inseriti. E' rappresentato da un semplice rettangolo con all'interno i casi d'uso e all'esterno l'attore
+Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottocasi) d'uso vengono inseriti. E' rappresentato da un semplice rettangolo con all'#glossario("interno") i casi d'uso e all'#glossario("esterno") l'attore
 \ \
 #figure(
   image("/img/ndp/sistema.png", width: 40%),
@@ -259,7 +260,7 @@ Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottoca
 ) <sistema>
 
 ==== Identificare le relazioni 
-Le relazioni nei diagrammi dei casi d’uso descrivono come gli elementi del sistema interagiscono tra loro. In particolare, rappresentano le connessioni tra attori e casi d’uso, oppure tra diversi casi d’uso. Servono a chiarire il comportamento del sistema, mostrando le dipendenze, le collaborazioni e le estensioni delle funzionalità. Ci sono vari tipi di relazioni: associazione, inclusione, estensione e generalizzazione.
+Le relazioni nei diagrammi dei casi d’uso descrivono come gli elementi del sistema interagiscono tra loro. In particolare, rappresentano le connessioni tra attori e casi d’uso, oppure tra diversi casi d’uso. Servono a chiarire il comportamento del sistema, mostrando le dipendenze, le collaborazioni e le estensioni delle #glossario("funzionalità"). Ci sono vari tipi di relazioni: associazione, inclusione, estensione e generalizzazione.
 
 ===== Associazione
 Collega un attore a un caso d’uso, indicando che l’attore interagisce con quel caso. E' rappresentato da una semplice linea
@@ -279,7 +280,7 @@ Indica che un caso d’uso include un altro caso come parte del suo flusso princ
 
 \
 ===== Estensione (e condizioni)
-Indica che un caso d’uso può estendere un altro caso d'uso aggiungendo comportamenti opzionali o condizionali. In sostanza quindi aumenta le funzionalità di uno use case. E' rappresentata da una freccia tratteggiata con etichetta «extend».\
+Indica che un caso d’uso può estendere un altro caso d'uso aggiungendo comportamenti opzionali o condizionali. In sostanza quindi aumenta le #glossario("funzionalità") di uno use case. E' rappresentata da una freccia tratteggiata con etichetta «extend».\
 Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso che estende. 
 \ \ 
 #figure(
@@ -287,7 +288,7 @@ Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso
   caption: [Identificare la relazione estensione],
 ) <estensione>
 
-In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle funzionalità specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso da estendere può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
+In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle #glossario("funzionalità") specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso da estendere può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
 
 ===== Generalizzazione
 Lo scopo principale è quello di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
@@ -304,19 +305,19 @@ Esistono quindi due tipi di generalizzazioni: generalizzazione tra attori e gene
   caption: [Identificare la relazione generalizzazione tra casi d'uso],
 ) <generalizzazionecasiduso>
 
-Dunque i figli possono aggiungere delle funzionalità rispetto ai padri oppure modificarne il comportamento
+Dunque i figli possono aggiungere delle #glossario("funzionalità") rispetto ai padri oppure modificarne il comportamento
 
 
 === Diagramma delle classi
-Nei futuri documenti, durante le fasi di progettazione, sarà necessario rappresentare graficamente non più solo quello che l'utente desidera poter fare (interazioni con il sistema) ma anche come lo si andrà ad implementare. A questo scopo è quindi fondamentale impostare delle regole UML per la rappresentazione delle classi tramite diagrammi. Le funzionalità principali sono:
+Nei futuri documenti, durante le fasi di progettazione, sarà necessario rappresentare graficamente non più solo quello che l'utente desidera poter fare (interazioni con il sistema) ma anche come lo si andrà ad implementare. A questo scopo è quindi fondamentale impostare delle regole #glossario("UML") per la rappresentazione delle classi tramite diagrammi. Le #glossario("funzionalità") principali sono:
 - *Modellare la struttura del sistema*: Forniscono una visione dettagliata di come le entità del sistema (classi) sono definite e come interagiscono tra loro.
 - *Progettazione e Documentazione*: Sono utili durante la fase di progettazione per definire l’architettura del software e durante lo sviluppo per documentare il sistema.
 - *Supporto per il Codice*: Possono essere utilizzati durante la fase di sviluppo per scrivere il codice o per comprendere e modificare un sistema esistente.
 - *Facilitare la Comunicazione*: Rappresentano un linguaggio comune tra sviluppatori, analisti, progettisti e stakeholder.
 
-Come per i diagrammi UML per i casi d'uso, il team utilizzerà degli "standard" per la scrittura dei diagrammi delle classi, descritti nelle sezioni successive
+Come per i diagrammi #glossario("UML") per i casi d'uso, il team utilizzerà degli "standard" per la scrittura dei diagrammi delle classi, descritti nelle sezioni successive
 ==== Identificare una classe
-Una classe in UML è rappresentata come un rettangolo diviso in tre sezioni:
+Una classe in #glossario("UML") è rappresentata come un rettangolo diviso in tre sezioni:
 - *Nome della classe*: La prima sezione contiene il nome della classe, scritto in grassetto e centrato (in corsivo se la classe è astratta).
 - *Attributi*: La seconda sezione elenca le proprietà della classe, indicando il tipo di dati e la visibilità (es. privato o pubblico).
   \ La definizione è: \ _Visibilità nome : tipo [molteplicità] = default {proprietà aggiuntive}_
@@ -337,7 +338,7 @@ Le _proprietà aggiuntive_ possono essere:
 - _Unordered_: Per gli insiemi
 
 ==== Identificare le relazioni
-Come per quanto riguarda gli UML per i casi d'uso, le relazioni tra classi sono molto importanti per indicare come si "relazionano" tra loro.
+Come per quanto riguarda gli #glossario("UML") per i casi d'uso, le relazioni tra classi sono molto importanti per indicare come si "relazionano" tra loro.
 
 ===== Associazione
 Identifica che un'istanza di una classe è legata a una o più istanze di un'altra classe. Viene identificata da una semplice linea continua orientata.\ 
@@ -403,14 +404,14 @@ Aggiungono attributi e operazioni alle associazioni. Sono utilizzate per rappres
 ) <classidiassociazione>
 \
 ==== Interfacce
-L'interfaccia è una classe priva di implementazione. Una classe _realizza_ un'interfaccia se ne implementa le operazioni. Con UML 2.x viene identificata come un cerchio (_"Ball" notation_)
+L'interfaccia è una classe priva di implementazione. Una classe _realizza_ un'interfaccia se ne implementa le operazioni. Con #glossario("UML") 2.x viene identificata come un cerchio (_"Ball" notation_)
 #figure(
   image("/img/ndp/interfacciaclassi.png", width: 80%),
   caption: [Identificare le classi di associazione],
 ) <interfacciaclassi>
 In questo caso la classe A implementa la funzione "funz" dell'interfaccia "Interfaccia" che non ha la sua implementazione
 
-E' possible inoltre dichiarare il fatto che una classe ha la necessità di "collegarsi" con un'interfaccia per poter accedere ad alcune funzionalità. Ad esempio: 
+E' possible inoltre dichiarare il fatto che una classe ha la necessità di "collegarsi" con un'interfaccia per poter accedere ad alcune #glossario("funzionalità"). Ad esempio: 
 
 #figure(
   image("/img/ndp/interfaccerichieste.png", width: 100%),
@@ -428,14 +429,14 @@ Nella documentazione prodotta dal gruppo vengono utilizzati, vista la ripetizion
     align: (col, row) => (center, center).at(col),
     inset: 6pt,
     table.header([*Acronimo*], [*Parola*]),
-    [AdR],[Analisi dei Requisiti],
-    [UC], [Use Case],
-    [NdP], [Norme di Progetto],
-    [PdP], [Piano di Progetto],
-    [PdQ], [Piano di Qualifica],
-    [PoC], [Proof of Concept],
-    [RTB], [Requirements and Technology Baseline],
-    [PB], [Product Baseline],
+    [#glossario("AdR")],[#glossario("Analisi dei Requisiti")],
+    [#glossario("UC")], [Use Case],
+    [#glossario("NdP")], [Norme di Progetto],
+    [#glossario("PdP")], [Piano di Progetto],
+    [#glossario("PdQ")], [#glossario("Piano di Qualifica")],
+    [#glossario("PoC")], [Proof of Concept],
+    [#glossario("RTB")], [Requirements and Technology Baseline],
+    [#glossario("PB")], [Product Baseline],
     [MVP], [Minimum Viable Product]
     )
     <tab:acronimi>
@@ -456,7 +457,7 @@ Nella documentazione prodotta dal gruppo vengono utilizzati, vista la ripetizion
 
 
 == Verifica e Revisione della documentazione
-Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla revisione del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la tabella delle revisioni. Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la revisione. In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra tabella delle revisioni ha la colonna "Verifica" con 2 nomi: il primo è il verificatore, mentre il secondo è il responsabile.
+Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla #glossario("revisione") del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la #glossario("tabella delle revisioni"). Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la #glossario("revisione"). In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra #glossario("tabella delle revisioni") ha la colonna "#glossario("Verifica")" con 2 nomi: il primo è il verificatore, mentre il secondo è il #glossario("responsabile").
 
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
@@ -469,14 +470,14 @@ Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazio
 + Crea dei file o modifica i file esistenti
 + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
 + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
-+ ```bash git push --set-upstream origin <nome_branch>``` --- per caricare il nuovo branch e le modifiche sul repository remoto
++ ```bash git push --set-upstream origin <nome_branch>``` --- per caricare il nuovo branch e le modifiche sul #glossario("repository") remoto
 + Aprire la #glossario("Pull Request") 
- - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del repository
+ - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del #glossario("repository")
  - La #glossario("Pull Request") può essere aperta andando nella pagina "Pull Requests", impostando "nome_branch" come branch sorgente e "sources" come branch di destinazione. Premere successivamente il pulsante "Create #glossario("Pull Request")"
  -  *ATTENZIONE*. Impostare il merge al branch _sources_ (viene selezionato in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
 + Una volta creata, si assegna il #glossario("verificatore") nella sezione "Reviewers" a destra della pagina della #glossario("Pull Request") senza dimenticare d'inserire anche il #glossario("responsabile"), le labels, la board sotto la voce project e la #glossario("milestone") se presenti.
-+ Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina per la modifica della stessa. Questo permette di chiudere tutte le issue associate una volta che la #glossario("Pull Request") è stata approvata.
- - *ATTENZIONE*. L'impostazione delle issue va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio del link tra issue e #glossario("Pull Request").
++ Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina per la modifica della stessa. Questo permette di chiudere tutte le #glossario("issue") associate una volta che la #glossario("Pull Request") è stata approvata.
+ - *ATTENZIONE*. L'impostazione delle #glossario("issue") va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio del link tra #glossario("issue") e #glossario("Pull Request").
 Il merge verso il branch _sources_ verrà effettuata dal #glossario("responsabile") solo dopo la modifica/verifica del documento.
 
 ==== Verificatore - Responsabile
@@ -499,28 +500,28 @@ Questa sezione presenta tutte le istruzioni a cui attenersi, dal momento in cui 
  	+ Premere su "Review changes" e selezionare "Approve"
  	+ Premere su "Submit review"
 Tutte le istruzioni sopra descritte sono valide anche per il #glossario("responsabile") che dovrà inoltre seguire le indicazioni riportate di seguito (quest'ultime devono essere ignorate dal #glossario("verificatore")).
-+ Premere su "Merge pull request" e successivamente su "Confirm merge"
-+ Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la repository e non avere branch inutilizzati. 
++ Premere su "Merge #glossario("pull request")" e successivamente su "Confirm merge"
++ Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la #glossario("repository") e non avere branch inutilizzati. 
 
 == Comunicazione interna
-La comunicazione interna del gruppo, fondamentale per lo svolgimento del progetto e allineamento dei task, si divide in due categorie:
+La comunicazione interna del gruppo, fondamentale per lo svolgimento del progetto e allineamento dei #glossario("task"), si divide in due categorie:
 - Comunicazione *sincrona*
 - Comunicazione *asincrona*
 
 === Comunicazione sincrona
-Il team, per allinearsi, si riunisce online il *martedì pomeriggio* della settimana in cui non è previsto l'incontro con l'azienda #glossario("proponente"). In questa riunione ogni membro del team relaziona quanto fatto nel periodo in corso, evidenziando eventuali criticità o fattori di rallentamento nello sviluppo dei task. Viene poi fatta una mini retrospettiva complessiva che consente di assumere eventuali decisioni per la prevenzione o risoluzione di problematiche non previste. Durante questo incontro viene aggiornata la #glossario("project board") con le nuove issue assegnate ai membri. Al termine di ogni incontro sarà cura dell'amministratore redigere apposito #glossario("verbale interno"). \
-È a cura del responsabile di progetto valutare, concordando con il gruppo, eventuali riunioni di allineamento aggiuntive.  \ 
+Il team, per allinearsi, si riunisce online il *martedì pomeriggio* della settimana in cui non è previsto l'incontro con l'azienda #glossario("proponente"). In questa riunione ogni membro del team relaziona quanto fatto nel #glossario("periodo") in corso, evidenziando eventuali criticità o fattori di rallentamento nello sviluppo dei #glossario("task"). Viene poi fatta una mini #glossario("retrospettiva") complessiva che consente di assumere eventuali decisioni per la prevenzione o risoluzione di problematiche non previste. Durante questo incontro viene aggiornata la #glossario("project board") con le nuove #glossario("issue") assegnate ai membri. Al termine di ogni incontro sarà cura dell'#glossario("amministratore") redigere apposito #glossario("verbale interno"). \
+È a cura del #glossario("responsabile") di progetto valutare, concordando con il gruppo, eventuali riunioni di allineamento aggiuntive.  \ 
 Ogni incontro dovrà, in ogni caso, essere preceduto da convocazione mediante i canali di messaggistica del team.
 
 ==== Strumenti
-Le riunioni online del team avvengono attraverso la piattaforma *#glossario("Discord")*. \
+Le riunioni online del team avvengono attraverso la #glossario("piattaforma") *#glossario("Discord")*. \
 Le convocazioni avvengono invece, nei seguenti canali di messaggistica :
 - *#glossario("Discord")*, canale di comunicazione ufficiale del team
 - *#glossario("Telegram")*, canale di comunicazione informale del team
 
 === Comunicazione asincrona
 La comunicazione asincrona avviene sia tra tutto il team che tra i singoli componenti, attraverso i canali di comunicazione del gruppo e le piattaforme di messaggistica. \
-Questo tipo di comunicazione risulta fondamentale per consentire il corretto proseguimento dei task senza il vincolo delle sole riunione.
+Questo tipo di comunicazione risulta fondamentale per consentire il corretto proseguimento dei #glossario("task") senza il vincolo delle sole riunione.
 
 ==== Strumenti
 Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggistica messi a disposizione, ovvero:
@@ -530,18 +531,18 @@ Le comunicazioni tra tutti i membri del gruppo avvengono nei canali di messaggis
 Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in modalità di messaggistica o riunione online scegliendo tra le piattaforme gratuite presenti in rete.
 
 == Validazione
-L’attività di validazione viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’attività di validazione è anche, attraverso l’interazione diretta con il committente, di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso funzioni correttamente avendo quindi un prodotto software pronto al rilascio. Dunque potremmo definire questa attività come il processo di accertamento che il prodotto software soddisfi i requisiti specificati e che sia conforme all’uso previsto, come spuntare una checklist di controllo.
+L’#glossario("attività") di #glossario("validazione") viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’#glossario("attività") di #glossario("validazione") è anche, attraverso l’interazione diretta con il committente, di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso funzioni correttamente avendo quindi un prodotto software pronto al #glossario("rilascio"). Dunque potremmo definire questa #glossario("attività") come il processo di accertamento che il prodotto software soddisfi i requisiti specificati e che sia conforme all’uso previsto, come spuntare una checklist di controllo.
 
 == Qualità
-L’attività di gestione della qualità è un processo ampiamente descritto nel documento #glossario("PdQ").
+L’#glossario("attività") di gestione della qualità è un processo ampiamente descritto nel documento #glossario("PdQ").
 
 == Configurazione
-L’attività di gestione della configurazione è un processo che norma l’identificazione, organizzazione e controllo delle modifiche agli “artefatti” durante il loro ciclo di vita.
+L’#glossario("attività") di gestione della configurazione è un processo che norma l’identificazione, organizzazione e controllo delle modifiche agli “artefatti” durante il loro #glossario("ciclo di vita").
 
 === Repository
 Le #glossario("repository") del team archi7echs sono:
-- *archi7echs-team.github.io*: repository usata per il versionamento, gestione e sviluppo dei file sorgente relativi alla documentazione nel branch sources, per generare la pagina web viene usato il branch website mentre i documenti compilati si possono trovare nel branch master \ Riferimento: #link("https://github.com/Archi7echs-Team/archi7echs-team.github.io")[#text(blue)[https://github.com/Archi7echs-Team/archi7echs-team.github.io]] - _Ultimo accesso al link 29/01/2025_
-- *PoC*: repository usata per il #glossario("PoC") \ Riferimento: #link("https://github.com/Archi7echs-Team/PoC")[#text(blue)[https://github.com/Archi7echs-Team/PoC]] - _Ultimo accesso al link 29/01/2025_
+- *archi7echs-team.github.io*: #glossario("repository") usata per il versionamento, gestione e sviluppo dei file sorgente relativi alla documentazione nel branch sources, per generare la pagina web viene usato il branch website mentre i documenti compilati si possono trovare nel branch master \ Riferimento: #link("https://github.com/Archi7echs-Team/archi7echs-team.github.io")[#text(blue)[https://github.com/Archi7echs-Team/archi7echs-team.github.io]] - _Ultimo accesso al link 29/01/2025_
+- *#glossario("PoC")*: #glossario("repository") usata per il #glossario("PoC") \ Riferimento: #link("https://github.com/Archi7echs-Team/PoC")[#text(blue)[https://github.com/Archi7echs-Team/PoC]] - _Ultimo accesso al link 29/01/2025_
 
 === Struttura repository
 La struttura del branch master è (le directory sono segnate in grassetto):
@@ -551,13 +552,13 @@ La struttura del branch master è (le directory sono segnate in grassetto):
     - Analisi capitolati
     - Lettera Candidatura
     - Preventivo
-  - *RTB*
-    - *Esterni*
+  - *#glossario("RTB")*
+    - *#glossario("Esterni")*
       - *Verbali*
-      - Analisi dei requisiti
+      - #glossario("Analisi dei requisiti")
       - Piano di Progetto
-      - Piano di Qualifica
-    - *Interni*
+      - #glossario("Piano di Qualifica")
+    - *#glossario("Interni")*
       - *Verbali*
       - Glossario
       - Norme di Progetto
@@ -567,9 +568,9 @@ La struttura del branch master è (le directory sono segnate in grassetto):
 = Management
 
 == Gestione dell'assegnazione dei ruoli
-Il team distribuisce, in accordo con i membri, i ruoli ad ogni periodo. L'obiettivo è garantire a ciascun componente del gruppo, secondo un criterio di rotazione, l'assegnazione di ogni compito durante lo svolgimento del progetto. \
+Il team distribuisce, in accordo con i membri, i ruoli ad ogni #glossario("periodo"). L'obiettivo è garantire a ciascun componente del gruppo, secondo un criterio di rotazione, l'assegnazione di ogni compito durante lo svolgimento del progetto. \
 I criteri che vengono considerati ad ogni scelta sono i seguenti:
-- disponibilità dei singoli nel periodo seguente
+- disponibilità dei singoli nel #glossario("periodo") seguente
 - ruoli precedentemente coperti
 - tendenza ad alternare i ruoli tra due periodi contigui
 - possibilità di lasciare ruoli non coperti se non necessari per la fase successivamente
@@ -578,10 +579,10 @@ I criteri che vengono considerati ad ogni scelta sono i seguenti:
 Vengono di seguito descritti i 6 ruoli previsti per lo sviluppo del progetto.
 
 === Responsabile
-La figura di riferimento del gruppo e che lo rappresenta all'esterno, si
+La figura di riferimento del gruppo e che lo rappresenta all'#glossario("esterno"), si
 occupa del coordinamento e gestione delle risorse.  \
-Nel dettaglio la figura del Responsabile si occupa di:
-- Organizzare il periodo di riferimento, assegnando ruoli e creando #glossario("issue")
+Nel dettaglio la figura del #glossario("Responsabile") si occupa di:
+- Organizzare il #glossario("periodo") di riferimento, assegnando ruoli e creando #glossario("issue")
 - Monitorare l'andamento del #glossario("periodo") in corso mediante analisi della #glossario("Project board") e raccogliendo feedback dai diretti interessati
 - Organizzare e condurre le riunioni interne del team
 - Illustrare, durante i #glossario("SAL") periodici con il proponente, il lavoro svolto dal gruppo 
@@ -591,16 +592,16 @@ Nel dettaglio la figura del Responsabile si occupa di:
 - Stesura del #glossario("PdP") con previsioni e retrospettive
 
 === Amministratore
-Figura con il compito di assicurare l’efficienza, gestione e controllo dell’ambiente IT di lavoro nonché di supporto alla figura del Responsabile. \
-Nel dettaglio la figura dell'Amministratore si occupa di:
+Figura con il compito di assicurare l’efficienza, gestione e controllo dell’ambiente IT di lavoro nonché di supporto alla figura del #glossario("Responsabile"). \
+Nel dettaglio la figura dell'#glossario("Amministratore") si occupa di:
 - Controllare e garantire il corretto funzionamento della #glossario("repository")
-- Studiare i processi interni per renderli più efficienti
+- Studiare i processi #glossario("interni") per renderli più efficienti
 - Garantire la sicurezza della #glossario("repository")
-- Aggiornare il foglio ore relativamente al periodo in corso
+- Aggiornare il foglio ore relativamente al #glossario("periodo") in corso
 - Scrittura e aggiornamento delle Norme di Progetto
-- Sostituire il Responsabile in caso di sua temporanea assenza
+- Sostituire il #glossario("Responsabile") in caso di sua temporanea assenza
 - Aggiornare il glossario
-- Approvare, dopo la verifica, i documenti redatti o modificati dal Responsabile
+- Approvare, dopo la verifica, i documenti redatti o modificati dal #glossario("Responsabile")
 
 === Analista
 Figura con il compito di analisi ed illustrazione tecnica del problema. E' richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
@@ -616,60 +617,60 @@ Figura con il compito di individuare e determinare le scelte realizzative. E' ri
 Figura con il compito di seguire la fase di codifica. Ha la responsabilità della realizzazione e mantenimento del codice. Questa figura richiede competenze tecniche ma deleghe limitate.
 
 === Verificatore
-Figura a supporto di ogni attività del progetto. Sono richieste conoscenze e competenze tecniche e la conoscenza dettagliata delle Norme di Progetto del gruppo. \
-Nel dettaglio la figura del Verificatore si occupa di:
+Figura a supporto di ogni #glossario("attività") del progetto. Sono richieste conoscenze e competenze tecniche e la conoscenza dettagliata delle Norme di Progetto del gruppo. \
+Nel dettaglio la figura del #glossario("Verificatore") si occupa di:
 - Controllare che la documentazione redatta sia corretta, senza errori ortografici, di contenuto e che rispetti le Norme di Progetto
-- Mandare in approvazione i documenti al responsabile di progetto
+- Mandare in approvazione i documenti al #glossario("responsabile") di progetto
 
-Per le attività in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
+Per le #glossario("attività") in capo a tale figura si rimanda al procedimento per la gestione delle modifiche della documentazione - @processo_verifica
 
 == Gestione della board <gestione_board>
-Il team utilizza la board di GitHub per la gestione delle issue e delle attività. \
-Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'attività. \
-+ *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le attività che devono essere svolte
-+ *In Progress*: attività in corso di svolgimento
-+ *In review*: attività completata e in attesa di verifica
-+ *Done*: attività completata e verificata
+Il team utilizza la board di #glossario("GitHub") per la gestione delle #glossario("issue") e delle #glossario("attività"). \
+Essa è suddivisa in colonne, ognuna delle quali rappresenta uno stato dell'#glossario("attività"). \
++ *To Do*: rappresenta il nostro #glossario("backlog"), ovvero tutte le #glossario("attività") che devono essere svolte
++ *In Progress*: #glossario("attività") in corso di svolgimento
++ *In review*: #glossario("attività") completata e in attesa di verifica
++ *Done*: #glossario("attività") completata e verificata
 
 === Processo di utilizzo board
-+ Assegnazione di un'attività: l'attività viene assegnata a un membro del team
-  - Se c'è la presenza di un "sottogruppo" di lavoro, le decisioni relative al come suddividere le attività saranno a carico del "responsabile" del sottogruppo. Si attua quindi una sorta di "divide et impera" per garantire una maggiore efficienza e una migliore gestione delle attività.
-+ Inizio dell'attività: il membro del team assegnato sposta l'attività dalla colonna *To Do* a *In Progress*
-+ Completamento dell'attività: il membro del team sposta la card dalla colonna *In Progress* a *In review*
-+ Verifica dell'attività: il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'attività e, se viene approvata, per la struttura data alla #glossario("repository"),l'attività verrà spostata in automatico da *In review* a *Done* 
++ Assegnazione di un'#glossario("attività"): l'#glossario("attività") viene assegnata a un membro del team
+  - Se c'è la presenza di un "sottogruppo" di lavoro, le decisioni relative al come suddividere le #glossario("attività") saranno a carico del "#glossario("responsabile")" del sottogruppo. Si attua quindi una sorta di "divide et impera" per garantire una maggiore efficienza e una migliore gestione delle #glossario("attività").
++ Inizio dell'#glossario("attività"): il membro del team assegnato sposta l'#glossario("attività") dalla colonna *To Do* a *In Progress*
++ Completamento dell'#glossario("attività"): il membro del team sposta la card dalla colonna *In Progress* a *In review*
++ #glossario("Verifica") dell'#glossario("attività"): il #glossario("verificatore") controlla la #glossario("Pull Request") associata all'#glossario("attività") e, se viene approvata, per la struttura data alla #glossario("repository"),l'#glossario("attività") verrà spostata in automatico da *In review* a *Done* 
 
-Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le attività siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
+Sarà compito del #glossario("responsabile") del #glossario("progetto") controllare che le #glossario("attività") siano assegnate correttamente e che la board sia aggiornata. Inoltre, assegnerà il grado di priorità, in modo da garantire che quelle più importanti siano svolte per prime.
 
 == Gestione e Analisi delle ore di lavoro
 
-La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite Google Sheets, che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con Grafana, un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e funzionalità.
+La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite #glossario("Google Sheets"), che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con #glossario("Grafana"), un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e #glossario("funzionalità").
 
 === Struttura e utilizzo del foglio ore
 Il foglio ore si compone di due parti principali:
 + *Riepilogo dei Costi* (sezione sinistra)
 	- Questa sezione fornisce un quadro complessivo delle ore totali e dei costi associati ai vari ruoli svolti nei vari periodi.
 	- *Colonne principali*:
-		- *Ruolo*: elenca i ruoli ricoperti (es. Responsabile, Amministratore, Verificatore, ecc.).
-		- *Periodo X*: numero di ore svolte per ruolo nel periodo X.
+		- *Ruolo*: elenca i ruoli ricoperti (es. #glossario("Responsabile"), #glossario("Amministratore"), #glossario("Verificatore"), ecc.).
+		- *#glossario("Periodo") X*: numero di ore svolte per ruolo nel #glossario("periodo") X.
 		- *Tot. h*: somma delle ore svolte per ciascun ruolo.
 		- *€/ora*: tariffa oraria di ciascun ruolo.
 		- *Costo*: calcolo del costo totale ottenuto moltiplicando le ore svolte per la tariffa oraria.
 	- Questa sezione consente di monitorare immediatamente i costi associati a ciascun ruolo e verificare se i tempi e i budget sono in linea con le previsioni.
-+ *Tabella Oraria per Periodo* (sezione destra)
++ *Tabella Oraria per #glossario("Periodo")* (sezione destra)
 	- La sezione a destra è suddivisa in *periodi di riferimento*, ciascuno indicato con un numero progressivo e date specifiche.
 	- *Colonne principali*:
 		- *Data*: rappresenta il giorno specifico per cui vengono registrate le ore.
-		- *Ruoli*: ciascun ruolo ha una colonna dedicata (es. Responsabile, Amministratore, Verificatore, ecc.).
+		- *Ruoli*: ciascun ruolo ha una colonna dedicata (es. #glossario("Responsabile"), #glossario("Amministratore"), #glossario("Verificatore"), ecc.).
 		- *Ore svolte*: l’utente inserisce manualmente le ore svolte per ogni ruolo, in corrispondenza della data indicata.
-	- Al termine del periodo, il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
+	- Al termine del #glossario("periodo"), il totale delle ore inserite viene calcolato automaticamente e riportato nel riepilogo a sinistra, fornendo una chiara visione delle ore effettivamente lavorate.
 === Integrazione con Grafana
-I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un servizio di monitoraggio che permette di visualizzare l’andamento del progetto attraverso grafici e dashboard interattive. Questo collegamento permette di avere un’analisi più approfondita e visiva delle attività svolte. La dashboard di Grafana è suddivisa in diverse sezioni chiave:
-+ *Stato delle Issue*
-	- Grafana monitora le attività del repository GitHub, mostrando:
-	 - *Issue aperte e chiuse* in un grafico a torta.
-	 - *Issue in corso, in revisione e completate* evidenziando il loro stato attuale.
-+ Riepilogo di tutte le *pull request* e in che stato si trovano.
-+ Stato della *board* di GitHub (#link(<gestione_board>)[*4.2 Gestione della board*]).
+I dati raccolti nel foglio ore sono automaticamente collegati a #glossario("Grafana"), un servizio di monitoraggio che permette di visualizzare l’andamento del progetto attraverso grafici e dashboard interattive. Questo collegamento permette di avere un’analisi più approfondita e visiva delle #glossario("attività") svolte. La dashboard di #glossario("Grafana") è suddivisa in diverse sezioni chiave:
++ *Stato delle #glossario("Issue")*
+	- #glossario("Grafana") monitora le #glossario("attività") del #glossario("repository") #glossario("GitHub"), mostrando:
+	 - *#glossario("Issue") aperte e chiuse* in un grafico a torta.
+	 - *#glossario("Issue") in corso, in #glossario("revisione") e completate* evidenziando il loro stato attuale.
++ Riepilogo di tutte le *#glossario("pull request")* e in che stato si trovano.
++ Stato della *board* di #glossario("GitHub") (#link(<gestione_board>)[*4.2 Gestione della board*]).
 + *Andamento Ore e Costi*
  - Questa sezione fornisce un confronto visivo tra le *ore previste* e le *ore effettivamente* svolte per ciascun ruolo.
  - Il grafico in basso a sinistra evidenzia:
@@ -677,11 +678,11 @@ I dati raccolti nel foglio ore sono automaticamente collegati a Grafana, un serv
 	 - *Ore Effettive*: rappresentate in verde.
 + *Andamento Costi Preventivati vs Effettivi*
 	- In basso a destra, un grafico a linea mostra:
-	 - *Costi Preventivati*: i costi stimati durante la pianificazione del periodo.
-	 - *Costi Effettivi*: i costi registrati a fine periodo.
+	 - *Costi Preventivati*: i costi stimati durante la pianificazione del #glossario("periodo").
+	 - *Costi Effettivi*: i costi registrati a fine #glossario("periodo").
 	- Questo confronto permette di valutare eventuali scostamenti rispetto al piano iniziale e di adottare misure correttive.
-+ *Riepilogo delle Attività*
- - Nella sezione centrale una tabella riporta i ruoli assegnati per il periodo corrente.
++ *Riepilogo delle #glossario("Attività")*
+ - Nella sezione centrale una tabella riporta i ruoli assegnati per il #glossario("periodo") corrente.
 	
   
 == Norme tipografiche
@@ -702,8 +703,8 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 - *Font e dimensioni*: il font scelto è Roboto Serif, con una dimensione di 12 pt per il corpo del testo, e interlinea 1,5.
 - *Margini*: i margini sono impostati a 2 cm sui lati orizzontali e 2,5 cm sui lati verticali.
 - *Elenchi*:
-	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o attività che non sono sequenziali.
-	- *Elenchi numerati*: devono essere utilizzati quando si descrivono attività che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
+	- *Elenchi puntati*: devono essere usati per elencare oggetti, idee o concetti che non seguono un ordine particolare. Ad esempio, per elencare requisiti, caratteristiche, o #glossario("attività") che non sono sequenziali.
+	- *Elenchi numerati*: devono essere utilizzati quando si descrivono #glossario("attività") che devono essere eseguite in un ordine preciso, come per le procedure passo passo, le istruzioni sequenziali o le fasi di un processo.
 
 == Gestione immagini
 - Ogni immagine presente nei documenti deve essere salvata nella cartella _img_
@@ -711,84 +712,84 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 
 #pb() 
 = Processi organizzativi
-E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei task ed eventuali rischi annessi. 
+E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei #glossario("task") ed eventuali rischi annessi. 
 
 == Gestione dei processi
-Un #glossario("processo") è un insieme di attività correlate  e coese che trasformano bisogni (input) in prodotti (output) secondo specifiche regole. \
+Un #glossario("processo") è un insieme di #glossario("attività") correlate  e coese che trasformano bisogni (input) in prodotti (output) secondo specifiche regole. \
 
-L'intero ciclo di vita di ogni processo è supportato dalla gestione di questo mediante il sistema di #glossario("Issue") di #glossario("Github"). 
+L'intero #glossario("ciclo di vita") di ogni processo è supportato dalla gestione di questo mediante il sistema di #glossario("Issue") di #glossario("Github"). 
 
 La gestione di un processo è composta da diverse fasi:
  + Identificazione e definizione
  + Pianificazione
  + Monitoraggio
  + Gestione dei rischi
- + Retrospettiva
+ + #glossario("Retrospettiva")
 
 === Identificazione e definizione di processi
-Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima attività che compone il progetto, indipendentemente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
+Elemento fondamentale per la gestione di un processo è l'identificazione di questo. Un processo viene indicato come una minima #glossario("attività") che compone il progetto, indipendentemente essa sia di progettazione, analisi, codifica o gestione/amministrazione del progetto stesso. 
 
 ==== Identificazione mediante sistema Issue di Github 
 Ogni processo viene identificato da:
-- *ID*, generato automaticamente dal sistema
+- *#glossario("ID")*, generato automaticamente dal sistema
 - *Nome* 
 - *Descrizione*, se necessaria
 - *Membro* (o membri) del team assegnati
 - *#glossario("Label")*, fondamentale per identificare l'appartenenza del processo. Ogni #glossario("label") si riferisce alla relativa parte di documentazione/codifica di cui il processo fa parte. Nel dettaglio:
-  - AdR
+  - #glossario("AdR")
   - Agg_sito
   - Candidatura
-  - Fix, per indicare la correzione di un errore ed è obbligatorio associare una seconda label che identifichi l'appartenenza del processo
+  - Fix, per indicare la correzione di un errore ed è obbligatorio associare una seconda #glossario("label") che identifichi l'appartenenza del processo
   - Glossario
-  - NdP
-  - PdP
-  - PdQ
+  - #glossario("NdP")
+  - #glossario("PdP")
+  - #glossario("PdQ")
   - V.E.
   - V.I.
-- *Progetto*, configurazione di Github necessaria per poter gestire la issue mediante la #glossario("Project Board")
-- *#glossario("Milestone")*, per identificare il periodo a cui il processo è associato
+- *Progetto*, configurazione di #glossario("Github") necessaria per poter gestire la #glossario("issue") mediante la #glossario("Project Board")
+- *#glossario("Milestone")*, per identificare il #glossario("periodo") a cui il processo è associato
 === Pianificazione 
 Ogni processo viene associato ad un #glossario("periodo"), indicato nel sistema di #glossario("Issue") come #glossario("Milestone"). 
-Tale associazione consente di identificare il processo dentro una fase, definita da una data di inizio ed una fine, definendo quindi un termine massimo di completamento, salvo specifica indicazione a preventivo o motivazione a consuntivo. Tale gestione consente inoltre di avere una visione su tutti i processi, consentendo il monitoraggio e la retrospettiva del periodo stesso con stime di tempi, risorse e costi necessari per il completamento delle #glossario("Issue").
+Tale associazione consente di identificare il processo dentro una fase, definita da una data di inizio ed una fine, definendo quindi un termine massimo di completamento, salvo specifica indicazione a preventivo o motivazione a consuntivo. Tale gestione consente inoltre di avere una visione su tutti i processi, consentendo il monitoraggio e la #glossario("retrospettiva") del #glossario("periodo") stesso con stime di tempi, risorse e costi necessari per il completamento delle #glossario("Issue").
 
 ==== Diagramma di Gantt
-Per una corretta pianificazione e gestione delle issue, è compito di ogni assegnatario delle issue andare a indicare la _start date_ e la _end date_ nella relative sezione di #glossario("Github"), in modo tale che la project board mostri automaticamente il diagramma di Gantt con le tempistiche di inizio e fine del processo.
+Per una corretta pianificazione e gestione delle #glossario("issue"), è compito di ogni assegnatario delle #glossario("issue") andare a indicare la _start date_ e la _end date_ nella relative sezione di #glossario("Github"), in modo tale che la project board mostri automaticamente il diagramma di Gantt con le tempistiche di inizio e fine del processo.
 
 === Monitoraggio
 E' necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. E' a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
-- *Todo*, #glossario("Issue") creata ma non ancora iniziata
+- *#glossario("Todo")*, #glossario("Issue") creata ma non ancora iniziata
 - *In progress*, #glossario("Issue") in lavorazione
 - *In review*, #glossario("Issue") completata e in attesa di verifica
 - *Done*, #glossario("Issue") terminata
 
-La board permette al responsabile di progetto di intervenire tempestivamente in caso di problematiche che sono sorte o stanno per sorgere. \
-E' compito del responsabile di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
-Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del processo è tenuto ad avvisare tutto il team e sarà cura del responsabile trovare una soluzione al problema presentato.
+La board permette al #glossario("responsabile") di progetto di intervenire tempestivamente in caso di problematiche che sono sorte o stanno per sorgere. \
+E' compito del #glossario("responsabile") di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
+Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del processo è tenuto ad avvisare tutto il team e sarà cura del #glossario("responsabile") trovare una soluzione al problema presentato.
 
 === Gestione dei rischi
 Ogni processo può essere soggetto a rischi, indicati nel Piano di Progetto. Una corretta prevenzione e gestione dei rischi, come indicato al punto precedente, richiede il corretto e tempestivo aggiornamento di una board. \
-Il responsabile di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), in quest'ultimo nella sezione di #glossario("retrospettiva") del periodo.
+Il #glossario("responsabile") di progetto, al verificarsi di una situazione di rischio, è tenuto a prendere decisioni volte all'eliminazione di tale rischio con l'obiettivo di terminare i processi nei tempi previsti e rispettando le procedure ed indici di qualità. Tali decisioni vengono indicate e motivate nei #glossario("verbali interni") e nel #glossario("PdP"), in quest'ultimo nella sezione di #glossario("retrospettiva") del #glossario("periodo").
 
 === Retrospettiva
-Ogni singolo processo è parte integrante della retrospettiva del periodo, dove eventuali criticità devono essere evidenziate e giustificate. \
-Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la retrospettiva del processo stesso.
+Ogni singolo processo è parte integrante della #glossario("retrospettiva") del #glossario("periodo"), dove eventuali criticità devono essere evidenziate e giustificate. \
+Durante l'incontro periodico #glossario("SAL") con il proponente viene relazionata, da coloro che hanno seguito i processi interessati dalla riunione, la #glossario("retrospettiva") del processo stesso.
 
 === Miglioramento
-L'attività di miglioramento è un aspetto fondamentale per garantire efficienza e qualità dei processi. Si identificano tutte quelle "aree" che necessitano degli accorgimenti che possono interessare questioni tempistiche e/o di qualità apportando quindi le dovute modifiche necessarie.
-L’identificazione si materializza attraverso la retrospettiva svolta durante ogni riunione (ampiamente descritto all'interno del #glossario("PdP")) e anche grazie al cruscotto che permette di avere una visione d'insieme dei processi e delle issue in corso.
+L'#glossario("attività") di miglioramento è un aspetto fondamentale per garantire efficienza e qualità dei processi. Si identificano tutte quelle "aree" che necessitano degli accorgimenti che possono interessare questioni tempistiche e/o di qualità apportando quindi le dovute modifiche necessarie.
+L’identificazione si materializza attraverso la #glossario("retrospettiva") svolta durante ogni riunione (ampiamente descritto all'#glossario("interno") del #glossario("PdP")) e anche grazie al cruscotto che permette di avere una visione d'insieme dei processi e delle #glossario("issue") in corso.
   
 
 === Formazione
-L’attività di formazione è necessaria per avere un gruppo con conoscenze allineate e adatte per la realizzazione del progetto. L’obiettivo dell’attività è un gruppo con membri capaci di ricoprire ogni ruolo all’interno del gruppo avendo conseguito un livello di conoscenza generale adatto.
-\ L’attività si divide in due modalità: 
+L’#glossario("attività") di formazione è necessaria per avere un gruppo con conoscenze allineate e adatte per la realizzazione del progetto. L’obiettivo dell’#glossario("attività") è un gruppo con membri capaci di ricoprire ogni ruolo all’#glossario("interno") del gruppo avendo conseguito un livello di conoscenza generale adatto.
+\ L’#glossario("attività") si divide in due modalità: 
 -	*Individuale*: ogni membro si impegnerà a raggiungere un livello di conoscenze adatto per ricoprire ogni ruolo in modo autonomo
--	*Di gruppo*: per gruppo si intende anche due persone, nel caso l’attività individuale non sia consigliata o normalmente essa si svolge nel cambio dei ruoli passando le conoscenze maturate durante il periodo al gruppo o al singolo che andrà a ricoprire il ruolo.
+-	*Di gruppo*: per gruppo si intende anche due persone, nel caso l’#glossario("attività") individuale non sia consigliata o normalmente essa si svolge nel cambio dei ruoli passando le conoscenze maturate durante il #glossario("periodo") al gruppo o al singolo che andrà a ricoprire il ruolo.
 
 #pb()
 = Standard di qualità
 Per una corretta gestione del #glossario("ciclo di vita") del progetto e per garantire la qualità dei processi e del prodotto software verranno adottati i seguenti standard internazionali sviluppati dall'#glossario("ISO"):
-- *#glossario("ISO/IEC 9126")*: lo standard per la valutazione della qualità del prodotto software. Questo modello consente di analizzare e valutare il software in base a caratteristiche fondamentali, quali funzionalità, affidabilità, usabilità, efficienza, manutenibilità e portabilità. Queste caratteristiche sono misurabili attraverso delle metriche. La scelta di questo standard riflette l’obiettivo di fornire un prodotto che soddisfi pienamente le specifiche richieste del progetto. \
-- *#glossario("ISO/IEC 12207:1995")*: lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle attività durante l’intero #glossario("ciclo di vita") del progetto. \
+- *#glossario("ISO/IEC 9126")*: lo standard per la valutazione della qualità del prodotto software. Questo modello consente di analizzare e valutare il software in base a caratteristiche fondamentali, quali #glossario("funzionalità"), affidabilità, usabilità, efficienza, manutenibilità e portabilità. Queste caratteristiche sono misurabili attraverso delle metriche. La scelta di questo standard riflette l’obiettivo di fornire un prodotto che soddisfi pienamente le specifiche richieste del progetto. \
+- *#glossario("ISO/IEC 12207:1995")*: lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle #glossario("attività") durante l’intero #glossario("ciclo di vita") del progetto. \
 Questa combinazione di standard consente di bilanciare l'attenzione sulla qualità del prodotto con un approcio metodico alla gestione dei processi, assicurando un risultato finale che sia funzionale, efficiente e conforme alle migliore pratiche internazionali. 
 
 == Modello di qualità secondo Standard ISO/IEC 9126
@@ -802,14 +803,14 @@ Di seguito vengono elencate e descritte le categorie fondamentali che classifica
   - *Sicurezza*: è la capacità del software di proteggere informazioni e dati da accessi non autorizzati.
 
 === Affidabilità
-Misura la capacità del software di mantenere un livello di prestazioni specificato in determinate condizioni, anche in presenza di errori, per un periodo di tempo stabilito. Le sue sotto-caratteristiche sono:
+Misura la capacità del software di mantenere un livello di prestazioni specificato in determinate condizioni, anche in presenza di errori, per un #glossario("periodo") di tempo stabilito. Le sue sotto-caratteristiche sono:
   - *Maturità*: è la capacità del software di gestire in modo stabile le operazioni, evitando errori, malfunzionamenti e risultati non corretti.
   - *Tolleranza agli errori*: è la capacità di mantenere prestazioni specificate anche in caso di errori.
   - *Recuperabilità*: è la capacità del software di ripristinare un livello appropriato di prestazioni in caso di errori.
 
 === Usabilità
 É la capacità del software di essere compreso, appreso e utilizzato dall'utente in condizioni specifiche. Le sotto-caratteristiche dell'usabilità sono:
-  - *Comprensibilità*: è la facilità con la quale l'utente può capire le funzionalità disponibili e come queste possono essere utilizzate per raggiungere i propri obiettivi. Include la chiarezza dell'interfaccia utente e delle informazioni presentate.
+  - *Comprensibilità*: è la facilità con la quale l'utente può capire le #glossario("funzionalità") disponibili e come queste possono essere utilizzate per raggiungere i propri obiettivi. Include la chiarezza dell'interfaccia utente e delle informazioni presentate.
   - *Apprendibilità*: è la facilità con la quale gli utenti possono apprendere come utilizzare il sistema.
   - *Operabilità*: è la capacità del software di consentire agli utenti di operare e controllare il sistema senza difficoltà.
   - *Attrattiva*: è la capacità del software di essere gradevole  per l'utente che ne fa uso, attraverso elementi di piacevolezza come aspetti grafici o interattivi.
@@ -822,7 +823,7 @@ Misura la capacità del software di mantenere un livello di prestazioni specific
 === Manutenibilità 
 É la facilità con cui un sistema software può essere modificato per correggere difetti e migliorare le prestazioni. Le sue sotto-caratteristiche sono:
   - *Analizzabilità*: è la facilità con la quale è possibile analizzare il codice per localizzare un errore o un difetto nello stesso.
-  - *Modificabilità*: è la facilità con cui il software può essere modificato per aggiungere nuove funzionalità o per cambiare quelle esistenti.
+  - *Modificabilità*: è la facilità con cui il software può essere modificato per aggiungere nuove #glossario("funzionalità") o per cambiare quelle esistenti.
   - *Stabilità*: è la capacità del software di evitare nuovi errori o difetti durante o dopo una modifica.
   - *Testabilità*: è la facilità con cui il software può essere testato per verificare la correttezza delle modifiche. É fondamentale per garantire che non vegano introdotti difetti e che il sistema funzioni come previsto.
 
@@ -836,11 +837,11 @@ Misura la capacità del software di mantenere un livello di prestazioni specific
 #pb()
 == Suddivisione dei processi secondo Standard ISO/IEC 12207:1995
 === Processi primari
-Sono i processi che comprendono le attività direttamente legate allo sviluppo del software, si occupano quindi della realizzazione, distribuzione e manutenzione del prodotto software. \
+Sono i processi che comprendono le #glossario("attività") direttamente legate allo sviluppo del software, si occupano quindi della realizzazione, distribuzione e manutenzione del prodotto software. \
 L'obiettivo di questi processi è garantire che il prodotto sia consegnato e mantenuto secondo i requisiti.
 
 === Processi di supporto
-Sono i processi che includono la gestione dei documenti e dei processi di controllo della qualità, dunque non producono direttamente il software, ma forniscono attività e servizi necessari per garantire la qualità ed efficacia. \
+Sono i processi che includono la gestione dei documenti e dei processi di controllo della qualità, dunque non producono direttamente il software, ma forniscono #glossario("attività") e servizi necessari per garantire la qualità ed efficacia. \
 L'obiettivo di questi processi è garantire che i processi primari funzionino in modo fluido e il prodotto finale soddisfi gli standard richiesti.
 
 === Processi organizzativi 
@@ -863,13 +864,13 @@ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di
  === Processi primari
  - *MPC1*:
   - *Nome*: Schedule Adherence (*SA*)
-  - *Descrizione*: percentuale di attività completate entro le scadenze stabilite.
+  - *Descrizione*: percentuale di #glossario("attività") completate entro le scadenze stabilite.
   - *Obiettivo*: misurare quanto il progetto rispetta i tempi previsti.
   - *Formula*: _SA = #math.frac("attività completate in tempo", "attività pianificate") x 100_
 
 - *MPC2*:
   - *Nome*: Earned Value (*EV*)
-  - *Descrizione*: rappresenta il valore del lavoro effettivamente completato fino a quel periodo.
+  - *Descrizione*: rappresenta il valore del lavoro effettivamente completato fino a quel #glossario("periodo").
   - *Obiettivo*: misurare il progresso del progetto.
   - *Formula*: _EV = lavoro completato(%) x #glossario("BAC")_
   
@@ -968,12 +969,12 @@ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di
 - *MPD5*:
   - *Nome*: Indice Gulpease (*MIG*)
   - *Descrizione*: è una metrica che misura la leggibilità di un testo in lingua italiana, basandosi sulla lunghezza delle parole e delle frasi.
-  - *Obiettivo*: garantire che la documentazione prodotta sia chiara e accessibile, evitando testi complessi.
+  - *Obiettivo*: garantire che la documentazione prodotta sia chiara e #glossario("accessibile"), evitando testi complessi.
   - *Formula*: _MIG = 89 + #math.frac("300·(numero frasi) - 10·(numero lettere) ", "numero parole")_
 
 - *MPD6*:
   - *Nome*: Failure Density (*FD*)
-  - *Descrizione*: rappresenta il numero di errori rilevati per unità di codice.
+  - *Descrizione*: rappresenta il numero di errori rilevati per #glossario("unità") di codice.
   - *Obiettivo*: valutare la qualità del codice e ridurre il numero di errori.
   - *Formula*: _FD = #math.frac("numero errori rilevati", "linee di codice totali") x 100_
 
@@ -984,14 +985,14 @@ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di
   - *Formula*: _SC = #math.frac("istruzioni eseguite", "istruzioni totali") x 100_
 
 - *MPD8*:
-  - *Nome*: Branch Coverage (*BC*)
+  - *Nome*: #glossario("Branch") Coverage (*BC*)
   - *Descrizione*: misura la percentuale di ramificazioni eseguite almeno una volta durante i test rispetto al totale delle ramificazioni presenti nel codice.
   - *Obiettivo*: garantire che tutte le possibili diramazioni del codice siano state testate per identificare eventuali errori nei percorsi condizionali.
   - *Formula*: _BC = #math.frac("ramificazioni eseguite", "ramificazioni totali") x 100_
 
 - *MPD9*:
   - *Nome*: Correttezza Ortografica (*CO*)
-  - *Descrizione*: misura il numero di errori ortografici presenti all'interno di un documento del progetto.
+  - *Descrizione*: misura il numero di errori ortografici presenti all'#glossario("interno") di un documento del progetto.
   - *Obiettivo*: garantire una documentazione chiara, migliorando la leggibilità.
 
 === Usabilità
@@ -1003,7 +1004,7 @@ L'obiettivo di questi processi è garantire che l'organizzazione sia in grado di
 - *MPD11*:
   - *Nome*: Tempo di Apprendimento (*TA*)
   - *Descrizione*: misura il tempo necessario affinché un nuovo utente apprenda come utilizzare il sistema.
-  - *Obiettivo*: ridurre il tempo richiesto per apprendere le funzionalità del sistema.
+  - *Obiettivo*: ridurre il tempo richiesto per apprendere le #glossario("funzionalità") del sistema.
 
 === Efficienza
 - *MPD12*:

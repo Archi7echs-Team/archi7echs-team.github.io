@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
+    "0.0.2", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, "",
     "0.0.1", "05-12-2024",  "Prima stesura documento", p.salvo, (p.valdagno, p.checchinato),
   )
 )
@@ -26,7 +27,7 @@ _E' stata convocata una riunione online del Team a seguito della chiamata con l'
 
 *Data e ora convocazione* Martedì 26/11/2024 - ore 16.10 \
 
-*Luogo* Online - Piattaforma Discord \
+*Luogo* Online - #glossario("Piattaforma") #glossario("Discord") \
 
 *Destinatari* Tutto il gruppo \
 
@@ -41,8 +42,8 @@ L'incontro inizia, come da programma alle ore 16.10. Sono presenti i seguenti co
 - #p.scandaletti
 - #p.valdagno
 
-#p.salvo si propone come verbalizzante dell’incontro. \
-#p.lucato, in qualità di responsabile di progetto, prende la parola e si procede alla discussione in ordine dei punti all’ordine del giorno.
+#p.salvo si propone come #glossario("verbalizzante") dell’incontro. \
+#p.lucato, in qualità di #glossario("responsabile di progetto"), prende la parola e si procede alla discussione in ordine dei punti all’#glossario("ordine del giorno").
 #pb()
 
 
@@ -60,25 +61,25 @@ L'incontro inizia, come da programma alle ore 16.10. Sono presenti i seguenti co
 Durante l'incontro con Alex Beggiato sono stati chiariti alcuni dubbi dei membri e il team ha ricevuto conferma della qualità di ciò che è stato svolto finora. Il team ha analizzato le conferme e i suggerimenti di Alex Beggiato per capire cosa migliorare o modificare.
 
 == Definizione dei ruoli e passaggio di consegne
-Questa riunione segna la fine del primo periodo quindi si procede a discutere sul cambio dei ruoli e sul passaggio di consegne che esso provocherà. I nuovi ruoli sono così assegnati:
+Questa riunione segna la fine del primo #glossario("periodo") quindi si procede a discutere sul cambio dei ruoli e sul passaggio di consegne che esso provocherà. I nuovi ruoli sono così assegnati:
 #table(
   columns: (1fr, 1fr),
   align: (col, row) => (center, center).at(col),
   inset: 6pt,
   table.header([*Ruolo*], [*Membri*]),
-    [Responsabile],[Gabriele Checchinato],
-    [Amministratore],[Giovanni Salvò],
+    [#glossario("Responsabile")],[Gabriele Checchinato],
+    [#glossario("Amministratore")],[Giovanni Salvò],
     [Analista],[Francesco Pozzobon],
-    [Programmatore],[Giacomo Pesenato \ Leonardo Lucato],
-    [Verificatore],[Pietro Valdagno],
+    [#glossario("Programmatore")],[Giacomo Pesenato \ Leonardo Lucato],
+    [#glossario("Verificatore")],[Pietro Valdagno],
     [Progettista], [Gioele Scandaletti]
 )
-I ruoli sono stati assegnati considerando le preferenze personali, la disponibilità e il desiderio dei membri del team di mettersi alla prova in nuovi ambiti. Il ruolo di programmatore, in particolare, è stato attribuito per garantire la continuità del lavoro svolto in modo autonomo.
+I ruoli sono stati assegnati considerando le preferenze personali, la disponibilità e il desiderio dei membri del team di mettersi alla prova in nuovi ambiti. Il ruolo di #glossario("programmatore"), in particolare, è stato attribuito per garantire la continuità del lavoro svolto in modo autonomo.
 
-Successivamente, ogni membro ha condiviso le attività svolte nel periodo precedente e ha fornito indicazioni su come ricoprire il ruolo, offrendo una prima infarinatura al nuovo assegnatario per facilitare il passaggio di consegne.
+Successivamente, ogni membro ha condiviso le #glossario("attività") svolte nel #glossario("periodo") precedente e ha fornito indicazioni su come ricoprire il ruolo, offrendo una prima infarinatura al nuovo assegnatario per facilitare il passaggio di consegne.
 
 == Dimostrazione del primo approccio alle tecnologie
-#p.lucato mostra al team una versione semplificata del #glossario("PoC") realizzata tramite l'uso di Three.js e React. #p.pesenato invece mostra una versione realizzata tramite l'uso di Three.js ma come front-end framework viene utilizzato Svelte. La dimostrazione delle tecnologie scelte rafforza l'idea di usare Three.js come libreria JavaScript.
+#p.lucato mostra al team una versione semplificata del #glossario("PoC") realizzata tramite l'uso di Three.js e React. #p.pesenato invece mostra una versione realizzata tramite l'uso di Three.js ma come front-end #glossario("framework") viene utilizzato Svelte. La dimostrazione delle tecnologie scelte rafforza l'idea di usare Three.js come #glossario("libreria") JavaScript.
 
 == Varie ed eventuali
 
@@ -88,7 +89,7 @@ Si convoca il prossimo incontro per mercoledì 04/12/2024 alle ore 15:00 per dis
 = Decisioni
 
 #decisioni((
-  [2],[Ruoli],[I nuovi assegnatari dei ruoli proseguiranno con le attività legate al loro incarico attuale, offrendo supporto ai colleghi che hanno assunto il loro precedente ruolo, qualora necessario.],
+  [2],[Ruoli],[I nuovi assegnatari dei ruoli proseguiranno con le #glossario("attività") legate al loro incarico attuale, offrendo supporto ai colleghi che hanno assunto il loro precedente ruolo, qualora necessario.],
   [3],[Tecnologie],[I membri incaricati proseguiranno lo studio delle tecnologie proposte al fine di giungere a una scelta definitiva.],
 
 ))
@@ -97,9 +98,9 @@ Si convoca il prossimo incontro per mercoledì 04/12/2024 alle ore 15:00 per dis
 = TODO
 
 #todo((
-  (47,), (p.salvo), [Redazione verbale interno 2024-11-26],
-  (48,), (p.salvo), [Redazione verbale esterno 2024-11-26],
-  (49,), (p.salvo), [Attivare regola protezione branch sources],
+  (47,), (p.salvo), [Redazione #glossario("verbale interno") 2024-11-26],
+  (48,), (p.salvo), [Redazione #glossario("verbale esterno") 2024-11-26],
+  (49,), (p.salvo), [Attivare regola protezione #glossario("branch") sources],
   (50,), (p.salvo), [Aggiornamento glossario],
   (52,), (p.pozzobon), [Stesura caratteristiche utente in #glossario("AdR")],
   (53,), (p.pozzobon), [Inserire la gestione degli errori in #glossario("AdR")],
@@ -107,7 +108,7 @@ Si convoca il prossimo incontro per mercoledì 04/12/2024 alle ore 15:00 per dis
 
 ))
 
-_Per il dettaglio delle decisioni si rimanda al punto dell'OdG._
+_Per il dettaglio delle decisioni si rimanda al punto dell'#glossario("OdG")._
 
 #v(3em)
 
@@ -118,7 +119,7 @@ Padova, 26 novembre 2024
   columns: (auto, 1fr),
   align: (left, right),
   inset:0pt,
-  [Il Verbalizzante:\ #p.salvo],
-  [Il responsabile di Progetto:\ #p.checchinato],
+  [Il #glossario("Verbalizzante"):\ #p.salvo],
+  [Il #glossario("responsabile di Progetto"):\ #p.checchinato],
 )
 
