@@ -27,7 +27,7 @@
         - 3d
         Rappresentazione tridimensionale di oggetti o dati, utilizzata per creare visualizzazioni più realistiche e interattive.
         
-        - 3dataviz
+        - 3Dataviz
         3Dataviz è il capitolato scelto dal team, proposto dall’azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
 
         = A
