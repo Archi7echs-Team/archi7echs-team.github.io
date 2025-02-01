@@ -20,7 +20,7 @@
         = Introduzione
         Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile per facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti. Questo Glossario avrà una struttura alfabetica e se un termine sarà presente in questo documento sarà riconoscibile in questo modo: Parola#sub(text(blue)[G]).
         
-        = .
+        = Caratteri speciali
         - .csv
         Formato di file (Comma-Separated Values) utilizzato per rappresentare dati tabulari, in cui i valori sono separati da virgole.
 
