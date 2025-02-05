@@ -3,12 +3,12 @@
 #show: conf.with(
   title: "Analisi dei Requisiti",
   author: "Team",
-  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "0.7.7", "05-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, "",
     "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, (p.lucato, p.pesenato),
     "0.7.4", "19-01-2025", "Aggiunta immagini degli UC e modifica tabelle riferimenti", p.valdagno, (p.lucato, p.pesenato),
@@ -142,7 +142,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione.
 
 #figure(
-  image("/img/adr/UC 1.png", width: 50%),
+  image("/img/adr/1.png", width: 80%),
   caption: [Visualizzazione interattiva dei dati],
 ) <imgUC1>
 \
@@ -161,7 +161,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Tramite file .csv (@uc2.4).
     + Il sistema salva i dati.
 #figure(
-  image("/img/adr/UC 2.png", width: 100%),
+  image("/img/adr/2.png", width: 115%),
   caption: [Caricamento dati per la generazione del grafico],
 ) <imgUC2>
 \
@@ -185,7 +185,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore invalidArguments (@uc21)
   + Visualizzazione dell'errore tooMuchData (@uc22)
 #figure(
-  image("/img/adr/UC 2_1.png", width: 100%),
+  image("/img/adr/3.png", width: 115%),
   caption: [Caricamento manuale dei dati tramite interfaccia],
 ) <imgUC2.1>
 \
@@ -203,7 +203,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/UC 2_1_1.png", width: 80%),
+  image("/img/adr/4.png", width: 115%),
   caption: [L'utente inserisce il campo X],
 ) <imgUC2.1.1>
 \
@@ -221,7 +221,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/UC 2_1_2.png", width: 80%),
+  image("/img/adr/5.png", width: 115%),
   caption: [L'utente inserisce il campo Y],
 ) <imgUC2.1.2>
 \
@@ -239,7 +239,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/UC 2_1_3.png", width: 80%),
+  image("/img/adr/6.png", width: 115%),
   caption: [L'utente inserisce il campo Z],
 ) <imgUC2.1.3>
 \
@@ -259,7 +259,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione errore tooMuchData (@uc22);  
     + Visualizzazione errore apiTimeOut (@uc24);
 #figure(
-  image("/img/adr/UC 2_2.png", width: 80%),
+  image("/img/adr/7.png", width: 115%),
   caption: [Caricamento automatico dati tramite chiamata #glossario("API")],
 ) <imgUC2.2>
 \
@@ -278,7 +278,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   - Il #glossario("DB") non risponde per motivi di rete
     + Errore networkError (@uc26).
 #figure(
-  image("/img/adr/UC 2_3.png", width: 80%),
+  image("/img/adr/8.png", width: 115%),
   caption: [Caricamento automatico dati tramite connessione a #glossario("database") #glossario("SQL")],
 ) <imgUC2.3>
 \
@@ -300,7 +300,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Errore invalidCsv (@uc23);
     + Errore fileTooBig (@uc27);
 #figure(
-  image("/img/adr/UC 2_4.png", width: 100%),
+  image("/img/adr/9.png", width: 115%),
   caption: [Caricamento automatico dati tramite file .csv],
 ) <imgUC2.4>
 \
@@ -326,7 +326,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione errore fileTooBig (@uc27);
     + Visualizzazione errore invalidCsv (@uc23);  
 #figure(
-  image("/img/adr/UC 2_4_1.png", width: 80%),
+  image("/img/adr/10.png", width: 115%),
   caption: [Selezione del file .csv],
 ) <imgUC2.4.1>
 \
@@ -340,7 +340,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente seleziona la modalità "Rotazione" dal menù apposito.
   + L'utente attraverso le gesture del mouse si sposta nel grafico.
 #figure(
-  image("/img/adr/UC 3.png", width: 50%),
+  image("/img/adr/11.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Rotazione],
 ) <imgUC3>
 \
@@ -355,7 +355,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente.
 #figure(
-  image("/img/adr/UC 4.png", width: 50%),
+  image("/img/adr/12.png", width: 80%),
   caption: [Strumenti visualizzazione dati - PAN orizzontale],
 ) <imgUC4>
 \
@@ -369,7 +369,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente.
 #figure(
-  image("/img/adr/UC 5.png", width: 50%),
+  image("/img/adr/13.png", width: 80%),
   caption: [Strumenti visualizzazione dati - PAN verticale],
 ) <imgUC5>
 \
@@ -384,7 +384,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione abilita la modalità Zoom.
   + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico.
 #figure(
-  image("/img/adr/UC 6.png", width: 50%),
+  image("/img/adr/14.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Zoom],
 ) <imgUC6>
 \
@@ -397,7 +397,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
   + L'utente, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione.
 #figure(
-  image("/img/adr/UC 7.png", width: 50%),
+  image("/img/adr/15.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Auto posizionamento],
 ) <imgUC7>
 \
@@ -411,7 +411,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente passa il cursore del mouse sopra una barra.
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
-  image("/img/adr/UC 8.png", width: 50%),
+  image("/img/adr/16.png", width: 80%),
   caption: [Visualizzazione informazioni durante #glossario("hover") di una barra],
 ) <imgUC8>
 \
@@ -427,7 +427,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Visualizzazione delle informazioni relative alla barra premuta;
       - Possibilità di applicare filtri al grafico in base alla barra premuta.
 #figure(
-  image("/img/adr/UC 9.png", width: 50%),
+  image("/img/adr/17.png", width: 80%),
   caption: [Click su una barra del grafico],
 ) <imgUC9>
 \
@@ -440,7 +440,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
-  image("/img/adr/UC 9_1.png", width: 50%),
+  image("/img/adr/18.png", width: 80%),
   caption: [Visualizzazione informazioni dopo click di una barra],
 ) <imgUC9.1>
 \
@@ -454,7 +454,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione.
     + L'utente modifica l'opacizzazione a piacere.
 #figure(
-  image("/img/adr/UC 9_2.png", width: 50%),
+  image("/img/adr/19.png", width: 80%),
   caption: [Scelta dell'opacizzazione di una barra selezionata],
 ) <imgUC9.2>
 \
@@ -468,7 +468,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
 #figure(
-  image("/img/adr/UC 9_3.png", width: 50%),
+  image("/img/adr/20.png", width: 80%),
   caption: [Opacizzazione dei dati con valore minore di una barra selezionata],
 ) <imgUC9.3>
 \
@@ -482,7 +482,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata.
 #figure(
-  image("/img/adr/UC 9_4.png", width: 50%),
+  image("/img/adr/21.png", width: 80%),
   caption: [Opacizzazione dei dati con valore maggiore di una barra selezionata],
 ) <imgUC9.4>
 \
@@ -496,7 +496,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
     + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
 #figure(
-  image("/img/adr/UC 9_5.png", width: 50%),
+  image("/img/adr/22.png", width: 80%),
   caption: [Reimpostare la visualizzazione della barra selezionata],
 ) <imgUC9.5>
 \
@@ -510,7 +510,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale.
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
 #figure(
-  image("/img/adr/UC 10.png", width: 50%),
+  image("/img/adr/23.png", width: 80%),
   caption: [Visualizzazione del valore medio globale],
 ) <imgUC10>
 \
@@ -524,7 +524,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale.
     + L'applicazione opacizza tutti i dati minori della media globale.
 #figure(
-  image("/img/adr/UC 11.png", width: 50%),
+  image("/img/adr/24.png", width: 80%),
   caption: [Visualizzazione dati maggiori della media globale],
 ) <imgUC11>
 \
@@ -538,7 +538,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale.
     + L'applicazione opacizza tutti i dati maggiori della media globale.
 #figure(
-  image("/img/adr/UC 12.png", width: 50%),
+  image("/img/adr/25.png", width: 80%),
   caption: [Visualizzazione dati minori della media globale],
 ) <imgUC12>
 \
@@ -557,7 +557,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
  - L'utente potrebbe selezionare un intervallo che non contiene dati:
     + Visualizzazione dell'errore invalidArguments (@uc21).
 #figure(
-  image("/img/adr/UC 13.png", width: 80%),
+  image("/img/adr/26.png", width: 80%),
   caption: [Visualizzazione dati con altezza compresa tra un intervallo],
 ) <imgUC13>
 \
@@ -577,7 +577,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione dell'errore invalidArguments (@uc21). 
        
 #figure(
-  image("/img/adr/UC 14.png", width: 80%),
+  image("/img/adr/27.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di X],
 ) <imgUC14>
 \
@@ -596,7 +596,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione dell'errore emptyField (@uc25).
     + Visualizzazione dell'errore invalidArguments (@uc21). 
 #figure(
-  image("/img/adr/UC 15.png", width: 80%),
+  image("/img/adr/28.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di Z],
 ) <imgUC15>
 \
@@ -610,7 +610,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, applica il filtro.
     + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
 #figure(
-  image("/img/adr/UC 16.png", width: 50%),
+  image("/img/adr/29.png", width: 80%),
   caption: [Visualizzazione degli N valori maggiori],
 ) <imgUC16>
 \
@@ -624,7 +624,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, applica il filtro.
     +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
 #figure(
-  image("/img/adr/UC 17.png", width: 50%),
+  image("/img/adr/30.png", width: 80%),
   caption: [Visualizzazione degli N valori minori],
 ) <imgUC17>
 \
@@ -638,7 +638,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
     + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
 #figure(
-  image("/img/adr/UC 18.png", width: 50%),
+  image("/img/adr/31.png", width: 80%),
   caption: [Reset dei filtri applicati alla visualizzazione dei dati],
 ) <imgUC18>
 \
@@ -652,7 +652,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di esportare il grafico.
     + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato con la formattazione corretta.
 #figure(
-  image("/img/adr/UC 19.png", width: 50%),
+  image("/img/adr/32.png", width: 80%),
   caption: [Esportazione di un grafico],
 ) <imgUC19>
 \
@@ -666,7 +666,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
     + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva.
 #figure(
-  image("/img/adr/UC 20.png", width: 50%),
+  image("/img/adr/33.png", width: 80%),
   caption: [Creazione di un'istantanea del grafico],
 ) <imgUC20>
 \
@@ -681,7 +681,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente inserisce dei dati all'#glossario("interno") del campo d'inserimento.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/UC 21.png", width: 50%),
+  image("/img/adr/34.png", width: 80%),
   caption: [Visualizzazione errore invalidArguments],
 ) <imgUC21>
 \
@@ -697,7 +697,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il numero di dati ricevuti supera la soglia massima supportata e che quindi i dati non sono stati caricati.
 #figure(
-  image("/img/adr/UC 22.png", width: 50%),
+  image("/img/adr/35.png", width: 80%),
   caption: [Visualizzazione errore tooMuchData],
 ) <imgUC22>
 \
@@ -713,7 +713,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati.
 #figure(
-  image("/img/adr/UC 23.png", width: 50%),
+  image("/img/adr/36.png", width: 80%),
   caption: [Visualizzazione errore invalidCsv],
 ) <imgUC23>
 \
@@ -728,7 +728,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 #figure(
-  image("/img/adr/UC 24.png", width: 50%),
+  image("/img/adr/37.png", width: 80%),
   caption: [Visualizzazione errore apiTimeout],
 ) <imgUC24>
 \
@@ -743,7 +743,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente lascia un input vuoto.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/UC 25.png", width: 50%),
+  image("/img/adr/38.png", width: 80%),
   caption: [Visualizzazione errore emptyField],
 ) <imgUC25>
 \
@@ -759,7 +759,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 
 #figure(
-  image("/img/adr/UC 26.png", width: 50%),
+  image("/img/adr/39.png", width: 80%),
   caption: [Visualizzazione errore networkError],
 ) <imgUC26>
 \
@@ -775,7 +775,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file selezionato è troppo pesante e non sono stati caricati.
 #figure(
-  image("/img/adr/UC 27.png", width: 50%),
+  image("/img/adr/40.png", width: 80%),
   caption: [Visualizzazione errore fileTooBig],
 ) <imgUC27>
 \
