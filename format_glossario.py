@@ -7,6 +7,7 @@ with open("glossario_template.html", "r") as file:
 INIT_PATH = "documents"
 FILENAME = "Glossario.typ"
 FILE_TEMPLATE = '<p><strong>{word}:</strong> {meaning}</p>\n'
+ITALIC_TEMPLATE = '<span class="italic">{word}</span>'
 
 '''
 
@@ -62,6 +63,8 @@ def readfile(path):
             # = Lettera
             if line.startswith('=') and not line.startswith("= Introduzione"):
                 current_letter = line.split('=')[-1].strip()
+                if current_letter == '.':
+                    current_letter = 'caratteriSpeciali'
                 glossary[current_letter] = {}
             # '-' Parola
             elif line.startswith('-'):
@@ -77,11 +80,19 @@ def readfile(path):
     # merge parola e significato
     for letter in glossary:
         for word in glossary[letter]:
-            glossary[letter][word] = ' '.join(glossary[letter][word])
+            tmp = ' '.join(glossary[letter][word])
+            tmp = replaceUnderscores(tmp)
+            glossary[letter][word] = tmp
 
     return glossary
 
-        
+def replaceUnderscores(text):
+    while text.find('_') != -1:
+        start = text.find('_')
+        end = text.find('_', start + 1)
+        text = text[:start] + ITALIC_TEMPLATE.format(word = text[start + 1:end]) + text[end + 1:]
+    return text
+
 def replaceHTML(html, generated):
     for letter, words in generated.items():
         output = ""
