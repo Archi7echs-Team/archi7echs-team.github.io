@@ -102,7 +102,7 @@
           [#strong[Autore:] #author],
           [#strong[Tipologia Documento:] #ternary(intern, "Interno", "Esterno")],
           [#strong[Ultima Modifica:] #dateReplacer(date)],
-          [#strong[Stato:] #state],
+          [if state != none {[#strong[Stato:] #state]}],
         )]
       )
 
