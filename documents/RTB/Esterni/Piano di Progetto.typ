@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.7.0", "05-02-2025", "Stesura quinto periodo", p.lucato, "",
+    "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, p.valdagno,
     "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
@@ -886,7 +886,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
       [Francesco\ Pozzobon],[0],[0],[0],[0],[0],[4],[€ #(4*costo_ora.ana)],
       [Giovanni\ Salvò],[0],[4],[0],[0],[0],[0],[€ #(4*costo_ora.amm)],
       [Gioele\ Scandaletti],[0],[0],[0],[0],[3],[0],[€ #(3 * costo_ora.progr)],
-      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(7*costo_ora.ana)],
+      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(0.5*costo_ora.amm+7*costo_ora.ana)],
       [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(4.5*costo_ora.amm)],[€ #(8*costo_ora.ver)],[€ - ],[€ #(3*costo_ora.progr) ],[€ #(11*costo_ora.ana)],[#text(blue)[*€ #(150+90+120+45+275)*]],
     )
   ]
@@ -897,7 +897,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
 #{
   let plot = plot(data: (
     (5, "Responsabile - " + perc(5,31.5)),
-    (4.5, "Amministratore - " + perc(4,31.5)),
+    (4.5, "Amministratore - " + perc(4.5,31.5)),
     (8, "Verificatore - " + perc(8,31.5)),
     (0, "Progettista - " + perc(0,31.5)),
     (3, "Programmatore - " + perc(3,31.5)),
@@ -909,15 +909,15 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
 
 === Esito
 *Obiettivi non raggiunti*:\
-In questo quinto #glossario("periodo") non sono stati rilevati  obiettivi non raggiunti
+In questo quinto #glossario("periodo") non sono stati rilevati  obiettivi non raggiunti.
 
 
 *Problematiche non attese*:\
-In questo quinto #glossario("periodo") non sono state rilevate delle problematiche non attese
+In questo quinto #glossario("periodo") non sono state rilevate delle problematiche non attese.
 
 
 *Mitigazione rischi verificati*:\
-Durante il quinto #glossario("periodo") abbiamo riscontrato entrambi i rischi che erano stati preventivati, tuttavia non hanno avuto un impatto significativo sul lavoro svolto. Questo è stato grazie alla corretta gestione dei rischi e alla consapevolezza del team nel riconoscerli e mitigarli, tramite errori compiuti in precedenza e le relative correzioni apportate. L'unico punto importante da considerare è che il team deve continuare a mantenere alta l'attenzione su questi rischi, in modo da evitare che possano avere un impatto significativo sul lavoro svolto, in quanto i ritardi affrontati in periodi precedenti hanno portato sicuramente a dei ritardi nella conclusione della prima parte del #glossario("progetto") (#glossario("RTB")).
+Durante il quinto #glossario("periodo") abbiamo riscontrato entrambi i rischi che erano stati preventivati, tuttavia non hanno avuto un impatto significativo sul lavoro svolto. Questo è stato possibile grazie alla corretta gestione dei rischi e alla consapevolezza del team nel riconoscerli e mitigarli, tramite errori compiuti in precedenza e le relative correzioni apportate. L'unico punto importante da considerare è che il team deve continuare a mantenere alta l'attenzione su questi rischi, in modo da evitare che possano avere un impatto significativo sul lavoro svolto, in quanto i ritardi affrontati nei periodi precedenti hanno portato sicuramente a dei ritardi nella conclusione della prima parte del #glossario("progetto") (#glossario("RTB")).
 
 *Possibili cambiamenti*:\
 Il quinto #glossario("periodo") è stato caratterizzato da una buona gestione dei rischi e da una corretta pianificazione delle ore, che ha portato a una buona distribuzione delle stesse. Tuttavia, il team deve continuare a mantenere alta l'attenzione sui rischi preventivati e sulle ore preventivate, in modo da evitare che possano avere un impatto significativo sul lavoro svolto. 
@@ -932,13 +932,13 @@ Il quinto #glossario("periodo") è stato caratterizzato da una buona gestione de
       inset: 6pt,
       table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
       [Gabriele\ Checchinato],[0],[0],[4],[0],[0],[0],[€ #(4*costo_ora.ver)],
-      [Leonardo\ Lucato],[0],[0],[4 (#text(red)[+1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+      [Leonardo\ Lucato],[0],[0],[5 (#text(red)[+1])],[0],[0],[0],[€ #(5*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
       [Giacomo\ Pesenato],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
-      [Francesco\ Pozzobon],[0],[0 (#text(red)[+0.5])],[0],[0],[0],[4],[€ #(4*costo_ora.ana) (#text(red)[+€ #(0.5*costo_ora.amm)])],
+      [Francesco\ Pozzobon],[0],[0.5 (#text(red)[+0.5])],[0],[0],[0],[4],[€ #(0.5*costo_ora.amm+4*costo_ora.ana) (#text(red)[+€ #(0.5*costo_ora.amm)])],
       [Giovanni\ Salvò],[0],[4],[0],[0],[0],[0],[€ #(4*costo_ora.amm)],
       [Gioele\ Scandaletti],[0],[0],[0],[0],[3],[0],[€ #(3 * costo_ora.progr)],
-      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(7*costo_ora.ana)],
-      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(4.5*costo_ora.amm) (#text(red)[+€ #(0.5*costo_ora.amm)])],[€ #(8*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],[€ - ],[€ #(3*costo_ora.progr) ],[€ #(11*costo_ora.ana)],[#text(blue)[*€ #(150+100+135+45+275)*] (#text(red)[+€ 25])],
+      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(0.5*costo_ora.amm+7*costo_ora.ana)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(5*costo_ora.amm) (#text(red)[+€ #(0.5*costo_ora.amm)])],[€ #(9*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],[€ - ],[€ #(3*costo_ora.progr) ],[€ #(11*costo_ora.ana)],[#text(blue)[*€ #(150+100+135+45+275)*] (#text(red)[+€ 25])],
     )
   ]
 ]
@@ -946,8 +946,8 @@ Il quinto #glossario("periodo") è stato caratterizzato da una buona gestione de
 #{
   let plot = plot(data: (
     (5, "Responsabile - " + perc(5,33)),
-    (5, "Amministratore - " + perc(4,33)),
-    (9, "Verificatore - " + perc(8,33)),
+    (5, "Amministratore - " + perc(5,33)),
+    (9, "Verificatore - " + perc(9,33)),
     (0, "Progettista - " + perc(0,33)),
     (3, "Programmatore - " + perc(3,33)),
     (11, "Analista - " + perc(11,33)),
