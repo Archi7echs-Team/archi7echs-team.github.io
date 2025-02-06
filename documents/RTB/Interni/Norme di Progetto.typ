@@ -5,7 +5,7 @@
   title: "Norme di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "",
+  state: "Approvato",
   show_outline: true,
   outline_depth: 4,
   changelog: (
