@@ -20,14 +20,14 @@
         = Introduzione
         Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile per facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti. Questo Glossario avrà una struttura alfabetica e se un termine sarà presente in questo documento sarà riconoscibile in questo modo: Parola#sub(text(blue)[G]).
         
-        = .
+        = Caratteri speciali
         - .csv
         Formato di file (Comma-Separated Values) utilizzato per rappresentare dati tabulari, in cui i valori sono separati da virgole.
 
         - 3d
         Rappresentazione tridimensionale di oggetti o dati, utilizzata per creare visualizzazioni più realistiche e interattive.
         
-        - 3dataviz
+        - 3Dataviz
         3Dataviz è il capitolato scelto dal team, proposto dall’azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
 
         = A

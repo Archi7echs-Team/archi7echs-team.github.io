@@ -210,7 +210,18 @@
   ..t)
 }
 
-#let glossario(w) = link("https://archi7echs-team.github.io/glossario.html#" + upper(w).at(0))[#w#sub(text(blue)[G])]
+#let is_alphabetical(c) = {
+     ((c >= "A" and c <= "Z") or (c >= "a" and c <= "z"));
+}
+
+#let glossario(w) = {
+  if is_alphabetical(w) [
+      #link("https://archi7echs-team.github.io/glossario.html#" + upper(w).at(0))[#w#sub(text(blue)[G])]
+  ]
+  else [
+      #link("https://archi7echs-team.github.io/glossario.html#CaratteriSpeciali")[#w#sub(text(blue)[G])]
+  ]
+}
 
 #let ordine_del_giorno(doc) = {
   context {
