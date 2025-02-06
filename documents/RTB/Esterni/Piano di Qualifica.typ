@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.4.0","06-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon,"",
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, (p.pesenato, p.pozzobon),
@@ -44,6 +45,12 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - *_#glossario("ISO/IEC 9126")_*:  - *_#glossario("ISO 12207:1995")_*: #link("https://en.wikipedia.org/wiki/ISO/IEC_9126")[#text(blue)[https://en.wikipedia.org/wiki/ISO/IEC_9126]] \ - _Ultimo accesso al documento 13/01/2025_
 
 #pb()
+
+== Dashboard
+A disposizione del team, del committente e del proponente è la dashboard online realizzata su Grafana. Tale sistema permette di visualizzare in tempo reale #glossario("infografiche") renderizzate automaticamente con i dati reperiti da #glossario("GitHub") e dal foglio ore. Sono inoltre visibili e aggiornati per periodo i grafici relativi alle metriche. \ 
+La dashboard è raggiungibile al seguente link: \
+#align(center)[#link("https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b")[#text(blue)[https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b]]] \
+_non è richiesta la registrazione o il login per la visualizzazione._
  
 = Obiettivi metrici di qualità
 Per valutare la qualità del software e l'efficacia dei processi vengono adottate delle metriche che sono elencate nella sezione _Metriche di qualità_ del documento _Norme di Progetto_. \ 
@@ -79,6 +86,46 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 ]
  #align(center)[Tabella 1: Valori accettabili e preferibili per le metriche dei processi primari.] 
 
+ #figure(
+  image("/img/pdq/MPC1.png", width: 80%),
+  caption: [MPC1 - SA],
+) <imgMPC1>
+
+ #figure(
+  image("/img/pdq/MPC2-3.png", width: 80%),
+  caption: [MPC1-3 - rapporto EV e PV],
+) <imgMPC2-3> 
+
+ #figure(
+  image("/img/pdq/MPC4.png", width: 80%),
+  caption: [MPC4 - SV],
+) <imgMPC4>
+
+#figure(
+  image("/img/pdq/MPC5.png", width: 80%),
+  caption: [MPC5 - AC],
+) <imgMPC5>
+
+#figure(
+  image("/img/pdq/MPC6.png", width: 80%),
+  caption: [MPC6 - CPI],
+) <imgMPC6>
+
+#figure(
+  image("/img/pdq/MPC7.png", width: 80%),
+  caption: [MPC7 - CV],
+) <imgMPC7>
+
+#figure(
+  image("/img/pdq/MPC8.png", width: 80%),
+  caption: [MPC8 - EAC],
+) <imgMPC8>
+
+#figure(
+  image("/img/pdq/MPC9.png", width: 80%),
+  caption: [MPC9 - ETC],
+) <imgMPC9>
+
 === Processi di supporto
 #align(center)[
   #table(
@@ -105,6 +152,11 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
     <tab:metricheProcessiOrganizzativi>
 ]
  #align(center)[Tabella 3: Valori accettabili e preferibili per le metriche dei #glossario("processi organizzativi").] 
+
+  #figure(
+  image("/img/pdq/MPC12.png", width: 80%),
+  caption: [MPC12 - Rischi non previsti],
+) <imgMPC12>
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
