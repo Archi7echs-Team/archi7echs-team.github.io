@@ -34,7 +34,7 @@
   paper: "a4",
   margin: (x: 2cm, y: 2.5cm),
   lang: "it",
-  font: "Roboto Serif",
+  font: "libertinus serif",
   size: 12pt,
   weight: "light",
   justify: true,
@@ -128,7 +128,7 @@
     ..changelog.map(el => text(size: 0.8em)[
       #par(justify: false, text(hyphenate: true,
         if type(el) == array {
-            sortBySurname(el).join([,\ ])
+            el.join([,\ ])
           } else {
             el
           }
@@ -242,7 +242,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "1.1", "29-10-2024",  "Correzioni", p.checchinato, p.lucato,
-    "1.0", "28-10-2024",  "Prima stesura documento" + lorem(20), "Team " + emph(g.name), p.lucato,
+    "1.0.0", "29-10-2024",  "Correzioni", p.checchinato, p.lucato,
+    "0.9.0", "28-10-2024",  "Prima stesura documento" + lorem(20), "Team " + emph(g.name), p.lucato,
   )
 )
