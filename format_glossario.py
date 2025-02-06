@@ -63,7 +63,7 @@ def readfile(path):
             # = Lettera
             if line.startswith('=') and not line.startswith("= Introduzione"):
                 current_letter = line.split('=')[-1].strip()
-                if current_letter == '.':
+                if current_letter == '.' or current_letter == 'Caratteri speciali':
                     current_letter = 'caratteriSpeciali'
                 glossary[current_letter] = {}
             # '-' Parola
