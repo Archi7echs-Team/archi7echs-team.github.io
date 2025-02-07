@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.4.0","06-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon,"",
+    "0.4.0","07-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon,"",
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, (p.pesenato, p.pozzobon),
