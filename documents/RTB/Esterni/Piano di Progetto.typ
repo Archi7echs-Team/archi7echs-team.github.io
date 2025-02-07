@@ -10,6 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
     "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
     "0.5.1", "13-01-2025", "Fix tabella delle revisioni", p.valdagno, (p.pesenato, p.pozzobon),
@@ -181,6 +182,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").
     [NomeX],[0],[0],[0],[1],[0],[0],[€ #(1*costo_ora.proge)],
     [*Costo per ruolo*],[0],[€ #(2*costo_ora.amm)],[€ #(2*costo_ora.ver)],[€ #(1*costo_ora.proge)],[0],[0],[#text(blue)[*€ #(30+40+25)*] (#text(green)[-€ 5])],
 )
+#pb()
 *Esempio stato di avanzamento*:
 
 #{
@@ -234,7 +236,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Probabilità*: media
 - *Impatto*: alto
 - *Strategie di mitigazione*: il #glossario("responsabile") si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
-
+#pb()
 ==== Rischio 6 - Sovraccarico di lavoro <RI-6>
 - *Identificativo*: RI-6
 - *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridurre l'efficienza.
@@ -249,7 +251,6 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Impatto*: medio
 - *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e promuovere #glossario("attività") di team building.
 
-#pagebreak();
 
 ==== Rischio 8 - Assenza di un membro del team per malattia o altri impegni <RI-8>
 - *Identificativo*: RI-8
@@ -285,19 +286,21 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 === Pianificazione
 *#glossario("Periodo")*: 05/11/2024 - 26/11/2024\
 *Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
-#align(center)[
-  #table(
-    columns: 2,
-    align: (col, row) => (center, center).at(col),
-    inset: 6pt,
-    table.header([*Ruolo*], [*Membri*]),
-      [Responsabile(Re)],[Leonardo Lucato],
-      [Amministratore(Am)],[Francesco Pozzobon],
-      [Analista(An)],[Pietro Valdagno],
-      [Programmatore(Prg)],[Gioele Scandaletti],
-      [Verificatori(Ve)],[ Gabriele Checchinato\ Giovanni Salvò],
-      [Progettista(Prt)], [Giacomo Pesenato]
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[Leonardo Lucato],
+        [Amministratore(Am)],[Francesco Pozzobon],
+        [Analista(An)],[Pietro Valdagno],
+        [Programmatore(Prg)],[Gioele Scandaletti],
+        [Verificatori(Ve)],[ Gabriele Checchinato\ Giovanni Salvò],
+        [Progettista(Prt)], [Giacomo Pesenato]
+    )
+  ]
 ]
 *Obiettivi*:\
 Nel primo #glossario("periodo") del #glossario("progetto"), il team si concentrerà principalmente sull'organizzazione e sulla redazione dei documenti fondamentali. L’obiettivo iniziale è stabilire una base solida per il proseguimento del lavoro, attraverso la prima stesura del Piano di Progetto, delle Norme di Progetto, dell’#glossario("Analisi dei Requisiti") e del Glossario. Durante questo #glossario("periodo"), ci concentreremo anche sulla definizione di modalità di lavoro chiare per garantire una gestione produttiva ed efficiente del team.
@@ -318,24 +321,25 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
 
-#pagebreak();
 
-*Tabella preventivo*:\ // to do
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-    [Gabriele Checchinato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
-    [Leonardo Lucato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
-    [Giacomo Pesenato],[0],[0],[0],[5],[0],[0],[€ #(5*costo_ora.proge)],
-    [Francesco Pozzobon],[0],[3],[0],[0],[0],[0],[€ #(3*costo_ora.amm)],
-    [Giovanni Salvò],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
-    [Gioele Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
-    [Pietro Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(3*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ #(5*costo_ora.proge)],[€ #(5*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(120+60+165+125+75+125)*]],
-  )
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele Checchinato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
+      [Leonardo Lucato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
+      [Giacomo Pesenato],[0],[0],[0],[5],[0],[0],[€ #(5*costo_ora.proge)],
+      [Francesco Pozzobon],[0],[3],[0],[0],[0],[0],[€ #(3*costo_ora.amm)],
+      [Giovanni Salvò],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
+      [Gioele Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
+      [Pietro Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(3*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ #(5*costo_ora.proge)],[€ #(5*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(120+60+165+125+75+125)*]],
+    )
+  ]
 ]
 *Distribuzione preventivata delle ore*:\ // da mettere a posto
 
@@ -349,7 +353,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
     (15.15, "Analista - " + perc(5,33)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore primo periodo", display_style: "hor-legend-chart")
 }
 
 === Esito
@@ -376,23 +380,24 @@ Durante il #glossario("periodo") affrontato, il team ha identificato alcuni aspe
 Cambiamenti operativi e gestionali individuati:
 - *Pianificazione più dettagliata*: è emerso che una pianificazione più approfondita delle #glossario("attività"), con micro-obiettivi settimanali, potrebbe facilitare il monitoraggio del progresso e l’identificazione tempestiva di eventuali criticità.
 - *Rafforzamento della comunicazione interna*: incentivare incontri regolari per confrontarsi sui progressi, evidenziare difficoltà e ridefinire priorità. Questo permetterà di mantenere una maggiore coesione e coordinazione tra i membri del team.
-#pagebreak();
 *Tabella esito effettivo*:\ 
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
-    [Gabriele\ Checchinato],[0],[0],[7(#text(red)[+1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
-    [Leonardo\ Lucato],[4],[2(#text(red)[+2])],[0],[0],[0],[0],[€ #(4*costo_ora.res+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
-    [Giacomo\ Pesenato],[0],[0],[0],[0(#text(green)[-5])],[0],[6(#text(red)[+6])],[€ #(6*costo_ora.ana) (#text(red)[+€ #(25)])],
-    [Francesco\ Pozzobon],[1(#text(red)[+1])],[5(#text(red)[+2])],[0],[0],[0],[0],[€ #(5*costo_ora.amm+1*costo_ora.res) (#text(red)[+€ #(2*costo_ora.amm+1*costo_ora.res)])],
-    [Giovanni\ Salvò],[0],[0],[4(#text(green)[-1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
-    [Gioele\ Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
-    [Pietro\ Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [*Costo\ per ruolo*],[€ #(5*costo_ora.res) (#text(red)[+€ #(1*costo_ora.res)])],[€ #(7*costo_ora.amm) (#text(red)[+€ #(4*costo_ora.amm)])],[€ #(11*costo_ora.ver)],[€ #(0) (#text(green)[-€ #(5*costo_ora.proge)])],[€ #(5*costo_ora.progr)],[€ #(11*costo_ora.ana) (#text(red)[+€ #(6*costo_ora.ana)])],[#text(blue)[*€ #(150+140+165+0+75+275)*] (#text(red)[*+€ #(30+80+0-125+0+150)*])],
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+      [Gabriele\ Checchinato],[0],[0],[7(#text(red)[+1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+      [Leonardo\ Lucato],[4],[2(#text(red)[+2])],[0],[0],[0],[0],[€ #(4*costo_ora.res+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+      [Giacomo\ Pesenato],[0],[0],[0],[0(#text(green)[-5])],[0],[6(#text(red)[+6])],[€ #(6*costo_ora.ana) (#text(red)[+€ #(25)])],
+      [Francesco\ Pozzobon],[1(#text(red)[+1])],[5(#text(red)[+2])],[0],[0],[0],[0],[€ #(5*costo_ora.amm+1*costo_ora.res) (#text(red)[+€ #(2*costo_ora.amm+1*costo_ora.res)])],
+      [Giovanni\ Salvò],[0],[0],[4(#text(green)[-1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
+      [Gioele\ Scandaletti],[0],[0],[0],[0],[5],[0],[€ #(5*costo_ora.progr)],
+      [Pietro\ Valdagno],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [*Costo\ per ruolo*],[€ #(5*costo_ora.res) (#text(red)[+€ #(1*costo_ora.res)])],[€ #(7*costo_ora.amm) (#text(red)[+€ #(4*costo_ora.amm)])],[€ #(11*costo_ora.ver)],[€ #(0) (#text(green)[-€ #(5*costo_ora.proge)])],[€ #(5*costo_ora.progr)],[€ #(11*costo_ora.ana) (#text(red)[+€ #(6*costo_ora.ana)])],[#text(blue)[*€ #(150+140+165+0+75+275)*] (#text(red)[*+€ #(30+80+0-125+0+150)*])],
+    )
+  ]
 ]
 
 *Distribuzione effettiva delle ore*:\
@@ -407,7 +412,7 @@ Cambiamenti operativi e gestionali individuati:
     (28.21, "Analista - " + perc(11,39)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore primo periodo", display_style: "hor-legend-chart")
 }
 #pagebreak();
 *Progresso delle #glossario("attività")*:\
@@ -424,19 +429,21 @@ Cambiamenti operativi e gestionali individuati:
 === Pianificazione
 *#glossario("Periodo")*: 27/11/2024 - 10/12/2024\
 *Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
-#align(center)[
-  #table(
-    columns: 2,
-    align: (col, row) => (center, center).at(col),
-    inset: 6pt,
-    table.header([*Ruolo*], [*Membri*]),
-      [Responsabile(Re)],[Gabriele Checchinato],
-      [Amministratore(Am)],[Giovanni Salvò],
-      [Analista(An)],[Francesco Pozzobon],
-      [Programmatori(Prg)],[Leonardo Lucato, Giacomo Pesenato],
-      [Verificatore(Ve)],[Pietro Valdagno],
-      [Progettista(Prt)], [Gioele Scandaletti]
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[Gabriele Checchinato],
+        [Amministratore(Am)],[Giovanni Salvò],
+        [Analista(An)],[Francesco Pozzobon],
+        [Programmatori(Prg)],[Leonardo Lucato, Giacomo Pesenato],
+        [Verificatore(Ve)],[Pietro Valdagno],
+        [Progettista(Prt)], [Gioele Scandaletti]
+    )
+  ]
 ]
 *Obiettivi*:\
 Nel secondo #glossario("periodo") del #glossario("progetto") il team proseguirà con la redazione dei documenti iniziati nel #glossario("periodo") precedente e, in parallelo, si dedicherà allo sviluppo di più simil-#glossario("PoC") per studiare le tecnologie proposte dal #glossario("capitolato") e, allo stesso tempo, per affiancare e porre ulteriori basi all'#glossario("attività") di analisi.
@@ -457,22 +464,24 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
 - #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
 - #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*]
 
-*Tabella preventivo*:\ // to do
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-    [Gabriele\ Checchinato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
-    [Leonardo\ Lucato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
-    [Giacomo\ Pesenato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
-    [Francesco\ Pozzobon],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [Giovanni\ Salvò],[0],[6],[0],[0],[0],[0],[€ #(6*costo_ora.amm)],
-    [Gioele\ Scandaletti],[0],[0],[0],[3],[0],[0],[€ #(3*costo_ora.proge)],
-    [Pietro\ Valdagno],[0],[0],[8],[0],[0],[0],[€ #(8*costo_ora.ver)],
-    [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(6*costo_ora.amm)],[€ #(8*costo_ora.ver)],[€ #(3*costo_ora.proge)],[€ #(14*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(120+120+120+75+210+125)*]],
-  )
+*Tabella preventivo*:\ 
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[4],[0],[0],[0],[0],[0],[€ #(4*costo_ora.res)],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
+      [Giacomo\ Pesenato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
+      [Francesco\ Pozzobon],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [Giovanni\ Salvò],[0],[6],[0],[0],[0],[0],[€ #(6*costo_ora.amm)],
+      [Gioele\ Scandaletti],[0],[0],[0],[3],[0],[0],[€ #(3*costo_ora.proge)],
+      [Pietro\ Valdagno],[0],[0],[8],[0],[0],[0],[€ #(8*costo_ora.ver)],
+      [*Costo per ruolo*],[€ #(4*costo_ora.res)],[€ #(6*costo_ora.amm)],[€ #(8*costo_ora.ver)],[€ #(3*costo_ora.proge)],[€ #(14*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(120+120+120+75+210+125)*]],
+    )
+  ]
 ]
 *Distribuzione preventivata delle ore*:\ 
 
@@ -486,7 +495,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
     (12.5, "Analista - " + perc(5,40)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore secondo periodo", display_style: "hor-legend-chart")
 }
 
 === Esito
@@ -518,21 +527,23 @@ Cambiamenti operativi e gestionali individuati:
 
 
 *Tabella esito effettivo*:\ 
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
-    [Gabriele\ Checchinato],[5(#text(red)[+1])],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res) (#text(red)[+€ #(1*costo_ora.res)])],
-    [Leonardo\ Lucato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
-    [Giacomo\ Pesenato],[0],[0],[0],[0],[10(#text(red)[+3])],[0],[€ #(10*costo_ora.progr)  (#text(red)[+€ #(3*costo_ora.progr)])],
-    [Francesco\ Pozzobon],[0],[2(#text(red)[+2])],[0],[0],[0],[3.5(#text(green)[-1.5])],[€ #(2*costo_ora.amm+3.5*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.amm - 1.5*costo_ora.ana)])],
-    [Giovanni\ Salvò],[0.5(#text(red)[+0.5])],[5.5(#text(green)[-0.5])],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5.5*costo_ora.amm) (#text(red)[+€ #(0.5*costo_ora.res - 0.5*costo_ora.amm)])],
-    [Gioele\ Scandaletti],[0],[0],[0],[0(#text(red)[-3])],[1(#text(red)[+1])],[0],[€ #(1*costo_ora.progr) (#text(green)[-€ #(3*costo_ora.proge - 1*costo_ora.progr)])],
-    [Pietro\ Valdagno],[0],[0],[7(#text(green)[-1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
-    [*Costo\ per ruolo*],[€ #(5.5*costo_ora.res) (#text(red)[+€ #(1.5*costo_ora.res)])],[€ #(7.5*costo_ora.amm) (#text(red)[+€ #(1.5*costo_ora.amm)])],[€ #(7*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],[€ #(0*costo_ora.proge) (#text(green)[-€ #(3*costo_ora.proge)])],[€ #(18*costo_ora.progr) (#text(red)[+€ #(4*costo_ora.progr)])],[€ #(3.5*costo_ora.ana) (#text(green)[-€ #(1.5*costo_ora.ana)])],[#text(blue)[*€ #(165+150+105+0+270+87.5)*] (#text(red)[*+€ #(45+30-15+-75+60-37.5)*])],
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+      [Gabriele\ Checchinato],[5(#text(red)[+1])],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res) (#text(red)[+€ #(1*costo_ora.res)])],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[7],[0],[€ #(7*costo_ora.progr)],
+      [Giacomo\ Pesenato],[0],[0],[0],[0],[10(#text(red)[+3])],[0],[€ #(10*costo_ora.progr)  (#text(red)[+€ #(3*costo_ora.progr)])],
+      [Francesco\ Pozzobon],[0],[2(#text(red)[+2])],[0],[0],[0],[3.5(#text(green)[-1.5])],[€ #(2*costo_ora.amm+3.5*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.amm - 1.5*costo_ora.ana)])],
+      [Giovanni\ Salvò],[0.5(#text(red)[+0.5])],[5.5(#text(green)[-0.5])],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5.5*costo_ora.amm) (#text(red)[+€ #(0.5*costo_ora.res - 0.5*costo_ora.amm)])],
+      [Gioele\ Scandaletti],[0],[0],[0],[0(#text(red)[-3])],[1(#text(red)[+1])],[0],[€ #(1*costo_ora.progr) (#text(green)[-€ #(3*costo_ora.proge - 1*costo_ora.progr)])],
+      [Pietro\ Valdagno],[0],[0],[7(#text(green)[-1])],[0],[0],[0],[€ #(7*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
+      [*Costo\ per ruolo*],[€ #(5.5*costo_ora.res) (#text(red)[+€ #(1.5*costo_ora.res)])],[€ #(7.5*costo_ora.amm) (#text(red)[+€ #(1.5*costo_ora.amm)])],[€ #(7*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],[€ #(0*costo_ora.proge) (#text(green)[-€ #(3*costo_ora.proge)])],[€ #(18*costo_ora.progr) (#text(red)[+€ #(4*costo_ora.progr)])],[€ #(3.5*costo_ora.ana) (#text(green)[-€ #(1.5*costo_ora.ana)])],[#text(blue)[*€ #(165+150+105+0+270+87.5)*] (#text(red)[*+€ #(45+30-15+-75+60-37.5)*])],
+    )
+  ]
 ]
 
 #pagebreak();
@@ -549,7 +560,7 @@ Cambiamenti operativi e gestionali individuati:
     (8.43, "Analista - " + perc(3.5,41.5)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore secondo periodo", display_style: "hor-legend-chart")
 }
 
 *Progresso delle #glossario("attività")*:\
@@ -564,21 +575,23 @@ Cambiamenti operativi e gestionali individuati:
 
 == Periodo 3
 === Pianificazione
-*#glossario("Periodo")*: 11/11/2024 - 25/12/20\24\
+*#glossario("Periodo")*: 11/12/2024 - 25/12/2024\
 *Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
-#align(center)[
-  #table(
-    columns: 2,
-    align: (col, row) => (center, center).at(col),
-    inset: 6pt,
-    table.header([*Ruolo*], [*Membri*]),
-      [Responsabile(Re)],[#p.valdagno],
-      [Amministratore(Am)],[#p.checchinato, #p.pozzobon],
-      [Analista(An)],[#p.lucato, #p.pesenato],
-      [Programmatore(Prg)],[#p.pesenato],
-      [Verificatore(Ve)],[#p.salvo, #p.scandaletti],
-      [Progettista(Prt)], [_non presente_]
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.valdagno],
+        [Amministratore(Am)],[#p.checchinato, #p.pozzobon],
+        [Analista(An)],[#p.lucato, #p.pesenato],
+        [Programmatore(Prg)],[#p.pesenato],
+        [Verificatore(Ve)],[#p.salvo, #p.scandaletti],
+        [Progettista(Prt)], [_non presente_]
+    )
+  ]
 ]
 *Obiettivi*:\
 Durante il terzo #glossario("periodo") l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il #glossario("periodo") scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
@@ -593,23 +606,25 @@ Gli obiettivi principali di questa fase sono quindi:
 I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
-
-*Tabella preventivo*:\ // to do
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-    [Gabriele\ Checchinato],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
-    [Leonardo\ Lucato],[0],[0],[0],[0],[0],[6],[€ #(6*costo_ora.ana)],
-    [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
-    [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
-    [Giovanni\ Salvò],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
-    [Gioele\ Scandaletti],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
-    [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
-    [*Costo per ruolo*],[€ #(6*costo_ora.res)],[€ #(10*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ - ],[€ #(2*costo_ora.progr)],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(180+200+105+30+250)*]],
-  )
+#pb()
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[0],[6],[€ #(6*costo_ora.ana)],
+      [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
+      [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+      [Giovanni\ Salvò],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
+      [Gioele\ Scandaletti],[0],[0],[3.5],[0],[0],[0],[€ #(3.5*costo_ora.ver)],
+      [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+      [*Costo per ruolo*],[€ #(6*costo_ora.res)],[€ #(10*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ - ],[€ #(2*costo_ora.progr)],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(180+200+105+30+250)*]],
+    )
+  ]
 ]
 *Distribuzione preventivata delle ore*:\ 
 
@@ -623,7 +638,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
     (29, "Analista - " + perc(29,100)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore terzo periodo", display_style: "hor-legend-chart")
 }
 
 === Esito
@@ -647,25 +662,26 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
 
 - *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 
+#pb()
 *Tabella esito effettivo*:\ 
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
-    [Gabriele\ Checchinato],[0.75(#text(red)[+0.25])],[5],[0],[0],[0],[0],[€ #(0.75*costo_ora.res+5*costo_ora.amm) (#text(red)[+€ #(0.25*costo_ora.res)])],
-    [Leonardo\ Lucato],[0],[0],[0],[0],[0],[8(#text(red)[+2])],[€ #(8*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],
-    [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
-    [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
-    [Giovanni\ Salvò],[0],[0],[3(#text(green)[-0.5])],[0],[0],[0],[€ #(3*costo_ora.ver) (#text(green)[-€ #(0.55*costo_ora.ver)])],
-    [Gioele\ Scandaletti],[0],[0],[4.5 (#text(red)[+1])],[0],[0],[0],[€ #(4.5*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
-    [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
-    [*Costo\ per ruolo*],[€ #(6.25*costo_ora.res) (#text(red)[+€ #(0.25*costo_ora.res)])],[€ #(10*costo_ora.amm)],[€ #(7.5*costo_ora.ver) (#text(red)[+€ #(0.5*costo_ora.ver)])],[€ -],[€ #(2*costo_ora.progr) ],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(187.5+200+112.5+0+30+300)*] (#text(red)[*+€ #(15+50)*])],
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+      [Gabriele\ Checchinato],[0.75(#text(red)[+0.25])],[5],[0],[0],[0],[0],[€ #(0.75*costo_ora.res+5*costo_ora.amm) (#text(red)[+€ #(0.25*costo_ora.res)])],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[0],[8(#text(red)[+2])],[€ #(8*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],
+      [Giacomo\ Pesenato],[0],[0],[0],[0],[2],[4],[€ #(2*costo_ora.progr+4*costo_ora.ana)],
+      [Francesco\ Pozzobon],[0,5],[5],[0],[0],[0],[0],[€ #(0.5*costo_ora.res+5*costo_ora.amm)],
+      [Giovanni\ Salvò],[0],[0],[3(#text(green)[-0.5])],[0],[0],[0],[€ #(3*costo_ora.ver) (#text(green)[-€ #(0.55*costo_ora.ver)])],
+      [Gioele\ Scandaletti],[0],[0],[4.5 (#text(red)[+1])],[0],[0],[0],[€ #(4.5*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+      [Pietro\ Valdagno],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+      [*Costo\ per ruolo*],[€ #(6.25*costo_ora.res) (#text(red)[+€ #(0.25*costo_ora.res)])],[€ #(10*costo_ora.amm)],[€ #(7.5*costo_ora.ver) (#text(red)[+€ #(0.5*costo_ora.ver)])],[€ -],[€ #(2*costo_ora.progr) ],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(187.5+200+112.5+0+30+300)*] (#text(red)[*+€ #(15+50)*])],
+    )
+  ]
 ]
-
-#pagebreak();
 
 *Distribuzione effettiva delle ore*:\
 
@@ -679,9 +695,9 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
     (31.79, "Analista - " + perc(12,37.75)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore terzo periodo", display_style: "hor-legend-chart")
 }
-
+#pb()
 *Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
@@ -694,21 +710,23 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
 
 == Periodo 4
 === Pianificazione
-*#glossario("Periodo")*: 26/12/2024 - 13/1/20\25\
+*#glossario("Periodo")*: 26/12/2024 - 13/1/2025\
 *Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
-#align(center)[
-  #table(
-    columns: 2,
-    align: (col, row) => (center, center).at(col),
-    inset: 6pt,
-    table.header([*Ruolo*], [*Membri*]),
-      [Responsabile(Re)],[#p.pozzobon],
-      [Amministratore(Am)],[#p.valdagno, #p.scandaletti],
-      [Analista(An)],[#p.checchinato, #p.salvo],
-      [Programmatore(Prg)],[_non presente_],
-      [Verificatore(Ve)],[#p.pesenato, #p.lucato],
-      [Progettista(Prt)], [_non presente_]
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.pozzobon],
+        [Amministratore(Am)],[#p.valdagno, #p.scandaletti],
+        [Analista(An)],[#p.checchinato, #p.salvo],
+        [Programmatore(Prg)],[_non presente_],
+        [Verificatore(Ve)],[#p.pesenato, #p.lucato],
+        [Progettista(Prt)], [_non presente_]
+    )
+  ]
 ]
 *Obiettivi*:\
 Durante il quarto #glossario("periodo") l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
@@ -722,23 +740,24 @@ In particolare, gli obiettivi principali di questa fase sono:
 I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
 - #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
-
-*Tabella preventivo*:\ // to do
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-    [Gabriele\ Checchinato],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [Leonardo\ Lucato],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
-    [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
-    [Francesco\ Pozzobon],[8],[1],[0],[0],[0],[0],[€ #(8*costo_ora.res+1*costo_ora.amm)],
-    [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
-    [Gioele\ Scandaletti],[0],[6],[0],[0],[0],[0],[€ #(6 * costo_ora.amm)],
-    [Pietro\ Valdagno],[0],[9],[0],[0],[0],[0],[€ #(9*costo_ora.amm)],
-    [*Costo per ruolo*],[€ #(8*costo_ora.res)],[€ #(16*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ - ],[€ - ],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(240+320+165+250)*]],
-  )
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [Leonardo\ Lucato],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
+      [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
+      [Francesco\ Pozzobon],[8],[1],[0],[0],[0],[0],[€ #(8*costo_ora.res+1*costo_ora.amm)],
+      [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [Gioele\ Scandaletti],[0],[6],[0],[0],[0],[0],[€ #(6 * costo_ora.amm)],
+      [Pietro\ Valdagno],[0],[9],[0],[0],[0],[0],[€ #(9*costo_ora.amm)],
+      [*Costo per ruolo*],[€ #(8*costo_ora.res)],[€ #(16*costo_ora.amm)],[€ #(11*costo_ora.ver)],[€ - ],[€ - ],[€ #(10*costo_ora.ana)],[#text(blue)[*€ #(240+320+165+250)*]],
+    )
+  ]
 ]
 *Distribuzione preventivata delle ore*:\ 
 
@@ -752,7 +771,7 @@ I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") so
     (22, "Analista - " + perc(22,100)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore quarto periodo", display_style: "hor-legend-chart")
 }
 
 === Esito
@@ -773,26 +792,26 @@ La non presa in carico e termine dell'#glossario("issue") riferita al fix del #g
 
 - *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 - *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo #glossario("periodo"). Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del #glossario("periodo"), analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
-
+#pb()
 *Tabella esito effettivo*:\ 
-#align(center)[
-  #table(
-    columns: (auto, auto, auto, auto, auto, auto, auto, auto),
-    align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
-    inset: 6pt,
-    table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
-    [Gabriele\ Checchinato],[0],[1(#text(red)[+1])],[0],[0],[0],[4(#text(green)[-1])],[€ #(4*costo_ora.ana+1*costo_ora.amm) (#text(green)[-€ #(1*costo_ora.ana - 1*costo_ora.amm)])],
-    [Leonardo\ Lucato],[0],[4(#text(red)[+4])],[4(#text(green)[-1])],[0],[0],[3(#text(red)[+3])],[€ #(4*costo_ora.amm+4*costo_ora.ver+3*costo_ora.ana) (#text(red)[+€ #(3*costo_ora.ana+4*costo_ora.amm -1*costo_ora.ver)])],
-    [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
-    [Francesco\ Pozzobon],[7.75(#text(green)[-0.25])],[2.25(#text(red)[+1.25])],[0],[0],[0],[0],[€ #(7.75*costo_ora.res+2.25*costo_ora.amm) (#text(red)[+€ #(1.25*costo_ora.amm - 0.25*costo_ora.res)])],
-    [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana) ],
-    [Gioele\ Scandaletti],[0],[7(#text(red)[+1])],[0],[0],[0],[0],[€ #(7*costo_ora.amm) (#text(red)[+€ #(1*costo_ora.amm)])],
-    [Pietro\ Valdagno],[0.75 (#text(red)[+0.75]) ],[9],[0.5(#text(red)[+0.5])],[0],[0],[0],[€ #(0.75*costo_ora.res+9*costo_ora.amm+0.5*costo_ora.ver) (#text(red)[+€ #(0.75*costo_ora.res+0.5*costo_ora.ver)])],
-    [*Costo\ per ruolo*],[€ #(8.5*costo_ora.res) (#text(red)[+€ #(0.5*costo_ora.res)])],[€ #(23.25*costo_ora.amm) (#text(red)[+€ #(7.25*costo_ora.amm)])],[€ #(10.5*costo_ora.ver) (#text(green)[-€ #(0.5*costo_ora.ver)])],[€ -],[€ -],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(255+465+157.5+300)*] (#text(red)[*+€ #(15+145-7.5+50)*])],
-  )
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo\ persona*]),
+      [Gabriele\ Checchinato],[0],[1(#text(red)[+1])],[0],[0],[0],[4(#text(green)[-1])],[€ #(4*costo_ora.ana+1*costo_ora.amm) (#text(green)[-€ #(1*costo_ora.ana - 1*costo_ora.amm)])],
+      [Leonardo\ Lucato],[0],[4(#text(red)[+4])],[4(#text(green)[-1])],[0],[0],[3(#text(red)[+3])],[€ #(4*costo_ora.amm+4*costo_ora.ver+3*costo_ora.ana) (#text(red)[+€ #(3*costo_ora.ana+4*costo_ora.amm -1*costo_ora.ver)])],
+      [Giacomo\ Pesenato],[0],[0],[6],[0],[0],[0],[€ #(6*costo_ora.ver)],
+      [Francesco\ Pozzobon],[7.75(#text(green)[-0.25])],[2.25(#text(red)[+1.25])],[0],[0],[0],[0],[€ #(7.75*costo_ora.res+2.25*costo_ora.amm) (#text(red)[+€ #(1.25*costo_ora.amm - 0.25*costo_ora.res)])],
+      [Giovanni\ Salvò],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana) ],
+      [Gioele\ Scandaletti],[0],[7(#text(red)[+1])],[0],[0],[0],[0],[€ #(7*costo_ora.amm) (#text(red)[+€ #(1*costo_ora.amm)])],
+      [Pietro\ Valdagno],[0.75 (#text(red)[+0.75]) ],[9],[0.5(#text(red)[+0.5])],[0],[0],[0],[€ #(0.75*costo_ora.res+9*costo_ora.amm+0.5*costo_ora.ver) (#text(red)[+€ #(0.75*costo_ora.res+0.5*costo_ora.ver)])],
+      [*Costo\ per ruolo*],[€ #(8.5*costo_ora.res) (#text(red)[+€ #(0.5*costo_ora.res)])],[€ #(23.25*costo_ora.amm) (#text(red)[+€ #(7.25*costo_ora.amm)])],[€ #(10.5*costo_ora.ver) (#text(green)[-€ #(0.5*costo_ora.ver)])],[€ -],[€ -],[€ #(12*costo_ora.ana) (#text(red)[+€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(255+465+157.5+300)*] (#text(red)[*+€ #(15+145-7.5+50)*])],
+    )
+  ]
 ]
-
-#pagebreak();
 
 *Distribuzione effettiva delle ore*:
 #{
@@ -805,9 +824,9 @@ La non presa in carico e termine dell'#glossario("issue") riferita al fix del #g
     (23.88, "Analista - " + perc(12,50.25)),
   ))
 
-  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore periodo", display_style: "hor-legend-chart")
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore quarto periodo", display_style: "hor-legend-chart")
 }
-
+#pb()
 *Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
@@ -816,6 +835,135 @@ La non presa in carico e termine dell'#glossario("issue") riferita al fix del #g
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 4", display_style: "hor-legend-chart",colors: (red, green))
+}
+
+== Periodo 5
+=== Pianificazione
+*#glossario("Periodo")*: 13/1/2025 - 30/1/2025 \
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.pesenato],
+        [Amministratore(Am)],[#p.salvo],
+        [Analista(An)],[#p.pozzobon, #p.valdagno],
+        [Programmatore(Prg)],[#p.scandaletti],
+        [Verificatore(Ve)],[#p.lucato, #p.checchinato],
+        [Progettista(Prt)], [_non presente_]
+    )
+  ]
+]
+*Obiettivi*:\
+Seppur un periodo molto pesante a causa degli impegni universitari di ognuno dei membri del team, il gruppo si impone come obiettivo la continuazione, anche se con un ritmo inferiore, dei vari documenti. In particolare, durante il quinto #glossario("periodo") si pone attenzione all'#glossario("Analisi dei Requisiti") e al #glossario("Piano di Qualifica"). Per quest'ultimo viene deciso di completarlo con un #glossario("cruscotto") di #glossario("Grafana") per la visualizzazione delle metriche di qualità e dello stato di avanzamento del progetto. Inoltre si continua con il miglioramento del PoC in vista di una candidatura per l'RTB.
+
+In particolare, gli obiettivi principali di questa fase sono:
+- PoC: inserire alcuni miglioramenti come la sua presentazione con colori e nomi degli assi congrui e la possibilità di visualizzare i dati in modo più chiaro.
+- #glossario("Piano di Qualifica"): verrà inserito un cruscotto di Grafana per la visualizzazione delle metriche di qualità e dello stato di avanzamento del progetto. Con questo cruscotto potremmo poi inserire le relative immagini dei grafici, così da poter avere una visione più chiara e veloce dello stato del progetto.
+- #glossario("Analisi dei Requisiti"): verrà completata la sezione relativa ai diagrammi #glossario("UML") con le loro relative modifiche.
+- Glossario: verrà aggiornato con tutti i nuovi termini presenti nei vari documenti, con le relative definizioni.
+
+
+*Possibili rischi*:\
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-3>)[*RI-3 - Problemi di coordinamento*]
+
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[0],[4],[0],[0],[0],[€ #(4*costo_ora.ver)],
+      [Leonardo\ Lucato],[0],[0],[4],[0],[0],[0],[€ #(4*costo_ora.ver)],
+      [Giacomo\ Pesenato],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+      [Francesco\ Pozzobon],[0],[0],[0],[0],[0],[4],[€ #(4*costo_ora.ana)],
+      [Giovanni\ Salvò],[0],[4],[0],[0],[0],[0],[€ #(4*costo_ora.amm)],
+      [Gioele\ Scandaletti],[0],[0],[0],[0],[3],[0],[€ #(3 * costo_ora.progr)],
+      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(0.5*costo_ora.amm+7*costo_ora.ana)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(4.5*costo_ora.amm)],[€ #(8*costo_ora.ver)],[€ - ],[€ #(3*costo_ora.progr) ],[€ #(11*costo_ora.ana)],[#text(blue)[*€ #(150+90+120+45+275)*]],
+    )
+  ]
+]
+#pb()
+*Distribuzione preventivata delle ore*:\ 
+
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,31.5)),
+    (4.5, "Amministratore - " + perc(4.5,31.5)),
+    (8, "Verificatore - " + perc(8,31.5)),
+    (0, "Progettista - " + perc(0,31.5)),
+    (3, "Programmatore - " + perc(3,31.5)),
+    (11, "Analista - " + perc(11,31.5)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore quinto periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito
+*Obiettivi non raggiunti*:\
+In questo quinto #glossario("periodo") non sono stati rilevati  obiettivi non raggiunti.
+
+
+*Problematiche non attese*:\
+In questo quinto #glossario("periodo") non sono state rilevate delle problematiche non attese.
+
+
+*Mitigazione rischi verificati*:\
+Durante il quinto #glossario("periodo") abbiamo riscontrato entrambi i rischi che erano stati preventivati, tuttavia non hanno avuto un impatto significativo sul lavoro svolto. Questo è stato possibile grazie alla corretta gestione dei rischi e alla consapevolezza del team nel riconoscerli e mitigarli, tramite errori compiuti in precedenza e le relative correzioni apportate. L'unico punto importante da considerare è che il team deve continuare a mantenere alta l'attenzione su questi rischi, in modo da evitare che possano avere un impatto significativo sul lavoro svolto, in quanto i ritardi affrontati nei periodi precedenti hanno portato sicuramente a dei ritardi nella conclusione della prima parte del #glossario("progetto") (#glossario("RTB")).
+
+*Possibili cambiamenti*:\
+Il quinto #glossario("periodo") è stato caratterizzato da una buona gestione dei rischi e da una corretta pianificazione delle ore, che ha portato a una buona distribuzione delle stesse. Tuttavia, il team deve continuare a mantenere alta l'attenzione sui rischi preventivati e sulle ore preventivate, in modo da evitare che possano avere un impatto significativo sul lavoro svolto. 
+
+#pb()
+*Tabella esito effettivo*:\ 
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[0],[4],[0],[0],[0],[€ #(4*costo_ora.ver)],
+      [Leonardo\ Lucato],[0],[0],[5 (#text(red)[+1])],[0],[0],[0],[€ #(5*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],
+      [Giacomo\ Pesenato],[5],[0],[0],[0],[0],[0],[€ #(5*costo_ora.res)],
+      [Francesco\ Pozzobon],[0],[0.5 (#text(red)[+0.5])],[0],[0],[0],[4],[€ #(0.5*costo_ora.amm+4*costo_ora.ana) (#text(red)[+€ #(0.5*costo_ora.amm)])],
+      [Giovanni\ Salvò],[0],[4],[0],[0],[0],[0],[€ #(4*costo_ora.amm)],
+      [Gioele\ Scandaletti],[0],[0],[0],[0],[3],[0],[€ #(3 * costo_ora.progr)],
+      [Pietro\ Valdagno],[0],[0.5],[0],[0],[0],[7],[€ #(0.5*costo_ora.amm+7*costo_ora.ana)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(5*costo_ora.amm) (#text(red)[+€ #(0.5*costo_ora.amm)])],[€ #(9*costo_ora.ver) (#text(red)[+€ #(1*costo_ora.ver)])],[€ - ],[€ #(3*costo_ora.progr) ],[€ #(11*costo_ora.ana)],[#text(blue)[*€ #(150+100+135+45+275)*] (#text(red)[+€ 25])],
+    )
+  ]
+]
+*Distribuzione effettiva delle ore*:
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,33)),
+    (5, "Amministratore - " + perc(5,33)),
+    (9, "Verificatore - " + perc(9,33)),
+    (0, "Progettista - " + perc(0,33)),
+    (3, "Programmatore - " + perc(3,33)),
+    (11, "Analista - " + perc(11,33)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore quinto periodo", display_style: "hor-legend-chart")
+}
+#pb()
+*Progresso delle #glossario("attività")*:\
+#{
+  let plot = plot(data: (
+    (0, "Non fatto - " + perc(0,100)),
+    (100, "Fatto - " + perc(100,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 5", display_style: "hor-legend-chart",colors: (red, green))
 }
 
   
