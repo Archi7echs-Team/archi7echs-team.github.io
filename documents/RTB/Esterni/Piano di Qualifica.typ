@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.4.0","07-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon,"",
+    "0.4.0","08-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, p.valdagno,
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
     "0.3.0", "13-01-2025", "Stesura obiettivi metrici di qualità", p.valdagno, (p.pesenato, p.pozzobon),
@@ -93,7 +93,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
-  caption: [MPC1-3 - rapporto EV e PV],
+  caption: [MPC2-3 - rapporto EV e PV],
 ) <imgMPC2-3> 
 
  #figure(
