@@ -5,10 +5,10 @@
   author: "Team",
   intern: false,
   show_outline: true,
-  state: "Approvato",
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "1.0.0", "08-02-2025", "Revisione per RTB", p.valdagno, "",
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
     "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, (p.lucato, p.pesenato),
@@ -42,7 +42,7 @@ In particolare gli obiettivi del documento sono:
 - *Garantire il tracciamento dei requisiti*: consente di mappare le esigenze del #glossario("proponente") attraverso l’identificazione, la classificazione e l’ordinamento di casi d’uso e corrispettivi requisiti.
 - *Fornire una base per la progettazione*: il documento enuncia le richieste e fornisce una base alla progettazione che invece si occupa dell’individuazione di una soluzione adeguata.
 - *#glossario("Verifica") dei requisiti*: il #glossario("processo") di #glossario("verifica") ha lo scopo di garantire che i requisiti siano corretti, completi e consistenti e quindi che il documento non abbia aspettative contraddittorie.
-- *#glossario("Validazione") dei requisti*: #glossario("attività") strettamente collegata all’#glossario("analisi dei requisiti") che consiste nell’accertare che il prodotto rispecchi le richieste del #glossario("proponente"). #glossario("Validazione") e #glossario("analisi dei requisiti") sono #glossario("attività") collegate in quanto affermare che un #glossario("requisito")  fa quello che deve fare significa che descrive lo stesso.
+- *#glossario("Validazione") dei requisiti*: #glossario("attività") strettamente collegata all’#glossario("analisi dei requisiti") che consiste nell’accertare che il prodotto rispecchi le richieste del #glossario("proponente"). #glossario("Validazione") e #glossario("analisi dei requisiti") sono #glossario("attività") collegate in quanto affermare che un #glossario("requisito")  fa quello che deve fare significa che descrive lo stesso.
 
 == Glossario
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html", text(blue)[_glossario_]). Tutte le parole consultabili nel glossario saranno identificate da una "G", di colore blu, in pedice. Cliccando la parola, si aprirà il glossario nel sito web.
@@ -98,10 +98,13 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 
 
 == Tecnologie
-- *Svelte*: un #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
-- *Threlte*: una #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene #glossario("3D") reattive e interattive.
-- *D3.js*: una #glossario("libreria") JavaScript per la creazione di grafica #glossario("3D") nel browser. D3.js fornisce un'#glossario("API") semplice per costruire e animare scene #glossario("3D"). Tuttavia nel #glossario("progetto") verrà utilizzato maggiormente per la normalizzazione dei dati all'#glossario("interno") del grafico.
-- *Vitest*: un #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di #glossario("unità").
+- *Svelte*: #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
+- *Threlte*: #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene #glossario("3D") reattive e interattive.
+- *Docker*: #glossario("piattaforma") di containerizzazione utilizzata per creare ambienti di sviluppo e produzione isolati e portabili. Docker facilita la distribuzione del #glossario("progetto") garantendo che l’applicazione funzioni in modo coerente in diversi ambienti.
+- *Node.js*: runtime JavaScript lato server che permette di eseguire codice JavaScript al di fuori del browser. Node.js è utilizzato per sviluppare applicazioni server-side e per gestire le operazioni asincrone in modo efficiente.
+- *Express*: #glossario("framework") minimalista per Node.js, utilizzato per creare le rotte necessarie a comunicare con il #glossario("database"). Nel #glossario("progetto"), Express gestisce le richieste HTTP e facilita l’interazione tra il frontend e il #glossario("database") PostgreSQL tramite le #glossario("API") RESTful.
+- *Postgres (Postgres.js)*: #glossario("libreria") JavaScript per l’interazione con il #glossario("database") PostgreSQL. Consente di eseguire #glossario("query") #glossario("SQL") in modo efficiente e sicuro.
+- *Vitest*: #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di #glossario("unità").
 - *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili.
 
 
@@ -245,7 +248,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC2.1.3>
 \
 
-=== UC 2.2 - Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast <uc2.2>
+=== UC 2.2 - Caricamento automatico dati tramite chiamata all'API esterna Weather Forecast <uc2.2>
 - *Descrizione: * L'utente inserisce automaticamente i dati tramite l'interfaccia web per generare il grafico selezionando la chiamata all'#glossario("API") esterna Weather Forecast di Open-Meteo come metodo di caricamento.
 - *Attore: * Utente finale
 - *Precondizioni: * L'applicazione è in modalità di inserimento dati tramite chiamata ad #glossario("API") esterna.
@@ -261,7 +264,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione errore apiTimeOut (@uc24);
 #figure(
   image("/img/adr/7.png", width: 115%),
-  caption: [Caricamento automatico dati tramite chiamata #glossario("API")],
+  caption: [Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast],
 ) <imgUC2.2>
 \
 
@@ -489,7 +492,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 ==== UC 9.5 Reimpostare la visualizzazione della barra selezionata<uc9.5>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default.
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico e può aver applicato dei filtri alla barra.
 - *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati.
@@ -558,7 +561,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
  - L'utente potrebbe selezionare un intervallo che non contiene dati:
     + Visualizzazione dell'errore invalidArguments (@uc21).
 #figure(
-  image("/img/adr/26.png", width: 80%),
+  image("/img/adr/26.png", width: 110%),
   caption: [Visualizzazione dati con altezza compresa tra un intervallo],
 ) <imgUC13>
 \
@@ -578,7 +581,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione dell'errore invalidArguments (@uc21). 
        
 #figure(
-  image("/img/adr/27.png", width: 80%),
+  image("/img/adr/27.png", width: 115%),
   caption: [Visualizzazione della media in base al valore di X],
 ) <imgUC14>
 \
@@ -597,7 +600,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione dell'errore emptyField (@uc25).
     + Visualizzazione dell'errore invalidArguments (@uc21). 
 #figure(
-  image("/img/adr/28.png", width: 80%),
+  image("/img/adr/28.png", width: 115%),
   caption: [Visualizzazione della media in base al valore di Z],
 ) <imgUC15>
 \
@@ -827,7 +830,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.15], [@uc9.2 \ #glossario("UC")9.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
   [F.1.16], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
   [F.1.17], [@uc9.4 \ #glossario("UC")9.4], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
-  [F.1.18], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
+  [F.1.18], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
   [F.1.19], [@uc10 \ #glossario("UC")10], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
   [F.1.20], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
   [F.1.21], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
