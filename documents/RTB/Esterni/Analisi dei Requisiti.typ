@@ -784,7 +784,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC27>
 \
 
-#pb()
 
 = Requisiti
 == Identificazione 
