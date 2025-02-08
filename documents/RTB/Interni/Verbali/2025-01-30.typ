@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "08-02-2025",  "Prima stesura documento", p.salvo, p.valdagno,
+    "0.1.0", "08-02-2025",  "Prima stesura documento", p.salvo, (p.valdagno,p.lucato),
   )
 )
 
@@ -95,7 +95,7 @@ durante la settimana e dell'incontro con l'azienda stabilito per il 06/02/2025.
   (190,), (p.checchinato), [Fix #glossario("Sito"): sezione contatti],
   (191,), (p.checchinato, p.scandaletti), [Fix #glossario("Glossario"): caratteri speciali],
   (192,), (p.scandaletti), [Fix #glossario("Sito"): script pagina glossario],
-  (193,), (p.scandaletti), [Agg #glossario("Sito"): Inserimento versione documenti],
+  (193,), (p.scandaletti), [Fix actions: Inserimento versione document],
   (195,), (p.pozzobon), [#glossario("PdQ"): inserimento grafici metriche],
   (196,), (p.pozzobon), [#glossario("PdQ"): inserimento riferimento a Grafana],
   (198,), (p.scandaletti), [Issue 2 - #glossario("PoC")],
