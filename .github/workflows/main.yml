@@ -49,8 +49,17 @@ jobs:
           shopt -s globstar
           ls documents/**/*.typ > .all
           echo ${{ steps.changed-files.outputs.all_changed_files }} | tr "," "\n" | sort > .changed
-          comm -23 .all .changed >> .typstignore
-          while IFS= read -r f; do rm -rf "${f}"; done < .typstignore
+          while IFS= read -r f; do ls $f/**/*.typ >> .tmpignore; done < .typstignore  # list all file from dist in .typstignore
+          mv .tmpignore .typstignore      # overwrite .typstignore with .tmpignore
+          # add all files in directories listed in .typstforce to .changed
+          while IFS= read -r dir; do ls $dir/**/*.typ >> .forced; done < .typstforce
+
+          # add files in .all that are not in .changed and not already in .typstignore to .typstignore
+          comm -13 <(sort .typstignore) <(comm -23 <(sort . ) <(sort .changed)) >> .typstignore   # .typstignore += (.all / -changed)
+
+          # remove files in .typstignore from .forced
+          comm -23 <(sort .typstignore) <(sort .forced) > .typstignore
+          while IFS= read -r f; do rm -rf "${f}"; done < .typstignore   # del all files in .typstignore => don't compile them
 
       - uses: typst-community/setup-typst@v3
 
@@ -65,6 +74,8 @@ jobs:
             [[ ! -f "$f" ]] && continue # skip if nothing to build
             rm -f "${RUNNER_TEMP}/master/${f%.typ}"*
             touch -amd "$( date -R -r "$f" )" "${f%.typ}.pdf"
+            version=$(grep --context 1 "changelog:" "$f" | tail -n1 | cut -d ',' -f1 | sed 's/\s//g; s/"//g')
+            [[ "$version" != 'none' && -n "$version" && !  "$f" == *"erbali"* ]] && mv "${f%.typ}.pdf" "${f%.typ}_v${version}.pdf" && f="${f%.typ}_v${version}.typ"
             rsync -aR "${f%.typ}.pdf" "${RUNNER_TEMP}/master"
           done
 
