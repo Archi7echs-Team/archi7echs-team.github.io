@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "0.19.0","09-02-2025","Revisione generali, correzioni ortografiche e sintattiche",p.pozzobon,"",
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, (p.lucato, p.pesenato),
     "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
@@ -37,7 +38,7 @@
 
 = Introduzione
 == Finalità del documento
-L'obiettivo del documento è quello di definire le linee guida del gruppo per garantire un lavoro, fortemente asincrono, uniforme, coerente e di qualità. Per garantire la gestione del prodotto, composto da software e documentazione, è necessario un approccio strutturato al #glossario("ciclo di vita"). \
+L'obiettivo del documento è quello di definire le linee guida del gruppo per garantire un lavoro, fortemente asincrono, uniforme, coerente e di qualità. Per gestire il prodotto, che comprende software e documentazione, è necessario adottare un approccio strutturato al #glossario("ciclo di vita"). \
 Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il quale identifica i processi di un #glossario("ciclo di vita") di un software, secondo una struttura modulare con relativa responsabilità su ciascun processo. \
 
 == Glossario 
@@ -65,7 +66,7 @@ Il processo si concentra sul monitoraggio e sulla gestione delle #glossario("att
 === Comunicazione con l'azienda proponente
 Le comunicazioni con Sanmarco Informatica, azienda #glossario("proponente") del progetto, avvengono principalmente via Google Chat.
 Alex Beggiato, System Architect Team Leader, si rende disponibile a rispondere a eventuali domande o dubbi bloccanti durante il #glossario("periodo") secondo la modalità di cui sopra oppure attraverso una riunione dedicata via Google Meet. \
-Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine #glossario("periodo"), fermo restando di non superare, salvo esplicite motivazioni, le due settimane dall'incontro precedente. \
+Gli incontri di Stato Avanzamento Lavori, #glossario("SAL"), vengono fissati di volta in volta a fine #glossario("periodo"), con l’impegno di non superare due settimane tra un incontro e l’altro, salvo esplicite motivazioni. \
 Durante tale incontro, con relativo #glossario("verbale esterno"), il #glossario("responsabile") del #glossario("periodo") in corso rendiconta, in via generale, quanto svolto lasciando poi la parola ai diretti interessati per esposizione dettagliata del lavoro svolto e chiarimento di dubbi.
 
 === Documentazione da consegnare
@@ -75,10 +76,10 @@ In questa sezione vengono indicati i documenti che saranno consegnati all'aziend
 All'#glossario("interno") vengono definite le #glossario("funzionalità") che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
 - *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un’interazione
 - *#glossario("UML") casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
-- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
+- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. È dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
 
 ==== Lettera di presentazione
-Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). E' dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
+Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). È dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
 - *Introduzione*: per indicare lo scopo del documento
 - *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
 - *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
@@ -125,9 +126,9 @@ Il documento cardine dell’#glossario("attività") di analisi è l'#glossario("
 - *Introduzione*: presentazione del documento
 - *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, #glossario("funzionalità"), caratteristiche utente e tecnologie usate
 - *Casi d'uso*: #glossario("funzionalità") offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi #glossario("UML") che seguono uno standard
-- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. E' dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
+- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. È dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
 
-La modalità con cui vengono descritti i casi d'uso e i requisiti sono specificati all'#glossario("interno") del documento #glossario("AdR").
+La modalità con cui vengono descritti i casi d'uso e i requisiti è specificata all'#glossario("interno") del documento #glossario("AdR").
 
 === Attività di progettazione
 L'#glossario("attività") di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’#glossario("attività") di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
@@ -169,7 +170,7 @@ L'indice si aggiorna automaticamente in base alle sezioni di #glossario("Typst")
 
 _ Per la gestione della #glossario("tabella delle revisioni") si fa riferimento all'apposita sezione, @tabella_revisioni, di questo documento. _ 
 ==== Allegato
-Questo #glossario("template") viene utilizzato per la redazione degli allegati ai verbali (#glossario("interni") ed #glossario("esterni")). E' compito di chi redige l'allegato indicare, nell'apposita sezione nell'intestazione del documento:
+Questo #glossario("template") viene utilizzato per la redazione degli allegati ai verbali (#glossario("interni") ed #glossario("esterni")). È compito di chi redige l'allegato indicare, nell'apposita sezione nell'intestazione del documento:
 - numero allegato (num progressivo riferito al verbale)
 - numero di verbale (esplicitando se #glossario("interno") o #glossario("esterno"))
 - data del verbale
@@ -178,7 +179,7 @@ Il documento di questa tipologia viene inserito nello stesso documento del verba
 
 ==== Carta intestata
 Questo #glossario("template") viene utilizzato per tutte le comunicazioni ufficiali in uscita verso un destinatario #glossario("esterno"). \
-E' compito di chi redige il documento indicare, nell'apposita sezione:
+È compito di chi redige il documento indicare, nell'apposita sezione:
 - destinatario del documento
 - mezzo di invio del documento
 - oggetto del documento
@@ -206,7 +207,7 @@ Il verbale deve inoltre contenere, nella relativa sezione del #glossario("templa
 Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la data della riunione, #glossario("Verbalizzante") e #glossario("Responsabile di Progetto") e, nel caso di #glossario("verbale esterno"), firma, per approvazione, di un rappresentante dell'azienda.
 
 === Registro delle modifiche e versionamento <tabella_revisioni>
-La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in #glossario("revisione"). E' necessario indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. E' a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di #glossario("revisione"): #glossario("RTB") e #glossario("PB"). 
+La tabella contenete il #glossario("registro delle modifiche"), situata a pagina 2 dei verbali e della documentazione del gruppo, escluso quindi allegati e carta intestata, deve essere aggiornata, da colui che redige il documento oppure ci effettua una modifica, ogni volta che un documento viene mandato in #glossario("revisione"). È necessario indicare, in ogni riga della tabella, la data, la descrizione delle modifiche effettuate, l'autore delle modifiche e attribuire un numero di versione, secondo lo #glossario("schema x.y.z"), incrementando il valore _z_ . Il #glossario("revisore"), invece, oltre ad inserire il proprio nome nell'apposita cella, è tenuto a verificare che il numero di versione sia corretto. È a cura di quest'ultimo, quindi, valutare l'eventuale incremento del valore _y_. L'incremento del valore _x_ avviene, invece, nello specifico caso del progetto, quando la documentazione viene consegnata al committente nelle due fasi di #glossario("revisione"): #glossario("RTB") e #glossario("PB"). 
 
 == Standard UML per la stesura di alcuni documenti
 All'#glossario("interno") dell'#glossario("analisi dei requisiti") è ovviamente di fondamentale importanza la presenza dei casi d'uso, descritti come: 
@@ -237,7 +238,7 @@ Un caso d'uso è una descrizione di una #glossario("funzionalità") o servizio s
   caption: [Identificare un caso d'uso],
 ) <casoduso>
 \
-E' possibile inoltre identificare un sottocaso d'uso. La nomenclatura è del tipo "#glossario("UC") N.n - Nome sottocaso d'uso" dove si intende che è è il sottocaso n del caso d'uso N
+È possibile inoltre identificare un sottocaso d'uso. La nomenclatura è del tipo "#glossario("UC") N.n - Nome sottocaso d'uso" dove si intende che è è il sottocaso n del caso d'uso N
 #figure(
   image("/img/ndp/sottocasoduso.png", width: 40%),
   caption: [Identificare un sottocaso d'uso],
@@ -252,7 +253,7 @@ Un attore è un'entità esterna che interagisce con un sistema o applicazione pe
 ) <attore>
 
 ==== Identificare la webapp (sistema)
-Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottocasi) d'uso vengono inseriti. E' rappresentato da un semplice rettangolo con all'#glossario("interno") i casi d'uso e all'#glossario("esterno") l'attore
+Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottocasi) d'uso vengono inseriti. È rappresentato da un semplice rettangolo con all'#glossario("interno") i casi d'uso e all'#glossario("esterno") l'attore
 \ \
 #figure(
   image("/img/ndp/sistema.png", width: 40%),
@@ -263,7 +264,7 @@ Il sistema, nel nostro caso la webapp, indica la "zona" in cui i casi (o sottoca
 Le relazioni nei diagrammi dei casi d’uso descrivono come gli elementi del sistema interagiscono tra loro. In particolare, rappresentano le connessioni tra attori e casi d’uso, oppure tra diversi casi d’uso. Servono a chiarire il comportamento del sistema, mostrando le dipendenze, le collaborazioni e le estensioni delle #glossario("funzionalità"). Ci sono vari tipi di relazioni: associazione, inclusione, estensione e generalizzazione.
 
 ===== Associazione
-Collega un attore a un caso d’uso, indicando che l’attore interagisce con quel caso. E' rappresentato da una semplice linea
+Collega un attore a un caso d’uso, indicando che l’attore interagisce con quel caso. È rappresentato da una semplice linea
 \ \
 #figure(
   image("/img/ndp/associazione.png", width: 60%),
@@ -280,7 +281,7 @@ Indica che un caso d’uso include un altro caso come parte del suo flusso princ
 
 \
 ===== Estensione (e condizioni)
-Indica che un caso d’uso può estendere un altro caso d'uso aggiungendo comportamenti opzionali o condizionali. In sostanza quindi aumenta le #glossario("funzionalità") di uno use case. E' rappresentata da una freccia tratteggiata con etichetta «extend».\
+Indica che un caso d’uso può estendere un altro caso d'uso aggiungendo comportamenti opzionali o condizionali. In sostanza quindi aumenta le #glossario("funzionalità") di uno use case. È rappresentata da una freccia tratteggiata con etichetta «extend».\
 Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso che estende. 
 \ \ 
 #figure(
@@ -291,7 +292,7 @@ Attenzione: la freccia va dal caso da cui si vuole estendere verso il caso d'uso
 In questo esempio, il caso d'uso N estende il caso d'uso M aggiungendo delle #glossario("funzionalità") specifiche, vincolate dalla _condizione_. L'_extension point_ rappresenta il punto in cui il caso d'uso da estendere può essere esteso, a seconda del verificarsi della _condizione_ specificata. La _condizione_ viene indicata collegando un commento alla freccia di estensione, contenente la descrizione della _condizione_ stessa e l'_extension point_ corrispondente. È importante segnalare l'_extension point_ anche nel caso d'uso esteso.
 
 ===== Generalizzazione
-Lo scopo principale è quello di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
+Lo scopo principale è di aggiungere o modificare le caratteristiche di base. Indica quindi un rapporto gerarchico, dove un attore o un caso d’uso più specifico eredita caratteristiche da uno più generico. Si utilizza per rappresentare specializzazioni di ruoli o di comportamenti ed è rappresentata da una freccia con linea continua e punta vuota (non tratteggiata).
 
 Esistono quindi due tipi di generalizzazioni: generalizzazione tra attori e generalizzazioni tra use case
 
@@ -305,7 +306,7 @@ Esistono quindi due tipi di generalizzazioni: generalizzazione tra attori e gene
   caption: [Identificare la relazione generalizzazione tra casi d'uso],
 ) <generalizzazionecasiduso>
 
-Dunque i figli possono aggiungere delle #glossario("funzionalità") rispetto ai padri oppure modificarne il comportamento
+Pertanto, i figli possono aggiungere delle #glossario("funzionalità") rispetto ai padri oppure modificarne il comportamento
 
 
 === Diagramma delle classi
@@ -364,7 +365,7 @@ Rappresenta un legame "parte di" tra due classi. In questa relazione, una classe
 Quindi in questo esempio B è parte di A.
 
 ===== Composizione
-E' una relazione simile all'aggregazione, con il sostanziale cambiamento che una classe fa parte di un'altra classe, ma non può esistere indipendentemente, ma solo se fa parte dell'altra classe. Viene rappresentato tramite una linea con un rombo pieno alla fine.
+È una relazione simile all'aggregazione, con il sostanziale cambiamento che una classe fa parte di un'altra classe, ma non può esistere indipendentemente, ma solo se fa parte dell'altra classe. Viene rappresentato tramite una linea con un rombo pieno alla fine.
 \ \
 #figure(
   image("/img/ndp/composizioneclassi.png", width: 75%),
@@ -385,15 +386,15 @@ Quindi in questo esempio B è figlia di A (superclasse)
 
 ===== Dipendenza
 La _definizione_ è: _Si ha dipendenza tra due elementi di un diagramma se la modifica alla definizione del primo (fornitore) può cambiare la definizione del secondo (client)_.
-*E' importante che le dipendenze siano minimizzate (_loose coupling_)*.\
-Indica che una classe utilizza l'altra per svolgere una funzione specifica o per accedere a un servizio. In altre parole, una classe dipende da un'altra quando un cambiamento nella classe dipendente potrebbe influenzare la classe che dipende da essa. E' quindi una relazione "debole" grazie al suo basso grado di accoppiamento. E' identificato da una freccia tratteggiata orientata.
+*È importante che le dipendenze siano minimizzate (_loose coupling_)*.\
+Indica che una classe utilizza l'altra per svolgere una funzione specifica o per accedere a un servizio. In altre parole, una classe dipende da un'altra quando un cambiamento nella classe dipendente potrebbe influenzare la classe che dipende da essa. È quindi una relazione "debole" grazie al suo basso grado di accoppiamento. È identificato da una freccia tratteggiata orientata.
 \ \
 #figure(
   image("/img/ndp/dipendenzaclassi.png", width: 80%),
   caption: [Identificare la relazione dipendenza tra classi],
 ) <dipendenzaclasse>
 
-Quindi un cambiamento in B _potrebbe_ influenzare un cambiamento in A, ma un cambiamento in A _non influenza_ B.
+Quindi un cambiamento in B _potrebbe_ influenzare A, ma un cambiamento in A _non influenza_ B.
 
 ==== Classi di associazione
 Aggiungono attributi e operazioni alle associazioni. Sono utilizzate per rappresentare informazioni aggiuntive o comportamenti specifici che appartengono a una relazione tra due (o più) classi, ma che non sono strettamente parte di nessuna delle due classi connesse. Per la rappresentazione è una classe (rettangolo) collegata alla linea di associazione tramite una linea tratteggiata. \ \
@@ -411,7 +412,7 @@ L'interfaccia è una classe priva di implementazione. Una classe _realizza_ un'i
 ) <interfacciaclassi>
 In questo caso la classe A implementa la funzione "funz" dell'interfaccia "Interfaccia" che non ha la sua implementazione
 
-E' possible inoltre dichiarare il fatto che una classe ha la necessità di "collegarsi" con un'interfaccia per poter accedere ad alcune #glossario("funzionalità"). Ad esempio: 
+È possible inoltre dichiarare il fatto che una classe ha la necessità di "collegarsi" con un'interfaccia per poter accedere ad alcune #glossario("funzionalità"). Ad esempio: 
 
 #figure(
   image("/img/ndp/interfaccerichieste.png", width: 100%),
@@ -457,7 +458,7 @@ Nella documentazione prodotta dal gruppo vengono utilizzati, vista la ripetizion
 
 
 == Verifica e Revisione della documentazione
-Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla #glossario("revisione") del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la #glossario("tabella delle revisioni"). Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la #glossario("revisione"). In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale. Nel caso in cui il documento che richieda approvazione sia stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra #glossario("tabella delle revisioni") ha la colonna "#glossario("Verifica")" con 2 nomi: il primo è il verificatore, mentre il secondo è il #glossario("responsabile").
+Il #glossario("verificatore"), una volta ricevuta la richiesta di #glossario("Pull Request"), attivata secondo l'apposita procedura, è tenuto alla #glossario("revisione") del documento sia dal punto di vista sintattico-lessicale e grammaticale che da quello del contenuto. Il compito dell' #glossario("amministratore") inoltre, include il controllo e l’aggiornamento dei riferimenti del #glossario("Glossario"), assicurandosi che non vi siano parole mancanti. In caso di errori di battitura o sintattici può procedere direttamente il #glossario("verificatore") alla correzione senza modificare la #glossario("tabella delle revisioni"). Nel caso invece in cui le modifiche da fare riguardino il contenuto del documento, quest'ultimo deve essere restituito all'autore della #glossario("Pull Request") con i commenti di quanto riscontrato durante la #glossario("revisione"). In questo caso quindi l'iter ripartirà dalla modifica, versionamento e aggiornamento della #glossario("Pull Request"). Il #glossario("responsabile"), in quanto tale, dovrà essere sempre allineato con le modifiche apportate ai documenti. Per garantire questo, dovrà leggere tutti i cambiamenti apportati, procedendo solo a termine di questa operazione con l’approvazione finale.  Se il documento che richiede approvazione è stato redatto dal #glossario("responsabile"), l'approvazione finale viene data dall'#glossario("amministratore"), che otterrà temporaneamente il ruolo di #glossario("responsabile") per questo compito. Per queste motivazioni, la nostra #glossario("tabella delle revisioni") ha la colonna "#glossario("Verifica")" con 2 nomi: il primo è il verificatore, mentre il secondo è il #glossario("responsabile").
 
 === Processo per la verifica della documentazione <processo_verifica>
 Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazione/modifica del file fino alla sua verifica, per garantire la qualità del documento.
@@ -474,7 +475,7 @@ Questa sezione presenta tutte le istruzioni che vengono applicate, dalla creazio
 + Aprire la #glossario("Pull Request") 
  - La #glossario("Pull Request") può essere aperta tramite un pulsante "Create #glossario("Pull Request")" presente nella pagina iniziale del #glossario("repository")
  - La #glossario("Pull Request") può essere aperta andando nella pagina "Pull Requests", impostando "nome_branch" come branch sorgente e "sources" come branch di destinazione. Premere successivamente il pulsante "Create #glossario("Pull Request")"
- -  *ATTENZIONE*. Impostare il merge al branch _sources_ (viene selezionato in automatico se è stato creato il nuovo branch a partire dal branch _sources_). E' molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
+ -  *ATTENZIONE*. Impostare il merge al branch _sources_ (viene selezionato in automatico se è stato creato il nuovo branch a partire dal branch _sources_). È molto importante fare sempre attenzione a questo punto, per non incorrere a problemi di merge.
 + Una volta creata, si assegna il #glossario("verificatore") nella sezione "Reviewers" a destra della pagina della #glossario("Pull Request") senza dimenticare d'inserire anche il #glossario("responsabile"), le labels, la board sotto la voce project e la #glossario("milestone") se presenti.
 + Collega la/le issue/issues alla #glossario("Pull Request") nella sezione "Development" a destra della pagina per la modifica della stessa. Questo permette di chiudere tutte le #glossario("issue") associate una volta che la #glossario("Pull Request") è stata approvata.
  - *ATTENZIONE*. L'impostazione delle #glossario("issue") va effettuata *DOPO* la creazione della #glossario("Pull Request") e non prima. Questo serve per garantire che venga aggiunto il messaggio del link tra #glossario("issue") e #glossario("Pull Request").
@@ -604,14 +605,14 @@ Nel dettaglio la figura dell'#glossario("Amministratore") si occupa di:
 - Approvare, dopo la verifica, i documenti redatti o modificati dal #glossario("Responsabile")
 
 === Analista
-Figura con il compito di analisi ed illustrazione tecnica del problema. E' richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
+Figura con il compito di analisi ed illustrazione tecnica del problema. È richiesto, da parte di tale ruolo, la perfetta conoscenza del dominio. \
 Nel dettaglio la figura dell'Analista si occupa di:
 - Studiare il dominio e individuare gli #glossario("UC")
 - Redigere l'#glossario("AdR") in tutte le sue sezioni
 - Supportare le figure del Progettista e del Programmatore
 
 === Progettista
-Figura con il compito di individuare e determinare le scelte realizzative. E' richiesto, da parte di questa figura, competenze tecniche e tecnologiche aggiornate.
+Figura con il compito di individuare e determinare le scelte realizzative. È richiesto, da parte di questa figura, competenze tecniche e tecnologiche aggiornate.
 
 === Programmatore
 Figura con il compito di seguire la fase di codifica. Ha la responsabilità della realizzazione e mantenimento del codice. Questa figura richiede competenze tecniche ma deleghe limitate.
@@ -712,7 +713,7 @@ I documenti devono rispettare standard tipografici e sintattici uniformi per gar
 
 #pb() 
 = Processi organizzativi
-E' fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei #glossario("task") ed eventuali rischi annessi. 
+È fondamentale che il gruppo sia allineato nelle tempistiche e modalità di organizzazione dei processi nell'ottica di una corretta gestione dei #glossario("task") ed eventuali rischi annessi. 
 
 == Gestione dei processi
 Un #glossario("processo") è un insieme di #glossario("attività") correlate  e coese che trasformano bisogni (input) in prodotti (output) secondo specifiche regole. \
@@ -756,14 +757,14 @@ Tale associazione consente di identificare il processo dentro una fase, definita
 Per una corretta pianificazione e gestione delle #glossario("issue"), è compito di ogni assegnatario delle #glossario("issue") andare a indicare la _start date_ e la _end date_ nella relative sezione di #glossario("Github"), in modo tale che la project board mostri automaticamente il diagramma di Gantt con le tempistiche di inizio e fine del processo.
 
 === Monitoraggio
-E' necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. E' a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
+È necessario conoscere, in ogni momento, lo stato di avanzamento del processo mediante un corretto utilizzo della #glossario("Project Board") di #glossario("Github"). Ogni #glossario("Issue") infatti appartiene ad uno stato, in tempo reale, che rappresenta il processo. È a cura dell'assegnatario della #glossario("Issue") identificare e aggiornare lo stato del processo mediante trascinamento nella #glossario("Project Board") nello stato corretto:
 - *#glossario("Todo")*, #glossario("Issue") creata ma non ancora iniziata
 - *In progress*, #glossario("Issue") in lavorazione
 - *In review*, #glossario("Issue") completata e in attesa di verifica
 - *Done*, #glossario("Issue") terminata
 
 La board permette al #glossario("responsabile") di progetto di intervenire tempestivamente in caso di problematiche che sono sorte o stanno per sorgere. \
-E' compito del #glossario("responsabile") di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
+È compito del #glossario("responsabile") di progetto interfacciarsi con l'assegnatario della #glossario("Issue") qualora si presentasse qualche situazione di rischio per trovare una soluzione a questa. \
 Se un membro del gruppo nota difficoltà non previste durante lo svolgimento del processo è tenuto ad avvisare tutto il team e sarà cura del #glossario("responsabile") trovare una soluzione al problema presentato.
 
 === Gestione dei rischi
