@@ -903,7 +903,7 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.2.1], [Decisione interna, UC20, UC2.1],
   [F.2.2], [Decisione interna, UC21],
   [F.1.28], [Decisione interna, UC22, UC2.2, UC2.4],
-  [F.1.29], [Decisione interna, UC23],
+  [F.1.29], [Decisione interna, UC23, 2.4],
   [F.1.30], [Decisione interna, UC24, UC2.2],
   [F.1.31], [Decisione interna, UC25, UC2.1],
   [F.1.32], [Decisione interna, UC26, UC2.3],
