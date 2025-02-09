@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "0.19.0","09-02-2025","Revisione generali, correzioni ortografiche e sintattiche",p.pozzobon,"",
+    "0.19.0","09-02-2025","Revisione generale, correzioni ortografiche e sintattiche",p.pozzobon,"",
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, (p.lucato, p.pesenato),
     "0.17.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
