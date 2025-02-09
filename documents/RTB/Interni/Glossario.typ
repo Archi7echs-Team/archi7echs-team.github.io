@@ -8,7 +8,7 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
-            "1.0.0","09-02-2025","Revisione RTB", p.salvo, p.pozzobon,
+            "1.0.0","09-02-2025","Revisione per incontro RTB", p.salvo, (p.pozzobon,p.lucato),
             "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
