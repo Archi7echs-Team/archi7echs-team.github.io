@@ -163,7 +163,7 @@ Nella prima pagina del documento devono essere indicati, oltre a titolo e sottot
 - *ultima modifica*
 - *stato del documento* (Bozza oppure Approvato)
 L'aggiornamento di autore e tipologia del documento è a cura del #glossario("redattore") del documento.  \
-Lo stato del documento viene posto in _Bozza_ dal #glossario("redattore") e aggiornato dal #glossario("verificatore") quando il documento raggiunge una versione che ne consente l'#glossario("approvazione") e #glossario("rilascio"). \
+Lo stato viene inserito come "Approvato" solo nei verbali esterni, che hanno bisogno dell'approvazione da parte dell'azienda proponente. Negli altri documenti non viene inserito lo stato.\
 L'ultima modifica viene aggiornata automaticamente ad ogni modifica della #glossario("Tabella delle revisioni"), prendendo la data dell'ultima #glossario("revisione") come data di ultima modifica. \
 L'indice si aggiorna automaticamente in base alle sezioni di #glossario("Typst"), per il dettaglio su come suddividere correttamente il documento in sezioni e sottosezioni si rimanda alla documentazione ufficiale di #glossario("Typst").
 
