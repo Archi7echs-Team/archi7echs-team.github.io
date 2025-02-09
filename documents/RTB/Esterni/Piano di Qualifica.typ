@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.0.0","09-02-2025","Revisione per RTB",p.pesenato,p.pozzobon,
+    "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
