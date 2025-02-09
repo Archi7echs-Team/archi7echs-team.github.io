@@ -84,7 +84,7 @@ durante la settimana e dell'incontro con l'azienda stabilito per il 06/02/2025.
   [1],[Cambiamento nome file],[I file dovranno contenere il numero di versione],
   [1],[Rimozione stato del documento],[Il campo stato della pagina iniziale di ogni documento verrà rimosso],
   [1],[Fix generale],[I problemi identificati verranno risolti e si effettuerà una revisione globale],
-  [2],[Continuazione stesura documenti],[I compiti verranno passati e si continuerà con il miglioramento di documenti, #glossario("sito") e #glossario("PoC")],
+  [2],[Continuazione stesura documenti],[I compiti verranno passati e si continuerà con il miglioramento di documenti, sito e #glossario("PoC")],
   ))
 
 = TODO
@@ -92,9 +92,9 @@ durante la settimana e dell'incontro con l'azienda stabilito per il 06/02/2025.
   (185,), (p.salvo), [#glossario("AdR"): Fix immagini e fix sottocasi d'uso],
   (186,), (p.salvo), [Redazione #glossario("verbale interno") 2025-01-30],
   (187,), (p.lucato), [#glossario("PdP"): Stesura quinto periodo],
-  (190,), (p.checchinato), [Fix #glossario("Sito"): sezione contatti],
+  (190,), (p.checchinato), [Fix Sito: sezione contatti],
   (191,), (p.checchinato, p.scandaletti), [Fix #glossario("Glossario"): caratteri speciali],
-  (192,), (p.scandaletti), [Fix #glossario("Sito"): script pagina glossario],
+  (192,), (p.scandaletti), [Fix Sito: script pagina glossario],
   (193,), (p.scandaletti), [Fix actions: Inserimento versione document],
   (195,), (p.pozzobon), [#glossario("PdQ"): inserimento grafici metriche],
   (196,), (p.pozzobon), [#glossario("PdQ"): inserimento riferimento a Grafana],

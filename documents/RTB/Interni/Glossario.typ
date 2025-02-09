@@ -80,6 +80,9 @@
         - Codice univoco
         Identificatore unico e non ripetibile assegnato a elementi come utenti, oggetti o record in un sistema informatico. Garantisce l’assenza di ambiguità nei riferimenti.
 
+        - Cruscotto
+        Interfaccia grafica che fornisce una panoramica visiva delle informazioni più rilevanti, come metriche, dati o notifiche. I cruscotti sono utilizzati per monitorare lo stato di un sistema o di un processo in tempo reale, facilitando la visualizzazione e l’analisi dei dati. In inglese viene chiamato _dashboard_.
+
         = D
 
         - Database
@@ -138,6 +141,9 @@
         - ID
         Identificativo univoco assegnato a oggetti o entità in un sistema, agevola una distinzione precisa tra elementi.
         
+        - Infografica
+        Rappresentazione visiva di informazioni o dati complessi, progettata per essere facilmente comprensibile e coinvolgente. Le infografiche combinano testo, immagini e grafici per comunicare concetti in modo chiaro e accattivante.
+
         - Interni
         Entità o persone del team di sviluppo del progetto.
         
