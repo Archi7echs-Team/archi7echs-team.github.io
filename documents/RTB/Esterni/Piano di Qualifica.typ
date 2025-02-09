@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.0.0","09-02-2025","Revisione per RTB",p.pesenato, (),
+    "1.0.0","09-02-2025","Revisione per RTB",p.pesenato, p.pozzobon,
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
@@ -23,10 +23,10 @@
 = Introduzione
 == Finalità del documento
 L'obiettivo del #glossario("PdQ") è descrivere l'insieme delle procedure di #glossario("verifica") e #glossario("validazione") adottate per garantire la qualità dei processi e del #glossario("prodotto software"). Il controllo di qualità serve per assicurare che vengano soddisfatti i requisiti tramite criteri oggettivi. \ 
-Dato che il miglioramento continuo è uno degli elementi chiave dei sistemi di qualità i contenuti del documento saranno modificati e ampliati nel corso nel tempo.
+Dato che il miglioramento continuo è uno degli elementi chiave dei sistemi di qualità i contenuti del documento saranno modificati e ampliati nel corso del tempo.
 
 == Glossario
-All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario.
+All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Facendo click su di essi si aprirà il glossario.
 
 == Riferimenti
 === Link al capitolato C5 - 3Dataviz
@@ -35,7 +35,7 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] - _Ultimo accesso al documento 19/12/2024_
 
 - Riferimento alle slide IS: *_Qualità del software_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T07.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T07.pdf]] - _Ultimo accesso al documento 19/12/2024_
-- Riferimento alle slide IS: *_Qualità di processo_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf]] - _Ultimo accesso al documento 19/12/2024_
+- Riferimento alle slide IS: *_Qualità di processo_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf]] - _Ultimo accesso al documento 19/01/2025_
 - Riferimento alle slide IS: *_Verifica e #glossario("validazione"):_*
  - *_Introduzione_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf]] \ - _Ultimo accesso al documento 09/01/2025_
  - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 08/01/2025_
@@ -282,11 +282,11 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.S.7], [Verificare che l'utente possa inserire automaticamente i dati tramite chiamata all'#glossario("API") esterna Weather Forecast come metodo di caricamento],[F.1.3] ,[NI],
   [T.S.8], [Verificare che l'utente possa inserire automaticamente i dati tramite una connessione a database #glossario("SQL") locale come metodo di caricamento],[F.1.4] ,[NI],
   [T.S.9], [Verificare che l'utente possa inserire automaticamente i dati tramite un file .csv come metodo di caricamento],[F.1.5] ,[NI],
-  [T.S.10], [Verificare che l'utente può, mediante spostamento del mouse sopra il grafico, ruotare la visualizzazione],[F.1.6] ,[NI],
-  [T.S.11], [Verificare che l'utente può, mediante spostamento del mouse sopra il grafico, muoversi solo orizzontalmente come se fosse in un ambiente 2D],[F.1.7] ,[NI],
-  [T.S.12], [Verificare che l'utente può, mediante spostamento del mouse sopra il grafico, muoversi solo verticalmente come se fosse in un ambiente 2D],[F.1.8] ,[NI],
-  [T.S.13], [Verificare che l'utente può, attraverso le gesture del mouse, ingrandire o ridurre liberamente la visualizzazione],[F.1.9] ,[NI],
-  [T.S.14], [Verificare che l'utente può resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo tramite un apposito bottone],[F.1.10] ,[NI],
+  [T.S.10], [Verificare che l'utente possa, mediante spostamento del mouse sopra il grafico, ruotare la visualizzazione],[F.1.6] ,[NI],
+  [T.S.11], [Verificare che l'utente possa, mediante spostamento del mouse sopra il grafico, muoversi solo orizzontalmente come se fosse in un ambiente 2D],[F.1.7] ,[NI],
+  [T.S.12], [Verificare che l'utente possa, mediante spostamento del mouse sopra il grafico, muoversi solo verticalmente come se fosse in un ambiente 2D],[F.1.8] ,[NI],
+  [T.S.13], [Verificare che l'utente possa, attraverso le gesture del mouse, ingrandire o ridurre liberamente la visualizzazione],[F.1.9] ,[NI],
+  [T.S.14], [Verificare che l'utente possa resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo tramite un apposito bottone],[F.1.10] ,[NI],
   [T.S.15], [Verificare che l'utente, posizionando il cursore sopra una barra del grafico riesca a visualizzare le informazioni di quella barra],[F.1.11] ,[NI],
   [T.S.16], [Verificare che l'utente, premendo sopra ad una barra, visualizzi una sezione apposita per scegliere tra alcune delle ulteriori funzionalità ],[F.1.12] ,[NI],
   [T.S.17], [Verificare che l'utente, una volta premuta una barra, riesca a visualizzare le informazioni di quella barra],[F.1.13] ,[NI],
@@ -300,8 +300,8 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.S.25], [Verificare che l'utente possa visualizzare i soli dati che sono contenuti all'interno di un intervallo di valori (che può essere chiuso o aperto), opacizzando quindi gli altri],[F.1.21] ,[NI],
   [T.S.26], [Verificare che l'utente possa visualizzare il piano parallelo alla base che identifica la media dei valori appartenenti all'asse X selezionato],[F.1.22] ,[NI],
   [T.S.27], [Verificare che l'utente possa visualizzare il piano parallelo alla base che identifica la media dei valori appartenenti all'asse Z selezionato],[F.1.23] ,[NI],
-  [T.S.28], [Verificare che l'utente può visualizzare all'interno del grafico gli N dati (barre) con valore più alto, opacizzando gli altri],[F.1.24] ,[NI],
-  [T.S.29], [Verificare che l'utente può visualizzare all'interno del grafico gli N dati (barre) con valore più basso, opacizzando gli altri],[F.1.25] ,[NI],
+  [T.S.28], [Verificare che l'utente possa visualizzare all'interno del grafico gli N dati (barre) con valore più alto, opacizzando gli altri],[F.1.24] ,[NI],
+  [T.S.29], [Verificare che l'utente possa visualizzare all'interno del grafico gli N dati (barre) con valore più basso, opacizzando gli altri],[F.1.25] ,[NI],
   [T.S.30], [Verificare che l'utente possa eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default, tramite un apposito bottone],[F.1.26] ,[NI],
   [T.S.31], [Verificare che l'utente possa esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati ed i filtri relativi],[F.2.1 - Desiderabile] ,[NI],
   [T.S.32], [Verificare che l'utente possa effettuare uno "screenshot" del grafico],[F.2.2 - Desiderabile] ,[NI],
