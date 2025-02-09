@@ -5,11 +5,11 @@
   title: "Piano di Progetto",
   subtitle: "",
   author: "Il team",
-  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
     "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
@@ -34,14 +34,16 @@ Il #glossario("PdP") è il documento che fornisce una guida strutturata per l'es
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "G" in colore blu. Premendoci sopra si aprirà il glossario 
 
 == Il capitolato
-L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi quantità di dati attraverso una rappresentazione visiva in #glossario("3D"). I dati ricevuti saranno visualizzati sotto forma di istogrammi tridimensionali, con supporto per rotazione, pan, zoom e selezione interattiva delle barre. Gli utenti principali della #glossario("piattaforma") saranno le aziende che necessitano di strumenti avanzati per l’analisi e la visualizzazione di dati, utilizzabili sia internamente che per la comunicazione con clienti e stakeholder.
+L’obiettivo del #glossario("progetto") è facilitare la comprensione di grandi quantità di dati attraverso una rappresentazione visiva in #glossario("3D"). I dati ricevuti saranno visualizzati sotto forma di istogrammi tridimensionali, con supporto per rotazione, pan, zoom e selezione interattiva delle barre. Gli utenti principali della #glossario("piattaforma") saranno le aziende che necessitano di strumenti avanzati per l’analisi e la visualizzazione di dati, utilizzabili sia internamente sia per la comunicazione con clienti e stakeholder.
 
 == Riferimenti utili
 === Link al capitolato C5 - 3Dataviz
-- Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]]
+- Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
 === Slide del corso IS
-- Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]]
-- Riferimento alle slide IS: *_Gestione di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]]
+- Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
+- Riferimento alle slide IS: *_Gestione di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] - _Ultimo accesso al documento 01/02/2025_
+
+#pb()
 
 = Informazioni del progetto
 
@@ -108,10 +110,10 @@ La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del
 
 === Scelta della metodologia da utilizzare <scelta_metodologia>
 Per il #glossario("progetto") è stata scelta la metodologia Agile-Scrum come #glossario("framework") operativo. Questa decisione si basa sulla necessità di affrontare la complessità del #glossario("progetto") in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
-Le motivazioni per l'adozione di Agile-Scrum sono:
+Le motivazioni che hanno portato all'adozione di Agile-Scrum sono:
 + *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del #glossario("progetto"), rispondendo prontamente a nuove esigenze o priorità. Ogni #glossario("periodo") rappresenta un ciclo breve e pianificabile, garantendo un #glossario("processo") continuo di #glossario("revisione") e miglioramento.
 + *Focus sul Valore*: Il lavoro viene suddiviso in User Stories prioritarie, permettendo di concentrarsi sulle #glossario("funzionalità") che portano il massimo valore agli utenti finali. L’approccio iterativo facilita la consegna frequente di incrementi tangibili e utilizzabili del prodotto.
-+ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del #glossario("periodo")), e Sprint Review (#glossario("retrospettiva") del #glossario("periodo")) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, mantenendo alta la trasparenza.
++ *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del #glossario("periodo")), e Sprint Review (#glossario("retrospettiva") del #glossario("periodo")) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, garantendo trasparenza.
 + *Gestione dei Rischi*: I rischi vengono identificati e gestiti continuamente, riducendo la probabilità di fallimenti significativi. Il formato iterativo consente di testare e validare frequentemente le ipotesi. Questo, se applicato correttamente, garantisce di aggiungere/modificare la _@gestione_dei_rischi _, relativa alla gestione dei rischi, non solo in base a "periodi brevi" ma soprattutto anche a "lungo raggio".
 + *Incremento della Produttività*: Grazie al lavoro suddiviso in periodi e all’enfasi sulla rimozione degli impedimenti (eventi #glossario("esterni"), nuove #glossario("funzionalità") da implementare, ecc...), il team è in grado di ottimizzare le proprie prestazioni.
 
@@ -182,7 +184,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").
     [NomeX],[0],[0],[0],[1],[0],[0],[€ #(1*costo_ora.proge)],
     [*Costo per ruolo*],[0],[€ #(2*costo_ora.amm)],[€ #(2*costo_ora.ver)],[€ #(1*costo_ora.proge)],[0],[0],[#text(blue)[*€ #(30+40+25)*] (#text(green)[-€ 5])],
 )
-#pb()
+
 *Esempio stato di avanzamento*:
 
 #{
@@ -192,6 +194,8 @@ Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").
   ))
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo X", display_style: "hor-legend-chart",colors: (red, green))
 }
+
+#pb()
 
 = Gestione dei rischi <gestione_dei_rischi> 
 == Introduzione
@@ -254,7 +258,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 
 ==== Rischio 8 - Assenza di un membro del team per malattia o altri impegni <RI-8>
 - *Identificativo*: RI-8
-- *Descrizione*: un membro del team potrebbe assentarsi a causa di malattia o di un impegno, compromettendo le scadenze e aumentando il carico di lavoro per gli altri membri.
+- *Descrizione*: un membro del team potrebbe assentarsi a causa di malattia o di un impegno, compromettendo le scadenze e aumentando il carico di lavoro per il resto del team.
 - *Probabilità*: media
 - *Impatto*: alto
 - *Strategie di mitigazione*: prevedere una documentazione accurata e aggiornata delle #glossario("attività") svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
@@ -280,6 +284,8 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Probabilità*: bassa
 - *Impatto*: medio
 - *Strategie di mitigazione*: identificare con anticipo le dipendenze da terze parti e predisporre soluzioni alternative in caso di ritardi.
+
+#pb()
 
 = Periodi
 == Periodo 1
