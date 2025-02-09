@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.2", "09-02-2025",  "Rimozione sezione stato", p.pesenato, (),
+    "0.1.2", "09-02-2025",  "Rimozione sezione stato", p.pesenato, p.pozzobon,
     "0.1.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.1.0", "02-01-2025",  "Prima stesura documento", p.checchinato, (p.lucato,p.pozzobon),
   )
