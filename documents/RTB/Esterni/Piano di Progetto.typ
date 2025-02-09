@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.0.0", "09-02-2025", "Revisione per RTB", p.valdagno, "",
+    "1.0.0", "09-02-2025", "Revisione per colloquio RTB", p.valdagno, p.pozzobon,
     "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
     "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
@@ -110,7 +110,7 @@ La tabella riporta quanto deciso nel _Preventivo_ redatto per la candidatura del
 
 === Scelta della metodologia da utilizzare <scelta_metodologia>
 Per il #glossario("progetto") è stata scelta la metodologia Agile-Scrum come #glossario("framework") operativo. Questa decisione si basa sulla necessità di affrontare la complessità del #glossario("progetto") in modo dinamico e adattivo, favorendo un approccio collaborativo e iterativo che consente di consegnare valore allo stakeholder in modo incrementale e frequente.\
-Le motivazioni per l'adozione di Agile-Scrum sono:
+Le motivazioni che hanno portato all'adozione di Agile-Scrum sono:
 + *Flessibilità e Adattamento*: La metodologia Scrum consente di affrontare cambiamenti nei requisiti anche in fase avanzata del #glossario("progetto"), rispondendo prontamente a nuove esigenze o priorità. Ogni #glossario("periodo") rappresenta un ciclo breve e pianificabile, garantendo un #glossario("processo") continuo di #glossario("revisione") e miglioramento.
 + *Focus sul Valore*: Il lavoro viene suddiviso in User Stories prioritarie, permettendo di concentrarsi sulle #glossario("funzionalità") che portano il massimo valore agli utenti finali. L’approccio iterativo facilita la consegna frequente di incrementi tangibili e utilizzabili del prodotto.
 + *Collaborazione e Trasparenza*: La comunicazione regolare tra i membri del team durante colloqui veloci (vie brevi), Sprint Planning (pianificazione del #glossario("periodo")), e Sprint Review (#glossario("retrospettiva") del #glossario("periodo")) migliora la coesione del team e l’allineamento degli obiettivi. Lo stakeholder è coinvolto attivamente durante le revisioni dei periodi, garantendo trasparenza.
