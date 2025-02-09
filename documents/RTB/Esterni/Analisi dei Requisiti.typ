@@ -8,7 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "1.0.0", "08-02-2025", "Revisione per RTB", p.valdagno, "",
+    "1.0.0", "08-02-2025", "Revisione per incontro RTB", p.valdagno, p.pozzobon,
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
     "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.7.5", "29-01-2025", "Modifiche a UC, diagrammi UML e aggiornamento tabelle requisiti", p.valdagno, (p.lucato, p.pesenato),
@@ -71,7 +71,7 @@ L’obiettivo è realizzare una #glossario("piattaforma") web di visualizzazione
 Il prodotto deve essere progettato per poter rappresentare  dati, in un modello #glossario("3D"), navigabile e interattivo.\ Dunque le sue #glossario("funzionalità") principali includono:
 
 - *#glossario("Funzionalità") di un ambiente #glossario("3D")*: 
-  - *Rotazione*: permettere la rotazione del grafico per osservarlo da diverse angolazioni.
+  - *Rotazione*: permettere la rotazione del grafico per visualizzarlo da diverse angolazioni.
   - *Pan*: consentire lo spostamento del grafico sul piano orizzontale.
   - *Zoom*: abilitare l'avvicinamento e l'allontanamento dal grafico.
   - *Auto-positioning*: posizionare automaticamente il grafico in una vista ottimale.
