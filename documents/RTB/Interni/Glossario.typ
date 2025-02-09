@@ -4,11 +4,11 @@
         #show: conf.with(
           title: "Glossario",
           author: "Team",
-          state: "Approvato",
           show_outline: true,
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
+            "0.1.5","09-02-2025","Revisione", p.salvo, "",
             "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
@@ -28,7 +28,7 @@
         Rappresentazione tridimensionale di oggetti o dati, utilizzata per creare visualizzazioni più realistiche e interattive.
         
         - 3Dataviz
-        3Dataviz è il capitolato scelto dal team, proposto dall’azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
+        3Dataviz è il capitolato scelto dal team, proposto dall'azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
 
         = A
         - Accessibile
@@ -45,7 +45,7 @@
         Figura responsabile della configurazione del progetto, garantisce che il progetto sia gestito in modo efficiente e conforme ai requisiti definiti.
         
         - Analisi dei requisiti
-        Processo fondamentale nello sviluppo di un software. Prevede la raccolta, l'analisi e la definizione delle esigenze di un sistema o software, espresse o implicite degli stakeholder o degli utenti, e mira identificare e documentare ciò che un sistema (o software) deve fare per soddisfare gli obiettivi di progetto.
+        Processo fondamentale nello sviluppo di un software. Prevede la raccolta, l'analisi e la definizione delle esigenze di un sistema o software, espresse o implicite degli stakeholder o degli utenti, e mira a identificare e documentare ciò che un sistema (o software) deve fare per soddisfare gli obiettivi di progetto.
                
         - API
         Acronimo di Application Programming Interface, un insieme di regole e protocolli che consentono a diverse applicazioni software di comunicare tra loro, semplificando l'integrazione.
