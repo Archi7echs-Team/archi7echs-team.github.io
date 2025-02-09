@@ -42,8 +42,7 @@
       inset: 6pt,
       [#strong[Autore:] Francesco Pozzobon],
       [#strong[Tipologia Documento:] Interno],
-      [#strong[Ultima Modifica:] 18/11/2024 16:50],
-      [#strong[Stato:] Approvato],
+      [#strong[Ultima Modifica:] 09/02/2025],
     )]
   )
   #pagebreak(weak: true)
@@ -60,11 +59,12 @@
 #align(center)[
   #figure[
     #table(
-        columns: 6,
-        align: (col, row) => (center, center, center, center, center, center,).at(col),
+        columns: 5,
+        align: (col, row) => (center, center, center, center, center,).at(col),
         inset: 6pt,
-        table.header([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*], [*Approvazione*]),
-        [0.0.1], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [Gabriele Checchinato], [Gabriele Checchinato],
+        table.header([*Rev.*], [*Data*], [*Descrizione*], [*Elaborazione*], [*Verifica*]),
+        [0.1.1], [09/02/2025], [Rimozione sezione stato], [Giacomo Pesenato], [Francesco Pozzobon, Leonardo Lucato],
+        [0.1.0], [14/11/2024], [Prima stesura documento], [Francesco Pozzobon], [Gabriele Checchinato]
     )
     <tab:my_label>
   ]

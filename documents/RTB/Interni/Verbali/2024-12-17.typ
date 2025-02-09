@@ -4,10 +4,10 @@
   title: "Verbale incontro 17/12/2024",
   subtitle: "Documento interno - verbale nr. 12",
   author: p.checchinato,
-  state: "Approvato",
   show_outline: true,
   outline_depth: 1,
   changelog: (
+    "0.1.2", "09-02-2025",  "Rimozione sezione stato", p.pesenato, (p.pozzobon,p.lucato),
     "0.1.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.1.0", "23-12-2024",  "Prima stesura documento", p.checchinato, (p.scandaletti,p.valdagno),
   )
