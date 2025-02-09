@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.3", "09-02-2025",  "Rimozione sezione stato", p.pesenato, p.pozzobon,
+    "0.1.3", "09-02-2025",  "Rimozione sezione stato", p.pesenato, (p.pozzobon,p.lucato),
     "0.1.2", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.1.1", "24-11-2024",  "Rimozione punto OdG errato", p.pozzobon, p.salvo,
     "0.1.0", "21-11-2024",  "Prima stesura documento", p.pozzobon, p.salvo,
