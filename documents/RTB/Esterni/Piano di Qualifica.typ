@@ -10,7 +10,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.0.0","09-02-2025","Revisione per RTB",p.pesenato,(),
+    "1.0.0","09-02-2025","Revisione per RTB",p.pesenato,p.pozzobon,
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
     "0.3.2", "30-01-2025", "Aggiornamento tabelle test", p.valdagno, (p.checchinato, p.pesenato),
     "0.3.1", "18-01-2025", "Aggiunta metrica Cost Variance", p.valdagno, (p.lucato, p.pesenato),
@@ -38,12 +38,15 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - Riferimento alle slide IS: *_Qualità di processo_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T08.pdf]] - _Ultimo accesso al documento 19/01/2025_
 - Riferimento alle slide IS: *_Verifica e #glossario("validazione"):_*
  - *_Introduzione_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf]] \ - _Ultimo accesso al documento 09/01/2025_
- - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 08/01/2025_
- - *_Analisi dinamica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T011.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T11.pdf]] \ - _Ultimo accesso al documento 19/12/2024_
+ - *_Analisi statica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T10.pdf]] \ - _Ultimo accesso al documento 30/01/2025_
+ - *_Analisi dinamica_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T011.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T11.pdf]] \ - _Ultimo accesso al documento 30/12/2024_
 
 === Standard
 - *_#glossario("ISO/IEC 12207:1995")_*: #link("https://en.wikipedia.org/wiki/ISO/IEC_12207")[#text(blue)[https://en.wikipedia.org/wiki/ISO/IEC_12207]] \ - _Ultimo accesso al documento 13/01/2025_
 - *_#glossario("ISO/IEC 9126")_*:  - *_#glossario("ISO 12207:1995")_*: #link("https://en.wikipedia.org/wiki/ISO/IEC_9126")[#text(blue)[https://en.wikipedia.org/wiki/ISO/IEC_9126]] \ - _Ultimo accesso al documento 13/01/2025_
+
+=== Riferimenti informativi
+- *Norme di Progetto_v1.0.0*: #link("https://archi7echs-team.github.io/documents/RTB/Interni/Norme%20di%20Progetto_v1.0.0.pdf")[#text(blue)[https://archi7echs-team.github.io/documents/RTB/Interni/Norme%20di%20Progetto_v1.0.0.pdf]] \ - _Ultimo accesso al documento 30/01/2025_
 
 #pb()
 
