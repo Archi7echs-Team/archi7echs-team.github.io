@@ -4,11 +4,11 @@
         #show: conf.with(
           title: "Glossario",
           author: "Team",
-          state: "Approvato",
           show_outline: true,
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
+            "1.0.0","09-02-2025","Revisione per incontro RTB", p.salvo, (p.pozzobon,p.lucato),
             "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
@@ -18,7 +18,7 @@
         )
         
         = Introduzione
-        Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile per facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti. Questo Glossario avrà una struttura alfabetica e se un termine sarà presente in questo documento sarà riconoscibile in questo modo: Parola#sub(text(blue)[G]).
+        Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile a facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti.  \ Segue una struttura alfabetica e, per indicare se un termine contenuto nella documentazione è presente nel Glossario, questo sarà indicato in questo modo: Parola#sub(text(blue)[G]).
         
         = Caratteri speciali
         - .csv
@@ -28,7 +28,7 @@
         Rappresentazione tridimensionale di oggetti o dati, utilizzata per creare visualizzazioni più realistiche e interattive.
         
         - 3Dataviz
-        3Dataviz è il capitolato scelto dal team, proposto dall’azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
+        3Dataviz è il capitolato scelto dal team, proposto dall'azienda Sanmarco Informatica, che si concentra sulla creazione di visualizzazioni interattive di dati tridimensionali. L’obiettivo del progetto è sviluppare uno strumento innovativo che unisca usabilità, interattività e capacità analitiche, offrendo agli utenti un’esperienza immersiva e intuitiva nell’esplorazione dei dati.
 
         = A
         - Accessibile
@@ -45,7 +45,7 @@
         Figura responsabile della configurazione del progetto, garantisce che il progetto sia gestito in modo efficiente e conforme ai requisiti definiti.
         
         - Analisi dei requisiti
-        Processo fondamentale nello sviluppo di un software. Prevede la raccolta, l'analisi e la definizione delle esigenze di un sistema o software, espresse o implicite degli stakeholder o degli utenti, e mira identificare e documentare ciò che un sistema (o software) deve fare per soddisfare gli obiettivi di progetto.
+        Processo fondamentale nello sviluppo di un software. Prevede la raccolta, l'analisi e la definizione delle esigenze di un sistema o software, espresse o implicite degli stakeholder o degli utenti, e mira a identificare e documentare ciò che un sistema (o software) deve fare per soddisfare gli obiettivi di progetto.
                
         - API
         Acronimo di Application Programming Interface, un insieme di regole e protocolli che consentono a diverse applicazioni software di comunicare tra loro, semplificando l'integrazione.
@@ -79,6 +79,9 @@
         
         - Codice univoco
         Identificatore unico e non ripetibile assegnato a elementi come utenti, oggetti o record in un sistema informatico. Garantisce l’assenza di ambiguità nei riferimenti.
+
+        - Cruscotto
+        Interfaccia grafica che fornisce una panoramica visiva delle informazioni più rilevanti, come metriche, dati o notifiche. I cruscotti sono utilizzati per monitorare lo stato di un sistema o di un processo in tempo reale, facilitando la visualizzazione e l’analisi dei dati. In inglese viene chiamato _dashboard_.
 
         = D
 
@@ -138,6 +141,9 @@
         - ID
         Identificativo univoco assegnato a oggetti o entità in un sistema, agevola una distinzione precisa tra elementi.
         
+        - Infografica
+        Rappresentazione visiva di informazioni o dati complessi, progettata per essere facilmente comprensibile e coinvolgente. Le infografiche combinano testo, immagini e grafici per comunicare concetti in modo chiaro e accattivante.
+
         - Interni
         Entità o persone del team di sviluppo del progetto.
         
