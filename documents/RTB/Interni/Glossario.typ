@@ -8,7 +8,7 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
-            "0.1.5","09-02-2025","Revisione", p.salvo, "",
+            "1.0.0","09-02-2025","Revisione RTB", p.salvo, p.pozzobon,
             "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
             "0.1.2", "03-01-2025",  "Correzione termini e definizioni", p.scandaletti, (p.valdagno, p.pozzobon),
@@ -18,7 +18,7 @@
         )
         
         = Introduzione
-        Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile per facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti. Questo Glossario avrà una struttura alfabetica e se un termine sarà presente in questo documento sarà riconoscibile in questo modo: Parola#sub(text(blue)[G]).
+        Il presente Glossario nasce con l'obiettivo di fornire una raccolta strutturata e chiara dei termini e delle definizioni relative al progetto. Si propone come uno strumento di riferimento rapido e pratico, utile a facilitare la comprensione di alcuni termini specifici e talvolta sconosciuti.  \ Segue una struttura alfabetica e, per indicare se un termine contenuto nella documentazione è presente nel Glossario, questo sarà indicato in questo modo: Parola#sub(text(blue)[G]).
         
         = Caratteri speciali
         - .csv
