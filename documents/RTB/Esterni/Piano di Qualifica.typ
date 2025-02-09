@@ -5,7 +5,6 @@
   title: "Piano di Qualifica",
   subtitle: "",
   author: "Il team",
-  state: "Approvato",
   intern: false,
   show_outline: true,
   outline_depth: 2,
