@@ -67,7 +67,7 @@ def dirlister(path):
             files.append(f)
         else:
             directories.append(f)
-    return sorted(directories), sorted(files)
+    return sorted(directories), sorted(files)[::-1]
 
 
 def generateHTML(path):
