@@ -75,8 +75,8 @@ jobs:
             rm -f "${RUNNER_TEMP}/master/${f%.typ}"*
             touch -amd "$( date -R -r "$f" )" "${f%.typ}.pdf"
             version=$(grep --context 1 "changelog:" "$f" | tail -n1 | cut -d ',' -f1 | sed 's/\s//g; s/"//g')
-            [[ "$version" != 'none' && -n "$version" && !  "$f" == *"erbali"* ]] && mv "${f%.typ}.pdf" "${f%.typ}_v${version}.pdf" && f="${f%.typ}_v${version}.typ"
             [[ "$f" == *"rogetto"* ]] && wc -l "${f%.typ}.pdf"
+            [[ "$version" != 'none' && -n "$version" && !  "$f" == *"erbali"* ]] && mv "${f%.typ}.pdf" "${f%.typ}_v${version}.pdf" && f="${f%.typ}_v${version}.typ"
             rsync -aR "${f%.typ}.pdf" "${RUNNER_TEMP}/master"
           done
  
