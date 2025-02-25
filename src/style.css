@@ -6,9 +6,9 @@
   --background-color: #2e4053; /* Steel blue */
   --text-color: #ecf0f1; /* Light white-blue */
   --nav-color: #243447; /* Darker navy-gray for better contrast */
-  --link-color: #4aa3df; /* Brighter blue for visibility */
+  --link-color: #8cc8f0; /* Brighter blue for visibility */
   --link-hover-color: #2f8ec1; /* Medium sky blue for hover */
-  --link-visited-color: #25709b; /* Muted deep blue for visited */
+  --link-visited-color: #7fa5d6; /* Muted deep blue for visited */
   --link-active-color: #1b4f6b; /* Darker blue for active */
 }
 
