@@ -66,6 +66,7 @@ jobs:
       - name: typst compile
         run: |
           find documents -type f -name "*.typ" -exec typst compile --root . {} \;
+          cat  ./documents/Candidatura/Analisi\ Capitolati.pdf
 
       - name: set timestamp and version for builds of changed files and replace the old ones in the local copy of `master`
         run: |
