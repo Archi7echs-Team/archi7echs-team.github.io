@@ -61,12 +61,14 @@ jobs:
           comm -23 <(sort .typstignore) <(sort .forced) > .typstignore
           while IFS= read -r f; do rm -rf "${f}"; done < .typstignore   # del all files in .typstignore => don't compile them
 
-      - uses: typst-community/setup-typst@v3
+      - name: Install typst CLI
+        uses: typst-community/setup-typst@v3
+        with:
+          typst-version: 0.12.x
 
       - name: typst compile
         run: |
           find documents -type f -name "*.typ" -exec typst compile --root . {} \;
-          wc -l 'documents/RTB/Esterni/Piano di Progetto.pdf';
 
       - name: set timestamp and version for builds of changed files and replace the old ones in the local copy of `master`
         run: |
@@ -75,12 +77,11 @@ jobs:
             [[ ! -f "$f" ]] && continue # skip if nothing to build
             rm -f "${RUNNER_TEMP}/master/${f%.typ}"*
             touch -amd "$( date -R -r "$f" )" "${f%.typ}.pdf"
-            [[ "$f" == *"rogetto"* ]] && wc -l "${f%.typ}.pdf"
             version=$(grep --context 1 "changelog:" "$f" | tail -n1 | cut -d ',' -f1 | sed 's/\s//g; s/"//g')
             [[ "$version" != 'none' && -n "$version" && !  "$f" == *"erbali"* ]] && mv "${f%.typ}.pdf" "${f%.typ}_v${version}.pdf" && f="${f%.typ}_v${version}.typ"
             rsync -aR "${f%.typ}.pdf" "${RUNNER_TEMP}/master"
           done
- 
+
       - name: push to builds repo
         run: |
           pushd "${RUNNER_TEMP}/master"
