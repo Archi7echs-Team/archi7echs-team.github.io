@@ -66,7 +66,6 @@ jobs:
       - name: typst compile
         run: |
           find documents -type f -name "*.typ" -exec typst compile --root . {} \;
-          cat  ./documents/Candidatura/Analisi\ Capitolati.pdf
 
       - name: set timestamp and version for builds of changed files and replace the old ones in the local copy of `master`
         run: |
@@ -77,9 +76,10 @@ jobs:
             touch -amd "$( date -R -r "$f" )" "${f%.typ}.pdf"
             version=$(grep --context 1 "changelog:" "$f" | tail -n1 | cut -d ',' -f1 | sed 's/\s//g; s/"//g')
             [[ "$version" != 'none' && -n "$version" && !  "$f" == *"erbali"* ]] && mv "${f%.typ}.pdf" "${f%.typ}_v${version}.pdf" && f="${f%.typ}_v${version}.typ"
+            [[ "$f" == *"rogetto"* ]] && wc -l "${f%.typ}.pdf"
             rsync -aR "${f%.typ}.pdf" "${RUNNER_TEMP}/master"
           done
-
+ 
       - name: push to builds repo
         run: |
           pushd "${RUNNER_TEMP}/master"
