@@ -10,7 +10,7 @@
   outline_depth: 2,
   changelog: (
     "1.0.0", "13-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
-    "0.8.0", "12-02-2025", "Stesura sesto periodo", p.lucato, "",
+    "0.8.0", "12-02-2025", "Stesura sesto periodo", p.lucato, p.pozzobon,
     "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
     "0.6.1", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.6.0", "27-01-2025", "Stesura quarto periodo", p.pesenato, (p.lucato,p.salvo),
