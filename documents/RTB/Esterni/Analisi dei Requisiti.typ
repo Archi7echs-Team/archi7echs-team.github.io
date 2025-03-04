@@ -393,7 +393,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 9 - Click su una barra del grafico<uc9>
-- *Descrizione: * L'utente preme sopra ad una barra, accede ad ulteriori #glossario("funzionalità") scegliendo tra quelle proposte.
+- *Descrizione: * L'utente preme sopra ad una barra e può visionare informazioni e filtri relativi alla barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Visualizzazione delle informazioni della barra e possibilità di filtraggio ulteriore in base alla barra selezionata.
@@ -409,7 +409,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
     
 ==== UC 9.1 - Visualizzazione informazioni dopo click di una barra <uc9.1>
-- *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra.
+- *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra ovvero, coordinate, altezza, media relativa ai valori della stessa x, media relativa ai valori della stessa z e media relativa ai valori globali.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
 - *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
@@ -520,10 +520,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 13 - Visualizzazione dati con altezza compresa tra un intervallo <uc13>
-- *Descrizione: * L'utente può visualizzare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
+- *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
     + L'utente inserisce il minimo (se necessario) dell'intervallo.
     + L'utente inserisce il massimo (se necessario) dell'intervallo.
@@ -577,11 +577,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC15>
 \
 
-=== UC 16 - Visualizzazione degli N valori maggiori<uc16>
-- *Descrizione: * L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più alto.
+=== UC 16 - Filtro per la visualizzazione dei valori maggiori di un numero definito _n_ dall'utente <uc16>
+- *Descrizione: * L'utente può filtrare i valori maggiori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più alto.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori maggiori di un numero _n_ definito dall'utente.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
     + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
@@ -591,17 +591,17 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC16>
 \
 
-=== UC 17 - Visualizzazione degli N valori minori <uc17>
-- *Descrizione: * L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più basso.
+=== UC 17 - Filtro per la visualizzazione dei valori minori di un numero definito _n_ dall'utente <uc17>
+- *Descrizione: * L'utente può filtrare i valori minori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più basso.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori minori di un numero _n_ definito dall'utente.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
-    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
+    +  L'applicazione opacizza tutti i valori maggiori del numero _n_ definito dall'utente
 #figure(
   image("/img/adr/30.png", width: 80%),
-  caption: [Visualizzazione degli N valori minori],
+  caption: [Visualizzazione dei valori minori di un numero definito _n_ dall'utente],
 ) <imgUC17>
 \
 
