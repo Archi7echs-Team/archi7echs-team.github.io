@@ -568,7 +568,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc26).
+    + Visualizzazione dell'errore emptyField (@uc27).
     + Visualizzazione dell'errore invalidArguments (@uc23). 
        
 #figure(
@@ -588,7 +588,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc26).
+    + Visualizzazione dell'errore emptyField (@uc27).
     + Visualizzazione dell'errore invalidArguments (@uc23). 
 #figure(
   image("/img/adr/PB/29.png", width: 115%),
@@ -603,8 +603,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Postcondizioni: * L'utente ha inserito il valore _n_ che può essere utilizzato per visualizzare gli _n_ valori maggiori o minori 
 - *Scenario Principale: *
     + L'utente, tramite un'area specifica tra i filtri, inserisce il valore _n_.
+- *Scenari Alternativi: *
+  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
+    + Visualizzazione dell'errore emptyField (@uc27).
+    + Visualizzazione dell'errore invalidArguments (@uc23). 
 #figure(
-  image("/img/adr/PB/30.png", width: 80%),
+  image("/img/adr/PB/30.png", width: 100%),
   caption: [Inserimento valore _n_],
 ) <imgUC17>
 \
