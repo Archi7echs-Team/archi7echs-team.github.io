@@ -614,7 +614,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 18 - Filtro per la visualizzazione degli _n_ valori maggiori <uc18>
-- *Descrizione: * L'utente può filtrare gli _n_ valori maggiori, dove _n_ è da lui definito.
+- *Descrizione: * L'utente può filtrare e visualizzare gli _n_ valori maggiori, dove _n_ è da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori maggiori, dove _n_ definito dall'utente.
@@ -630,7 +630,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 19 - Filtro per la visualizzazione degli _n_ valori minori <uc19>
-- *Descrizione: * L'utente può filtrare gli _n_ valori minori, dove _n_ è da lui definito.
+- *Descrizione: * L'utente può filtrare e visualizzare gli _n_ valori minori, dove _n_ è da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori minori, dove _n_ definito dall'utente.
@@ -848,20 +848,21 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
   [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
   [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
-  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può filtrare i dati per visualizzare solo quelli maggiori di un valore _n_ da lui definito], [1 - Obbligatorio],
-  [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente può filtrare i dati per visualizzare solo quelli minori di un valore _n_ da lui definito], [1 - Obbligatorio],
-  [F.1.27], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
-  [F.2.1], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
-  [F.2.2], [@uc21 \ #glossario("UC")21], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
-  [F.1.28], [@uc22 \ #glossario("UC")22], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
-  [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
-  [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
-  [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.32], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
-  [F.1.33], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
-  [F.1.34], [@uc28 \ #glossario("UC")28], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
-  [F.1.35], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
-  [F.1.36], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
+  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_], [1 - Obbligatorio],
+  [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente può filtrare i dati per visualizzare gli _n_ con valore maggiore, con _n_ da lui definito], [1 - Obbligatorio],
+  [F.1.27], [@uc19 \ #glossario("UC")19], [L'utente può filtrare i dati per visualizzare gli _n_ con valore minore, con _n_ da lui definit], [1 - Obbligatorio],
+  [F.1.28], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
+  [F.2.1], [@uc21 \ #glossario("UC")21], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
+  [F.2.2], [@uc22 \ #glossario("UC")22], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
+  [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
+  [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
+  [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
+  [F.1.32], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
+  [F.1.33], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
+  [F.1.34], [@uc28 \ #glossario("UC")28], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
+  [F.1.35], [@uc28 \ #glossario("UC")29], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
+  [F.1.36], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
+  [F.1.37], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
 ]
@@ -940,16 +941,17 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.1.24], [#glossario("Capitolato"), UC16],
   [F.1.25], [#glossario("Capitolato"), UC17],
   [F.1.26], [#glossario("Capitolato"), UC18],
-  [F.1.27], [Decisione interna, UC19],
-  [F.2.1], [Decisione interna, UC20, UC2.1],
-  [F.2.2], [Decisione interna, UC21],
-  [F.1.28], [Decisione interna, UC22, UC2.1],
-  [F.1.29], [Decisione interna, UC23, UC2.2, UC2.4],
-  [F.1.30], [Decisione interna, UC24, 2.4],
-  [F.1.31], [Decisione interna, UC25, UC2.2],
-  [F.1.32], [Decisione interna, UC26, UC2.1],
-  [F.1.33], [Decisione interna, UC27, UC2.3],
-  [F.1.34], [Decisione interna, UC28, UC2.4],
+  [F.1.27], [#glossario("Capitolato"), UC19],
+  [F.1.28], [Decisione interna, UC20],
+  [F.2.1], [Decisione interna, UC21, UC2.1],
+  [F.2.2], [Decisione interna, UC22],
+  [F.1.28], [Decisione interna, UC23, UC2.1],
+  [F.1.29], [Decisione interna, UC24, UC2.2, UC2.4],
+  [F.1.30], [Decisione interna, UC25, 2.4],
+  [F.1.31], [Decisione interna, UC26, UC2.2],
+  [F.1.32], [Decisione interna, UC27, UC2.1],
+  [F.1.33], [Decisione interna, UC28, UC2.3],
+  [F.1.34], [Decisione interna, UC29, UC2.4],
   [F.1.35], [#glossario("Capitolato")],
   [F.1.36], [#glossario("Capitolato")],
   [Q.1.1], [#glossario("Capitolato")],
