@@ -8,6 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "1.1.0", "04-03-2025", "Sistemazione UC post RTB", p.checchinato, "",
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
     "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
@@ -58,8 +59,8 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 text(blue)[https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf]) -  _Ultimo accesso al documento 28/01/2025_
 
 === Riferimenti informativi
-- Riferimento al glossario: #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
-- Norme di Progetto [in scrittura]
+- Riferimento al glossario (v 1.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
+- Norme di Progetto (v 1.0.0)
 
 #pb()
 
@@ -134,18 +135,17 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 == Elenco casi d'uso
 
 === UC 1 - Visualizzazione interattiva dei dati <uc1>
-- *Descrizione: * L'utente può visualizzare i dati in un grafico #glossario("3D") interattivo con barre verticali. 
+- *Descrizione: * L'utente può visualizzare i dati in un grafico #glossario("3D") interattivo con barre verticali, dove ogni barra rappresenta un valore aggregato relativo a una determinata categoria. Il grafico permette di analizzare e confrontare visivamente i dati.
 - *Attore: * Utente finale
 - *Precondizioni: * I dati devono essere già caricati nel sistema (tramite tabella, #glossario("database") #glossario("SQL") o #glossario("API REST")). L'interfaccia web deve essere #glossario("accessibile") e funzionante.
 - *Postcondizioni: *I dati vengono rappresentati in forma di grafico interattivo.
 - *Scenario Principale: *
     + L'utente accede all'applicazione web.
-    + L'utente seleziona la modalità di inserimento dei dati (caricamento manuale, #glossario("SQL"), #glossario("API")). (@uc2)
-    + Il grafico viene generato in base ai dati precedentemente caricati.
+    + Il sistema mostra il grafico generato in base ai dati precedentemente caricati.
     + L'utente deve essere in grado di utilizzare liberamente gli strumenti messi a disposizione.
 
 #figure(
-  image("/img/adr/1.png", width: 80%),
+  image("/img/adr/PB/1.png", width: 80%),
   caption: [Visualizzazione interattiva dei dati],
 ) <imgUC1>
 \
@@ -164,7 +164,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Tramite file .csv (@uc2.4).
     + Il sistema salva i dati.
 #figure(
-  image("/img/adr/2.png", width: 115%),
+  image("/img/adr/PB/2.png", width: 115%),
   caption: [Caricamento dati per la generazione del grafico],
 ) <imgUC2>
 \
@@ -188,7 +188,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore invalidArguments (@uc21)
   + Visualizzazione dell'errore tooMuchData (@uc22)
 #figure(
-  image("/img/adr/3.png", width: 115%),
+  image("/img/adr/PB/3.png", width: 115%),
   caption: [Caricamento manuale dei dati tramite interfaccia],
 ) <imgUC2.1>
 \
@@ -206,7 +206,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/4.png", width: 115%),
+  image("/img/adr/PB/4.png", width: 115%),
   caption: [L'utente inserisce il campo X],
 ) <imgUC2.1.1>
 \
@@ -224,7 +224,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/5.png", width: 115%),
+  image("/img/adr/PB/5.png", width: 115%),
   caption: [L'utente inserisce il campo Y],
 ) <imgUC2.1.2>
 \
@@ -242,7 +242,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + Visualizzazione dell'errore emptyField (@uc25)
   + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
-  image("/img/adr/6.png", width: 115%),
+  image("/img/adr/PB/6.png", width: 115%),
   caption: [L'utente inserisce il campo Z],
 ) <imgUC2.1.3>
 \
@@ -262,7 +262,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Visualizzazione errore tooMuchData (@uc22);  
     + Visualizzazione errore apiTimeOut (@uc24);
 #figure(
-  image("/img/adr/7.png", width: 115%),
+  image("/img/adr/PB/7.png", width: 115%),
   caption: [Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast],
 ) <imgUC2.2>
 \
@@ -281,7 +281,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   - Il #glossario("DB") non risponde per motivi di rete
     + Errore networkError (@uc26).
 #figure(
-  image("/img/adr/8.png", width: 115%),
+  image("/img/adr/PB/8.png", width: 115%),
   caption: [Caricamento automatico dati tramite connessione a #glossario("database") #glossario("SQL")],
 ) <imgUC2.3>
 \
@@ -302,7 +302,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Errore invalidCsv (@uc23);
     + Errore fileTooBig (@uc27);
 #figure(
-  image("/img/adr/9.png", width: 115%),
+  image("/img/adr/PB/9.png", width: 115%),
   caption: [Caricamento automatico dati tramite file .csv],
 ) <imgUC2.4>
 \
@@ -316,7 +316,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'utente seleziona la modalità "Rotazione" dal menù apposito.
   + L'utente attraverso le gesture del mouse si sposta nel grafico.
 #figure(
-  image("/img/adr/11.png", width: 80%),
+  image("/img/adr/PB/11.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Rotazione],
 ) <imgUC3>
 \
@@ -331,7 +331,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente.
 #figure(
-  image("/img/adr/12.png", width: 80%),
+  image("/img/adr/PB/12.png", width: 80%),
   caption: [Strumenti visualizzazione dati - PAN orizzontale],
 ) <imgUC4>
 \
@@ -345,27 +345,46 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente.
 #figure(
-  image("/img/adr/13.png", width: 80%),
+  image("/img/adr/PB/13.png", width: 80%),
   caption: [Strumenti visualizzazione dati - PAN verticale],
 ) <imgUC5>
 \
   
-=== UC 6 - Strumenti visualizzazione dati - Zoom <uc6>
-- *Descrizione: * L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione.
-- *Attore: * Utente finale
-- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Visualizzazione ingrandita o ridotta di una sezione del grafico.
-- *Scenario Principale: *
-  + L'utente clicca sul pulsante per attivare la modalità Zoom.
-  + L'applicazione abilita la modalità Zoom.
-  + L'utente utilizza le gesture del mouse o del trackpad/touchpad per ingrandire o ridurre la visualizzazione del grafico.
+=== UC 6 - Strumenti visualizzazione dati - Zoom In <uc6>
+- *Descrizione:* L'utente deve essere in grado di ingrandire una specifica area del grafico #glossario("3D") per visualizzare più dettagli.
+- *Attore:* Utente finale
+- *Precondizioni:* Il grafico #glossario("3D") è generato ed #glossario("accessibile").
+- *Postcondizioni:* La porzione ingrandita del grafico viene visualizzata con maggiore dettaglio.
+- *Scenario Principale:*
+  + L'utente clicca sul pulsante per attivare la modalità Zoom In.
+  + L'applicazione abilita la modalità Zoom In.
+  + L'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-out, doppio click o rotella del mouse) per ingrandire una sezione del grafico.
+  + Il sistema aggiorna la visualizzazione mostrando l'area ingrandita con maggiore dettaglio.
+
 #figure(
-  image("/img/adr/14.png", width: 80%),
-  caption: [Strumenti visualizzazione dati - Zoom],
+  image("/img/adr/PB/14.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - Zoom In],
 ) <imgUC6>
 \
 
-=== UC 7 - Strumenti visualizzazione dati - Auto posizionamento <uc7>
+=== UC 7 - Strumenti visualizzazione dati - Zoom Out <uc7>
+- *Descrizione:* L'utente deve essere in grado di ridurre la visualizzazione del grafico #glossario("3D") per avere una visione d'insieme.
+- *Attore:* Utente finale
+- *Precondizioni:* Il grafico #glossario("3D") è generato ed #glossario("accessibile").
+- *Postcondizioni:* La porzione del grafico viene rimpicciolita, permettendo una visione più ampia del contenuto.
+- *Scenario Principale:*
+  + L'utente clicca sul pulsante per attivare la modalità Zoom Out.
+  + L'applicazione abilita la modalità Zoom Out.
+  + L'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-in, doppio click con tasto destro o rotella del mouse) per ridurre la visualizzazione.
+  + Il sistema aggiorna la visualizzazione mostrando un'area più ampia del grafico.
+
+#figure(
+  image("/img/adr/PB/15.png", width: 80%),
+  caption: [Strumenti visualizzazione dati - Zoom Out],
+) <imgUC7>
+\
+
+=== UC 8 - Strumenti visualizzazione dati - Auto posizionamento <uc8>
 - *Descrizione: * L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato, #glossario("accessibile") e l'utente ha personalizzato, mediante strumenti, la visualizzazione.
@@ -373,12 +392,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
   + L'utente, attraverso l'apposito bottone, resetta la visualizzazione, annullando quindi tutte le modifiche alla vista effettuate con gli strumenti messi a disposizione.
 #figure(
-  image("/img/adr/15.png", width: 80%),
+  image("/img/adr/PB/16.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Auto posizionamento],
-) <imgUC7>
+) <imgUC8>
 \
 
-=== UC 8 - Visualizzazione informazioni durante hover di una barra <uc8>
+=== UC 9 - Visualizzazione informazioni durante hover di una barra <uc9>
 - *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -387,12 +406,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente passa il cursore del mouse sopra una barra.
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
-  image("/img/adr/16.png", width: 80%),
+  image("/img/adr/PB/17.png", width: 80%),
   caption: [Visualizzazione informazioni durante #glossario("hover") di una barra],
-) <imgUC8>
+) <imgUC9>
 \
 
-=== UC 9 - Click su una barra del grafico<uc9>
+=== UC 10 - Click su una barra del grafico<uc10>
 - *Descrizione: * L'utente preme sopra ad una barra e può visionare informazioni e filtri relativi alla barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -403,12 +422,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Visualizzazione delle informazioni relative alla barra premuta;
       - Possibilità di applicare filtri al grafico in base alla barra premuta.
 #figure(
-  image("/img/adr/17.png", width: 80%),
+  image("/img/adr/PB/18.png", width: 80%),
   caption: [Click su una barra del grafico],
-) <imgUC9>
+) <imgUC10>
 \
     
-==== UC 9.1 - Visualizzazione informazioni dopo click di una barra <uc9.1>
+==== UC 10.1 - Visualizzazione informazioni dopo click di una barra <uc10.1>
 - *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra ovvero, coordinate, altezza, media relativa ai valori della stessa x, media relativa ai valori della stessa z e media relativa ai valori globali.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
@@ -416,12 +435,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenario Principale: *
     + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
-  image("/img/adr/18.png", width: 80%),
+  image("/img/adr/PB/19.png", width: 80%),
   caption: [Visualizzazione informazioni dopo click di una barra],
-) <imgUC9.1>
+) <imgUC10.1>
 \
 
-==== UC 9.2 - Scelta dell'opacizzazione di una barra selezionata<uc9.2>
+==== UC 10.2 - Scelta dell'opacizzazione di una barra selezionata<uc10.2>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
@@ -430,12 +449,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione.
     + L'utente modifica l'opacizzazione a piacere.
 #figure(
-  image("/img/adr/19.png", width: 80%),
+  image("/img/adr/PB/20.png", width: 80%),
   caption: [Scelta dell'opacizzazione di una barra selezionata],
-) <imgUC9.2>
+) <imgUC10.2>
 \
 
-==== UC 9.3 - Opacizzazione dei dati con valore minore di una barra selezionata<uc9.3>
+==== UC 10.3 - Opacizzazione dei dati con valore minore di una barra selezionata<uc10.3>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
@@ -444,12 +463,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
 #figure(
-  image("/img/adr/20.png", width: 80%),
+  image("/img/adr/PB/21.png", width: 80%),
   caption: [Opacizzazione dei dati con valore minore di una barra selezionata],
-) <imgUC9.3>
+) <imgUC10.3>
 \
 
-==== UC 9.4 Opacizzazione dei dati con valore maggiore di una barra selezionata<uc9.4>
+==== UC 10.4 Opacizzazione dei dati con valore maggiore di una barra selezionata<uc10.4>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
@@ -458,12 +477,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata.
 #figure(
-  image("/img/adr/21.png", width: 80%),
+  image("/img/adr/PB/22.png", width: 80%),
   caption: [Opacizzazione dei dati con valore maggiore di una barra selezionata],
-) <imgUC9.4>
+) <imgUC10.4>
 \
 
-==== UC 9.5 Reimpostare la visualizzazione della barra selezionata<uc9.5>
+==== UC 10.5 Reimpostare la visualizzazione della barra selezionata<uc10.5>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico e può aver applicato dei filtri alla barra.
@@ -472,12 +491,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
     + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
 #figure(
-  image("/img/adr/22.png", width: 80%),
+  image("/img/adr/PB/23.png", width: 80%),
   caption: [Reimpostare la visualizzazione della barra selezionata],
-) <imgUC9.5>
+) <imgUC10.5>
 \
       
-=== UC 10 - Visualizzazione del valore medio globale <uc10>
+=== UC 11 - Visualizzazione del valore medio globale <uc11>
 - *Descrizione: * L'utente attiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale. L'utente può con lo stesso metodo disattivare la visualizzazione del piano.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -486,12 +505,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale.
     + L'applicazione calcola il valore medio globale e lo rappresenta come piano nel grafico.
 #figure(
-  image("/img/adr/23.png", width: 80%),
+  image("/img/adr/PB/24.png", width: 80%),
   caption: [Visualizzazione del valore medio globale],
-) <imgUC10>
+) <imgUC11>
 \
 
-=== UC 11 - Visualizzazione dati maggiori della media globale <uc11>
+=== UC 12 - Visualizzazione dati maggiori della media globale <uc12>
 - *Descrizione: * L'utente può visualizzare i soli dati che sono maggiori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -500,12 +519,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale.
     + L'applicazione opacizza tutti i dati minori della media globale.
 #figure(
-  image("/img/adr/24.png", width: 80%),
+  image("/img/adr/PB/25.png", width: 80%),
   caption: [Visualizzazione dati maggiori della media globale],
-) <imgUC11>
+) <imgUC12>
 \
     
-=== UC 12 - Visualizzazione dati minori della media globale <uc12>
+=== UC 13 - Visualizzazione dati minori della media globale <uc13>
 - *Descrizione: * L'utente può visualizzare i soli dati che sono minori della media globale.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -514,12 +533,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale.
     + L'applicazione opacizza tutti i dati maggiori della media globale.
 #figure(
-  image("/img/adr/25.png", width: 80%),
+  image("/img/adr/PB/26.png", width: 80%),
   caption: [Visualizzazione dati minori della media globale],
-) <imgUC12>
+) <imgUC13>
 \
 
-=== UC 13 - Visualizzazione dati con altezza compresa tra un intervallo <uc13>
+=== UC 14 - Visualizzazione dati con altezza compresa tra un intervallo <uc14>
 - *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -531,14 +550,14 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un intervallo che non contiene dati:
-    + Visualizzazione dell'errore invalidArguments (@uc21).
+    + Visualizzazione dell'errore invalidArguments (@uc22).
 #figure(
-  image("/img/adr/26.png", width: 110%),
+  image("/img/adr/PB/27.png", width: 110%),
   caption: [Visualizzazione dati con altezza compresa tra un intervallo],
-) <imgUC13>
+) <imgUC14>
 \
   
-=== UC 14 - Visualizzazione della media in base al valore di X<uc14>
+=== UC 15 - Visualizzazione della media in base al valore di X<uc15>
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -549,16 +568,16 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc25).
-    + Visualizzazione dell'errore invalidArguments (@uc21). 
+    + Visualizzazione dell'errore emptyField (@uc26).
+    + Visualizzazione dell'errore invalidArguments (@uc22). 
        
 #figure(
-  image("/img/adr/27.png", width: 115%),
+  image("/img/adr/PB/28.png", width: 115%),
   caption: [Visualizzazione della media in base al valore di X],
-) <imgUC14>
+) <imgUC15>
 \
 
-=== UC 15 - Visualizzazione della media in base al valore di Z<uc15>
+=== UC 16 - Visualizzazione della media in base al valore di Z<uc16>
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -569,15 +588,15 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc25).
-    + Visualizzazione dell'errore invalidArguments (@uc21). 
+    + Visualizzazione dell'errore emptyField (@uc26).
+    + Visualizzazione dell'errore invalidArguments (@uc22). 
 #figure(
-  image("/img/adr/28.png", width: 115%),
+  image("/img/adr/PB/29.png", width: 115%),
   caption: [Visualizzazione della media in base al valore di Z],
-) <imgUC15>
+) <imgUC16>
 \
 
-=== UC 16 - Filtro per la visualizzazione dei valori maggiori di un numero definito _n_ dall'utente <uc16>
+=== UC 17 - Filtro per la visualizzazione dei valori maggiori di un numero definito _n_ dall'utente <uc17>
 - *Descrizione: * L'utente può filtrare i valori maggiori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -586,26 +605,26 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, applica il filtro.
     + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
 #figure(
-  image("/img/adr/29.png", width: 80%),
+  image("/img/adr/PB/30.png", width: 80%),
   caption: [Visualizzazione degli N valori maggiori],
-) <imgUC16>
+) <imgUC17>
 \
 
-=== UC 17 - Filtro per la visualizzazione dei valori minori di un numero definito _n_ dall'utente <uc17>
+=== UC 18 - Filtro per la visualizzazione dei valori minori di un numero definito _n_ dall'utente <uc18>
 - *Descrizione: * L'utente può filtrare i valori minori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori minori di un numero _n_ definito dall'utente.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, applica il filtro.
     +  L'applicazione opacizza tutti i valori maggiori del numero _n_ definito dall'utente
+    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
 #figure(
-  image("/img/adr/30.png", width: 80%),
+  image("/img/adr/PB/31.png", width: 80%),
   caption: [Visualizzazione dei valori minori di un numero definito _n_ dall'utente],
-) <imgUC17>
+) <imgUC18>
 \
 
-=== UC 18 - Reset dei filtri applicati alla visualizzazione dei dati <uc18>
+=== UC 19 - Reset dei filtri applicati alla visualizzazione dei dati <uc19>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
@@ -614,12 +633,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
     + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
 #figure(
-  image("/img/adr/31.png", width: 80%),
+  image("/img/adr/PB/32.png", width: 80%),
   caption: [Reset dei filtri applicati alla visualizzazione dei dati],
-) <imgUC18>
+) <imgUC19>
 \
 
-=== UC 19 - Esportazione di un grafico <uc19>
+=== UC 20 - Esportazione di un grafico <uc20>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
@@ -628,12 +647,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di esportare il grafico.
     + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato con la formattazione corretta.
 #figure(
-  image("/img/adr/32.png", width: 80%),
+  image("/img/adr/PB/33.png", width: 80%),
   caption: [Esportazione di un grafico],
-) <imgUC19>
+) <imgUC20>
 \
 
-=== UC 20 - Creazione di un'istantanea del grafico <uc20>
+=== UC 21 - Creazione di un'istantanea del grafico <uc21>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -642,12 +661,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
     + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva.
 #figure(
-  image("/img/adr/33.png", width: 80%),
+  image("/img/adr/PB/34.png", width: 80%),
   caption: [Creazione di un'istantanea del grafico],
-) <imgUC20>
+) <imgUC21>
 \
     
-=== UC 21 - Visualizzazione errore invalidArguments <uc21>
+=== UC 22 - Visualizzazione errore invalidArguments <uc22>
 - *Descrizione: * L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
@@ -657,12 +676,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente inserisce dei dati all'#glossario("interno") del campo d'inserimento.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/34.png", width: 80%),
+  image("/img/adr/PB/35.png", width: 80%),
   caption: [Visualizzazione errore invalidArguments],
-) <imgUC21>
+) <imgUC22>
 \
 
-=== UC 22 - Visualizzazione errore tooMuchData <uc22>
+=== UC 23 - Visualizzazione errore tooMuchData <uc23>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -673,12 +692,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il numero di dati ricevuti supera la soglia massima supportata e che quindi i dati non sono stati caricati.
 #figure(
-  image("/img/adr/35.png", width: 80%),
+  image("/img/adr/PB/36.png", width: 80%),
   caption: [Visualizzazione errore tooMuchData],
-) <imgUC22>
+) <imgUC23>
 \
 
-=== UC 23 - Visualizzazione errore invalidCsv <uc23>
+=== UC 24 - Visualizzazione errore invalidCsv <uc24>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -689,12 +708,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati.
 #figure(
-  image("/img/adr/36.png", width: 80%),
+  image("/img/adr/PB/37.png", width: 80%),
   caption: [Visualizzazione errore invalidCsv],
-) <imgUC23>
+) <imgUC24>
 \
 
-=== UC 24 - Visualizzazione errore apiTimeout <uc24>
+=== UC 25 - Visualizzazione errore apiTimeout <uc25>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite.
 - *Precondizioni: * L'utente ha selezionato l'#glossario("API") esterna da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -704,12 +723,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 #figure(
-  image("/img/adr/37.png", width: 80%),
+  image("/img/adr/PB/38.png", width: 80%),
   caption: [Visualizzazione errore apiTimeout],
-) <imgUC24>
+) <imgUC25>
 \
 
-=== UC 25 - Visualizzazione errore emptyField <uc25>
+=== UC 26 - Visualizzazione errore emptyField <uc26>
 - *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
@@ -719,12 +738,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente lascia un input vuoto.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/38.png", width: 80%),
+  image("/img/adr/PB/39.png", width: 80%),
   caption: [Visualizzazione errore emptyField],
-) <imgUC25>
+) <imgUC26>
 \
 
-=== UC 26 - Visualizzazione errore networkError <uc26>
+=== UC 27 - Visualizzazione errore networkError <uc27>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
 - *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -735,12 +754,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 
 #figure(
-  image("/img/adr/39.png", width: 80%),
+  image("/img/adr/PB/40.png", width: 80%),
   caption: [Visualizzazione errore networkError],
-) <imgUC26>
+) <imgUC27>
 \
 
-=== UC 27 - Visualizzazione errore fileTooBig <uc27>
+=== UC 28 - Visualizzazione errore fileTooBig <uc28>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso superiore al limite consentito.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -751,9 +770,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file selezionato è troppo pesante e non sono stati caricati.
 #figure(
-  image("/img/adr/40.png", width: 80%),
+  image("/img/adr/PB/41.png", width: 80%),
   caption: [Visualizzazione errore fileTooBig],
-) <imgUC27>
+) <imgUC28>
 \
 
 
@@ -792,36 +811,36 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.6], [@uc3 \ #glossario("UC")3], [L'utente, mediante spostamento del mouse all'#glossario("interno") del grafico, può ruotare la visualizzazione], [1 - Obbligatorio],
   [F.1.7], [@uc4 \ #glossario("UC")4], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo orizzontalmente], [1 - Obbligatorio],
   [F.1.8], [@uc5 \ #glossario("UC")5], [L'utente può muoversi nel grafico come se fosse in un ambiente 2d, spostandosi solo verticalmente], [1 - Obbligatorio],
-  [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione], [1 - Obbligatorio],
-  [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
-  [F.1.11], [@uc8 \ #glossario("UC")8], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
-  [F.1.12], [@uc9 \ #glossario("UC")9], [L’utente preme sopra ad una barra e può visionare informazioni e filtri relativi
-alla barra selezionata], [1 - Obbligatorio],
-  [F.1.13], [@uc9.1 \ #glossario("UC")9.1], [L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra], [1 - Obbligatorio],
-  [F.1.14], [@uc9.2 \ #glossario("UC")9.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
-  [F.1.15], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
-  [F.1.16], [@uc9.4 \ #glossario("UC")9.4], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
-  [F.1.17], [@uc9.5 \ #glossario("UC")9.5], [L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
-  [F.1.18], [@uc10 \ #glossario("UC")10], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
-  [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
-  [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
-  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
-  [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
-  [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
-  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può filtrare i dati per visualizzare solo quelli maggiori di un valore _n_ da lui definito], [1 - Obbligatorio],
-  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può filtrare i dati per visualizzare solo quelli minori di un valore _n_ da lui definito], [1 - Obbligatorio],
-  [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
-  [F.2.1], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
-  [F.2.2], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
-  [F.1.27], [@uc21 \ #glossario("UC")21], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
-  [F.1.28], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
-  [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
-  [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
-  [F.1.32], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
-  [F.1.33], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
-  [F.1.34], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
-  [F.1.35], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
+  [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire una specifica area del grafico #glossario("3D") per visualizzare più dettagli], [1 - Obbligatorio],
+  [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado di ridurre la visualizzazione del grafico #glossario("3D") per avere una visione d'insieme.], [1 - Obbligatorio],
+  [F.1.11], [@uc8 \ #glossario("UC")8], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
+  [F.1.12], [@uc9 \ #glossario("UC")9], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
+  [F.1.13], [@uc10 \ #glossario("UC")10], [L’utente preme sopra ad una barra e può visionare informazioni e filtri relativi alla barra selezionata], [1 - Obbligatorio],
+  [F.1.14], [@uc10.1 \ #glossario("UC")10.1], [L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra], [1 - Obbligatorio],
+  [F.1.15], [@uc10.2 \ #glossario("UC")10.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
+  [F.1.16], [@uc10.3 \ #glossario("UC")10.3], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
+  [F.1.17], [@uc10.4 \ #glossario("UC")10.4], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
+  [F.1.18], [@uc10.5 \ #glossario("UC")10.5], [L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
+  [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
+  [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
+  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
+  [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
+  [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
+  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
+  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può filtrare i dati per visualizzare solo quelli maggiori di un valore _n_ da lui definito], [1 - Obbligatorio],
+  [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente può filtrare i dati per visualizzare solo quelli minori di un valore _n_ da lui definito], [1 - Obbligatorio],
+  [F.1.27], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
+  [F.2.1], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
+  [F.2.2], [@uc21 \ #glossario("UC")21], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
+  [F.1.28], [@uc22 \ #glossario("UC")22], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
+  [F.1.29], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
+  [F.1.30], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
+  [F.1.31], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
+  [F.1.32], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
+  [F.1.33], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
+  [F.1.34], [@uc28 \ #glossario("UC")28], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
+  [F.1.35], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
+  [F.1.36], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
 ]
@@ -885,32 +904,33 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.1.9], [#glossario("Capitolato"), UC6],
   [F.1.10], [#glossario("Capitolato"), UC7],
   [F.1.11], [#glossario("Capitolato"), UC8],
-  [F.1.12], [Decisione interna, UC9],
-  [F.1.13], [Decisione interna, UC9.1],
-  [F.1.14], [#glossario("Capitolato"), UC9.2],
-  [F.1.15], [#glossario("Capitolato"), UC9.3],
-  [F.1.16], [#glossario("Capitolato"), UC9.4],
-  [F.1.17], [Decisione interna, UC9.5],
-  [F.1.18], [#glossario("Capitolato"), UC10],
+  [F.1.12], [#glossario("Capitolato"), UC9],
+  [F.1.13], [Decisione interna, UC10],
+  [F.1.14], [Decisione interna, UC10.1],
+  [F.1.15], [#glossario("Capitolato"), UC10.2],
+  [F.1.16], [#glossario("Capitolato"), UC10.3],
+  [F.1.17], [#glossario("Capitolato"), UC10.4],
+  [F.1.18], [Decisione interna, UC10.5],
   [F.1.19], [#glossario("Capitolato"), UC11],
   [F.1.20], [#glossario("Capitolato"), UC12],
-  [F.1.21], [Decisione interna, UC13],
-  [F.1.22], [#glossario("Capitolato"), UC14],
+  [F.1.21], [#glossario("Capitolato"), UC13],
+  [F.1.22], [Decisione interna, UC14],
   [F.1.23], [#glossario("Capitolato"), UC15],
   [F.1.24], [#glossario("Capitolato"), UC16],
   [F.1.25], [#glossario("Capitolato"), UC17],
-  [F.1.26], [Decisione interna, UC18],
-  [F.1.27], [Decisione interna, UC19, UC2.1],
+  [F.1.26], [#glossario("Capitolato"), UC18],
+  [F.1.27], [Decisione interna, UC19],
   [F.2.1], [Decisione interna, UC20, UC2.1],
   [F.2.2], [Decisione interna, UC21],
-  [F.1.28], [Decisione interna, UC22, UC2.2, UC2.4],
-  [F.1.29], [Decisione interna, UC23, 2.4],
-  [F.1.30], [Decisione interna, UC24, UC2.2],
-  [F.1.31], [Decisione interna, UC25, UC2.1],
-  [F.1.32], [Decisione interna, UC26, UC2.3],
-  [F.1.33], [Decisione interna, UC27, UC2.4],
-  [F.1.34], [#glossario("Capitolato")],
+  [F.1.28], [Decisione interna, UC22, UC2.1],
+  [F.1.29], [Decisione interna, UC23, UC2.2, UC2.4],
+  [F.1.30], [Decisione interna, UC24, 2.4],
+  [F.1.31], [Decisione interna, UC25, UC2.2],
+  [F.1.32], [Decisione interna, UC26, UC2.1],
+  [F.1.33], [Decisione interna, UC27, UC2.3],
+  [F.1.34], [Decisione interna, UC28, UC2.4],
   [F.1.35], [#glossario("Capitolato")],
+  [F.1.36], [#glossario("Capitolato")],
   [Q.1.1], [#glossario("Capitolato")],
   [Q.1.2], [#glossario("Capitolato")],
   [Q.1.3], [#glossario("Capitolato")],
@@ -934,19 +954,19 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center,).at(col),
   inset: 6pt,
   table.header([*Fonte*], [*Codice*],),
-  [#glossario("Capitolato")], [F.1.1,\ F.1.2,\ F.3.1,\ F.1.3,\ F.1.4,\ F.1.6,\ F.1.7,\ F.1.8,\ F.1.9,\ F.1.10,\ F.1.11,\ F.1.14,\ F.1.15,\ F.1.16,\ F.1.18, \ F.1.19,\ F.1.20,\ F.1.22, \ F.1.23,\ F.1.24,\ F.1.25, \ F.1.34, \ F.1.35, \ Q.1.1,\ Q.1.2,\ Q.1.3,\ Q.1.4,\ Q.1.5,\ Q.1.6 ],
-  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.6, \ F.1.12, \ F.1.13,\ F.1.17,\ F.1.21,\ F.1.26, \ F.1.27,\ F.2.1,\ F.2.2,\ F.1.28,\ F.1.29,\ F.1.30,\ F.1.31, \ F.1.32, \ F.1.33, \ V.1.1, \ V.1.2, \ V.1.3 ],
+  [#glossario("Capitolato")], [F.1.1,\ F.1.2,\ F.3.1,\ F.1.3,\ F.1.4,\ F.1.6,\ F.1.7,\ F.1.8,\ F.1.9,\ F.1.10,\ F.1.11,\ F.1.12,\ F.1.15,\ F.1.16,\ F.1.17,\ F.1.19, \ F.1.20,\ F.1.21,\ F.1.23, \ F.1.24,\ F.1.25,\ F.1.26, \ F.1.35, \ F.1.36, \ Q.1.1,\ Q.1.2,\ Q.1.3,\ Q.1.4,\ Q.1.5,\ Q.1.6 ],
+  [Decisione interna], [F.3.2,\ F.3.3,\ F.3.4,\ F.1.5,\ F.1.6, \ F.1.12, \ F.1.13,\ F.1.18,\ F.1.22,\ F.1.27, \ F.1.28,\ F.2.1,\ F.2.2,\ F.1.29,\ F.1.30,\ F.1.31,\ F.1.32, \ F.1.33, \ F.1.34, \ V.1.1, \ V.1.2, \ V.1.3 ],
   [Decisione esterna], [V.1.1, \ V.1.2 ],
   [UC1],[F.1.1],
-  [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5, \ F.1.27, F.1.28, F.1.29, F.1.30, F.1.31, F.1.32, F.1.33, \ F.2.1, F.2.2, ],
+  [UC2\ e sotto requisiti],[F.1.2, F.3.1, F.3.2, F.3.3, F.3.4, F.1.3, F.1.4, F.1.5, \ F.1.28, F.1.29, F.1.30, F.1.31, F.1.32, F.1.33, F.1.34, \ F.2.1, F.2.2, ],
   [UC3],[F.1.6],
   [UC4],[F.1.7],
   [UC5],[F.1.8],
   [UC6],[F.1.9],
   [UC7],[F.1.10],
   [UC8],[F.1.11],
-  [UC9\ e sotto requisiti],[F.1.12, F.1.13, F.1.14, F.1.15, F.1.16, F.1.17],
-  [UC10],[F.1.18],
+  [UC9],[F.1.12],
+  [UC10\ e sotto requisiti],[F.1.13, F.1.14, F.1.15, F.1.16, F.1.17, F.1.18],
   [UC11],[F.1.19],
   [UC12],[F.1.20],
   [UC13],[F.1.21],
@@ -964,6 +984,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   [UC25],[F.1.31],
   [UC26],[F.1.32],
   [UC27],[F.1.33],
+  [UC28],[F.1.34],
   )
     <tab:fontecodice>
 ]
@@ -975,7 +996,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
-  [Funzionale],[35],[2],[3],
+  [Funzionale],[36],[2],[4],
   [Qualità],[6],[0],[0],
   [Vincolo],[3],[0],[0],
   )
