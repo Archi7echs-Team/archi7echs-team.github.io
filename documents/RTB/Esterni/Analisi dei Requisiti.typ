@@ -393,7 +393,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 9 - Click su una barra del grafico<uc9>
-- *Descrizione: * L'utente preme sopra ad una barra, accede ad ulteriori #glossario("funzionalità") scegliendo tra quelle proposte.
+- *Descrizione: * L'utente preme sopra ad una barra e può visionare informazioni e filtri relativi alla barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Visualizzazione delle informazioni della barra e possibilità di filtraggio ulteriore in base alla barra selezionata.
@@ -409,7 +409,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
     
 ==== UC 9.1 - Visualizzazione informazioni dopo click di una barra <uc9.1>
-- *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra.
+- *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra ovvero, coordinate, altezza, media relativa ai valori della stessa x, media relativa ai valori della stessa z e media relativa ai valori globali.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
 - *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
@@ -520,10 +520,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 13 - Visualizzazione dati con altezza compresa tra un intervallo <uc13>
-- *Descrizione: * L'utente può visualizzare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
+- *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
     + L'utente inserisce il minimo (se necessario) dell'intervallo.
     + L'utente inserisce il massimo (se necessario) dell'intervallo.
@@ -577,11 +577,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC15>
 \
 
-=== UC 16 - Visualizzazione degli N valori maggiori<uc16>
-- *Descrizione: * L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più alto.
+=== UC 16 - Filtro per la visualizzazione dei valori maggiori di un numero definito _n_ dall'utente <uc16>
+- *Descrizione: * L'utente può filtrare i valori maggiori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più alto.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori maggiori di un numero _n_ definito dall'utente.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
     + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
@@ -591,17 +591,17 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC16>
 \
 
-=== UC 17 - Visualizzazione degli N valori minori <uc17>
-- *Descrizione: * L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più basso.
+=== UC 17 - Filtro per la visualizzazione dei valori minori di un numero definito _n_ dall'utente <uc17>
+- *Descrizione: * L'utente può filtrare i valori minori di un numero _n_ da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati i soli N dati con valore più basso.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori minori di un numero _n_ definito dall'utente.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, applica il filtro.
-    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
+    +  L'applicazione opacizza tutti i valori maggiori del numero _n_ definito dall'utente
 #figure(
   image("/img/adr/30.png", width: 80%),
-  caption: [Visualizzazione degli N valori minori],
+  caption: [Visualizzazione dei valori minori di un numero definito _n_ dall'utente],
 ) <imgUC17>
 \
 
@@ -795,7 +795,8 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente, attraverso le gesture del mouse (touchpad/trackpad o rotella) deve essere in grado di ingrandire o ridurre liberamente la visualizzazione], [1 - Obbligatorio],
   [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
   [F.1.11], [@uc8 \ #glossario("UC")8], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
-  [F.1.12], [@uc9 \ #glossario("UC")9], [L'utente preme sopra ad una barra, accede ad ulteriori #glossario("funzionalità") scegliendo tra quelle proposte.], [1 - Obbligatorio],
+  [F.1.12], [@uc9 \ #glossario("UC")9], [L’utente preme sopra ad una barra e può visionare informazioni e filtri relativi
+alla barra selezionata], [1 - Obbligatorio],
   [F.1.13], [@uc9.1 \ #glossario("UC")9.1], [L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra], [1 - Obbligatorio],
   [F.1.14], [@uc9.2 \ #glossario("UC")9.2], [L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione], [1 - Obbligatorio],
   [F.1.15], [@uc9.3 \ #glossario("UC")9.3], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
@@ -804,11 +805,11 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.18], [@uc10 \ #glossario("UC")10], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
   [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
   [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
-  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
+  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
   [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
   [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
-  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più alto], [1 - Obbligatorio],
-  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può visualizzare all'#glossario("interno") del grafico gli N dati con valore più basso], [1 - Obbligatorio],
+  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può filtrare i dati per visualizzare solo quelli maggiori di un valore _n_ da lui definito], [1 - Obbligatorio],
+  [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente può filtrare i dati per visualizzare solo quelli minori di un valore _n_ da lui definito], [1 - Obbligatorio],
   [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default], [1 - Obbligatorio],
   [F.2.1], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
   [F.2.2], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
