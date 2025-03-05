@@ -8,7 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), "",
+    "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
     "0.7.6", "31-01-2025", "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
