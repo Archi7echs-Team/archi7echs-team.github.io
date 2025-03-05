@@ -184,9 +184,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva il nuovo dato.
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative, oppure un numero di dati che supera il limite:
-  + Visualizzazione dell'errore emptyField (@uc25)
-  + Visualizzazione dell'errore invalidArguments (@uc21)
-  + Visualizzazione dell'errore tooMuchData (@uc22)
+  + Visualizzazione dell'errore emptyField (@uc27)
+  + Visualizzazione dell'errore invalidArguments (@uc23)
+  + Visualizzazione dell'errore tooMuchData (@uc24)
 #figure(
   image("/img/adr/PB/3.png", width: 115%),
   caption: [Caricamento manuale dei dati tramite interfaccia],
@@ -203,8 +203,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo x
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc25)
-  + Visualizzazione dell'errore invalidArguments (@uc21)    
+  + Visualizzazione dell'errore emptyField (@uc27)
+  + Visualizzazione dell'errore invalidArguments (@uc23)    
 #figure(
   image("/img/adr/PB/4.png", width: 115%),
   caption: [L'utente inserisce il campo X],
@@ -221,8 +221,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo y.
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc25)
-  + Visualizzazione dell'errore invalidArguments (@uc21)    
+  + Visualizzazione dell'errore emptyField (@uc27)
+  + Visualizzazione dell'errore invalidArguments (@uc23)    
 #figure(
   image("/img/adr/PB/5.png", width: 115%),
   caption: [L'utente inserisce il campo Y],
@@ -239,8 +239,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo z
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc25)
-  + Visualizzazione dell'errore invalidArguments (@uc21)    
+  + Visualizzazione dell'errore emptyField (@uc27)
+  + Visualizzazione dell'errore invalidArguments (@uc23)    
 #figure(
   image("/img/adr/PB/6.png", width: 115%),
   caption: [L'utente inserisce il campo Z],
@@ -259,8 +259,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva i nuovi dati.
 - *Scenari alternativi:* 
   - L'#glossario("API") è un servizio #glossario("esterno") e in quanto tale potrebbe non rispondere in un tempo limite oppure potrebbe cambiare inaspettatamente la risposta
-    + Visualizzazione errore tooMuchData (@uc22);  
-    + Visualizzazione errore apiTimeOut (@uc24);
+    + Visualizzazione errore tooMuchData (@uc24);  
+    + Visualizzazione errore apiTimeOut (@uc26);
 #figure(
   image("/img/adr/PB/7.png", width: 115%),
   caption: [Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast],
@@ -279,7 +279,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione elabora i dati nel grafico #glossario("3D").
 - *Scenari Alternativi:*
   - Il #glossario("DB") non risponde per motivi di rete
-    + Errore networkError (@uc26).
+    + Errore networkError (@uc28).
 #figure(
   image("/img/adr/PB/8.png", width: 115%),
   caption: [Caricamento automatico dati tramite connessione a #glossario("database") #glossario("SQL")],
@@ -298,9 +298,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva i dati ottenuti.
 - *Scenari Alternativi:* 
   - L'utente potrebbe inserire un file .csv troppo pesante, con un formattazione errata oppure che contiene troppi dati, superando la soglia massima consentita
-    + Errore tooMuchData (@uc22);
-    + Errore invalidCsv (@uc23);
-    + Errore fileTooBig (@uc27);
+    + Errore tooMuchData (@uc24);
+    + Errore invalidCsv (@uc25);
+    + Errore fileTooBig (@uc29);
 #figure(
   image("/img/adr/PB/9.png", width: 115%),
   caption: [Caricamento automatico dati tramite file .csv],
@@ -550,7 +550,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un intervallo che non contiene dati:
-    + Visualizzazione dell'errore invalidArguments (@uc22).
+    + Visualizzazione dell'errore invalidArguments (@uc23).
 #figure(
   image("/img/adr/PB/27.png", width: 110%),
   caption: [Visualizzazione dati con altezza compresa tra un intervallo],
@@ -569,7 +569,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
     + Visualizzazione dell'errore emptyField (@uc26).
-    + Visualizzazione dell'errore invalidArguments (@uc22). 
+    + Visualizzazione dell'errore invalidArguments (@uc23). 
        
 #figure(
   image("/img/adr/PB/28.png", width: 115%),
@@ -589,43 +589,59 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Scenari Alternativi: *
  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
     + Visualizzazione dell'errore emptyField (@uc26).
-    + Visualizzazione dell'errore invalidArguments (@uc22). 
+    + Visualizzazione dell'errore invalidArguments (@uc23). 
 #figure(
   image("/img/adr/PB/29.png", width: 115%),
   caption: [Visualizzazione della media in base al valore di Z],
 ) <imgUC16>
 \
 
-=== UC 17 - Filtro per la visualizzazione dei valori maggiori di un numero definito _n_ dall'utente <uc17>
-- *Descrizione: * L'utente può filtrare i valori maggiori di un numero _n_ da lui definito.
+=== UC 17 - L'utente inserisce il valore _n_ <uc17>
+- *Descrizione: * L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori maggiori di un numero _n_ definito dall'utente.
+- *Postcondizioni: * L'utente ha inserito il valore _n_ che può essere utilizzato per visualizzare gli _n_ valori maggiori o minori 
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, applica il filtro.
-    + L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più alto.
+    + L'utente, tramite un'area specifica tra i filtri, inserisce il valore _n_.
 #figure(
   image("/img/adr/PB/30.png", width: 80%),
-  caption: [Visualizzazione degli N valori maggiori],
+  caption: [Inserimento valore _n_],
 ) <imgUC17>
 \
 
-#pagebreak()
-=== UC 18 - Filtro per la visualizzazione dei valori minori di un numero definito _n_ dall'utente <uc18>
-- *Descrizione: * L'utente può filtrare i valori minori di un numero _n_ da lui definito.
+=== UC 18 - Filtro per la visualizzazione degli _n_ valori maggiori <uc18>
+- *Descrizione: * L'utente può filtrare gli _n_ valori maggiori, dove _n_ è da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, i soli valori minori di un numero _n_ definito dall'utente.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori maggiori, dove _n_ definito dall'utente.
 - *Scenario Principale: *
-    +  L'applicazione opacizza tutti i valori maggiori del numero _n_ definito dall'utente
-    +  L'applicazione opacizza tutti i valori che non fanno parte degli N elementi con valore più basso.
+    + L'utente inserisce il valore di _n_ :
+      - @uc17
+    + L'utente tramite un'apposito bottone applica il filtro  
+    + L'applicazione opacizza tutti i valori che non fanno parte degli _n_ elementi con valore più alto.
 #figure(
   image("/img/adr/PB/31.png", width: 80%),
-  caption: [Visualizzazione dei valori minori di un numero definito _n_ dall'utente],
+  caption: [Visualizzazione degli N valori maggiori],
 ) <imgUC18>
 \
 
-=== UC 19 - Reset dei filtri applicati alla visualizzazione dei dati <uc19>
+=== UC 19 - Filtro per la visualizzazione degli _n_ valori minori <uc19>
+- *Descrizione: * L'utente può filtrare gli _n_ valori minori, dove _n_ è da lui definito.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori minori, dove _n_ definito dall'utente.
+- *Scenario Principale: *
+    + L'utente inserisce il valore di _n_ :
+      - @uc17
+    + L'utente tramite un'apposito bottone applica il filtro  
+    + L'applicazione opacizza tutti i valori che non fanno parte degli _n_ elementi con valore più basso.
+#figure(
+  image("/img/adr/PB/32.png", width: 80%),
+  caption: [Visualizzazione degli N valori minori],
+) <imgUC19>
+\
+
+=== UC 20 - Reset dei filtri applicati alla visualizzazione dei dati <uc20>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
@@ -634,12 +650,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
     + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
 #figure(
-  image("/img/adr/PB/32.png", width: 80%),
+  image("/img/adr/PB/33.png", width: 80%),
   caption: [Reset dei filtri applicati alla visualizzazione dei dati],
-) <imgUC19>
+) <imgUC20>
 \
 
-=== UC 20 - Esportazione di un grafico <uc20>
+=== UC 21 - Esportazione di un grafico <uc21>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
@@ -648,12 +664,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di esportare il grafico.
     + L'applicazione salva tutte le informazioni necessarie in un file .csv dedicato con la formattazione corretta.
 #figure(
-  image("/img/adr/PB/33.png", width: 80%),
+  image("/img/adr/PB/34.png", width: 80%),
   caption: [Esportazione di un grafico],
-) <imgUC20>
+) <imgUC21>
 \
 
-=== UC 21 - Creazione di un'istantanea del grafico <uc21>
+=== UC 22 - Creazione di un'istantanea del grafico <uc22>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -662,12 +678,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
     + L'applicazione crea un'immagine con l'istantanea nel grafico e la salva.
 #figure(
-  image("/img/adr/PB/34.png", width: 80%),
+  image("/img/adr/PB/35.png", width: 80%),
   caption: [Creazione di un'istantanea del grafico],
-) <imgUC21>
+) <imgUC22>
 \
     
-=== UC 22 - Visualizzazione errore invalidArguments <uc22>
+=== UC 23 - Visualizzazione errore invalidArguments <uc23>
 - *Descrizione: * L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
@@ -677,12 +693,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente inserisce dei dati all'#glossario("interno") del campo d'inserimento.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/PB/35.png", width: 80%),
+  image("/img/adr/PB/36.png", width: 80%),
   caption: [Visualizzazione errore invalidArguments],
-) <imgUC22>
+) <imgUC23>
 \
 
-=== UC 23 - Visualizzazione errore tooMuchData <uc23>
+=== UC 24 - Visualizzazione errore tooMuchData <uc24>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -693,12 +709,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il numero di dati ricevuti supera la soglia massima supportata e che quindi i dati non sono stati caricati.
 #figure(
-  image("/img/adr/PB/36.png", width: 80%),
+  image("/img/adr/PB/37.png", width: 80%),
   caption: [Visualizzazione errore tooMuchData],
-) <imgUC23>
+) <imgUC24>
 \
 
-=== UC 24 - Visualizzazione errore invalidCsv <uc24>
+=== UC 25 - Visualizzazione errore invalidCsv <uc25>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -709,13 +725,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file ha una formattazione non corretta e che i dati non sono stati caricati.
 #figure(
-  image("/img/adr/PB/37.png", width: 80%),
+  image("/img/adr/PB/38.png", width: 80%),
   caption: [Visualizzazione errore invalidCsv],
-) <imgUC24>
+) <imgUC25>
 \
 
-#pagebreak()
-=== UC 25 - Visualizzazione errore apiTimeout <uc25>
+=== UC 26 - Visualizzazione errore apiTimeout <uc26>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite.
 - *Precondizioni: * L'utente ha selezionato l'#glossario("API") esterna da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -725,12 +740,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente preme il bottone per caricare i dati.
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 #figure(
-  image("/img/adr/PB/38.png", width: 80%),
+  image("/img/adr/PB/39.png", width: 80%),
   caption: [Visualizzazione errore apiTimeout],
-) <imgUC25>
+) <imgUC26>
 \
 
-=== UC 26 - Visualizzazione errore emptyField <uc26>
+=== UC 27 - Visualizzazione errore emptyField <uc27>
 - *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
@@ -740,12 +755,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente lascia un input vuoto.
     + L'utente viene avvisato graficamente dell'errore nella compilazione dell'input.
 #figure(
-  image("/img/adr/PB/39.png", width: 80%),
+  image("/img/adr/PB/40.png", width: 80%),
   caption: [Visualizzazione errore emptyField],
-) <imgUC26>
+) <imgUC27>
 \
 
-=== UC 27 - Visualizzazione errore networkError <uc27>
+=== UC 28 - Visualizzazione errore networkError <uc28>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
 - *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -756,13 +771,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente viene avvisato graficamente che non è stata fornita alcuna riposta entro un tempo limite di timeout.
 
 #figure(
-  image("/img/adr/PB/40.png", width: 80%),
+  image("/img/adr/PB/41.png", width: 80%),
   caption: [Visualizzazione errore networkError],
 ) <imgUC27>
 \
 
-#pagebreak()
-=== UC 28 - Visualizzazione errore fileTooBig <uc28>
+=== UC 29 - Visualizzazione errore fileTooBig <uc29>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso superiore al limite consentito.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -773,9 +787,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente cerca di caricare i dati.
     + L'utente viene avvisato che il file selezionato è troppo pesante e non sono stati caricati.
 #figure(
-  image("/img/adr/PB/41.png", width: 80%),
+  image("/img/adr/PB/42.png", width: 80%),
   caption: [Visualizzazione errore fileTooBig],
-) <imgUC28>
+) <imgUC29>
 \
 
 
