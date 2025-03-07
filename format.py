@@ -35,7 +35,7 @@ def main():
 
     generated = {dir: generateHTML(os.path.join(INIT_PATH, dir)) for dir in subdirs}
 
-    keys = map(lambda x: str(x).upper(), list(generated.keys()))
+    keys = list(map(lambda x: str(x).upper(), list(generated.keys())))
 
     expected = ["CANDIDATURA", "RTB", "PB"]
 
