@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "03-03-2025",  "Prima stesura documento", p.lucato, "",
+    "0.1.0", "03-03-2025",  "Prima stesura documento", p.lucato, p.scandaletti,
   )
 )
 
@@ -53,7 +53,7 @@ L'incontro inizia, come da programma alle ore 15.00. Sono presenti tutti i membr
 })
 
 == Discussione su quali documenti aggiornare
-Come indicato dal #p.cardin, un documento che dovrà sicuramente essere aggiornato è l'#glossario("AdR"), modificandolo inizialmente secondo quanto fatto notare. In secondo luogo si dovranno aggiungere le sezioni relative ai requisiti di qualità e ai requisiti di vincolo. \
+Come indicato dal #p.cardin, un documento che dovrà sicuramente essere aggiornato è l'#glossario("AdR"), modificandolo inizialmente secondo quanto fatto notare. Successivamente si dovranno aggiungere le sezioni relative ai requisiti di qualità e ai requisiti di vincolo. \
 Anche il documento #glossario("NdP") e il #glossario("PdP") andranno aggiornati di conseguenza, in ordine: \ 1 - Nuove proposte che verranno indicate in questa seconda parte \ 2 - L'andamento dello stesso del progetto
 
 == Discussione su quali sono i nuovi documenti da redigere
