@@ -1,13 +1,13 @@
 #import "/templates/documento.typ": *
 
 #show: conf.with(
-  title: "Verbale incontro 30/01/2025",
+  title: "Verbale incontro 03/03/2025",
   subtitle: "Documento interno - verbale nr. 18",
   author: p.lucato,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "03-03-2025",  "Prima stesura documento", p.lucato, p.scandaletti,
+    "0.1.0", "03-03-2025",  "Prima stesura documento", p.lucato, (p.scandaletti,p.salvo),
   )
 )
 
@@ -87,7 +87,7 @@ Come visibile dalla tabella sopra, nessun componente del team ha avuto il ruolo 
   [1],[Aggiornamento #glossario("PdP")],[Come per ogni #glossario("periodo") si continuerà con la stesura del #glossario("PdP")],
   [1],[Aggiornamento #glossario("NdP")],[Verranno aggiornate le _Norme di Progetto_ a seconda di quanto sarà necessario aggiungere nella parte di #glossario("PB")],
   [2],[Inizio #glossario("ST")],[Si inizia con la stesura della _Specifica tecnica_],
-  [2],[Posticipare inizio stesura #glossario("MU")],[Si decide l'inizio della stesura del documentio di _Specifica tecnica_ verrà iniziato in un periodo successivo],
+  [2],[Posticipare inizio stesura #glossario("MU")],[Si decide l'inizio della stesura del documento di _Specifica tecnica_ verrà iniziato in un periodo successivo],
   ))
 
 = TODO
