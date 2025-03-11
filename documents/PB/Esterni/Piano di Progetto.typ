@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.1.0", "09-03-2025", "Aggiunta consultivo aggiornato", p.salvo, p.scandaletti,
+    "1.1.0", "09-03-2025", "Aggiunta consultivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
     "1.0.0", "13-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.8.0", "12-02-2025", "Stesura sesto periodo", p.lucato, (p.pozzobon, p.pesenato),
     "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
