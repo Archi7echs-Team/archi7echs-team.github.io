@@ -112,5 +112,5 @@ Padova, 10 marzo 2025
   align: (left, right),
   inset:0pt,
   [Il #glossario("Verbalizzante"):\ #p.checchinato],
-  [Il #glossario("responsabile di Progetto"):\ #p.salvo],
+  [Il #glossario("responsabile di Progetto"):\ #p.salvo], 
 )
