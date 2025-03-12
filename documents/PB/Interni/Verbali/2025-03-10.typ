@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "11-03-2025",  "Prima stesura documento", p.checchinato, "",
+    "0.1.0", "12-03-2025",  "Prima stesura documento", p.checchinato, "",
   )
 )
 
@@ -98,6 +98,10 @@ Si convoca il prossimo incontro per lunedì 17/03/2024 ad orario da stabilire pe
 = TODO
 
 #todo((
+  (240,), (p.lucato), [Verbale Esterno 2025-03-06],
+  (242,), (p.checchinato), [Verbale Interno 10-03-2025],
+  (243,), (p.pozzobon), [#glossario("NdP") - gestione dei processi ],
+  (244,), (p.salvo), [#glossario("PdQ") - aggiunta descrizione grafici],
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'#glossario("OdG")._
