@@ -7,9 +7,10 @@
   author: "Il team",
   intern: false,
   show_outline: true,
-  outline_depth: 2,
+  outline_depth: 3,
   changelog: (
-    "1.1.0", "09-03-2025", "Aggiunta consultivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
+    "1.1.1", "12-03-2025", "Fix indice", p.scandaletti, "",
+    "1.1.0", "09-03-2025", "Aggiunta consuntivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
     "1.0.0", "13-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.8.0", "12-02-2025", "Stesura sesto periodo", p.lucato, (p.pozzobon, p.pesenato),
     "0.7.0", "06-02-2025", "Stesura quinto periodo", p.lucato, (p.valdagno, p.pesenato),
@@ -70,7 +71,7 @@ In base a quanto riportato in questo documento e le difficoltà incontrate, gli 
     [#glossario("PB") - Product Baseline], [25/03/2025], 
 )
 
-=== Seconda stesura - 19-11-2024
+=== Seconda stesura - 09-03-2025
 A seguito della revisione RTB gli obiettivi che il gruppo si impegna di raggiungere e rispettare sono soggetti ad un limite di tempo, con le date riportate di seguito:
 
 #table(
