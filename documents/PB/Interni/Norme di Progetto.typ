@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, p.pesenato,
+    "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
     "0.18.0", "29-01-2025", "Aggiunta sezione sviluppo e sottosezioni validazione, configurazioni, qualità, miglioramento e formazione", p.salvo, (p.lucato, p.pesenato),
@@ -52,8 +52,6 @@ Il documento è stato redatto con riferimento alla seguente documentazione.
 - Riferimento alle slide IS: *_Gestione
 di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 01/02/2025_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
-=== Documentazione prodotti
--Git Flow: *_Documentazione ufficiale_*: #link("https://danielkummer.github.io/git-flow-cheatsheet/")[#text(blue)[https://danielkummer.github.io/git-flow-cheatsheet/]] -  _Ultimo accesso al documento 11/03/2025_
 
 #pb()
 
@@ -241,7 +239,7 @@ E' compito di colui che scrive o modifica un documento:
   - autore della modifica
 
 E' compito del #glossario("verificatore"):
-+ verificare la correttezza, sia grammatica/sintattica che di contenuto, delle modifiche apportate
++ verificare la correttezza, sia grammaticale/sintattica che di contenuto, delle modifiche apportate
 + assicurarsi che il numero di versione assegnato alla modifica sia corretto secondo le regole del team
 + inserire il proprio nome nell'apposita colonna della tabella
 
@@ -876,7 +874,7 @@ L’#glossario("attività") di formazione è necessaria per avere un gruppo con 
 Per una corretta gestione del #glossario("ciclo di vita") del progetto e per garantire la qualità dei processi e del prodotto software verranno adottati i seguenti standard internazionali sviluppati dall'#glossario("ISO"):
 - *#glossario("ISO/IEC 9126")*: lo standard per la valutazione della qualità del prodotto software. Questo modello consente di analizzare e valutare il software in base a caratteristiche fondamentali, quali #glossario("funzionalità"), affidabilità, usabilità, efficienza, manutenibilità e portabilità. Queste caratteristiche sono misurabili attraverso delle metriche. La scelta di questo standard riflette l’obiettivo di fornire un prodotto che soddisfi pienamente le specifiche richieste del progetto. \
 - *#glossario("ISO/IEC 12207:1995")*: lo standard per il #glossario("ciclo di vita") del software, che definisce un insieme strutturato di processi per la gestione e lo sviluppo del progetto. Questo standard prevede la suddivisione in processi primari, di supporto e organizzativi, garantendo una visione completa e coerente della gestione delle #glossario("attività") durante l’intero #glossario("ciclo di vita") del progetto. \
-Questa combinazione di standard consente di bilanciare l'attenzione sulla qualità del prodotto con un approccio metodico alla gestione dei processi, assicurando un risultato finale che sia funzionale, efficiente e conforme alle migliore pratiche internazionali. 
+Questa combinazione di standard consente di bilanciare l'attenzione sulla qualità del prodotto con un approccio metodico alla gestione dei processi, assicurando un risultato finale che sia funzionale, efficiente e conforme alle migliori pratiche internazionali. 
 
 == Modello di qualità secondo Standard ISO/IEC 9126
 Di seguito vengono elencate e descritte le categorie fondamentali che classificano il modello. Ciascuna di queste è caratterizzata a sua volta da delle sotto-caratteristiche. Una delle sotto-caratteristiche comuni a tutte le categorie è la *conformità*, che si riferisce alla capacità del software di rispettare standard tecnici, norme e regolamenti relativi alla specifica caratteristica.
