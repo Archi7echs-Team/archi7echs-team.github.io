@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "06-03-2025",  "Prima stesura documento", p.lucato, p.pesenato,
+    "0.1.0", "06-03-2025",  "Prima stesura documento", p.lucato, (p.pesenato, p.scandaletti),
   )
 )
 
@@ -101,7 +101,7 @@ Padova, 06 marzo 2025
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
     [Per Sanmarco Informatica:\ Alex Beggiato \
-    /*#place(center, image("//img/smi_sign.png", width: 120%))*/
+    #place(center, image("//img/smi_sign.png", width: 120%))
     ],
   )]
 )
