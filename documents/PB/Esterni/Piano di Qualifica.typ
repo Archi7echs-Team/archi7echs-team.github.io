@@ -1,5 +1,5 @@
 #import "/templates/documento.typ": *
-#import "@preview/plotst:0.2.0": *
+#import "/lib/plotst.typ": *
 
 #show: conf.with(
   title: "Piano di Qualifica",
