@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo,"",
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
@@ -94,41 +95,49 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC1.png", width: 80%),
   caption: [MPC1 - SA],
 ) <imgMPC1>
+*RTB*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore e' rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
   caption: [MPC2-3 - rapporto EV e PV],
 ) <imgMPC2-3> 
+*RTB*: Si nota come nei primi periodi il valore guadagnato (Earned Value) era inferiore al valore pianificato (Planned Value) ma la curva del valore guadagnato è andato a sovrapporsi con la curva del valore pianificato negli ultimi periodi comunicando un allineamento agli obiettivi preposti.
 
  #figure(
   image("/img/pdq/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
 ) <imgMPC4>
+*RTB*: Si nota come nei primi periodi, specialmente nel periodo 1, tra la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
 
 #figure(
   image("/img/pdq/MPC5.png", width: 80%),
   caption: [MPC5 - AC],
 ) <imgMPC5>
+*RTB*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel periodo 3 il costo sia aumentato maggiormente grazie ai miglioramenti sostenuti nei periodi precedenti.
 
 #figure(
   image("/img/pdq/MPC6.png", width: 80%),
   caption: [MPC6 - CPI],
 ) <imgMPC6>
+*RTB*: Il grafico mostra l'efficienza dei costi di progetto, non essendoci distaccati da 1, il valore ottimale, possiamo dire di non aver avuto un costo effettivo maggiore del valore guadagnato.
 
 #figure(
   image("/img/pdq/MPC7.png", width: 80%),
   caption: [MPC7 - CV],
 ) <imgMPC7>
+*RTB*: Il grafico mostra un distacco nel primo periodo dove si stava ancora migliorando il way of working generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
 
 #figure(
   image("/img/pdq/MPC8.png", width: 80%),
   caption: [MPC8 - EAC],
 ) <imgMPC8>
+*RTB*: Il grafico dimostra come il costo totale al completamento sia rimasto fisso in ogni periodo essendo esso un limite invalicabile.
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
 ) <imgMPC9>
+*RTB*: Il grafico dimostra come la risorsa a nostra disposizione stia diminuendo periodo per periodo essendo essa usata per raggiungere i nostri obiettivi.
 
 === Processi di supporto
 #align(center)[
@@ -161,6 +170,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC12.png", width: 80%),
   caption: [MPC12 - Rischi non previsti],
 ) <imgMPC12>
+*RTB*: Il grafico mostra la presenza di un rischio non previsto per molti periodi ma anche come esso sia poi stato gestito nei periodi 4,5 e 6 portando a 0 il numero di rischi non previsti dimostrando un adattamento ai rischi previsti.
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
