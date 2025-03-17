@@ -49,16 +49,18 @@ jobs:
           shopt -s globstar
           ls documents/**/*.typ > .all
           echo ${{ steps.changed-files.outputs.all_changed_files }} | tr "," "\n" | sort > .changed
-          while IFS= read -r f; do ls $f/**/*.typ >> .tmpignore; done < .typstignore  # list all file from dist in .typstignore
+          touch .tmpignore .forced
+          while IFS= read -r f; do ls $f/**/*.typ >> .tmpignore; done < .typstignore  # list all file from directories in .typstignore
           mv .tmpignore .typstignore      # overwrite .typstignore with .tmpignore
           # add all files in directories listed in .typstforce to .changed
           while IFS= read -r dir; do ls $dir/**/*.typ >> .forced; done < .typstforce
 
           # add files in .all that are not in .changed and not already in .typstignore to .typstignore
-          comm -13 <(sort .typstignore) <(comm -23 <(sort . ) <(sort .changed)) >> .typstignore   # .typstignore += (.all / -changed)
+          comm -13 <(sort .typstignore) <(comm -23 <(sort .all) <(sort .changed)) >> .typstignore   # .typstignore += (.all / -changed)
 
           # remove files in .typstignore from .forced
-          comm -23 <(sort .typstignore) <(sort .forced) > .typstignore
+          comm -23 <(sort .typstignore) <(sort .forced) > .tmpignore
+          mv .tmpignore .typstignore
           while IFS= read -r f; do rm -rf "${f}"; done < .typstignore   # del all files in .typstignore => don't compile them
 
       - name: Install typst CLI
