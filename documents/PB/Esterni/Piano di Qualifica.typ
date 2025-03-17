@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo,p.pesenato,
+    "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo, (p.pesenato, p.scandaletti),
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
@@ -107,13 +107,13 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
 ) <imgMPC4>
-*RTB*: Si nota come nei primi periodi, specialmente nel periodo 1, tra la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
+*RTB*: Si nota come nei primi periodi, specialmente nel periodo 2, la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
 
 #figure(
   image("/img/pdq/MPC5.png", width: 80%),
   caption: [MPC5 - AC],
 ) <imgMPC5>
-*RTB*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel periodo 3 il costo sia aumentato maggiormente grazie ai miglioramenti sostenuti nei periodi precedenti.
+*RTB*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel periodo 4 il costo sia aumentato più rapidamente, assecondando la necessità di recuperare la SA ideale.
 
 #figure(
   image("/img/pdq/MPC6.png", width: 80%),
@@ -125,19 +125,19 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC7.png", width: 80%),
   caption: [MPC7 - CV],
 ) <imgMPC7>
-*RTB*: Il grafico mostra un distacco nel primo periodo dove si stava ancora migliorando il way of working generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
+*RTB*: Il grafico mostra un distacco nel primo periodo, dove si stava ancora migliorando il way of working, generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
 
 #figure(
   image("/img/pdq/MPC8.png", width: 80%),
   caption: [MPC8 - EAC],
 ) <imgMPC8>
-*RTB*: Il grafico dimostra come il costo totale al completamento sia rimasto fisso in ogni periodo essendo esso un limite invalicabile.
+*RTB*: Il grafico mostra come il costo totale al completamento sia rimasto fisso in ogni periodo essendo esso un limite invalicabile.
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
 ) <imgMPC9>
-*RTB*: Il grafico dimostra come la risorsa a nostra disposizione stia diminuendo periodo per periodo essendo essa usata per raggiungere i nostri obiettivi.
+*RTB*: Il grafico mostra come la risorsa a nostra disposizione diminuisca periodo dopo periodo, inversamente al grafico dell'AC.
 
 === Processi di supporto
 #align(center)[
