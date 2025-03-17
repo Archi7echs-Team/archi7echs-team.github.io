@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo,"",
+    "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo,p.pesenato,
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
     "0.4.0","09-02-2025","Aggiunto riferimento a dash Grafana e inseriti grafici metriche",p.pozzobon, (p.valdagno,p.lucato),
@@ -95,7 +95,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC1.png", width: 80%),
   caption: [MPC1 - SA],
 ) <imgMPC1>
-*RTB*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore e' rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
+*RTB*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore è rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
