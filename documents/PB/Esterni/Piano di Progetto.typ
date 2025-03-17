@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, "",
+    "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, p.pesenato,
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.0", "09-03-2025", "Aggiunta consuntivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
     "1.0.0", "13-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
