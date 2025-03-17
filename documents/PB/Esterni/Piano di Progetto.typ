@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, p.pesenato,
+    "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.0", "09-03-2025", "Aggiunta consuntivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
     "1.0.0", "13-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
@@ -1097,11 +1097,11 @@ Durante il sesto #glossario("periodo") si è evidenziata un’efficace gestione 
       [Gabriele\ Checchinato],[0],[0],[0],[0],[4],[0],[€ #(4*costo_ora.progr)],
       [Leonardo\ Lucato],[6],[0],[0],[0],[0],[0],[€ #(6*costo_ora.res)],
       [Giacomo\ Pesenato],[0],[6],[0],[0],[0],[0],[€ #(6*costo_ora.amm)],
-      [Francesco\ Pozzobon],[0],[0],[8.25 (#text(red)[+0.25])],[0],[0],[0],[€ #(8.25*costo_ora.ver) (#text(red)[+€ #(0.25*costo_ora.ver)])],
+      [Francesco\ Pozzobon],[0],[0],[8.25\ (#text(red)[+0.25])],[0],[0],[0],[€ #(8.25*costo_ora.ver)\ (#text(red)[+€ #(0.25*costo_ora.ver)])],
       [Giovanni\ Salvò],[0],[0],[0],[0],[0],[3],[€ #(3*costo_ora.ana)],
       [Gioele\ Scandaletti],[0],[0],[0],[0],[4],[0],[€ #(4 * costo_ora.progr)],
-      [Pietro\ Valdagno],[0],[0],[6.5 (#text(red)[+0.5])],[0],[0],[0],[€ #(6.5*costo_ora.ver) (#text(red)[+€ #(0.5*costo_ora.ver)])],
-      [*Costo per ruolo*],[€ #(6*costo_ora.res)],[€ #(6*costo_ora.amm)],[€ #((8.25+6.5)*costo_ora.ver) (#text(red)[+€ #((0.25+0.5)*costo_ora.ver)])],[€ - ],[€ #(8*costo_ora.progr) ],[€ #(3*costo_ora.ana)],[#text(blue)[*€ #(180+120+221.25+120+75)* (#text(red)[+€ #(0.75*costo_ora.ver)])]],
+      [Pietro\ Valdagno],[0],[0],[6.5\ (#text(red)[+0.5])],[0],[0],[0],[€ #(6.5*costo_ora.ver)\ (#text(red)[+€ #(0.5*costo_ora.ver)])],
+      [*Costo per ruolo*],[€ #(6*costo_ora.res)],[€ #(6*costo_ora.amm)],[€ #((8.25+6.5)*costo_ora.ver)\ (#text(red)[+€ #((0.25+0.5)*costo_ora.ver)])],[€ - ],[€ #(8*costo_ora.progr) ],[€ #(3*costo_ora.ana)],[#text(blue)[*€ #(180+120+221.25+120+75)*\ (#text(red)[+€ #(0.75*costo_ora.ver)])]],
     )
   ]
 ]
@@ -1178,7 +1178,7 @@ Gli obiettivi quindi sono stati:
 
   - *Approfondimento della progettazione* : analisi dei principali pattern software e delle best practices per l’integrazione delle tecnologie utilizzate, con particolare attenzione alla scalabilità e alla manutenibilità del sistema.
   - *Revisione del documento Analisi dei Requisiti* : applicazione delle modifiche richieste dal #p.cardin per affinare, correggere e migliorare il documento proposto in fase #glossario("RTB").
-  - *Aggiornamento del Piano di Qualifica*: a seguito delle correzioni apportate all'Analisi dei requisiti, è stato rivisto anche il Piano di qualifica modificando i test di sistema e di accettazione.
+  - *Aggiornamento del Piano di Qualifica*: a seguito delle correzioni apportate all'Analisi dei requisiti, è stato rivisto anche il Piano di Qualifica modificando i test di sistema e di accettazione.
 
 *Possibili rischi*\
 I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
@@ -1226,15 +1226,15 @@ In questo settimo #glossario("periodo") non sono stati rilevati  obiettivi non r
 
 *Problematiche non attese*:\
 In questo settimo #glossario("periodo") si è verificato il seguente rischio non preventivato:
-- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*], la libreria da noi utilizzata per la generazione dei grafici nei documenti ha riscontrato incompatibilità con la nuova versione di #glossario("typst").
+- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*]: la libreria da noi utilizzata per la generazione dei grafici nei documenti ha riscontrato incompatibilità con la nuova versione di #glossario("typst").
 
 *Mitigazione rischi verificati*:\
-Oltre alla problematica non attesa, durante questo settimo #glossario("periodo") si è verificato 1 dei 2 rischi preventivati ad inizio #glossario("periodo"):
-- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*], tale rischio è stato mitigato grazie a uno studio più approfondito delle tecnologie critiche.
-- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*], tale rischio è stato mitigato con una soluzione a breve termine, ovvero mantenendo la precedente versione di #glossario("typst") per per la compilazione dei documenti, pianificando un cambio di libreria per il periodo successivo.
+Oltre alla problematica non attesa, durante questo settimo #glossario("periodo") si è verificato solo 1 dei 2 rischi preventivati e queste sono le strategie di mitigazione adottate:
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: tale rischio è stato mitigato grazie a uno studio più approfondito delle tecnologie critiche.
+- #link(<RE-2>)[*RE-2 - Utilizzo di librerie di terze parti*]: tale rischio è stato mitigato con una soluzione a breve termine, ovvero mantenendo la precedente versione di #glossario("typst") per per la compilazione dei documenti, pianificando un cambio di libreria per il periodo successivo.
 
 *Possibili cambiamenti*:\
-Durante il settimo #glossario("periodo") si è evidenziata un’efficace gestione e mitigazione dei rischi, insieme a una buona pianificazione delle ore. Questa strategia ha permesso una distribuzione equilibrata del tempo, portando al conseguimento di tutti gli obiettivi prefissati, superando agilmente ogni ostacolo verificatosi. 
+Durante il settimo #glossario("periodo") si è evidenziata un'efficace gestione e mitigazione dei rischi, insieme a una buona pianificazione delle ore. Questa strategia ha permesso una distribuzione equilibrata del tempo, portando al conseguimento di tutti gli obiettivi prefissati, superando agilmente ogni ostacolo verificatosi. 
 
 #pb();
 
