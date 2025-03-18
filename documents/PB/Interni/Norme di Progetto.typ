@@ -76,16 +76,9 @@ In questa sezione vengono indicati i documenti che saranno consegnati all'aziend
 
 ==== Analisi dei Requisiti
 All'#glossario("interno") vengono definite le #glossario("funzionalità") che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
-- *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un’interazione
+- *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un'interazione
 - *#glossario("UML") casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
 - *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. È dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
-
-==== Lettera di presentazione
-Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). È dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
-- *Introduzione*: per indicare lo scopo del documento
-- *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
-- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
-- *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
 
 ==== Piano di Progetto
 Documento fondamentale per il gruppo, che permette di eseguire delle buone retrospettive, con un automiglioramento sia per il breve che per il lungo termine. All'#glossario("interno") del documento ci devono essere i seguenti punti:
@@ -106,6 +99,18 @@ Documento che serve al team per descrivere come è stata garantita l'efficienza 
 - *Metriche per garantire la qualità dei processi*: verifica e #glossario("validazione") dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
 - *Metriche per garantire la qualità del prodotto*: verifica e #glossario("validazione") per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
 
+==== Specifica tecnica
+
+==== Manuale Utente
+
+==== Lettera di presentazione
+Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). È dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
+- *Introduzione*: per indicare lo scopo del documento
+- *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
+- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
+- *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
+
+
 == Strumenti
 Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei membri del team:
 - *Gruppo #glossario("Telegram")* per le comunicazioni rapide ed informali
@@ -124,7 +129,7 @@ Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito
 === Attività di analisi
 L'#glossario("attività") di analisi viene svolta tramite l'#glossario("analisi dei requisiti") dagli analisi prevedendo l'identificazione, la raccolta e l'#glossario("analisi dei requisiti") funzionali e non del sistema e del software. L'obiettivo dell'#glossario("attività") di analisi è la comprensione e la definizione in modo esaustivo delle esigenze del cliente e del sistema. Inoltre, essa identificando i requisiti può facilitare la realizzazione dei requisiti e fornire una stima di costi e tempo.
 
-Il documento cardine dell’#glossario("attività") di analisi è l'#glossario("AdR") composta da:
+Il documento cardine dell'#glossario("attività") di analisi è l'#glossario("AdR") composta da:
 - *Introduzione*: presentazione del documento
 - *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, #glossario("funzionalità"), caratteristiche utente e tecnologie usate
 - *Casi d'uso*: #glossario("funzionalità") offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi #glossario("UML") che seguono uno standard
@@ -144,9 +149,11 @@ Il documento cardine dell’#glossario("attività") di analisi composto da:
 La modalità con cui vengono descritti i vari componenti dell’architettura è specificata nel documento.
 
 === Attività di codifica
-L'#glossario("attività") di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’#glossario("attività") di progettazione. L’obiettivo dell’#glossario("attività") di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l’architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
+L'#glossario("attività") di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’#glossario("attività") di progettazione. L'obiettivo dell’#glossario("attività") di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l'architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
 
-L'attività di codifica deve seguire le metriche definite nel #glossario("PdQ"). 
+L'attività di codifica deve seguire le metriche definite nel #glossario("PdQ").
+
+=== Strumenti
 
 ==== Utilizzo di Git e della #glossario("Repository")
 Tutto il codice del progetto è contenuto nell'apposita repository #glossario("GitHub").
