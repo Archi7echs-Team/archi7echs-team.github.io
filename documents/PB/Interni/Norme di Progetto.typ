@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "1.1.1","18-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, "",
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
@@ -45,13 +46,14 @@ Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il q
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "#text(blue)[G]" in colore blu. Facendo click sul collegamento si aprirà una scheda del browser con il glossario 
 == Riferimenti <Riferimenti>
 Il documento è stato redatto con riferimento alla seguente documentazione.
-=== Link al capitolato C5 - 3Dataviz
+=== Riferimenti informativi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
-=== Slide del corso IS
-- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard #glossario("ISO 12207:1995") -  _Ultimo accesso al documento 22/01/2025_
 - Riferimento alle slide IS: *_Gestione
 di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 01/02/2025_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
+=== Riferimenti normativi
+- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard #glossario("ISO 12207:1995") -  _Ultimo accesso al documento 22/01/2025_
+
 
 #pb()
 
