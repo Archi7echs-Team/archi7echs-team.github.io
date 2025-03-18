@@ -50,16 +50,13 @@ In particolare gli obiettivi del documento sono:
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html", text(blue)[_glossario_]). Tutte le parole consultabili nel glossario saranno identificate da una "G", di colore blu, in pedice. Cliccando la parola, si aprirà il glossario nel sito web.
 
 == Riferimenti
-=== Link al capitolato C5 - 3Dataviz
+=== Riferimenti informativi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/11/2024_
-=== Slide del corso IS
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 12/12/2024_
 - Riferimento alle slide IS: *_Gestione di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]) -  _Ultimo accesso al documento 01/02/2025_
 - Riferimento alle slide IS: *#glossario("Analisi dei requisiti")*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf]) -  _Ultimo accesso al documento 28/01/2025_
 - Riferimento alle slide IS: *Diagrammi Casi d'uso*: #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf",
 text(blue)[https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf]) -  _Ultimo accesso al documento 28/01/2025_
-
-=== Riferimenti informativi
 - Riferimento al glossario (v 1.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
 - Norme di Progetto (v 1.0.0)
 
@@ -107,6 +104,8 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 - *Vitest*: #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di #glossario("unità").
 - *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili.
 - *Testcontainers*: #glossario("libreria") Java per eseguire test automatizzati utilizzando container Docker. Permette di creare ambienti di test isolati e riproducibili per database, code di messaggi e altri servizi.
+- *Mockito*: #glossario("framework") Java per il testing unitario, specializzato nella creazione di mock di oggetti. Permette di simulare il comportamento delle dipendenze per testare in isolamento le singole unità di codice.
+- *JUnit*: #glossario("framework") Java per il testing unitario. Fornisce un'architettura strutturata per scrivere ed eseguire test automatici, garantendo il corretto funzionamento del codice.
 
 
 #pb()
