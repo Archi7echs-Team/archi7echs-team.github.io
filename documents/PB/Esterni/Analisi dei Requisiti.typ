@@ -8,6 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "1.1.1", "18-03-2025", "Correzione sezione tecnologie", p.checchinato,"",
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
@@ -100,12 +101,12 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 == Tecnologie
 - *Svelte*: #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
 - *Threlte*: #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene #glossario("3D") reattive e interattive.
+- *Spring Boot*: #glossario("framework") Java per lo sviluppo di applicazioni web e microservizi. Fornisce un'architettura modulare e configurazione automatica per semplificare la gestione del #glossario("backend").
 - *Docker*: #glossario("piattaforma") di containerizzazione utilizzata per creare ambienti di sviluppo e produzione isolati e portabili. Docker facilita la distribuzione del #glossario("progetto") garantendo che l’applicazione funzioni in modo coerente in diversi ambienti.
-- *Node.js*: runtime JavaScript lato server che permette di eseguire codice JavaScript al di fuori del browser. Node.js è utilizzato per sviluppare applicazioni server-side e per gestire le operazioni asincrone in modo efficiente.
-- *Express*: #glossario("framework") minimalista per Node.js, utilizzato per creare le rotte necessarie a comunicare con il #glossario("database"). Nel #glossario("progetto"), Express gestisce le richieste HTTP e facilita l’interazione tra il frontend e il #glossario("database") PostgreSQL tramite le #glossario("API") RESTful.
 - *Postgres (Postgres.js)*: #glossario("libreria") JavaScript per l’interazione con il #glossario("database") PostgreSQL. Consente di eseguire #glossario("query") #glossario("SQL") in modo efficiente e sicuro.
 - *Vitest*: #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di #glossario("unità").
 - *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili.
+- *Testcontainers*: #glossario("libreria") Java per eseguire test automatizzati utilizzando container Docker. Permette di creare ambienti di test isolati e riproducibili per database, code di messaggi e altri servizi.
 
 
 #pb()
