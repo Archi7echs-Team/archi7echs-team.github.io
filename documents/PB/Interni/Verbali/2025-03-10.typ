@@ -21,7 +21,7 @@ _A seguito della fine del primo periodo della fase #glossario("PB"), il gruppo s
 
 = Dettagli dell'incontro
 
-*Data e ora convocazione* Giovedì 10/03/2025 - ore 15.00 \
+*Data e ora convocazione* Lunedì 10/03/2025 - ore 15.00 \
 
 *Luogo* Online - #glossario("Piattaforma") #glossario("Discord") \
 
