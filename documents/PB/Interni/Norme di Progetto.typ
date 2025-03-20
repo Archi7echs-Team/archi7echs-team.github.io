@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
-    "1.1.1","19-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, "",
+    "1.1.1","19-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, (p.salvo),
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
