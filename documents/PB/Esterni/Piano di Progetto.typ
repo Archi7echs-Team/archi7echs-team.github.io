@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (""),
+    "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo),
     "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.0", "09-03-2025", "Aggiunta consuntivo aggiornato", p.salvo, (p.scandaletti,p.lucato),
