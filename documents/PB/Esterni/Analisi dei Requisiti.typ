@@ -8,6 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "1.1.1", "21-03-2025", "Correzione sezione tecnologie", p.checchinato,(p.salvo, p.valdagno),
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
     "0.7.7", "06-02-2025", "Modifiche a UC e ingrandimento immagini", p.salvo, (p.pozzobon,p.lucato),
@@ -49,16 +50,13 @@ In particolare gli obiettivi del documento sono:
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html", text(blue)[_glossario_]). Tutte le parole consultabili nel glossario saranno identificate da una "G", di colore blu, in pedice. Cliccando la parola, si aprirà il glossario nel sito web.
 
 == Riferimenti
-=== Link al capitolato C5 - 3Dataviz
+=== Riferimenti informativi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/11/2024_
-=== Slide del corso IS
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 12/12/2024_
 - Riferimento alle slide IS: *_Gestione di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]) -  _Ultimo accesso al documento 01/02/2025_
 - Riferimento alle slide IS: *#glossario("Analisi dei requisiti")*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf]) -  _Ultimo accesso al documento 28/01/2025_
 - Riferimento alle slide IS: *Diagrammi Casi d'uso*: #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf",
 text(blue)[https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf]) -  _Ultimo accesso al documento 28/01/2025_
-
-=== Riferimenti informativi
 - Riferimento al glossario (v 1.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
 - Norme di Progetto (v 1.0.0)
 
@@ -100,12 +98,14 @@ L'accesso alla #glossario("Web App") avviene principalmente attraverso un comput
 == Tecnologie
 - *Svelte*: #glossario("framework") JavaScript per la costruzione di interfacce utente reattive. Permette con facilità di creare componenti personalizzati ad ogni nostra esigenza.
 - *Threlte*: #glossario("libreria") che combina Svelte con Three.js per facilitare la creazione di scene #glossario("3D") reattive e interattive.
-- *Docker*: #glossario("piattaforma") di containerizzazione utilizzata per creare ambienti di sviluppo e produzione isolati e portabili. Docker facilita la distribuzione del #glossario("progetto") garantendo che l’applicazione funzioni in modo coerente in diversi ambienti.
-- *Node.js*: runtime JavaScript lato server che permette di eseguire codice JavaScript al di fuori del browser. Node.js è utilizzato per sviluppare applicazioni server-side e per gestire le operazioni asincrone in modo efficiente.
-- *Express*: #glossario("framework") minimalista per Node.js, utilizzato per creare le rotte necessarie a comunicare con il #glossario("database"). Nel #glossario("progetto"), Express gestisce le richieste HTTP e facilita l’interazione tra il frontend e il #glossario("database") PostgreSQL tramite le #glossario("API") RESTful.
-- *Postgres (Postgres.js)*: #glossario("libreria") JavaScript per l’interazione con il #glossario("database") PostgreSQL. Consente di eseguire #glossario("query") #glossario("SQL") in modo efficiente e sicuro.
+- *Spring Boot*: #glossario("framework") Java per lo sviluppo di applicazioni web e microservizi. Fornisce un'architettura modulare e configurazione automatica per semplificare la gestione del #glossario("backend").
+- *Docker*: #glossario("piattaforma") di containerizzazione utilizzata per creare ambienti di sviluppo e produzione isolati e portabili. Docker facilita la distribuzione del #glossario("progetto") garantendo che l'applicazione funzioni in modo coerente in diversi ambienti.
+- *PostgreSQL*: #glossario("database") relazionale open-source avanzato. Offre elevata affidabilità, estensibilità e supporto per transazioni #glossario("ACID"), rendendolo adatto a sistemi complessi e ad alte prestazioni.
 - *Vitest*: #glossario("framework") di testing per JavaScript progettato per essere veloce e semplice da configurare. Vitest è utilizzato per eseguire test di #glossario("unità").
 - *Playwright*: uno strumento per il testing end-to-end (#glossario("e2e")) che consente di automatizzare le interazioni con le applicazioni web. Playwright supporta l'esecuzione #glossario("headless") del browser rendendo i test più veloci ed affidabili.
+- *Testcontainers*: #glossario("libreria") Java per eseguire test automatizzati utilizzando container Docker. Permette di creare ambienti di test isolati e riproducibili per database, code di messaggi e altri servizi.
+- *Mockito*: #glossario("framework") Java per il testing unitario, specializzato nella creazione di mock di oggetti. Permette di simulare il comportamento delle dipendenze per testare in isolamento le singole unità di codice.
+- *JUnit*: #glossario("framework") Java per il testing unitario. Fornisce un'architettura strutturata per scrivere ed eseguire test automatici, garantendo il corretto funzionamento del codice.
 
 
 #pb()
