@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "19-03-2025",  "Prima stesura documento", p.pesenato, (p.salvo),
+    "0.1.0", "19-03-2025",  "Prima stesura documento", p.pesenato, (p.salvo, p.valdagno),
   )
 )
 
@@ -52,16 +52,16 @@ Si procede alla discussione in ordine dei punti all’#glossario("ordine del gio
 Lascia poi la parola a #p.checchinato, che spiega la gestione della parte frontend, evidenziando l'utilizzo di Svelte-Tweakpane-UI per la creazione di un'interfaccia grafica dedicata alla visualizzazione dei dati in partenza. Mostra inoltre le funzionalità implementate, come Zoom In, Zoom Out e l'interazione con le barre del grafico. \
 Successivamente, #p.lucato illustra la parte backend, descrivendo i pattern utilizzati e la struttura adottata. Presenta i servizi implementati fino a quel momento, corredandoli di test. \
 A questo punto, Alex Beggiato interviene con una domanda:
-Non sarebbe preferibile restituire un'interfaccia invece di una classe? È buona pratica fornire sempre un tipo di ritorno ben definito, rappresentato da un'interfaccia". In questo modo si può cambiare l'implementazione senza dover cambiare il codice che la chiama.
+"Non sarebbe preferibile restituire un'interfaccia invece di una classe? È buona pratica fornire sempre un tipo di ritorno ben definito, rappresentato da un'interfaccia. In questo modo si può cambiare l'implementazione senza dover cambiare il codice che la chiama."
 Il team prende atto della domanda e si impegna a valutare la proposta.
 
 == Prossimi passi
 Per quanto riguarda il backend i prossimi passi saranno implementare i test per i servizi e controller del database, code coverage ed i test di mutazione. \
-Per quanto riguada il frontt-end continuare con i requisiti specificati nell'AdR e implementare i test di unità. \
+Per quanto riguarda il frontend continuare con i requisiti specificati nell'AdR e implementare i test di unità. \
 
 == Varie ed eventuali
-Una volta terminata la discussione, si è chiesto ad Alex Beggiato di programmare le riunioni non più a distanza di due settimane ma di una a settimana in quanto i periodi sono stati accorciati da due ad una settimana. Alex Beggiato accetta
-Non essendoci altri argomenti da discutere l’incontro è terminato alle 16:35. \
+Una volta terminata la discussione, si è chiesto ad Alex Beggiato di programmare le riunioni non più a distanza di due settimane ma di una a settimana in quanto i periodi sono stati accorciati da due ad una settimana. Alex Beggiato accetta.
+Non essendoci altri argomenti da discutere l’incontro è terminato alle 12:35. \
 Il prossimo incontro #glossario("SAL") è stato programmato per il giorno 27/03/2025 alle ore 16:00. \
 ])
 
