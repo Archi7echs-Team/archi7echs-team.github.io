@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "1.1.1","21-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
@@ -45,13 +46,14 @@ Tale documento è redatto secondo lo standard #glossario("ISO 12207:1995"), il q
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html")[_glossario_]. Tutte le parole consultabili nel glossario saranno identificate da una "#text(blue)[G]" in colore blu. Facendo click sul collegamento si aprirà una scheda del browser con il glossario 
 == Riferimenti <Riferimenti>
 Il documento è stato redatto con riferimento alla seguente documentazione.
-=== Link al capitolato C5 - 3Dataviz
+=== Riferimenti informativi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]] - _Ultimo accesso al documento 22/11/2024_
-=== Slide del corso IS
-- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard #glossario("ISO 12207:1995") -  _Ultimo accesso al documento 22/01/2025_
 - Riferimento alle slide IS: *_Gestione
 di progetto_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf]] -  _Ultimo accesso al documento 01/02/2025_
 - Riferimento alle slide IS: *_Regolamento del progetto didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]] -  _Ultimo accesso al documento 12/12/2024_
+=== Riferimenti normativi
+- Riferimento alle slide IS: *_Processi di ciclo di vita_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf")[#text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf]] - Sezione sullo standard #glossario("ISO 12207:1995") -  _Ultimo accesso al documento 22/01/2025_
+
 
 #pb()
 
@@ -74,16 +76,9 @@ In questa sezione vengono indicati i documenti che saranno consegnati all'aziend
 
 ==== Analisi dei Requisiti
 All'#glossario("interno") vengono definite le #glossario("funzionalità") che la nostra webapp deve supportare, in modo da garantire un ottimo studio preliminare approfondito del progetto. Il documento deve contenere:
-- *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un’interazione
+- *Casi d'uso*: che rappresentano in modo formale le #glossario("funzionalità") di un sistema, illustrando le #glossario("attività") svolte durante un'interazione
 - *#glossario("UML") casi d'uso*: che rappresentano in modo grafico/visivo l'interazione tra un attore e uno o più casi d'uso
 - *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. È dunque tutto quello che è stato pensato per far funzionare al meglio la webapp 
-
-==== Lettera di presentazione
-Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). È dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
-- *Introduzione*: per indicare lo scopo del documento
-- *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
-- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
-- *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
 
 ==== Piano di Progetto
 Documento fondamentale per il gruppo, che permette di eseguire delle buone retrospettive, con un automiglioramento sia per il breve che per il lungo termine. All'#glossario("interno") del documento ci devono essere i seguenti punti:
@@ -104,6 +99,28 @@ Documento che serve al team per descrivere come è stata garantita l'efficienza 
 - *Metriche per garantire la qualità dei processi*: verifica e #glossario("validazione") dei processi, dunque come garantire che ogni processo abbia il risultato atteso (buona qualità con un quantitativo di risorse investite ottimo)
 - *Metriche per garantire la qualità del prodotto*: verifica e #glossario("validazione") per garantire che il prodotto sia conforme a tutti gli obbiettivi di qualità
 
+==== Specifica Tecnica
+Il documento rappresenta una risorsa tecnica essenziale per la comprensione approfondita dell'#glossario("architettura") e delle scelte progettuali adottate nel sistema in sviluppo. Il suo obiettivo principale è fornire una descrizione dettagliata delle componenti software e delle strategie di progettazione seguite dal team.  
+
+In particolare, vengono trattati due aspetti chiave:  
+- *#glossario("Architettura") implementativa*: descrive un'analisi dettagliata delle strutture software, dei design pattern utilizzati e delle logiche di implementazione adottate per garantire scalabilità, manutenibilità ed efficienza del sistema.  
+- *#glossario("Architettura") di deployment*: descrive la configurazione dell'infrastruttura, gli ambienti di esecuzione e le modalità di distribuzione del software.  
+
+Il documento include inoltre la lista delle tecnologie utilizzate e i diagrammi #glossario("UML") (ad es. diagrammi delle classi e dei componenti) per supportare una comprensione chiara e strutturata del software. Esso quindi funge anche da guida per lo sviluppo, per la manutenzione e l'evoluzione del progetto, garantendo al contempo una copertura completa dei requisiti definiti nel documento #glossario("Analisi dei Requisiti").
+
+==== Manuale Utente
+Il presente manuale è progettato per offrire un supporto completo agli utenti nell'utilizzo del #glossario("software"), guidandoli attraverso le sue funzionalità in modo chiaro e dettagliato. L'obiettivo principale è consentire agli utenti di comprendere e sfruttare appieno le potenzialità del sistema, garantendo un'esperienza d'uso efficiente e intuitiva.
+
+Il manuale si concentra principalmente sulle istruzioni operative per l'utilizzo quotidiano. Vengono fornite spiegazioni dettagliate sui principali flussi operativi, sulle modalità di interazione con l'interfaccia e sulle best practice per un uso ottimale del sistema.
+
+==== Lettera di presentazione
+Quando si deve consegnare quanto fatto (#glossario("RTB") o #glossario("PB")) ai committenti Prof. Tullio Vardanega e Prof. Riccardo Cardin è necessario farlo tramite un'invio di una mail *priva di allegati*, ma con un solo puntatore alla _Lettera di presentazione_ che deve essere in #glossario("repo"). È dunque un documento che attesta il "completamento" di una delle due parti del progetto, dichiarando di essere pronti alla #glossario("revisione") di tutta la documentazione/materiale fatta fino a quel momento. All'#glossario("interno") della _Lettera di presentazione_ ci deve essere:
+- *Introduzione*: per indicare lo scopo del documento
+- *Link alla documentazione*: un puntatore che riporta alla #glossario("repo") del gruppo, dov'è possibile reperire tutta la documentazione
+- *Lista di documenti presenti*: ovvero l'insieme dei verbali sia #glossario("interni") che #glossario("esterni") che il gruppo ha redatto durante il #glossario("periodo"), la documentazione "interna" e la documentazione "esterna".
+- *Lista dei componenti del gruppo*: una semplice tabella che indica il nome e cognome accompagnati dalla matricola di ogni singolo componente del gruppo
+
+
 == Strumenti
 Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei membri del team:
 - *Gruppo #glossario("Telegram")* per le comunicazioni rapide ed informali
@@ -115,36 +132,75 @@ Sono attivi i seguenti strumenti e canali di comunicazione a disposizione dei me
   - Foglio appunti riunioni
   - Foglio ore condiviso
 
+#pb()
+
 == Sviluppo
 === Introduzione
-Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito come un insieme strutturato di #glossario("attività") di analisi, progettazione, codifica, integrazione, testing, installazione ed accettazione dei requisiti richiesti dal committente.
+Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito come un insieme strutturato di #glossario("attività"):
++ *Implementazione del processo*  
++ *Analisi dei requisiti di sistema*  
++ *Progettazione architetturale del sistema*
++ *Analisi dei requisiti software*
++ *Progettazione architetturale del software*
++ *Progettazione dettagliata del software*
++ *Codifica e testing del software*  
++ *Integrazione del software* 
++ *Test di qualifica del software*
++ *Integrazione di sistema*  
++ *Test di qualifica del sistema* 
++ *Installazione del software* 
++ *Supporto all'accettazione del software*
 
-=== Attività di analisi
-L'#glossario("attività") di analisi viene svolta tramite l'#glossario("analisi dei requisiti") dagli analisi prevedendo l'identificazione, la raccolta e l'#glossario("analisi dei requisiti") funzionali e non del sistema e del software. L'obiettivo dell'#glossario("attività") di analisi è la comprensione e la definizione in modo esaustivo delle esigenze del cliente e del sistema. Inoltre, essa identificando i requisiti può facilitare la realizzazione dei requisiti e fornire una stima di costi e tempo.
+Queste attività garantiscono che il ciclo di vita del software segua un processo strutturato e controllato, assicurando la qualità e la conformità ai requisiti stabiliti.  
+// applica il tag #glossario sui termini adeguati
+==== Implementazione del processo
+Questa fase costituisce il punto di partenza del #glossario("ciclo di vita") del #glossario("software"), stabilendo il modello di sviluppo secondo lo standard #glossario("ISO/IEC 12207:1995"). Si definiscono le responsabilità dei vari attori coinvolti, includendo sviluppatori, responsabili della #glossario("documentazione") e del controllo qualità. Viene scelto un framework metodologico che guidi ogni fase del processo e si identificano gli #glossario("standard") e le best practice da applicare. #glossario("Strumenti"), linguaggi di programmazione e metodi vengono selezionati per supportare le #glossario("attività") successive. Si redige un piano operativo che definisca tappe, risorse e scadenze. La documentazione iniziale garantisce la tracciabilità delle decisioni. Infine, revisioni periodiche permettono di affinare il modello e rispondere ai requisiti emergenti.
 
-Il documento cardine dell’#glossario("attività") di analisi è l'#glossario("AdR") composta da:
-- *Introduzione*: presentazione del documento
-- *Descrizione del prodotto*: analisi del prodotto tra cui obiettivi, #glossario("funzionalità"), caratteristiche utente e tecnologie usate
-- *Casi d'uso*: #glossario("funzionalità") offerte all’utente descritte in modo testuale ma anche graficamente tramite diagrammi #glossario("UML") che seguono uno standard
-- *Requisiti*: ovvero l'insieme delle #glossario("funzionalità") richieste e quelle proposte in sede interna al gruppo. È dunque tutto quello che è stato pensato per far funzionare al meglio la webapp
+==== Analisi dei requisiti di sistema
+Questa fase si concentra sull'identificazione dettagliata delle esigenze a livello di #glossario("sistema") e sulla definizione dei #glossario("requisiti"). Si esaminano i contesti operativi, le condizioni ambientali e le prestazioni attese, considerando aspetti quali sicurezza, usabilità e affidabilità. Vengono analizzati i vincoli tecnici e organizzativi, e la raccolta dei requisiti include input da fonti interne ed esterne. Ogni requisito è documentato in modo chiaro e verificabile, assicurando la tracciabilità attraverso strumenti specifici. Revisioni periodiche garantiscono coerenza e fattibilità tecnica, fornendo la base per la progettazione architetturale del sistema.
 
-La modalità con cui vengono descritti i casi d'uso e i requisiti è specificata all'#glossario("interno") del documento #glossario("AdR").
+==== Progettazione architetturale del sistema
+In questa fase viene definita una visione d'insieme dell'intero #glossario("sistema"), individuando i principali componenti #glossario("hardware") e #glossario("software") e le relative operazioni manuali. Ogni requisito viene allocato in specifici elementi, mentre le interfacce tra i componenti vengono chiaramente delineate per garantire scalabilità e modularità. La documentazione prodotta descrive la configurazione dei componenti e include valutazioni di coerenza e fattibilità, fondamentali per le fasi successive. Revisioni congiunte assicurano l'aderenza ai criteri tecnici stabiliti.
 
-=== Attività di progettazione
-L'#glossario("attività") di progettazione viene svolta dai progettisti identificando e definendo l’architettura adatta al prodotto prima di iniziare con la codifica. In questo modo, quest'ultima fase, dovrebbe risultare il meno ambigua possibile. L’obiettivo dell’#glossario("attività") di progettazione dunque, è definire la struttura del sistema comprese le componenti principali e le loro interazioni.
+==== Analisi dei requisiti software
+Questa fase traduce le esigenze del #glossario("sistema") in #glossario("requisiti") specifici per il #glossario("software"). Si dettagliano le funzionalità attese, le prestazioni, gli aspetti di sicurezza e usabilità, e i vincoli operativi. Ogni requisito viene documentato con specifiche chiare, distinguendo tra requisiti funzionali e non funzionali. Vengono inoltre definite le interfacce e i requisiti per la gestione dei dati e del database. La tracciabilità con i requisiti di sistema è garantita e revisioni periodiche confermano la coerenza e l'adeguatezza dei requisiti.
 
-Il documento cardine dell’#glossario("attività") di analisi composto da:
-- *Introduzione*: presentazione del documento
-- *Tecnologie usate*: definisce che tecnologie e che librerie di terze parti sono state usate.
-- *Architettura*: definisce i componenti e le interazioni del sistema sia in modo testuale che grafico seguendo lo standard
-- *Requisiti soddisfatti*: un riassunto sullo stato di completamento dei requisiti identificati precedentemente
+==== Progettazione architetturale del software
+In questa fase i #glossario("requisiti") vengono convertiti in una struttura di alto livello per il #glossario("software"). Si identificano i moduli, i componenti e le interfacce interne ed esterne, assicurando una corretta distribuzione delle funzionalità. Vengono delineati anche i progetti preliminari per il database e la documentazione utente. La revisione degli #glossario("standard") di progettazione assicura coerenza e tracciabilità delle scelte tecniche, creando una solida base per la progettazione dettagliata.
 
-La modalità con cui vengono descritti i vari componenti dell’architettura è specificata nel documento.
+==== Progettazione dettagliata del software
+Questa fase approfondisce la progettazione definendo algoritmi, strutture dati e logiche operative per ciascun componente del #glossario("software"). Si producono diagrammi, pseudocodice e documenti tecnici che supportano la codifica, specificando in dettaglio le interfacce tra unità. Vengono aggiornate le specifiche per il database e la #glossario("documentazione") utente, e si definiscono i requisiti di test. Revisioni interne garantiscono coerenza, completezza e prontezza per la fase di codifica.
 
-=== Attività di codifica
-L'#glossario("attività") di codifica viene svolta dallo sviluppatore traducendo i concetti esposti dai progettisti nell’#glossario("attività") di progettazione. L’obiettivo dell’#glossario("attività") di codifica è la creazione di un prodotto software che soddisfi i requisiti del committente seguendo l’architettura identificata dagli analisti producendo così codice funzionale e di alta qualità.
+==== Codifica e testing del software
+In questa fase il codice del #glossario("software") viene sviluppato seguendo le specifiche della progettazione dettagliata. Ogni unità viene implementata in modo modulare e accompagnata da procedure di test unitari. I test verificano la conformità del codice ai #glossario("requisiti") e al design previsto, con i risultati accuratamente documentati. Si applicano standard di codifica e strumenti di testing per monitorare la qualità e la copertura dei test, aggiornando la #glossario("documentazione") in parallelo.
 
-L'attività di codifica deve seguire le metriche definite nel #glossario("PdQ"). 
+==== Integrazione del software
+Questa fase prevede l'unione delle diverse unità e moduli del #glossario("software") in un sistema coeso. Viene redatto un piano di integrazione che specifica le procedure, le responsabilità e le tempistiche necessarie per combinare le unità. Durante l'integrazione, vengono eseguiti test specifici per verificare l'interoperabilità e la corretta comunicazione tra i componenti. La #glossario("documentazione") viene aggiornata con ogni modifica, e revisioni periodiche confermano che l'aggregato soddisfi i requisiti iniziali.
+
+==== Test di qualifica del software
+In questa fase si eseguono test mirati per verificare che ogni #glossario("requisito") del #glossario("software") sia stato implementato correttamente. Vengono definiti casi di test dettagliati con input, output e criteri di successo, valutando funzionalità, performance, sicurezza e usabilità. I risultati vengono documentati in modo da evidenziare eventuali anomalie e garantire la copertura totale dei requisiti. Strumenti automatizzati e revisioni periodiche assicurano tracciabilità e coerenza durante il testing.
+
+==== Integrazione di sistema
+Questa attività combina il #glossario("software") con componenti hardware, processi manuali ed altri sistemi esterni, formando un sistema integrato. Viene creato un piano di integrazione di sistema che definisce procedure, responsabilità e criteri di verifica, assicurando che le varie componenti interagiscano correttamente. I test progressivi e la documentazione aggiornata garantiscono che il sistema complessivo soddisfi i requisiti globali, preparandolo per la fase finale di qualifica.
+
+==== Test di qualifica del sistema
+In questa fase l'intero sistema, comprendente #glossario("hardware") e #glossario("software"), viene testato in condizioni operative reali. Vengono eseguiti casi di test che simulano scenari d'uso quotidiano, valutando funzionalità, performance e sicurezza a livello globale. I risultati sono documentati per verificare la copertura dei requisiti di sistema e la conformità ai risultati attesi. Revisioni congiunte e strumenti di testing automatizzati supportano la valutazione, garantendo che il sistema sia robusto e pronto per la consegna.
+
+==== Installazione del software
+Questa fase riguarda la distribuzione del #glossario("software") nell'ambiente di destinazione, seguendo un piano di installazione dettagliato. Vengono identificate le risorse e le informazioni necessarie per configurare il sistema e assicurare il corretto avvio del codice e dei database. Il processo di installazione viene monitorato e documentato in ogni fase, garantendo il rispetto delle specifiche tecniche e operative. L'assistenza tecnica supporta la configurazione e risolve eventuali problematiche riscontrate durante il processo.
+
+==== Supporto all'accettazione del software
+Questa attività finale prevede l'assistenza durante le fasi di revisione e testing di accettazione da parte dell'acquirente. Il programmatore supporta la verifica della conformità del #glossario("software") ai requisiti contrattuali, coordinando sessioni di test congiunte e raccogliendo feedback. I risultati dei test e delle revisioni sono accuratamente documentati, garantendo trasparenza e tracciabilità. Viene fornita formazione finale agli utenti e stabilita una baseline definitiva per il prodotto consegnato. Il supporto post-consegna facilita la manutenzione e una transizione operativa fluida.
+
+=== Strumenti  
+
+Il gruppo utilizza una serie di strumenti per supportare lo sviluppo e la progettazione del #glossario("software"), garantendo efficienza e chiarezza nei processi:  
+
+- *Visual Studio Code*: un editor di codice sorgente open source, leggero e altamente personalizzabile. Offre supporto per numerosi linguaggi di programmazione, integrazione con sistemi di controllo versione e una vasta gamma di estensioni per il #glossario("debugging") e l'automazione, rendendolo ideale per la scrittura e la revisione del codice.  
+
+- *draw.io*: uno strumento online per la creazione di #glossario("diagrammi") e schemi, ampiamente utilizzato per realizzare #glossario("diagrammi") #glossario("UML"), flussi di processo e mappe concettuali. Grazie alla sua interfaccia intuitiva, facilita la rappresentazione visiva delle #glossario("architetture") e dei processi, migliorando la comunicazione all'interno del team.  
+
+- *IntelliJ IDEA*: un ambiente di sviluppo integrato (#glossario("IDE")) potente e intelligente, particolarmente apprezzato per lo sviluppo in #glossario("Java"). Fornisce funzionalità avanzate come il completamento automatico del codice, il #glossario("refactoring") e il #glossario("debugging"), supportando lo sviluppo di applicazioni complesse con elevati standard qualitativi.
 
 ==== Utilizzo di Git e della #glossario("Repository")
 Tutto il codice del progetto è contenuto nell'apposita repository #glossario("GitHub").
@@ -166,9 +222,6 @@ Il responsabile di progetto è tenuto a:
 + chiudere la PR effettuando il merge sul main ed eliminando il branch oppure richiedere modifiche al programmatore
   - in caso di richiesta modifiche l'iter riparte
 
-
-
-#pb()
 = Processi di Supporto
 == Documentazione 
 Questa sezione tratta le norme per la redazione della documentazione del gruppo, in linea con l'organizzazione del team, allineando lo stile e la gestione delle revisioni.
@@ -178,6 +231,9 @@ I modelli di documento sono:
 - documento
 - allegato
 - carta intestata
+
+#pb()
+
 ==== Documento
 Questo #glossario("template") viene utilizzato per la redazione di tutta la documentazione interna ed esterna. \ 
 Nella prima pagina del documento devono essere indicati, oltre a titolo e sottotitolo:
