@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "0.1.0", "20-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo),
+    "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
   ),
 )
 
@@ -19,9 +19,9 @@ Attraverso un'analisi approfondita, il documento illustra i principali component
 Gli obiettivi principali di questa specifica tecnica sono:
 - Fornire una documentazione chiara e dettagliata a supporto dello sviluppo e della manutenzione del software.
 - Garantire l'allineamento con i requisiti funzionali e non funzionali definiti nel documento _Analisi dei Requisiti v1.0.0_.\
-- Definire una base comune di conoscenza per tutti i membri del team, facilitando l’integrazione e l’evoluzione del sistema.
+- Definire una base comune di conoscenza per tutti i membri del team, facilitando l'integrazione e l'evoluzione del sistema.
 == Scopo del progetto
-L’obiettivo è realizzare una piattaforma web di visualizzazione tridimensionale dei dati, che consenta all’utente che la utilizza di navigare e interagire con grafici a barre verticali 3D rappresentanti dati complessi, utili per l'analisi e la presentazione di informazioni.
+L'obiettivo è realizzare una piattaforma web di visualizzazione tridimensionale dei dati, che consenta all'utente che la utilizza di navigare e interagire con grafici a barre verticali 3D rappresentanti dati complessi, utili per l'analisi e la presentazione di informazioni.
 Il prodotto deve essere progettato per poter rappresentare  dati, in un modello 3D, navigabile e interattivo.\ Dunque le sue #glossario("funzionalità") principali includono:
 
 - *Funzionalità di un ambiente 3D*: 
