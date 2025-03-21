@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "19-03-2025",  "Prima stesura documento", p.pesenato,(p.salvo),
+    "0.1.0", "21-03-2025",  "Prima stesura documento", p.pesenato,(p.salvo),
   )
 )
 
@@ -84,7 +84,7 @@ Nello specifico, sono stati definiti due gruppi:
 Questa suddivisione consente a tutti i membri coinvolti di sperimentare direttamente le tecnologie adottate, facilitando la comprensione delle architetture da applicare e favorendo un'integrazione più efficace tra le componenti del sistema.
 
 == Varie ed eventuali
-Si è deciso di contattare il #p.cardin per discutere delle modifiche apportate alle scelte tecnologiche dopo colloquio RTB
+Si è deciso di contattare il #p.cardin per discutere delle modifiche apportate alle scelte tecnologiche dopo colloquio RTB.
 Non essendoci altri argomenti da discutere l'incontro del team Archi7echs è terminato alle 16:00. \
 Si convoca il prossimo incontro per martedì 25/03/2024 ad orario da stabilire per discutere di quanto svolto durante la settimana.
 
@@ -111,7 +111,7 @@ _Per il dettaglio delle decisioni si rimanda al punto dell'#glossario("OdG")._
 
 #v(3em)
 
-Padova, 19 marzo 2025
+Padova, 17 marzo 2025
 
 \
 #grid(
