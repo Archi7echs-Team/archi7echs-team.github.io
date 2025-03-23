@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "21-03-2025",  "Prima stesura documento", p.pesenato,(p.salvo),
+    "0.1.0", "21-03-2025",  "Prima stesura documento", p.pesenato,(p.salvo, p.valdagno),
   )
 )
 
@@ -21,7 +21,7 @@ _A seguito della fine del secondo periodo della fase #glossario("PB"), il gruppo
 
 = Dettagli dell'incontro
 
-*Data e ora convocazione* Lunedì 10/03/2025 - ore 15.00 \
+*Data e ora convocazione* Lunedì 17/03/2025 - ore 15.00 \
 
 *Luogo* Online - #glossario("Piattaforma") #glossario("Discord") \
 
