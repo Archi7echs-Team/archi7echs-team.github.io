@@ -103,7 +103,7 @@ Padova, 19 marzo 2025
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
     [Per Sanmarco Informatica:\ Alex Beggiato \
-    //#place(center, image("//img/smi_sign.png", width: 120%))
+    #place(center, image("//img/smi_sign.png", width: 120%))
     ],
   )]
 )
