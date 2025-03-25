@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "1.2.0","21-03-2025","Ampliamento sezione processi di supporto",(p.checchinato,p.valdagno), (p.salvo, p.pesenato),
     "1.1.1","21-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
@@ -222,6 +223,8 @@ Il responsabile di progetto è tenuto a:
 + chiudere la PR effettuando il merge sul main ed eliminando il branch oppure richiedere modifiche al programmatore
   - in caso di richiesta modifiche l'iter riparte
 
+
+#pb()
 = Processi di Supporto
 == Documentazione 
 Questa sezione tratta le norme per la redazione della documentazione del gruppo, in linea con l'organizzazione del team, allineando lo stile e la gestione delle revisioni.
@@ -231,9 +234,6 @@ I modelli di documento sono:
 - documento
 - allegato
 - carta intestata
-
-#pb()
-
 ==== Documento
 Questo #glossario("template") viene utilizzato per la redazione di tutta la documentazione interna ed esterna. \ 
 Nella prima pagina del documento devono essere indicati, oltre a titolo e sottotitolo:
@@ -302,6 +302,34 @@ E' compito del #glossario("verificatore"):
 E' compito del #glossario("responsabile"):
 + verificare la correttezza dei contenuti
 + inserire il proprio nome nell'apposita colonna della tabella, insieme a quello del verificatore
+
+=== Ciclo di vita <ciclo_vita>
+
+Il ciclo di vita di un documento può essere suddiviso nelle seguenti fasi:  
+
++ *Adattamento o creazione di un template*: si definisce la struttura base del documento, scegliendo o adattando un template conforme agli #glossario("standard") stabiliti, garantendo uniformità tra i vari documenti del progetto.  
+
++ *Definizione delle sezioni*: si identificano le sezioni necessarie in base agli obiettivi del documento, assicurandosi che coprano tutti gli aspetti richiesti e siano organizzate in modo logico e coerente.  
+
++ *Definizione degli elaboratori delle sezioni*: ogni sezione viene assegnata a specifici #glossario("elaboratori"), che hanno il compito di redigerla in base alle linee guida stabilite nel #glossario("Norme di Progetto").
+
++ *Stesura delle sezioni*: gli elaboratori scrivono il contenuto delle sezioni assegnate, seguendo gli #glossario("standard") definiti dalle #glossario("Norme di Progetto") e utilizzando un linguaggio chiaro e tecnico, se necessario.  
+
++ *Verifica da parte degli elaboratori*: dopo la stesura, gli #glossario("elaboratori") eseguono un primo controllo sulla correttezza, coerenza e completezza delle sezioni, assicurando il rispetto delle convenzioni stabilite dalle #glossario("Norme di Progetto").  
+
++ *Verifica delle sezioni*: i #glossario("verificatori") esaminano il documento per individuare eventuali errori, incongruenze o violazioni delle #glossario("norme di qualità"), fornendo feedback per eventuali correzioni.  
+
++ *Approvazione da parte del responsabile*: il #glossario("responsabile") approva il documento dopo la verifica finale, rilasciando la versione definitiva pronta per la pubblicazione e l'utilizzo ufficiale.
+
+=== Sistema di composizione tipografica
+
+Per la stesura dei documenti, il gruppo utilizza #glossario("Typst"), un moderno sistema di composizione tipografica che offre un'alternativa più accessibile rispetto a #glossario("LaTeX"). #glossario("Typst") combina la potenza della formattazione automatizzata con una sintassi più intuitiva e immediata. I principali vantaggi rispetto a LaTeX includono:
+- Sintassi più semplice e leggibile, riducendo la curva di apprendimento per nuovi utenti.
+- Gestione più intuitiva degli stili e delle strutture, senza necessità di pacchetti complessi.
+- Maggiore integrazione con strumenti moderni, facilitando l'uso in ambienti collaborativi.
+
+L'uso di #glossario("Typst") quindi, consente una redazione più veloce ed efficiente dei documenti, mantenendo un'elevata qualità tipografica e semplificando la gestione della formattazione.
+
 
 == Numero di versione <numversione>
 Come indicato il numero di versione è formato da 3 valori: *x.y.z*. \
@@ -608,6 +636,61 @@ Tutte le istruzioni sopra descritte sono valide anche per il #glossario("respons
 + Premere su "Merge #glossario("pull request")" e successivamente su "Confirm merge"
 + Una volta effettuato il merge, comparirà un bottone "Delete branch" che permette di eliminare il ramo di lavoro. Questo passaggio è fondamentale per mantenere pulita la #glossario("repository") e non avere branch inutilizzati. 
 
+=== Analisi statica
+
+L'#glossario("analisi statica") è una forma di #glossario("verifica del software") che non richiede l'esecuzione del programma. Invece di eseguire il codice, lo analizza insieme alla documentazione per verificare la conformità a regole predefinite, l'assenza di potenziali difetti e la presenza di proprietà desiderate. Questa tecnica può essere applicata a tutti i prodotti del #glossario("processo di sviluppo software"), non solo al codice eseguibile, e viene utilizzata anche nella validazione.  
+
+L'analisi statica può essere eseguita attraverso diversi metodi:  
+- Per prodotti più semplici, si possono utilizzare metodi di lettura, come il desk check, il walkthrough e l'inspection. La loro efficacia dipende dall'esperienza dei #glossario("verificatori") o dalla precisione di strumenti automatizzati.  
+- Per analisi più approfondite e in contesti in cui la prova empirica è costosa, si adottano metodi formali, come quelli algebrici, basati sulla dimostrazione assistita di proprietà.  
+
+Esistono diverse tipologie di analisi statica del codice, tra cui:  
+- *Analisi del flusso di controllo*: verifica che l'esecuzione avvenga nella sequenza specificata e che il codice sia ben strutturato, individuando anche porzioni non raggiungibili.  
+- *Analisi del flusso dei dati*: studia le modalità di accesso alle variabili (lettura, scrittura) per rilevare anomalie come scritture successive senza letture intermedie o letture che precedono le scritture. Mira inoltre ad accertare l'assenza di #glossario("variabili globali").  
+- *Analisi dei limiti*: verifica che i valori del programma rimangano sempre entro i limiti definiti dal loro #glossario("tipo di dato"), controllando problemi come #glossario("overflow") e #glossario("underflow").  
+- *Analisi dell'uso dello stack*: studia le dipendenze e le dinamiche di crescita dello stack durante l'esecuzione del programma.  
+- Altre forme di #glossario("analisi statica") includono:  
+  - *Analisi del flusso dell'informazione*  
+  - *Esecuzione simbolica*  
+  - *Verifica formale del codice*  
+  - *Analisi del comportamento temporale*  
+  - *Analisi di interferenza*  
+  - *Analisi del codice oggetto*  
+
+L'#glossario("analisi statica") è una fase essenziale del #glossario("processo di verifica e validazione") e precede, oltre a integrare, l'#glossario("analisi dinamica") (i test). Scrivere codice che faciliti la verifica, evitando funzionalità poco chiare, è fondamentale per una buona #glossario("analisi statica").
+
+=== Analisi dinamica
+
+L'#glossario("analisi dinamica") è una forma di verifica del software che implica l'esecuzione del codice per osservare il suo comportamento in un ambiente controllato. A differenza dell'#glossario("analisi statica"), che esamina il codice senza eseguirlo, l'#glossario("analisi dinamica") si basa sull'esecuzione di #glossario("oggetti di prova"), ovvero programmi eseguibili che includono la porzione di codice sotto esame. Ogni prova (test) consiste nell'esecuzione di tale programma con specifici #glossario("casi di prova"). Un #glossario("caso di prova") tipicamente definisce l'oggetto di prova, i valori di ingresso, l'uscita attesa, l'ambiente di esecuzione e lo stato iniziale, nonché i passi di esecuzione. L'obiettivo principale dell'#glossario("analisi dinamica") è rilevare la presenza di difetti nel #glossario("software") osservando discrepanze tra il comportamento effettivo e quello atteso. Le prove dovrebbero essere ripetibili e, idealmente, automatizzate per garantire coerenza e facilitare la #glossario("regressione").
+
+Un elemento cruciale nell'#glossario("analisi dinamica") è l'#glossario("oracolo"), un meccanismo per determinare a priori i risultati attesi di un test e convalidare i risultati ottenuti. L'#glossario("analisi dinamica") è complementare all'#glossario("analisi statica") e contribuisce in modo significativo alla misurazione della qualità del prodotto,comprendendo diverse categorie di test che focalizzano la verifica su differenti livelli e aspetti del #glossario("software").
+
+==== Test di unità (TU)
+
+Il #glossario("test di unità") si concentra sulla verifica della più piccola unità di software utilmente testabile come entità singola, che tipicamente corrisponde a una singola procedura, una classe o un piccolo aggregato coeso. L'obiettivo è accertare la correttezza del codice "as implemented". I #glossario("test di unità") possono essere di due tipi principali:
+
+- *#glossario("Test funzionali") (black-box)*: Si basano unicamente sulla specifica degli ingressi e delle uscite dell'unità sotto test, senza considerare la sua logica interna. Si utilizzano dati di ingresso che corrispondono a specifici esiti e le classi di equivalenza (insiemi di dati di ingresso che producono lo stesso comportamento funzionale) formano singoli #glossario("casi di prova"). I TU funzionali contribuiscono alla #glossario("requirements coverage"), ovvero alla percentuale di requisiti funzionali soddisfatti dal prodotto.
+- *#glossario("Test strutturali") (white-box)*: Verificano la logica interna del codice dell'unità, perseguendo un alto grado di #glossario("structural coverage"). Un singolo #glossario("caso di prova") attiva un singolo cammino di esecuzione nell'unità. Le dimensioni della #glossario("structural coverage") includono #glossario("Statement Coverage") (ogni comando eseguito almeno una volta), #glossario("Branch Coverage") (ogni ramo del flusso di controllo attraversato almeno una volta) e #glossario("Decision/Condition Coverage") (ogni condizione di ogni decisione assume entrambi i valori di verità almeno una volta).
+
+Per eseguire i #glossario("test di unità"), spesso si utilizzano #glossario("driver"), componenti fittizi che pilotano il test fornendo gli ingressi, e #glossario("stub"), componenti fittizi che simulano le parti del sistema dipendenti dall'unità sotto test.
+
+==== Test di integrazione (TI)
+
+Il #glossario("test di integrazione") si applica alle componenti individuate nel #glossario("design architetturale") e mira a verificare la loro interazione e collaborazione una volta integrate. L'obiettivo è rilevare difetti di progettazione architetturale o bassa qualità dei #glossario("test di unità"), assicurando che i dati scambiati tra le interfacce siano conformi alla specifica e che i flussi di controllo specificati siano corretti. L'integrazione può avvenire in modo incrementale, costruendo e verificando il sistema passo dopo passo. Questa strategia può comportare l'uso di molti #glossario("stub"), specialmente in approcci top-down che integrano prima le funzionalità di più alto livello.
+
+==== Test di sistema (TS)
+
+Il #glossario("test di sistema") verifica come l'esecuzione del sistema nel suo complesso soddisfi i requisiti software definiti nell'#glossario("Analisi dei Requisiti") (AdR). Completa la misura della #glossario("requirements coverage") iniziata con i #glossario("test di unità") funzionali. Il #glossario("test di sistema") è tipicamente funzionale (black-box) e non richiede conoscenza della logica interna del software. Inizia al completamento del #glossario("test di integrazione") e precede il #glossario("collaudo").
+
+====  Test di accettazione (Collaudo)
+
+Il #glossario("test di accettazione"), o #glossario("collaudo"), accerta il soddisfacimento dei requisiti utente (definiti nel #glossario("capitolato")) alla presenza del committente. È un'attività formale che, in caso di esito positivo, porta al rilascio finale del prodotto.
+
+====  Test di regressione
+
+Il #glossario("test di regressione") ha lo scopo di accertare che le modifiche apportate al #glossario("software") per aggiunte, correzioni o rimozioni non pregiudichino le funzionalità già verificate. Il rischio di regressione aumenta con l'aumentare dell'#glossario("accoppiamento") e al diminuire dell'#glossario("incapsulamento") tra i componenti. Il #glossario("test di regressione") comprende la ripetizione selettiva di #glossario("test di unità"), di #glossario("integrazione") e di #glossario("sistema") necessari per verificare che la modifica di una parte del #glossario("sistema") non causi errori in quella parte o in altre parti correlate.
+
+
 == Comunicazione interna
 La comunicazione interna del gruppo, fondamentale per lo svolgimento del progetto e allineamento dei #glossario("task"), si divide in due categorie:
 - Comunicazione *sincrona*
@@ -644,7 +727,29 @@ Le comunicazioni interne tra i membri del gruppo, invece, possono avvenire in mo
 L’#glossario("attività") di #glossario("validazione") viene svolta dimostrando che il prodotto software risponda ai requisiti degli utenti finali attraverso test, prove e altri metodi oggettivi. L’obiettivo dell’#glossario("attività") di #glossario("validazione") è anche, attraverso l’interazione diretta con il committente, di dimostrare che il prodotto software rispetti tutti i requisiti concordati e che esso funzioni correttamente avendo quindi un prodotto software pronto al #glossario("rilascio"). Dunque potremmo definire questa #glossario("attività") come il processo di accertamento che il prodotto software soddisfi i requisiti specificati e che sia conforme all’uso previsto, come spuntare una checklist di controllo.
 
 == Qualità
-L’#glossario("attività") di gestione della qualità è un processo ampiamente descritto nel documento #glossario("PdQ").
+=== Gestione della qualità
+L'#glossario("attività") di gestione della qualità è un #glossario("processo") ampiamente descritto nel documento #glossario("PdQ"). \
+La gestione della qualità è essenziale per garantire che il software, la documentazione e le #glossario("attività") di sviluppo rispettino gli standard e soddisfino i requisiti definiti. Questo processo si basa su principi strutturati che permettono di monitorare e migliorare costantemente la qualità del progetto. Per ottenere risultati efficaci inoltre, vengono implementati metodi di #glossario("verifica") e #glossario("validazione"), con il coinvolgimento attivo di tutti i membri del team e il supporto di strumenti specifici.
+
+=== Standard ISO 9000:2000
+Lo standard #glossario("ISO 9000:2000") fornisce una base solida per la gestione della qualità attraverso un insieme di principi che consentono alle organizzazioni di migliorare continuamente le loro prestazioni. Questi principi sono:
+ - *Centralità del cliente*: la soddisfazione del cliente è un obiettivo prioritario e la qualità deve essere orientata alle sue esigenze.
+ - *Leadership*: una chiara direzione strategica e una guida efficace sono fondamentali per garantire il successo del progetto.
+ - *Partecipazione attiva del team*: il coinvolgimento e la responsabilizzazione di tutti i membri favoriscono il raggiungimento degli obiettivi.
+ - *Approccio per processi*: ogni #glossario("attività") deve essere gestita come parte di un sistema interconnesso di processi.
+ - *Miglioramento continuo*: l'evoluzione costante dei metodi di lavoro e delle strategie di sviluppo è essenziale per mantenere alti standard qualitativi.
+ - *Decisioni basate sui dati*: le scelte devono essere supportate da analisi oggettive e dati concreti.
+ - *Gestione dei rapporti con i fornitori*: stabilire relazioni di fiducia con fornitori e stakeholder migliora la qualità complessiva.
+Tali principi vengono adottati per strutturare un sistema di gestione della qualità che favorisca la coerenza, l'efficienza e l'affidabilità del progetto.
+
+=== Gestione del cambiamento
+Nel contesto di un progetto software, la gestione del cambiamento rappresenta un elemento cruciale per garantire un'evoluzione efficace del #glossario("processo") di sviluppo. Il cambiamento può essere percepito come una sfida o come un'opportunità a seconda dell'approccio adottato dal team. 
+Un cambiamento reattivo si verifica quando il team si adatta forzatamente a nuove situazioni senza una pianificazione adeguata, generando possibili inefficienze. Al contrario, un approccio proattivo permette di anticipare le necessità di modifica, valutandone i benefici e pianificandone l'implementazione in modo strutturato.\
+Gli elementi chiave per una gestione efficace del cambiamento includono:
+- *Identificazione delle necessità di cambiamento*: analisi delle aree che necessitano miglioramenti per ottimizzare il #glossario("processo") di sviluppo.
+- *Comunicazione chiara*: coinvolgimento del team e degli stakeholder per garantire una transizione graduale e condivisa.
+- *Pianificazione e attuazione*: definizione di strategie operative e assegnazione di responsabilità per gestire il cambiamento con il minimo impatto sul progetto.
+- *Monitoraggio e adattamento*: valutazione continua degli effetti del cambiamento e eventuali correzioni per migliorarne l'efficacia.
 
 == Configurazione
 L’#glossario("attività") di gestione della configurazione è un processo che norma l’identificazione, organizzazione e controllo delle modifiche agli “artefatti” durante il loro #glossario("ciclo di vita").
@@ -684,10 +789,28 @@ La struttura del branch master è (le directory sono segnate in grassetto):
     - *#glossario("Interni")*
       - *Verbali*
       - Glossario
-      - Norme di Progetto    
+      - Norme di Progetto  
 
+=== Sincronizzazione 
+La sincronizzazione delle #glossario("attività") viene gestita attraverso #glossario("repository") condivise su #glossario("GitHub"), garantendo un flusso di lavoro organizzato e tracciabile. Ogni compito assegnato viene monitorato tramite specifiche #glossario("issue"), che permettono di mantenere una chiara visione dello stato di avanzamento del progetto.
+Durante lo svolgimento delle #glossario("attività"), ogni membro del team lavora su una versione separata del codice, evitando conflitti e sovrapposizioni. Questo metodo consente di operare parallelamente su più task, ottimizzando la produttività e riducendo il rischio di interferenze tra le modifiche effettuate da diversi sviluppatori. \
+Le modifiche apportate vengono periodicamente integrate nel flusso principale attraverso #glossario("pull request"), che permettono una revisione strutturata e garantiscono che solo codice verificato venga incorporato nel progetto.
+
+
+== Risoluzione dei problemi
+Durante lo sviluppo di un progetto complesso, possono emergere ostacoli di varia natura che, se non affrontati tempestivamente, rischiano di compromettere il corretto avanzamento delle #glossario("attività"). Il #glossario("processo") di risoluzione dei problemi ha quindi lo scopo di identificare, analizzare e correggere le criticità in modo strutturato, assicurando una gestione efficace delle anomalie e una continua ottimizzazione dei processi.
+
+=== Rilevamento
+Un'identificazione tempestiva delle problematiche è fondamentale per minimizzare il loro impatto sulle #glossario("attività"). Tutti i membri del team sono incoraggiati a segnalare eventuali anomalie non appena vengono individuate, attraverso strumenti di tracciamento adeguati. \
+Una volta rilevato un problema, è necessario analizzarne le cause per comprendere la radice della questione ed evitare che si ripresenti in futuro. Per facilitare questo #glossario("processo"), ogni problema deve essere classificato in base alla sua gravità e alla sua urgenza. Inoltre, la documentazione accurata dei problemi e delle loro risoluzioni permette di individuare pattern ricorrenti e definire strategie preventive a lungo termine.
+
+=== Risoluzione
+Dopo aver individuato le cause di un problema, il team procede con l'identificazione della soluzione più efficace. Le strategie di intervento vengono valutate in base all'impatto atteso e all'effort richiesto, cercando sempre di minimizzare eventuali effetti collaterali sulle altre componenti del progetto. \
+Una volta implementata la soluzione, è necessario verificare che il problema sia stato effettivamente risolto e che non abbia introdotto ulteriori anomalie. Se il problema persiste o emergono nuove criticità, si procede con una revisione della soluzione adottata fino al completo ripristino della funzionalità compromessa. \
+Il *miglioramento continuo* del #glossario("processo") di risoluzione dei problemi avviene attraverso un'analisi periodica delle segnalazioni raccolte, con l'obiettivo di affinare le pratiche adottate e ridurre il rischio di ricorrenza delle stesse problematiche.
 
 #pb()
+
 = Management
 
 == Gestione dell'assegnazione dei ruoli
