@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "26-03-2025",  "Prima stesura documento", p.lucato,"",
+    "0.1.0", "29-03-2025",  "Prima stesura documento", p.lucato,(p.checchinato),
   )
 )
 
@@ -57,7 +57,7 @@ L'incontro inizia, come da programma alle ore 16.00. Sono presenti tutti i membr
 Il team discute di quanto detto durante l'incontro effettuato con il #p.cardin in data 24/03/2025, richiesta per presentare le modifiche tecnologiche apportate. Il gruppo si ritiene soddisfatto del dialogo ottenuto, dove si è evidenziata un'ottima conoscenza delle tecnologie scelte nella prima parte di #glossario("RTB") e dei loro limiti. Grazie a questo, si è riusciti a valutare in maniera più critica la possibilità di utilizzare altre tecnologie (come #glossario("Spring Boot")), non per una scelta errata fatta in precedenza ma per una visione più critica dei limiti che apportava utilizzando Node.js ed Express. 
 
 == Verifica avanzamento lavori durante il periodo appena trascorso
-Nella prima parte di presentazioni, #p.pozzobon mostra quanto implementato durante la settimana. Si identificano nuovi filtri come l'opacizzazione di valori al di fuori di un range inserito dall'utente, un nuovo menu a comparsa dopo aver effettuato il click sopra una barra mostrando le informazioni principali della stessa, mostrare solo le barre con valore maggiore/minore della media globale. Si mostra la predisposizione di un menu per il reperimento dei dati tramite connessione al DB, dall'API esterna di Weather Forecast e da un file .csv. Il collegamento tra il lato frontend e il lato backend verrà effettuato nel prossimo periodo. #p.lucato mostra quanto completato durante la settimana insieme a #p.pesenato, evidenziando le ultime implementazioni per il reperimento dei dati tramite richiesta all'API esterna di Weather Forecast. Vengono citate 2 issue per la possibile CI/CD e la code coverage, previste per il periodo successivo.
+Nella prima parte di presentazioni, #p.pozzobon mostra quanto implementato durante la settimana. Si identificano nuovi filtri come l'opacizzazione di valori al di fuori di un range inserito dall'utente, un nuovo menu a comparsa dopo aver effettuato il click sopra una barra mostrando le informazioni principali della stessa, mostrare solo le barre con valore maggiore/minore della media globale. Si mostra la predisposizione di un menù per il reperimento dei dati tramite connessione al DB, dall'API esterna di Weather Forecast e da un file .csv. Il collegamento tra il lato frontend e il lato backend verrà effettuato nel prossimo periodo. #p.lucato mostra quanto completato durante la settimana insieme a #p.pesenato, evidenziando le ultime implementazioni per il reperimento dei dati tramite richiesta all'API esterna di Weather Forecast. Vengono citate 2 issue per la possibile CI/CD e la code coverage, previste per il periodo successivo.
 
 == Definizione ruoli
 Essendo la fine dell nono #glossario("periodo"), si procede alla definizione dei ruoli per il successivo. I ruoli assegnati sono i seguenti:
@@ -80,7 +80,7 @@ Successivamente i membri del team presenti si scambiano i compiti e le informazi
 
 == Varie ed eventuali
 #p.pozzobon mostra la possibilità di aggiungere alcune funzionalità non elencate nel documento di #glossario("AdR"). Il team valuterà la possibilità di inserirle se ritenute implementabili secondo i tempi e i costi a disposizione. Il gruppo ricorda l'incontro con l'azienda proponente in data 27/03/2025. \
-Si convoca il prossimo incontro per martedì 2/04/2024 ad orario da stabilire per discutere di quanto svolto durante la settimana.
+Si convoca il prossimo incontro per martedì 02/04/2024 ad orario da stabilire per discutere di quanto svolto durante la settimana.
 
 = Decisioni
 
