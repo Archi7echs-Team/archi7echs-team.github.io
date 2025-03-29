@@ -2,14 +2,14 @@
 
 #show: conf.with(
   title: "Verbale incontro 27/03/2025",
-  subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 10",
+  subtitle: "Call con Sanmarco Informatica - verbale esterno nr. 11",
   author: p.lucato,
   state: "",
   intern: false,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "29-03-2025",  "Prima stesura documento", p.lucato, (p.checchinato),
+    "0.1.0", "29-03-2025",  "Prima stesura documento", p.lucato, (p.checchinato,p.salvo),
   )
 )
 
