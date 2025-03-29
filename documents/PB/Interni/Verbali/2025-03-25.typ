@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "29-03-2025",  "Prima stesura documento", p.lucato,(p.checchinato),
+    "0.1.0", "29-03-2025",  "Prima stesura documento", p.lucato,(p.checchinato,p.salvo),
   )
 )
 
@@ -98,7 +98,8 @@ Si convoca il prossimo incontro per martedì 02/04/2024 ad orario da stabilire p
   (281,), (p.scandaletti), [Front-end: pannello filtri al click di ogni barra],
   (282,), (p.pozzobon), [Front-end: parametri filtri in oggetto dedicato],
   (283,), (p.checchinato, p.valdagno), [ST: Sezione componenti front-end],
-  
+  (287,), (p.scandaletti), [Front-end: gestione filtri],
+  (288,), (p.salvo), [PdP: stesura periodo nove],
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'#glossario("OdG")._
