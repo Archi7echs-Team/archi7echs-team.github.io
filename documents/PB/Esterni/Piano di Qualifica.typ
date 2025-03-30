@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,"",
     "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo, (p.pesenato, p.scandaletti),
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
@@ -374,4 +375,77 @@ Ogni test è associato ad uno *stato* che può essere:
   )
     <tab:testdiaccettazione>
 ]
+
+== Test di Unità
+#align(center)[
+  #table(
+  columns: (auto, auto, auto),
+  align: (col, row) => (center, center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice identificativo*], [*Descrizione*], [*Stato*]),
+  [T.U.1],[Verifica che fetchData() restituisca dati corretti da un'API esterna], [NI],
+  [T.U.2] ,[Verifica che fetchData() gestisca correttamente un errore client (HTTP 400)], [NI],
+  [T.U.3] ,[Verifica che fetchData() gestisca correttamente un errore server (HTTP 500)], [NI],
+  [T.U.4] ,[Verifica che fetchData() gestisca correttamente errori di connessione non dovuti a timeout], [NI],
+  [T.U.5] ,[Verifica che fetchData() gestisca correttamente errori di timeout], [NI],
+  [T.U.6] ,[Verifica che fetchData() gestisca correttamente errori inaspettati], [NI],
+  [T.U.7] ,[Verifica che fetchData() rifiuti contenuti con un tipo MIME non supportato], [NI],
+  [T.U.8] ,[Verifica che fetchData() gestisca correttamente risposte non di successo (non HTTP 200)], [NI],
+  [T.U.9] ,[Verifica che il parsing di un CSV valido con più righe e colonne estragga correttamente X, Z e Y.],[NI],
+  [T.U.10],[Verifica che il parsing di un file CSV vuoto generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.11] ,[Verifica che il parsing di un file non CSV generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.12] ,[Verifica che il parsing di un file CSV troppo grande generi un'eccezione FileTooBigException.],[NI],
+  [T.U.13] ,[Verifica che il parsing di un CSV valido con una sola riga di dati (header + 1 data row) avvenga correttamente.],[NI],
+  [T.U.14] ,[Verifica che il parsing di un CSV con valori numerici estremi sia corretto.],[NI],
+  [T.U.15] ,[Verifica che il parsing di un CSV con spazi bianchi intorno ai valori li gestisca correttamente (trim).],[NI],
+  [T.U.16] ,[Verifica che il parsing di un CSV con meno di 2 righe totali generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.17] ,[Verifica che il parsing di un CSV con header con meno di 2 colonne generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.18] ,[Verifica che il parsing di un CSV con un numero di colonne non coerente generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.19] ,[Verifica che il parsing di un CSV con un campo vuoto generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.20] ,[Verifica che il parsing di un CSV con valori non numerici dove attesi double generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.21] ,[Verifica che il parsing di un CSV con più di 300 colonne generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.22] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException.],[NI],
+  [T.U.23] ,[Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException.],[NI],
+  [T.U.24], [Verifica che il parsing di un CSV con un numero di colonne non coerente generi un'eccezione InvalidCsvException], [NI],
+  [T.U.25], [Verifica che il parsing di un CSV con un campo vuoto generi un'eccezione InvalidCsvException], [NI],
+  [T.U.26], [Verifica che il parsing di un CSV con valori non numerici dove attesi double generi un'eccezione InvalidCsvException], [NI],
+  [T.U.27], [Verifica che il parsing di un CSV con più di 300 colonne generi un'eccezione InvalidCsvException], [NI],
+  [T.U.28] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException], [NI],
+  [T.U.29], [Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException], [NI],
+  )
+    <tab:testdiunita>
+]
+
+
+== Test di Integrazione
+#align(center)[
+  #table(
+  columns: (auto, auto, auto),
+  align: (col, row) => (center, center, center,).at(col),
+  inset: 6pt,
+  table.header([*Codice identificativo*], [*Descrizione*], [*Stato*]),
+  [T.I.1],[Verifica che il contesto dell'applicazione si avvii correttamente], [NI],
+  [T.I.2] ,[Verifica che l’endpoint /api/coordinates risponda correttamente senza parametri (default LARGE)], [NI],
+  [T.I.3] ,[Verifica che l’endpoint /api/coordinates risponda correttamente con parametro SMALL], [NI],
+  [T.I.4] ,[Verifica che l’endpoint /api/coordinates risponda correttamente con parametro MEDIUM], [NI],
+  [T.I.5] ,[Verifica che l’endpoint /api/coordinates risponda correttamente con parametro LARGE], [NI],
+  [T.I.6] ,[Verifica che l’endpoint /api/coordinates risponda correttamente con parametro non valido (default a LARGE)], [NI],
+  [T.I.7] ,[Verifica che l’endpoint /api/coordinates gestisca correttamente dati vuoti], [NI],
+  [T.I.8] ,[Verifica che l’endpoint /api/uploadCsv accetti file CSV validi], [NI],
+  [T.I.9] ,[Verifica che l’endpoint /api/uploadCsv rifiuti file CSV non validi], [NI],
+  [T.I.10] ,[Verifica che l’endpoint /api/uploadCsv rifiuti file CSV vuoti], [NI],
+  [T.I.11] ,[Verifica che l’endpoint /api/uploadCsv rifiuti file non CSV], [NI],
+  [T.I.12] ,[Verifica che l’endpoint /api/uploadCsv rifiuti file CSV troppo grandi], [NI],
+  [T.I.13] ,[Verifica che il servizio DefaultExternalDataService recuperi correttamente i dati da un'API esterna], [NI],
+  [T.I.14] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente un errore client (HTTP 400)], [NI],
+  [T.I.15] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente un errore server (HTTP 500)], [NI],
+  [T.I.16] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente errori di connessione non dovuti a timeout], [NI],
+  [T.I.17] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente errori di timeout], [NI],
+  [T.I.18] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente errori inaspettati], [NI],
+  [T.I.19] ,[Verifica che il servizio DefaultExternalDataService rifiuti contenuti con un tipo MIME non supportato], [NI],
+  [T.I.20] ,[Verifica che il servizio DefaultExternalDataService gestisca correttamente risposte non di successo (non HTTP 200)], [NI],
+  )
+    <tab:testdiintegrazione>
+]
+
 
