@@ -406,12 +406,6 @@ Ogni test è associato ad uno *stato* che può essere:
   [T.U.21] ,[Verifica che il parsing di un CSV con più di 300 colonne generi un'eccezione InvalidCsvException.],[NI],
   [T.U.22] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException.],[NI],
   [T.U.23] ,[Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException.],[NI],
-  [T.U.24], [Verifica che il parsing di un CSV con un numero di colonne non coerente generi un'eccezione InvalidCsvException], [NI],
-  [T.U.25], [Verifica che il parsing di un CSV con un campo vuoto generi un'eccezione InvalidCsvException], [NI],
-  [T.U.26], [Verifica che il parsing di un CSV con valori non numerici dove attesi double generi un'eccezione InvalidCsvException], [NI],
-  [T.U.27], [Verifica che il parsing di un CSV con più di 300 colonne generi un'eccezione InvalidCsvException], [NI],
-  [T.U.28] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException], [NI],
-  [T.U.29], [Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException], [NI],
   )
     <tab:testdiunita>
 ]
