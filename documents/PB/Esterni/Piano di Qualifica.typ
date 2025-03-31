@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,"",
+    "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato),
     "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo, (p.pesenato, p.scandaletti),
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pesenato,(p.pozzobon,p.lucato),
