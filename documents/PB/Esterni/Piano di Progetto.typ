@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "1.4.0", "30-03-2025", "Stesura nono periodo", p.salvo, (""),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
     "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
@@ -1421,4 +1422,140 @@ Durante l'ottavo #glossario("periodo") si è evidenziata un'efficace gestione e 
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 8", display_style: "hor-legend-chart",colors: (red, green))
 }
+
+== Periodo 9
+
+=== Pianificazione
+*#glossario("Periodo")*: 17/3/2025 - 25/3/2025 \
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.valdagno],
+        [Amministratore(Am)],[#p.pesenato],
+        [Analista(An)],[#p.checchinato],
+        [Programmatore(Prg)],[#p.salvo, #p.pozzobon,\ #p.pesenato, #p.scandaletti,\ #p.lucato],
+        [Verificatore(Ve)],[#p.salvo],
+        [Progettista(Prt)], [#p.checchinato, #p.valdagno]
+    )
+  ]
+]
+#pb()
+
+*Obiettivi*:\
+In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione software e continuare la fase di codifica del #glossario("MVP"). Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato backend e uno del lato frontend dell'applicazione.\
+Nello specifico gli obiettivi di questo periodo sono:
+  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra frontend e backend per approfondire lo studio delle tecnologie e dei pattern.
+  - *#glossario("Norme di Progetto")*: ampliare e approfondire alcune sezioni già presenti come la sezione sviluppo e la sezione processi di supporto.
+  - *#glossario("Analisi dei Requisiti")* : aggiornare il documento includendo le nuove tecnologie utilizzate a seguito del cambiamento deciso dal team e approvato dal #p.cardin e dall'azienda.
+
+
+*Possibili rischi*\
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
+
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[3],[0],[5],[0],[3],[€ #(3*costo_ora.amm+5*costo_ora.proge+3*costo_ora.ana)],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[6],[0],[€ #(6*costo_ora.progr)],
+      [Giacomo\ Pesenato],[0],[4],[3],[0],[5],[0],[€ #(4*costo_ora.amm+3*costo_ora.ver+5*costo_ora.progr)],
+      [Francesco\ Pozzobon],[0],[0],[0],[3],[10],[0],[€ #(3*costo_ora.proge+10*costo_ora.progr)],
+      [Giovanni\ Salvò],[0],[0],[4],[0],[5],[0],[€ #(5*costo_ora.progr+4*costo_ora.ver)],
+      [Gioele\ Scandaletti],[0],[0],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr)],
+      [Pietro\ Valdagno],[5],[0],[0],[2],[2],[0],[€ #(5*costo_ora.res+2*costo_ora.proge+2*costo_ora.progr)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(7*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ #(12*costo_ora.proge) ],[€ #(36*costo_ora.progr)],[€ #(3*costo_ora.ana)],[#text(blue)[*€ #(150+140+105+300+540+75)*]],
+    )
+  ]
+]
+#pb()
+*Distribuzione preventivata delle ore:* \
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,70)),
+    (7, "Amministratore - " + perc(7,70)),
+    (7, "Verificatore - " + perc(7,70)),
+    (12, "Progettista - " + perc(12,70)),
+    (36, "Programmatore - " + perc(36,70)),
+    (3, "Analista - " + perc(3,70)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore nono periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito 
+
+*Obiettivi non raggiunti*:\
+In questo nono #glossario("periodo") non sono stati rilevati obiettivi non raggiunti.
+
+*Problematiche non attese*:\
+In questo nono #glossario("periodo") non sono state rilevate delle problematiche non attese.
+
+*Mitigazione rischi verificati*:\
+Durante questo nono #glossario("periodo") si sono verificati entrambi i rischi preventivati e queste sono le strategie di mitigazione adottate:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: tale rischio è stato mitigato grazie all'aiuto tra i membri del team riducendo l'impatto sul lavoro da svolgere.
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: tale rischio è stato mitigato grazie allo studio delle tecnologie che si sono rivelate più critiche e attraverso riunioni tra i membri col ruolo di #glossario("programmatore") e tra quelli col ruolo di #glossario("progettista") per ottenere una maggiore consapevolezza della situazione attuale e valutare diverse strategie di risoluzione dei problemi.
+
+
+*Possibili cambiamenti*:\
+Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e mitigazione dei rischi e una buona pianificazione delle ore, che hanno contribuito a un incremento della produttività seguendo il lavoro svolto nel periodo otto. Questo ha permesso di completare tutti gli obiettivi prefissati e di gestire agevolmente le problematiche che si sono verificate. 
+
+#pb();
+
+*Tabella esito effettivo*:\ 
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[3],[0],[5],[0],[2 (#text(red)[-1])],[€ #(3*costo_ora.amm+5*costo_ora.proge+2*costo_ora.ana) (#text(red)[-€ #(1*costo_ora.ana)])],
+      [Leonardo\ Lucato],[0],[0],[0],[0],[6],[0],[€ #(6*costo_ora.progr)],
+      [Giacomo\ Pesenato],[0],[4],[3],[0],[5],[0],[€ #(4*costo_ora.amm+3*costo_ora.ver+5*costo_ora.progr)],
+      [Francesco\ Pozzobon],[0],[0],[0],[3],[10],[0],[€ #(3*costo_ora.proge+10*costo_ora.progr)],
+      [Giovanni\ Salvò],[0],[0],[4],[1],[5],[0],[€ #(5*costo_ora.progr+4*costo_ora.ver+1*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)])],
+      [Gioele\ Scandaletti],[0],[2],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+      [Pietro\ Valdagno],[5],[0],[0],[2],[2],[0],[€ #(5*costo_ora.res+2*costo_ora.proge+2*costo_ora.progr)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(9*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ #(13*costo_ora.proge) ],[€ #(36*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(150+180+105+325+540+50)*] (#text(red)[+€ 40])],
+    )
+  ]
+]
+
+*Distribuzione effettiva delle ore*:
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,72)),
+    (9, "Amministratore - " + perc(9,72)),
+    (7, "Verificatore - " + perc(7,72)),
+    (13, "Progettista - " + perc(13,72)),
+    (36, "Programmatore - " + perc(36,72)),
+    (2, "Analista - " + perc(2,72)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore nono periodo", display_style: "hor-legend-chart")
+}
+
+#pb()
+
+*Progresso delle #glossario("attività")*:\
+#{
+  let plot = plot(data: (
+    (0, "Non fatto - " + perc(0,100)),
+    (100, "Fatto - " + perc(100,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 9", display_style: "hor-legend-chart",colors: (red, green))
+}
+
 
