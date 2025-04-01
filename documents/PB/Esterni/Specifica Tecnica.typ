@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon),
+    "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
     "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
   ),
 )
@@ -95,7 +95,7 @@ Questo file è un modulo per la gestione dello stato e la fornitura di dati comp
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
   - Vengono importati moduli fondamentali da *three* e funzioni di stato reattivo da Svelte.  
-  - Definisce una variabile `fecthedData` che contiene una matrice di dati grezzi.  
+  - Definisce una variabile `fetchedData` che contiene una matrice di dati grezzi.  
   - Utilizza una store derivata per creare l'oggetto `data`, che include sia i valori originali che le proprietà computate, come:
     - La media dei valori,  
     - I valori minimo e massimo,  
@@ -112,7 +112,7 @@ Questo file è un modulo per la gestione dello stato e la fornitura di dati comp
 
 ==== *Props e Variabili Reattive*  
 - *Variabili Reattive:*  
-  - *fecthedData:* contiene i dati grezzi iniziali.  
+  - *fetchedData:* contiene i dati grezzi iniziali.  
   - *data:* store derivata che combina i dati grezzi con le proprietà computate (media, min, max, righe, colonne, defaultTarget e defaultPosition).  
   - *utils:* raccoglie le proprietà computate, utili per il posizionamento e il filtraggio.  
 - *Oggetto di Filtro:*  
@@ -135,8 +135,8 @@ Questo file è un modulo per la gestione dello stato e la fornitura di dati comp
 - In altri componenti, come App.svelte o Bar.svelte, il modulo viene importato per accedere ai dati e alle impostazioni.  
   ```ts
   import { getData, filter, getValueFromId } from '$lib/index.svelte';
-  
   let data = getData();
+
 
   ```
 - Questo esempio evidenzia come il modulo fornisca le basi per il calcolo dei dati e la gestione dei filtri che vengono poi utilizzati per aggiornare dinamicamente la visualizzazione del grafico 3D.
