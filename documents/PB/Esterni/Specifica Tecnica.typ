@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.3.0", "01-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), "",
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
     "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
   ),
@@ -69,15 +70,140 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 - Riferimento alle slide IS: _*Progettazione: I pattern di comportamento (GoF)*_: #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
 - Riferimento alle slide IS: _*Programmazione: SOLID programming*_: #link("https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
 
-= Tecnologie
-In questa sezione vengono elencate le tecnologie utilizzate all'interno del progetto *3Dataviz*, dalla fase di progettazione alla sua implementazione. \
-Ogni tecnologia utilizzata, verrà descritta tramite:
-+ Nome della tecnologia
-+ Descrizione della tecnologia e del suo utilizzo
-+ Versione della tecnologia utilizzata
+= Tecnologie e librerie
+In questa sezione vengono elencate le tecnologie (e librerie) utilizzate all'interno del progetto *3Dataviz*, dalla fase di progettazione alla sua implementazione. \
+Ogni tecnologia o libreria utilizzata verrà descritta tramite:
++ Nome della tecnologia o libreria
++ Descrizione della tecnologia o libreria e del suo utilizzo
++ Versione della tecnologia o libreria utilizzata
 + Link di riferimento alla sua documentazione
 
+== Docker
+- *Descrizione della tecnologia e del suo utilizzo*: Docker è una piattaforma che consente di sviluppare, distribuire ed eseguire applicazioni in container. Un container è un'unità software che include tutto il necessario per eseguire un'applicazione, come codice, runtime, librerie e dipendenze, garantendo coerenza tra ambienti diversi. Nel nostro progetto, Docker viene utilizzato per:
+  + Costruire e pacchettizzare l'applicazione Spring Boot in un'immagine Docker tramite un Dockerfile.
+  + Gestire l'ambiente di sviluppo e test attraverso docker-compose, orchestrando i servizi necessari, tra cui:
+    - Database PostgreSQL per la persistenza dei dati.
+    - Ambiente di test per eseguire i test automatici prima della build finale.
+    - Applicazione Spring Boot come servizio runtime.
+  Il Dockerfile segue un processo in due fasi:
+  + *Fase di compilazione*: utilizza un'immagine Maven per costruire il pacchetto JAR dell'applicazione.
+  + *Fase di runtime*: utilizza un'immagine JDK leggera per eseguire il JAR costruito.
+  
+  Il file docker-compose.yml definisce tre servizi principali:
+  + *db*: un'istanza PostgreSQL con un volume per la persistenza dei dati.
+  + *test*: un container per eseguire i test, garantendo che l'applicazione funzioni correttamente prima della fase di build.
+  + *app*: il container finale che esegue l'applicazione Spring Boot e dipende dagli altri servizi per funzionare correttamente.
+
+- *Versione della tecnologia utilizzata*:
+  - *Docker*: Ultima versione disponibile in ambiente di sviluppo
+  - *Maven*: 3.9.9 con JDK Eclipse Temurin 23
+  - *PostgreSQL*: 17
+
+- *Link di riferimento alla documentazione*:
+  - *Docker*: #link("https://docs.docker.com/")[#text(blue)[https://docs.docker.com/]]
+  - *Docker Compose*: #link("https://docs.docker.com/compose/")[#text(blue)[https://docs.docker.com/compose/]]
+  - *PostgreSQL*: #link("https://www.postgresql.org/docs//")[#text(blue)[https://www.postgresql.org/docs/]]
+
+== Spring Boot
+- *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
+  + Esporre API RESTful per l'interazione con il frontend e altri servizi.
+  + Gestire la configurazione dell'applicazione tramite il file application.properties e le variabili d'ambiente definite in docker-compose.yml.
+  + Facilitare i test automatizzati, sfruttando il supporto nativo per Testcontainers e altre librerie di testing.
+
+L'integrazione con Docker consente di eseguire il backend in un container isolato, garantendo consistenza nell'ambiente di sviluppo e produzione.
+
+- *Versione della tecnologia utilizzata*:
+  - *Spring Boot*: 3.4.3
+  - *Spring Data JPA*: 3.4.3
+  
+
+- *Link di riferimento alla documentazione*:
+
+  - *Spring Boot*:#link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
+  - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
+  
+== PITest
+- *Descrizione della tecnologia e del suo utilizzo*: PITest è un framework di test di mutazione per applicazioni Java. Il test di mutazione è una tecnica avanzata per valutare la qualità dei test unitari generando e iniettando mutazioni nel codice sorgente e verificando se i test sono in grado di rilevarle. Questo aiuta a identificare le debolezze nella suite di test e a migliorare la copertura e l'affidabilità del codice. Nel nostro progetto, PITest viene utilizzato per:
+  + Analizzare l'efficacia dei test unitari, verificando se riescono a rilevare mutazioni introdotte nel codice.
+  + Identificare punti deboli nella suite di test, segnalando eventuali scenari non coperti adeguatamente.
+  + Migliorare la qualità del codice, incentivando la scrittura di test più robusti.
+  + Integrare il testing nei processi CI/CD, garantendo un monitoraggio continuo della qualità del codice.
+PITest viene configurato all'interno del progetto Maven ed eseguito automaticamente come parte del processo di testing, fornendo report dettagliati sui mutanti generati e uccisi.\
+
+Per garantire la compatibilità con JUnit 5 e Spring, nel progetto sono utilizzati i seguenti plugin:
+  + *pitest-junit5-plugin*: Permette l'integrazione di PITest con JUnit 5.
+  + *arcmutate-spring*: Estensione per migliorare il supporto ai test su applicazioni Spring.
+  
+- *Versione della tecnologia utilizzata*:
+  - *PITest*: 1.19.0
+  - *pitest-junit5-plugin*: 1.1.0
+  - *arcmutate-spring*: 1.0.0
+  
+- *Link di riferimento alla documentazione*:
+  - *PITest*: #link("https://pitest.org/")[#text(blue)[https://pitest.org/]]
+  - *Plugin Maven per PITest*: #link("https://plugins.pitest.org/maven/")[#text(blue)[https://plugins.pitest.org/maven/]]
+  - *pitest-junit5-plugin*: #link("https://github.com/pitest/pitest-junit5-plugin")[#text(blue)[https://github.com/pitest/pitest-junit5-plugin]]
+
+== Mockito
+- *Descrizione della tecnologia e del suo utilizzo*: Mockito è un framework di mocking per Java utilizzato principalmente nei test unitari. Permette di simulare il comportamento di classi e dipendenze, consentendo di testare unità di codice in modo isolato senza dover dipendere da componenti reali come database o servizi esterni. Nel nostro progetto, Mockito viene utilizzato per:
+  - Simulare dipendenze nelle classi testate, evitando la necessità di istanziare oggetti reali.
+  - Verificare il comportamento del codice, assicurandosi che determinati metodi vengano chiamati con i parametri corretti.
+  - Testare componenti Spring Boot, come service e repository, isolandoli dall'infrastruttura sottostante.
+  - Migliorare la velocità dei test, riducendo il tempo di esecuzione rispetto a test che interagiscono con database o API reali.
+L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java @Mock```, ```java @InjectMocks``` e ```java @ExtendWith(MockitoExtension.class)```, garantendo una configurazione semplice ed efficace.
+
+- *Versione della tecnologia utilizzata*:
+  - *Mockito Core*: 5.14.2
+  - *Mockito JUnit Jupiter*: 5.14.2
+
+- *Link di riferimento alla documentazione*:
+  - *Mockito*: #link("https://site.mockito.org/")[#text(blue)[https://site.mockito.org/]]
+  - *Mockito per JUnit 5*: #link("https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/")[#text(blue)[https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/]]
+
+== Svelte
+- *Descrizione della tecnologia e del suo utilizzo*: Svelte è un framework di front-end moderno che consente di sviluppare interfacce utente reattive e performanti compilando il codice in JavaScript ottimizzato. A differenza di altri framework come React o Vue, Svelte non utilizza un Virtual DOM, ma compila i componenti in codice JavaScript efficiente che aggiorna direttamente il DOM in modo minimale. Nel nostro progetto, Svelte viene utilizzato per:
+  + Sviluppare l'interfaccia utente in modo efficiente e performante.
+  + Gestire lo stato dell'applicazione attraverso il sistema di store di Svelte.
+  + Integrare API REST per recuperare e visualizzare i dati dinamicamente.
+  + Ottimizzare le prestazioni grazie alla sua architettura basata sulla compilazione.
+  Il progetto è strutturato con:
+  - Componenti Svelte modulari per una gestione chiara dell'UI.
+  - Store di Svelte per la gestione dello stato globale dell'applicazione.
+  - Fetch API per comunicare con il backend in modo asincrono.
+- *Versione della tecnologia utilizzata*:
+  - *Svelte*: 5
+
+- *Link di riferimento alla documentazione*:
+  - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
+
 #pb()
+= Architettura
+== Architettura logica <architettura_logica>
+Nel nostro progetto abbiamo scelto di adottare un'architettura esagonale, che ci permette di organizzare il codice in maniera ordinata e con una chiara separazione dei compiti tra le varie componenti. Al centro dell'architettura si trova il core domain, dove risiede tutta la logica di business. Questo cuore del sistema è progettato per essere indipendente da elementi esterni come database, API o librerie specifiche, rendendo così l'applicazione più semplice da manutenere, testare e far evolvere nel tempo.
+
+I controller, che si trovano nelle zone più esterne dell'architettura (package controller), rappresentano il punto di contatto tra il mondo esterno e il nostro sistema. Sono loro a gestire le richieste in arrivo dai client e ad inoltrarle verso i servizi interni. Qui avvengono operazioni come il caricamento di file o la richiesta di dati da fonti esterne, gestite da classi come UploadController e ExternalDataController.
+
+Il livello di servizio (package service) si occupa di coordinare le varie operazioni tra il dominio applicativo e le componenti più tecniche. Qui troviamo, ad esempio, CoordinateService o ExternalDataService, che elaborano i dati e orchestrano le logiche applicative. Le entità del dominio (package model), come CoordinateEntity e MatrixData, definiscono le strutture dati principali su cui si basa il funzionamento del sistema.
+
+La gestione della persistenza dei dati è affidata al package repository, che contiene le interfacce per accedere al database. In questo modo, tutta la logica legata al recupero dei dati è isolata dal resto dell'applicazione, rendendola più pulita e flessibile. La configurazione delle risorse esterne è centralizzata nel package config, dove definiamo, ad esempio, le impostazioni per accedere a sorgenti dati esterne (ExternalAPIConfig) o per gestire proprietà relative ai file (DataProperties).
+
+Abbiamo inoltre un package exception, dedicato alla gestione degli errori: qui centralizziamo la gestione delle eccezioni, migliorando così l'affidabilità del sistema e offrendo un'esperienza più stabile a chi utilizza l'applicazione.
+
+In generale, questa struttura ci permette di mantenere il progetto modulare e ben organizzato. Ogni parte ha un ruolo preciso, e questo ci aiuta sia nello sviluppo che nella manutenzione, oltre a facilitare eventuali estensioni future del sistema.
+
+
+== Architettura di deployment
+== Database
+Nel nostro progetto utilizziamo PostgreSQL come database relazionale per gestire i dati, sfruttando la sua affidabilità, la possibilità di usare tipi personalizzati e il supporto avanzato per le query. Fin dall'avvio, il database è già popolato con un set di dati predefinito, organizzato nella tabella coordinates. Questa tabella raccoglie le label x, label z, i valori y dati dall'incrocio di x e z e le classificazioni, utilizzando un tipo ENUM personalizzato (dataset_level) per definire il livello del dataset (SMALL, MEDIUM, LARGE), garantendo così una struttura più tipizzata e robusta rispetto all'uso di semplici stringhe.
+
+Dal punto di vista applicativo, l'accesso al database è limitato a operazioni di sola lettura ed è completamente incapsulato nel package repository, in linea con i principi dell'architettura esagonale. La classe CoordinateRepository, che estende JpaRepository, offre un metodo personalizzato per recuperare i dati in base al livello del dataset, permettendo così di filtrare le coordinate e restituire solo quelle che soddisfano un certo livello minimo di granularità.
+
+Questo approccio assicura un'interazione controllata ed efficiente con il database, separando nettamente la logica di accesso ai dati da quella di business. Inoltre, avere già a disposizione i dati predefiniti all'avvio semplifica notevolmente il processo di inizializzazione, rendendo più rapido il testing, la validazione e la visualizzazione dei risultati.
+
+#pb()
+
 = Front-end
 == Utilities
 In questa sezione vengono documentate in dettaglio le utilities e i moduli di supporto utilizzati nell'applicazione. Questi file gestiscono la preparazione, il calcolo e la distribuzione dei dati e delle impostazioni globali, fornendo le basi per il funzionamento dell'interfaccia 3D e dei filtri.
@@ -620,5 +746,154 @@ Nel''esempio, il componente *SettingsPane* viene usato all'interno di un <Canvas
 ==== *Dipendenze Esterne*  
 - *svelte-tweakpane-ui:* libreria per creare interfacce utente con pannelli di configurazione avanzati.
 - *ThemeUtils:* usato per applicare temi globali e predefiniti.
+
+#pb()
+
+= Back-end
+Come indicato nella sezione @architettura_logica, il pattern architetturale utilizzato è quello _esagonale_, viste le funzionalità, la robustezza e la manutenibilità che il prodotto software necessita. In questa parte della _Specifica tecnica_ si motivano le scelte implementative effettuate nel lato back-end, riportando esempi di codice dove vengono applicate le _best practice_.
+== Configurazione
+Per cercare di mantenere i parametri di configurazione in un luogo centralizzato, così da non aver problemi in un futuro ad integrare dell'altro codice, si è deciso di utilizzare l'annotazione ```java @Configuration```. Una classe con questa annotazione viene trattata come una classe di configurazione dove al suo interno si possono dichiarare metodi annotati con  ```java @Bean```, che creano e configurano i bean da registrare nel _ApplicationContext_ di Spring. Nel nostro caso specifico è stato fondamentale nel contesto della richiesta all'API esterno Weather Forecast, in quanto è necessaria la costruzione di un ```java RestTemplate``` con le proprietà necessarie. Nello specifico:
+```java @Configuration
+@EnableConfigurationProperties(ExternalAPIProperties.class)
+public class ExternalAPIConfig {
+
+    ExternalAPIProperties properties;
+
+    public ExternalAPIConfig(ExternalAPIProperties properties) {
+        this.properties = properties;
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(properties.getTimeout());
+        factory.setReadTimeout(properties.getTimeout());
+        return new RestTemplate(factory);
+    }
+}```
+Come indicato da questo esempio, abbiamo combinato le funzionalità di ```java @Configuration``` con ```java @EnableConfigurationProperties(ExternalAPIProperties.class)``` che permette di abilitare e caricare una classe di configurazione basata su properties all'interno del contesto di Spring. La motivazione di questa scelta è sempre quella di cercare di mantenere le configurazioni il più centralizzate possibili, all'interno di un file chiamato _application.properties_ dove è possibile aggiungere un _prefisso_ che identifica un parametro di configurazione. ```java @ConfigurationProperties(prefix = "external.api")
+public class ExternalAPIProperties {
+    private String url;
+    private int timeout;
+    private int maxNumData;
+
+    public int getTimeout() { return timeout; }
+    public void setTimeout(int timeout) { this.timeout = timeout; }
+    public String getUrl() { return url; }
+    public void setUrl(String url) { this.url = url; }
+    public int getMaxNumData() { return maxNumData; }
+    public void setMaxNumData(int maxNumData) { this.maxNumData = maxNumData; }
+}```
+Con l'aggiunta di queste annotazioni, si è in grado di indicare nuovi parametri di configurazione andandole ad aggiungere in maniera incrementale in questo modo:
+```java external.api.nuovo_parametro=valore```, implementando di conseguenza i nuovi metodi _getter_ e _setter_.
+
+== Eccezioni
+Come indicato nel documento _Analisi dei Requsiti v2.0.0_, ci sono diversi errori da gestire come un ```java NetworkError``` o ```java FileTooBig```. Viste queste necessità, si è deciso di implementare una best practice di _Spring Boot_ tramite l'aggiunta dell'annotazione ```java @ControllerAdvice``` che è utilizzata per gestire centralmente le eccezioni e la logica di preprocessing per tutti i controller. Nel nostro caso specifico è stata aggiunta in combinazione l'annotazione ```java @ExceptionHandler()``` per poter gestire le eccezioni globalmente. 
+```java @ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(InvalidCsvException.class)
+    public ResponseEntity<String> handleInvalidCsvException(InvalidCsvException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(FileTooBigException.class)
+    public ResponseEntity<String> handleFileTooBigException(FileTooBigException ex) {
+        return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(APITimeoutException.class)
+    public ResponseEntity<String> handleAPITimeoutException(APITimeoutException ex) {
+        return ResponseEntity.status(HttpStatus.REQUEST_TIMEOUT).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(NetworkErrorException.class)
+    public ResponseEntity<String> handleNetworkErrorException(NetworkErrorException ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+    }
+}```
+Con questa implementazione è possibile andare ad indicare un modo di fare l'handling dell'eccezioni in maniera differente in base alle varie casistiche. Permette inoltre di centralizzare la gestione delle eccezioni e di aggiungerne delle ulteriori in maniera incrementale (e molto facilmente).
+
+== Repository <backend-repository>
+Da capitolato, come indicato nell'UC2.3, l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
++ Scansiona le annotazioni (```java @Repository```, ```java @Entity```, ecc..)
++ Crea il repository (infatti grazie a Spring Data JPA non serve implementare manualmente la classe in questione)
++ Crea automaticamente il database utilizzando JPA e Hibernate (che può essere configurato con il modo indicato in precedenza, andando a definire nel file _application.properties_ le configurazioni necessarie)
+Nel nostro caso specifico:
+
+```java @Repository
+public interface CoordinateRepository extends JpaRepository<CoordinateEntity, Long> {
+
+    @Query("SELECT c FROM CoordinateEntity c WHERE c.datasetType >= :type")
+    List<CoordinateEntity> findAllByDatasetType(@Param("type") String type);
+}```
+
+Dove si può notare come, integrando l'annotazione ```java @Query``` è possibile generare un database con una funzione che richiama una query. Come oggetto di ritorno viene generata un'entità personalizzata, chiamata ```java CoordinateEntity``` definita come:
+```java @Entity
+@Table(name = "coordinates")
+public class CoordinateEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "x_label")
+    private String xLabel;
+
+    @Column(name = "z_label")
+    private String zLabel;
+
+    @Column(name = "y_value")
+    private Double yValue;
+
+    @Column(name = "dataset_type")
+    private String datasetType;
+
+    public CoordinateEntity() { }
+
+    public CoordinateEntity(String xLabel, String zLabel, Double yValue, String datasetType) {
+        this.xLabel = xLabel;
+        this.zLabel = zLabel;
+        this.yValue = yValue;
+        this.datasetType = datasetType;
+    }
+
+    ---- altri metodi setter e getter
+}```
+
+
+== Model
+All'interno di model ci sono tutte quelle classi definite come oggetti di business. Troviamo infatti ```java CoordinateEntity.java``` e ```java MatrixData.java```. Come indicato in precendenza, nella @backend-repository, utilizzando Spring Boot è possibile definire un'entità tramite l'annotazione ```java @Entity```. Per vederne l'implementazione si riporta alla @backend-repository. ```java MatrixData.java``` è l'interfaccia di ritorno dei metodi per il reperimento dei dati:\ 
+```java DefaultExternalDataService.java```
+```java @Override
+    public MatrixData fetchData() { ... }```
+#line(start: (0%, 0%), end: (100%, 0%)) 
+```java DefaultCsvFileReader.java```
+```java @Override
+    public MatrixData parseCsv(MultipartFile file) throws InvalidCsvException { ... }```
+#line(start: (0%, 0%), end: (100%, 0%)) 
+```java DefaultCoordinateService.java```
+```java @Transactional(readOnly = true)
+    @Override
+    public MatrixData getCoordinates(String datasetType) { ... }```
+#line(start: (0%, 0%), end: (100%, 0%)) 
+Le motivazioni di un tipo di implementazione come questa sono molteplici tra cui:
++ *Astrazione e Flessibilità*: Se una funzione ritorna un'interfaccia invece di una classe specifica, si può cambiare l'implementazione senza modificare il codice che utilizza il risultato della funzione. Il chiamante non ha bisogno di conoscere i dettagli dell'implementazione, ma solo i metodi e le proprietà definiti dall'interfaccia.
++ *Inversione di Dipendenza (Principio DIP - SOLID)*: La funzione che restituisce l'interfaccia segue il principio dell'inversione di dipendenza: il codice dipende da un'astrazione (interfaccia) e non da una concreta implementazione e questo riduce l'accoppiamento tra i componenti, rendendo il sistema più manutenibile e scalabile.
++ *Facilitare il Polimorfismo*: Se diverse classi implementano la stessa interfaccia, possono essere trattate in modo uniforme senza dover conoscere quale specifica classe sta usando. Si può scrivere del codice generico che lavora con l'interfaccia, indipendentemente dall'implementazione concreta.
++ *Mocking e Testing*: Se il codice dipende da un'interfaccia piuttosto che da una classe concreta, si può facilmente sostituire l'implementazione reale con un mock o un fake per i test. Questo migliora l'isolamento dei test e riduce la necessità di dipendenze complesse nei test unitari.
++ *Estendibilità*: Se in futuro si devono aggiungere nuove implementazioni, si può farlo senza modificare il codice esistente che utilizza l'interfaccia e di conseguenza permette di implementare nuovi comportamenti senza rompere il codice già scritto.
+Nel nostro caso specifico:
+```java public interface MatrixData {
+    List<String> xLabels();
+    List<String> zLabels();
+    double[][] yValues();
+}```
+
+ed implementata come:
+```java 
+public record MatrixDataImpl(List<String> xLabels, List<String> zLabels, double[][] yValues) implements MatrixData { }```
+
+Questo ci permetterà in un futuro di poter aggiungere in maniera incrementale delle ulteriori implementazioni, senza dover andare a riscrivere il vecchio codice. Questo è un'importante aspetto che abbiamo tenuto in grande considerazione durante tutta la parte di #glossario("MVP"), dalla progettazione all'implementazione. 
 
 #pb()
