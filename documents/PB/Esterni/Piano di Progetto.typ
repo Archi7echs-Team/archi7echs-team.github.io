@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.4.0", "30-03-2025", "Stesura nono periodo", p.salvo, (""),
+    "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
     "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
@@ -1447,9 +1447,9 @@ Durante l'ottavo #glossario("periodo") si è evidenziata un'efficace gestione e 
 #pb()
 
 *Obiettivi*:\
-In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione software e continuare la fase di codifica del #glossario("MVP"). Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato backend e uno del lato frontend dell'applicazione.\
+In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione software e continuare la fase di codifica del #glossario("MVP"). Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato back-end e uno del lato front-end dell'applicazione.\
 Nello specifico gli obiettivi di questo periodo sono:
-  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra frontend e backend per approfondire lo studio delle tecnologie e dei pattern.
+  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra front-end e back-end per approfondire lo studio delle tecnologie e dei pattern.
   - *#glossario("Norme di Progetto")*: ampliare e approfondire alcune sezioni già presenti come la sezione sviluppo e la sezione processi di supporto.
   - *#glossario("Analisi dei Requisiti")* : aggiornare il documento includendo le nuove tecnologie utilizzate a seguito del cambiamento deciso dal team e approvato dal #p.cardin e dall'azienda.
 
