@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato),
+    "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
     "1.2.0", "17-03-2025", "Stesura settimo periodo", p.scandaletti, (p.pesenato,p.checchinato),
     "1.1.1", "13-03-2025", "Fix indice", p.scandaletti, (p.pesenato,p.checchinato),
@@ -1520,14 +1520,14 @@ Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e m
       align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
       inset: 6pt,
       table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
-      [Gabriele\ Checchinato],[0],[3],[0],[5],[0],[2 (#text(red)[-1])],[€ #(3*costo_ora.amm+5*costo_ora.proge+2*costo_ora.ana) (#text(red)[-€ #(1*costo_ora.ana)])],
+      [Gabriele\ Checchinato],[0],[3],[0],[5],[0],[2 (#text(green)[-1])],[€ #(3*costo_ora.amm+5*costo_ora.proge+2*costo_ora.ana) (#text(green)[-€ #(1*costo_ora.ana)])],
       [Leonardo\ Lucato],[0],[0],[0],[0],[6],[0],[€ #(6*costo_ora.progr)],
       [Giacomo\ Pesenato],[0],[4],[3],[0],[5],[0],[€ #(4*costo_ora.amm+3*costo_ora.ver+5*costo_ora.progr)],
       [Francesco\ Pozzobon],[0],[0],[0],[3],[10],[0],[€ #(3*costo_ora.proge+10*costo_ora.progr)],
-      [Giovanni\ Salvò],[0],[0],[4],[1],[5],[0],[€ #(5*costo_ora.progr+4*costo_ora.ver+1*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)])],
-      [Gioele\ Scandaletti],[0],[2],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+      [Giovanni\ Salvò],[0],[0],[4],[1(#text(red)[+1])],[5],[0],[€ #(5*costo_ora.progr+4*costo_ora.ver+1*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)])],
+      [Gioele\ Scandaletti],[0],[2(#text(red)[+2])],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
       [Pietro\ Valdagno],[5],[0],[0],[2],[2],[0],[€ #(5*costo_ora.res+2*costo_ora.proge+2*costo_ora.progr)],
-      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(9*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ #(13*costo_ora.proge) ],[€ #(36*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(150+180+105+325+540+50)*] (#text(red)[+€ 40])],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(9*costo_ora.amm) (#text(red)[+€40])],[€ #(7*costo_ora.ver)],[€ #(13*costo_ora.proge) (#text(red)[+€25]) ],[€ #(36*costo_ora.progr)],[€ #(2*costo_ora.ana) (#text(green)[-€25])],[#text(blue)[*€ #(150+180+105+325+540+50)*] (#text(red)[+€ 40])],
     )
   ]
 ]
