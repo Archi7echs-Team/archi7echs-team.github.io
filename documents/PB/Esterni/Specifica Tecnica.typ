@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.3.0", "01-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), "",
+    "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
     "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
   ),
@@ -170,10 +170,9 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
   + Ottimizzare le prestazioni grazie alla sua architettura basata sulla compilazione.
   Il progetto è strutturato con:
   - Componenti Svelte modulari per una gestione chiara dell'UI.
-  - Store di Svelte per la gestione dello stato globale dell'applicazione.
   - Fetch API per comunicare con il backend in modo asincrono.
 - *Versione della tecnologia utilizzata*:
-  - *Svelte*: 5
+  - *Svelte*: 5.0.0
 
 - *Link di riferimento alla documentazione*:
   - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
@@ -209,7 +208,7 @@ Questo approccio assicura un'interazione controllata ed efficiente con il databa
 In questa sezione vengono documentate in dettaglio le utilities e i moduli di supporto utilizzati nell'applicazione. Questi file gestiscono la preparazione, il calcolo e la distribuzione dei dati e delle impostazioni globali, fornendo le basi per il funzionamento dell'interfaccia 3D e dei filtri.
 Per ciascuna utility verranno illustrati i seguenti aspetti:
 
-- *Descrizione*: una breve spiegazione del ruolo e dello scopo della utility all’interno dell’applicazione.
+- *Descrizione*: una breve spiegazione del ruolo e dello scopo della utility all'interno dell'applicazione.
  
 - *Struttura e Funzionalità*: la composizione del file, evidenziando le funzioni chiave e la logica implementata per elaborare i dati e gestire lo stato globale.
 
@@ -815,7 +814,7 @@ public class GlobalExceptionHandler {
 Con questa implementazione è possibile andare ad indicare un modo di fare l'handling dell'eccezioni in maniera differente in base alle varie casistiche. Permette inoltre di centralizzare la gestione delle eccezioni e di aggiungerne delle ulteriori in maniera incrementale (e molto facilmente).
 
 == Repository <backend-repository>
-Da capitolato, come indicato nell'UC2.3, l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
+Da capitolato, come indicato nell'UC2.3 all'interno del documento _Analisi dei Requsiti v2.0.0_ , l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
 + Scansiona le annotazioni (```java @Repository```, ```java @Entity```, ecc..)
 + Crea il repository (infatti grazie a Spring Data JPA non serve implementare manualmente la classe in questione)
 + Crea automaticamente il database utilizzando JPA e Hibernate (che può essere configurato con il modo indicato in precedenza, andando a definire nel file _application.properties_ le configurazioni necessarie)
