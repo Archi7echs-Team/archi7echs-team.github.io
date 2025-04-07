@@ -629,7 +629,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
 - *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato.
 - *Scenario Principale: *
-    + L'utente, tramite un bottone specifico, reimposta le impostazioni di default.
+    + L'utente, tramite il click dello specifico bottone, reimposta le impostazioni di default.
     + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
 #figure(
   image("/img/adr/PB/33.png", width: 80%),
@@ -637,7 +637,21 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC20>
 \
 
-=== UC 21 - Esportazione di un grafico <uc21>
+=== UC 21 - Reset della selezione <uc21>
+- *Descrizione: * L'utente deve essere in grado di resettare la visualizzazione con le sole barre selezionate.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato, ed è stato applicato il filtro di visualizzazione delle sole barre selezionate.
+- *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato.
+- *Scenario Principale: *
+    + L'utente, tramite il click dello specifico bottone nel pannello filtri relativo alla barra, reimposta le impostazioni di default.
+    + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
+#figure(
+  image("/img/adr/PB/43.png", width: 80%),
+  caption: [Reset dei filtri applicati alla visualizzazione dei dati],
+) <imgUC20>
+\
+
+=== UC 22 - Esportazione di un grafico <uc22>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
@@ -648,10 +662,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/34.png", width: 80%),
   caption: [Esportazione di un grafico],
-) <imgUC21>
+) <imgUC22>
 \
 
-=== UC 22 - Creazione di un'istantanea del grafico <uc22>
+=== UC 23 - Creazione di un'istantanea del grafico <uc23>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -662,10 +676,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/35.png", width: 80%),
   caption: [Creazione di un'istantanea del grafico],
-) <imgUC22>
+) <imgUC23>
 \
     
-=== UC 23 - Visualizzazione errore invalidArguments <uc23>
+=== UC 24 - Visualizzazione errore invalidArguments <uc24>
 - *Descrizione: * L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
@@ -677,10 +691,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/36.png", width: 80%),
   caption: [Visualizzazione errore invalidArguments],
-) <imgUC23>
+) <imgUC24>
 \
 
-=== UC 24 - Visualizzazione errore tooMuchData <uc24>
+=== UC 25 - Visualizzazione errore tooMuchData <uc25>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -693,10 +707,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/37.png", width: 80%),
   caption: [Visualizzazione errore tooMuchData],
-) <imgUC24>
+) <imgUC25>
 \
 
-=== UC 25 - Visualizzazione errore invalidCsv <uc25>
+=== UC 26 - Visualizzazione errore invalidCsv <uc26>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -709,10 +723,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/38.png", width: 80%),
   caption: [Visualizzazione errore invalidCsv],
-) <imgUC25>
+) <imgUC26>
 \
 
-=== UC 26 - Visualizzazione errore apiTimeout <uc26>
+=== UC 27 - Visualizzazione errore apiTimeout <uc27>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite.
 - *Precondizioni: * L'utente ha selezionato l'#glossario("API") esterna da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -724,10 +738,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/39.png", width: 80%),
   caption: [Visualizzazione errore apiTimeout],
-) <imgUC26>
+) <imgUC27>
 \
 
-=== UC 27 - Visualizzazione errore emptyField <uc27>
+=== UC 28 - Visualizzazione errore emptyField <uc28>
 - *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
@@ -739,10 +753,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/40.png", width: 80%),
   caption: [Visualizzazione errore emptyField],
-) <imgUC27>
+) <imgUC28>
 \
 
-=== UC 28 - Visualizzazione errore networkError <uc28>
+=== UC 29 - Visualizzazione errore networkError <uc29>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
 - *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -758,7 +772,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC27>
 \
 
-=== UC 29 - Visualizzazione errore fileTooBig <uc29>
+=== UC 30 - Visualizzazione errore fileTooBig <uc30>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso superiore al limite consentito.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -771,7 +785,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/42.png", width: 80%),
   caption: [Visualizzazione errore fileTooBig],
-) <imgUC29>
+) <imgUC30>
 \
 
 
