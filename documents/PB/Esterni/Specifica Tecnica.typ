@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.4.0", "03-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),"",
+    "0.4.0", "03-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
     "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
@@ -788,7 +788,7 @@ Con l'aggiunta di queste annotazioni, si è in grado di indicare nuovi parametri
 ```java external.api.nuovo_parametro=valore```, implementando di conseguenza i nuovi metodi _getter_ e _setter_.
 
 == Eccezioni
-Come indicato nel documento _Analisi dei Requsiti v2.0.0_, ci sono diversi errori da gestire come un ```java NetworkError``` o ```java FileTooBig```. Viste queste necessità, si è deciso di implementare una best practice di _Spring Boot_ tramite l'aggiunta dell'annotazione ```java @ControllerAdvice``` che è utilizzata per gestire centralmente le eccezioni e la logica di preprocessing per tutti i controller. Nel nostro caso specifico è stata aggiunta in combinazione l'annotazione ```java @ExceptionHandler()``` per poter gestire le eccezioni globalmente. 
+Come indicato nel documento _Analisi dei Requisti v2.0.0_, ci sono diversi errori da gestire come un ```java NetworkError``` o ```java FileTooBig```. Viste queste necessità, si è deciso di implementare una best practice di _Spring Boot_ tramite l'aggiunta dell'annotazione ```java @ControllerAdvice``` che è utilizzata per gestire centralmente le eccezioni e la logica di preprocessing per tutti i controller. Nel nostro caso specifico è stata aggiunta in combinazione l'annotazione ```java @ExceptionHandler()``` per poter gestire le eccezioni globalmente. 
 ```java @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -815,7 +815,7 @@ public class GlobalExceptionHandler {
 Con questa implementazione è possibile andare ad indicare un modo di fare l'handling dell'eccezioni in maniera differente in base alle varie casistiche. Permette inoltre di centralizzare la gestione delle eccezioni e di aggiungerne delle ulteriori in maniera incrementale (e molto facilmente).
 
 == Repository <backend-repository>
-Da capitolato, come indicato nell'UC2.3 all'interno del documento _Analisi dei Requsiti v2.0.0_ , l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
+Da capitolato, come indicato nell'UC2.3 all'interno del documento _Analisi dei Requisiti v2.0.0_ , l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
 + Scansiona le annotazioni (```java @Repository```, ```java @Entity```, ecc..)
 + Crea il repository (infatti grazie a Spring Data JPA non serve implementare manualmente la classe in questione)
 + Crea automaticamente il database utilizzando JPA e Hibernate (che può essere configurato con il modo indicato in precedenza, andando a definire nel file _application.properties_ le configurazioni necessarie)
@@ -863,7 +863,7 @@ public class CoordinateEntity {
 
 
 == Model
-All'interno di model ci sono tutte quelle classi definite come oggetti di business. Troviamo infatti ```java CoordinateEntity.java``` e ```java MatrixData.java```. Come indicato in precendenza, nella @backend-repository, utilizzando Spring Boot è possibile definire un'entità tramite l'annotazione ```java @Entity```. Per vederne l'implementazione si riporta alla @backend-repository. ```java MatrixData.java``` è l'interfaccia di ritorno dei metodi per il reperimento dei dati:\ 
+All'interno di model ci sono tutte quelle classi definite come oggetti di business. Troviamo infatti ```java CoordinateEntity.java``` e ```java MatrixData.java```. Come indicato in precedenza, nella @backend-repository, utilizzando Spring Boot è possibile definire un'entità tramite l'annotazione ```java @Entity```. Per vederne l'implementazione si riporta alla @backend-repository. ```java MatrixData.java``` è l'interfaccia di ritorno dei metodi per il reperimento dei dati:\ 
 ```java DefaultExternalDataService.java```
 ```java @Override
     public MatrixData fetchData() { ... }```
@@ -879,10 +879,10 @@ All'interno di model ci sono tutte quelle classi definite come oggetti di busine
 #line(start: (0%, 0%), end: (100%, 0%)) 
 Le motivazioni di un tipo di implementazione come questa sono molteplici tra cui:
 + *Astrazione e Flessibilità*: Se una funzione ritorna un'interfaccia invece di una classe specifica, si può cambiare l'implementazione senza modificare il codice che utilizza il risultato della funzione. Il chiamante non ha bisogno di conoscere i dettagli dell'implementazione, ma solo i metodi e le proprietà definiti dall'interfaccia.
-+ *Inversione di Dipendenza (Principio DIP - SOLID)*: La funzione che restituisce l'interfaccia segue il principio dell'inversione di dipendenza: il codice dipende da un'astrazione (interfaccia) e non da una concreta implementazione e questo riduce l'accoppiamento tra i componenti, rendendo il sistema più manutenibile e scalabile.
++ *Inversione di Dipendenza (Principio DIP - SOLID)*: La funzione che restituisce l'interfaccia segue il principio dell'inversione di dipendenza: il codice dipende da un'astrazione (interfaccia) e non da una concreta implementazione e questo riduce l'accoppiamento tra i componenti, rendendo il sistema più mantenibile e scalabile.
 + *Facilitare il Polimorfismo*: Se diverse classi implementano la stessa interfaccia, possono essere trattate in modo uniforme senza dover conoscere quale specifica classe sta usando. Si può scrivere del codice generico che lavora con l'interfaccia, indipendentemente dall'implementazione concreta.
 + *Mocking e Testing*: Se il codice dipende da un'interfaccia piuttosto che da una classe concreta, si può facilmente sostituire l'implementazione reale con un mock o un fake per i test. Questo migliora l'isolamento dei test e riduce la necessità di dipendenze complesse nei test unitari.
-+ *Estendibilità*: Se in futuro si devono aggiungere nuove implementazioni, si può farlo senza modificare il codice esistente che utilizza l'interfaccia e di conseguenza permette di implementare nuovi comportamenti senza rompere il codice già scritto.
++ *Estensibilità*: Se in futuro si devono aggiungere nuove implementazioni, si può farlo senza modificare il codice esistente che utilizza l'interfaccia e di conseguenza permette di implementare nuovi comportamenti senza rompere il codice già scritto.
 Nel nostro caso specifico:
 ```java public interface MatrixData {
     List<String> xLabels();
@@ -915,7 +915,7 @@ L’obiettivo di questa struttura è fornire un flusso completo dal livello di a
 - *CoordinateController(coordinateService: CoordinateService)*. Inietta l’implementazione di CoordinateService necessaria al controller.
 
 3. *Metodi*
-- *getMatrixData(datasetType: String): MatrixData*. Chiama il servizio per ottenere i dati (filtrati o identificati da datasetType) e restituisce un oggetto MatrixData che incapsula le coordinate in forma di matrici
+- *getMatrixData(datasetType: String): MatrixData*. Chiama il servizio per ottenere i dati (filtrati o identificati da datasetType) e restituisce un oggetto MatrixData che incapsula le coordinate in forma di matrici.
 4. *Note*
 -  Il controller costituisce il layer più esterno, tipicamente l’ingresso da parte di un client (es. chiamata HTTP).
 
@@ -1044,7 +1044,7 @@ Il componente principale che espone l’endpoint verso il client è `ExternalDat
 - *DefaultExternalDataService(restTemplate: RestTemplate, properties: ExternalAPIProperties, objectMapper: ObjectMapper)*. Inizializza i componenti necessari per l’interazione con l’API esterna.
 
 3. *Metodi*
-- *fetchData(): MatrixData*. Esegue una richiesta all’API esterna, riceve una risposta JSON, la deserializza e restituisce i dati in formato `MatrixData`.
+- *fetchData(): MatrixData*. Esegue una richiesta all’API esterna, riceve una risposta JSON, la deserializzazione e restituisce i dati in formato `MatrixData`.
 
 - *parseData(jsonResponse: String): MatrixData*. Metodo interno privato usato per convertire la risposta JSON in un oggetto `MatrixData`.
 
@@ -1085,7 +1085,7 @@ Il componente principale che espone l’endpoint verso il client è `ExternalDat
   caption: [Modulo di interazione con il file CSV],
 ) <imgCSV>
 
-Il modulo CSV ha il compito di ricevere in input un file caricato dall’utente, leggerne il contenuto (tipicamente in formato tabellare), estrarre le informazioni necessarie e trasformarle in una struttura dati `MatrixData` coerente con l’interfaccia comune dell’applicazione. Questo permette di trattare i dati importati come se provenissero da una qualsiasi altra fonte (database, API, ecc.), mantenendo l’uniformità del sistema.
+Il modulo CSV ha il compito di ricevere in input un file caricato dall'utente, leggerne il contenuto (tipicamente in formato tabellare), estrarre le informazioni necessarie e trasformarle in una struttura dati `MatrixData` coerente con l’interfaccia comune dell’applicazione. Questo permette di trattare i dati importati come se provenissero da una qualsiasi altra fonte (database, API, ecc.), mantenendo l’uniformità del sistema.
 
 === UploadController
 
