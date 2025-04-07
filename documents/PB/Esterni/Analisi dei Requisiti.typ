@@ -313,8 +313,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Rotazione del grafico per consentire una migliore visualizzazione dei dati di interesse dell'utente.
 - *Scenario Principale: *
-  + L'utente seleziona la modalità "Rotazione" dal menù apposito.
-  + L'utente attraverso le gesture del mouse si sposta nel grafico.
+  + L'utente attraverso le gesture del mouse si sposta nel grafico, andandolo a ruotare.
 #figure(
   image("/img/adr/PB/11.png", width: 80%),
   caption: [Strumenti visualizzazione dati - Rotazione],
@@ -327,8 +326,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Spostamento in orizzontale del grafico avvenuto con successo.
 - *Scenario Principale: *
-  + L'utente clicca sul pulsante per attivare la modalità PAN orizzontale.
-  + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico orizzontalmente.
 #figure(
   image("/img/adr/PB/12.png", width: 80%),
@@ -341,8 +338,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Spostamento in verticale del grafico avvenuto con successo.
 - *Scenario Principale: *
-  + L'utente clicca sul pulsante per attivare la modalità PAN.
-  + L'applicazione abilita la modalità PAN, consentendo lo spostamento del grafico.
   + L'utente attraverso le gesture del mouse si sposta nel grafico verticalmente.
 #figure(
   image("/img/adr/PB/13.png", width: 80%),
@@ -356,9 +351,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni:* Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni:* La porzione ingrandita del grafico viene visualizzata con maggiore dettaglio.
 - *Scenario Principale:*
-  + L'utente clicca sul pulsante per attivare la modalità Zoom In.
-  + L'applicazione abilita la modalità Zoom In.
-  + L'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-out, doppio click o rotella del mouse) per ingrandire una sezione del grafico.
+  + L'utente clicca sul pulsante dedicato nel menù del programma per effettuare lo Zoom In nel grafico
+  + In alternativa l'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-out, doppio click o rotella del mouse) per ingrandire una sezione del grafico.
   + Il sistema aggiorna la visualizzazione mostrando l'area ingrandita con maggiore dettaglio.
 
 #figure(
@@ -373,10 +367,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni:* Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni:* La porzione del grafico viene rimpicciolita, permettendo una visione più ampia del contenuto.
 - *Scenario Principale:*
-  + L'utente clicca sul pulsante per attivare la modalità Zoom Out.
-  + L'applicazione abilita la modalità Zoom Out.
-  + L'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-in, doppio click con tasto destro o rotella del mouse) per ridurre la visualizzazione.
-  + Il sistema aggiorna la visualizzazione mostrando un'area più ampia del grafico.
+  + L'utente clicca sul pulsante dedicato nel menù del programma per effettuare lo Zoom Out nel grafico
+  + In alternativa l'utente utilizza le gesture del mouse o del trackpad/touchpad (pinch-out, doppio click o rotella del mouse) per ingrandire una sezione del grafico.
+  + Il sistema aggiorna la visualizzazione di conseguenza.
 
 #figure(
   image("/img/adr/PB/15.png", width: 80%),
@@ -398,13 +391,13 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 9 - Visualizzazione informazioni durante hover di una barra <uc9>
-- *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra.
+- *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza il valore dell'altezza della barra.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
+- *Postcondizioni: * Visualizza il valore dell'altezza della barra.
 - *Scenario Principale: *
     + L'utente passa il cursore del mouse sopra una barra.
-    + L'applicazione aggiorna la visualizzazione fornendo le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
+    + L'applicazione aggiorna la visualizzazione fornendo l'altezza relativa alla barra.
 #figure(
   image("/img/adr/PB/17.png", width: 80%),
   caption: [Visualizzazione informazioni durante #glossario("hover") di una barra],
@@ -495,6 +488,45 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
   caption: [Reimpostare la visualizzazione della barra selezionata],
 ) <imgUC10.5>
 \
+
+==== UC 10.6 - Visualizzazione della media in base al valore di X<uc10.6>
+- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato.
+- *Scenario Principale: *
+    + L'utente seleziona un valore dell'asse X.
+    + L'utente applica il filtro.
+    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
+- *Scenari Alternativi: *
+ - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
+    + Visualizzazione dell'errore emptyField (@uc27).
+    + Visualizzazione dell'errore invalidArguments (@uc23). 
+       
+#figure(
+  image("/img/adr/PB/28.png", width: 115%),
+  caption: [Visualizzazione della media in base al valore di X],
+) <imgUC15>
+\
+
+==== UC 10.7 - Visualizzazione della media in base al valore di Z<uc10.7>
+- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
+- *Scenario Principale: *
+    + L'utente seleziona un valore dell'asse Z.
+    + L'utente applica il filtro.
+    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
+- *Scenari Alternativi: *
+ - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
+    + Visualizzazione dell'errore emptyField (@uc27).
+    + Visualizzazione dell'errore invalidArguments (@uc23). 
+#figure(
+  image("/img/adr/PB/29.png", width: 115%),
+  caption: [Visualizzazione della media in base al valore di Z],
+) <imgUC16>
+\
       
 === UC 11 - Visualizzazione del valore medio globale <uc11>
 - *Descrizione: * L'utente attiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale. L'utente può con lo stesso metodo disattivare la visualizzazione del piano.
@@ -557,45 +589,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC14>
 \
   
-=== UC 15 - Visualizzazione della media in base al valore di X<uc15>
-- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
-- *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato.
-- *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse X.
-    + L'utente applica il filtro.
-    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
-- *Scenari Alternativi: *
- - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc27).
-    + Visualizzazione dell'errore invalidArguments (@uc23). 
-       
-#figure(
-  image("/img/adr/PB/28.png", width: 115%),
-  caption: [Visualizzazione della media in base al valore di X],
-) <imgUC15>
-\
-
-=== UC 16 - Visualizzazione della media in base al valore di Z<uc16>
-- *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
-- *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
-- *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse Z.
-    + L'utente applica il filtro.
-    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
-- *Scenari Alternativi: *
- - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc27).
-    + Visualizzazione dell'errore invalidArguments (@uc23). 
-#figure(
-  image("/img/adr/PB/29.png", width: 115%),
-  caption: [Visualizzazione della media in base al valore di Z],
-) <imgUC16>
-\
-
 === UC 17 - L'utente inserisce il valore _n_ <uc17>
 - *Descrizione: * L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_
 - *Attore: * Utente finale
@@ -842,12 +835,12 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.16], [@uc10.3 \ #glossario("UC")10.3], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata], [1 - Obbligatorio],
   [F.1.17], [@uc10.4 \ #glossario("UC")10.4], [L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata], [1 - Obbligatorio],
   [F.1.18], [@uc10.5 \ #glossario("UC")10.5], [L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)], [1 - Obbligatorio],
-  [F.1.19], [@uc11 \ #glossario("UC")11], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
-  [F.1.20], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
-  [F.1.21], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
-  [F.1.22], [@uc14 \ #glossario("UC")14], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
-  [F.1.23], [@uc15 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
-  [F.1.24], [@uc16 \ #glossario("UC")16], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
+  [F.1.19], [@uc10.6 \ #glossario("UC")15], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato], [1 - Obbligatorio],
+  [F.1.20], [@uc10.7 \ #glossario("UC")16], [L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato], [1 - Obbligatorio],
+  [F.1.21], [@uc11 \ #glossario("UC")11], [L'utente attiva o disattiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale], [1 - Obbligatorio],
+  [F.1.22], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
+  [F.1.23], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
+  [F.1.24], [@uc14 \ #glossario("UC")14], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
   [F.1.25], [@uc17 \ #glossario("UC")17], [L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_], [1 - Obbligatorio],
   [F.1.26], [@uc18 \ #glossario("UC")18], [L'utente può filtrare i dati per visualizzare gli _n_ con valore maggiore, con _n_ da lui definito], [1 - Obbligatorio],
   [F.1.27], [@uc19 \ #glossario("UC")19], [L'utente può filtrare i dati per visualizzare gli _n_ con valore minore, con _n_ da lui definit], [1 - Obbligatorio],
