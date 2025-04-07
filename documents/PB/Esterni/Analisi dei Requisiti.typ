@@ -586,7 +586,6 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente, tramite un'area specifica tra i filtri, inserisce il valore _n_.
 - *Scenari Alternativi: *
   - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc27).
     + Visualizzazione dell'errore invalidArguments (@uc23). 
 #figure(
   image("/img/adr/PB/30.png", width: 100%),
