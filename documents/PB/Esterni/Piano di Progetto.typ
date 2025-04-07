@@ -1562,7 +1562,7 @@ Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e m
 == Periodo 10
 
 === Pianificazione
-*#glossario("Periodo")*: 25/3/2025 - 03/4/2025 \
+*#glossario("Periodo")*: 25/03/2025 - 03/04/2025 \
 *Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
 #figure()[
   #align(center)[
@@ -1662,7 +1662,7 @@ Durante il decimo #glossario("periodo") si è evidenziata un'efficace gestione e
       [Giovanni\ Salvò],[6],[0],[0],[1(#text(red)[+1])],[0],[0],[€ #(1*costo_ora.proge+6*costo_ora.res) (#text(red)[+€ #(1*costo_ora.proge)])],
       [Gioele\ Scandaletti],[0],[0],[0],[2],[7],[6],[€ #(2*costo_ora.proge+7*costo_ora.progr+6*costo_ora.ana)],
       [Pietro\ Valdagno],[0],[0],[0],[6],[3],[0],[€ #(6*costo_ora.proge+3*costo_ora.progr)],
-      [*Costo per ruolo*],[€ #(9*costo_ora.res)],[€ #(4*costo_ora.amm)],[€ #(4*costo_ora.ver)],[€ #(33*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)]) ],[€ #(28.5*costo_ora.progr) (#text(red)[+€ #(1.5*costo_ora.progr)])],[€ #(6*costo_ora.ana)],[#text(blue)[*€ #(270+80+60+825+427.5+150)*]],
+      [*Costo per ruolo*],[€ #(9*costo_ora.res)],[€ #(4*costo_ora.amm)],[€ #(4*costo_ora.ver)],[€ #(33*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)]) ],[€ #(28.5*costo_ora.progr) (#text(red)[+€ #(1.5*costo_ora.progr)])],[€ #(6*costo_ora.ana)],[#text(blue)[*€ #(270+80+60+825+427.5+150)*] \ (#text(red)[+€ 47.5])],
     )
   ]
 ]
