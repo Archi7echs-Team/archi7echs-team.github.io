@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
     "0.1.0", "21-03-2025",  "Inizio stesura documento", p.checchinato, (p.salvo, p.valdagno),
@@ -296,12 +297,12 @@ Questa sezione permette di comprendere il funzionamento e l'interazione dei vari
 === App.svelte <app.svelte>
 
 ==== *Descrizione*  
-Il componente App.svelte è il punto di ingresso dell’applicazione e coordina il rendering della scena 3D e dei pannelli di controllo. Gestisce il canvas principale, carica i dati tramite la funzione getData() e imposta il target della visualizzazione, offrendo inoltre la possibilità di resettare il target alla configurazione di default.
+Il componente App.svelte è il punto di ingresso dell'applicazione e coordina il rendering della scena 3D e dei pannelli di controllo. Gestisce il canvas principale, carica i dati tramite la funzione getData() e imposta il target della visualizzazione, offrendo inoltre la possibilità di resettare il target alla configurazione di default.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente è contenuto in un `<div>` che occupa l’intera finestra, con un background scuro per evidenziare la scena 3D.  
-  - All’interno del `<Canvas>` (fornito da threlte/core) vengono integrati tre componenti principali:  
+  - Il componente è contenuto in un `<div>` che occupa l'intera finestra, con un background scuro per evidenziare la scena 3D.  
+  - All'interno del `<Canvas>` (fornito da threlte/core) vengono integrati tre componenti principali:  
     - SettingsPane.svelte: pannello per il controllo delle impostazioni e per il reset del target.  
     - BarPane.svelte: componente che gestisce i filtri e la selezione delle barre.  
     - Scene.svelte: responsabile del rendering della scena 3D in base al target impostato.
@@ -330,7 +331,7 @@ Il componente App.svelte è il punto di ingresso dell’applicazione e coordina 
   - Background: rgb(14, 22, 37) per creare un ambiente visivo immersivo che esalta gli elementi 3D.
 
 ==== *Esempi di Utilizzo*  
-- Integrazione nell’applicazione:  
+- Integrazione nell'applicazione:  
   Il componente App.svelte viene utilizzato come punto di ingresso principale.  
   ```svelte
   <script>
@@ -787,7 +788,7 @@ Con l'aggiunta di queste annotazioni, si è in grado di indicare nuovi parametri
 ```java external.api.nuovo_parametro=valore```, implementando di conseguenza i nuovi metodi _getter_ e _setter_.
 
 == Eccezioni
-Come indicato nel documento _Analisi dei Requsiti v2.0.0_, ci sono diversi errori da gestire come un ```java NetworkError``` o ```java FileTooBig```. Viste queste necessità, si è deciso di implementare una best practice di _Spring Boot_ tramite l'aggiunta dell'annotazione ```java @ControllerAdvice``` che è utilizzata per gestire centralmente le eccezioni e la logica di preprocessing per tutti i controller. Nel nostro caso specifico è stata aggiunta in combinazione l'annotazione ```java @ExceptionHandler()``` per poter gestire le eccezioni globalmente. 
+Come indicato nel documento _Analisi dei Requisti v2.0.0_, ci sono diversi errori da gestire come un ```java NetworkError``` o ```java FileTooBig```. Viste queste necessità, si è deciso di implementare una best practice di _Spring Boot_ tramite l'aggiunta dell'annotazione ```java @ControllerAdvice``` che è utilizzata per gestire centralmente le eccezioni e la logica di preprocessing per tutti i controller. Nel nostro caso specifico è stata aggiunta in combinazione l'annotazione ```java @ExceptionHandler()``` per poter gestire le eccezioni globalmente. 
 ```java @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -814,7 +815,7 @@ public class GlobalExceptionHandler {
 Con questa implementazione è possibile andare ad indicare un modo di fare l'handling dell'eccezioni in maniera differente in base alle varie casistiche. Permette inoltre di centralizzare la gestione delle eccezioni e di aggiungerne delle ulteriori in maniera incrementale (e molto facilmente).
 
 == Repository <backend-repository>
-Da capitolato, come indicato nell'UC2.3 all'interno del documento _Analisi dei Requsiti v2.0.0_ , l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
+Da capitolato, come indicato nell'UC2.3 all'interno del documento _Analisi dei Requisiti v2.0.0_ , l'utente deve essere in grado di caricare i dati tramite una connessione ad un database SQL. Per poter implementare questo requisito seguendo tutte le best practice (e il modo di seguire il modello _esagonale_) è stato necessario creare delle classi con le annotazioni ```java @Repository```, ```java @Entity``` e ```java @Table```. Andando per ordine, ```java @Repository``` permette di indicare che una classe è un repository, ovvero un componente responsabile dell'interazione con il database (fa parte dello Spring Data JPA e fornisce un livello di astrazione per operazioni CRUD senza dover scrivere query SQL manualmente), ```java @Entity``` che rappresenta una tabella del database con cui Spring Boot riesce a collegare automaticamente il repository e l'entità usando Spring Data JPA. Utilizzando quest'ultima, Spring Boot riesce a semplificare la gestione dei database e collegare automaticamente i componenti attraverso una serie di step:
 + Scansiona le annotazioni (```java @Repository```, ```java @Entity```, ecc..)
 + Crea il repository (infatti grazie a Spring Data JPA non serve implementare manualmente la classe in questione)
 + Crea automaticamente il database utilizzando JPA e Hibernate (che può essere configurato con il modo indicato in precedenza, andando a definire nel file _application.properties_ le configurazioni necessarie)
@@ -862,7 +863,7 @@ public class CoordinateEntity {
 
 
 == Model
-All'interno di model ci sono tutte quelle classi definite come oggetti di business. Troviamo infatti ```java CoordinateEntity.java``` e ```java MatrixData.java```. Come indicato in precendenza, nella @backend-repository, utilizzando Spring Boot è possibile definire un'entità tramite l'annotazione ```java @Entity```. Per vederne l'implementazione si riporta alla @backend-repository. ```java MatrixData.java``` è l'interfaccia di ritorno dei metodi per il reperimento dei dati:\ 
+All'interno di model ci sono tutte quelle classi definite come oggetti di business. Troviamo infatti ```java CoordinateEntity.java``` e ```java MatrixData.java```. Come indicato in precedenza, nella @backend-repository, utilizzando Spring Boot è possibile definire un'entità tramite l'annotazione ```java @Entity```. Per vederne l'implementazione si riporta alla @backend-repository. ```java MatrixData.java``` è l'interfaccia di ritorno dei metodi per il reperimento dei dati:\ 
 ```java DefaultExternalDataService.java```
 ```java @Override
     public MatrixData fetchData() { ... }```
@@ -878,10 +879,10 @@ All'interno di model ci sono tutte quelle classi definite come oggetti di busine
 #line(start: (0%, 0%), end: (100%, 0%)) 
 Le motivazioni di un tipo di implementazione come questa sono molteplici tra cui:
 + *Astrazione e Flessibilità*: Se una funzione ritorna un'interfaccia invece di una classe specifica, si può cambiare l'implementazione senza modificare il codice che utilizza il risultato della funzione. Il chiamante non ha bisogno di conoscere i dettagli dell'implementazione, ma solo i metodi e le proprietà definiti dall'interfaccia.
-+ *Inversione di Dipendenza (Principio DIP - SOLID)*: La funzione che restituisce l'interfaccia segue il principio dell'inversione di dipendenza: il codice dipende da un'astrazione (interfaccia) e non da una concreta implementazione e questo riduce l'accoppiamento tra i componenti, rendendo il sistema più manutenibile e scalabile.
++ *Inversione di Dipendenza (Principio DIP - SOLID)*: La funzione che restituisce l'interfaccia segue il principio dell'inversione di dipendenza: il codice dipende da un'astrazione (interfaccia) e non da una concreta implementazione e questo riduce l'accoppiamento tra i componenti, rendendo il sistema più mantenibile e scalabile.
 + *Facilitare il Polimorfismo*: Se diverse classi implementano la stessa interfaccia, possono essere trattate in modo uniforme senza dover conoscere quale specifica classe sta usando. Si può scrivere del codice generico che lavora con l'interfaccia, indipendentemente dall'implementazione concreta.
 + *Mocking e Testing*: Se il codice dipende da un'interfaccia piuttosto che da una classe concreta, si può facilmente sostituire l'implementazione reale con un mock o un fake per i test. Questo migliora l'isolamento dei test e riduce la necessità di dipendenze complesse nei test unitari.
-+ *Estendibilità*: Se in futuro si devono aggiungere nuove implementazioni, si può farlo senza modificare il codice esistente che utilizza l'interfaccia e di conseguenza permette di implementare nuovi comportamenti senza rompere il codice già scritto.
++ *Estensibilità*: Se in futuro si devono aggiungere nuove implementazioni, si può farlo senza modificare il codice esistente che utilizza l'interfaccia e di conseguenza permette di implementare nuovi comportamenti senza rompere il codice già scritto.
 Nel nostro caso specifico:
 ```java public interface MatrixData {
     List<String> xLabels();
@@ -894,5 +895,270 @@ ed implementata come:
 public record MatrixDataImpl(List<String> xLabels, List<String> zLabels, double[][] yValues) implements MatrixData { }```
 
 Questo ci permetterà in un futuro di poter aggiungere in maniera incrementale delle ulteriori implementazioni, senza dover andare a riscrivere il vecchio codice. Questo è un'importante aspetto che abbiamo tenuto in grande considerazione durante tutta la parte di #glossario("MVP"), dalla progettazione all'implementazione. 
+
+== Elaborazione dati Database
+
+ #figure(
+  image("/img/st/db.png", width: 90%),
+  caption: [Modulo di interazione con il database],
+) <imgDB>
+
+Questo modulo di elaborazione dei dati attraverso database gestisce la raccolta di coordinate (CoordinateEntity) da un repository (CoordinateRepository) e le rielabora tramite un servizio (CoordinateService/DefaultCoordinateService) per restituire all'utente finale dati sotto forma di una matrice (MatrixData/MatrixDataImpl). Il controller (CoordinateController) funge da punto di accesso per l'applicazione, invocando i metodi del servizio e ritornando i risultati.
+
+L'obiettivo di questa struttura è fornire un flusso completo dal livello di accesso ai dati (Repository), passando per la logica di business (Service), sino all'output finale (Controller), incapsulato in una rappresentazione astratta di dati (MatrixData).
+
+=== CoordinateController
+1. *Attributi*: 
+- *coordinateService: CoordinateService*. Riferimento all'interfaccia del service che fornisce la logica per ottenere le coordinate ed elaborarle.
+
+2. *Costruttore*:  
+- *CoordinateController(coordinateService: CoordinateService)*. Inietta l'implementazione di CoordinateService necessaria al controller.
+
+3. *Metodi*
+- *getMatrixData(datasetType: String): MatrixData*. Chiama il servizio per ottenere i dati (filtrati o identificati da datasetType) e restituisce un oggetto MatrixData che incapsula le coordinate in forma di matrici.
+4. *Note*
+-  Il controller costituisce il layer più esterno, tipicamente l'ingresso da parte di un client (es. chiamata HTTP).
+
+=== CoordinateService
+
+1. *Metodi*
+- *getCoordinates(datasetType: String): MatrixData*. Definisce la firma del metodo che dovrà fornire le coordinate sotto forma di `MatrixData`. Non contiene logica implementativa, solo la specifica del contratto.
+
+=== DefaultCoordinateService
+
+1. *Attributi*
+- *coordinateRepository: CoordinateRepository*. Riferimento al repository che fornisce l'accesso ai dati (entità `CoordinateEntity`).
+
+2. *Costruttore*
+- *DefaultCoordinateService(coordinateRepository: CoordinateRepository)*. Inietta l'istanza del repository necessaria per interrogare il database o la sorgente dati.
+
+3. *Metodi*
+- *getCoordinates(datasetType: String): MatrixData*. Implementa la logica per:
+  - Richiamare il repository e ottenere la lista di entità relative a `datasetType`.
+  - Estrarre da ogni `CoordinateEntity` i campi x, y e z.
+  - Popolare e restituire un oggetto di tipo `MatrixDataImpl` (che è l'implementazione concreta di `MatrixData`).
+
+4. *Note*
+- In uno scenario reale, qui si potrebbe gestire anche caching, mapping più complesso degli attributi, validazione del `datasetType`, ecc.
+
+=== CoordinateRepository
+
+1. *Metodi*
+- *findAllByDatasetType(type: String): List<CoordinateEntity>*. Permette di recuperare tutte le entità che corrispondono a uno specifico `datasetType`.
+
+2. *Note*
+- In un contesto tipico (es. Spring Data JPA), questa interfaccia sarebbe automaticamente implementata dal framework, fornendo query su un database relazionale (o altro storage).
+- L'approccio a repository promuove il pattern di “separazione delle responsabilità”: la logica di persistenza è centralizzata in un solo punto.
+
+=== CoordinateEntity
+
+1. *Attributi*
+- *id*: Long — Identificatore univoco dell'entità.
+- *xLabel*: String — Etichetta associato all'asse X.  
+- *zLabel*: String — Etichetta associato all'asse Z.  
+- *yValue*: double — Valore numerico associato all'asse Y.  
+- *datasetType*: String — Categoria a cui appartiene l'entità.
+
+2. *Costruttore*
+- *CoordinateEntity(xLabel: String, zLabel: String, yValue: Double, datasetType: String)*. Inizializza i campi principali necessari all'entità.
+
+3. *Metodi (Getter)*
+- *getXLabel(): String*  
+- *getYValue(): double*  
+- *getZLabel(): String*  
+
+4. *Note*
+- In un'applicazione di persistenza reale, potremmo aggiungere annotazioni (es. `@Entity`, `@Id`, ecc.) per la mappatura con il database.
+
+=== MatrixData
+
+1. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+2. *Note*
+- Definisce il contratto di come dev'essere rappresentato il set di dati in forma di matrici o liste coordinate.
+- Può variare a seconda che si gestiscano singoli valori Y o matrici X-Y-Z.
+
+=== MatrixDataImpl
+1. *Attributi*
+- *xLabels: List<String>*  
+- *zLabels: List<String>* 
+- *yValues: double*
+
+2. *Costruttore*
+- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Inizializza i vari campi con i dati estratti dalle entità tramite il servizio.
+
+3. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+4. *Note*
+- Qui avviene la concretizzazione di come i dati di `CoordinateEntity` vengono trasformati in una struttura di output leggibile dall'esterno.
+
+== Modulo API Esterno
+
+ #figure(
+  image("/img/st/api.png", width: 90%),
+  caption: [Modulo di interazione con le API esterne],
+) <imgAPI>
+
+Il *Modulo API Esterno* è responsabile dell'interazione con una sorgente dati remota, accessibile tramite protocollo HTTP. L'obiettivo è quello di integrare nel sistema dati provenienti dal servizio Weather Forecast.
+Questo modulo segue lo stesso principio architetturale del modulo interno basato su database: utilizza un controller per esporre l'endpoint, un service per incapsulare la logica di accesso e trasformazione, e un'interfaccia comune (`MatrixData`) per unificare il formato del dato.
+
+Il componente principale che espone l'endpoint verso il client è `ExternalDataController`, che si occupa di inoltrare la richiesta al service e restituire il risultato in un formato standardizzato.
+
+
+=== ExternalDataController
+
+1. *Attributi*
+- *externalDataService: ExternalDataService*. Riferimento al servizio che gestisce la logica di comunicazione con una fonte dati esterna.
+
+2. *Costruttore*
+- *ExternalDataController(externalDataService: ExternalDataService)*. Inietta l'istanza del servizio che si occupa di ottenere dati esterni.
+
+3. *Metodi*
+- *fetchExternalData(): MatrixData*. Chiama il servizio per ottenere i dati esterni e restituisce il risultato incapsulato in un oggetto `MatrixData`.
+
+4. *Note*
+- Come nel modulo interno, il controller funge da punto d'ingresso per i client esterni all'applicazione (es. chiamate HTTP REST).
+
+=== ExternalDataService
+
+1. *Metodi*
+- *fetchData(): MatrixData*. Definisce la firma del metodo incaricato di recuperare dati da una fonte esterna.
+
+2. *Note*
+- L'interfaccia consente di astrarre la logica di fetch, permettendo implementazioni alternative in futuro (es. GraphQL, file, ecc.).
+
+=== DefaultExternalDataService
+
+1. *Attributi*
+- *objectMapper*: ObjectMapper — Per la deserializzazione del JSON in oggetti Java.  
+- *restTemplate*: RestTemplate — Per effettuare le richieste HTTP verso l'API esterna.  
+- *properties*: ExternalAPIProperties — Contiene le configurazioni (endpoint, headers, ecc.) dell'API esterna.
+
+2. *Costruttore*
+- *DefaultExternalDataService(restTemplate: RestTemplate, properties: ExternalAPIProperties, objectMapper: ObjectMapper)*. Inizializza i componenti necessari per l'interazione con l'API esterna.
+
+3. *Metodi*
+- *fetchData(): MatrixData*. Esegue una richiesta all'API esterna, riceve una risposta JSON, la deserializzazione e restituisce i dati in formato `MatrixData`.
+
+- *parseData(jsonResponse: String): MatrixData*. Metodo interno privato usato per convertire la risposta JSON in un oggetto `MatrixData`.
+
+- *validateData(data: MatrixData)*. Metodo interno privato che verifica la correttezza dei dati ricevuti prima di restituirli.
+
+=== MatrixData
+
+1. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+2. *Note*
+- Rappresenta una struttura astratta per contenere e manipolare i dati in forma tabellare o matriciale, utile per visualizzazioni o calcoli successivi.
+
+=== MatrixDataImpl
+
+1. *Attributi*
+- *xLabels*: List<String>  
+- *zLabels*: List<String>  
+- *yValues*: *double*
+
+2. *Costruttore*
+- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Costruisce l'oggetto a partire dai dati ricevuti (tipicamente elaborati da JSON esterni).
+
+3. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+4. *Note*
+- L'implementazione concreta di `MatrixData` usata per rappresentare in modo coerente i dati provenienti dal servizio API esterno.
+
+== Modulo CSV
+
+ #figure(
+  image("/img/st/csv.png", width: 90%),
+  caption: [Modulo di interazione con il file CSV],
+) <imgCSV>
+
+Il modulo CSV ha il compito di ricevere in input un file caricato dall'utente, leggerne il contenuto (tipicamente in formato tabellare), estrarre le informazioni necessarie e trasformarle in una struttura dati `MatrixData` coerente con l'interfaccia comune dell'applicazione. Questo permette di trattare i dati importati come se provenissero da una qualsiasi altra fonte (database, API, ecc.), mantenendo l'uniformità del sistema.
+
+=== UploadController
+
+1. *Attributi*
+- *csvFileReader: CsvFileReader*. Riferimento all'interfaccia che incapsula la logica di parsing dei file CSV.
+
+2. *Costruttore*
+- *UploadController(csvFileReader: CsvFileReader)*. Inietta un'istanza dell'interfaccia `CsvFileReader` nel controller.
+
+3. *Metodi*
+- *uploadCsv(file: MultipartFile): MatrixData*. Riceve un file caricato tramite richiesta HTTP (tipicamente da un form), lo passa al `CsvFileReader` per il parsing e restituisce l'oggetto `MatrixData`.
+
+4. *Note*
+- Usa `MultipartFile`, un tipo comune in Spring per rappresentare i file caricati.
+
+=== CsvFileReader
+
+1. *Metodi*
+- *parseCsv(file: MultipartFile): MatrixData*. Definisce il contratto per trasformare un file CSV in una struttura `MatrixData`.
+
+2. *Note*
+- L'interfaccia permette flessibilità: in futuro si potrebbero aggiungere nuovi reader per altri formati senza modificare il controller.
+
+=== DefaultCsvFileReader
+
+1. *Attributi*
+- *properties: DataProperties*. Parametri o configurazioni utilizzate per l'analisi dei file (es. delimitatori, righe da saltare, header, ecc.).
+
+2. *Costruttore*
+- *DefaultCsvFileReader(properties: DataProperties)*. Inizializza la classe con le proprietà necessarie alla configurazione del reader.
+
+3. *Metodi*
+- *parseCsv(file: MultipartFile): MatrixData*. Metodo principale che esegue:
+  - Parsing del contenuto CSV.
+  - Estrazione di etichette X/Z e valori Y.
+  - Costruzione dell'oggetto `MatrixDataImpl`.
+
+- *getXLabels(table: `List<List<String>>`): List<String>*. Estrae le etichette da usare come asse X dalla tabella CSV.
+
+- *readCsvAsTable(file: MultipartFile): `List<List<String>>`*. Converte il file CSV in una lista di righe (ogni riga è una lista di stringhe).
+
+- *getStrings(record: CsvRecord): List<String>*. Estrae i campi testuali da un record CSV.
+
+4. *Note*
+- Incapsula completamente la logica di parsing del file e la trasformazione dei dati grezzi in una struttura coerente.
+- Può essere facilmente estesa per supportare più formati.
+
+=== MatrixData
+
+1. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+2. *Note*
+- Interfaccia comune che rappresenta una matrice di dati indipendentemente dalla loro origine.
+
+=== MatrixDataImpl
+
+1. *Attributi*
+- *xLabels: List<String>* 
+- *zLabels: List<String>*
+- *yValues: double*
+
+2. *Costruttore*
+- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Costruisce l'oggetto dati completo per la successiva visualizzazione o analisi.
+
+3. *Metodi*
+- *xLabels(): List<String>*  
+- *zLabels(): List<String>*  
+- *yValues(): double*
+
+4. *Note*
+- È la rappresentazione concreta dei dati tabellari letti dal CSV e convertiti in un formato uniforme.
 
 #pb()
