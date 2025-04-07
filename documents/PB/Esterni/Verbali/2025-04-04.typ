@@ -49,17 +49,18 @@ Si procede alla discussione in ordine dei punti all'#glossario("ordine del giorn
 
 #ordine_del_giorno([
 == Informazioni riguardo il lavoro svolto durante l'ultimo periodo
-#p.pozzobon mostra il lavoro svolto nel lato frontend riguardante i test e il relativo code coverage. Inoltre espone la difficolta nel produrre alcuni test per arrivare al 100% di code coverage. Alex Beggiato interviene dicendo che non e' necessario il 100% di code coverage se vengono spiegati i motivi che non hanno reso possibile il raggiungimento di esso. 
+#p.pozzobon mostra il lavoro svolto nel lato front-end riguardante i test e il relativo code coverage. Inoltre, espone la difficoltà nel produrre alcuni test per arrivare al 100% di code coverage. Alex Beggiato interviene dicendo che non è necessario il 100% di code coverage se vengono spiegati i motivi che non hanno reso possibile il raggiungimento di esso. 
 \
-#p.pesenato chiede chiarimenti ad Alex Beggiato per i test riguardanti l'#glossario("API") che sono resi complicati dal rate limit esterno. 
+#p.pesenato chiede chiarimenti ad Alex Beggiato per i test riguardanti l'#glossario("API") che sono resi complicati dal rate limit esterno. Inoltre, mostra i nuovi test aggiunti ai precedenti test di mutazione consigliati al team da Alex Beggiato. 
 \
-#p.scandaletti illustra il collegamento tra front-end e back-end dimostrando come la richiesta all'#glossario("API") avvenga e i dati vengano posizionati sul grafico.
+#p.scandaletti illustra il collegamento tra front-end e back-end dimostrando come la richiesta all'#glossario("API") avvenga e i dati vengano posizionati sul grafico oltre al caricamento dei dati tramite database.
 
 == Prossimi passi
-Fatto presente lo stato di avanzamento dei documenti e del #glossario("MVP") viene chiesto ad Alex Beggiato se la prossima riunione possa essere una riunione finale nel caso i documenti richiesti nel capitolato siano pronti. Alex Beggiato conferma questa possibilita.
+Fatto presente lo stato di avanzamento dei documenti e del #glossario("MVP") viene chiesto ad Alex Beggiato se la prossima riunione possa essere una riunione finale nel caso i documenti richiesti nel capitolato siano pronti. Alex Beggiato conferma questa possibilità.
+
 
 == Varie ed eventuali
-Non essendoci altri argomenti da discutere l'incontro è terminato alle 16:20. \
+Non essendoci altri argomenti da discutere l'incontro è terminato alle 16:30. \
 Il prossimo incontro #glossario("SAL") è stato programmato per il giorno 15/04/2025 alle 17:00. \
 ])
 
