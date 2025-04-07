@@ -495,16 +495,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse X.
-    + L'utente applica il filtro.
+    + L'utente seleziona, mediante click con tasto sinistro del mouse, la barra di interesse
+    + L'utente applica il filtro mediante selezione dell'apposita checkbox del menù Filtri, caricato al click della barra
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
-- *Scenari Alternativi: *
- - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc27).
-    + Visualizzazione dell'errore invalidArguments (@uc23). 
        
 #figure(
-  image("/img/adr/PB/28.png", width: 115%),
+  image("/img/adr/PB/28.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di X],
 ) <imgUC15>
 \
@@ -515,15 +511,11 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
 - *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Scenario Principale: *
-    + L'utente seleziona un valore dell'asse Z.
-    + L'utente applica il filtro.
-    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse Z selezionato.
-- *Scenari Alternativi: *
- - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore emptyField (@uc27).
-    + Visualizzazione dell'errore invalidArguments (@uc23). 
+    + L'utente seleziona, mediante click con tasto sinistro del mouse, la barra di interesse
+    + L'utente applica il filtro mediante selezione dell'apposita checkbox del menù Filtri, caricato al click della barra
+    + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
 #figure(
-  image("/img/adr/PB/29.png", width: 115%),
+  image("/img/adr/PB/29.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di Z],
 ) <imgUC16>
 \
@@ -571,20 +563,16 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 14 - Visualizzazione dati con altezza compresa tra un intervallo <uc14>
-- *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso).
+- *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati, lo slider è caricato con limite inferiore e superiore.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
-    + L'utente inserisce il minimo (se necessario) dell'intervallo.
-    + L'utente inserisce il massimo (se necessario) dell'intervallo.
-    + L'utente applica il filtro.
+    + L'utente, volendo, inserisce, o seleziona mediante slider, il valore minimo del range
+    + L'utente, volendo, inserisce, o seleziona mediante slider, il valore massimo del range
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
-- *Scenari Alternativi: *
- - L'utente potrebbe selezionare un intervallo che non contiene dati:
-    + Visualizzazione dell'errore invalidArguments (@uc23).
 #figure(
-  image("/img/adr/PB/27.png", width: 110%),
+  image("/img/adr/PB/27.png", width: 80%),
   caption: [Visualizzazione dati con altezza compresa tra un intervallo],
 ) <imgUC14>
 \
@@ -607,15 +595,14 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 18 - Filtro per la visualizzazione degli _n_ valori maggiori <uc18>
-- *Descrizione: * L'utente può filtrare e visualizzare gli _n_ valori maggiori, dove _n_ è da lui definito.
+- *Descrizione: * L'utente può filtrare e visualizzare solo barre altezza compresa tra gli _n_ valori di altezza maggiore, dove _n_ è da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori maggiori, dove _n_ definito dall'utente.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza maggiore
 - *Scenario Principale: *
-    + L'utente inserisce il valore di _n_ :
-      - @uc17
-    + L'utente tramite un'apposito bottone applica il filtro  
-    + L'applicazione opacizza tutti i valori che non fanno parte degli _n_ elementi con valore più alto.
+    + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
+      - @uc17 
+    + L'applicazione opacizza tutti i valori che non sono nell'insieme delle _n_ altezze maggiori.
 #figure(
   image("/img/adr/PB/31.png", width: 80%),
   caption: [Visualizzazione degli N valori maggiori],
@@ -623,15 +610,14 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 19 - Filtro per la visualizzazione degli _n_ valori minori <uc19>
-- *Descrizione: * L'utente può filtrare e visualizzare gli _n_ valori minori, dove _n_ è da lui definito.
+- *Descrizione: * L'utente può filtrare e visualizzare solo barre altezza compresa tra gli _n_ valori di altezza minore, dove _n_ è da lui definito.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro, gli _n_  valori minori, dove _n_ definito dall'utente.
+- *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza minore
 - *Scenario Principale: *
-    + L'utente inserisce il valore di _n_ :
-      - @uc17
-    + L'utente tramite un'apposito bottone applica il filtro  
-    + L'applicazione opacizza tutti i valori che non fanno parte degli _n_ elementi con valore più basso.
+    + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
+      - @uc17 
+    L'applicazione opacizza tutti i valori che non sono nell'insieme delle _n_ altezze minori.
 #figure(
   image("/img/adr/PB/32.png", width: 80%),
   caption: [Visualizzazione degli N valori minori],
