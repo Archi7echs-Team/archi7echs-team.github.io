@@ -72,7 +72,7 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 - Riferimento alle slide IS: _*Progettazione: I pattern di comportamento (GoF)*_: #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
 - Riferimento alle slide IS: _*Programmazione: SOLID programming*_: #link("https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
 
-= Tecnologie e librerie
+= Tecnologie
 In questa sezione vengono elencate le tecnologie (e librerie) utilizzate all'interno del progetto *3Dataviz*, dalla fase di progettazione alla sua implementazione. \
 Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Nome della tecnologia o libreria
@@ -80,36 +80,51 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Versione della tecnologia o libreria utilizzata
 + Link di riferimento alla sua documentazione
 
-== Java
+== Linguaggi
+=== Java
 - *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
   + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
   + Utilizzare il framework Spring Boot per semplificare la configurazione e la gestione delle dipendenze.
   + Eseguire test automatizzati tramite JUnit e Mockito.
-  + Integrare librerie esterne come PITest per il test di mutazione e Testcontainers per i test di integrazione.
+  + Integrare librerie esterne come PITest per il test di mutazione e TestContainers per i test di integrazione.
 - *Versione della tecnologia utilizzata*:
   - *Java JDK*: 23
 - *Link di riferimento alla documentazione*:
   - *Java*: #link("https://docs.oracle.com/en/java/")[#text(blue)[https://docs.oracle.com/en/java/]]
 
-== Spring Boot
-- *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
-  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
-  + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
-  + Esporre API RESTful per l'interazione con il frontend e altri servizi.
-  + Gestire la configurazione dell'applicazione tramite il file application.properties e le variabili d'ambiente definite in docker-compose.yml.
-  + Facilitare i test automatizzati, sfruttando il supporto nativo per Testcontainers e altre librerie di testing.
-
-L'integrazione con Docker consente di eseguire il backend in un container isolato, garantendo consistenza nell'ambiente di sviluppo e produzione.
-
+=== Typescript
+- *Descrizione della tecnologia e del suo utilizzo*: TypeScript è un superset di JavaScript che aggiunge tipizzazione statica e altre funzionalità avanzate al linguaggio. È progettato per migliorare la produttività degli sviluppatori e la qualità del codice, rendendo più facile la gestione di progetti complessi. Nel nostro progetto, TypeScript viene utilizzato per:
+  + Sviluppare il frontend dell'applicazione, sfruttando le funzionalità di tipizzazione per garantire una maggiore sicurezza del codice.
+  + Integrare con Svelte per creare componenti reattivi e performanti.
+  + Utilizzare librerie esterne come Threlte per la visualizzazione 3D dei dati.
 - *Versione della tecnologia utilizzata*:
-  - *Spring Boot*: 3.4.3
-  - *Spring Data JPA*: 3.4.3
-  
+  - *TypeScript*: 5.2.2(?)
 - *Link di riferimento alla documentazione*:
-  - *Spring Boot*:#link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
-  - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
+  - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
 
-== Docker
+== Servizi e Strumenti
+=== PostgreSQL
+- *Descrizione della tecnologia e del suo utilizzo*: PostgreSQL è un sistema di gestione di database relazionali open-source, noto per la sua robustezza, scalabilità e conformità agli standard SQL. Supporta una vasta gamma di tipi di dati e consente l'uso di estensioni per funzionalità avanzate. Nel nostro progetto, PostgreSQL viene utilizzato per:
+  + Memorizzare i dati dell'applicazione in modo strutturato e persistente.
+  + Gestire le relazioni tra le entità del dominio.
+  + Eseguire query complesse per recuperare e manipolare i dati in modo efficiente.
+  + Utilizzare il tipo ENUM per definire valori predefiniti e limitare le opzioni disponibili per determinati campi.
+- *Versione della tecnologia utilizzata*:
+  - *PostgreSQL*: 17
+- *Link di riferimento alla documentazione*:
+  - *PostgreSQL*: #link("https://www.postgresql.org/docs/")[#text(blue)[https://www.postgresql.org/docs/]]
+
+=== Maven
+- *Descrizione della tecnologia e del suo utilizzo*: Maven è un sistema di gestione dei progetti e automazione della build per Java. Fornisce un modello di progetto standardizzato e gestisce le dipendenze tra librerie e componenti. Nel nostro progetto, Maven viene utilizzato per:
+  + Gestire le dipendenze del progetto tramite il file pom.xml, semplificando l'integrazione di librerie esterne.
+  + Automatizzare il processo di build, test e packaging dell'applicazione.
+  + Eseguire plugin per il testing, la generazione di report e altre attività di sviluppo.
+- *Versione della tecnologia utilizzata*:
+  - *Maven*: 3.9.9
+- *Link di riferimento alla documentazione*:
+  - *Maven*: #link("https://maven.apache.org/")[#text(blue)[https://maven.apache.org/]]
+
+=== Docker
 - *Descrizione della tecnologia e del suo utilizzo*: Docker è una piattaforma che consente di sviluppare, distribuire ed eseguire applicazioni in container. Un container è un'unità software che include tutto il necessario per eseguire un'applicazione, come codice, runtime, librerie e dipendenze, garantendo coerenza tra ambienti diversi. Nel nostro progetto, Docker viene utilizzato per:
   + Costruire e pacchettizzare l'applicazione Spring Boot in un'immagine Docker tramite un Dockerfile.
   + Gestire l'ambiente di sviluppo e test attraverso docker-compose, orchestrando i servizi necessari, tra cui:
@@ -119,7 +134,7 @@ L'integrazione con Docker consente di eseguire il backend in un container isolat
   Il Dockerfile segue un processo in due fasi:
   + *Fase di compilazione*: utilizza un'immagine Maven per costruire il pacchetto JAR dell'applicazione.
   + *Fase di runtime*: utilizza un'immagine JDK leggera per eseguire il JAR costruito.
-  
+
   Il file docker-compose.yml definisce tre servizi principali:
   + *db*: un'istanza PostgreSQL con un volume per la persistenza dei dati.
   + *test*: un container per eseguire i test, garantendo che l'applicazione funzioni correttamente prima della fase di build.
@@ -134,77 +149,27 @@ L'integrazione con Docker consente di eseguire il backend in un container isolat
   - *Docker*: #link("https://docs.docker.com/")[#text(blue)[https://docs.docker.com/]]
   - *Docker Compose*: #link("https://docs.docker.com/compose/")[#text(blue)[https://docs.docker.com/compose/]]
   - *PostgreSQL*: #link("https://www.postgresql.org/docs//")[#text(blue)[https://www.postgresql.org/docs/]]
-  
-== JUnit 5
-- *Descrzione della tecnologia e del suo utilizzo*: JUnit 5 è un framework di testing per Java che consente di scrivere e eseguire test automatizzati. È composto da tre moduli principali: JUnit Platform, JUnit Jupiter e JUnit Vintage. JUnit Jupiter è la parte principale del framework, fornendo le annotazioni e le API per scrivere test. Nel nostro progetto, JUnit 5 viene utilizzato per:
-  + Scrivere test unitari e di integrazione per il backend dell'applicazione.
-  + Eseguire test automatici in un ambiente Docker tramite Testcontainers.
-  + Integrare con Mockito per il mocking delle dipendenze durante i test.
-  + Fornire report dettagliati sui risultati dei test, facilitando l'individuazione di errori e problemi nel codice.
+
+== Framework
+=== Spring Boot
+- *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
+  + Esporre API RESTful per l'interazione con il frontend e altri servizi.
+  + Gestire la configurazione dell'applicazione tramite il file application.properties e le variabili d'ambiente definite in docker-compose.yml.
+  + Facilitare i test automatizzati, sfruttando il supporto nativo per Testcontainers e altre librerie di testing.
+
+L'integrazione con Docker consente di eseguire il backend in un container isolato, garantendo consistenza nell'ambiente di sviluppo e produzione.
 
 - *Versione della tecnologia utilizzata*:
-  - *JUnit*: 5.10.0
+  - *Spring Boot*: 3.4.3
+  - *Spring Data JPA*: 3.4.3
 
 - *Link di riferimento alla documentazione*:
-  - *JUnit*: #link("https://junit.org/junit5/docs/current/user-guide/")[#text(blue)[https://junit.org/junit5/docs/current/user-guide/]]
+  - *Spring Boot*: #link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
+  - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
 
-== PITest
-- *Descrizione della tecnologia e del suo utilizzo*: PITest è un framework di test di mutazione per applicazioni Java. Il test di mutazione è una tecnica avanzata per valutare la qualità dei test unitari generando e iniettando mutazioni nel codice sorgente e verificando se i test sono in grado di rilevarle. Questo aiuta a identificare le debolezze nella suite di test e a migliorare la copertura e l'affidabilità del codice. Nel nostro progetto, PITest viene utilizzato per:
-  + Analizzare l'efficacia dei test unitari, verificando se riescono a rilevare mutazioni introdotte nel codice.
-  + Identificare punti deboli nella suite di test, segnalando eventuali scenari non coperti adeguatamente.
-  + Migliorare la qualità del codice, incentivando la scrittura di test più robusti.
-  + Integrare il testing nei processi CI/CD, garantendo un monitoraggio continuo della qualità del codice.
-PITest viene configurato all'interno del progetto Maven ed eseguito automaticamente come parte del processo di testing, fornendo report dettagliati sui mutanti generati e uccisi.\
-
-Per garantire la compatibilità con JUnit 5 e Spring, nel progetto sono utilizzati i seguenti plugin:
-  + *pitest-junit5-plugin*: Permette l'integrazione di PITest con JUnit 5.
-  + *arcmutate-spring*: Estensione per migliorare il supporto ai test su applicazioni Spring.
-  
-- *Versione della tecnologia utilizzata*:
-  - *PITest*: 1.19.0
-  - *pitest-junit5-plugin*: 1.1.0
-  - *arcmutate-spring*: 1.0.0
-  
-- *Link di riferimento alla documentazione*:
-  - *PITest*: #link("https://pitest.org/")[#text(blue)[https://pitest.org/]]
-  - *Plugin Maven per PITest*: #link("https://plugins.pitest.org/maven/")[#text(blue)[https://plugins.pitest.org/maven/]]
-  - *pitest-junit5-plugin*: #link("https://github.com/pitest/pitest-junit5-plugin")[#text(blue)[https://github.com/pitest/pitest-junit5-plugin]]
-
-== Mockito
-- *Descrizione della tecnologia e del suo utilizzo*: Mockito è un framework di mocking per Java utilizzato principalmente nei test unitari. Permette di simulare il comportamento di classi e dipendenze, consentendo di testare unità di codice in modo isolato senza dover dipendere da componenti reali come database o servizi esterni. Nel nostro progetto, Mockito viene utilizzato per:
-  - Simulare dipendenze nelle classi testate, evitando la necessità di istanziare oggetti reali.
-  - Verificare il comportamento del codice, assicurandosi che determinati metodi vengano chiamati con i parametri corretti.
-  - Testare componenti Spring Boot, come service e repository, isolandoli dall'infrastruttura sottostante.
-  - Migliorare la velocità dei test, riducendo il tempo di esecuzione rispetto a test che interagiscono con database o API reali.
-L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java @Mock```, ```java @InjectMocks``` e ```java @ExtendWith(MockitoExtension.class)```, garantendo una configurazione semplice ed efficace.
-
-- *Versione della tecnologia utilizzata*:
-  - *Mockito Core*: 5.14.2
-  - *Mockito JUnit Jupiter*: 5.14.2
-
-- *Link di riferimento alla documentazione*:
-  - *Mockito*: #link("https://site.mockito.org/")[#text(blue)[https://site.mockito.org/]]
-  - *Mockito per JUnit 5*: #link("https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/")[#text(blue)[https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/]]
-
-== Testcontainers
-- *Descrizione della tecnologia e del suo utilizzo*: Testcontainers è una libreria Java che semplifica l'esecuzione di test di integrazione utilizzando container Docker. Consente di avviare istanze temporanee di database, servizi o altre dipendenze necessarie per i test, garantendo un ambiente isolato e riproducibile. Nel nostro progetto, Testcontainers viene utilizzato per:
-  + Eseguire test di integrazione con un'istanza PostgreSQL in un container Docker, garantendo che i test siano eseguiti in un ambiente simile a quello di produzione.
-  + Creare e gestire container in modo programmatico, evitando la necessità di configurazioni manuali.
-  + Garantire che i test siano indipendenti dall'ambiente locale, riducendo il rischio di errori dovuti a configurazioni diverse tra sviluppatori.
-  + Integrare facilmente con JUnit 5 e Spring Boot, sfruttando le annotazioni per configurare i container necessari.
-
-- *Versione della tecnologia utilizzata*:
-  - *Testcontainers Core*: 1.20.6
-  - *Testcontainers JUnit Jupiter*: 1.20.6
-  - *Testcontainers PostgreSQL*: 1.20.0
-
-- *Link di riferimento alla documentazione*:
-  - *Testcontainers*: #link("https://www.testcontainers.org/")[#text(blue)[https://www.testcontainers.org/]]
-  - *Testcontainers JUnit 5*:#link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
-  - *Testcontainers PostgreSQL*:#link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
-
-
-== Svelte
+=== Svelte
 - *Descrizione della tecnologia e del suo utilizzo*: Svelte è un framework di front-end moderno che consente di sviluppare interfacce utente reattive e performanti compilando il codice in JavaScript ottimizzato. A differenza di altri framework come React o Vue, Svelte non utilizza un Virtual DOM, ma compila i componenti in codice JavaScript efficiente che aggiorna direttamente il DOM in modo minimale. Nel nostro progetto, Svelte viene utilizzato per:
   + Sviluppare l'interfaccia utente in modo efficiente e performante.
   + Gestire lo stato dell'applicazione attraverso il sistema di store di Svelte.
@@ -219,7 +184,76 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
 - *Link di riferimento alla documentazione*:
   - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
 
+== Test
+=== JUnit 5
+- *Descrizione della tecnologia e del suo utilizzo*: JUnit 5 è un framework di testing per Java che consente di scrivere e eseguire test automatizzati. È composto da tre moduli principali: JUnit Platform, JUnit Jupiter e JUnit Vintage. JUnit Jupiter è la parte principale del framework, fornendo le annotazioni e le API per scrivere test. Nel nostro progetto, JUnit 5 viene utilizzato per:
+  + Scrivere test unitari e di integrazione per il backend dell'applicazione.
+  + Eseguire test automatici in un ambiente Docker tramite Testcontainers.
+  + Integrare con Mockito per il mocking delle dipendenze durante i test.
+  + Fornire report dettagliati sui risultati dei test, facilitando l'individuazione di errori e problemi nel codice.
+
+- *Versione della tecnologia utilizzata*:
+  - *JUnit*: 5.10.0
+
+- *Link di riferimento alla documentazione*:
+  - *JUnit*: #link("https://junit.org/junit5/docs/current/user-guide/")[#text(blue)[https://junit.org/junit5/docs/current/user-guide/]]
+
+=== PITest
+- *Descrizione della tecnologia e del suo utilizzo*: PITest è un framework di test di mutazione per applicazioni Java. Il test di mutazione è una tecnica avanzata per valutare la qualità dei test unitari generando e iniettando mutazioni nel codice sorgente e verificando se i test sono in grado di rilevarle. Questo aiuta a identificare le debolezze nella suite di test e a migliorare la copertura e l'affidabilità del codice. Nel nostro progetto, PITest viene utilizzato per:
+  + Analizzare l'efficacia dei test unitari, verificando se riescono a rilevare mutazioni introdotte nel codice.
+  + Identificare punti deboli nella suite di test, segnalando eventuali scenari non coperti adeguatamente.
+  + Migliorare la qualità del codice, incentivando la scrittura di test più robusti.
+  + Integrare il testing nei processi CI/CD, garantendo un monitoraggio continuo della qualità del codice.
+PITest viene configurato all'interno del progetto Maven ed eseguito automaticamente come parte del processo di testing, fornendo report dettagliati sui mutanti generati e uccisi.\
+
+Per garantire la compatibilità con JUnit 5 e Spring, nel progetto sono utilizzati i seguenti plugin:
+  + *pitest-junit5-plugin*: Permette l'integrazione di PITest con JUnit 5.
+  + *arcmutate-spring*: Estensione per migliorare il supporto ai test su applicazioni Spring.
+
+- *Versione della tecnologia utilizzata*:
+  - *PITest*: 1.19.0
+  - *pitest-junit5-plugin*: 1.1.0
+  - *arcmutate-spring*: 1.0.0
+
+- *Link di riferimento alla documentazione*:
+  - *PITest*: #link("https://pitest.org/")[#text(blue)[https://pitest.org/]]
+  - *Plugin Maven per PITest*: #link("https://plugins.pitest.org/maven/")[#text(blue)[https://plugins.pitest.org/maven/]]
+  - *pitest-junit5-plugin*: #link("https://github.com/pitest/pitest-junit5-plugin")[#text(blue)[https://github.com/pitest/pitest-junit5-plugin]]
+
+=== Mockito
+- *Descrizione della tecnologia e del suo utilizzo*: Mockito è un framework di mocking per Java utilizzato principalmente nei test unitari. Permette di simulare il comportamento di classi e dipendenze, consentendo di testare unità di codice in modo isolato senza dover dipendere da componenti reali come database o servizi esterni. Nel nostro progetto, Mockito viene utilizzato per:
+  - Simulare dipendenze nelle classi testate, evitando la necessità di istanziare oggetti reali.
+  - Verificare il comportamento del codice, assicurandosi che determinati metodi vengano chiamati con i parametri corretti.
+  - Testare componenti Spring Boot, come service e repository, isolandoli dall'infrastruttura sottostante.
+  - Migliorare la velocità dei test, riducendo il tempo di esecuzione rispetto a test che interagiscono con database o API reali.
+L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni `@Mock`, `@InjectMocks` e `@ExtendWith(MockitoExtension.class)`, garantendo una configurazione semplice ed efficace.
+
+- *Versione della tecnologia utilizzata*:
+  - *Mockito Core*: 5.14.2
+  - *Mockito JUnit Jupiter*: 5.14.2
+
+- *Link di riferimento alla documentazione*:
+  - *Mockito*: #link("https://site.mockito.org/")[#text(blue)[https://site.mockito.org/]]
+  - *Mockito per JUnit 5*: #link("https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/")[#text(blue)[https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/]]
+
+=== Testcontainers
+- *Descrizione della tecnologia e del suo utilizzo*: Testcontainers è una libreria Java che semplifica l'esecuzione di test di integrazione utilizzando container Docker. Consente di avviare istanze temporanee di database, servizi o altre dipendenze necessarie per i test, garantendo un ambiente isolato e riproducibile. Nel nostro progetto, Testcontainers viene utilizzato per:
+  + Eseguire test di integrazione con un'istanza PostgreSQL in un container Docker, garantendo che i test siano eseguiti in un ambiente simile a quello di produzione.
+  + Creare e gestire container in modo programmatico, evitando la necessità di configurazioni manuali.
+  + Garantire che i test siano indipendenti dall'ambiente locale, riducendo il rischio di errori dovuti a configurazioni diverse tra sviluppatori.
+  + Integrare facilmente con JUnit 5 e Spring Boot, sfruttando le annotazioni per configurare i container necessari.
+
+- *Versione della tecnologia utilizzata*:
+  - *Testcontainers Core*: 1.20.6
+  - *Testcontainers JUnit Jupiter*: 1.20.6
+  - *Testcontainers PostgreSQL*: 1.20.0
+
+- *Link di riferimento alla documentazione*:
+  - *Testcontainers*: #link("https://www.testcontainers.org/")[#text(blue)[https://www.testcontainers.org/]]
+  - *Testcontainers JUnit 5*: #link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
+  - *Testcontainers PostgreSQL*: #link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
 #pb()
+
 = Architettura
 == Architettura logica <architettura_logica>
 Nel nostro progetto abbiamo scelto di adottare un'architettura esagonale, che ci permette di organizzare il codice in maniera ordinata e con una chiara separazione dei compiti tra le varie componenti. Al centro dell'architettura si trova il core domain, dove risiede tutta la logica di business. Questo cuore del sistema è progettato per essere indipendente da elementi esterni come database, API o librerie specifiche, rendendo così l'applicazione più semplice da manutenere, testare e far evolvere nel tempo.
