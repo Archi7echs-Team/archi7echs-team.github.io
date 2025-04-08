@@ -415,12 +415,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
       - Visualizzazione delle informazioni relative alla barra premuta;
       - Possibilità di applicare filtri al grafico in base alla barra premuta.
 #figure(
-  image("/img/adr/PB/18.png", width: 80%),
+  image("/img/adr/PB/18.png", width: 110%),
   caption: [Click su una barra del grafico],
 ) <imgUC10>
 \
     
-==== UC 10.1 - Visualizzazione informazioni dopo click di una barra <uc10.1>
+==== UC 10.1 - Visualizzazione informazioni relative alla barra selezionata <uc10.1>
 - *Descrizione: * L'utente preme sopra ad una barra e vengono visualizzate le informazioni della barra ovvero, coordinate, altezza, media relativa ai valori della stessa x, media relativa ai valori della stessa z e media relativa ai valori globali.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha premuto su una barra del grafico.
@@ -433,27 +433,27 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC10.1>
 \
 
-==== UC 10.2 - Scelta dell'opacizzazione di una barra selezionata<uc10.2>
+==== UC 10.2 - Scelta della percentuale di opacizzazione della barra selezionata<uc10.2>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di modificarne l'opacizzazione.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Precondizioni: * L'utente ha premuto su una barra del grafico e il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * L'utente seleziona l'opacizzazione della barra selezionata.
 - *Scenario Principale: *
-    + L'applicazione aggiorna la visualizzazione fornendo la possibilità di modificare l'opacizzazione.
-    + L'utente modifica l'opacizzazione a piacere.
+    + L'utente, mediante apposito l'apposito componente slider, situato nel pannello filtri relativo alla barra, imposta l'opacizzazione della barra selezionata.
+    + L'applicazione aggiorna la visualizzazione.
 #figure(
   image("/img/adr/PB/20.png", width: 80%),
   caption: [Scelta dell'opacizzazione di una barra selezionata],
 ) <imgUC10.2>
 \
 
-==== UC 10.3 - Opacizzazione dei dati con valore minore di una barra selezionata<uc10.3>
+==== UC 10.3 - Opacizzazione delle barre con altezza minore rispetto alla barra selezionata<uc10.3>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti i dati che hanno valore minore del valore della barra selezionata.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Precondizioni: * L'utente ha premuto su una barra del grafico e il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Il grafico ha i dati con valore minore del valore della barra selezionata opacizzati.
 - *Scenario Principale: *
-    + L'utente preme sul bottone dedicato all'applicazione del filtro.
+    + L'utente preme il bottone dedicato, situato nel pannello filtri relativo alla barra selezionata.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
 #figure(
   image("/img/adr/PB/21.png", width: 80%),
@@ -461,10 +461,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC10.3>
 \
 
-==== UC 10.4 Opacizzazione dei dati con valore maggiore di una barra selezionata<uc10.4>
+==== UC 10.4 Opacizzazione delle barre con altezza maggiore rispetto alla barra selezionata<uc10.4>
 - *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di #glossario("opacizzare") tutti gli altri dati che hanno valore maggiore del valore della barra selezionata.
 - *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico.
+- *Precondizioni: * L'utente ha premuto su una barra del grafico e il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Il grafico ha i dati con valore maggiore del valore della barra selezionata opacizzati.
 - *Scenario Principale: *
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
@@ -475,21 +475,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC10.4>
 \
 
-==== UC 10.5 Reimpostare la visualizzazione della barra selezionata<uc10.5>
-- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default.
-- *Attore: * Utente finale
-- *Precondizioni: * L'utente ha premuto su una barra del grafico e può aver applicato dei filtri alla barra.
-- *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati.
-- *Scenario Principale: *
-    + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
-    + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
-#figure(
-  image("/img/adr/PB/23.png", width: 80%),
-  caption: [Reimpostare la visualizzazione della barra selezionata],
-) <imgUC10.5>
-\
 
-==== UC 10.6 - Visualizzazione della media in base al valore di X<uc10.6>
+==== UC 10.5 - Visualizzazione della media in base al valore di X della barra selezionata<uc10.5>
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -502,10 +489,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/28.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di X],
-) <imgUC15>
+) <imgUC10.5>
 \
 
-==== UC 10.7 - Visualizzazione della media in base al valore di Z<uc10.7>
+==== UC 10.6 - Visualizzazione della media in base al valore di Z<uc10.6>
 - *Descrizione: * L'utente può visualizzare il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
@@ -517,7 +504,35 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/29.png", width: 80%),
   caption: [Visualizzazione della media in base al valore di Z],
-) <imgUC16>
+) <imgUC10.6>
+\
+
+==== UC 10.7 Reimpostare la visualizzazione della barra selezionata<uc10.7>
+- *Descrizione: * L'utente preme sopra ad una barra e deve avere la possibilità di reimpostare i filtri di default.
+- *Attore: * Utente finale
+- *Precondizioni: * L'utente ha premuto su una barra del grafico, il pannello filtri, relativo alla barra selezionata, è caricato correttamente e sono stati applicati filtri di visualizzazione, relativi alla barra selezionata.
+- *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati.
+- *Scenario Principale: *
+    + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
+    + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
+#figure(
+  image("/img/adr/PB/23.png", width: 80%),
+  caption: [Reimpostare la visualizzazione della barra selezionata],
+) <imgUC10.7>
+\
+
+==== UC 10.8 - Chiusura pannello informazioni e filtri relativi ad una barra<uc10.8>
+- *Descrizione: * L'utente può chiudere il pannello informazioni e filtri relativi ad una barra selezionata.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati, il pannello informazioni e filtri relativi ad una barra selezionata è aperto.
+- *Postcondizioni: * Il pannello informazioni e filtri relativi ad una barra selezionata è chiuso.
+- *Scenario Principale: *
+    + L'utente seleziona, mediante click con tasto sinistro del mouse, il relativo bottone di chiusura del pannello informazioni e filtri 
+    + L'applicazione aggiorna la visualizzazione chiudendo il pannello informazioni e filtri relativi alla barra selezionata.
+#figure(
+  image("/img/adr/PB/44.png", width: 80%),
+  caption: [Chiusura pannello informazioni e filtri relativi ad una barra],
+) <imgUC10.8>
 \
       
 === UC 11 - Visualizzazione del valore medio globale <uc11>
