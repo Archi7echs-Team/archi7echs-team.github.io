@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.5.0", "08-04-2025", "Fix e stesura architettura deployment", (p.pesenato),"",
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
@@ -79,6 +80,35 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Versione della tecnologia o libreria utilizzata
 + Link di riferimento alla sua documentazione
 
+== Java
+- *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Utilizzare il framework Spring Boot per semplificare la configurazione e la gestione delle dipendenze.
+  + Eseguire test automatizzati tramite JUnit e Mockito.
+  + Integrare librerie esterne come PITest per il test di mutazione e Testcontainers per i test di integrazione.
+- *Versione della tecnologia utilizzata*:
+  - *Java JDK*: 23
+- *Link di riferimento alla documentazione*:
+  - *Java*: #link("https://docs.oracle.com/en/java/")[#text(blue)[https://docs.oracle.com/en/java/]]
+
+== Spring Boot
+- *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
+  + Esporre API RESTful per l'interazione con il frontend e altri servizi.
+  + Gestire la configurazione dell'applicazione tramite il file application.properties e le variabili d'ambiente definite in docker-compose.yml.
+  + Facilitare i test automatizzati, sfruttando il supporto nativo per Testcontainers e altre librerie di testing.
+
+L'integrazione con Docker consente di eseguire il backend in un container isolato, garantendo consistenza nell'ambiente di sviluppo e produzione.
+
+- *Versione della tecnologia utilizzata*:
+  - *Spring Boot*: 3.4.3
+  - *Spring Data JPA*: 3.4.3
+  
+- *Link di riferimento alla documentazione*:
+  - *Spring Boot*:#link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
+  - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
+
 == Docker
 - *Descrizione della tecnologia e del suo utilizzo*: Docker è una piattaforma che consente di sviluppare, distribuire ed eseguire applicazioni in container. Un container è un'unità software che include tutto il necessario per eseguire un'applicazione, come codice, runtime, librerie e dipendenze, garantendo coerenza tra ambienti diversi. Nel nostro progetto, Docker viene utilizzato per:
   + Costruire e pacchettizzare l'applicazione Spring Boot in un'immagine Docker tramite un Dockerfile.
@@ -104,27 +134,20 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
   - *Docker*: #link("https://docs.docker.com/")[#text(blue)[https://docs.docker.com/]]
   - *Docker Compose*: #link("https://docs.docker.com/compose/")[#text(blue)[https://docs.docker.com/compose/]]
   - *PostgreSQL*: #link("https://www.postgresql.org/docs//")[#text(blue)[https://www.postgresql.org/docs/]]
-
-== Spring Boot
-- *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
-  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
-  + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
-  + Esporre API RESTful per l'interazione con il frontend e altri servizi.
-  + Gestire la configurazione dell'applicazione tramite il file application.properties e le variabili d'ambiente definite in docker-compose.yml.
-  + Facilitare i test automatizzati, sfruttando il supporto nativo per Testcontainers e altre librerie di testing.
-
-L'integrazione con Docker consente di eseguire il backend in un container isolato, garantendo consistenza nell'ambiente di sviluppo e produzione.
+  
+== JUnit 5
+- *Descrzione della tecnologia e del suo utilizzo*: JUnit 5 è un framework di testing per Java che consente di scrivere e eseguire test automatizzati. È composto da tre moduli principali: JUnit Platform, JUnit Jupiter e JUnit Vintage. JUnit Jupiter è la parte principale del framework, fornendo le annotazioni e le API per scrivere test. Nel nostro progetto, JUnit 5 viene utilizzato per:
+  + Scrivere test unitari e di integrazione per il backend dell'applicazione.
+  + Eseguire test automatici in un ambiente Docker tramite Testcontainers.
+  + Integrare con Mockito per il mocking delle dipendenze durante i test.
+  + Fornire report dettagliati sui risultati dei test, facilitando l'individuazione di errori e problemi nel codice.
 
 - *Versione della tecnologia utilizzata*:
-  - *Spring Boot*: 3.4.3
-  - *Spring Data JPA*: 3.4.3
-  
+  - *JUnit*: 5.10.0
 
 - *Link di riferimento alla documentazione*:
+  - *JUnit*: #link("https://junit.org/junit5/docs/current/user-guide/")[#text(blue)[https://junit.org/junit5/docs/current/user-guide/]]
 
-  - *Spring Boot*:#link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
-  - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
-  
 == PITest
 - *Descrizione della tecnologia e del suo utilizzo*: PITest è un framework di test di mutazione per applicazioni Java. Il test di mutazione è una tecnica avanzata per valutare la qualità dei test unitari generando e iniettando mutazioni nel codice sorgente e verificando se i test sono in grado di rilevarle. Questo aiuta a identificare le debolezze nella suite di test e a migliorare la copertura e l'affidabilità del codice. Nel nostro progetto, PITest viene utilizzato per:
   + Analizzare l'efficacia dei test unitari, verificando se riescono a rilevare mutazioni introdotte nel codice.
@@ -162,6 +185,24 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
 - *Link di riferimento alla documentazione*:
   - *Mockito*: #link("https://site.mockito.org/")[#text(blue)[https://site.mockito.org/]]
   - *Mockito per JUnit 5*: #link("https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/")[#text(blue)[https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/]]
+
+== Testcontainers
+- *Descrizione della tecnologia e del suo utilizzo*: Testcontainers è una libreria Java che semplifica l'esecuzione di test di integrazione utilizzando container Docker. Consente di avviare istanze temporanee di database, servizi o altre dipendenze necessarie per i test, garantendo un ambiente isolato e riproducibile. Nel nostro progetto, Testcontainers viene utilizzato per:
+  + Eseguire test di integrazione con un'istanza PostgreSQL in un container Docker, garantendo che i test siano eseguiti in un ambiente simile a quello di produzione.
+  + Creare e gestire container in modo programmatico, evitando la necessità di configurazioni manuali.
+  + Garantire che i test siano indipendenti dall'ambiente locale, riducendo il rischio di errori dovuti a configurazioni diverse tra sviluppatori.
+  + Integrare facilmente con JUnit 5 e Spring Boot, sfruttando le annotazioni per configurare i container necessari.
+
+- *Versione della tecnologia utilizzata*:
+  - *Testcontainers Core*: 1.20.6
+  - *Testcontainers JUnit Jupiter*: 1.20.6
+  - *Testcontainers PostgreSQL*: 1.20.0
+
+- *Link di riferimento alla documentazione*:
+  - *Testcontainers*: #link("https://www.testcontainers.org/")[#text(blue)[https://www.testcontainers.org/]]
+  - *Testcontainers JUnit 5*:#link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
+  - *Testcontainers PostgreSQL*:#link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
+
 
 == Svelte
 - *Descrizione della tecnologia e del suo utilizzo*: Svelte è un framework di front-end moderno che consente di sviluppare interfacce utente reattive e performanti compilando il codice in JavaScript ottimizzato. A differenza di altri framework come React o Vue, Svelte non utilizza un Virtual DOM, ma compila i componenti in codice JavaScript efficiente che aggiorna direttamente il DOM in modo minimale. Nel nostro progetto, Svelte viene utilizzato per:
