@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "07-04-2025",  "Prima stesura documento", p.salvo, (p.lucato),
+    "0.1.0", "07-04-2025",  "Prima stesura documento", p.salvo, (p.lucato, p.pesenato),
   )
 )
 
@@ -17,7 +17,7 @@ _A seguito del lavoro svolto da parte del team durante il decimo #glossario("per
 
 
 = Ordine del Giorno
-  
+
 + Informazioni riguardo il lavoro svolto durante l'ultimo periodo
 + Prossimi passi
 + Varie ed eventuali
@@ -25,13 +25,13 @@ _A seguito del lavoro svolto da parte del team durante il decimo #glossario("per
 = Dettagli dell'incontro
 
 *Data e ora convocazione* Venerdì 04/04/2025 - ore 17.00 \
-  
+
 *Luogo* Online - #glossario("Piattaforma") Google Meet  \
-  
+
 *Destinatari* Azienda Sanmarco Informatica e tutti i componenti del gruppo Archi7echs \
 
 = Verbale
- 
+
 L'incontro inizia, come da programma alle ore 16.00. Sono presenti i seguenti membri del team:
 - #p.checchinato
 - #p.pesenato
@@ -102,7 +102,7 @@ Padova, 04 aprile 2025
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
     [Per Sanmarco Informatica:\ Alex Beggiato \
-    /*#place(center, image("//img/smi_sign.png", width: 120%))*/
+    #place(center, image("//img/smi_sign.png", width: 120%))
     ],
   )]
 )
