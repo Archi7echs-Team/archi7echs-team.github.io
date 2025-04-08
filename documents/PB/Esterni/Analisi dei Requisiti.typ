@@ -666,7 +666,24 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC19>
 \
 
-=== UC 20 - Reset dei filtri applicati alla visualizzazione dei dati <uc20>
+=== UC 20 - Personalizzazione della modalità di colorazione delle barre del grafico <uc20>
+- *Descrizione: * L'utente deve essere in grado di scegliere la modalità di colorazione delle barre del grafico.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Postcondizioni: * La visualizzazione del grafico viene aggiornata colorando le barre nella modalità scelta dall'utente.
+- *Scenario Principale: *
+    + L'utente, tramite il click dello specifico bottone nel pannello filtri - sezione Colori, è in grado di scegliere la modalità di colorazione delle barre del grafico, tra le seguenti:
+      - Per righe
+      - Per colonne _(default)_
+      - Per valori
+    + L'applicazione aggiorna la visualizzazione colorando le barre del grafico in base alla modalità scelta dall'utente.   
+#figure(
+  image("/img/adr/PB/43.png", width: 80%),
+  caption: [Personalizzazione della modalità di colorazione delle barre del grafico],
+) <imgUC20>
+\
+
+=== UC 21 - Reset dei filtri applicati alla visualizzazione dei dati <uc21>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
@@ -677,21 +694,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/33.png", width: 80%),
   caption: [Reset dei filtri applicati alla visualizzazione dei dati],
-) <imgUC20>
-\
-
-=== UC 21 - Reset della selezione <uc21>
-- *Descrizione: * L'utente deve essere in grado di resettare la visualizzazione con le sole barre selezionate.
-- *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato, ed è stato applicato il filtro di visualizzazione delle sole barre selezionate.
-- *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato.
-- *Scenario Principale: *
-    + L'utente, tramite il click dello specifico bottone nel pannello filtri relativo alla barra, reimposta le impostazioni di default.
-    + L'applicazione visualizza il grafico di partenza, senza alcun filtro applicato.   
-#figure(
-  image("/img/adr/PB/43.png", width: 80%),
-  caption: [Reset dei filtri applicati alla visualizzazione dei dati],
-) <imgUC20>
+) <imgUC21>
 \
 
 === UC 22 - Esportazione di un grafico <uc22>
