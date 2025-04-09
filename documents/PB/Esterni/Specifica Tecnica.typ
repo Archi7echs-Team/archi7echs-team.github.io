@@ -80,28 +80,6 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Versione della tecnologia o libreria utilizzata
 + Link di riferimento alla sua documentazione
 
-== Linguaggi
-=== Java
-- *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
-  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
-  + Utilizzare il framework Spring Boot per semplificare la configurazione e la gestione delle dipendenze.
-  + Eseguire test automatizzati tramite JUnit e Mockito.
-  + Integrare librerie esterne come PITest per il test di mutazione e TestContainers per i test di integrazione.
-- *Versione della tecnologia utilizzata*:
-  - *Java JDK*: 23
-- *Link di riferimento alla documentazione*:
-  - *Java*: #link("https://docs.oracle.com/en/java/")[#text(blue)[https://docs.oracle.com/en/java/]]
-
-=== Typescript
-- *Descrizione della tecnologia e del suo utilizzo*: TypeScript è un superset di JavaScript che aggiunge tipizzazione statica e altre funzionalità avanzate al linguaggio. È progettato per migliorare la produttività degli sviluppatori e la qualità del codice, rendendo più facile la gestione di progetti complessi. Nel nostro progetto, TypeScript viene utilizzato per:
-  + Sviluppare il frontend dell'applicazione, sfruttando le funzionalità di tipizzazione per garantire una maggiore sicurezza del codice.
-  + Integrare con Svelte per creare componenti reattivi e performanti.
-  + Utilizzare librerie esterne come Threlte per la visualizzazione 3D dei dati.
-- *Versione della tecnologia utilizzata*:
-  - *TypeScript*: 5.2.2(?)
-- *Link di riferimento alla documentazione*:
-  - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
-
 == Servizi e Strumenti
 === PostgreSQL
 - *Descrizione della tecnologia e del suo utilizzo*: PostgreSQL è un sistema di gestione di database relazionali open-source, noto per la sua robustezza, scalabilità e conformità agli standard SQL. Supporta una vasta gamma di tipi di dati e consente l'uso di estensioni per funzionalità avanzate. Nel nostro progetto, PostgreSQL viene utilizzato per:
@@ -252,6 +230,29 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni `@Mock`,
   - *Testcontainers*: #link("https://www.testcontainers.org/")[#text(blue)[https://www.testcontainers.org/]]
   - *Testcontainers JUnit 5*: #link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
   - *Testcontainers PostgreSQL*: #link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
+
+== Linguaggi
+=== Java
+- *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Utilizzare il framework Spring Boot per semplificare la configurazione e la gestione delle dipendenze.
+  + Eseguire test automatizzati tramite JUnit e Mockito.
+  + Integrare librerie esterne come PITest per il test di mutazione e TestContainers per i test di integrazione.
+- *Versione della tecnologia utilizzata*:
+  - *Java JDK*: 23
+- *Link di riferimento alla documentazione*:
+  - *Java*: #link("https://docs.oracle.com/en/java/")[#text(blue)[https://docs.oracle.com/en/java/]]
+
+=== Typescript
+- *Descrizione della tecnologia e del suo utilizzo*: TypeScript è un superset di JavaScript che aggiunge tipizzazione statica e altre funzionalità avanzate al linguaggio. È progettato per migliorare la produttività degli sviluppatori e la qualità del codice, rendendo più facile la gestione di progetti complessi. Nel nostro progetto, TypeScript viene utilizzato per:
+  + Sviluppare il frontend dell'applicazione, sfruttando le funzionalità di tipizzazione per garantire una maggiore sicurezza del codice.
+  + Integrare con Svelte per creare componenti reattivi e performanti.
+  + Utilizzare librerie esterne come Threlte per la visualizzazione 3D dei dati.
+- *Versione della tecnologia utilizzata*:
+  - *TypeScript*: 5.2.2(?)
+- *Link di riferimento alla documentazione*:
+  - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
+
 #pb()
 
 = Architettura
