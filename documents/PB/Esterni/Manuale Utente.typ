@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.1.0", "08-04-2025",  "Inizio stesura documento", p.salvo, (""),
+    "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato),
   ),
 )
 
@@ -16,7 +16,7 @@
 
 = Introduzione
 == Scopo del documento
-Il documento di #glossario("manuale utente") è un elemento fondamentale per spiegare ai committenti le modalità d'uso e di installazione del sistema informatico che il gruppo archi7echs ha dovuto sviluppare per adempiere alle richieste effettuate dal committente.\
+Il documento di #glossario("manuale utente") è un elemento fondamentale per spiegare ai committenti le modalità d'uso e di installazione del sistema informatico che il gruppo Archi7echs ha dovuto sviluppare per adempiere alle richieste effettuate dal committente.\
 All'interno del documento verranno illustrate le istruzioni per avviare il back-end e il front-end e il funzionamento dell'applicativo per dimostrare le funzionalità sviluppate.
 
 == Glossario
@@ -26,27 +26,28 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 === Riferimenti informativi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/11/2024_
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 12/12/2024_
-- Riferimento al glossario (v 1.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
-- Norme di Progetto (v 1.0.0)
+- Riferimento al glossario (v 2.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
+- Norme di Progetto (v 2.0.0)
 
 #pb()
 
-= Download del repository relativo al codice sorgente
+= Download del repository relativo al codice sorgente <download_repo>
 Per scaricare il codice sorgente relativo al progetto si puo scaricare la cartella zip presente nel seguente repository al link: //INSERIRE LINK RELEASE 
 \
 Alternativamente, se si ha installato il sistema di versionamento Git si puo effettuare la clonazione del repository digitando il comando: _git clone https://github.com/Archi7echs-Team/MVP.git _
 
 = Spiegazione file codice sorgente
-Se il repository non è stato clonato o scaricato si segua la sezione _Download del repository relativo al codice sorgente_
+Se il repository non è stato clonato o scaricato si segua la sezione _Download del repository relativo al codice sorgente_ (@download_repo) per scaricare il codice sorgente.\
 == Spiegazione dei principali file back-end presenti nei sorgenti
 I sorgenti relativi alla parte del back-end si trovano dentro la cartella _backend_ della repository clonata o scaricata. 
 === docker-compose.yml
 Il file _docker-compose.yml_ è il file utilizzato da Docker Compose, usato per definire e gestire i servizi di un'applicazione Docker. In esso sono specificati i servizi che compongono la parte back-end dell'applicazione:
 - Servizio _db_: avvia il database postgres e lo inizializza
 - Servizio _test_: verifica che l'applicazione back-end dia esito positivo su tutti i test
-- Servizio _app_: effettua la build dell'applicazione front-end e configura il collegamento tra database e applicazione 
+- Servizio _app_: effettua la build dell'applicazione back-end e configura il collegamento tra database e il back-end 
+- Servizio _frontend_: effettua la build dell'applicazione front-end 
 === Dockerfile
-Il file _Dockerfile_ è il file utilizzato dal servizio _app_ per effettuare il build dell'applicazione back-end
+Il file _Dockerfile_ è utilizzato dal servizio _app_ per effettuare la build dell'applicazione back-end
 === pom.xml
 Il file _pom.xml_ è il file utilizzato durante la compilazione tramite Apache Maven per definire come costruire il progetto, quali dipendenze sono presenti e quali plugin usare.
 == Spiegazione dei principali file front-end presenti nei sorgenti
@@ -56,7 +57,7 @@ Il file _package.json_ è il file che definisce le dipendenze, i comandi e le in
 === svelte.config.js
 Il file _svelte.config.js_ è il file di configurazione di un progetto SvelteKit. Dice ad esso come compilare, pre-processare e distribuire il progetto.
 === vite.config.ts
-Il file _vite.config.ts_ è il file di configurazione di vite che specifica quali strumenti usare, come comportarsi durante la fase di build e che test eseguire.
+Il file _vite.config.ts_ è il file di configurazione di Vite che specifica quali strumenti usare, come comportarsi durante la fase di build e che test eseguire.
 === playwright.config.ts
 Il file _playwright.config.ts_ è il file di configurazione di playwright che specifica quali test effettuare e su quali browser.
 
@@ -64,17 +65,17 @@ Il file _playwright.config.ts_ è il file di configurazione di playwright che sp
 
 = Eseguire l'applicazione
 == Requisiti tecnici necessari per l'avvio dell'applicazione
-Il dispositivo su deve aver installato Docker e Docker Compose o Docker Desktop per la gestione di applicazioni Docker multi-container. Di seguito la guida ufficiale per l'installazione: _ https://docs.docker.com/engine/install _.
-== Istruzioni per l'avvio dell'applicazione
-Se si è in possesso del codice sorgente dell'applicazione e i requisiti tecnici sono stati soddisfatti si può procedere all'avvio dell'applicazione tramite il comando: _docker compose up_ in un terminale localizzato nella cartella _backend_ del codice sorgente
+Il dispositivo deve aver installato Docker e Docker Compose o Docker Desktop per la gestione di applicazioni Docker multi-container. Di seguito la guida ufficiale per l'installazione: #link("https://docs.docker.com/engine/install")[#text(blue)[https://docs.docker.com/engine/install]]
+== Istruzioni per l'avvio dell'applicazione <istruzioni_avvio>
+Se si è in possesso del codice sorgente dell'applicazione e i requisiti tecnici sono stati soddisfatti si può procedere all'avvio dell'applicazione tramite il comando: ```bash docker compose up --build ``` in un terminale localizzato nella root directory del codice sorgente.\
 == Istruzioni per lo spegnimento dell'applicazione
-Se si è avviata l'applicazione seguendo la sezione _Istruzioni per l'avvio dell'applicazione_, si potrà terminare l'applicazione usando il comando: _docker compose down_ in un terminale localizzato nella cartella _backend_ del codice sorgente
+Se si è avviata l'applicazione seguendo la sezione _Istruzioni per l'avvio dell'applicazione_  (@istruzioni_avvio), si potrà terminare l'applicazione usando il comando: ```bash docker compose down -v ```  in un terminale localizzato nella root directory del codice sorgente.\
 
 #pb()
 = Guida all'uso di 3Dataviz
-Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione _Avvio dell'applicazione_
+Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione _Avvio dell'applicazione_ (@istruzioni_avvio)
 == Schermata principale
-All'avvio del sito ci si trovera davanti un grafico di default utile per interagire direttamente con l'applicazione per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
+All'avvio del sito ci si troverà davanti un grafico di default utile per interagire direttamente con l'applicazione per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
 #figure(
   image("/img/mu/avvio.jpg", width: 90%),
   caption: [Schermata principale],
@@ -118,7 +119,7 @@ Nel sotto-pannello _Filter_ è possibile:
   caption: [Sotto-pannello Filter],
 ) <imgFILTER>
 === Impostazioni per i colori
-Nel sotto-pannello _Filter_ è possibile decidere in che modo le colonne verranno colorate tramite i campi del menu a tendina:
+Nel sotto-pannello _Color_ è possibile decidere in che modo le colonne verranno colorate tramite i campi del menu a tendina:
 - *rows*: ogni riga nella matrice avrà un colore diverso
 - *columns*: ogni colonna nella matrice avrà un colore diverso
 - *values*: ogni valore avrà un colore diverso partendo dal blu per i valori più bassi arrivando al rosso per i valori più alti
@@ -133,7 +134,7 @@ Nel sotto-pannello _Export_ è possibile esportare la vista corrente come immagi
   caption: [Sotto-pannello Export],
 ) <imgEXPORT>
 == Operazioni su selezione
-A seguito di un click su una colonna nella schermata principale si trova il pannello della selezione contente vari sotto-pannelli. Tramite questo pannello si potranno effettuare la operazioni che coinvolgono tutto il grafico basandosi sulle colonne selezionate o sull'ultima colonna selezionata. Per accedere ai sotto-panelli bisognerà cliccare sull'icona a destra del nome del sotto-pannello che permette di aprire e chiudere il menù a tendina. La chiusura di questo panello si può effettuare tramite il bottone _Close_ oppure cliccando ancora una volta su tutte le colonne selezionate.
+A seguito di un click su una colonna nella schermata principale si trova il pannello della selezione contente vari sotto-pannelli. Tramite questo si potranno effettuare la operazioni che coinvolgono tutto il grafico basandosi sulle colonne selezionate o sull'ultima colonna selezionata. Per accedere ai sotto-panelli bisognerà cliccare sull'icona a destra del nome che permette di aprire e chiudere il menù a tendina. La chiusura di questo panello si può effettuare tramite il bottone _Close_ oppure cliccando ancora una volta su tutte le colonne selezionate.
 #figure(
   image("/img/mu/selection.jpg", width: 90%),
   caption: [Pannello Selection info & filter],
