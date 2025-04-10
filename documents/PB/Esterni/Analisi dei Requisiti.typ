@@ -184,9 +184,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva il nuovo dato.
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative, oppure un numero di dati che supera il limite:
-  + Visualizzazione dell'errore emptyField (@uc27)
-  + Visualizzazione dell'errore invalidArguments (@uc23)
-  + Visualizzazione dell'errore tooMuchData (@uc24)
+  + Visualizzazione dell'errore emptyField (@uc25)
+  + Visualizzazione dell'errore invalidArguments (@uc21)
+  + Visualizzazione dell'errore tooMuchData (@uc22)
 #figure(
   image("/img/adr/PB/3.png", width: 115%),
   caption: [Caricamento manuale dei dati tramite interfaccia],
@@ -203,8 +203,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo x
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc27)
-  + Visualizzazione dell'errore invalidArguments (@uc23)    
+  + Visualizzazione dell'errore emptyField (@uc25)
+  + Visualizzazione dell'errore invalidArguments (@uc21)    
 #figure(
   image("/img/adr/PB/4.png", width: 115%),
   caption: [L'utente inserisce il campo X],
@@ -221,8 +221,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo y.
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc27)
-  + Visualizzazione dell'errore invalidArguments (@uc23)    
+  + Visualizzazione dell'errore emptyField (@uc25)
+  + Visualizzazione dell'errore invalidArguments (@uc21)     
 #figure(
   image("/img/adr/PB/5.png", width: 115%),
   caption: [L'utente inserisce il campo Y],
@@ -239,8 +239,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'utente compila il campo z
 - *Scenari Alternativi:* 
  - L'utente potrebbe inserire un valore nullo o non conforme alle aspettative:
-  + Visualizzazione dell'errore emptyField (@uc27)
-  + Visualizzazione dell'errore invalidArguments (@uc23)    
+  + Visualizzazione dell'errore emptyField (@uc25)
+  + Visualizzazione dell'errore invalidArguments (@uc21)      
 #figure(
   image("/img/adr/PB/6.png", width: 115%),
   caption: [L'utente inserisce il campo Z],
@@ -259,8 +259,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva i nuovi dati.
 - *Scenari alternativi:* 
   - L'#glossario("API") è un servizio #glossario("esterno") e in quanto tale potrebbe non rispondere in un tempo limite oppure potrebbe cambiare inaspettatamente la risposta
-    + Visualizzazione errore tooMuchData (@uc24);  
-    + Visualizzazione errore apiTimeOut (@uc26);
+    + Visualizzazione errore tooMuchData (@uc22);  
+    + Visualizzazione errore apiTimeOut (@uc24);
 #figure(
   image("/img/adr/PB/7.png", width: 115%),
   caption: [Caricamento automatico dati tramite chiamata all'#glossario("API") esterna Weather Forecast],
@@ -279,7 +279,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione elabora i dati nel grafico #glossario("3D").
 - *Scenari Alternativi:*
   - Il #glossario("DB") non risponde per motivi di rete
-    + Errore networkError (@uc28).
+    + Errore networkError (@uc26).
 #figure(
   image("/img/adr/PB/8.png", width: 115%),
   caption: [Caricamento automatico dati tramite connessione a #glossario("database") #glossario("SQL")],
@@ -298,9 +298,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + L'applicazione salva i dati ottenuti.
 - *Scenari Alternativi:* 
   - L'utente potrebbe inserire un file .csv troppo pesante, con un formattazione errata oppure che contiene troppi dati, superando la soglia massima consentita
-    + Errore tooMuchData (@uc24);
-    + Errore invalidCsv (@uc25);
-    + Errore fileTooBig (@uc29);
+    + Errore tooMuchData (@uc22);
+    + Errore invalidCsv (@uc23);
+    + Errore fileTooBig (@uc27);
 #figure(
   image("/img/adr/PB/9.png", width: 115%),
   caption: [Caricamento automatico dati tramite file .csv],
@@ -644,53 +644,35 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC14>
 \
   
-=== UC 17 - L'utente inserisce il valore _n_ <uc17>
-- *Descrizione: * L'utente desidera visualizzare le barre con altezza appartenente all'insieme di _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_
+=== UC 15 - Filtro per la visualizzazione delle barre con altezza compresa le tra le  _n_ altezze maggiori maggiori <uc15>
+- *Descrizione: * L'utente può filtrare e visualizzare solo le barre con altezza compresa le tra le _n_ altezze maggiori, dove _n_ è da lui definito. Di conseguenza, le barre con altezza esclusa dall'intervallo vengono opacizzate.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * L'utente ha inserito il valore _n_ che può essere utilizzato per visualizzare gli _n_ valori maggiori o minori 
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e il pannello filtri è caricato correttamente.
+- *Postcondizioni: * Vengono opacizzate la barre con altezza esclusa dall'intervallo delle _n_ altezze maggiori.
 - *Scenario Principale: *
-    + L'utente, tramite un'area specifica tra i filtri, inserisce il valore _n_.
-- *Scenari Alternativi: *
-  - L'utente potrebbe selezionare un valore nullo o non conforme alle aspettative:
-    + Visualizzazione dell'errore invalidArguments (@uc23). 
-#figure(
-  image("/img/adr/PB/30.png", width: 100%),
-  caption: [Inserimento valore _n_],
-) <imgUC17>
-\
-
-=== UC 18 - Filtro per la visualizzazione degli _n_ valori maggiori <uc18>
-- *Descrizione: * L'utente può filtrare ed opacizzare solo barre altezza compresa tra gli _n_ valori di altezza maggiore, dove _n_ è da lui definito.
-- *Attore: * Utente finale
-- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza maggiore
-- *Scenario Principale: *
-    + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
-      - @uc17 
+    + L'utente inserisce, o seleziona, il valore di _n_ nel relativo componente slider nel menù filtri.
     + L'applicazione opacizza tutti i valori che non sono nell'insieme delle _n_ altezze maggiori.
 #figure(
   image("/img/adr/PB/31.png", width: 80%),
-  caption: [Visualizzazione degli N valori maggiori],
-) <imgUC18>
+  caption: [Visualizzazione delle barre con altezza compresa le tra le  _n_ altezze maggiori maggiori],
+) <imgUC15>
 \
 
-=== UC 19 - Filtro per la visualizzazione degli _n_ valori minori <uc19>
-- *Descrizione: * L'utente può filtrare e visualizzare solo barre altezza compresa tra gli _n_ valori di altezza minore, dove _n_ è da lui definito.
+=== UC 16 - Filtro per la visualizzazione delle barre con altezza compresa le tra le  _n_ altezze maggiori minori <uc16>
+- *Descrizione: * L'utente può filtrare e visualizzare solo le barre con altezza compresa le tra le _n_ altezze minori, dove _n_ è da lui definito. Di conseguenza, le barre con altezza esclusa dall'intervallo vengono opacizzate.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
-- *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza minore
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e il pannello filtri è caricato correttamente.
+- *Postcondizioni: * Vengono opacizzate la barre con altezza esclusa dall'intervallo delle _n_ altezze minori.
 - *Scenario Principale: *
-    + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
-      - @uc17 
-    L'applicazione opacizza tutti i valori che non sono nell'insieme delle _n_ altezze minori.
+    + L'utente inserisce, o seleziona, il valore di _n_ nel relativo componente slider nel menù filtri.
+    + L'applicazione opacizza tutti i valori che non sono nell'insieme delle _n_ altezze minori.
 #figure(
   image("/img/adr/PB/32.png", width: 80%),
-  caption: [Visualizzazione degli N valori minori],
-) <imgUC19>
+  caption: [Visualizzazione delle barre con altezza compresa le tra le  _n_ altezze maggiori minori],
+) <imgUC16>
 \
 
-=== UC 20 - Personalizzazione della modalità di colorazione delle barre del grafico <uc20>
+=== UC 17 - Personalizzazione della modalità di colorazione delle barre del grafico <uc17>
 - *Descrizione: * L'utente deve essere in grado di scegliere la modalità di colorazione delle barre del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -704,10 +686,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/43.png", width: 80%),
   caption: [Personalizzazione della modalità di colorazione delle barre del grafico],
-) <imgUC20>
+) <imgUC17>
 \
 
-=== UC 21 - Reset dei filtri applicati alla visualizzazione dei dati <uc21>
+=== UC 18 - Reset dei filtri applicati alla visualizzazione dei dati <uc18>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e sono stati applicati dei filtri di visualizzazione.
@@ -718,10 +700,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/33.png", width: 80%),
   caption: [Reset dei filtri applicati alla visualizzazione dei dati],
-) <imgUC21>
+) <imgUC18>
 \
 
-=== UC 22 - Esportazione di un grafico <uc22>
+=== UC 19 - Esportazione di un grafico <uc19>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"), con eventuali filtri di visualizzazione applicati.
@@ -732,10 +714,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/34.png", width: 80%),
   caption: [Esportazione di un grafico],
-) <imgUC22>
+) <imgUC19>
 \
 
-=== UC 23 - Creazione di un'istantanea del grafico <uc23>
+=== UC 20 - Creazione di un'istantanea del grafico <uc20>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -746,10 +728,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/35.png", width: 80%),
   caption: [Creazione di un'istantanea del grafico],
-) <imgUC23>
+) <imgUC20>
 \
     
-=== UC 24 - Visualizzazione errore invalidArguments <uc24>
+=== UC 21 - Visualizzazione errore invalidArguments <uc21>
 - *Descrizione: * L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha inserito dei dati in un input che non sono conformi alle aspettative.
@@ -761,10 +743,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/36.png", width: 80%),
   caption: [Visualizzazione errore invalidArguments],
-) <imgUC24>
+) <imgUC21>
 \
 
-=== UC 25 - Visualizzazione errore tooMuchData <uc25>
+=== UC 22 - Visualizzazione errore tooMuchData <uc22>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -777,10 +759,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/37.png", width: 80%),
   caption: [Visualizzazione errore tooMuchData],
-) <imgUC25>
+) <imgUC22>
 \
 
-=== UC 26 - Visualizzazione errore invalidCsv <uc26>
+=== UC 23 - Visualizzazione errore invalidCsv <uc23>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv ma la formattazione interna al file non è corretta.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -793,10 +775,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/38.png", width: 80%),
   caption: [Visualizzazione errore invalidCsv],
-) <imgUC26>
+) <imgUC23>
 \
 
-=== UC 27 - Visualizzazione errore apiTimeout <uc27>
+=== UC 24 - Visualizzazione errore apiTimeout <uc24>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite.
 - *Precondizioni: * L'utente ha selezionato l'#glossario("API") esterna da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -808,10 +790,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/39.png", width: 80%),
   caption: [Visualizzazione errore apiTimeout],
-) <imgUC27>
+) <imgUC24>
 \
 
-=== UC 28 - Visualizzazione errore emptyField <uc28>
+=== UC 25 - Visualizzazione errore emptyField <uc25>
 - *Descrizione: * L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto.
 - *Attore: * Utente finale
 - *Precondizioni: * L'utente ha cercato di lasciare un input vuoto.
@@ -823,10 +805,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/40.png", width: 80%),
   caption: [Visualizzazione errore emptyField],
-) <imgUC28>
+) <imgUC25>
 \
 
-=== UC 29 - Visualizzazione errore networkError <uc29>
+=== UC 26 - Visualizzazione errore networkError <uc26>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un #glossario("DB") che però non ha risposto per motivi di rete.
 - *Precondizioni: * L'utente ha inserito il #glossario("DB") da cui recuperare i dati e ne ha richiesto l'invio.
 - *Postcondizioni: * 
@@ -839,10 +821,10 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/41.png", width: 80%),
   caption: [Visualizzazione errore networkError],
-) <imgUC27>
+) <imgUC26>
 \
 
-=== UC 30 - Visualizzazione errore fileTooBig <uc30>
+=== UC 27 - Visualizzazione errore fileTooBig <uc27>
 - *Descrizione: * L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso superiore al limite consentito.
 - *Attore: * Utente finale
 - *Precondizioni: * La pagina è stata caricata completamente ed è pronta all'uso.
@@ -855,7 +837,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 #figure(
   image("/img/adr/PB/42.png", width: 80%),
   caption: [Visualizzazione errore fileTooBig],
-) <imgUC30>
+) <imgUC27>
 \
 
 
@@ -913,22 +895,21 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.25], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
   [F.1.26], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
   [F.1.27], [@uc14 \ #glossario("UC")14], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
-  [F.1.28], [@uc17 \ #glossario("UC")17], [L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_], [1 - Obbligatorio],
-  [F.1.29], [@uc18 \ #glossario("UC")18], [L'utente può filtrare i dati per visualizzare gli _n_ con valore maggiore, con _n_ da lui definito], [1 - Obbligatorio],
-  [F.1.30], [@uc19 \ #glossario("UC")19], [L'utente può filtrare i dati per visualizzare gli _n_ con valore minore, con _n_ da lui definiti], [1 - Obbligatorio],
-  [F.1.31], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di personalizzare il modo in cui il grafico viene colorato, scegliendo tra colorazione per righe, colonne o valori], [1 - Obbligatorio],
-  [F.1.32], [@uc21 \ #glossario("UC")21], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo la visualizzazione allo stato di default], [1 - Obbligatorio],
-  [F.2.1], [@uc22 \ #glossario("UC")22], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
-  [F.2.2], [@uc23 \ #glossario("UC")23], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
-  [F.1.33], [@uc24 \ #glossario("UC")24], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
-  [F.1.34], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
-  [F.1.35], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
-  [F.1.37], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.38], [@uc28 \ #glossario("UC")28], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [3 - Opzionale],
-  [F.1.39], [@uc29 \ #glossario("UC")29], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
-  [F.1.40], [@uc30 \ #glossario("UC")30], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
-  [F.1.41], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
-  [F.1.42], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
+  [F.1.28], [@uc15 \ #glossario("UC")15], [L'utente può filtrare i dati per visualizzare solo le barre con altezza compresa tra le _n_ altezze maggiori, con _n_ valore da lui definito], [1 - Obbligatorio],
+  [F.1.29], [@uc16 \ #glossario("UC")16], [L'utente può filtrare i dati per visualizzare solo le barre con altezza compresa tra le _n_ altezze minori, con _n_ valore da lui definito], [1 - Obbligatorio],
+  [F.1.30], [@uc17 \ #glossario("UC")17], [L'utente deve essere in grado di personalizzare il modo in cui il grafico viene colorato, scegliendo tra colorazione per righe, colonne o valori], [1 - Obbligatorio],
+  [F.1.31], [@uc18 \ #glossario("UC")18], [L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo la visualizzazione allo stato di default], [1 - Obbligatorio],
+  [F.2.1], [@uc19 \ #glossario("UC")19], [L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi ], [2 - Desiderabile],
+  [F.2.2], [@uc20 \ #glossario("UC")20], [L'utente deve essere in grado di effettuare uno "screenshot" del grafico], [2 - Desiderabile],
+  [F.1.32], [@uc21 \ #glossario("UC")21], [L'utente ha inserito dei dati all'#glossario("interno") di un input che non sono conformi alle aspettative e viene avvertito graficamente dell'errore], [1 - Obbligatorio],
+  [F.1.33], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
+  [F.1.34], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
+  [F.1.35], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
+  [F.1.36], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [3 - Opzionale],
+  [F.1.37], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
+  [F.1.38], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
+  [F.1.39], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
+  [F.1.40], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
 ]
