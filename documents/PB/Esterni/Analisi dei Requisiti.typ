@@ -153,7 +153,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 2 - Caricamento dati per la generazione del grafico <uc2>
 - *Descrizione: * L'utente deve avere la possibilità di inserire dei dati da poter visualizzare nel grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente.
+- *Precondizioni: * L'applicazione è caricata correttamente ed in attesa di un inserimento di dati da parte dell'utente o scelta della modalità di riperimento degli stessi.
 - *Postcondizioni: * I dati vengono salvati temporaneamente e utilizzati per creare il grafico.
 - *Scenario Principale: *
     + L'utente accede alla sezione di inserimento dei dati.
@@ -405,17 +405,15 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 10 - Click su una barra del grafico<uc10>
-- *Descrizione: * L'utente preme sopra ad una barra e può visionare informazioni e filtri relativi alla barra selezionata.
+- *Descrizione: * L'utente preme sopra ad una barra ed accede al pannello relativo alla barra selezionata.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Visualizzazione delle informazioni della barra e possibilità di applicare filtri ulteriori in base alla barra selezionata.
 - *Scenario Principale: *
     + L'utente preme sopra ad una barra del grafico.
-    + L'applicazione fornisce le seguenti possibilità:
-      - Visualizzazione delle informazioni relative alla barra premuta;
-      - Possibilità di applicare filtri al grafico in base alla barra premuta.
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello relativo alla barra selezionata. Attraverso questo l'utente sarà in grado di visualizzazione informazioni specifiche relative alla selezione e applicare filtri ulteriori.
 #figure(
-  image("/img/adr/PB/18.png", width: 110%),
+  image("/img/adr/PB/18.png", width: 80%),
   caption: [Click su una barra del grafico],
 ) <imgUC10>
 \
@@ -426,6 +424,8 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e l'utente ha premuto su una barra del grafico.
 - *Postcondizioni: * Apertura pannello informazioni e filtri, relativo alla barra selezionata, con visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
     + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata, fornendo, in esso, le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
   image("/img/adr/PB/19.png", width: 80%),
@@ -439,6 +439,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * L'utente seleziona l'opacizzazione della barra selezionata.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente, mediante apposito l'apposito componente slider, situato nel pannello filtri relativo alla barra, imposta l'opacizzazione della barra selezionata.
     + L'applicazione aggiorna la visualizzazione.
 #figure(
@@ -453,6 +456,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Le barre del grafico, con altezza minore del valore della barra selezionata, sono opacizzate.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente preme il bottone dedicato, situato nel pannello filtri relativo alla barra selezionata.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore minore del valore della barra selezionata.
 #figure(
@@ -467,6 +473,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Le barre del grafico, con altezza maggiore del valore della barra selezionata, sono opacizzate.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.    
     + L'utente preme sul bottone dedicato all'applicazione del filtro.
     + L'applicazione aggiorna il grafico, opacizzando tutti i dati con valore maggiore del valore della barra selezionata.
 #figure(
@@ -482,6 +491,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse X selezionato.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente applica il filtro mediante selezione dell'apposita checkbox del menù Filtri, caricato al click della barra.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
        
@@ -497,6 +509,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Viene visualizzato il piano che identifica la media dei valori appartenenti all'asse Z selezionato.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente applica il filtro mediante selezione dell'apposita checkbox del menù Filtri, caricato al click della barra.
     + L'applicazione genera un piano che identifica la media dei valori appartenenti al valore dell'asse X selezionato.
 #figure(
@@ -511,12 +526,15 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * Vengono opacizzate le barre non selezionate.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente attiva il filtro mediante l'apposito bottone situato nel pannello filtri relativo alla barra selezionata.
     + Tutte le barre, ad eccezione di quelle selezionate, vengono opacizzate.
     + Ogni barra selezionata verrà colorata.
 #figure(
   image("/img/adr/PB/45.png", width: 80%),
-  caption: [Visualizzazione della media in base al valore di Z],
+  caption: [Visualizzazione delle sole barre selezionate],
 ) <imgUC10.7>
 \
 
@@ -531,7 +549,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
     + La barra selezionata viene colorata.
 #figure(
   image("/img/adr/PB/46.png", width: 80%),
-  caption: [Visualizzazione della media in base al valore di Z],
+  caption: [Reset visualizzazione delle sole barre selezionate mediante doppio click del mouse],
 ) <imgUC10.8>
 \
 
@@ -541,6 +559,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"),il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente e sono stati applicati filtri di visualizzazione, relativi alla barra selezionata.
 - *Postcondizioni: * Il grafico reimposta la visualizzazione standard della barra (e delle barre affette dai cambiamenti applicati attraverso la barra specifica) , togliendo tutti i filtri precedentemente applicati.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente preme sul bottone dedicato per reimpostare i filtri precedentemente applicati.
     + L'applicazione aggiorna il grafico, visualizzando la barra con le impostazioni di default (e delle barre affette dai cambiamenti applicati attraverso la barra specifica).
 #figure(
@@ -555,6 +576,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"),il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente ed è visibile.
 - *Postcondizioni: * Il pannello informazioni e filtri relativi ad una barra selezionata è chiuso.
 - *Scenario Principale: *
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
+      - @uc10
+    + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente seleziona, mediante click con tasto sinistro del mouse, il relativo bottone di chiusura del pannello informazioni e filtri 
     + L'applicazione aggiorna la visualizzazione chiudendo il pannello informazioni e filtri relativi alla barra selezionata.
 #figure(
@@ -566,7 +590,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 11 - Visualizzazione del valore medio globale <uc11>
 - *Descrizione: * L'utente attiva la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale. L'utente può con lo stesso metodo disattivare la visualizzazione del piano.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Viene mostrato il piano medio globale.
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato per visualizzare un piano che rappresenta il valore medio globale.
@@ -580,7 +604,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 12 - Visualizzazione dati maggiori della media globale <uc12>
 - *Descrizione: * L'utente può visualizzare i soli dati che sono maggiori della media globale.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Vengono visualizzati solo i dati maggiori della media globale, opacizzando di conseguenza i valori minori della media globale.
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato e opacizza i dati minori della media globale.
@@ -594,7 +618,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 13 - Visualizzazione dati minori della media globale <uc13>
 - *Descrizione: * L'utente può visualizzare i soli dati che sono minori della media globale.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Vengono visualizzati solo i dati minori della media globale, opacizzando di conseguenza i valori maggiori della media globale.
 - *Scenario Principale: *
     + L'utente preme un bottone nel menù dedicato e opacizza i dati maggiori della media globale.
@@ -608,7 +632,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 14 - Visualizzazione dati con altezza compresa tra un intervallo <uc14>
 - *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati, lo slider è caricato con limite inferiore e superiore.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"). Lo slider relativo al filtro è caricato correttamente con relativo limite inferiore e superiore.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
     + L'utente, volendo, inserisce, o seleziona mediante slider, il valore minimo del range
@@ -621,9 +645,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
   
 === UC 17 - L'utente inserisce il valore _n_ <uc17>
-- *Descrizione: * L'utente desidera visualizzare gli _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_
+- *Descrizione: * L'utente desidera visualizzare le barre con altezza appartenente all'insieme di _n_ valori maggiori o minori e deve perciò essere in grado di inserire il valore _n_
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * L'utente ha inserito il valore _n_ che può essere utilizzato per visualizzare gli _n_ valori maggiori o minori 
 - *Scenario Principale: *
     + L'utente, tramite un'area specifica tra i filtri, inserisce il valore _n_.
@@ -637,9 +661,9 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 \
 
 === UC 18 - Filtro per la visualizzazione degli _n_ valori maggiori <uc18>
-- *Descrizione: * L'utente può filtrare e visualizzare solo barre altezza compresa tra gli _n_ valori di altezza maggiore, dove _n_ è da lui definito.
+- *Descrizione: * L'utente può filtrare ed opacizzare solo barre altezza compresa tra gli _n_ valori di altezza maggiore, dove _n_ è da lui definito.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza maggiore
 - *Scenario Principale: *
     + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
@@ -654,7 +678,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 19 - Filtro per la visualizzazione degli _n_ valori minori <uc19>
 - *Descrizione: * L'utente può filtrare e visualizzare solo barre altezza compresa tra gli _n_ valori di altezza minore, dove _n_ è da lui definito.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro le sole barre con altezza compresa compresa tra gli _n_ valori di altezza minore
 - *Scenario Principale: *
     + L'utente inserisce il valore di _n_ nell'apposita sezione del menù filtri :
@@ -669,12 +693,12 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 20 - Personalizzazione della modalità di colorazione delle barre del grafico <uc20>
 - *Descrizione: * L'utente deve essere in grado di scegliere la modalità di colorazione delle barre del grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * La visualizzazione del grafico viene aggiornata colorando le barre nella modalità scelta dall'utente.
 - *Scenario Principale: *
     + L'utente, tramite il click dello specifico bottone nel pannello filtri - sezione Colori, è in grado di scegliere la modalità di colorazione delle barre del grafico, tra le seguenti:
-      - Per righe
-      - Per colonne _(default)_
+      - Per righe _(default)_
+      - Per colonne
       - Per valori
     + L'applicazione aggiorna la visualizzazione colorando le barre del grafico in base alla modalità scelta dall'utente.   
 #figure(
@@ -686,7 +710,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 21 - Reset dei filtri applicati alla visualizzazione dei dati <uc21>
 - *Descrizione: * L'utente deve essere in grado di eliminare tutti i filtri applicati al grafico, riportandolo allo stato di default.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui sono stati applicati dei filtri.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e sono stati applicati dei filtri di visualizzazione.
 - *Postcondizioni: * La visualizzazione del grafico ritorna ad essere quella di default, senza alcun filtro applicato.
 - *Scenario Principale: *
     + L'utente, tramite il click dello specifico bottone, reimposta le impostazioni di default.
@@ -700,7 +724,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 22 - Esportazione di un grafico <uc22>
 - *Descrizione: * L'utente deve essere in grado di esportare tutte le informazioni relative ad un grafico a cui si sta lavorando, ovvero l'insieme di dati e i filtri relativi. 
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato, contiene un set completo di dati a cui possono essere stati applicati dei filtri.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"), con eventuali filtri di visualizzazione applicati.
 - *Postcondizioni: * Tutte le informazioni del grafico vengono salvate in un file .csv.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, decide di esportare il grafico.
@@ -714,7 +738,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 === UC 23 - Creazione di un'istantanea del grafico <uc23>
 - *Descrizione: * L'utente deve essere in grado di effettuare uno "screenshot" del grafico.
 - *Attore: * Utente finale
-- *Precondizioni: * Il grafico è generato e contiene un set completo di dati.
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
 - *Postcondizioni: * Viene salvata un'immagine istantanea del grafico.
 - *Scenario Principale: *
     + L'utente, tramite un bottone specifico, decide di effettuare un'istantanea del grafico.
