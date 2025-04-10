@@ -109,14 +109,6 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
     - Database PostgreSQL per la persistenza dei dati.
     - Ambiente di test per eseguire i test automatici prima della build finale.
     - Applicazione Spring Boot come servizio runtime.
-  Il Dockerfile segue un processo in due fasi:
-  + *Fase di compilazione*: utilizza un'immagine Maven per costruire il pacchetto JAR dell'applicazione.
-  + *Fase di runtime*: utilizza un'immagine JDK leggera per eseguire il JAR costruito.
-
-  Il file docker-compose.yml definisce tre servizi principali:
-  + *db*: un'istanza PostgreSQL con un volume per la persistenza dei dati.
-  + *test*: un container per eseguire i test, garantendo che l'applicazione funzioni correttamente prima della fase di build.
-  + *app*: il container finale che esegue l'applicazione Spring Boot e dipende dagli altri servizi per funzionare correttamente.
 
 - *Versione della tecnologia utilizzata*:
   - *Docker*: Ultima versione disponibile in ambiente di sviluppo
@@ -271,6 +263,47 @@ In generale, questa struttura ci permette di mantenere il progetto modulare e be
 
 
 == Architettura di deployment
+
+L'architettura di deployment scelta per *3Dataviz* si basa sull'utilizzo di container Docker orchestrati tramite Docker Compose. Questa decisione strategica permette di incapsulare l'applicazione backend (sviluppata con Spring Boot), il frontend (sviluppato con Svelte) e il database (PostgreSQL) in ambienti isolati, standardizzati e facilmente riproducibili.
+
+=== Struttura a monolite containerizzato vs microservizi
+
+Sebbene l'architettura logica interna del backend segua il pattern esagonale per promuovere la modularità, a livello di deployment l'applicazione viene distribuita come un'unica unità funzionale backend (assimilabile a un monolite) all'interno di un container Docker, affiancata da un container separato per il frontend. La scelta di questo approccio monolitico containerizzato per il backend, rispetto a un'architettura a microservizi più granulare, è motivata da diversi fattori specifici del progetto *3Dataviz*, in linea con le considerazioni generali su semplicità e focus:
+
+- *Semplicità e Rapidità di Sviluppo*: L'obiettivo primario è realizzare una piattaforma web funzionale per la visualizzazione 3D dei dati. Un approccio monolitico per il backend semplifica il processo di sviluppo, build, testing e debugging, evitando la complessità aggiuntiva introdotta dalla gestione di servizi distribuiti comunicanti via API, permettendo al team di concentrarsi sulle funzionalità principali.
+
+- *Ambito Definito e Manutenibilità*: *3Dataviz* è focalizzato sulla visualizzazione 3D dei dati. Dato che l'ambito è specifico e non ci sono piani imminenti per grandi espansioni che richiederebbero componenti gestiti separatamente, l'architettura monolitica si rivela un percorso più diretto per lo sviluppo, il debug e la manutenzione del backend. Con un monolite, le modifiche al codice sono naturalmente coese, evitando le complicazioni legate al coordinamento di deploy separati per più servizi o alla gestione della comunicazione tra di essi. Il risultato è un ciclo di sviluppo più snello e un sistema più facile da capire nel suo insieme, il che rende più agevoli anche il debug e la risoluzione dei problemi. Infine, avere il codice backend centralizzato facilita la manutenzione: diventa più semplice individuare e correggere bug, così come implementare nuove funzionalità o miglioramenti.
+
+- *Gestibilità e Competenze*: Operativamente, un monolite containerizzato è più semplice da gestire. Aggiornamenti, rollback, monitoraggio e troubleshooting sono più diretti, riguardando un'unica unità applicativa backend, a differenza della complessità distribuita dei microservizi che moltiplica queste attività e richiede pratiche e strumenti più avanzati (es. tracciamento distribuito). Di conseguenza, anche le competenze tecniche richieste sono meno specifiche; i microservizi necessitano di una profonda padronanza di progettazione distribuita, tecnologie cloud-native e pratiche operative complesse. Evitare questa complessità permette al team di *3Dataviz* di concentrarsi sulle funzionalità chiave della visualizzazione 3D e sulla qualità dell'applicazione.
+
+Pur riconoscendo i vantaggi teorici dei microservizi (come scalabilità granulare e resilienza), abbiamo valutato che per lo scenario attuale di *3Dataviz* questi benefici non giustificano l'investimento significativo richiesto in termini di progettazione, infrastruttura e gestione della complessità distribuita. Pertanto, l'approccio monolitico containerizzato per il backend rappresenta la scelta più pragmatica ed efficiente al momento, garantendo la semplicità gestionale e la velocità di sviluppo necessarie per raggiungere gli obiettivi del progetto, senza precludere future evoluzioni architetturali se le esigenze cambieranno.
+
+=== Docker e Containerizzazione dell'Applicazione
+
+L'adozione della containerizzazione con Docker, orchestrata da Docker Compose, è un pilastro fondamentale della strategia di deployment, scelta per i seguenti vantaggi cruciali applicati al contesto *3Dataviz*:
+
+- *Portabilità*: I container Docker pacchettizzano le applicazioni (Spring Boot backend, Svelte frontend) con tutte le loro dipendenze (runtime Java/Node.js, librerie specifiche) e la configurazione necessaria. Questo garantisce che l'applicazione *3Dataviz* possa essere eseguita in modo identico su qualsiasi macchina o ambiente che supporti Docker, eliminando le problematiche legate alle differenze di configurazione ("it works on my machine").
+
+- *Consistenza Ambientale e Orchestrazione*: Il file `docker-compose.yml` definisce e gestisce l'intero stack applicativo, assicurando coerenza tra gli ambienti e facilitando l'avvio coordinato dei servizi. Definisce nel dettaglio:
+    - Un servizio `db` basato su `postgres:17`, con configurazione (utente/password/DB) tramite variabili d'ambiente, persistenza dati su volume nominato (`postgres_data`) e inizializzazione tramite script SQL (`init-data.sql`).
+    - Un servizio `test` basato su `maven:3.9.9-eclipse-temurin-23-alpine`, dipendente dal `db`, che esegue i test di integrazione (`mvn clean test`) nel contesto Docker, utilizzando Testcontainers (facilitato dal mount del socket Docker e dalle variabili d'ambiente specifiche) prima che l'applicazione principale venga avviata.
+    - Il servizio `app` per il backend Spring Boot, costruito dal suo `Dockerfile`, dipendente da `db` e `test`, che riceve le credenziali del DB via environment ed espone la porta 8080.
+    - Il servizio `frontend`, costruito dal suo `Dockerfile` Node.js, dipendente dal servizio `app`, che serve l'interfaccia Svelte sulla porta interna 4173, mappata sulla porta host 5173.
+  Questa orchestrazione garantisce che tutti lavorino con la stessa configurazione e che l'ambiente di produzione rispecchi quello di test.
+
+- *Isolamento e Gestione Dipendenze*: Ogni servizio (`db`, `app`, `frontend`, `test`) gira nel proprio container isolato, evitando conflitti di librerie o versioni e confinando le dipendenze all'interno delle rispettive immagini.
+
+- *Efficienza delle Risorse*: I container condividono il kernel del sistema operativo host, risultando più leggeri e efficienti rispetto alle macchine virtuali.
+
+- *Scalabilità Orizzontale (Potenziale)*: Anche se il backend è monolitico, Docker permette di scalare orizzontalmente avviando più istanze del container `app` (e potenzialmente `frontend`) dietro un load balancer, se necessario.
+
+I Dockerfile per backend e frontend utilizzano build multi-stage per ottimizzare le immagini finali. Il *Dockerfile del backend* segue un processo in due fasi:
+  + *Fase di compilazione (`builder`)*: utilizza un'immagine `maven:3.9.9-eclipse-temurin-23-alpine` per costruire il pacchetto JAR dell'applicazione usando `mvn package`.
+  + *Fase di runtime*: utilizza un'immagine `eclipse-temurin:23-jdk-alpine` più leggera, copiando solo il JAR compilato dalla fase precedente per eseguirlo.
+Analogamente, il *Dockerfile del frontend* usa `node:20-alpine` con una fase per installare dipendenze e buildare l'applicazione (`npm run build`) e una fase finale per servire i file generati (`npm run preview`).
+
+In sintesi, la combinazione di un backend monolitico e un frontend separato, entrambi containerizzati insieme al database e a un ambiente di test integrato tramite Docker e Docker Compose, offre per *3Dataviz* un'architettura di deployment robusta, portabile, consistente e gestibile, bilanciando efficacemente le esigenze del progetto con l'efficienza operativa e di sviluppo.
+
 == Database
 Nel nostro progetto utilizziamo PostgreSQL come database relazionale per gestire i dati, sfruttando la sua affidabilità, la possibilità di usare tipi personalizzati e il supporto avanzato per le query. Fin dall'avvio, il database è già popolato con un set di dati predefinito, organizzato nella tabella coordinates. Questa tabella raccoglie le label x, label z, i valori y dati dall'incrocio di x e z e le classificazioni, utilizzando un tipo ENUM personalizzato (dataset_level) per definire il livello del dataset (SMALL, MEDIUM, LARGE), garantendo così una struttura più tipizzata e robusta rispetto all'uso di semplici stringhe.
 
