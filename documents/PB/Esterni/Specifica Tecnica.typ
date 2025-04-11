@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato),
+    "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
@@ -241,7 +241,7 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
   + Integrare con Svelte per creare componenti reattivi e performanti.
   + Utilizzare librerie esterne come Threlte per la visualizzazione 3D dei dati.
 - *Versione della tecnologia utilizzata*:
-  - *TypeScript*: 5.2.2(?)
+  - *TypeScript*: 5.8.2
 - *Link di riferimento alla documentazione*:
   - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
 
