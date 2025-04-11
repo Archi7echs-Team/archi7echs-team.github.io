@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
     "0.2.0", "31-03-2025", "Stesura sezione componenti front-end", (p.checchinato, p.valdagno), (p.pozzobon,p.salvo),
@@ -57,21 +58,21 @@ All'interno del documento saranno spesso utilizzati degli acronimi o termini tec
 - Riferimento documentazione: *_Threlte_*: #link("https://threlte.xyz/")[#text(blue)[https://threlte.xyz/]]\ _Ultimo accesso 20/03/2025_
 - Riferimento documentazione: *_Sping_Boot_* #link("https://spring.io/projects/spring-boot")[#text(blue)[https://spring.io/projects/spring-boot]]\ _Ultimo accesso 20/03/2025_
 - Riferimento documentazione: *_Maven_*: #link("https://maven.apache.org/")[#text(blue)[https://maven.apache.org/]]\ _Ultimo accesso 20/03/2025_
-- Riferimento documentazione: *_PostgreSQL_*: #link("https://www.postgresql.org/")[#text(blue)[https://www.postgresql.org/]]\ _Ultimo accesso 20/03/2025_
-- Riferimento documentazione: *_Docker_*: #link("https://docs.docker.com/")[#text(blue)[https://docs.docker.com/]]\ _Ultimo accesso 20/03/2025_
+- Riferimento documentazione: *_PostgreSQL_*: #link("https://www.postgresql.org/")[#text(blue)[https://www.postgresql.org/]]\ _Ultimo accesso 4/10/2025_
+- Riferimento documentazione: *_Docker_*: #link("https://docs.docker.com/")[#text(blue)[https://docs.docker.com/]]\ _Ultimo accesso 10/04/2025_
 - Riferimento alle slide IS: _*Progettazione: le dipendenze tra componenti*_:\ #link("https://www.math.unipd.it/~rcardin/swea/2022/Dependency%20Management%20in%20Object-Oriented%20Programming.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Dependency%20Management%20in%20Object-Oriented%20Programming.pdf]] - _Ultimo accesso 20/03/2025_
-- Riferimento alle slide IS: _*Analisi e descrizione delle funzionalità: Use Case e relativi diagrammi UML*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf]] - _Ultimo accesso 20/03/2025_
+- Riferimento alle slide IS: _*Analisi e descrizione delle funzionalità: Use Case e relativi diagrammi UML*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf]] - _Ultimo accesso 1/04/2025_
 - Riferimento alle slide IS: _*Progettazione e programmazione: Diagrammi delle classi (UML)*_: #link("https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf]]\ - _Ultimo accesso 20/03/2025_
 - Riferimento alle slide IS: _*Analisi e descrizione delle funzionalità: Diagrammi delle attività (UML)*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20di%20Attivit%C3%A0.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20di%20Attivit%C3%A0.pdf]]\ - _Ultimo accesso 20/03/2025_
 - Riferimento alle slide IS: _*Progettazione: I pattern architetturali*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf]]\ - _Ultimo accesso 20/03/2025_
-- Riferimento alle slide IS: _*Progettazione: Il pattern Dependency Injection*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Architetturali%20-%20Dependency%20Injection.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Architetturali%20-%20Dependency%20Injection.pdf]]\ - _Ultimo accesso 20/03/2025_
+- Riferimento alle slide IS: _*Progettazione: Il pattern Dependency Injection*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Architetturali%20-%20Dependency%20Injection.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Architetturali%20-%20Dependency%20Injection.pdf]]\ - _Ultimo accesso 27/03/2025_
 - Riferimento alle slide IS: _*Progettazione: il pattern Model-View-Controller e derivati*_: #link("https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/sweb/2022/L02.pdf]]\ - _Ultimo accesso 20/03/2025_ 
 - Riferimento alle slide IS: _*Progettazione: i pattern creazionali (GoF)*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Creazionali.pdf]]\ - _Ultimo accesso 20/03/2025_ 
 - Riferimento alle slide IS: _*Progettazione: I pattern strutturali (GoF)*_: #link("https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf")[#text(blue)[https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Strutturali.pdf]]\ - _Ultimo accesso 20/03/2025_ 
 - Riferimento alle slide IS: _*Progettazione: I pattern di comportamento (GoF)*_: #link("https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1cpi6rORMxFtC91nI6_sPrG1Xn-28z8eI/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
-- Riferimento alle slide IS: _*Programmazione: SOLID programming*_: #link("https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing]]\ - _Ultimo accesso 20/03/2025_
+- Riferimento alle slide IS: _*Programmazione: SOLID programming*_: #link("https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing")[#text(blue)[https://drive.google.com/file/d/1o1Xun2dVVc3mDiaGyN0FrDJhhoO3lfLQ/view?usp=sharing]]\ - _Ultimo accesso 27/03/2025_
 
-= Tecnologie e librerie
+= Tecnologie
 In questa sezione vengono elencate le tecnologie (e librerie) utilizzate all'interno del progetto *3Dataviz*, dalla fase di progettazione alla sua implementazione. \
 Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Nome della tecnologia o libreria
@@ -79,21 +80,35 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
 + Versione della tecnologia o libreria utilizzata
 + Link di riferimento alla sua documentazione
 
-== Docker
+== Servizi e Strumenti
+=== PostgreSQL
+- *Descrizione della tecnologia e del suo utilizzo*: PostgreSQL è un sistema di gestione di database relazionali open-source, noto per la sua robustezza, scalabilità e conformità agli standard SQL. Supporta una vasta gamma di tipi di dati e consente l'uso di estensioni per funzionalità avanzate. Nel nostro progetto, PostgreSQL viene utilizzato per:
+  + Memorizzare i dati dell'applicazione in modo strutturato e persistente.
+  + Gestire le relazioni tra le entità del dominio.
+  + Eseguire query complesse per recuperare e manipolare i dati in modo efficiente.
+  + Utilizzare il tipo ENUM per definire valori predefiniti e limitare le opzioni disponibili per determinati campi.
+- *Versione della tecnologia utilizzata*:
+  - *PostgreSQL*: 17
+- *Link di riferimento alla documentazione*:
+  - *PostgreSQL*: #link("https://www.postgresql.org/docs/")[#text(blue)[https://www.postgresql.org/docs/]]
+
+=== Maven
+- *Descrizione della tecnologia e del suo utilizzo*: Maven è un sistema di gestione dei progetti e automazione della build per Java. Fornisce un modello di progetto standardizzato e gestisce le dipendenze tra librerie e componenti. Nel nostro progetto, Maven viene utilizzato per:
+  + Gestire le dipendenze del progetto tramite il file pom.xml, semplificando l'integrazione di librerie esterne.
+  + Automatizzare il processo di build, test e packaging dell'applicazione.
+  + Eseguire plugin per il testing, la generazione di report e altre attività di sviluppo.
+- *Versione della tecnologia utilizzata*:
+  - *Maven*: 3.9.9
+- *Link di riferimento alla documentazione*:
+  - *Maven*: #link("https://maven.apache.org/")[#text(blue)[https://maven.apache.org/]]
+
+=== Docker
 - *Descrizione della tecnologia e del suo utilizzo*: Docker è una piattaforma che consente di sviluppare, distribuire ed eseguire applicazioni in container. Un container è un'unità software che include tutto il necessario per eseguire un'applicazione, come codice, runtime, librerie e dipendenze, garantendo coerenza tra ambienti diversi. Nel nostro progetto, Docker viene utilizzato per:
   + Costruire e pacchettizzare l'applicazione Spring Boot in un'immagine Docker tramite un Dockerfile.
   + Gestire l'ambiente di sviluppo e test attraverso docker-compose, orchestrando i servizi necessari, tra cui:
     - Database PostgreSQL per la persistenza dei dati.
     - Ambiente di test per eseguire i test automatici prima della build finale.
     - Applicazione Spring Boot come servizio runtime.
-  Il Dockerfile segue un processo in due fasi:
-  + *Fase di compilazione*: utilizza un'immagine Maven per costruire il pacchetto JAR dell'applicazione.
-  + *Fase di runtime*: utilizza un'immagine JDK leggera per eseguire il JAR costruito.
-  
-  Il file docker-compose.yml definisce tre servizi principali:
-  + *db*: un'istanza PostgreSQL con un volume per la persistenza dei dati.
-  + *test*: un container per eseguire i test, garantendo che l'applicazione funzioni correttamente prima della fase di build.
-  + *app*: il container finale che esegue l'applicazione Spring Boot e dipende dagli altri servizi per funzionare correttamente.
 
 - *Versione della tecnologia utilizzata*:
   - *Docker*: Ultima versione disponibile in ambiente di sviluppo
@@ -105,7 +120,8 @@ Ogni tecnologia o libreria utilizzata verrà descritta tramite:
   - *Docker Compose*: #link("https://docs.docker.com/compose/")[#text(blue)[https://docs.docker.com/compose/]]
   - *PostgreSQL*: #link("https://www.postgresql.org/docs//")[#text(blue)[https://www.postgresql.org/docs/]]
 
-== Spring Boot
+== Framework
+=== Spring Boot
 - *Descrizione della tecnologia e del suo utilizzo*: Spring Boot è un framework basato su Spring che semplifica lo sviluppo di applicazioni Java stand-alone e pronte per la produzione. Fornisce una configurazione automatica e un'architettura modulare per creare applicazioni enterprise in modo efficiente. Nel nostro progetto, Spring Boot viene utilizzato per:
   + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
   + Gestire le connessioni al database PostgreSQL tramite il modulo Spring Data JPA.
@@ -118,14 +134,41 @@ L'integrazione con Docker consente di eseguire il backend in un container isolat
 - *Versione della tecnologia utilizzata*:
   - *Spring Boot*: 3.4.3
   - *Spring Data JPA*: 3.4.3
-  
 
 - *Link di riferimento alla documentazione*:
-
-  - *Spring Boot*:#link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
+  - *Spring Boot*: #link("https://docs.spring.io/spring-boot/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-boot/docs/current/reference/html/]]
   - *Spring Data JPA*: #link("https://docs.spring.io/spring-data/jpa/docs/current/reference/html/")[#text(blue)[https://docs.spring.io/spring-data/jpa/docs/current/reference/html/]]
-  
-== PITest
+
+=== Svelte
+- *Descrizione della tecnologia e del suo utilizzo*: Svelte è un framework di front-end moderno che consente di sviluppare interfacce utente reattive e performanti compilando il codice in JavaScript ottimizzato. A differenza di altri framework come React o Vue, Svelte non utilizza un Virtual DOM, ma compila i componenti in codice JavaScript efficiente che aggiorna direttamente il DOM in modo minimale. Nel nostro progetto, Svelte viene utilizzato per:
+  + Sviluppare l'interfaccia utente in modo efficiente e performante.
+  + Gestire lo stato dell'applicazione attraverso il sistema di store di Svelte.
+  + Integrare API REST per recuperare e visualizzare i dati dinamicamente.
+  + Ottimizzare le prestazioni grazie alla sua architettura basata sulla compilazione.
+  Il progetto è strutturato con:
+  - Componenti Svelte modulari per una gestione chiara dell'UI.
+  - Fetch API per comunicare con il backend in modo asincrono.
+- *Versione della tecnologia utilizzata*:
+  - *Svelte*: 5.0.0
+
+- *Link di riferimento alla documentazione*:
+  - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
+
+== Test
+=== JUnit 5
+- *Descrizione della tecnologia e del suo utilizzo*: JUnit 5 è un framework di testing per Java che consente di scrivere e eseguire test automatizzati. È composto da tre moduli principali: JUnit Platform, JUnit Jupiter e JUnit Vintage. JUnit Jupiter è la parte principale del framework, fornendo le annotazioni e le API per scrivere test. Nel nostro progetto, JUnit 5 viene utilizzato per:
+  + Scrivere test unitari e di integrazione per il backend dell'applicazione.
+  + Eseguire test automatici in un ambiente Docker tramite Testcontainers.
+  + Integrare con Mockito per il mocking delle dipendenze durante i test.
+  + Fornire report dettagliati sui risultati dei test, facilitando l'individuazione di errori e problemi nel codice.
+
+- *Versione della tecnologia utilizzata*:
+  - *JUnit*: 5.10.0
+
+- *Link di riferimento alla documentazione*:
+  - *JUnit*: #link("https://junit.org/junit5/docs/current/user-guide/")[#text(blue)[https://junit.org/junit5/docs/current/user-guide/]]
+
+=== PITest
 - *Descrizione della tecnologia e del suo utilizzo*: PITest è un framework di test di mutazione per applicazioni Java. Il test di mutazione è una tecnica avanzata per valutare la qualità dei test unitari generando e iniettando mutazioni nel codice sorgente e verificando se i test sono in grado di rilevarle. Questo aiuta a identificare le debolezze nella suite di test e a migliorare la copertura e l'affidabilità del codice. Nel nostro progetto, PITest viene utilizzato per:
   + Analizzare l'efficacia dei test unitari, verificando se riescono a rilevare mutazioni introdotte nel codice.
   + Identificare punti deboli nella suite di test, segnalando eventuali scenari non coperti adeguatamente.
@@ -136,18 +179,18 @@ PITest viene configurato all'interno del progetto Maven ed eseguito automaticame
 Per garantire la compatibilità con JUnit 5 e Spring, nel progetto sono utilizzati i seguenti plugin:
   + *pitest-junit5-plugin*: Permette l'integrazione di PITest con JUnit 5.
   + *arcmutate-spring*: Estensione per migliorare il supporto ai test su applicazioni Spring.
-  
+
 - *Versione della tecnologia utilizzata*:
   - *PITest*: 1.19.0
   - *pitest-junit5-plugin*: 1.1.0
   - *arcmutate-spring*: 1.0.0
-  
+
 - *Link di riferimento alla documentazione*:
   - *PITest*: #link("https://pitest.org/")[#text(blue)[https://pitest.org/]]
   - *Plugin Maven per PITest*: #link("https://plugins.pitest.org/maven/")[#text(blue)[https://plugins.pitest.org/maven/]]
   - *pitest-junit5-plugin*: #link("https://github.com/pitest/pitest-junit5-plugin")[#text(blue)[https://github.com/pitest/pitest-junit5-plugin]]
 
-== Mockito
+=== Mockito
 - *Descrizione della tecnologia e del suo utilizzo*: Mockito è un framework di mocking per Java utilizzato principalmente nei test unitari. Permette di simulare il comportamento di classi e dipendenze, consentendo di testare unità di codice in modo isolato senza dover dipendere da componenti reali come database o servizi esterni. Nel nostro progetto, Mockito viene utilizzato per:
   - Simulare dipendenze nelle classi testate, evitando la necessità di istanziare oggetti reali.
   - Verificare il comportamento del codice, assicurandosi che determinati metodi vengano chiamati con i parametri corretti.
@@ -163,22 +206,47 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
   - *Mockito*: #link("https://site.mockito.org/")[#text(blue)[https://site.mockito.org/]]
   - *Mockito per JUnit 5*: #link("https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/")[#text(blue)[https://javadoc.io/doc/org.mockito/mockito-junit-jupiter/latest/]]
 
-== Svelte
-- *Descrizione della tecnologia e del suo utilizzo*: Svelte è un framework di front-end moderno che consente di sviluppare interfacce utente reattive e performanti compilando il codice in JavaScript ottimizzato. A differenza di altri framework come React o Vue, Svelte non utilizza un Virtual DOM, ma compila i componenti in codice JavaScript efficiente che aggiorna direttamente il DOM in modo minimale. Nel nostro progetto, Svelte viene utilizzato per:
-  + Sviluppare l'interfaccia utente in modo efficiente e performante.
-  + Gestire lo stato dell'applicazione attraverso il sistema di store di Svelte.
-  + Integrare API REST per recuperare e visualizzare i dati dinamicamente.
-  + Ottimizzare le prestazioni grazie alla sua architettura basata sulla compilazione.
-  Il progetto è strutturato con:
-  - Componenti Svelte modulari per una gestione chiara dell'UI.
-  - Fetch API per comunicare con il backend in modo asincrono.
+=== Testcontainers
+- *Descrizione della tecnologia e del suo utilizzo*: Testcontainers è una libreria Java che semplifica l'esecuzione di test di integrazione utilizzando container Docker. Consente di avviare istanze temporanee di database, servizi o altre dipendenze necessarie per i test, garantendo un ambiente isolato e riproducibile. Nel nostro progetto, Testcontainers viene utilizzato per:
+  + Eseguire test di integrazione con un'istanza PostgreSQL in un container Docker, garantendo che i test siano eseguiti in un ambiente simile a quello di produzione.
+  + Creare e gestire container in modo programmatico, evitando la necessità di configurazioni manuali.
+  + Garantire che i test siano indipendenti dall'ambiente locale, riducendo il rischio di errori dovuti a configurazioni diverse tra sviluppatori.
+  + Integrare facilmente con JUnit 5 e Spring Boot, sfruttando le annotazioni per configurare i container necessari.
+
 - *Versione della tecnologia utilizzata*:
-  - *Svelte*: 5.0.0
+  - *Testcontainers Core*: 1.20.6
+  - *Testcontainers JUnit Jupiter*: 1.20.6
+  - *Testcontainers PostgreSQL*: 1.20.0
 
 - *Link di riferimento alla documentazione*:
-  - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
+  - *Testcontainers*: #link("https://www.testcontainers.org/")[#text(blue)[https://www.testcontainers.org/]]
+  - *Testcontainers JUnit 5*: #link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
+  - *Testcontainers PostgreSQL*: #link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
+
+== Linguaggi
+=== Java
+- *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
+  + Sviluppare il backend dell'applicazione, implementando la logica di business e l'interfacciamento con il database.
+  + Utilizzare il framework Spring Boot per semplificare la configurazione e la gestione delle dipendenze.
+  + Eseguire test automatizzati tramite JUnit e Mockito.
+  + Integrare librerie esterne come PITest per il test di mutazione e TestContainers per i test di integrazione.
+- *Versione della tecnologia utilizzata*:
+  - *Java JDK*: 23
+- *Link di riferimento alla documentazione*:
+  - *Java*: #link("https://docs.oracle.com/en/java/")[#text(blue)[https://docs.oracle.com/en/java/]]
+
+=== Typescript
+- *Descrizione della tecnologia e del suo utilizzo*: TypeScript è un superset di JavaScript che aggiunge tipizzazione statica e altre funzionalità avanzate al linguaggio. È progettato per migliorare la produttività degli sviluppatori e la qualità del codice, rendendo più facile la gestione di progetti complessi. Nel nostro progetto, TypeScript viene utilizzato per:
+  + Sviluppare il frontend dell'applicazione, sfruttando le funzionalità di tipizzazione per garantire una maggiore sicurezza del codice.
+  + Integrare con Svelte per creare componenti reattivi e performanti.
+  + Utilizzare librerie esterne come Threlte per la visualizzazione 3D dei dati.
+- *Versione della tecnologia utilizzata*:
+  - *TypeScript*: 5.8.2
+- *Link di riferimento alla documentazione*:
+  - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
 
 #pb()
+
 = Architettura
 == Architettura logica <architettura_logica>
 Nel nostro progetto abbiamo scelto di adottare un'architettura esagonale, che ci permette di organizzare il codice in maniera ordinata e con una chiara separazione dei compiti tra le varie componenti. Al centro dell'architettura si trova il core domain, dove risiede tutta la logica di business. Questo cuore del sistema è progettato per essere indipendente da elementi esterni come database, API o librerie specifiche, rendendo così l'applicazione più semplice da manutenere, testare e far evolvere nel tempo.
@@ -195,6 +263,47 @@ In generale, questa struttura ci permette di mantenere il progetto modulare e be
 
 
 == Architettura di deployment
+
+L'architettura di deployment scelta per *3Dataviz* si basa sull'utilizzo di container Docker orchestrati tramite Docker Compose. Questa decisione strategica permette di incapsulare l'applicazione backend (sviluppata con Spring Boot), il frontend (sviluppato con Svelte) e il database (PostgreSQL) in ambienti isolati, standardizzati e facilmente riproducibili.
+
+=== Struttura a monolite containerizzato vs microservizi
+
+Sebbene l'architettura logica interna del backend segua il pattern esagonale per promuovere la modularità, a livello di deployment l'applicazione viene distribuita come un'unica unità funzionale backend (assimilabile a un monolite) all'interno di un container Docker, affiancata da un container separato per il frontend. La scelta di questo approccio monolitico containerizzato per il backend, rispetto a un'architettura a microservizi più granulare, è motivata da diversi fattori specifici del progetto *3Dataviz*, in linea con le considerazioni generali su semplicità e focus:
+
+- *Semplicità e rapidità di Sviluppo*: L'obiettivo primario è realizzare una piattaforma web funzionale per la visualizzazione 3D dei dati. Un approccio monolitico per il backend semplifica il processo di sviluppo, build, testing e debugging, evitando la complessità aggiuntiva introdotta dalla gestione di servizi distribuiti comunicanti via API, permettendo al team di concentrarsi sulle funzionalità principali.
+
+- *Ambito definito e manutenibilità*: *3Dataviz* è focalizzato sulla visualizzazione 3D dei dati. Dato che l'ambito è specifico e non ci sono piani imminenti per grandi espansioni che richiederebbero componenti gestiti separatamente, l'architettura monolitica si rivela un percorso più diretto per lo sviluppo, il debug e la manutenzione del backend. Con un monolite, le modifiche al codice sono naturalmente coese, evitando le complicazioni legate al coordinamento di deploy separati per più servizi o alla gestione della comunicazione tra di essi. Il risultato è un ciclo di sviluppo più snello e un sistema più facile da capire nel suo insieme, il che rende più agevoli anche il debug e la risoluzione dei problemi. Infine, avere il codice backend centralizzato facilita la manutenzione: diventa più semplice individuare e correggere bug, così come implementare nuove funzionalità o miglioramenti.
+
+- *Gestibilità e competenze*: Operativamente, un monolite containerizzato è più semplice da gestire. Aggiornamenti, rollback, monitoraggio e troubleshooting sono più diretti, riguardando un'unica unità applicativa backend, a differenza della complessità distribuita dei microservizi che moltiplica queste attività e richiede pratiche e strumenti più avanzati (es. tracciamento distribuito). Di conseguenza, anche le competenze tecniche richieste sono meno specifiche; i microservizi necessitano di una profonda padronanza di progettazione distribuita, tecnologie cloud-native e pratiche operative complesse. Evitare questa complessità permette al team di *3Dataviz* di concentrarsi sulle funzionalità chiave della visualizzazione 3D e sulla qualità dell'applicazione.
+
+Pur riconoscendo i vantaggi teorici dei microservizi (come scalabilità granulare e resilienza), abbiamo valutato che per lo scenario attuale di *3Dataviz* questi benefici non giustificano l'investimento significativo richiesto in termini di progettazione, infrastruttura e gestione della complessità distribuita. Pertanto, l'approccio monolitico containerizzato per il backend rappresenta la scelta più pragmatica ed efficiente al momento, garantendo la semplicità gestionale e la velocità di sviluppo necessarie per raggiungere gli obiettivi del progetto, senza precludere future evoluzioni architetturali se le esigenze cambieranno.
+
+=== Docker e Containerizzazione dell'Applicazione
+
+L'adozione della containerizzazione con Docker, orchestrata da Docker Compose, è un pilastro fondamentale della strategia di deployment, scelta per i seguenti vantaggi cruciali applicati al contesto *3Dataviz*:
+
+- *Portabilità*: I container Docker pacchettizzano le applicazioni (Spring Boot backend, Svelte frontend) con tutte le loro dipendenze (runtime Java/Node.js, librerie specifiche) e la configurazione necessaria. Questo garantisce che l'applicazione *3Dataviz* possa essere eseguita in modo identico su qualsiasi macchina o ambiente che supporti Docker, eliminando le problematiche legate alle differenze di configurazione ("it works on my machine").
+
+- *Consistenza Ambientale e Orchestrazione*: Il file `docker-compose.yml` definisce e gestisce l'intero stack applicativo, assicurando coerenza tra gli ambienti e facilitando l'avvio coordinato dei servizi. Definisce nel dettaglio:
+    - Un servizio `db` basato su `postgres:17`, con configurazione (utente/password/DB) tramite variabili d'ambiente, persistenza dati su volume nominato (`postgres_data`) e inizializzazione tramite script SQL (`init-data.sql`).
+    - Un servizio `test` basato su `maven:3.9.9-eclipse-temurin-23-alpine`, dipendente dal `db`, che esegue i test di integrazione (`mvn clean test`) nel contesto Docker, utilizzando Testcontainers (facilitato dal mount del socket Docker e dalle variabili d'ambiente specifiche) prima che l'applicazione principale venga avviata.
+    - Il servizio `app` per il backend Spring Boot, costruito dal suo `Dockerfile`, dipendente da `db` e `test`, che riceve le credenziali del DB via environment ed espone la porta 8080.
+    - Il servizio `frontend`, costruito dal suo `Dockerfile` Node.js, dipendente dal servizio `app`, che serve l'interfaccia Svelte sulla porta interna 4173, mappata sulla porta host 5173.
+  Questa orchestrazione garantisce che tutti lavorino con la stessa configurazione e che l'ambiente di produzione rispecchi quello di test.
+
+- *Isolamento e Gestione Dipendenze*: Ogni servizio (`db`, `app`, `frontend`, `test`) gira nel proprio container isolato, evitando conflitti di librerie o versioni e confinando le dipendenze all'interno delle rispettive immagini.
+
+- *Efficienza delle Risorse*: I container condividono il kernel del sistema operativo host, risultando più leggeri e efficienti rispetto alle macchine virtuali.
+
+- *Scalabilità Orizzontale (Potenziale)*: Anche se il backend è monolitico, Docker permette di scalare orizzontalmente avviando più istanze del container `app` (e potenzialmente `frontend`) dietro un load balancer, se necessario.
+
+I Dockerfile per backend e frontend utilizzano build multi-stage per ottimizzare le immagini finali. Il *Dockerfile del backend* segue un processo in due fasi:
+  + *Fase di compilazione (`builder`)*: utilizza un'immagine `maven:3.9.9-eclipse-temurin-23-alpine` per costruire il pacchetto JAR dell'applicazione usando `mvn package`.
+  + *Fase di runtime*: utilizza un'immagine `eclipse-temurin:23-jdk-alpine` più leggera, copiando solo il JAR compilato dalla fase precedente per eseguirlo.
+Analogamente, il *Dockerfile del frontend* usa `node:20-alpine` con una fase per installare dipendenze e buildare l'applicazione (`npm run build`) e una fase finale per servire i file generati (`npm run preview`).
+
+In sintesi, la combinazione di un backend monolitico e un frontend separato, entrambi containerizzati insieme al database e a un ambiente di test integrato tramite Docker e Docker Compose, offre per *3Dataviz* un'architettura di deployment robusta, portabile, consistente e gestibile, bilanciando efficacemente le esigenze del progetto con l'efficienza operativa e di sviluppo.
+
 == Database
 Nel nostro progetto utilizziamo PostgreSQL come database relazionale per gestire i dati, sfruttando la sua affidabilità, la possibilità di usare tipi personalizzati e il supporto avanzato per le query. Fin dall'avvio, il database è già popolato con un set di dati predefinito, organizzato nella tabella coordinates. Questa tabella raccoglie le label x, label z, i valori y dati dall'incrocio di x e z e le classificazioni, utilizzando un tipo ENUM personalizzato (dataset_level) per definire il livello del dataset (SMALL, MEDIUM, LARGE), garantendo così una struttura più tipizzata e robusta rispetto all'uso di semplici stringhe.
 
