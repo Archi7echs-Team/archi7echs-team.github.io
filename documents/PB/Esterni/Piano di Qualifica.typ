@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.4.0","11-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità",p.pozzobon,"",
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
     "1.2.0","17-03-2025","Aggiunta analisi grafici cruscotto",p.salvo, (p.pesenato, p.scandaletti),
     "1.1.0","06-03-2025","Sistemazione documento post RTB",p.checchinato,(p.scandaletti,p.salvo),
