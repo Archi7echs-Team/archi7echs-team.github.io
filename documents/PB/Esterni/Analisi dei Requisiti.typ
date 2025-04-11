@@ -8,6 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "1.2.0", "10-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali", p.pozzobon,(""),
     "1.1.1", "21-03-2025", "Correzione sezione tecnologie", p.checchinato,(p.salvo, p.valdagno),
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
@@ -390,7 +391,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC8>
 \
 
-=== UC 9 - Visualizzazione informazioni durante hover di una barra <uc9>
+=== UC 9 - Visualizzazione altezza durante hover di una barra <uc9>
 - *Descrizione: * L'utente posiziona il cursore sopra una barra del grafico e visualizza il valore dell'altezza della barra.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile").
@@ -879,7 +880,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.9], [@uc6 \ #glossario("UC")6], [L'utente deve essere in grado di ingrandire, mediante gesture del mouse/trackpad, una specifica area del grafico #glossario("3D") per visualizzare più dettagli], [1 - Obbligatorio],
   [F.1.10], [@uc7 \ #glossario("UC")7], [L'utente deve essere in grado di ridurre, mediante gesture del mouse/trackpad, la visualizzazione del grafico #glossario("3D") per avere una visione d'insieme.], [1 - Obbligatorio],
   [F.1.11], [@uc8 \ #glossario("UC")8], [L'utente, attraverso l'apposito bottone, deve essere in grado di resettare la visualizzazione del grafico a quella di default renderizzata dall'applicativo], [1 - Obbligatorio],
-  [F.1.12], [@uc9 \ #glossario("UC")9], [L'utente posiziona il cursore sopra una barra del grafico e visualizza le informazioni di quella barra], [1 - Obbligatorio],
+  [F.1.12], [@uc9 \ #glossario("UC")9], [L'utente posiziona il cursore sopra una barra del grafico e visualizza l'altezza della barra selezionata], [1 - Obbligatorio],
   [F.1.13], [@uc10 \ #glossario("UC")10], [L’utente deve essere in grado, al click di una barra, di visualizzare il pannello relativo alla selezione], [1 - Obbligatorio],
   [F.1.14], [@uc10.1 \ #glossario("UC")10.1], [L'utente deve essere in grado, al click di una barra, di visualizzare nel pannello relativo alla barra stessa, le informazioni dettagliate della selezione], [1 - Obbligatorio],
   [F.1.15], [@uc10.2 \ #glossario("UC")10.2], [L'utente deve essere in grado di personalizzare la percentuale di opacizzazione di una barra selezionata], [1 - Obbligatorio],
