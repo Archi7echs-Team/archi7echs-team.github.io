@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.6.0", "10-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(""),
     "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
@@ -154,6 +155,26 @@ L'integrazione con Docker consente di eseguire il backend in un container isolat
 - *Link di riferimento alla documentazione*:
   - Svelte: #link("https://svelte.dev/docs")[#text(blue)[https://svelte.dev/docs]]
 
+#pb()
+  
+== Librerie
+  
+=== Threlte  
+- *Descrizione della tecnologia e del suo utilizzo*:  
+  #glossario("Threlte") è un framework per lo sviluppo di grafica 3D reattiva all’interno di progetti Svelte, basato su #glossario("Three.js"). Consente di costruire scene 3D in modo dichiarativo e integrato con lo stato reattivo dell'applicazione. In questo progetto, Threlte è stato utilizzato per:  
+  + Creare visualizzazioni 3D interattive.  
+  + Gestire oggetti, luci e telecamere direttamente tramite componenti Svelte.  
+  + Semplificare l’integrazione con la logica applicativa grazie alla sua sintassi dichiarativa.  
+  + Ottimizzare l’esperienza utente mantenendo buone performance in contesti tridimensionali.  
+  Il progetto è strutturato con:  
+  - Componenti Threlte per rappresentare entità 3D.  
+  - Utilizzo del sistema reactive di Svelte per controllare dinamicamente gli elementi della scena.  
+  - Caricamento asincrono di asset 3D attraverso strumenti integrati di Threlte.  
+- *Versione della tecnologia utilizzata*:  
+  - *Threlte*: 8.0.1  
+- *Link di riferimento alla documentazione*:  
+  - Threlte: #link("https://threlte.dev/docs")[#text(blue)[https://threlte.dev/docs]]
+
 == Test
 === JUnit 5
 - *Descrizione della tecnologia e del suo utilizzo*: JUnit 5 è un framework di testing per Java che consente di scrivere e eseguire test automatizzati. È composto da tre moduli principali: JUnit Platform, JUnit Jupiter e JUnit Vintage. JUnit Jupiter è la parte principale del framework, fornendo le annotazioni e le API per scrivere test. Nel nostro progetto, JUnit 5 viene utilizzato per:
@@ -223,6 +244,36 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
   - *Testcontainers JUnit 5*: #link("https://java.testcontainers.org/test_framework_integration/junit_5/")[#text(blue)[https://java.testcontainers.org/test_framework_integration/junit_5/]]
   - *Testcontainers PostgreSQL*: #link("https://www.testcontainers.org/modules/databases/postgres/")[#text(blue)[https://www.testcontainers.org/modules/databases/postgres/]]
 
+=== Vitest  
+- *Descrizione della tecnologia e del suo utilizzo*:  
+  #glossario("Vitest") è un framework di testing moderno pensato per ambienti basati su Vite. È veloce, semplice da configurare e supporta funzionalità avanzate come test asincroni, snapshot e mock. Nel nostro progetto, Vitest è stato adottato per:  
+  + Scrivere test unitari e di integrazione in modo semplice e veloce.  
+  + Verificare il comportamento delle funzioni logiche e dei componenti Svelte.  
+  + Integrare facilmente il testing nel processo di sviluppo continuo.  
+  Il progetto include:  
+  - Struttura modulare per l’organizzazione dei test.  
+  - Coverage automatizzato per la misurazione della qualità del codice.  
+  - Integrazione con l’ambiente di sviluppo per l’esecuzione rapida dei test.  
+- *Versione della tecnologia utilizzata*:  
+  - *Vitest*: 3.0.9  
+- *Link di riferimento alla documentazione*:  
+  - Vitest: #link("https://vitest.dev/guide/")[#text(blue)[https://vitest.dev/guide/]]
+
+=== Playwright  
+- *Descrizione della tecnologia e del suo utilizzo*:  
+  #glossario("Playwright") è uno strumento di testing end-to-end sviluppato da Microsoft, che permette di automatizzare e testare applicazioni web su diversi browser. Nel progetto è stato utilizzato per:  
+  + Simulare l’interazione dell’utente con l’interfaccia grafica.  
+  + Verificare il comportamento dell’applicazione in scenari reali.  
+  + Garantire la stabilità dell’interfaccia utente nelle modifiche successive.  
+  La struttura del progetto prevede:  
+  - Test di flusso utente completi su Chrome, Firefox e WebKit.  
+  - Configurazioni specifiche per ambienti di CI.  
+  - Screenshot e tracciamento video in caso di errori.  
+- *Versione della tecnologia utilizzata*:  
+  - *Playwright*: 1.51.1  
+- *Link di riferimento alla documentazione*:  
+  - Playwright: #link("https://playwright.dev/docs/intro")[#text(blue)[https://playwright.dev/docs/intro]]
+
 == Linguaggi
 === Java
 - *Descrizione della tecnologia e del suo utilizzo*: Java è un linguaggio di programmazione ad oggetti, ampiamente utilizzato per lo sviluppo di applicazioni enterprise. La sua portabilità, grazie alla Java Virtual Machine (JVM), e la vasta gamma di librerie disponibili lo rendono una scelta popolare per progetti complessi. Nel nostro progetto, Java viene utilizzato per:
@@ -244,8 +295,6 @@ L'integrazione con JUnit 5 e Spring Boot avviene tramite le annotazioni ```java 
   - *TypeScript*: 5.8.2
 - *Link di riferimento alla documentazione*:
   - *TypeScript*: #link("https://www.typescriptlang.org/docs/")[#text(blue)[https://www.typescriptlang.org/docs/]]
-
-#pb()
 
 = Architettura
 == Architettura logica <architettura_logica>
@@ -318,70 +367,145 @@ Questo approccio assicura un'interazione controllata ed efficiente con il databa
 In questa sezione vengono documentate in dettaglio le utilities e i moduli di supporto utilizzati nell'applicazione. Questi file gestiscono la preparazione, il calcolo e la distribuzione dei dati e delle impostazioni globali, fornendo le basi per il funzionamento dell'interfaccia 3D e dei filtri.
 Per ciascuna utility verranno illustrati i seguenti aspetti:
 
-- *Descrizione*: una breve spiegazione del ruolo e dello scopo della utility all'interno dell'applicazione.
- 
-- *Struttura e Funzionalità*: la composizione del file, evidenziando le funzioni chiave e la logica implementata per elaborare i dati e gestire lo stato globale.
+- *Descrizione*: una breve spiegazione del ruolo e dello scopo all'interno dell'applicazione.
+
+- *Struttura e Funzionalità*: la sua composizione, evidenziando gli elementi chiave e la logica implementata.
+
+- *Props e Variabili Reattive*: i dati in ingresso (props) e le variabili reattive che gestiscono lo stato interno.
+
+- *Eventi e Comunicazione*: come il componente comunica con altri elementi, tramite eventi custom o binding.
+
+- *Esempi di Utilizzo*: un esempio pratico su come il componente viene importato e integrato nell'applicazione.
+
+- *Dipendenze Esterne*: eventuali librerie aggiuntive utilizzate e spunti per ottimizzazioni future.
 
 === index.svelte.ts <index.svelte.ts>
 
 ==== *Descrizione*  
-Questo file è un modulo per la gestione dello stato e la fornitura di dati computati per l'applicazione. Esso definisce i dati grezzi, ne calcola le proprietà (come la media, i valori minimi e massimi, e le dimensioni della matrice) e li espone tramite funzioni ed oggetti reattivi. Inoltre, il file gestisce la selezione degli elementi tramite la classe Selection e definisce un oggetto di filtro che raccoglie le impostazioni di visualizzazione e filtraggio.
+Il file *index.svelte.ts* gestisce i dati, i filtri e la selezione delle barre per l'interfaccia 3D. Contiene funzioni per il recupero dei dati dal database e da un'API esterna, per l'upload dei file CSV, e per l'applicazione dei filtri sui dati visualizzati. Le funzioni di gestione della selezione e dei colori delle barre, insieme a metodi utili per calcolare medie, minimi e massimi, sono anche incluse per rendere l'esperienza utente dinamica.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Vengono importati moduli fondamentali da *three* e funzioni di stato reattivo da Svelte.  
-  - Definisce una variabile `fetchedData` che contiene una matrice di dati grezzi.  
-  - Utilizza una store derivata per creare l'oggetto `data`, che include sia i valori originali che le proprietà computate, come:
-    - La media dei valori,  
-    - I valori minimo e massimo,  
-    - Il numero di righe e colonne,  
-    - Il target predefinito per la visualizzazione e la posizione di default della camera.
-  - Esporta la funzione `getData()`, che restituisce l'oggetto `data`, e la funzione `getValueFromId()`, utile per estrarre un valore dalla matrice in base a un identificatore.
-  - Definisce la classe *Selection* che gestisce la selezione degli elementi con metodi per aggiungere, rimuovere, verificare e alternare gli elementi selezionati.
-  - Crea un'istanza di *Selection* e definisce un oggetto di filtro che include impostazioni quali lo spacing, il range di valori, le opzioni di colorazione, i filtri per la media e le barre, e il flag per il display del filtro.
+  - Il file contiene funzioni per il recupero dei dati da *getDbData* e *getExternalData*, per il caricamento dei file CSV con *uploadCsvFile*, e per il reset dei filtri con *resetFilter*.  
+  - Definisce la variabile *fetchedData* per contenere i dati recuperati, insieme a configurazioni di visualizzazione come *spacing*, *xLabels*, e *zLabels*.  
+  - Il calcolo dei dati computati (media, min/max, ecc.) è gestito da *utils*, che derivano i valori da *fetchedData* e li aggiornano dinamicamente.  
+  - La logica di selezione è gestita da una classe *Selection*, che gestisce le barre selezionate e fornisce metodi per l'aggiunta, la rimozione e la verifica della selezione.  
+  - *filter* è uno store globale che contiene i parametri di filtro attivi, come l'intervallo di valori da visualizzare, la selezione dei colori, e i parametri di selezione delle barre.
 
 - *Funzionalità:*  
-  - Calcola in modo reattivo proprietà importanti dai dati grezzi per normalizzare e posizionare gli elementi 3D.  
-  - Fornisce un meccanismo per gestire la selezione degli elementi, utile per applicare filtri e evidenziare barre specifiche nel grafico.  
-  - Esporta uno stato globale (filter) che raccoglie tutte le impostazioni di filtraggio e visualizzazione, da utilizzare nei componenti dell'applicazione.
+  - *fetchDb()* e *fetchExternal()* recuperano i dati dal server e li impostano in *fetchedData*.  
+  - *uploadFile(file)* consente all'utente di caricare un file CSV, che viene quindi analizzato e utilizzato per aggiornare *fetchedData*.  
+  - *utils* calcola variabili computate come la media globale, i minimi e massimi, e la posizione di default della telecamera.  
+  - La classe *Selection* gestisce la selezione delle barre, inclusi metodi per aggiungere, rimuovere e verificare la selezione, nonché per ottenere il valore dell'ultima barra selezionata.  
+  - *filter* memorizza i parametri di filtro, inclusi i valori di intervallo, la selezione del colore, e l'attivazione di filtri per la media globale.
 
 ==== *Props e Variabili Reattive*  
-- *Variabili Reattive:*  
-  - *fetchedData:* contiene i dati grezzi iniziali.  
-  - *data:* store derivata che combina i dati grezzi con le proprietà computate (media, min, max, righe, colonne, defaultTarget e defaultPosition).  
-  - *utils:* raccoglie le proprietà computate, utili per il posizionamento e il filtraggio.  
-- *Oggetto di Filtro:*  
-  - L'oggetto filter include impostazioni quali:
-    - spacing,  
-    - rangeValue (min e max),  
-    - colorSelection,  
-    - avgFilter e avgEnabled,  
-    - barFilterSelection,  
-    - displayBarFilter,  
-    - selection (istanza della classe Selection).
+- *Props:*  
+  - Il file non riceve props direttamente, ma interagisce con lo store globale *fetchedData* e *filter* per sincronizzare i dati e i parametri di filtro.  
+  - La variabile *fetchedData* contiene i dati e le configurazioni visive, e *filter* gestisce le preferenze di visualizzazione.
+
+- *Variabili reattive:*  
+  - *fetchedData*: variabile reattiva che memorizza i dati recuperati (valori, etichette, ecc.).  
+  - *utils*: variabile derivata che calcola valori computati dai dati.  
+  - *filter*: store globale che contiene le opzioni di filtro attive.  
+  - *selection*: oggetto che gestisce lo stato delle barre selezionate.
 
 ==== *Eventi e Comunicazione*  
-- Pur non gestendo direttamente eventi, questo modulo fornisce le funzioni e gli oggetti di stato che altri componenti importano per comunicare e sincronizzare i dati e le impostazioni a livello globale.
+- Il file gestisce gli eventi di selezione tramite la classe *Selection*, che fornisce metodi per aggiornare le barre selezionate, come *add*, *remove*, *clear*, e *toggle*.  
+- I parametri di filtro sono controllati tramite *filter*, che interagisce con altri componenti per applicare e ripristinare i filtri (es. selezione delle barre, intervallo di visualizzazione, selezione dei colori).  
+- I dati e i filtri sono sincronizzati con la scena 3D attraverso l'uso di *utils* e *fetchedData*.
 
 ==== *Stili e Layout*  
-- Non applica stili, in quanto funge esclusivamente da modulo di gestione dei dati e dello stato.
+- Poiché questo file è principalmente di logica, non contiene stili o layout visivi. Tuttavia, le variabili e le funzioni calcolate sono utilizzate per sincronizzare la visualizzazione dei dati e la scena 3D nel componente *Scene.svelte*.
 
 ==== *Esempi di Utilizzo*  
-- In altri componenti, come App.svelte o Bar.svelte, il modulo viene importato per accedere ai dati e alle impostazioni.  
-  ```ts
-  import { getData, filter, getValueFromId } from '$lib/index.svelte';
-  let data = getData();
 
+- *Integrazione nell'applicazione:*
+    Le funzioni di *index.svelte.ts* vengono utilizzate per gestire la selezione delle barre, applicare filtri dinamici e aggiornare la visualizzazione della scena in base alle preferenze dell'utente.
+  
+    ```ts
+    import { filter, passesBarFilter, setBarFilterSelection, getValueFromId } from './index.svelte.ts';
 
-  ```
-- Questo esempio evidenzia come il modulo fornisca le basi per il calcolo dei dati e la gestione dei filtri che vengono poi utilizzati per aggiornare dinamicamente la visualizzazione del grafico 3D.
+    // Impostazione di un filtro per le barre
+    const filterSelection = (selectionType: number) => {
+      setBarFilterSelection(selectionType);
+    };
+
+    // Applicazione del filtro a una barra specifica
+    const barId = "2-3";  // esempio di ID di una barra
+    const barHeight = getValueFromId(barId);  // Ottieni l'altezza della barra
+    const isVisible = passesBarFilter(barId, barHeight);  // Verifica se la barra passa il filtro
+
+    if (isVisible) {
+      console.log(`Bar ${barId} is visible`);
+    } else {
+      console.log(`Bar ${barId} is hidden`);
+    }
+
+    // Aggiungere o rimuovere barre dalla selezione
+    filter.selection.add(barId);
+    filter.selection.remove(barId);
+    ```
 
 ==== *Dipendenze Esterne*  
-- *three:* Utilizzato per operazioni matematiche e vettoriali (ad es. Vector3) necessarie per il calcolo delle proprietà della scena 3D.  
-- *svelte (State Management):* Le funzioni state (state, derived, effect) sono impiegate per gestire la reattività e aggiornare automaticamente i dati e le proprietà computate.  
-- *lib/index.svelte:* Il modulo stesso funge da fonte centrale per le funzioni getData, getValueFromId e per la gestione dei filtri tramite l'oggetto filter.
+- *three*: utilizzato per la gestione delle geometrie, dei mesh e delle interazioni con la scena 3D (Raycaster, Mesh, Vector3).  
+- *svelte-tweakpane-ui*: fornisce i controlli UI come *FileValue* per la gestione dei file.  
+- *lib/data.svelte*: fornisce le funzioni per il recupero dei dati dal backend e per l'upload dei file.  
+- *Svelte reactivity*: il file sfrutta il sistema reattivo di Svelte per gestire lo stato e la sincronizzazione dei dati e dei filtri.
+ 
+=== data.svelte.ts <data.svelte.ts>
 
-Questa descrizione strutturata fornisce una panoramica completa del file index.svelte.ts, evidenziando come esso gestisca la preparazione e la distribuzione dei dati e delle impostazioni globali, e fungendo da riferimento essenziale per gli sviluppatori e i manutentori dell'applicazione.
+==== *Descrizione*  
+Il file *data.svelte.ts* contiene funzioni per il recupero dei dati da un database e da un'API esterna, nonché per l'upload di file CSV al server. Gestisce la logica di fetching dei dati e il controllo dei file prima di inviarli, fornendo un'interfaccia semplice per interagire con il backend.
+
+==== *Struttura e Funzionalità*  
+- *Struttura:*  
+  - *fetchDbData()*: funzione asincrona che recupera i dati dal database tramite una richiesta GET all'endpoint `/api/coordinates`.  
+  - *fetchExternalData()*: funzione asincrona che recupera i dati esterni tramite una richiesta GET all'endpoint `/api/external/data`.  
+  - *uploadCsvFile(file)*: funzione che gestisce il caricamento di un file CSV al server, con controlli per assicurarsi che il file sia del tipo corretto e non superi una dimensione di 10MB.  
+  - *init()*: funzione di inizializzazione che recupera sia i dati dal database che quelli esterni al caricamento dell'applicazione, chiamando rispettivamente `fetchDbData()` e `fetchExternalData()`.  
+  - *getDbData()* e *getExternalData()*: funzioni che restituiscono i dati dal database e dall'API esterna, rispettivamente, e caricano i dati se non sono già stati recuperati.
+
+- *Funzionalità:*  
+  - Le funzioni di fetching recuperano i dati dai rispettivi endpoint API e gestiscono gli errori tramite `try-catch`, mostrando messaggi di errore appropriati se la rete o il server non sono raggiungibili.  
+  - La funzione di upload *uploadCsvFile* gestisce la validazione del file prima di inviarlo, controllando il tipo e la dimensione del file, e invia il file al server tramite una richiesta POST.  
+  - Le funzioni *getDbData()* e *getExternalData()* verificano se i dati sono già stati recuperati prima di fare una nuova richiesta.  
+  - *init()* avvia automaticamente il recupero dei dati al caricamento del file.
+
+==== *Props e Variabili Reattive*  
+- *Props:*  
+  - Il file non riceve props direttamente, ma esporta le funzioni per l'accesso ai dati esterni e al database.  
+- *Variabili reattive:*  
+  - *externalData*: variabile che memorizza i dati esterni recuperati tramite *fetchExternalData()*.  
+  - *dbData*: variabile che memorizza i dati del database recuperati tramite *fetchDbData()*.  
+
+
+==== *Eventi e Comunicazione*  
+- Il file non emette eventi custom, ma fornisce funzioni per il recupero e l'upload dei dati che possono essere utilizzate in altre parti dell'applicazione.  
+- La comunicazione avviene tramite le variabili *externalData* e *dbData*, che sono utilizzate per popolare i componenti dell'applicazione che richiedono questi dati.
+
+==== *Esempi di Utilizzo*  
+- Integrazione nell'applicazione:  
+  Il file *data.svelte.ts* viene utilizzato per recuperare i dati da backend e file CSV, utilizzando le funzioni esportate come *getDbData()* e *getExternalData()*.
+  ```ts
+  import { getDbData, getExternalData, uploadCsvFile } from './data.svelte.ts';
+  
+  // Recupero dati dal database
+  const dbData = await getDbData();
+  
+  // Recupero dati esterni
+  const externalData = await getExternalData();
+  
+  // Caricamento file CSV
+  const file = ... // un file CSV da un input
+  await uploadCsvFile(file);
+  ```
+
+==== *Dipendenze Esterne*  
+- *svelte-tweakpane-ui*: fornisce il tipo *FileValue*, utilizzato per il controllo del file nel caricamento del CSV.  
+- *fetch API*: utilizzata per effettuare richieste HTTP verso il backend.  
+- *FormData*: utilizzata per inviare il file CSV al server tramite una richiesta POST multipart.  
+
 
 == Componenti
 In questa sezione vengono documentati in dettaglio i componenti #glossario("front-end") sviluppati in Svelte per il prodotto. Ogni file .svelte rappresenta un componente autonomo che implementa una specifica funzionalità dell'#glossario("interfaccia utente").
@@ -403,45 +527,47 @@ Per ciascun componente verranno illustrati i seguenti aspetti:
 
 Questa sezione permette di comprendere il funzionamento e l'interazione dei vari componenti, fornendo un riferimento utile per sviluppatori e manutentori.
 
-=== App.svelte <app.svelte>
+=== App.svelte <App.svelte>
 
 ==== *Descrizione*  
-Il componente App.svelte è il punto di ingresso dell'applicazione e coordina il rendering della scena 3D e dei pannelli di controllo. Gestisce il canvas principale, carica i dati tramite la funzione getData() e imposta il target della visualizzazione, offrendo inoltre la possibilità di resettare il target alla configurazione di default.
+Il componente *App.svelte* è il punto di ingresso principale dell'applicazione, che coordina il rendering della scena 3D e degli altri componenti di configurazione. Gestisce la visualizzazione del grafico, il pannello delle impostazioni e il controllo della telecamera, garantendo un'esperienza utente completa e interattiva.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente è contenuto in un `<div>` che occupa l'intera finestra, con un background scuro per evidenziare la scena 3D.  
-  - All'interno del `<Canvas>` (fornito da threlte/core) vengono integrati tre componenti principali:  
-    - SettingsPane.svelte: pannello per il controllo delle impostazioni e per il reset del target.  
-    - BarPane.svelte: componente che gestisce i filtri e la selezione delle barre.  
-    - Scene.svelte: responsabile del rendering della scena 3D in base al target impostato.
+  - Il componente è racchiuso all'interno di un `<div>` che occupa l'intera finestra del browser (100vh, 100vw), con uno sfondo scuro per mettere in risalto la scena 3D.  
+  - Utilizza il componente *Canvas* di *threlte/core* per gestire il rendering 3D e ospitare la scena, i pannelli di controllo e gli altri componenti.  
+  - I componenti integrati includono:  
+    - *SettingsPane.svelte*: pannello per la configurazione delle impostazioni, come la fotocamera e i filtri.  
+    - *BarPane.svelte*: pannello per le informazioni delle barre selezionate e l'interazione con le barre.  
+    - *Scene.svelte*: gestisce la scena 3D, compreso il rendering dei dati e la visualizzazione interattiva.
+
 - *Funzionalità:*  
-  - Recupera i dati e le configurazioni computate tramite getData() e li memorizza in una variabile derivata, utils.  
-  - Imposta il target della visualizzazione con il valore default ottenuto da getData().computed.defaultTarget e lo aggiorna in modo reattivo.  
-  - Fornisce la funzione resetTarget() che ripristina il target al valore predefinito in utils.
+  - Il componente *App.svelte* inizializza e gestisce lo stato del target della telecamera, tramite il binding della variabile `target` con il valore di *utils.defaultTarget* ottenuto da `createUtils()`.  
+  - Due funzioni sono esportate per interagire con il target della telecamera:
+    - *resetTarget()*: ripristina il target della telecamera al valore di default.  
+    - *getTarget()*: restituisce il valore corrente del target della telecamera.
+  - Il componente utilizza *derived* per ottenere e gestire lo stato reattivo del target e degli altri dati necessari per il rendering.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - I componenti SettingsPane.svelte, BarPane.svelte e Scene.svelte ricevono tramite props i dati e le funzioni necessari per il loro corretto funzionamento.  
-  - In particolare, Scene.svelte riceve il prop target, fondamentale per centrare la visualizzazione 3D.
+  - *resetTarget*: funzione passata a *SettingsPane.svelte* per consentire il reset del target della telecamera.  
+  - *target*: variabile passata a *Scene.svelte* per controllare la posizione della visualizzazione 3D.
+
 - *Variabili reattive:*  
-  - *utils*: variabile derivata (derived) che contiene i valori computati ottenuti da getData().computed.  
-  - *target*: stato reattivo (state) inizializzato al valore predefinito e aggiornato dalla funzione resetTarget().
+  - *target*: stato reattivo che memorizza il valore corrente del target della telecamera, inizializzato con *utils.defaultTarget*.  
+  - *utils*: oggetto derivato che contiene le configurazioni e i calcoli necessari, come il valore di default per il target della telecamera.
 
 ==== *Eventi e Comunicazione*  
-- Il componente comunica con i suoi figli tramite binding delle props:  
-  - SettingsPane.svelte utilizza resetTarget() per permettere agli utenti di ripristinare il target della camera.  
-  - BarPane.svelte e Scene.svelte ricevono i dati e le impostazioni necessari per sincronizzare il rendering della scena 3D e la gestione dei filtri.
+- *SettingsPane.svelte* riceve la funzione *resetTarget* per permettere all'utente di ripristinare il target della telecamera.  
+- *Scene.svelte* riceve il prop *target* per impostare la posizione della visualizzazione 3D.
 
 ==== *Stili e Layout*  
-- Il componente è avvolto in un `<div>` che imposta:  
-  - Posizione: relative  
-  - Dimensioni: height: 100vh e width: 100vw  
-  - Background: rgb(14, 22, 37) per creare un ambiente visivo immersivo che esalta gli elementi 3D.
+- Il layout è gestito tramite CSS, con il contenitore principale `<div>` che occupa tutta la finestra del browser e ha uno sfondo scuro (`rgb(14, 22, 37)`) per enfatizzare la scena 3D.  
+- La scena è renderizzata all'interno di un *Canvas*, e i pannelli di controllo sono disposti sopra di essa.
 
 ==== *Esempi di Utilizzo*  
 - Integrazione nell'applicazione:  
-  Il componente App.svelte viene utilizzato come punto di ingresso principale.  
+  Il componente *App.svelte* viene utilizzato come punto di ingresso, gestendo l'intera interfaccia utente e la scena 3D.
   ```svelte
   <script>
     import App from './App.svelte';
@@ -451,105 +577,114 @@ Il componente App.svelte è il punto di ingresso dell'applicazione e coordina il
   ```
 
 ==== *Dipendenze Esterne*  
-- *threlte/core*: fornisce il componente Canvas e le funzionalità per il rendering 3D integrando Three.js in Svelte.  
-- *lib/index.svelte*: contiene la funzione getData(), che restituisce i dati e le configurazioni computate necessarie per inizializzare lo stato del componente.  
-- Svelte State Management: utilizza state e derived per gestire lo stato reattivo e derivare i valori computati nel componente.
+- *threlte/core*: fornisce il componente *Canvas* per il rendering 3D e l'integrazione con *Three.js*.  
+- *lib/index.svelte*: contiene la funzione *createUtils()* per ottenere la configurazione di default e altre utilità.  
+- *Svelte reactivity*: utilizza il sistema reattivo di Svelte per gestire e sincronizzare le variabili come `target` e *utils*.
 
-=== Bar.svelte <bar.svelte>
+=== Bar.svelte <Bar.svelte>
 
 ==== *Descrizione*  
-Il componente Bar.svelte rappresenta una singola barra del grafico 3D. Esso visualizza un dato specifico mediante la sua altezza e il colore dinamico, rispondendo alle interazioni dell'utente (hover e click) per applicare filtri e gestire la selezione.
+Il componente *Bar.svelte* rappresenta una barra 3D interattiva all'interno della scena, la quale può essere selezionata e manipolata dall'utente. La barra è visualizzata con la sua altezza e posizione calcolata in base ai dati, ed è interattiva tramite il mouse, con funzionalità di selezione e di cambio dell'opacità al passaggio del puntatore. Viene anche visualizzato il valore dell'altezza sopra la barra.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente utilizza un elemento T.Mesh per creare il mesh della barra, basato su una BoxGeometry e un MeshStandardMaterial, che gestisce trasparenza e colorazione dinamica.  
-  - Un elemento Text, posizionato sopra la barra, mostra il valore numerico della barra.  
+  - Il componente utilizza il *Mesh* di *threlte/core* per la rappresentazione della barra 3D, con una *BoxGeometry* e un *MeshStandardMaterial* per il rendering visivo.  
+  - Il componente *Text* di *threlte/extras* è usato per visualizzare il valore numerico dell'altezza sopra la barra.  
+  - Gestisce l'interazione con il mouse tramite *Raycaster* per rilevare le barre e i testi selezionati.  
+  - Viene usato un *Tween* per animare l'effetto di hover (cambiamento di opacità al passaggio del mouse).
+
 - *Funzionalità:*  
-  - Calcola l'opacità della barra in base a condizioni di filtraggio: se l'altezza rientra nell'intervallo definito e rispetta i filtri (basati sulla media e sui filtri specifici per le barre), l'opacità è impostata a 1, altrimenti a 0.2.  
-  - Utilizza un raycaster per rilevare le interazioni del mouse e applica un effetto hover mediante un tween definito con durata ed easing personalizzati.  
-  - La funzione getBarColor determina il colore della barra in base alla selezione del criterio di colorazione (per righe, per colonne o in base al valore normalizzato).
+  - *Interattività*: al passaggio del mouse sulla barra, l'opacità cambia in base alla selezione. Quando l'utente clicca sulla barra, il filtro di selezione cambia a seconda che si tratti di un clic singolo o doppio.  
+  - *Hover e opacità*: la barra modifica l'opacità al passaggio del mouse, con un effetto di animazione morbido grazie all'uso di *Tween* e *cubicOut*.  
+  - *Selezione*: supporta la selezione singola e multipla delle barre, con un sistema di gestione dei filtri basato su *filter.selection*.  
+  - *Visualizzazione altezza barra*: il componente *Text* visualizza l'altezza della barra sopra di essa, mantenendo la posizione e l'orientamento corretti, anche quando la telecamera cambia angolo grazie all'utilizzo del quaternione della telecamera.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - *id*: identificatore univoco della barra, utilizzato per la gestione delle selezioni.  
-  - *coordinates*: posizione 3D della barra.  
-  - *height*: valore che determina l'altezza della barra.  
-  - *currentCameraQuaternionArray*: array che rappresenta l'orientamento corrente della camera, usato per orientare il testo.  
+  - *id*: identificativo unico per la barra.  
+  - *coordinates*: coordinate (x, y, z) che determinano la posizione della barra nella scena.  
+  - *height*: l'altezza della barra, che determina la dimensione della barra stessa e l'altezza visualizzata nel testo.  
+  - *currentCameraQuaternionArray*: quaternione della telecamera, utilizzato per mantenere l'orientamento del testo (che rappresenta l'altezza della barra).
+
 - *Variabili reattive:*  
-  - *utils*: derivata contenente dati calcolati tramite `getData().computed`.
-  - *inRange*: derivata che verifica se l'altezza rientra nei limiti definiti da `filter.rangeValue`.  
-  - *passesFilter*: calcola, in modo derivato, se la barra soddisfa ulteriori condizioni di filtro (in base a media e selezione).  
-  - *opacity*: impostata in modo derivato in base alla combinazione dei filtri `inRange` e `passesFilter`.  
-  - *mesh e text*: riferimenti allo stato dei componenti `T.Mesh` e `Text` per applicare gli effetti di interazione.
+  - *passesFilter*: variabile derivata che determina se la barra passa il filtro di selezione.  
+  - *opacity*: variabile che gestisce l'opacità della barra, che può cambiare in base al filtro di selezione e alle azioni dell'utente.  
+  - *mesh*: riferimento al *Mesh* della barra, utilizzato per gestire le interazioni di selezione.  
+  - *text*: riferimento al componente *Text* per l'altezza della barra, utile per la gestione delle interazioni col mouse.  
+  - *hover*: variabile animata che gestisce l'effetto hover tramite un tween per il cambiamento di opacità.
 
 ==== *Eventi e Comunicazione*  
-- Il componente gestisce eventi di pointer (movimento e uscita) per attivare o disattivare l'effetto hover, modificando il valore del tween hover.  
-- Gli eventi click, applicati sia al mesh della barra che al testo, invocano metodi di toggle o set sulla proprietà `filter.selection`, aggiornando lo stato di selezione.  
-- La comunicazione con il componente genitore avviene tramite il binding delle props essenziali (id, coordinates, height), mentre i filtri sono ora gestiti centralmente dal modulo `filter`.
+- *onpointermove*: al passaggio del mouse sulla barra, la funzione cambia il valore di opacità tramite il *Tween* per il passaggio da 0 a 1 (hover attivo) e viceversa quando il puntatore esce dalla barra.  
+- *onclick (Mesh)*: quando si clicca sulla barra, viene modificata la selezione in base al tipo di clic (singolo o doppio). Un clic singolo attiva il toggle della selezione, mentre un doppio clic imposta la selezione esclusiva per quella barra.  
+- *onclick (Text)*: quando si clicca sul testo che visualizza l'altezza della barra, viene invocata la funzione *handleTextClick* per gestire l'interazione con la barra e il filtro applicato.
 
 ==== *Stili e Layout*  
-- La posizione della barra è determinata dalle props coordinates e height, che definiscono il posizionamento 3D e la scala del mesh.  
-- Il componente Text è posizionato sopra la barra (offset in altezza) e ruotato in modo da garantire la leggibilità, in funzione dell'orientamento della camera.
+- La posizione della barra è determinata dalle *coordinates* passate come prop, mentre l'altezza della barra è configurata tramite la *scale* del *Mesh* (dimensione lungo l'asse y).  
+- L'effetto hover sulla barra è gestito tramite un'animazione che cambia l'opacità del materiale, creando un'animazione visiva fluida quando l'utente interagisce.  
+- Il testo dell'altezza della barra è centrato sopra la barra stessa, con un piccolo offset in y per renderlo visibile sopra la superficie.
 
 ==== *Esempi di Utilizzo*  
-- Il componente Bar.svelte viene utilizzato all'interno di un ciclo, dove per ogni elemento della matrice di dati viene creato un componente Bar.  
+- Integrazione nell'applicazione:  
+  Il componente *Bar.svelte* viene utilizzato per rappresentare le barre dati nella scena 3D. Ogni barra è interattiva e permette all'utente di selezionarla o visualizzarne l'altezza.  
   ```svelte
-	{#each data as row, rowIndex}
-		{#each row as height, colIndex}
-			<Bar
-				id={`${rowIndex}-${colIndex}`}
-				coordinates={[
-					rowIndex * spacing,
-					height / 2,
-					colIndex * spacing
-				]}
-				{height}
-				{currentCameraQuaternionArray}
-			/>
-		{/each}
-	{/each}
+  <script>
+    import Bar from './Bar.svelte';
+  </script>
+  
+  <Bar id="1" coordinates={[x, y, z]} height={barHeight} currentCameraQuaternionArray={cameraQuaternion} />
   ```
 
 ==== *Dipendenze Esterne*  
-- *threlte/core*: Fornisce il framework per la creazione degli elementi 3D, come T.Mesh, BoxGeometry e MeshStandardMaterial.  
-- *threlte/extras*: Offre il componente Text e le funzioni per abilitare l'interattività nella scena.  
-- *three*: Libreria base per la manipolazione degli oggetti 3D, utilizzata per Raycaster, Vector2 e per operazioni vettoriali.  
-- *svelte/motion* e *svelte/easing*: Utilizzate per creare animazioni fluide (tweening) per l'effetto hover.  
-- *three/tsl*: Fornisce, se necessario, funzioni aggiuntive per la gestione delle selezioni.
-- *lib/index.svelte*: modulo contenente `getData` e `filter`, che centralizza la gestione dei filtri applicati al grafico
+- *threlte/core*: fornisce il componente *Mesh* per il rendering della barra 3D e l'integrazione con Three.js.  
+- *threlte/extras*: fornisce il componente *Text* per la visualizzazione dell'altezza della barra e *interactivity* per gestire le interazioni con il mouse.  
+- *three*: utilizzato per il raycasting e la gestione delle geometrie e dei materiali nel rendering 3D.  
+- *svelte/motion*: utilizzato per gestire le animazioni (Tween) dell'opacità durante l'effetto hover.  
+- *lib/index.svelte*: contiene le funzioni di utilità come *passesBarFilter*, *getBarColor*, *isFirstIntersected*, e *handleTextClick*.
 
-=== BarPane.svelte <barPane.svelte>
+=== BarPane.svelte <BarPane.svelte>
 
 ==== *Descrizione*  
-Il componente BarPane.svelte gestisce il filtro di selezione per le barre del grafico 3D. Se l'opzione di visualizzazione del filtro è attiva, viene mostrato un pannello fisso che contiene quattro pulsanti, ciascuno dei quali imposta un criterio di filtro diverso per le barre (solo la barra selezionata, barre con valori maggiori, barre con valori minori, o reset del filtro).
+Il componente *BarPane.svelte* è un pannello di controllo dedicato alla gestione e al filtraggio delle barre presenti nella scena 3D. Fornisce informazioni di dettaglio sulla barra selezionata e strumenti interattivi per applicare filtri basati sui valori delle barre. Il pannello consente inoltre di resettare le selezioni e di nascondere il filtro visivo, migliorando l’esperienza utente nell’analisi dei dati visualizzati.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente importa i componenti Pane e Button dalla libreria *svelte-tweakpane-ui*.  
-  - Utilizza un controllo condizionale per rendere il pannello solo se la proprietà filter.displayBarFilter è attiva.  
-  - All'interno del pannello vengono resi quattro pulsanti, ognuno con una specifica etichetta e azione associata.  
+  - Il componente utilizza i componenti forniti dalla libreria *svelte-tweakpane-ui* per creare un’interfaccia utente modulare e intuitiva.  
+  - La struttura è organizzata in un elemento *Pane* che funge da contenitore principale, con al suo interno due *Folder*: uno per le informazioni della barra selezionata e uno per gli strumenti di filtraggio.  
+  - Viene utilizzata una condizione `{#if filter.displayBarFilter}` per mostrare o nascondere il pannello di filtro in base alle impostazioni correnti.  
+  - Gli elementi interni includono componenti *Text* per la visualizzazione dei dati, *Button* per attivare azioni, *Slider* per regolare l’opacità e *Checkbox* per abilitare/disabilitare la visualizzazione di piani medi per righe e colonne.
+
 - *Funzionalità:*  
-  - Ogni pulsante, tramite l'evento on:click, modifica direttamente il valore di filter.barFilterSelection, impostando il criterio di filtraggio per le barre del grafico.  
-  - Il pulsante "Filter reset" ripristina il filtro annullando ogni criterio precedentemente applicato.
+  - Visualizza informazioni dettagliate della barra selezionata, come riga, colonna, altezza e valori medi calcolati.  
+  - Permette di applicare filtri alle barre tramite pulsanti che selezionano barre con valori specifici (solo barre selezionate, valori superiori o inferiori all'ultima barra selezionata, oppure resettare il filtro).  
+  - Consente di modificare l’opacità delle barre selezionate mediante uno slider.  
+  - Include pulsanti per resettare la selezione e per chiudere il pannello di controllo.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - Il componente utilizza l'oggetto filter importato da lib/index.svelte, che contiene le impostazioni per il filtraggio delle barre.  
+  - Il componente non riceve props direttamente tramite parametri, ma utilizza funzioni e variabili derivate importate da `$lib/index.svelte` per gestire lo stato e la logica delle barre.  
+
 - *Variabili reattive:*  
-  - *filter.displayBarFilter*: determina se il pannello di filtro deve essere visualizzato.  
-  - *filter.barFilterSelection*: viene aggiornato in base al pulsante cliccato e controlla il criterio di filtro applicato al grafico.
+  - *selectedBarInfo*: variabile derivata che contiene le informazioni della barra attualmente selezionata.  
+  - *data*: variabile derivata che raccoglie i dati da `fetchedData.values`.  
+  - *utils*: variabile derivata ottenuta da `createUtils()`, utile per calcolare valori medi e altre statistiche globali.
 
 ==== *Eventi e Comunicazione*  
-- Il componente gestisce gli eventi on:click per ciascun pulsante, aggiornando il valore di filter.barFilterSelection.  
-- Queste modifiche vengono propagate al sistema, in modo che il grafico 3D si aggiorni dinamicamente in base al filtro selezionato.
+- Il componente comunica con il resto dell’applicazione attraverso l’utilizzo di funzioni importate che aggiornano lo stato globale:  
+  - I pulsanti all’interno dei folder invocano funzioni per impostare il filtro sulle barre (`setBarFilterSelection`), resettare la selezione (`resetBarSelection`) e chiudere il pannello (`hideBarFilterPane`).  
+  - I componenti *Slider* e *Checkbox* sono legati a variabili globali (ad esempio, `filter.selectedOpacity`, `filter.showRowAvgPlane`, e `filter.showColAvgPlane`) che aggiornano in tempo reale l’aspetto della scena 3D.
 
 ==== *Stili e Layout*  
-- Il pannello è posizionato in maniera fissa (position fixed) con coordinate specifiche (y = 210, x = 120), garantendo che rimanga visibile nell'interfaccia utente.  
-- I pulsanti ereditano gli stili predefiniti della libreria *svelte-tweakpane-ui*, assicurando un aspetto coerente con il resto dell'interfaccia.
+- Il pannello viene posizionato in modo fisso sullo schermo (position “fixed”) con coordinate specifiche, garantendo una visibilità costante durante l’interazione con la scena 3D.  
+- La struttura a folder consente di organizzare in maniera chiara le informazioni e i controlli, suddividendo il pannello in sezioni distinte per le informazioni e per il filtro.
 
 ==== *Esempi di Utilizzo*  
-- Il componente BarPane.svelte viene renderizzato condizionatamente nel layout principale dell'applicazione quando il filtro delle barre è attivo.  
+- Integrazione nell'applicazione:  
+  Il componente *BarPane.svelte* viene utilizzato per mostrare il pannello di filtraggio quando il flag `filter.displayBarFilter` è attivo.  
   ```svelte
+  <script>
+    import BarPane from './BarPane.svelte';
+  </script>
+
 <div>
 	<Canvas>
 		<BarPane />
@@ -558,303 +693,403 @@ Il componente BarPane.svelte gestisce il filtro di selezione per le barre del gr
   ```
 
 ==== *Dipendenze Esterne*  
-- *svelte-tweakpane-ui*: Fornisce i componenti Pane e Button, essenziali per la creazione dell'interfaccia di filtro.  
-- *lib/index.svelte*: Fornisce l'oggetto filter, che contiene le impostazioni e i metodi per la gestione dei filtri e delle selezioni.
+- *svelte-tweakpane-ui*: fornisce i componenti per costruire l’interfaccia utente, inclusi *Pane*, *Button*, *Text*, *Separator*, *Folder*, *Slider* e *Checkbox*.  
+- *lib/index.svelte*: contiene le funzioni e variabili che gestiscono il filtraggio, il recupero dei dati e la creazione delle utilità necessarie per il funzionamento del pannello.  
+- *Svelte reactivity*: il componente sfrutta i sistemi di variabili derivate e state management di Svelte per aggiornare in tempo reale i valori mostrati e l’interazione con l’utente.
 
-=== CameraSettings.svelte <cameraSettings.svelte>
+=== CameraSettings.svelte <CameraSettings.svelte>
 
 ==== *Descrizione*  
-Il componente CameraSettings.svelte fornisce i controlli per regolare la posizione della camera nella scena 3D. Permette all'utente di effettuare lo zoom in, lo zoom out e di resettare la posizione della camera alla configurazione predefinita, influenzando direttamente la visualizzazione dell'ambiente 3D.
+Il componente *CameraSettings.svelte* fornisce un'interfaccia utente per la gestione della telecamera all'interno dell'applicazione 3D. Consente agli utenti di resettare la posizione della camera e di controllarne lo zoom, garantendo una visione ottimale della scena 3D.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente importa il Button dalla libreria *svelte-tweakpane-ui* e utilizza il hook useThrelte per accedere al riferimento della camera.  
-  - Utilizza una variabile zoomValue e una costante zoomStep per controllare l'incremento o il decremento dello zoom.  
-  - Le funzioni zoomIn() e zoomOut() aggiornano zoomValue e richiamano updateCamera() per modificare la posizione della camera lungo la sua direzione attuale.  
-  - La funzione resetPosition() ripristina la posizione della camera al valore default ottenuto da utils.defaultPosition e invoca la funzione resetTarget() passata tramite props.
+  - Il componente sfrutta il framework *Threlte* per accedere agli elementi della scena 3D, in particolare la camera.  
+  - Sono presenti tre pulsanti, ciascuno implementato tramite il componente *Button* della libreria *svelte-tweakpane-ui*.  
 - *Funzionalità:*  
-  - *Zoom In*: diminuisce zoomValue e sposta la camera in avanti lungo la sua direzione corrente.  
-  - *Zoom Out*: aumenta zoomValue e sposta la camera indietro lungo la stessa direzione.  
-  - *Reset*: ripristina la posizione della camera e aggiorna il target della visualizzazione.
+  - Il primo pulsante permette il reset della posizione della camera, invocando la funzione `resetCamera` dalla utility `cameraUtils` e ricevendo il nuovo target tramite prop.  
+  - Il secondo e il terzo pulsante gestiscono, rispettivamente, l'azione di zoom in e zoom out, chiamando le funzioni `zoomIn` e `zoomOut` di `cameraUtils`.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - *resetTarget*: funzione passata tramite props per ripristinare il target della camera.  
+  - *resetTarget*: valore passato al componente per reimpostare il target della telecamera.  
 - *Variabili reattive:*  
-  - *utils*: variabile derivata che contiene i valori computati ottenuti da getData().computed, inclusa la posizione default della camera.  
-  - *zoomValue*: stato numerico che controlla il livello di zoom corrente.  
-  - *zoomStep*: costante che definisce l'incremento/decremento per ogni operazione di zoom.
+  - Non sono presenti variabili reattive interne, se non l'utilizzo diretto dei metodi forniti dalle librerie esterne per gestire la camera.
 
 ==== *Eventi e Comunicazione*  
-- Il componente gestisce gli eventi on:click sui pulsanti:  
-  - Il pulsante "Zoom In" invoca la funzione zoomIn(), spostando la camera in avanti.  
-  - Il pulsante "Zoom Out" invoca la funzione zoomOut(), spostando la camera indietro.  
-  - Il pulsante "Resetta" invoca resetPosition(), ripristinando la posizione della camera al valore di default e aggiornando il target.
-- La comunicazione con il componente genitore avviene tramite la funzione resetTarget() e il binding dello stato della camera, garantendo un aggiornamento dinamico della visualizzazione.
+- Gli eventi di click sui pulsanti attivano le funzioni di controllo della telecamera:  
+  - *Reset*: invoca `cameraUtils.resetCamera(camera, resetTarget)` per resettare la posizione della camera.  
+  - *Zoom In*: invoca `cameraUtils.zoomIn(camera)` per avvicinare la visualizzazione.  
+  - *Zoom Out*: invoca `cameraUtils.zoomOut(camera)` per allontanare la visualizzazione.
 
 ==== *Stili e Layout*  
-- Il componente utilizza i pulsanti forniti da *svelte-tweakpane-ui*, che mantengono uno stile coerente con il resto dell'interfaccia.  
-- Non sono specificati ulteriori stili custom; lo styling è gestito dalla libreria e dal tema globale dell'applicazione.
+- Il componente si basa sui controlli forniti da *svelte-tweakpane-ui*, garantendo uno stile coerente con il resto dell'interfaccia utente.  
+- I pulsanti sono disposti in sequenza e progettati per essere facilmente accessibili, ottimizzando l'interazione con l'utente.
 
 ==== *Esempi di Utilizzo*  
-- Integrazione in un pannello di controllo:  
-  Il componente viene inserito all'interno di un pannello di impostazioni (ad es. in SettingsPane.svelte) per consentire agli utenti di regolare la posizione della camera.  
+- Integrazione nell'applicazione:  
+  Il componente *CameraSettings.svelte* viene utilizzato per fornire controlli rapidi per la gestione della telecamera nella UI dell'applicazione 3D.  
   ```svelte
-<TabPage title="Camera options">
-			<CameraSettings {resetTarget} />
-</TabPage>
+  <script>
+    import CameraSettings from './CameraSettings.svelte';
+  </script>
+  
+<div>
+	<Canvas>
+		<SettingsPane {resetTarget} />
+		<BarPane />
+	</Canvas>
+</div>
   ```
-- Questo esempio mostra come il componente permetta di controllare lo zoom e di ripristinare la vista della scena 3D.
 
-==== *Dipendenze Estere*  
-- *threlte/core:* Fornisce il hook useThrelte e il contesto necessario per accedere alla camera e agli altri elementi della scena 3D.  
-- *svelte-tweakpane-ui:* Fornisce i componenti Button per la creazione dei controlli dell'interfaccia.  
-- *three:* Utilizzato per la gestione di vettori nello spazio 3D (Vector3) e per operazioni geometriche sulla posizione della camera.  
-- *lib/index.svelte:* (indiretto) Fornisce la funzione getData() per ottenere le configurazioni computate necessarie per inizializzare il valore default della camera.
+==== *Dipendenze Esterne*  
+- *threlte/core*: utilizzato per accedere al contesto della scena 3D e ottenere il riferimento alla camera.  
+- *svelte-tweakpane-ui*: fornisce i componenti UI come *Button* per i controlli interattivi.  
+- *lib/index.svelte*: contiene la utility `cameraUtils`, che espone le funzioni `resetCamera`, `zoomIn` e `zoomOut` per la gestione della telecamera.
 
-=== Chart.svelte <chart.svelte>
+=== Chart.svelte <Chart.svelte>
 
 ==== *Descrizione*  
-Il componente Chart.svelte è responsabile del rendering della visualizzazione 3D del grafico. Esso gestisce la costruzione della scena, inclusa la griglia di fondo, il piano medio (quando abilitato), le etichette per righe e colonne e la generazione dinamica delle barre 3D tramite il componente Bar.svelte. Il componente aggiorna inoltre in tempo reale l'orientamento della camera per garantire che le etichette siano sempre leggibili.
+Il componente *Chart.svelte* si occupa di costruire e gestire la visualizzazione 3D dei dati mediante l'integrazione di grafici a barre e piani di riferimento. Coordina la disposizione di elementi quali la griglia, i piani medi (globali, per riga e per colonna), le etichette degli assi e le barre 3D, assicurando un'aggiornamento continuo della visualizzazione in base allo stato della telecamera.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  - Il componente si struttura all'interno di un elemento T.Group, che raggruppa tutti gli elementi 3D della scena.  
-  - Viene renderizzata una Mesh che funge da griglia di fondo, creata con PlaneGeometry e MeshStandardMaterial, posizionata centralmente in base al numero di righe, colonne e allo spacing.  
-  - Se il flag `filter.avgEnabled` è attivo, viene renderizzato un piano medio (Mesh) posizionato a livello della media dei dati, con un materiale semitrasparente.  
-  - Le etichette delle righe e delle colonne vengono generate utilizzando il componente Text, posizionato e ruotato per garantire la leggibilità nell'ambiente 3D.  
-  - Infine, il componente itera sui dati per creare, per ogni elemento della matrice, un componente Bar.svelte che visualizza la barra corrispondente.
+  - Il componente è racchiuso in un gruppo (*T.Group*) che contiene tutti gli elementi 3D della scena.  
+  - Include uno *T.Mesh* che rappresenta la griglia di base, calcolata in base al numero di righe e colonne, con un *PlaneGeometry* e un materiale di tipo *MeshBasicMaterial*.  
+  - Mostra opzionalmente piani medi:
+    - Un piano medio globale, se abilitato, realizzato con *T.Mesh* che usa *PlaneGeometry* e *MeshBasicMaterial*.  
+    - Un piano medio per la riga selezionata, se abilitato, che evidenzia i dati medi relativi ad una specifica riga, con *T.MeshStandardMaterial* in tonalità rosata.  
+    - Un piano medio per la colonna selezionata, se abilitato, evidenziato con un materiale di colore blu chiaro.  
+  - Visualizza etichette per righe e colonne utilizzando il componente *Text* di *threlte/extras*, posizionate con un offset per indicare chiaramente i nomi degli assi.  
+  - Crea la visualizzazione delle barre 3D iterando su una struttura dati bidimensionale e istanziando il componente *Bar.svelte* per ciascuna barra.
+
 - *Funzionalità:*  
-  - Calcola dinamicamente le dimensioni della griglia (rows, cols) e normalizza i valori dei dati per definire l'altezza delle barre.  
-  - Utilizza la funzione `truncateText` per abbreviare le etichette se troppo lunghe.  
-  - Aggiorna in modo reattivo i dati, i valori computati (`utils`), lo spacing e il target della scena, basandosi sui dati ottenuti tramite `getData()`.  
-  - Monitora lo stato di `filter.displayBarFilter` aggiornando in base allo stato della selezione.
+  - Recupera e gestisce dati e configurazioni tramite variabili derivate: dati da `fetchedData.values`, etichette da `fetchedData.xLabels` e `fetchedData.zLabels`, e configurazioni di layout e spazio da `filter` e `createUtils()`.  
+  - Aggiorna in tempo reale l'orientamento della telecamera memorizzando il quaternione corrente in `currentCameraQuaternionArray`, sfruttando un ciclo di animazione basato su `requestAnimationFrame`.  
+  - Mostra o nasconde componenti (come i piani medi) in base alle impostazioni dei filtri e alle selezioni correnti.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - Nessuna props per i filtri, in quanto ora vengono gestiti direttamente tramite `filter`.  
+  - Il componente non riceve props esterni direttamente, ma si basa sulle variabili derivate e sugli store importati per gestire lo stato globale.  
+
 - *Variabili reattive:*  
-  - *dt* derivato da `getData()`, contiene i dati grezzi e i valori computati.
-  - *data*: matrice dei dati numerici, usata per definire le altezze e il posizionamento delle barre.
-  - *utils*: derivata dai dati computati tramite `getData()`, contiene informazioni come la media e le dimensioni della griglia. 
-  - *spacing*: valore derivato da `filter.spacing` che determina la distanza tra le barre.
-  - *rows e cols*: ottenuti da utils e rappresentano il numero di righe e colonne della matrice data.  
-  - *currentCameraQuaternionArray*: array che conserva l'orientamento corrente della camera, aggiornato continuamente per sincronizzare le etichette.
+  - *currentCameraQuaternionArray*: array che memorizza l'orientamento corrente della telecamera, aggiornato in continuo tramite animazione.  
+  - *data*: dati bidimensionali derivati da `fetchedData.values` che definiscono le altezze delle barre.  
+  - *utils*: oggetto derivato da `createUtils()` per la gestione di configurazioni e calcoli medi (come il valore medio globale, per riga e per colonna).  
+  - *xLabels* e *zLabels*: etichette per gli assi X e Z, rispettivamente, derivate da `fetchedData`.  
+  - *rows* e *cols*: numero di righe e colonne, utili per il calcolo delle dimensioni della griglia.  
+  - *spacing*: distanza fra gli elementi della griglia, derivato dalla configurazione del filtro.  
+  - *selectedBarInfo*: informazioni relative alla barra selezionata, utili per evidenziare e calcolare i piani medi relativi a riga e colonna.
 
 ==== *Eventi e Comunicazione*  
-- Il componente utilizza `onMount` per avviare un ciclo di aggiornamento che cattura l'orientamento della camera (quaternion) in tempo reale, utilizzando `requestAnimationFrame`.  
-- Su `onDestroy`, l'animazione viene interrotta per liberare le risorse.  
-- Le variabili reattive vengono propagate ai componenti figli, in particolare a Bar.svelte, per sincronizzare la visualizzazione delle barre.
+- Il componente sfrutta i lifecycle methods di Svelte:  
+  - *onMount*: inizializza un ciclo di animazione per aggiornare continuamente la variabile `currentCameraQuaternionArray` in base al quaternione della telecamera.  
+  - *onDestroy*: cancella il ciclo di animazione per evitare memory leak quando il componente viene rimosso.  
+- La comunicazione con altri componenti avviene mediante:
+  - L'importazione e l'utilizzo di funzioni e variabili dallo store globale (`filter`, `fetchedData`, `createUtils`, ecc.), che permettono a *Chart.svelte* di sincronizzarsi con le interazioni utente gestite da altri componenti come *Bar.svelte*.
 
 ==== *Stili e Layout*  
-- Gli elementi 3D sono organizzati all'interno di T.Group per mantenere una struttura gerarchica chiara della scena.  
-- La griglia (Mesh con PlaneGeometry) e il piano medio sono centrati in base a rows, cols e spacing, garantendo un layout bilanciato.  
-- Le etichette (Text) sono posizionate e ruotate in modo da essere sempre leggibili, indipendentemente dall'orientamento della camera.
+- Il layout 3D è definito principalmente tramite le proprietà di posizione e rotazione:
+  - La griglia e i piani sono posizionati e orientati per ricreare una rappresentazione spaziale ordinata dei dati.  
+  - Gli offset per le etichette e i piani medi sono calcolati in relazione alle dimensioni della griglia (rows, cols e spacing), garantendo una disposizione coerente e centrata.  
+  - L’uso di materiali trasparenti e colori differenti permette di evidenziare le differenze tra gli elementi (ad esempio, il piano medio della riga con una tonalità rossastra e quello della colonna con una tonalità bluastra).
 
 ==== *Esempi di Utilizzo*  
-- Il componente Chart.svelte viene solitamente integrato all'interno della scena principale dell'applicazione per visualizzare il grafico 3D.  
+- Integrazione nell'applicazione:  
+  Il componente *Chart.svelte* viene importato e utilizzato per visualizzare l’intera scena 3D, integrando le barre, la griglia e le etichette.  
   ```svelte
-<Chart />
-  ```  
+  <script>
+    import Chart from './Chart.svelte';
+  </script>
   
-==== *Dipendenze Esterne*  
-- *threlte/core:*  
-  - Fornisce il framework per il rendering 3D, compreso il componente T.Group e altri elementi base come Mesh e PlaneGeometry.
-- *threlte/extras:*  
-  - Offre il componente Text per la creazione di etichette 3D e funzioni per l'interattività.  
-- *three:*  
-  - Libreria fondamentale per la manipolazione degli oggetti 3D, utilizzata per operazioni come il calcolo delle dimensioni della griglia e per il raycasting.  
-- *svelte:*  
-  - Gestisce il ciclo di vita del componente tramite `onMount` e `onDestroy`, e supporta la reattività attraverso state, derived ed effect.  
-- *lib/index.svelte:*  
-  - Fornisce la funzione `getData()` e l'oggetto `filter`, che contengono i dati, le configurazioni computate e le impostazioni di filtraggio per la scena.
+  <Chart />
+  ```
 
-=== Color.svelte <color.svelte>
+==== *Dipendenze Esterne*  
+- *threlte/core*: fornisce il supporto per il rendering 3D e l’accesso agli elementi della scena, come la telecamera e i gruppi di oggetti.  
+- *threlte/extras*: utilizza il componente *Text* per la visualizzazione delle etichette.  
+- *Three.js*: impiegata per le operazioni matematiche e la definizione delle geometrie (es. *Vector3* e le trasformazioni relative a *Mesh*).  
+- *Svelte*: sfrutta i lifecycle hooks (`onMount`, `onDestroy`) e il sistema reattivo per aggiornare in tempo reale le proprietà della scena.  
+- *lib/index.svelte*: fornisce gli store e le utility necessarie per la gestione dei dati, dei filtri e del layout della scena, inclusa la funzione `createUtils()` e lo store `fetchedData`.
+
+=== Color.svelte <Color.svelte>
+
 ==== *Descrizione*  
-Il componente *Color.svelte* fornisce un'interfaccia per la selezione del criterio di colorazione utilizzato nella visualizzazione 3D. Utilizza un controllo List della libreria *svelte-tweakpane-ui* per offrire opzioni predefinite come colorazione per righe, colonne o valori. Il valore selezionato è ora gestito tramite l'oggetto filter importato da `$lib/index.svelte`.
+Il componente *Color.svelte* offre un'interfaccia di selezione per il tipo di colore, utilizzando il componente *List* fornito dalla libreria *svelte-tweakpane-ui*. Il componente permette all'utente di scegliere tra differenti opzioni, aggiornando lo stato globale relativo alla selezione del colore.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  -  Il componente importa e utilizza il componente `List` da *svelte-tweakpane-ui*, che fornisce un'interfaccia utente sotto forma di un menu a tendina per la selezione di un'opzione.
-  - L'opzione selezionata è collegata a `filter.colorSelection`, che gestisce lo stato centralizzato del filtro.
-  - L'oggetto `options` definisce le modalità di selezione disponibili per la colorazione.
+  - Il file importa il componente *List* e il tipo *ListOptions* da *svelte-tweakpane-ui*.  
+  - Viene definito un oggetto `options` che specifica le proprietà della lista (numero di colonne, righe e valori).  
+  - Il componente espone il controllo *List* che viene renderizzato con un'etichetta "Color type" e le opzioni definite.  
 
 - *Funzionalità:*  
-  - Ogni volta che l'utente cambia la selezione nel menu, il valore di `colorSelection` si aggiorna automaticamente grazie al binding bidirezionale, riflettendo la scelta dell'utente.
-  - Il valore selezionato viene visualizzato in tempo reale all'interno di un elemento `<pre>`, che permette di visualizzare il numero corrispondente all'opzione scelta, fornendo un feedback immediato all'utente.
+  - Permette di selezionare un valore da una lista numerica, rappresentante il tipo di colore.  
+  - La selezione effettuata viene collegata direttamente alla proprietà `filter.colorSelection` dello store globale, assicurando che la scelta dell'utente venga propagata all'intera applicazione.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - *filter.colorSelection:* ora il valore selezionato è gestito attraverso l'oggetto filter importato, invece che come prop indipendente..
-  
+  - Il componente non riceve props esterne, ma utilizza il binding per collegare lo stato del componente ad una variabile globale (`filter.colorSelection`).
+
 - *Variabili reattive:*  
-  - *options:* oggetto che contiene le possibili scelte per la modalità di colorazione.
+  - *options*: oggetto che definisce la configurazione della lista (1 colonna, 2 righe, 3 valori disponibili).  
+  - *filter.colorSelection*: variabile dello store globale, legata al valore selezionato dall'utente tramite il componente *List*.
 
 ==== *Eventi e Comunicazione*  
-- L'uso di bind:value={filter.colorSelection} permette al componente di aggiornare direttamente lo stato del filtro colore all'interno di `$lib/index.svelte`.
-- Il valore selezionato viene immediatamente riflesso nella UI e nello stato centralizzato.
+- Il componente utilizza il binding bidirezionale (`bind:value`) sul componente *List* per aggiornare in tempo reale lo stato globale `filter.colorSelection` quando l'utente effettua una selezione.  
+- Non sono definiti eventi custom, poiché la comunicazione avviene direttamente tramite il meccanismo di binding reattivo di Svelte.
 
 ==== *Stili e Layout*  
-- Il componente non definisce stili personalizzati, poiché si affida alla libreria *svelte-tweakpane-ui* per la gestione dell'interfaccia utente.
-
+- Il layout è gestito internamente dal componente *List* della libreria *svelte-tweakpane-ui*, che assicura una presentazione coerente ed integrata con il resto dell'interfaccia utente.  
+- La configurazione delle opzioni (colonne, righe, valori) permette di personalizzare la colorazione in base agli elementi nella lista.
 
 ==== *Esempi di Utilizzo*  
-
-*Esempio di integrazione:*  
-```svelte
-<TabPage title="Color filter">
+- Integrazione nell'applicazione:  
+  Il componente *Color.svelte* viene usato per permettere agli utenti di impostare il tipo di colore preferito per il filtraggio o la visualizzazione, aggiornando automaticamente lo stato globale.
+  ```svelte
+  <script>
+    import Color from './Color.svelte';
+  </script>
+  
+<Pane title="Settings" position="fixed">
+	<TabGroup>
+		<TabPage title="Color">
 			<Color />
-</TabPage>
-```  
-Nell'esempio il componente è incluso come una delle schede (TabPage) all'interno del pannello delle impostazioni, e permette di modificare il tipo di colore utilizzato nell'applicazione.
+		</TabPage>
+	</TabGroup>
+</Pane>
+  ```
 
 ==== *Dipendenze Esterne*  
-- *svelte-tweakpane-ui:* fornisce il componente List per la selezione delle opzioni in modo strutturato e interattivo.
-- *lib/index.svelte*: fornisce la gestione centralizzata dello stato del filtro colore.
+- *svelte-tweakpane-ui*: fornisce il componente *List* e il tipo *ListOptions*, utilizzati per creare l'interfaccia di selezione.  
+- *lib/index.svelte*: contiene lo store `filter` che include la variabile `colorSelection` per la gestione della scelta del colore nell'applicazione.
 
-=== DataFilter.svelte <datafilter.svelte>
-==== Descrizione 
-Il componente *DataFilter.svelte* permette di filtrare i dati in base a intervalli specifici e valori relativi alla media. Gestisce un intervallo visibile di dati e consente all'utente di filtrare i valori inferiori o superiori alla media globale e include un'opzione per visualizzare il piano della media.
+=== DataSource.svelte <DataSource.svelte>
 
-==== *Struttura e Funzionalità*  
-- *Struttura:*  
-  - Utilizza un `IntervalSlider` per consentire la selezione di un intervallo di valori da visualizzare. 
-  - Fornisce un `Checkbox` per attivare o disattivare la visualizzazione del piano della media.
-  - Fornisce tre `Button`:
-   - Uno per filtrare i *valori inferiori alla media*.
-   - Uno per filtrare i *valori superiori alla media*.
-   - Uno per *resettare* il filtro e riportare i valori all'intervallo completo.
-
-- *Funzionalità:*  
-  - I valori minimi e massimi dell'intervallo vengono ottenuti dinamicamente tramite la funzione `getData().computed` e assegnati a `filter.rangeValue`.
-  - Il `Checkbox` consente di attivare o disattivare la visualizzazione del piano della media attraverso la variabile `filter.avgEnabled`.
-  -  La variabile `value` controlla l'intervallo visualizzato.
-  - I pulsanti modificano il valore di `filter.avgFilter`, che definisce i valori da visualizzare in base alla media globale. 
-  - Il reset del filtro riporta i valori di `filter.rangeValue` ai limiti minimi e massimi calcolati dinamicamente.
-
-==== *Props e Variabili Reattive*  
-- *Props:*  
-  - *filter.rangeValue*: oggetto che contiene i valori minimo e massimo per l'intervallo di visualizzazione, aggiornato dinamicamente in base ai dati.
-  - *filter.avgFilter*: variabile che memorizza il tipo di filtro applicato (0 = nessun filtro, 1 = sotto media, 2 = sopra media).
-  - *filter.avgEnabled*: booleano che abilita/disabilita la visualizzazione del piano della media.
-  
-- *Variabili reattive:*  
-  - *utils:* contiene i dati calcolati dinamicamente tramite `getData().computed`.
-
-==== *Eventi e Comunicazione*  
-- Il `Checkbox` modifica il valore di `filter.avgEnabled`, permettendo di attivare/disattivare la visualizzazione del piano della media.
-- I Button aggiornano `filter.avgFilter` per applicare i filtri o resettare l'intervallo.
-- L'intervallo di valori può essere modificato tramite il `IntervalSlider`, con il valore legato reattivamente a `filter.rangeValue`.
-
-==== *Stili e Layout*  
-- Non sono specificati stili personalizzati. Viene utilizzato *svelte-tweakpane-ui* per il layout e l'interfaccia utente del filtro e dei pulsanti.
-
-==== *Esempi di Utilizzo*  
-*Esempio di integrazione:*  
-```svelte
-<TabPage title="Data filter">
-			<DataFilter />
-</TabPage>
-```  
-Nell'esempio il componente *DataFilter* viene utilizzato in una TabPage all'interno di un'interfaccia a schede (Tab Group), permettendo la gestione dei filtri dei dati nell'applicazione.
-
-==== *Dipendenze Esterne*  
-- *svelte-tweakpane-ui:* non sono specificati stili personalizzati. Viene utilizzato *svelte-tweakpane-ui* che fornisce i componenti `IntervalSlider`, `Checkbox` e `Button` per la selezione e gestione dei filtri.
-- *lib/index.svelte*: fornisce la gestione dei dati e delle variabili di filtro tramite `filter` e `getData().computed`.
-
-=== Scene.svelte <scene.svelte>
 ==== *Descrizione*  
-Il componente *Scene.svelte* è responsabile per la visualizzazione della scena 3D, includendo la gestione della fotocamera, delle luci, e della rappresentazione grafica dei dati attraverso il componente *Chart*. Permette l'interazione tramite controlli di orbita e visualizza i dati in un contesto 3D dinamico.
+Il componente *DataSource.svelte* gestisce il recupero e l'upload dei dati da diverse origini, interagendo con API esterne e un database interno. Inoltre, integra funzionalità per il reset della telecamera, garantendo che la vista 3D si adatti in modo appropriato dopo ogni operazione di caricamento o invio file.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  -  *Camera e controlli:* 
-   - Utilizzo di una `PerspectiveCamera` per visualizzare la scena 3D da una posizione predefinita.
-   - `OrbitControls` per abilitare l'interazione dell'utente con la scena, includendo il damping e la rotazione automatica.
-   - `Gizmo` per visualizzare gli assi e migliorare la comprensione spaziale della scena.
-  - *Luci:* due luci direzionali e una luce ambientale, per creare un'illuminazione dinamica e realistica nella scena.
-  - *Componente grafico:* `Chart` è il componente visualizza i dati in un grafico 3D, permettendo l'interazione.
+  - Il componente importa e utilizza vari controlli dalla libreria *svelte-tweakpane-ui*, come *Button* e *File*, per fornire un'interfaccia utente interattiva.  
+  - Viene utilizzato *useThrelte* per ottenere il riferimento alla camera dalla scena 3D, permettendo l'integrazione con le funzionalità di reset della visualizzazione.  
+  - Il componente riceve il prop *resetTarget* per riapplicare la configurazione di default della telecamera.  
+  - La gestione dello stato per il file da inviare è realizzata attraverso una variabile reattiva, *file*, definita come *FileValue*.
 
 - *Funzionalità:*  
-  - La fotocamera `PerspectiveCamera` viene utilizzata per configurare la visualizzazione della scena da un'angolazione iniziale predefinita, con la possibilità di manipolare la scena grazie agli `OrbitControls`.
-  - `OrbitControls` permette di interagire con la scena tramite il mouse, consentendo operazioni come zoom, panoramica e rotazione.
-  - Il `Gizmo` fornisce una rappresentazione visiva degli assi XYZ, migliorando l'interazione e la comprensione della scena da parte dell'utente.
+  - Il pulsante "Select API" invoca la funzione *fetchExternal()* per recuperare dati da un'API esterna e successivamente resetta la telecamera tramite *cameraUtils.resetCamera()*.  
+  - Il pulsante "Slect DB1" consente di ottenere dati dal database interno chiamando *fetchDb()*, seguito dal reset della telecamera per sincronizzare la visualizzazione.  
+  - Un controllo *File* permette all'utente di selezionare un file, mentre il pulsante "Select CSV" invia il file selezionato al server tramite la funzione *uploadFile()*.
+
+#pb()
+  
+==== *Props e Variabili Reattive*  
+- *Props:*  
+  - *resetTarget*: viene passato al componente per definire il target di reset della telecamera, essenziale per il corretto riposizionamento della visualizzazione 3D.
+
+- *Variabili reattive:*  
+  - *file*: variabile di stato tipizzata come *FileValue*, inizialmente non definita, che memorizza il file selezionato dall'utente per l'upload tramite interfaccia.
+
+==== *Eventi e Comunicazione*  
+- Il componente comunica con il resto dell'applicazione attraverso:
+  - *Eventi click*: i pulsanti "External API" e "DB1" attivano, rispettivamente, le funzioni *fetchExternal()* e *fetchDb()*, seguite dall'invocazione del reset della telecamera tramite *cameraUtils.resetCamera(camera, resetTarget)*.  
+  - *File Binding*: il controllo *File* utilizza il binding bidirezionale per collegare il valore selezionato alla variabile *file*, consentendo successivamente il caricamento del file tramite il pulsante "Send file CSV".
+    
+==== *Stili e Layout*  
+- Il layout del componente è gestito tramite i controlli forniti da *svelte-tweakpane-ui*, garantendo un'interfaccia pulita e coerente.  
+- I pulsanti sono distribuiti per offrire scelte chiare all'utente, mentre il controllo per la selezione del file permette una facile navigazione e caricamento dei dati.
+
+==== *Esempi di Utilizzo*  
+- Integrazione nell'applicazione:  
+  Il componente *DataSource.svelte* viene utilizzato per selezionare la fonte dati desiderata (API esterna, DB interno o file CSV), e per assicurare che la telecamera si resetti in seguito a tali operazioni.  
+  ```svelte
+  <script>
+    import DataSource from './DataSource.svelte';
+  </script>
+  
+ <Pane title="Settings" position="fixed">
+	<TabGroup>
+		<TabPage title="Source">
+			<DataSource {resetTarget} />
+		</TabPage>
+	</TabGroup>
+</Pane>
+  ```
+
+==== *Dipendenze Esterne*  
+- *svelte-tweakpane-ui*: fornisce i componenti *Button* e *File* per la gestione dell'interfaccia utente interattiva.  
+- *threlte/core*: utilizzato per ottenere il riferimento alla camera della scena 3D tramite *useThrelte*, integrandosi con le funzionalità di reset della visualizzazione.  
+- *lib/index.svelte*: contiene le funzioni *fetchDb()*, *fetchExternal()*, *uploadFile()* e la utility *cameraUtils*, che gestiscono il recupero e l'invio dei dati e il controllo della telecamera.
+
+=== Export.svelte <Export.svelte>
+
+==== *Descrizione*  
+Il componente *Export.svelte* consente di catturare un'istantanea della scena 3D e salvarla come immagine. È pensato per offrire agli utenti una semplice funzionalità di "export" della visualizzazione corrente, integrata con la libreria *Threlte* per il rendering 3D.
+
+==== *Struttura e Funzionalità*  
+- *Struttura:*  
+  - Il componente importa il *Button* dalla libreria *svelte-tweakpane-ui* per creare un'interfaccia utente semplice e intuitiva.  
+  - Utilizza *useThrelte* per ottenere i riferimenti a renderer, scena e camera, necessari per catturare lo screenshot della scena 3D.  
+  - Definisce una funzione locale, *handleScreenshot*, che invoca la funzione *takeScreenshot* importata dallo store globale per eseguire l'export dell'immagine.
+
+- *Funzionalità:*  
+  - Quando l'utente clicca sul pulsante, viene attivata la funzione *handleScreenshot()*, che cattura lo stato corrente della scena 3D e lo salva come immagine.  
+  - La funzione *takeScreenshot* utilizza i riferimenti al renderer, alla scena e alla camera per generare lo screenshot, integrando le capacità di rendering offerte da *Threlte*.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - *target*: posizione della fotocamera, passata dinamicamente per centrare la scena 3D.
-  
+  - Il componente *Export.svelte* non riceve props esterni; invece, accede ai riferimenti necessari tramite *useThrelte* e alle funzioni globali importate da *lib/index.svelte*.
+
 - *Variabili reattive:*  
-  - *autoRotate:* flag (settato su `false`) che abilita o disabilita la rotazione automatica della scena.
+  - *renderer, scene, camera*: variabili ottenute da *useThrelte* che rappresentano rispettivamente il renderer, la scena e la camera della visualizzazione 3D, aggiornate in tempo reale.
 
 ==== *Eventi e Comunicazione*  
-- Il componente *Scene.svelte* riceve il parametro `target` tramite props e lo passa al componente `OrbitControls ` per manipolare la posizione della fotocamera..
-- `OrbitControls` consente di interagire con la scena tramite il mouse per zoom, rotazione e panoramica.
+- Il componente espone un singolo evento di click sul pulsante:  
+  - *on:click*: quando il pulsante viene cliccato, viene eseguita la funzione *handleScreenshot()* che comunica con la funzionalità di esportazione presente nello store globale, catturando lo stato attuale della scena e salvandolo come immagine.
 
 ==== *Stili e Layout*  
-- Il layout della scena è gestito tramite il sistema di *Threlte* e *Three.js*, con una configurazione di luci e camera integrata. Non sono presenti stili CSS personalizzati nel componente.
+- Il layout è definito in modo semplice, affidandosi allo stile predefinito del componente *Button* della libreria *svelte-tweakpane-ui*, che assicura un aspetto coerente con il resto dell'interfaccia utente.  
+- Il pulsante esplicita chiaramente la sua funzione con l'etichetta "Export as image", rendendo chiara l'intenzione del controllo.
 
 ==== *Esempi di Utilizzo*  
-*Esempio di integrazione:*  
-```svelte
+- Integrazione nell'applicazione:  
+  Il componente *Export.svelte* può essere integrato in qualsiasi parte dell'applicazione dove sia necessario fornire agli utenti la possibilità di esportare una visualizzazione 3D.  
+  ```svelte
+  <script>
+    import Export from './Export.svelte';
+  </script>
+  
+<Pane title="Settings" position="fixed">
+	<TabGroup>
+		<TabPage title="Export">
+			<Export />
+		</TabPage>
+	</TabGroup>
+</Pane>
+  ```
+
+==== *Dipendenze Esterne*  
+- *svelte-tweakpane-ui*: fornisce il componente *Button* utilizzato per attivare l'azione di screenshot.  
+- *threlte/core*: utilizzato per ottenere i riferimenti a renderer, scena e camera tramite *useThrelte*, che sono essenziali per generare lo screenshot della scena 3D.  
+- *lib/index.svelte*: contiene la funzione *takeScreenshot*, che implementa la logica per la cattura e l'export dell'immagine dalla scena corrente.
+
+
+=== Scene.svelte <Scene.svelte>
+
+==== *Descrizione*  
+Il componente *Scene.svelte* si occupa di definire e gestire la scena 3D dell'applicazione. Include la configurazione della fotocamera con controlli di navigazione, l'illuminazione e la visualizzazione del grafico interattivo, in modo da fornire una visualizzazione immersiva e dinamica dei dati.
+
+==== *Struttura e Funzionalità*  
+- *Struttura:*  
+  - Il componente imposta una *PerspectiveCamera* con una posizione predefinita per inquadrare l'intera scena.  
+  - All'interno della camera vengono utilizzati gli *OrbitControls* per consentire all'utente di interagire con la scena, abilitando funzioni come il damping e il limite sull'angolo polare.  
+  - Viene integrato un componente *Gizmo* per facilitare la navigazione e fornire riferimenti visivi alla direzione e all'orientamento della fotocamera.  
+  - La scena include diverse sorgenti di luce, con un’*AmbientLight* per un’illuminazione diffusa e due *DirectionalLight* per simulare luci direzionali con ombre.  
+  - Il componente *Chart* è incorporato per visualizzare il grafico 3D, che rappresenta i dati attraverso barre e griglie.
+
+- *Funzionalità:*  
+  - Configura la fotocamera per rendere predefinita la vista 3D e applica controlli interattivi per la navigazione (ruotare, zoomare e muoversi).  
+  - Gestisce l'orientamento della scena tramite *OrbitControls*, che permettono un'esperienza utente fluida, grazie anche alla possibilità di attivare o meno l'auto-rotazione.  
+  - Integra elementi di illuminazione per garantire una resa visiva ottimale della scena e per evidenziare il modello 3D.  
+  - Incorpora il componente *Chart* per renderizzare dinamicamente i dati in un ambiente 3D.
+
+==== *Props e Variabili Reattive*  
+- *Props:*  
+  - *target* - viene passato al componente per definire il punto centrale della visualizzazione, fondamentale per il corretto funzionamento dei controlli di orbiting della fotocamera.
+
+- *Variabili reattive:*  
+  - *autoRotate* - variabile locale impostata a `false`, che controlla se l'auto-rotazione della scena è abilitata nei controlli della camera.
+
+==== *Eventi e Comunicazione*  
+- Il componente non gestisce direttamente eventi custom, ma integra i seguenti meccanismi di comunicazione:  
+  - *OrbitControls*: gestiscono eventi di interazione dell'utente (movimenti del mouse, zoom, ecc.) per aggiornare in tempo reale la posizione e l'orientamento della telecamera.  
+  - *Props Binding*: il prop *target* viene passato ai controlli per garantire che la fotocamera si focalizzi sul punto desiderato, sincronizzando la visualizzazione con le modifiche apportate da altri componenti.
+
+==== *Stili e Layout*  
+- La disposizione della scena è definita dalle proprietà di posizione e rotazione:
+  - La *PerspectiveCamera* viene posizionata in modo strategico (`[15, 7.1, 15]`) per garantire una visualizzazione equilibrata del contenuto 3D.
+  - I controlli degli *OrbitControls* offrono un'interazione fluida e reattiva, mentre la presenza del *Gizmo* agevola l'orientamento.
+  - Le luci (ambientale e direzionali) sono posizionate per illuminare in maniera omogenea e per creare ombre realistiche.
+
+==== *Esempi di Utilizzo*  
+- Integrazione nell'applicazione:  
+  Il componente *Scene.svelte* viene utilizzato come contenitore della scena 3D, includendo fotocamera, controlli, luci ed il grafico interattivo, e rappresenta il cuore della visualizzazione 3D.  
+  ```svelte
+  <script>
+    import Scene from './Scene.svelte';
+  </script>
+  
 <div>
 	<Canvas>
 		<Scene {target} />
 	</Canvas>
 </div>
-```  
-L'esempio utilizzato in App.svelte mostra  l'integrazione del componente *Scene* tramite il tag `<Scene>` all'interno del `<Canvas>` per rendere la scena 3D interattiva e visibile nell'applicazione.
+  ```
 
 ==== *Dipendenze Esterne*  
-- *threlte/core:* gestisce la scena 3D, la fotocamera e il rendering.
-- *threlte/extras:* fornisce i controlli `OrbitControls` e il `Gizmo` per la manipolazione della scena.
-- *Three.js:* usato per la gestione di oggetti 3D come la fotocamera e le luci.
+- *threlte/core*: fornisce componenti essenziali come *PerspectiveCamera* e *T.Group* per il rendering della scena 3D.  
+- *threlte/extras*: include componenti aggiuntivi come *OrbitControls* per l'interazione con la fotocamera e *Gizmo* per facilitare l'orientamento visivo.  
+- *Chart.svelte*: componente integrato che gestisce la visualizzazione dettagliata dei dati in forma di grafico 3D.  
+- *Svelte*: sfrutta il meccanismo di binding dei props per sincronizzare la visualizzazione della scena con il target passato dall'esterno.
 
-=== SettingsPane.svelte <settingspane.svelte>
+=== SettingsPane.svelte <SettingsPane.svelte>
+
 ==== *Descrizione*  
-Il componente *SettingsPane.svelte* gestisce la sezione di impostazioni dell'applicazione, organizzando diverse opzioni tramite una serie di schede. Fornisce agli utenti il controllo su vari parametri come le impostazioni della fotocamera, la fonte dei dati, i filtri, e la selezione del colore.
+Il componente *SettingsPane.svelte* funge da pannello principale per la configurazione e il controllo dell'applicazione 3D. Offre una serie di schede (tab) per regolare la telecamera, la fonte dei dati, i filtri, la selezione dei colori e l'export della visualizzazione, centralizzando tutte le impostazioni in un'unica interfaccia accessibile.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
-  -  Utilizza il componente `Pane` di *svelte-tweakpane-ui* per creare un pannello fisso con un gruppo di schede (TabGroup).
-  - Ogni *scheda* (TabPage) contiene un componente separato per gestire un gruppo di impostazioni, tra cui:
-   - `CameraSettings` per il controllo della posizione della fotocamera
-   - `DataSource` per la gestione della fonte dei dati
-   - `DataFilter` per il controllo dei filtri sui dati
-   - `Color` per selezionare il tipo di colorazione
+  - Il componente importa e utilizza vari controlli da *svelte-tweakpane-ui*, quali *Pane*, *TabGroup* e *TabPage*, per organizzare le impostazioni in schede distinte.  
+  - All'interno del *Pane* principale, è integrato un *TabGroup* che contiene diverse *TabPage*:  
+    - *Camera*: ospita il componente *CameraSettings.svelte* per il controllo della fotocamera.  
+    - *Source*: contiene il componente *DataSource.svelte* per la selezione della fonte dati (API, DB o file CSV).  
+    - *Filter*: include il componente *DataFilter.svelte* per applicare filtri sui dati visualizzati.  
+    - *Color*: integra il componente *Color.svelte* per la scelta del tipo di colore.  
+    - *Export*: comprende il componente *Export.svelte* per esportare la scena corrente come immagine.  
+  - Viene impostato il tema globale predefinito attraverso la funzione *ThemeUtils.setGlobalDefaultTheme*, che utilizza i preset standard.
 
 - *Funzionalità:*  
-  - Le schede offrono un'interfaccia interattiva per modificare e configurare parametri come la posizione della fotocamera, i filtri sui dati e la colorazione.
-  - Sincronizzazione dei dati tra il componente e il resto dell'app tramite binding bidirezionale, permettendo che le modifiche alle impostazioni influenzino la visualizzazione dei dati in tempo reale.
+  - Consente all'utente di navigare tra diverse schede per accedere rapidamente alle impostazioni desiderate.  
+  - Permette di interagire con componenti specifici che gestiscono aspetti chiave dell'interfaccia 3D, come il reset della fotocamera, la scelta della fonte dati, l'applicazione dei filtri, la selezione del colore e l'export della visualizzazione.  
+  - Viene passato il prop *resetTarget* ai componenti *CameraSettings* e *DataSource* per sincronizzare il comportamento della telecamera con le azioni di configurazione effettuate.
 
 ==== *Props e Variabili Reattive*  
 - *Props:*  
-  - *resetTarget:* variabile passata da componenti esterni, utilizzata per ripristinare la posizione della fotocamera.
-  
+  - *resetTarget*: valore ricevuto dal componente genitore, utilizzato per reimpostare il target della telecamera in *CameraSettings* e *DataSource*.  
+
 - *Variabili reattive:*  
-  - *bindable:* per legare variabili reattive come `mediaFilter`, `colorSelection`, `rangeValue`, `avgEnabled` a proprietà e parametri specifici, aggiornando automaticamente la visualizzazione quando cambiano.
+  - Non sono presenti variabili reattive specifiche interne, poiché lo stato è principalmente gestito attraverso i binding e le impostazioni nei componenti importati.
 
 ==== *Eventi e Comunicazione*  
-- Il componente comunica con gli altri tramite le props, passando la variabile `resetTarget` al componente `CameraSettings`.
+- Il componente facilita la comunicazione tra le impostazioni e il resto dell'applicazione tramite l'inclusione di componenti figlio che aggiornano lo stato globale:  
+  - *CameraSettings* e *DataSource* ricevono *resetTarget* per il reset della telecamera.  
+  - Le schede *Filter*, *Color* ed *Export* comunicano direttamente con i rispettivi store e funzioni globali per aggiornare l'interfaccia 3D e la visualizzazione dei dati.  
+  - La struttura a tab permette agli utenti di passare agevolmente da una sezione all'altra, garantendo un flusso di interazione intuitivo.
 
 ==== *Stili e Layout*  
-- Il pannello delle impostazioni ha una posizione fissa, impostato tramite la proprietà `position="fixed"`.
-- Le schede sono organizzate in un layout tabellare tramite `TabGroup`, con ciascuna scheda (`TabPage`) che consente l'accesso a diverse configurazioni.
+- Il pannello è posizionato in modo fisso sullo schermo, assicurando la visibilità delle impostazioni indipendentemente dalla navigazione nella scena 3D.  
+- L'organizzazione in schede tramite *TabGroup* e *TabPage* offre una chiara separazione delle funzionalità, mantenendo un layout ordinato e facilmente navigabile.  
+- L'utilizzo del tema globale impostato con *ThemeUtils.presets.standard* garantisce uno stile coerente e professionale in tutta l'interfaccia utente.
 
 ==== *Esempi di Utilizzo*  
-*Esempio di integrazione:*  
-```svelte
+- Integrazione nell'applicazione:  
+  Il componente *SettingsPane.svelte* viene incluso come strumento principale per la configurazione dell'interfaccia, consentendo agli utenti di modificare le impostazioni di fotocamera, fonte dati, filtri, colori ed export.  
+  ```svelte
+  <script>
+    import SettingsPane from './SettingsPane.svelte';
+  </script>
+  
 <div>
 	<Canvas>
 		<SettingsPane {resetTarget} />
 	</Canvas>
 </div>
-```  
-Nel''esempio, il componente *SettingsPane* viene usato all'interno di un <Canvas>, con il parametro ` resetTarget`  passato tramite props.
+  ```
 
 ==== *Dipendenze Esterne*  
-- *svelte-tweakpane-ui:* libreria per creare interfacce utente con pannelli di configurazione avanzati.
-- *ThemeUtils:* usato per applicare temi globali e predefiniti.
+- *svelte-tweakpane-ui*: fornisce i componenti per creare l'interfaccia utente (Pane, TabGroup, TabPage, Button, ecc.) e per impostare il tema globale.  
+- *lib/index.svelte*: contiene le funzioni e gli store che gestiscono le impostazioni globali, integrandosi con i componenti specifici di configurazione (CameraSettings, DataSource, DataFilter, Color, Export).  
+- *Threlte*: indirettamente coinvolto nella gestione e visualizzazione della scena 3D, influenzato dalle impostazioni fornite tramite questo pannello.
 
 #pb()
 
@@ -1269,5 +1504,3 @@ Il modulo CSV ha il compito di ricevere in input un file caricato dall'utente, l
 
 4. *Note*
 - È la rappresentazione concreta dei dati tabellari letti dal CSV e convertiti in un formato uniforme.
-
-#pb()
