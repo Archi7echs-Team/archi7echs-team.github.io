@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.6.0", "12-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(p.valdagno),
+    "0.6.0", "12-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(p.valdagno,p.lucato),
     "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
