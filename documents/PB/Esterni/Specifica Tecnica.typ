@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.6.0", "10-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(""),
+    "0.6.0", "12-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(p.valdagno),
     "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
     "0.3.0", "02-04-2025", "Stesura sezione back-end,tecnologie e architettura", (p.lucato,p.pesenato), (p.checchinato,p.salvo),
@@ -750,7 +750,7 @@ Il componente *CameraSettings.svelte* fornisce un'interfaccia utente per la gest
 === Chart.svelte <Chart.svelte>
 
 ==== *Descrizione*  
-Il componente *Chart.svelte* si occupa di costruire e gestire la visualizzazione 3D dei dati mediante l'integrazione di grafici a barre e piani di riferimento. Coordina la disposizione di elementi quali la griglia, i piani medi (globali, per riga e per colonna), le etichette degli assi e le barre 3D, assicurando un'aggiornamento continuo della visualizzazione in base allo stato della telecamera.
+Il componente *Chart.svelte* si occupa di costruire e gestire la visualizzazione 3D dei dati mediante l'integrazione di grafici a barre e piani di riferimento. Coordina la disposizione di elementi quali la griglia, i piani medi (globali, per riga e per colonna), le etichette degli assi e le barre 3D, assicurando un aggiornamento continuo della visualizzazione in base allo stato della telecamera.
 
 ==== *Struttura e Funzionalità*  
 - *Struttura:*  
