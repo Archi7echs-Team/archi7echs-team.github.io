@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.6.0", "07-04-2025", "Stesura decimo periodo", p.checchinato, (""),
+    "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (""),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
