@@ -276,7 +276,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Probabilità*: media
 - *Impatto*: alto
 - *Strategie di mitigazione*: il #glossario("responsabile") si impegna a dare una definizione chiara degli obiettivi, comunicare costante con i membri del team per comprendere se ci sono dubbi o incomprensioni che non sono emerse durante la pianificazione. 
-#pb()
+
 ==== Rischio 6 - Sovraccarico di lavoro <RI-6>
 - *Identificativo*: RI-6
 - *Descrizione*: eccessivo carico di lavoro assegnato ai membri del team, che potrebbe causare burnout o ridurre l'efficienza.
@@ -291,6 +291,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Impatto*: medio
 - *Strategie di mitigazione*: mantenere un clima di lavoro positivo, riconoscere i contributi individuali e promuovere #glossario("attività") di team building.
 
+#pb()
 
 ==== Rischio 8 - Assenza di un membro del team per malattia o altri impegni <RI-8>
 - *Identificativo*: RI-8
@@ -1717,3 +1718,119 @@ Durante il decimo #glossario("periodo") si è evidenziata un'efficace gestione e
 
 #pb()
 *Obiettivi*:\
+In questo #glossario("periodo"), l'obiettivo del team è completare le ultime attività previste prima della consegna finale del progetto. In particolare, l'attenzione si è focalizzata sulla finalizzazione del #glossario("MVP") e sull'aggiornamento dei documenti tecnici e di supporto. Per garantire il rispetto delle scadenze, è stata data priorità al testing del front-end e alla redazione della documentazione finale.
+Nello specifico gli obiettivi di questo periodo sono:
+- *Completamento #glossario("MVP")*: portare a termine le funzionalità principali dell'applicazione, consolidando l'integrazione tra front-end e back-end.
+- *Testing front-end*: completare la scrittura e l'esecuzione dei test relativi all'interfaccia utente per garantire stabilità e corretto funzionamento delle funzionalità.
+- *#glossario("Analisi dei Requisiti")*: aggiornare il documento includendo le ultime modifiche tecniche introdotte nel sistema.
+- *#glossario("Piano di Qualifica")*: finalizzare il piano aggiornando le metriche di qualità e includendo i risultati ottenuti dal cruscotto di #glossario("Grafana").
+- *#glossario("Specifica Tecnica")*: completare la descrizione di tutti i componenti sviluppati e delle scelte architetturali adottate.
+- *#glossario("Manuale Utente")*: redigere il manuale con le istruzioni per l'uso dell'applicazione, facilitando la comprensione e l'adozione da parte degli utenti finali.
+
+
+*Possibili rischi*\
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]
+- #link(<RI-8>)[*RI-8 - Assenza di un membro del team per malattia o altri impegni*]
+
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[0],[0],[0],[12],[0],[€ #(12*costo_ora.progr)],
+      [Leonardo\ Lucato],[0],[0],[5],[0],[0],[0],[€ #(5*costo_ora.ver)],
+      [Giacomo\ Pesenato],[5],[0],[2],[0],[0],[0],[€ #(5*costo_ora.res+2*costo_ora.ver)],
+      [Francesco\ Pozzobon],[0],[4],[0],[0],[0],[0],[€ #(4*costo_ora.amm)],
+      [Giovanni\ Salvò],[0],[0],[0],[7],[3],[0],[€ #(7*costo_ora.proge+3*costo_ora.progr)],
+      [Gioele\ Scandaletti],[0],[0],[0],[0],[0],[5],[€ #(5*costo_ora.ana)],
+      [Pietro\ Valdagno],[0],[0],[0],[0],[10],[0],[€ #(10*costo_ora.progr)],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(4*costo_ora.amm)],[€ #(7*costo_ora.ver)],[€ #(7*costo_ora.proge) ],[€ #(25*costo_ora.progr)],[€ #(5*costo_ora.ana)],[#text(blue)[*€ #(150+80+105+175+375+125)*]],
+    )
+  ]
+]
+
+#pb()
+*Distribuzione preventivata delle ore:* \
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,53)),
+    (4, "Amministratore - " + perc(4,53)),
+    (7, "Verificatore - " + perc(7,53)),
+    (7, "Progettista - " + perc(7,53)),
+    (25, "Programmatore - " + perc(25,53)),
+    (5, "Analista - " + perc(5,53)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore undicesimo periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito
+
+*Obiettivi non raggiunti*:\
+In questo undicesimo #glossario("periodo") non sono stati rilevati obiettivi non raggiunti.
+
+*Problematiche non attese*:\
+In questo undicesimo #glossario("periodo") non sono state rilevate delle problematiche non attese.
+
+*Mitigazione rischi verificati*:\
+Durante questo undicesimo #glossario("periodo") si sono verificati tutti e tre i rischi preventivati e queste sono le strategie di mitigazione adottate:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: tale rischio è stato mitigato grazie alla flessibilità organizzativa del gruppo e alla disponibilità degli altri membri nel redistribuire temporaneamente le attività, garantendo la continuità del lavoro.  
+- #link(<RI-4>)[*RI-4 - Mancanza di conoscenze tecniche*]: tale rischio è stato affrontato tramite sessioni di studio mirate e pair programming, oltre all'organizzazione di incontri tra i membri con più esperienza per facilitare l'apprendimento delle tecnologie più complesse.  
+- #link(<RI-8>)[*RI-8 - Assenza di un membro del team per malattia o altri impegni*]: la suddivisione modulare delle attività e l'uso di strumenti collaborativi ha permesso ad altri membri di subentrare rapidamente nei compiti assegnati, minimizzando ritardi e rallentamenti nel progresso del progetto.
+
+*Possibili cambiamenti*:\
+Durante l'undicesimo #glossario("periodo") le attività sono state svolte con successo e senza intoppi, portando a termine gli obiettivi previsti. La gestione dei rischi si è rivelata efficace, consentendo al team di affrontare le sfide in modo proattivo e di mantenere il progetto in linea con le scadenze stabilite.
+Questo ha contribuito a un avanzamento significativo del lavoro e a una buona pianificazione delle ore, garantendo il completamento delle attività in modo efficiente e tempestivo.
+
+#pb();
+
+*Tabella esito effettivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[0],[0],[0],[0],[16(#text(red)[+4])],[0],[€ #(16*costo_ora.progr) (#text(red)[+€ #(4*costo_ora.progr)])],
+      [Leonardo\ Lucato],[0],[0],[4(#text(green)[-1])],[0],[0],[0],[€ #(4*costo_ora.ver) (#text(green)[-€ #(1*costo_ora.ver)])],
+      [Giacomo\ Pesenato],[5],[1 (#text(red)[+1])],[2],[0],[3 (#text(red)[+3])],[0],[€ #(5*costo_ora.res+1*costo_ora.amm+2*costo_ora.ver+3*costo_ora.progr) (#text(red)[+€ #(1*costo_ora.amm+3*costo_ora.progr)])],
+      [Francesco\ Pozzobon],[0],[0 (#text(green)[-4])],[5 (#text(red)[+5])],[0],[0],[0],[€ #(5*costo_ora.ver) (#text(green)[-€ #(5)])],
+      [Giovanni\ Salvò],[0],[0],[3 (#text(red)[+3])],[7],[3],[3 (#text(red)[+3])],[€ #(3*costo_ora.ver+7*costo_ora.proge+3*costo_ora.progr+3*costo_ora.ana) (#text(red)[+€ #(3*costo_ora.ver+3*costo_ora.ana)])],
+      [Gioele\ Scandaletti],[0],[0],[0],[0],[10 (#text(red)[+10])],[0 (#text(green)[-5])],[€ #(10*costo_ora.progr) (#text(red)[+€ #(25)])],
+      [Pietro\ Valdagno],[0],[0],[0],[0],[12 (#text(red)[+2])],[0],[€ #(12*costo_ora.progr) (#text(red)[+€ #(2*costo_ora.progr)])],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(1*costo_ora.amm)\ (#text(green)[-€#(3*costo_ora.amm)])],[€ #(14*costo_ora.ver)\ (#text(red)[+€#(7*costo_ora.ver)])],[€ #(7*costo_ora.proge) ],[€ #(44*costo_ora.progr) \ (#text(red)[+€#(19*costo_ora.progr)])],[€ #(3*costo_ora.ana)\ (#text(green)[-€ #(2*costo_ora.ana)])],[#text(blue)[*€ #(150+20+210+175+660+75)*]\ (#text(red)[+€ 280])],
+    )
+  ]
+]
+
+*Distribuzione effettiva delle ore*:
+#{
+  let plot = plot(data: (
+    (5, "Responsabile - " + perc(5,74)),
+    (1, "Amministratore - " + perc(1,74)),
+    (14, "Verificatore - " + perc(14,74)),
+    (7, "Progettista - " + perc(7,74)),
+    (44, "Programmatore - " + perc(44,74)),
+    (3, "Analista - " + perc(3,74)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore undicesimo periodo", display_style: "hor-legend-chart")
+}
+
+#pb()
+*Progresso delle #glossario("attività")*:\
+
+#{
+  let plot = plot(data: (
+    (0, "Non fatto - " + perc(0,100)),
+    (100, "Fatto - " + perc(100,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 11", display_style: "hor-legend-chart",colors: (red, green))
+}
