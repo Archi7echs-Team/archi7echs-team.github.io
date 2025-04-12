@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (""),
+    "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
@@ -1785,7 +1785,7 @@ Durante questo undicesimo #glossario("periodo") si sono verificati tutti e tre i
 
 *Possibili cambiamenti*:\
 Durante l'undicesimo #glossario("periodo") le attività sono state svolte con successo e senza intoppi, portando a termine gli obiettivi previsti. La gestione dei rischi si è rivelata efficace, consentendo al team di affrontare le sfide in modo proattivo e di mantenere il progetto in linea con le scadenze stabilite.
-Questo ha contribuito a un avanzamento significativo del lavoro e a una buona pianificazione delle ore, garantendo il completamento delle attività in modo efficiente e tempestivo.
+Questo ha contribuito ad un avanzamento significativo del lavoro e ad una buona pianificazione delle ore, garantendo il completamento delle attività in modo efficiente e tempestivo.
 
 #pb();
 
