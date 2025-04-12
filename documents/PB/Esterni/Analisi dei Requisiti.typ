@@ -8,7 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "1.2.0", "11-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali. Aggiornamento tabelle riepilogo requisiti", p.pozzobon,(""),
+    "1.2.0", "11-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali. Aggiornamento tabelle riepilogo requisiti", p.pozzobon,(p.lucato),
     "1.1.1", "21-03-2025", "Correzione sezione tecnologie", p.checchinato,(p.salvo, p.valdagno),
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
@@ -906,7 +906,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.33], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
   [F.1.34], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
   [F.1.35], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.36], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [3 - Opzionale],
+  [F.1.36], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
   [F.1.37], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
   [F.1.38], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
   [F.1.39], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
@@ -1073,7 +1073,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
-  [Funzionale],[37],[2],[3],
+  [Funzionale],[40],[2],[4],
   [Qualità],[6],[0],[0],
   [Vincolo],[3],[0],[0],
   )
