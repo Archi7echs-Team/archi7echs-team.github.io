@@ -161,7 +161,7 @@ L'integrazione con Docker consente di eseguire il backend in un container isolat
   
 === Threlte  
 - *Descrizione della tecnologia e del suo utilizzo*:  
-  #glossario("Threlte") è un framework per lo sviluppo di grafica 3D reattiva all’interno di progetti Svelte, basato su #glossario("Three.js"). Consente di costruire scene 3D in modo dichiarativo e integrato con lo stato reattivo dell'applicazione. In questo progetto, Threlte è stato utilizzato per:  
+  #glossario("Threlte") è una libreria per lo sviluppo di grafica 3D reattiva all’interno di progetti Svelte, basato su #glossario("Three.js"). Consente di costruire scene 3D in modo dichiarativo e integrato con lo stato reattivo dell'applicazione. In questo progetto, Threlte è stato utilizzato per:  
   + Creare visualizzazioni 3D interattive.  
   + Gestire oggetti, luci e telecamere direttamente tramite componenti Svelte.  
   + Semplificare l’integrazione con la logica applicativa grazie alla sua sintassi dichiarativa.  
