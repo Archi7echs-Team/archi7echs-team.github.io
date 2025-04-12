@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "1.6.0", "07-04-2025", "Stesura decimo periodo", p.checchinato, (""),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
@@ -1692,3 +1693,27 @@ Durante il decimo #glossario("periodo") si è evidenziata un'efficace gestione e
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 10", display_style: "hor-legend-chart",colors: (red, green))
 }
+
+== Periodo 11
+=== Pianificazione
+*#glossario("Periodo")*: 04/04/2025 - 11/04/2025 \
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.pesenato],
+        [Amministratore(Am)],[#p.pozzobon],
+        [Analista(An)],[#p.scandaletti],
+        [Programmatore(Prg)],[#p.checchinato,\ #p.salvo, #p.valdagno],
+        [Verificatore(Ve)],[#p.lucato],
+        [Progettista(Prt)], [#p.salvo]
+    )
+  ]
+]
+
+#pb()
+*Obiettivi*:\
