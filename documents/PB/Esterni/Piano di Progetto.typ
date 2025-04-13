@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato),
+    "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
     "1.3.0", "19-03-2025", "Stesura ottavo periodo", p.valdagno, (p.salvo, p.pesenato),
@@ -1527,10 +1527,10 @@ Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e m
       [Leonardo\ Lucato],[0],[0],[0],[0],[6],[0],[€ #(6*costo_ora.progr)],
       [Giacomo\ Pesenato],[0],[4],[3],[0],[5],[0],[€ #(4*costo_ora.amm+3*costo_ora.ver+5*costo_ora.progr)],
       [Francesco\ Pozzobon],[0],[0],[0],[3],[10],[0],[€ #(3*costo_ora.proge+10*costo_ora.progr)],
-      [Giovanni\ Salvò],[0],[0],[4],[1(#text(red)[+1])],[5],[0],[€ #(5*costo_ora.progr+4*costo_ora.ver+1*costo_ora.proge) (#text(red)[+€ #(1*costo_ora.proge)])],
-      [Gioele\ Scandaletti],[0],[2(#text(red)[+2])],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr+2*costo_ora.amm) (#text(red)[+€ #(2*costo_ora.amm)])],
+      [Giovanni\ Salvò],[0],[0],[4],[1(#text(red)[+1])],[8 (#text(red)[+3])],[0],[€ #(8*costo_ora.progr+4*costo_ora.ver+1*costo_ora.proge) (#text(red)[+€#(1*costo_ora.proge+3*costo_ora.progr)])],
+      [Gioele\ Scandaletti],[0],[2(#text(red)[+2])],[0],[2],[8],[0],[€ #(2*costo_ora.proge+8*costo_ora.progr+2*costo_ora.amm) (#text(red)[+€#(2*costo_ora.amm)])],
       [Pietro\ Valdagno],[5],[0],[0],[2],[2],[0],[€ #(5*costo_ora.res+2*costo_ora.proge+2*costo_ora.progr)],
-      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(9*costo_ora.amm) (#text(red)[+€40])],[€ #(7*costo_ora.ver)],[€ #(13*costo_ora.proge) (#text(red)[+€25]) ],[€ #(36*costo_ora.progr)],[€ #(2*costo_ora.ana) (#text(green)[-€25])],[#text(blue)[*€ #(150+180+105+325+540+50)*] (#text(red)[+€ 40])],
+      [*Costo per ruolo*],[€ #(5*costo_ora.res)],[€ #(9*costo_ora.amm) (#text(red)[+€40])],[€ #(7*costo_ora.ver)],[€ #(13*costo_ora.proge) (#text(red)[+€25]) ],[€ #(39*costo_ora.progr) (#text(red)[+€45])],[€ #(2*costo_ora.ana) (#text(green)[-€25])],[#text(blue)[*€ #(150+180+105+325+585+50)*] (#text(red)[+€85])],
     )
   ]
 ]
@@ -1538,12 +1538,12 @@ Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e m
 *Distribuzione effettiva delle ore*:
 #{
   let plot = plot(data: (
-    (5, "Responsabile - " + perc(5,72)),
-    (9, "Amministratore - " + perc(9,72)),
-    (7, "Verificatore - " + perc(7,72)),
-    (13, "Progettista - " + perc(13,72)),
-    (36, "Programmatore - " + perc(36,72)),
-    (2, "Analista - " + perc(2,72)),
+    (5, "Responsabile - " + perc(5,75)),
+    (9, "Amministratore - " + perc(9,75)),
+    (7, "Verificatore - " + perc(7,75)),
+    (13, "Progettista - " + perc(13,75)),
+    (39, "Programmatore - " + perc(36,75)),
+    (2, "Analista - " + perc(2,75)),
   ))
 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore nono periodo", display_style: "hor-legend-chart")
