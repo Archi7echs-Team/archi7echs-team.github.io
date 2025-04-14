@@ -425,8 +425,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile") e l'utente ha premuto su una barra del grafico.
 - *Postcondizioni: * Apertura pannello informazioni e filtri, relativo alla barra selezionata, con visualizzazione delle informazioni: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 - *Scenario Principale: *
-    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
-      - @uc10
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse
     + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata, fornendo, in esso, le informazioni relative a quella barra: coordinate x e y, l'altezza della barra, media relativa ai valori della stessa x, media relativa ai valori della stessa z, media relativa ai valori globali.
 #figure(
   image("/img/adr/PB/19.png", width: 80%),
@@ -440,8 +439,7 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile")ed il pannello filtri, relativo alla barra selezionata, è stato caricato correttamente.
 - *Postcondizioni: * L'utente seleziona l'opacizzazione della barra selezionata.
 - *Scenario Principale: *
-    + L'utente clicca con il tasto sinistro del mouse la barra di interesse :
-      - @uc10
+    + L'utente clicca con il tasto sinistro del mouse la barra di interesse
     + L'applicazione aggiorna la visualizzazione mostrando un pannello dedicato alla barra selezionata.
     + L'utente, mediante apposito l'apposito componente slider, situato nel pannello filtri relativo alla barra, imposta l'opacizzazione della barra selezionata.
     + L'applicazione aggiorna la visualizzazione.
@@ -630,14 +628,29 @@ Ogni caso d'uso è presentato seguendo la seguente struttura logica:
 ) <imgUC13>
 \
 
-=== UC 14 - Visualizzazione dati con altezza compresa tra un intervallo <uc14>
+=== UC 14 - Selezione, o inserimento, di _n1_ e _n2_ per il calcolo del range di visualizzazione <uc14>
+- *Descrizione: * L'utente deve essere in grado di filtrare la visualizzazione dei dati in base ad un range di valori, definito da due estremi, _n1_ e _n2_, che deve quindi essere in grado di selezionare o inserire manualmente.
+- *Attore: * Utente finale
+- *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"). 
+- *Postcondizioni: * L'utente ha definito i valori _n1_ e _n2_ per il calcolo del range di visualizzazione
+- *Scenario Principale: *
+    + L’utente, tramite un’area specifica tra i filtri, seleziona mediante slider, o inserisce manualmente, i valori di _n1_ e _n2_.
+- *Scenario Alternativo: *    
+    + Visualizzazione dell’errore invalidArguments (@uc21)
+#figure(
+  image("/img/adr/PB/47.png", width: 80%),
+  caption: [Selezione, o inserimento, di _n1_ e _n2_ per il calcolo del range di visualizzazione],
+) <imgUC14>
+\
+
+=== UC 15 - Visualizzazione dati con altezza compresa tra un intervallo <uc15>
 - *Descrizione: * L'utente può filtrare i soli dati che sono contenuti all'#glossario("interno") di un intervallo di valori.
 - *Attore: * Utente finale
 - *Precondizioni: * Il grafico #glossario("3D") è generato ed #glossario("accessibile"). Lo slider relativo al filtro è caricato correttamente con relativo limite inferiore e superiore.
 - *Postcondizioni: * Vengono visualizzati, a seguito di filtro, solo i dati con altezza compresa nell'intervallo specificato.
 - *Scenario Principale: *
-    + L'utente, volendo, inserisce, o seleziona mediante slider, il valore minimo del range
-    + L'utente, volendo, inserisce, o seleziona mediante slider, il valore massimo del range
+    + L'utente seleziona mediante slider, o inserisce manualmente, i valori _n1_ e _n2_, limite inferiore e superiore dell'intervallo:
+      - @uc14
     + Vengono visualizzati solo i dati con altezza compresa nell'intervallo specificato.
 #figure(
   image("/img/adr/PB/27.png", width: 80%),
