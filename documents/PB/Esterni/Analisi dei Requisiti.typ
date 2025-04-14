@@ -1026,21 +1026,24 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.1.25], [#glossario("Capitolato"), UC12],
   [F.1.26], [#glossario("Capitolato"), UC13],
   [F.1.27], [Decisione interna, UC14],
-  [F.1.28], [#glossario("Capitolato"), UC15],
+  [F.1.28], [Decisione interna, UC15],
   [F.1.29], [#glossario("Capitolato"), UC16],
-  [F.1.30], [Decisione interna, UC17],
+  [F.1.30], [#glossario("Capitolato"), UC17],
   [F.1.31], [#glossario("Capitolato"), UC18],
-  [F.2.1], [Decisione interna, UC19],
-  [F.2.2], [Decisione interna, UC20],
-  [F.1.32], [Decisione interna, UC21],
-  [F.1.33], [Decisione interna, UC22],
-  [F.1.34], [Decisione interna, UC23],
+  [F.1.32], [#glossario("Capitolato"), UC19],
+  [F.1.33], [Decisione interna, UC20],
+  [F.1.34], [#glossario("Capitolato"), UC21],
+  [F.2.1], [Decisione interna, UC22],
+  [F.2.2], [Decisione interna, UC23],
   [F.1.35], [Decisione interna, UC24],
-  [F.3.5], [Decisione interna, UC25],
-  [F.1.36], [Decisione interna, UC26],
-  [F.1.37], [Decisione interna, UC27],
-  [F.1.38], [#glossario("Capitolato")],
-  [F.1.39], [#glossario("Capitolato")],
+  [F.1.36], [Decisione interna, UC25],
+  [F.1.37], [Decisione interna, UC26],
+  [F.1.38], [Decisione interna, UC27],
+  [F.3.5], [Decisione interna, UC28],
+  [F.1.39], [Decisione interna, UC29],
+  [F.1.40], [Decisione interna, UC30],
+  [F.1.41], [#glossario("Capitolato")],
+  [F.1.42], [#glossario("Capitolato")],
   [Q.1.1], [#glossario("Capitolato")],
   [Q.1.2], [#glossario("Capitolato")],
   [Q.1.3], [#glossario("Capitolato")],
@@ -1050,11 +1053,11 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [V.1.1], [Decisione interna/esterna],
   [V.1.2], [Decisione interna/esterna],
   [V.1.3], [Decisione interna],
-
   )
-    <tab:codicefonte>
 ]
+  <tab:codicefonte>
 
+#pb()
 
 === Fonte - Codice
 Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da quella fonte. La tabella "Codice - Fonte" insieme a questa tabella "Fonte - Codice" permette di ricercare i casi d'uso in maniera più precisa e veloce, mantenendo un ordine che garantisce una lettura del documento ottimale
@@ -1065,10 +1068,10 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   inset: 6pt,
   table.header([*Fonte*], [*Codice*],),
   [#glossario("Capitolato")], [
-    F.1.1, \ F.1.2, \ F.3.1, \ F.1.3, \ F.1.4, \ F.1.6, \ F.1.7, \ F.1.8, \ F.1.9, \ F.1.10, \ F.1.11, \ F.1.12, \ F.1.15, \ F.1.16, \ F.1.17, \ F.1.19, \ F.1.20, \ F.1.21, F.1.23, \ F.1.24, \ F.1.25, \ F.1.26, \ F.1.27, \ F.1.38, \ F.1.39, \ Q.1.1, \ Q.1.2, \ Q.1.3, \ Q.1.4, \ Q.1.5, \ Q.1.6
+    F.1.1., \ F.1.2, \ F.3.1, \ F.1.3, \ F.1.4, \ F.1.6, \ F.1.7, \ F.1.8, \ F.1.9, \ F.1.10, \ F.1.11, \ F.1.12, \ F.1.15, \ F.1.16, \ F.1.17, \ F.1.24, \ F.1.25, \ F.1.26, \ F.1.29, \ F.1.30, \ F.1.31, \ F.1.32, \ F.1.34, \ F.1.41, \ F.1.42, \ Q.1.1, \ Q.1.2, \ Q.1.3, \ Q.1.4, \ Q.1.5, \ Q.1.6
   ],
   [Decisione interna], [
-    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.22, \ F.1.28, \ F.1.29, \ F.1.30, \ F.1.31, \ F.1.32, \ F.1.33, \ F.1.34, \ F.1.35, \ F.3.5, \ F.1.36,  \ F.2.1,  \ F.2.2, \ V.1.3
+    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.19, \ F.1.20, \ F.1.21, \ F.1.22, \ F.1.23, \ F.1.27, \ F.1.28, \ F.1.33, \ F.2.1, \ F.2.2, \ F.1.35, \ F.1.36, \ F.1.37, \ F.1.38, \ F.3.5, \ F.1.39, \ F.1.40, \ V.1.3
   ],
   [Decisione esterna], [V.1.1, \ V.1.2],
   [UC1],[F.1.1],
@@ -1089,15 +1092,18 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   [UC16],[F.1.29],
   [UC17],[F.1.30],
   [UC18],[F.1.31],
-  [UC19],[F.2.1],
-  [UC20],[F.2.2],
-  [UC21],[F.1.32],
-  [UC22],[F.1.33],
-  [UC23],[F.1.34],
+  [UC19],[F.1.32],
+  [UC20],[F.1.33],
+  [UC21],[F.1.34],
+  [UC22],[F.2.1],
+  [UC23],[F.2.2],
   [UC24],[F.1.35],
-  [UC25],[F.3.5],
+  [UC25],[F.1.36],
   [UC26],[F.1.37],
-  [UC27],[F.1.38]
+  [UC27],[F.1.38],
+  [UC28],[F.3.5],
+  [UC29],[F.1.39],
+  [UC30],[F.1.40],
   )
     <tab:fontecodice>
 ]
@@ -1109,9 +1115,9 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
-  [Funzionale],[40],[2],[5],
-  [Qualità],[6],[0],[0],
-  [Vincolo],[3],[0],[0],
+  [Funzionale], [42], [2], [5],
+  [Qualità], [6], [0], [0],
+  [Vincolo], [3], [0], [0],
   )
     <tab:riepilogo>
 ]
