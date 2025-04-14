@@ -929,7 +929,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.25], [@uc12 \ #glossario("UC")12], [L'utente può visualizzare i soli dati che sono maggiori della media globale], [1 - Obbligatorio],
   [F.1.26], [@uc13 \ #glossario("UC")13], [L'utente può visualizzare i soli dati che sono minori della media globale], [1 - Obbligatorio],
   [F.1.27], [@uc14 \ #glossario("UC")14], [L'utente può selezionare mediante slider, o inserire manualmente, i valori _n1_ e _n2_ utili al fine del calcolo del range di visualizzazione], [1 - Obbligatorio],
-  [F.1.28], [@uc15 \ #glossario("UC")15], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori(che può essere aperto o chiuso)], [1 - Obbligatorio],
+  [F.1.28], [@uc15 \ #glossario("UC")15], [L'utente può filtrare i dati per visualizzare solo quelli che sono contenuti all'#glossario("interno") di un intervallo di valori (che può essere aperto o chiuso)], [1 - Obbligatorio],
   [F.1.29], [@uc16 \ #glossario("UC")16], [L'utente può selezionare mediante slider, o inserire manualmente, il valore di _n3_ utile al fine del calcolo delle _n3_ altezze maggiori], [1 - Obbligatorio],
   [F.1.30], [@uc17 \ #glossario("UC")17], [L'utente può filtrare i dati per visualizzare solo le barre con altezza compresa tra le _n3_ altezze maggiori, con _n3_ valore da lui definito], [1 - Obbligatorio],
   [F.1.31], [@uc18 \ #glossario("UC")18], [L'utente può selezionare mediante slider, o inserire manualmente, il valore di _n4_ utile al fine del calcolo delle _n4_ altezze minori], [1 - Obbligatorio],
