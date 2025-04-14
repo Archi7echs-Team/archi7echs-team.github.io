@@ -13,7 +13,7 @@
 
 #page()[
   #box(height: 120pt)[
-      #place(left + horizon, image(height: 100%, "//img/logo.png"))
+      #place(left + horizon, image(height: 100%, "/img/logo.png"))
       #h(1fr)
       #place(right + horizon)[
         #block[
@@ -76,7 +76,11 @@
     - Piano di Progetto v2.0.0
     - Piano di Qualifica v2.0.0
     - Verbali esterni
-#pagebreak()
+
+Come definito nel Piano di Progetto, il gruppo Archi7echs prevede un costo complessivo di 12.530€ per la realizzazione del prodotto e una consegna prevista entro il 04/05/2025.
+
+#pagebreak();
+
 Riportiamo di seguito i componenti del gruppo Archi7echs:
 #figure()[
   #table(
