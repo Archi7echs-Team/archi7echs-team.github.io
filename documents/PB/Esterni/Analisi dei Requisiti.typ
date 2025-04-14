@@ -906,11 +906,11 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [F.1.33], [@uc22 \ #glossario("UC")22], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da una fonte esterna (es. file .csv) e il numero di dati è maggiore della soglia massima supportata], [1 - Obbligatorio],
   [F.1.34], [@uc23 \ #glossario("UC")23], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv con una formattazione interna non corretta], [1 - Obbligatorio],
   [F.1.35], [@uc24 \ #glossario("UC")24], [L'utente viene avvisato graficamente che ha provato a caricare dei dati tramite una chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite], [1 - Obbligatorio],
-  [F.1.36], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [1 - Obbligatorio],
-  [F.1.37], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
-  [F.1.38], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
-  [F.1.39], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
-  [F.1.40], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
+  [F.3.5], [@uc25 \ #glossario("UC")25], [L'utente viene avvisato graficamente che non ha inserito dei dati all'#glossario("interno") di un input che non può essere vuoto], [3 - Opzionale],
+  [F.1.36], [@uc26 \ #glossario("UC")26], [L'utente viene avvisato graficamente che non è stato possibile connettersi al #glossario("database")], [1 - Obbligatorio],
+  [F.1.37], [@uc27 \ #glossario("UC")27], [L'utente viene avvisato graficamente che ha provato a caricare dei dati da un file .csv che ha un peso che supera il limite consentito], [1 - Obbligatorio],
+  [F.1.38], [ ], [L'utente può accedere direttamente alla pagina dell'applicazione senza sistema di login], [1 - Obbligatorio],
+  [F.1.39], [ ], [L'applicazione deve poter elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l'altezza della barra ], [1 - Obbligatorio],
   )
     <tab:reqFunzionali>
 ]
@@ -1000,11 +1000,11 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [F.1.33], [Decisione interna, UC22],
   [F.1.34], [Decisione interna, UC23],
   [F.1.35], [Decisione interna, UC24],
-  [F.1.36], [Decisione interna, UC25],
-  [F.1.37], [Decisione interna, UC26],
-  [F.1.38], [Decisione interna, UC27],
+  [F.3.5], [Decisione interna, UC25],
+  [F.1.36], [Decisione interna, UC26],
+  [F.1.37], [Decisione interna, UC27],
+  [F.1.38], [#glossario("Capitolato")],
   [F.1.39], [#glossario("Capitolato")],
-  [F.1.40], [#glossario("Capitolato")],
   [Q.1.1], [#glossario("Capitolato")],
   [Q.1.2], [#glossario("Capitolato")],
   [Q.1.3], [#glossario("Capitolato")],
@@ -1029,10 +1029,10 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   inset: 6pt,
   table.header([*Fonte*], [*Codice*],),
   [#glossario("Capitolato")], [
-    F.1.1, \ F.1.2, \ F.3.1, \ F.1.3, \ F.1.4, \ F.1.6, \ F.1.7, \ F.1.8, \ F.1.9, \ F.1.10, \ F.1.11, \ F.1.12, \ F.1.15, \ F.1.16, \ F.1.17, \ F.1.19, \ F.1.20, \ F.1.21, F.1.23, \ F.1.24, \ F.1.25, \ F.1.26, \ F.1.27, \ F.1.39, \ F.1.40, \ Q.1.1, \ Q.1.2, \ Q.1.3, \ Q.1.4, \ Q.1.5, \ Q.1.6
+    F.1.1, \ F.1.2, \ F.3.1, \ F.1.3, \ F.1.4, \ F.1.6, \ F.1.7, \ F.1.8, \ F.1.9, \ F.1.10, \ F.1.11, \ F.1.12, \ F.1.15, \ F.1.16, \ F.1.17, \ F.1.19, \ F.1.20, \ F.1.21, F.1.23, \ F.1.24, \ F.1.25, \ F.1.26, \ F.1.27, \ F.1.38, \ F.1.39, \ Q.1.1, \ Q.1.2, \ Q.1.3, \ Q.1.4, \ Q.1.5, \ Q.1.6
   ],
   [Decisione interna], [
-    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.22, \ F.1.28, \ F.1.29, \ F.1.30, \ F.1.31, \ F.1.32, \ F.1.33, \ F.1.34, \ F.1.35, \ F.1.36, \ F.1.37,  \ F.2.1,  \ F.2.2, \ V.1.3
+    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.22, \ F.1.28, \ F.1.29, \ F.1.30, \ F.1.31, \ F.1.32, \ F.1.33, \ F.1.34, \ F.1.35, \ F.3.5, \ F.1.36,  \ F.2.1,  \ F.2.2, \ V.1.3
   ],
   [Decisione esterna], [V.1.1, \ V.1.2],
   [UC1],[F.1.1],
@@ -1059,7 +1059,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   [UC22],[F.1.33],
   [UC23],[F.1.34],
   [UC24],[F.1.35],
-  [UC25],[F.1.36],
+  [UC25],[F.3.5],
   [UC26],[F.1.37],
   [UC27],[F.1.38]
   )
@@ -1073,7 +1073,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   align: (col, row) => (center, center, center, center).at(col),
   inset: 6pt,
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
-  [Funzionale],[40],[2],[4],
+  [Funzionale],[40],[2],[5],
   [Qualità],[6],[0],[0],
   [Vincolo],[3],[0],[0],
   )
