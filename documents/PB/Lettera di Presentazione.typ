@@ -77,7 +77,7 @@
     - Piano di Qualifica v2.0.0
     - Verbali esterni
 
-Come definito nel Piano di Progetto, il gruppo Archi7echs prevede un costo complessivo di 12.530€ per la realizzazione del prodotto e una consegna prevista entro il 04/05/2025.
+Come definito nel Piano di Progetto, il gruppo Archi7echs ha previsto un costo complessivo di *12.530€* per la realizzazione del prodotto. Al termine delle attività, il costo effettivamente sostenuto è stato pari a *12.525€*, rimanendo pertanto all'interno del budget stabilito. In data *15/04/2025* è stata inoltre ricevuta l'approvazione finale da parte dell'azienda del nostro *Minimum Viable Product* (*MVP*), confermando la consegna del prodotto entro il *04/05/2025*.
 
 #pagebreak();
 
