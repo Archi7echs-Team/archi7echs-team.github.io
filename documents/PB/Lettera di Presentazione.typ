@@ -13,7 +13,7 @@
 
 #page()[
   #box(height: 120pt)[
-      #place(left + horizon, image(height: 100%, "//img/logo.png"))
+      #place(left + horizon, image(height: 100%, "/img/logo.png"))
       #h(1fr)
       #place(right + horizon)[
         #block[
@@ -76,7 +76,11 @@
     - Piano di Progetto v2.0.0
     - Piano di Qualifica v2.0.0
     - Verbali esterni
-#pagebreak()
+
+Come definito nel Piano di Progetto, il gruppo Archi7echs ha previsto un costo complessivo di *12.530€* per la realizzazione del prodotto. Al termine delle attività, il costo effettivamente sostenuto è stato pari a *12.525€*, rimanendo pertanto all'interno del budget stabilito. In data *15/04/2025* è stata inoltre ricevuta l'approvazione finale da parte dell'azienda del nostro *Minimum Viable Product* (*MVP*), confermando la consegna del prodotto entro il *04/05/2025*.
+
+#pagebreak();
+
 Riportiamo di seguito i componenti del gruppo Archi7echs:
 #figure()[
   #table(
