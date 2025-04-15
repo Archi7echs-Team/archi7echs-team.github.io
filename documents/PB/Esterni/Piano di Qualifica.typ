@@ -275,7 +275,7 @@ Dove: \
 - *A*, per indicare i test di Accettazione
 
 Ogni test è associato ad uno *stato* che può essere:
-- *S*, il test è stato verificato
+- *S*, il test è stato superato
 - *NE*, il test non è stato eseguito
 - *NI*, il test non è ancora stato implementato
 
@@ -345,6 +345,10 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
   [T.S.50], [Verificare che l'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000],[V.1.1] ,[S],
   [T.S.51], [Verificare che l'applicazione possa supportare  un massimo di 300 elementi per le coordinate X e Z mantenendo il limite di 1000 dati],[V.1.2] ,[S],
   [T.S.52], [Verificare che l'applicazione possa supportare il caricamento dati da un file .csv che pesa al massimo 10 MB],[V.1.3] ,[S],
+  [T.S.53], [Verificare che l'applicazione venga eseguita correttamente su browser moderni con supporto a WebGL 2.0 e JavaScript ES6], [V.1.4], [S],
+  [T.S.54], [Verificare che l'applicazione venga eseguita correttamente su browser con versione almeno pari a: Chrome 89, Firefox 86, Edge 89, Safari 14], [V.1.5], [S],
+  [T.S.55], [Verificare che l'applicazione venga eseguita correttamente su dispositivi con CPU a 64 bit, almeno 4 GB di RAM e GPU compatibile con WebGL 2.0], [V.1.6], [S],
+  [T.S.56], [Verificare che l'applicazione venga eseguita correttamente su sistemi operativi Windows 10+, macOS 11+ o distribuzioni Linux moderne (es. Ubuntu 20.04+)], [V.1.7], [S],
   )
     <tab:testdisistema>
 ]

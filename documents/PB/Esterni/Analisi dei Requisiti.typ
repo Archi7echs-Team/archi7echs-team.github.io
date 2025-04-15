@@ -8,6 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
+    "2.0.0", "15-04-2025", "Revisione per incontro PB", p.checchinato,(""),
     "1.2.0", "15-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali. Aggiornamento tabelle riepilogo requisiti", p.pozzobon,(p.lucato,p.checchinato),
     "1.1.1", "21-03-2025", "Correzione sezione tecnologie", p.checchinato,(p.salvo, p.valdagno),
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
@@ -960,11 +961,11 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   align: (col, row) => (center, center, center,).at(col),
   inset: 6pt,
   table.header([*Codice*], [*Descrizione*], [*Classificazione*]),
-    [Q.1.1],[Devono essere consegnati i diagrammi #glossario("UML") relativi agli use cases del #glossario("progetto")],[1 - Obbligatorio],
-    [Q.1.2],[Deve essere consegnata la lista dei bug che sono stati risolti durante le fasi di sviluppo],[1 - Obbligatorio],
-    [Q.1.3],[Deve essere consegnato lo schema del design relativo alla base di dati (se utilizzata) o alle #glossario("API") richiamate (se utilizzate) ],[1 - Obbligatorio],
+    [Q.1.1],[Devono essere consegnati i diagrammi #glossario("UML") relativi agli use cases del #glossario("progetto"), consultabili all'interno del documento #glossario("Analisi dei Requisiti")],[1 - Obbligatorio],
+    [Q.1.2],[Deve essere consegnata al #glossario("proponente") la lista dei bug che sono stati risolti durante le fasi di sviluppo in un documento apposito],[1 - Obbligatorio],
+    [Q.1.3],[Deve essere consegnato lo schema del design relativo alla base di dati (se utilizzata) o alle #glossario("API") richiamate (se utilizzate), consultabile all'interno del documento #glossario("Specifica Tecnica") ],[1 - Obbligatorio],
     [Q.1.4],[Deve essere consegnato tutto il codice prodotto in formato sorgente utilizzando sistemi di versionamento del codice (#glossario("Github")) ],[1 - Obbligatorio],
-    [Q.1.5],[Deve essere consegnata la documentazione relativa ai casi di test gestiti e le relative reportistiche ],[1 - Obbligatorio],
+    [Q.1.5],[Deve essere consegnata la documentazione relativa ai casi di test gestiti e le relative reportistiche, consultabile all'interno del documento #glossario("Piano di Qualifica") ],[1 - Obbligatorio],
     [Q.1.6],[Per l'intero #glossario("periodo") necessario per portare a termine il #glossario("progetto") è doveroso seguire le regole imposte nel documento _Norme di Progetto_],[1 - Obbligatorio],
   )
     <tab:reqQualitativi>
@@ -980,6 +981,10 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   [V.1.1], [L'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000 dati ], [1 - Obbligatorio],
   [V.1.2], [L'applicazione deve supportare un massimo di 300 elementi per le coordinate X e Z mantenendo il limite di 1000 dati (es. con 300 righe, il massimo numero di colonne sarà pari a 3)], [1 - Obbligatorio],
   [V.1.3], [L'applicazione deve supportare il caricamento dati da un file .csv che pesa al massimo 10 MB ], [1 - Obbligatorio],
+  [V.1.4], [L'applicazione deve supportare l'esecuzione su browser moderni che garantiscano il supporto a WebGL 2.0 e JavaScript ES6], [1 - Obbligatorio],
+  [V.1.5], [L'applicazione deve supportare i seguenti browser (o versioni superiori): Google Chrome 89, Firefox 86, Microsoft Edge 89, Safari 14], [1 - Obbligatorio],
+  [V.1.6], [L'applicazione deve supportare l'esecuzione su dispositivi dotati di almeno una CPU a 64 bit, 4 GB di RAM e una GPU compatibile con WebGL 2.0], [1 - Obbligatorio],
+  [V.1.7], [L'applicazione deve supportare sistemi operativi desktop quali Windows 10 o successivi, macOS 11 o successivi, e distribuzioni Linux moderne come Ubuntu 20.04 o superiori], [1 - Obbligatorio]
   )
     <tab:reqVincolo>
 ]
@@ -1053,6 +1058,10 @@ Questa tabella mette in relazione il codice di un caso d'uso alla sua fonte, ovv
   [V.1.1], [Decisione interna/esterna],
   [V.1.2], [Decisione interna/esterna],
   [V.1.3], [Decisione interna],
+  [V.1.4], [Decisione interna],
+  [V.1.5], [Decisione interna],
+  [V.1.6], [Decisione interna],
+  [V.1.7], [Decisione interna],
   )
 ]
   <tab:codicefonte>
@@ -1071,7 +1080,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
     F.1.1., \ F.1.2, \ F.3.1, \ F.1.3, \ F.1.4, \ F.1.6, \ F.1.7, \ F.1.8, \ F.1.9, \ F.1.10, \ F.1.11, \ F.1.12, \ F.1.15, \ F.1.16, \ F.1.17, \ F.1.24, \ F.1.25, \ F.1.26, \ F.1.29, \ F.1.30, \ F.1.31, \ F.1.32, \ F.1.34, \ F.1.41, \ F.1.42, \ Q.1.1, \ Q.1.2, \ Q.1.3, \ Q.1.4, \ Q.1.5, \ Q.1.6
   ],
   [Decisione interna], [
-    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.19, \ F.1.20, \ F.1.21, \ F.1.22, \ F.1.23, \ F.1.27, \ F.1.28, \ F.1.33, \ F.2.1, \ F.2.2, \ F.1.35, \ F.1.36, \ F.1.37, \ F.1.38, \ F.3.5, \ F.1.39, \ F.1.40, \ V.1.3
+    F.3.2, \ F.3.3, \ F.3.4, \ F.1.5, \ F.1.13, \ F.1.14, \ F.1.18, \ F.1.19, \ F.1.20, \ F.1.21, \ F.1.22, \ F.1.23, \ F.1.27, \ F.1.28, \ F.1.33, \ F.2.1, \ F.2.2, \ F.1.35, \ F.1.36, \ F.1.37, \ F.1.38, \ F.3.5, \ F.1.39, \ F.1.40, \ V.1.3 , \ V.1.4, \ V.1.5, \ V.1.6, \ V.1.7
   ],
   [Decisione esterna], [V.1.1, \ V.1.2],
   [UC1],[F.1.1],
@@ -1108,6 +1117,8 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
     <tab:fontecodice>
 ]
 
+#pb()
+
 === Riepilogo tabelle
 #align(center)[
   #table(
@@ -1117,7 +1128,7 @@ Questa tabella mette in relazione la fonte con tutti i casi d'uso derivanti da q
   table.header([*Tipologia*], [*Obbligatori*], [*Desiderabili*], [*Opzionali*]),
   [Funzionale], [42], [2], [5],
   [Qualità], [6], [0], [0],
-  [Vincolo], [3], [0], [0],
+  [Vincolo], [7], [0], [0],
   )
     <tab:riepilogo>
 ]
