@@ -980,7 +980,7 @@ Dove _Tipologia_ e _Classificazione_ fanno riferimento a quanto descritto sopra.
   table.header([*Codice*], [*Descrizione*], [*Classificazione*]),
   [V.1.1], [L'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000 dati ], [1 - Obbligatorio],
   [V.1.2], [L'applicazione deve supportare un massimo di 300 elementi per le coordinate X e Z mantenendo il limite di 1000 dati (es. con 300 righe, il massimo numero di colonne sarà pari a 3)], [1 - Obbligatorio],
-  [V.1.3], [L'applicazione deve supportare il caricamento dati da un file .csv che pesa al massimo 10 MB ], [1 - Obbligatorio],
+  [V.1.3], [L'applicazione deve supportare il caricamento dati da un file #glossario(".csv") che pesa al massimo 10 MB ], [1 - Obbligatorio],
   [V.1.4], [L'applicazione deve supportare l'esecuzione su browser moderni che garantiscano il supporto a WebGL 2.0 e JavaScript ES6], [1 - Obbligatorio],
   [V.1.5], [L'applicazione deve supportare i seguenti browser (o versioni superiori): Google Chrome 89, Firefox 86, Microsoft Edge 89, Safari 14], [1 - Obbligatorio],
   [V.1.6], [L'applicazione deve supportare l'esecuzione su dispositivi dotati di almeno una CPU a 64 bit, 4 GB di RAM e una GPU compatibile con WebGL 2.0], [1 - Obbligatorio],

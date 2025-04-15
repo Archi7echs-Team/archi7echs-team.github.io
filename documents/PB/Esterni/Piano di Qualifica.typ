@@ -54,7 +54,7 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 #pb()
 
 == Dashboard
-A disposizione del team, del committente e del proponente è la dashboard online realizzata su Grafana. Tale sistema permette di visualizzare in tempo reale #glossario("infografiche") renderizzate automaticamente con i dati reperiti da #glossario("GitHub") e dal foglio ore. Sono inoltre visibili e aggiornati per periodo i grafici relativi alle metriche. \ 
+A disposizione del team, del committente e del #glossario("proponente") è la dashboard online realizzata su Grafana. Tale sistema permette di visualizzare in tempo reale #glossario("infografiche") renderizzate automaticamente con i dati reperiti da #glossario("GitHub") e dal foglio ore. Sono inoltre visibili e aggiornati per #glossario("periodo") i grafici relativi alle metriche. \ 
 La dashboard è raggiungibile al seguente link: \
 #align(center)[#link("https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b")[#text(blue)[https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b]]] 
 _non è richiesta la registrazione o il login per la visualizzazione._
@@ -97,49 +97,49 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC1.png", width: 80%),
   caption: [MPC1 - SA],
 ) <imgMPC1>
-*RTB*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore è rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
+*#glossario("RTB")*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore è rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
   caption: [MPC2-3 - rapporto EV e PV],
 ) <imgMPC2-3> 
-*RTB*: Si nota come nei primi periodi il valore guadagnato (Earned Value) era inferiore al valore pianificato (Planned Value) ma la curva del valore guadagnato è andato a sovrapporsi con la curva del valore pianificato negli ultimi periodi comunicando un allineamento agli obiettivi preposti.
+*#glossario("RTB")*: Si nota come nei primi periodi il valore guadagnato (Earned Value) era inferiore al valore pianificato (Planned Value) ma la curva del valore guadagnato è andato a sovrapporsi con la curva del valore pianificato negli ultimi periodi comunicando un allineamento agli obiettivi preposti.
 
  #figure(
   image("/img/pdq/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
 ) <imgMPC4>
-*RTB*: Si nota come nei primi periodi, specialmente nel periodo 2, la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
+*#glossario("RTB")*: Si nota come nei primi periodi, specialmente nel #glossario("periodo") 2, la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
 
 #figure(
   image("/img/pdq/MPC5.png", width: 80%),
   caption: [MPC5 - AC],
 ) <imgMPC5>
-*RTB*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel periodo 4 il costo sia aumentato più rapidamente, assecondando la necessità di recuperare la SA ideale.
+*#glossario("RTB")*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel #glossario("periodo") 4 il costo sia aumentato più rapidamente, assecondando la necessità di recuperare la SA ideale.
 
 #figure(
   image("/img/pdq/MPC6.png", width: 80%),
   caption: [MPC6 - CPI],
 ) <imgMPC6>
-*RTB*: Il grafico mostra l'efficienza dei costi di progetto, non essendoci distaccati da 1, il valore ottimale, possiamo dire di non aver avuto un costo effettivo maggiore del valore guadagnato.
+*#glossario("RTB")*: Il grafico mostra l'efficienza dei costi di progetto, non essendoci distaccati da 1, il valore ottimale, possiamo dire di non aver avuto un costo effettivo maggiore del valore guadagnato.
 
 #figure(
   image("/img/pdq/MPC7.png", width: 80%),
   caption: [MPC7 - CV],
 ) <imgMPC7>
-*RTB*: Il grafico mostra un distacco nel primo periodo, dove si stava ancora migliorando il way of working, generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
+*#glossario("RTB")*: Il grafico mostra un distacco nel primo #glossario("periodo"), dove si stava ancora migliorando il way of working, generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
 
 #figure(
   image("/img/pdq/MPC8.png", width: 80%),
   caption: [MPC8 - EAC],
 ) <imgMPC8>
-*RTB*: Il grafico mostra come il costo totale al completamento sia rimasto fisso in ogni periodo essendo esso un limite invalicabile.
+*#glossario("RTB")*: Il grafico mostra come il costo totale al completamento sia rimasto fisso in ogni #glossario("periodo") essendo esso un limite invalicabile.
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
 ) <imgMPC9>
-*RTB*: Il grafico mostra come la risorsa a nostra disposizione diminuisca periodo dopo periodo, inversamente al grafico dell'AC.
+*#glossario("RTB")*: Il grafico mostra come la risorsa a nostra disposizione diminuisca #glossario("periodo") dopo #glossario("periodo"), inversamente al grafico dell'AC.
 
 === Processi di supporto
 #align(center)[
@@ -172,7 +172,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/MPC12.png", width: 80%),
   caption: [MPC12 - Rischi non previsti],
 ) <imgMPC12>
-*RTB*: Il grafico mostra la presenza di un rischio non previsto per molti periodi ma anche come esso sia poi stato gestito nei periodi 4,5 e 6 portando a 0 il numero di rischi non previsti dimostrando un adattamento ai rischi previsti.
+*#glossario("RTB")*: Il grafico mostra la presenza di un rischio non previsto per molti periodi ma anche come esso sia poi stato gestito nei periodi 4,5 e 6 portando a 0 il numero di rischi non previsti dimostrando un adattamento ai rischi previsti.
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
@@ -300,7 +300,7 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
   [T.S.5], [Verificare che l'utente possa inserire manualmente il valore dell'asse y per caricare un dato],[F.3.3 - Opzionale] ,[NI],
   [T.S.6], [Verificare che l'utente possa inserire manualmente il valore dell'asse z per caricare un dato],[F.3.4 - Opzionale] ,[NI],
   [T.S.7], [Verificare che l'utente possa scegliere, come fonte di reperimento dati,  la chiamata all'#glossario("API") esterna Weather Forecast],[F.1.3] ,[S],
-  [T.S.8], [Verificare che l'utente possa scegliere, come fonte di reperimento dati,la connessione a database #glossario("SQL") locale],[F.1.4] ,[S],
+  [T.S.8], [Verificare che l'utente possa scegliere, come fonte di reperimento dati,la connessione a #glossario("database") #glossario("SQL") locale],[F.1.4] ,[S],
   [T.S.9], [Verificare che l'utente possa importare i dati tramite il caricamento file .csv],[F.1.5] ,[S],
   [T.S.10], [Verificare che l'utente possa, mediante spostamento del mouse sopra il grafico, ruotare la visualizzazione],[F.1.6] ,[S],
   [T.S.11], [Verificare che l'utente possa, mediante spostamento del mouse sopra il grafico, muoversi solo orizzontalmente come se fosse in un ambiente 2D],[F.1.7] ,[S],
@@ -320,7 +320,7 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
   [T.S.25], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di reimpostare la visualizzazione delle barre selezionate mediante doppio click su una qualsiasi barra],[F.1.21] ,[S],
   [T.S.26], [Verificare che l'utente, una volta premuta una barra, abbia la possibilità di reimpostare i filtri di default (sia della barra selezionata che delle barre affette dai cambiamenti applicati attraverso la barra specifica)],[F.1.22] ,[S],
   [T.S.27], [Verificare che l'utente possa chiudere il pannello filtri/informazioni relativo alla barra selezionata],[F.1.23] ,[S],
-  [T.S.28], [Verificare che l'utente possa attivare/disattivare la visualizzazione di un piano parallelo alla base del grafico, rappresentante il valore medio globale],[F.1.24] ,[S],
+  [T.S.28], [Verificare che l'utente possa attivare/disattivare la visualizzazione di un #glossario("piano parallelo alla base") del grafico, rappresentante il valore medio globale],[F.1.24] ,[S],
   [T.S.29], [Verificare che l'utente possa visualizzare solo i dati maggiori della media globale, opacizzando le barre con altezza minore],[F.1.25] ,[S],
   [T.S.30], [Verificare che l'utente possa visualizzare solo i dati minori della media globale, opacizzando le barre con altezza maggiore],[F.1.26] ,[S],
   [T.S.31], [Verificare che l'utente possa selezionare o inserire due valori, _n1_ e _n2_, utili al fine del calcolo del range di visualizzazione],[F.1.27] ,[S],
@@ -338,7 +338,7 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
   [T.S.43], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a selezionare un file .csv con la formattazione interna non corretta],[F.1.37] ,[S],
   [T.S.44], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a caricare dei dati tramite chiamata ad un #glossario("API") esterna che però non ha risposto alla richiesta entro un tempo limite],[F.1.38] ,[S],
   [T.S.45], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a lasciare un input vuoto, quando invece è richiesto obbligatoriamente un valore],[F.3.5 - Opzionale] ,[S],
-  [T.S.46], [Verificare che l'utente venga avvertito graficamente nel caso in cui la connessione al database locale sia fallita],[F.1.39] ,[S],
+  [T.S.46], [Verificare che l'utente venga avvertito graficamente nel caso in cui la connessione al #glossario("database") locale sia fallita],[F.1.39] ,[S],
   [T.S.47], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a selezionare un file .csv con un peso che supera il limite consentito],[F.1.40] ,[S],
   [T.S.48], [Verificare che l'utente possa accedere direttamente alla pagina dell'applicazione senza sistema di login],[F.1.41] ,[S],
   [T.S.49], [Verificare che l'applicazione possa elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l’altezza della barra],[F.1.42] ,[S],
@@ -356,7 +356,7 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
 
 == Test di Accettazione
 
-I test di accettazione hanno lo scopo di verificare che il prodotto sviluppato soddisfi tutte le esigenze e i requisiti concordati con il proponente. Tali test sono stati eseguiti anche in presenza del rappresentate dell'azienda proponente, il quale ha potuto verificare che il prodotto finale fosse conforme a quanto richiesto. \
+I test di accettazione hanno lo scopo di verificare che il prodotto sviluppato soddisfi tutte le esigenze e i requisiti concordati con il #glossario("proponente"). Tali test sono stati eseguiti anche in presenza del rappresentate dell'azienda #glossario("proponente"), il quale ha potuto verificare che il prodotto finale fosse conforme a quanto richiesto. \
 
 _Nella seguente tabella vengono indicati i test di accettazione previsti, con relativo stato._
 
@@ -371,7 +371,7 @@ _Nella seguente tabella vengono indicati i test di accettazione previsti, con re
 a visualizzare il grafico generato] ,[S],
   [T.A.2], [Verificare che l’utente, dopo il caricamento della webapp, visualizzi il menu dedicato alle sezioni per il reperimento dati, per i filtri di visualizzazione e per l'esportazione/salvataggio del grafico],[S],
   [T.A.3], [Verificare che l’utente possa caricare i dati tramite un file .csv],[S],
-  [T.A.4], [Verificare che l’utente possa caricare i dati tramite una connessione ad un database SQL locale],[S],
+  [T.A.4], [Verificare che l’utente possa caricare i dati tramite una connessione ad un #glossario("database") SQL locale],[S],
   [T.A.5], [Verificare che l’utente possa caricare i dati tramite chiamata
 all’API esterna Weather Forecast],[S],
   [T.A.6], [Verificare che l’utente, una volta inseriti i dati, visualizzi le barre
@@ -463,10 +463,10 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.28] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException], [S],
   [T.U.29], [Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException], [S],
   [T.U.30], [Verifica che la funzione resetTarget() imposti il target alla posizione predefinita calcolata da utils.defaultTarget], [S],
-  [T.U.31], [Verifica che il componente Bar.svelte venga renderizzato correttamente senza errori], [S],
-  [T.U.32], [Verifica che il componente BarPane.svelte venga renderizzato correttamente senza errori], [S],
-  [T.U.33], [Verifica che BarPane.svelte venga renderizzato quando displayBarFilter è impostato su true], [S],
-  [T.U.34], [Verifica che BarPane.svelte non venga renderizzato quando displayBarFilter è impostato su false], [S],
+  [T.U.31], [Verifica che il componente Bar.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.32], [Verifica che il componente BarPane.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.33], [Verifica che BarPane.svelte venga #glossario("renderizzato") quando displayBarFilter è impostato su true], [S],
+  [T.U.34], [Verifica che BarPane.svelte non venga #glossario("renderizzato") quando displayBarFilter è impostato su false], [S],
   [T.U.35], [Verifica che le etichette delle informazioni di selezione siano correttamente renderizzate in BarPane.svelte], [S],
   [T.U.36], [Verifica che la funzione resetBarSelection venga chiamata quando viene cliccato il pulsante "Reset selection" in BarPane.svelte], [S],
   [T.U.37], [Verifica che la funzione hideBarFilterPane venga chiamata quando viene cliccato il pulsante "Close" in BarPane.svelte], [S],
@@ -478,7 +478,7 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.43], [Verifica che la funzione resetCamera venga chiamata quando viene cliccato il pulsante "Reset position" in CameraSettings.svelte], [S],
   [T.U.44], [Verifica che la funzione zoomIn venga chiamata quando viene cliccato il pulsante "Zoom In" in CameraSettings.svelte], [S],
   [T.U.45], [Verifica che la funzione zoomOut venga chiamata quando viene cliccato il pulsante "Zoom Out" in CameraSettings.svelte], [S],
-  [T.U.46], [Verifica che il componente Chart.svelte venga renderizzato correttamente senza errori], [S],
+  [T.U.46], [Verifica che il componente Chart.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
   [T.U.47], [Verifica che il componente Color.svelte carichi correttamente tutti gli elementi, inclusi "Color type", "columns", "rows" e "values"], [S],
   [T.U.48], [Verifica che la funzione fetchDbData restituisca i dati corretti se la risposta del fetch è positiva], [S],
   [T.U.49], [Verifica che la funzione fetchDbData lanci un errore se la risposta del fetch non è ok], [S],
@@ -499,11 +499,11 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.64], [Verifica che le funzioni fetchExternal e resetCamera vengano chiamate quando viene cliccato il pulsante "Select API" in DataSource.svelte], [S],
   [T.U.65], [Verifica che le funzioni fetchDb e resetCamera vengano chiamate quando viene cliccato il pulsante "Select DB1" in DataSource.svelte], [S],
   [T.U.66], [Verifica che la funzione uploadFile venga chiamata quando viene cliccato il pulsante "Select CSV" in DataSource.svelte], [S],
-  [T.U.67], [Verifica che il componente Export.svelte venga renderizzato correttamente senza errori], [S],
+  [T.U.67], [Verifica che il componente Export.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
   [T.U.68], [Verifica che tutti i componenti di Export.svelte vengano caricati correttamente, inclusi i testi di "Export as image" e "Screenshot"], [S],
   [T.U.69], [Verifica che la funzione takeScreenshot venga chiamata quando viene cliccato il pulsante "Screenshot" in Export.svelte], [S],
-  [T.U.70], [Verifica che la funzione getValueFromId restituisca il valore corretto per un dato id], [S],
-  [T.U.71], [Verifica che la funzione selectionToggle aggiunga e rimuova correttamente l'id dall'array di selezione], [S],
+  [T.U.70], [Verifica che la funzione getValueFromId restituisca il valore corretto per un dato #glossario("id")], [S],
+  [T.U.71], [Verifica che la funzione selectionToggle aggiunga e rimuova correttamente l'#glossario("id") dall'array di selezione], [S],
   [T.U.72], [Verifica che il valore predefinito venga caricato correttamente nelle impostazioni di filtro], [S],
   [T.U.73], [Verifica che la funzione lastValue restituisca 0 se non ci sono barre selezionate], [S],
   [T.U.74], [Verifica che la funzione lastValue restituisca il valore dell'ultima barra selezionata], [S],
@@ -556,8 +556,8 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.121], [Verifica che la funzione fetchExternal non aggiorni fetchedData se getExternalData restituisce null], [S],
   [T.U.122], [Verifica che la funzione isFirstIntersected restituisca true se l'oggetto è intersecato], [S],
   [T.U.123], [Verifica che la funzione isFirstIntersected restituisca false se l'oggetto non è intersecato], [S],
-  [T.U.124], [Verifica che il componente Scene.svelte venga renderizzato correttamente senza errori], [S],
-  [T.U.125], [Verifica che il componente SettingsPane.svelte venga renderizzato correttamente senza errori], [S],
+  [T.U.124], [Verifica che il componente Scene.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.125], [Verifica che il componente SettingsPane.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
   [T.U.126], [Verifica che tutti i componenti di SettingsPane.svelte vengano caricati correttamente, inclusi i testi di "Settings", "Camera", "Source", "Filter", "Color" e "Export"], [S],
   )
     <tab:testdiunita>
