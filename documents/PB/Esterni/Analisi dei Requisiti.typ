@@ -8,7 +8,7 @@
   outline_depth: 3,
   heading_numbers: none,
   changelog: (
-    "1.2.0", "14-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali. Aggiornamento tabelle riepilogo requisiti", p.pozzobon,(p.lucato),
+    "1.2.0", "15-04-2025", "Modifica UC funzionalità al click barra, sistemazione descrizioni e numerazione. Aggiornamento UML con nuova numerazione. Aggiornamento riferimento paragrafi e sistemazione numerazione e descrizione req. funzionali. Aggiornamento tabelle riepilogo requisiti", p.pozzobon,(p.lucato,p.checchinato),
     "1.1.1", "21-03-2025", "Correzione sezione tecnologie", p.checchinato,(p.salvo, p.valdagno),
     "1.1.0", "04-03-2025", "Sistemazione UC post RTB", (p.checchinato,p.pozzobon), (p.pesenato,p.salvo),
     "1.0.0", "09-02-2025", "Revisione per incontro RTB", p.valdagno, (p.pozzobon,p.lucato),
