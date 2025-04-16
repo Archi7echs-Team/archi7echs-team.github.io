@@ -20,7 +20,7 @@ _A seguito della fine del quarto periodo della fase #glossario("PB"), il gruppo 
 
 = Dettagli dell'incontro
 
-*Data e ora convocazione* Giovedì 25/03/2025 - ore 14.30 \
+*Data e ora convocazione* Giovedì 03/04/2025 - ore 14.30 \
 
 *Luogo* Online - #glossario("Piattaforma") #glossario("Discord") \
 
@@ -28,7 +28,7 @@ _A seguito della fine del quarto periodo della fase #glossario("PB"), il gruppo 
 
 = Verbale
 
-L'incontro inizia, come da programma alle ore 16.00. Sono presenti tutti i membri del team:
+L'incontro inizia, come da programma alle ore 14.30. Sono presenti tutti i membri del team:
 - #p.checchinato
 - #p.lucato
 - #p.pesenato
