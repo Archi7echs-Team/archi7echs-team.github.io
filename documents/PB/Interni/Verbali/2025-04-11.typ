@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "14-03-2025",  "Prima stesura documento", p.salvo,(""),
+    "0.1.0", "14-03-2025",  "Prima stesura documento", p.salvo,(p.pozzobon),
   )
 )
 
@@ -56,7 +56,7 @@ L'incontro inizia, come da programma alle ore 15.00. Sono presenti tutti i membr
 \
 #p.pesenato illustra la fine della sezione back-end del documento Specifica Tecnica completando la macro-sezione riguardante il back-end.
 \
-#p.pozzobon illustra i cambiamenti effettuati nei documenti AdR e PdQ necessari a seguito di nuove funzionalità aggiunte nel MVP.
+#p.pozzobon illustra i cambiamenti effettuati nei documenti AdR e PdQ, resi necessari a seguito di nuove funzionalità aggiunte nel MVP.
 \
 #p.salvo illustra il documento Manuale Utente redatto durante il periodo.
 \
