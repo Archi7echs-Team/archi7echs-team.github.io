@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.0.0", "14-04-2025", "Approvazione per PB", (p.salvo),"",
+    "1.0.0", "16-04-2025", "Revisione per incontro PB", (p.salvo),(p.valdagno),
     "0.6.0", "12-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(p.valdagno,p.lucato),
     "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
