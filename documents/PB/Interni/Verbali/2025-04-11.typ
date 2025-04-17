@@ -7,7 +7,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "14-03-2025",  "Prima stesura documento", p.salvo,(p.pozzobon),
+    "0.1.0", "17-03-2025",  "Prima stesura documento", p.salvo,(p.checchinato,p.pozzobon),
   )
 )
 
@@ -77,7 +77,7 @@ Essendo la fine del undicesimo #glossario("periodo"), si procede alla definizion
     [#glossario("Analista")],[#p.pesenato],
     [#glossario("Programmatore")],[#p.salvo],
     [#glossario("Verificatore")],[#p.scandaletti, #p.valdagno \ #p.pozzobon, #p.salvo],
-    [#glossario("Progettista")],[],
+    [#glossario("Progettista")],[_non presente_],
 )
 Il ruolo del #glossario("Progettista") non è stato assegnato a nessun membro in quanto non necessario in questo periodo di revisione finale.
 
@@ -86,6 +86,8 @@ Successivamente i membri del team presenti si scambiano i compiti e le informazi
 == Varie ed eventuali
 Il gruppo ricorda l'incontro con l'azienda proponente in data 15/04/2025. \
 Si convoca il prossimo incontro per la settimana seguente ad orario da stabilire per discutere di quanto svolto durante la settimana.
+
+#pb();
 
 = Decisioni
 
