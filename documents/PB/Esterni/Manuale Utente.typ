@@ -8,6 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "0.2.0", "17-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (""),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
   ),
 )
