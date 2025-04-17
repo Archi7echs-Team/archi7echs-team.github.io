@@ -32,49 +32,129 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 
 #pb()
 
-= Download del repository relativo al codice sorgente <download_repo>
-Per scaricare il codice sorgente relativo al progetto si puo scaricare la cartella zip presente nel seguente repository al link: //INSERIRE LINK RELEASE 
-\
-Alternativamente, se si ha installato il sistema di versionamento Git si puo effettuare la clonazione del repository digitando il comando: _git clone https://github.com/Archi7echs-Team/MVP.git _
+= Requisiti
 
-= Spiegazione file codice sorgente
-Se il repository non è stato clonato o scaricato si segua la sezione _Download del repository relativo al codice sorgente_ (@download_repo) per scaricare il codice sorgente.\
-== Spiegazione dei principali file back-end presenti nei sorgenti
-I sorgenti relativi alla parte del back-end si trovano dentro la cartella _backend_ della repository clonata o scaricata. 
-=== docker-compose.yml
-Il file _docker-compose.yml_ è il file utilizzato da Docker Compose, usato per definire e gestire i servizi di un'applicazione Docker. In esso sono specificati i servizi che compongono la parte back-end dell'applicazione:
-- Servizio _db_: avvia il database postgres e lo inizializza
-- Servizio _test_: verifica che l'applicazione back-end dia esito positivo su tutti i test
-- Servizio _app_: effettua la build dell'applicazione back-end e configura il collegamento tra database e il back-end 
-- Servizio _frontend_: effettua la build dell'applicazione front-end 
-=== Dockerfile
-Il file _Dockerfile_ è utilizzato dal servizio _app_ per effettuare la build dell'applicazione back-end
-=== pom.xml
-Il file _pom.xml_ è il file utilizzato durante la compilazione tramite Apache Maven per definire come costruire il progetto, quali dipendenze sono presenti e quali plugin usare.
-== Spiegazione dei principali file front-end presenti nei sorgenti
-I sorgenti relativi alla parte del front-end si trovano dentro la cartella _app_ della repository clonata o scaricata.
-=== package.json
-Il file _package.json_ è il file che definisce le dipendenze, i comandi e le informazioni del progetto JavaScript.
-=== svelte.config.js
-Il file _svelte.config.js_ è il file di configurazione di un progetto SvelteKit. Dice ad esso come compilare, pre-processare e distribuire il progetto.
-=== vite.config.ts
-Il file _vite.config.ts_ è il file di configurazione di Vite che specifica quali strumenti usare, come comportarsi durante la fase di build e che test eseguire.
-=== playwright.config.ts
-Il file _playwright.config.ts_ è il file di configurazione di playwright che specifica quali test effettuare e su quali browser.
+Per garantire il corretto funzionamento dell'applicativo sviluppato, è necessario che l'ambiente in cui viene eseguito soddisfi determinati requisiti tecnici, sia dal punto di vista hardware che software.
 
+== Requisiti hardware
+
+Nonostante l'applicazione sia eseguita tramite container Docker, e quindi indipendente dal sistema operativo ospitante, si raccomanda l’utilizzo di un sistema con le seguenti caratteristiche minime:
+
+- *CPU*: Dual-core con frequenza ≥ 1.5 GHz
+- *RAM*: Almeno 4 GB
+- *Spazio su disco*: Minimo 10 GB di spazio libero
+
+== Requisiti software
+
+È necessario che il sistema sia dotato dei seguenti strumenti:
+
+- *Docker Engine*: versione ≥ 20.10
+- *Docker Compose*: versione ≥ 1.29 oppure 
+- *Docker Desktop* in alternativa
+- *Browser compatibili* (per l’interfaccia utente):
+  - Google Chrome (v.89 o superiore)
+  - Mozilla Firefox (v.86 o superiore)
+  - Safari (v.14 o superiore)
+  - Microsoft Edge (v.89 o superiore)
 #pb()
+= Ottenere il codice sorgente <download_repo>
 
-= Eseguire l'applicazione
-== Requisiti tecnici necessari per l'avvio dell'applicazione
-Il dispositivo deve aver installato Docker e Docker Compose o Docker Desktop per la gestione di applicazioni Docker multi-container. Di seguito la guida ufficiale per l'installazione: #link("https://docs.docker.com/engine/install")[#text(blue)[https://docs.docker.com/engine/install]]
-== Istruzioni per l'avvio dell'applicazione <istruzioni_avvio>
-Se si è in possesso del codice sorgente dell'applicazione e i requisiti tecnici sono stati soddisfatti si può procedere all'avvio dell'applicazione tramite il comando: ```bash docker compose up --build ``` in un terminale localizzato nella root directory del codice sorgente.\
-== Istruzioni per lo spegnimento dell'applicazione
-Se si è avviata l'applicazione seguendo la sezione _Istruzioni per l'avvio dell'applicazione_  (@istruzioni_avvio), si potrà terminare l'applicazione usando il comando: ```bash docker compose down -v ```  in un terminale localizzato nella root directory del codice sorgente.\
+Il codice sorgente dell’applicativo può essere ottenuto in due modi:
+
+- Scaricando direttamente il file `.zip` dalla sezione *Release* del repository GitHub
+- Clonando il repository tramite Git, se installato nel sistema: ```bash git clone https://github.com/Archi7echs-Team/MVP.git```
+
+
+== Installazione tramite Release
+Per installare l’applicativo tramite il file `.zip`, è necessario:
+1. Recarsi al link della repo: #link("https://github.com/Archi7echs-Team/MVP", text(blue)[https://github.com/Archi7echs-Team/MVP])
+2. Cliccare sulla sezione *Release* e scaricare l’ultima versione disponibile
+#figure(
+  image("/img/mu/repoPage.png", width: 110%),
+  caption: [Pagina della repository in GitHub],
+) <imgREPOPAGE>
+#figure(
+  image("/img/mu/downloadRelease.png", width: 110%),
+  caption: [Pagina di GitHub per scaricare la release],
+) <imgREPOPAGE>
+3. Scaricare il file `.zip` e salvarlo in una cartella a scelta
+4. Estrarre il file `.zip` in una cartella a scelta
+
+
+= Configurazione e personalizzazione del sistema
+
+Questa sezione è dedicata alla spiegazione delle operazioni necessarie per configurare il sistema in modo flessibile, definendo parametri personalizzati tramite il file `.env` e modificando eventuali impostazioni nel `docker-compose.yml`. Inoltre, si forniscono le istruzioni per la build manuale dei servizi e la gestione dell’avvio o arresto dell’applicativo.
+
+== Creazione del file .env
+
+Il file `.env` contiene le variabili d’ambiente utilizzate dai container per configurare in modo dinamico alcuni parametri. Alla prima esecuzione, è necessario creare questo file nella directory principale del progetto, accanto al file `docker-compose.yml`.
+
+Un esempio base di contenuto potrebbe essere:
+
+```env 
+POSTGRES_USER=youruser
+POSTGRES_PASSWORD=yourpassword
+POSTGRES_DB=yourdb
+SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/yourdb
+SPRING_DATASOURCE_USERNAME=youruser
+SPRING_DATASOURCE_PASSWORD=yourpassword
+TESTCONTAINERS_HOST_OVERRIDE=host.docker.internal```
+Tutte le variabili definite in questo file verranno automaticamente caricate e rese disponibili all’interno dei container definiti nel docker-compose.yml.
+
+== Personalizzazione dei servizi
+
+Il sistema è stato progettato per supportare una configurazione modulare. I servizi dichiarati nel file docker-compose.yml possono essere attivati o disattivati in base alle esigenze locali, tenendo conto delle dipendenze tra componenti.
+
+=== Servizi principali
+
+I seguenti servizi sono fondamentali per l'avvio del sistema completo:
+- *db*: istanza PostgreSQL per la persistenza dei dati;
+- *app*: backend sviluppato in Java con Spring Boot;
+- *frontend*: interfaccia utente Svelte.
+
+Questi tre servizi devono essere sempre inclusi, salvo configurazioni particolari.
+
+=== Servizi opzionali
+
+Altri servizi definiti nel docker-compose.yml (es. test) possono essere commentati o modificati. Si *raccomanda* però di controllare che non siano elencati come dipendenze (depends_on) in altri container attivi, per evitare errori di avvio.
+
+== Build del sistema <build_sistema>
+
+Durante lo sviluppo o dopo modifiche locali al codice, è possibile (e consigliabile) rigenerare le immagini Docker per assicurarsi che siano aggiornate.
+
+Per forzare una ricostruzione completa dei servizi: ```bash docker compose build --no-cache```
+
+In alternativa, la build può essere eseguita contestualmente all’avvio: ```bash docker compose up --build```
+
+== Avvio del sistema
+
+Con il file .env correttamente configurato e i file di composizione Docker pronti, è possibile avviare il sistema con: ```bash docker compose up -d --build```
+
+_L'opzione -d avvia i container in background. In caso si desideri mantenere visibili i log, omettere -d._
+
+== Spegnimento del sistema
+
+Per arrestare l’intera infrastruttura, mantenendo però i volumi dati si deve eseguire il seguente comando: ```bash docker compose down```
+
+Se si desidera rimuovere anche i volumi associati (ad esempio per un reset completo del database): ```bash docker compose down -v```. 
+In questo caso, il database verrà ricreato alla successiva esecuzione del sistema, ma tutti i dati precedentemente memorizzati andranno persi.
+
+== Ripristino completo del sistema
+
+In caso si voglia effettuare un ripristino completo (ad esempio dopo modifiche di configurazione o problemi persistenti), eseguire:
+```bash docker compose down -v --remove-orphans && docker compose up -d --build``` 
+
+Questa sequenza rimuove container, volumi e container orfani, per poi rigenerare tutto da zero.
+
+== Note sulla gestione delle variabili
+Durante l’uso del file .env, è importante ricordare:
+- Evitare duplicazioni di variabili tra .env e il docker-compose.yml: prevale quella definita nel file di composizione.
+- I cambiamenti nel .env richiedono il riavvio dei container per essere effettivi
+*IMPORTANTE*: la variabile _TESTCONTAINERS_HOST_OVERRIDE_ deve essere impostata a _host.docker.internal_ per garantire la corretta comunicazione tra i container e il sistema host *_SOLO PER WINDOWS E MACOS_*. In Linux, questa variabile non è necessaria e può essere omessa. 
 
 #pb()
 = Guida all'uso di 3Dataviz
-Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione _Avvio dell'applicazione_ (@istruzioni_avvio)
+Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
 == Schermata principale
 All'avvio del sito ci si troverà davanti un grafico di default utile per interagire direttamente con l'applicazione per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
 #figure(
