@@ -172,3 +172,115 @@ In basso a sinistra nella schermata principale troviamo il gizmo, spesso present
   image("/img/mu/gizmo.jpg", width: 30%),
   caption: [Gizmo],
 ) <imgGIZMO>
+
+#pb();
+
+= Riferimento uso API
+
+== GET `/api/coordinates`
+
+=== Descrizione
+
+Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salvati all'interno del database. Restituisce le etichette univoche per gli assi X e Z e una matrice bidimensionale contenente i valori Y corrispondenti a ciascuna combinazione di etichette X e Z, pronta per essere utilizzata in visualizzazioni come mappe di calore.
+
+=== Parametri
+
+- *`datasetType`* (_Stringa, Opzionale_):
+  - *Scopo:* Permette di filtrare i dati e selezionare un specifico sottoinsieme di coordinate dal database.
+  - *Valori Accettati:* `SMALL`, `MEDIUM`, `LARGE`.
+  - *Default:* Se questo parametro viene omesso nella richiesta, il sistema utilizzerà automaticamente il valore `"LARGE"` per recuperare il set di dati predefinito.
+
+=== Esempi di utilizzo
+
+- *Richiesta per il dataset di default (LARGE)*
+  ```http
+  GET /api/coordinates
+  ```
+
+- *Richiesta per un dataset specifico (es. SMALL)*
+  ```http
+  GET /api/coordinates?datasetType=SMALL
+  ```
+
+== POST `/api/uploadCsv`
+
+=== Descrizione
+
+Questo endpoint permette di caricare un file CSV contenente dati di coordinate (x, y, z). Il file viene analizzato (parsato) dal server e, se valido, i dati vengono restituiti nel formato `MatrixData`, pronti per essere visualizzati come una matrice o una mappa di calore.
+
+=== Formato richiesta
+- *Metodo:* `POST`
+- *Content-Type:* `multipart/form-data`
+- *Corpo richiesta:* Deve includere una form-data chiamata `file` contenente il file CSV.
+
+=== Formato del file CSV richiesto
+
+Il file CSV deve seguire una struttura specifica per essere interpretato correttamente:
+
+1.  *Cella A1 (Riga 1, Colonna 1):* Viene ignorata. Può essere vuota o contenere qualsiasi testo.
+2.  *Prima Riga (da B1 in poi):* Contiene le etichette per l'asse X (es. `X Label 1`, `X Label 2`, ...).
+3.  *Prima Colonna (da A2 in poi):* Contiene le etichette per l'asse Z (es. `Z Label 1`, `Z Label 2`, ...).
+4.  *Celle Interne (da B2 in poi):* Contengono i valori numerici (Y) corrispondenti all'incrocio tra l'etichetta Z della riga e l'etichetta X della colonna.
+
+*Esempio di struttura CSV:*
+```csv
+,X Label 1,X Label 2,X Label 3
+Z Label 1,10.5,12.1,15.3
+Z Label 2,9.8,11.5,14.2
+Z Label 3,10.1,11.9,15.0```
+
+=== Vincoli e validazioni
+
+Il file CSV caricato deve rispettare i seguenti vincoli, altrimenti verrà restituito un errore:
+
+- *Tipo di File*: Deve essere un file CSV valido (text/csv).
+- *Dimensione Massima*: La dimensione del file non deve superare il limite di 10MB
+- *Contenuto*:
+  - Nessuna cella (tranne A1) può essere vuota.
+  - I valori Y (nelle celle interne) devono essere numeri validi (interi o decimali).
+  - Per ogni etichetta degli assi X e Z deve esserci un valore Y corrispondente.
+  - Il numero di righe e colonne è limitato a 300.
+  - Il numero totale di punti dati (Y values) è limitato a 1000.
+- *Struttura*: Deve contenere almeno una riga di header X e una riga di dati Z/Y.
+=== Risposta successo (HTTP 200 OK)
+
+Se il file CSV è valido e rispetta tutti i vincoli, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
+=== Risposta errore
+
+In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP di errore, tipicamente:
+
+  - *HTTP 400 Bad Request*: Se il file non è un CSV valido, ha un formato errato, contiene celle vuote non permesse, valori non numerici, struttura inconsistente, o supera i limiti dimensionali (righe/colonne/punti dati). Il corpo della risposta contiene un messaggio di errore dettagliato.
+  - *HTTP 413 Payload Too Large*: Se il file supera il limite massimo di dimensione (es. 10 MB).
+
+=== Esempio di utilizzo
+```bash
+curl -X POST -F "file=@/percorso/del/file.csv" http://localhost:8080/api/uploadCsv
+```
+== GET /api/external/data
+=== Descrizione
+
+Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo caso un servizio di previsioni meteo come Open-Meteo. Non richiede alcun parametro dall'utente. Il servizio backend contatta l'API esterna, ne interpreta la risposta (che si aspetta sia in formato JSON e segua una certa struttura, come quella di Open-Meteo con dati orari) e la trasforma nel formato standard `MatrixData` per la visualizzazione.
+
+=== Parametri
+
+Nessun parametro richiesto per questo endpoint. La sorgente dati e gli eventuali parametri per l'API esterna sono configurati nel backend.
+
+=== Risposta successo (HTTP 200 OK)
+
+Se la comunicazione con l'API esterna ha successo e la risposta viene interpretata correttamente, l'API risponde con uno stato `HTTP 200 OK` e un corpo JSON contenente l'oggetto `MatrixData`.
+
+=== Risposta errore
+
+Possono verificarsi diversi errori durante il tentativo di recuperare o processare i dati esterni. L'API risponderà tipicamente con uno stato HTTP di errore della serie 5xx, indicando un problema nel backend o nella comunicazione con il servizio esterno:
+
+- HTTP 5xx (es. 500 Internal Server Error, 502 Bad Gateway, 504 Gateway Timeout):
+  - Problemi di rete o impossibilità di raggiungere il servizio esterno configurato.
+  - Timeout scaduto durante l'attesa della risposta dal servizio esterno (basato sulla configurazione external.api.timeout).
+  - Il servizio esterno ha restituito un errore.
+  - La risposta ricevuta dal servizio esterno non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
+  - La risposta ricevuta, seppur valida, contiene un numero di punti dati superiore al limite massimo configurato nel backend (nel nostro caso 1000).
+
+=== Esempio di utilizzo
+```bash
+curl -X GET http://localhost:8080/api/external/data
+```
