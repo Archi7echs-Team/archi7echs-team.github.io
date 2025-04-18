@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.6.0","18-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,"",
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
@@ -283,6 +284,34 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 ]
  #align(center)[Tabella 4: Valori accettabili e preferibili per le metriche di #glossario("funzionalità").] 
 
+==== MPD1 - ROBS
+
+#figure(
+  image("/img/pdq/PB/MPD1.png", width: 80%),
+  caption: [MPD1 - ROBS],
+) <imgMPD1_fasePB>
+
+*#glossario("PB")*:   Il grafico mostra che, a partire dal periodo 7, con l'inizio della fase,  si osserva una rapida crescita nel numero di requisiti soddisfatti, con un’accelerazione marcata tra i periodi 8 e 10. Il valore si stabilizza infine al massimo raggiunto nei periodi 11 e 12, indicando il pieno raggiungimento degli obiettivi prefissati. Questo andamento evidenzia una strategia di sviluppo concentrata in fasi successive e una buona capacità di recupero, con una chiusura efficace delle funzionalità obbligatorie entro la scadenza progettuale.
+
+==== MPD2 - RDS
+
+#figure(
+  image("/img/pdq/PB/MPD2.png", width: 80%),
+  caption: [MPD2 - RDS],
+) <imgMPD2_fasePB>
+
+*#glossario("PB")*:   Il grafico mostra che è stato soddisfatto uno tra i requisiti desiderabili. Tale implementazione si è svolta nel periodo 11, dopo essersi accertati di aver soddisfatto completamente i requisiti obbligatori.
+
+==== MPD3 - ROPS
+
+#figure(
+  image("/img/pdq/PB/MPD3.png", width: 80%),
+  caption: [MPD3 - ROPS],
+) <imgMPD3_fasePB>
+
+*#glossario("PB")*:   Da come si evince nel grafico non sono stati implementati requisiti opzionali.
+
+
 === Affidabilità
 #align(center)[
   #table(
@@ -300,6 +329,23 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
     <tab:metricheAffidabilità>
 ]
  #align(center)[Tabella 5: Valori accettabili e preferibili per le metriche di affidabilità.] 
+
+ ==== MPD4 - Code Coverage
+#figure(
+  image("/img/pdq/PB/MPD4.png", width: 80%),
+  caption: [MPD4 - CC],
+) <imgMPD4_fasePB>
+
+*#glossario("PB")*:  Il grafico mostra un andamento inizialmente stazionario, con una copertura del codice nulla nei primi sei periodi, in quanto la fase di effettiva codifica non era prevista dalla fase precedente. A partire dal periodo 7 si assiste  a una crescita rapida e costante della code coverage, che supera la soglia dell’80% entro il periodo 11. Questo comportamento suggerisce una fase iniziale di impostazione e sviluppo del codice seguita da un’intensa attività di testing e validazione, che ha permesso di raggiungere e superare il valore target. L’incremento progressivo evidenzia un miglioramento nella qualità del software e una crescente attenzione alla copertura dei test.
+
+==== MPD8 - Branch Coverage
+#figure(
+  image("/img/pdq/PB/MPD8.png", width: 80%),
+  caption: [MPD8 - BC],
+) <imgMPD8_fasePB>
+
+*#glossario("PB")*: Il grafico evidenzia un andamento simile a quello della Code Coverage, con valori nulli nei primi sei periodi e un significativo incremento a partire dal periodo 7. In pochi intervalli la branch coverage supera la soglia dell’80%, raggiungendo un livello prossimo al 100% entro il periodo 11. Questo rapido miglioramento suggerisce una fase di testing intensivo e mirato all’identificazione e verifica di tutte le diramazioni del codice, indicativo di un elevato livello di attenzione alla qualità e affidabilità del software. Il raggiungimento di tali valori testimonia un’evoluzione matura del processo di verifica
+
 
 === Usabilità
 #align(center)[
