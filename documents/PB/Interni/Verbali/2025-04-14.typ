@@ -77,11 +77,11 @@ Si convoca il prossimo incontro per la settimana seguente ad orario da stabilire
 
 #todo((
   (336,), (p.salvo), [VI: scrittura #glossario("verbale interno") del 14/04/2025],
-  (339,), (p.salvo), [Revisione finale #glossario("PdP") per #glossario("PB")],
-  (340,), (p.salvo), [Revisione finale #glossario("PdQ") per #glossario("PB")],
-  (341,), (p.salvo), [Revisione finale #glossario("NdP") per #glossario("PB")],
-  (342,), (p.salvo), [Revisione finale #glossario("Glossario") per #glossario("PB")],
-  (343,), (p.salvo), [Revisione finale #glossario("MU") per #glossario("PB")],
+  (339,), (p.checchinato), [Revisione finale #glossario("PdP") per #glossario("PB")],
+  (340,), (p.pozzobon), [Revisione finale #glossario("PdQ") per #glossario("PB")],
+  (341,), (p.valdagno), [Revisione finale #glossario("NdP") per #glossario("PB")],
+  (342,), (p.checchinato), [Revisione finale #glossario("Glossario") per #glossario("PB")],
+  (343,), (p.lucato), [Revisione finale #glossario("MU") per #glossario("PB")],
 ))
 
 _Per il dettaglio delle decisioni si rimanda al punto dell'#glossario("OdG")._
