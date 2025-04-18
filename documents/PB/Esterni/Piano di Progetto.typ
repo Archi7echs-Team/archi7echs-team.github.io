@@ -2001,5 +2001,42 @@ Grazie a una gestione attenta delle attività e a una pianificazione coerente de
   ]
 ]
 
+#pb()
+
 == Resoconto finale
-Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*.
+Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Ecco un riepilogo delle ore e dei costi sostenuti durante il progetto:
+
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*],[*Costo/h*], [*Ore*], [*Costo Ruolo*]), 
+      [Responsabile],[€ 30],[67.25],[€ #(30*67.25)],
+      [Amministratore],[€ 20],[77.75],[€ #(20*77.75)],
+      [Verificatore],[€ 15],[113.75],[€ #(15*113.75)],
+      [Progettista],[€ 25],[92],[€ #(25*92)],
+      [Programmatore],[€ 15],[203.5],[€ #(15*203.5)],
+      [Analista],[€ 25],[€ 75.75],[€ #(25*75.75)],
+    )
+  ]
+]
+
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto),
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*],[*Ore totali*]), 
+      [#p.checchinato],[92.75],
+      [#p.lucato],[91],
+      [#p.pesenato],[92],
+      [#p.pozzobon],[91],
+      [#p.salvo],[85],
+      [#p.scandaletti],[87],
+      [#p.valdagno],[91.25],
+    )
+  ]
+]
