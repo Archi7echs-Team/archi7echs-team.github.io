@@ -2,12 +2,12 @@
 
 #show: conf.with(
   title: "Verbale incontro 14/04/2025",
-  subtitle: "Documento interno - verbale nr. 22",
+  subtitle: "Documento interno - verbale nr. 24",
   author: p.salvo,
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "15-03-2025",  "Prima stesura documento", p.salvo,(p.lucato),
+    "0.1.0", "18-03-2025",  "Prima stesura documento", p.salvo,(p.checchinato,p.lucato),
   )
 )
 
