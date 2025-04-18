@@ -8,7 +8,7 @@
           outline_depth: 1,
           heading_numbers: none,
           changelog: (
-            "1.1.0","17-04-2025","Aggiunta termini e definizioni", p.checchinato, (""),
+            "1.1.0","18-04-2025","Aggiunta termini e definizioni", p.checchinato, (p.valdagno),
             "1.0.0","09-02-2025","Revisione per incontro RTB", p.salvo, (p.pozzobon,p.lucato),
             "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
             "0.1.3","07-01-2025","Aggiunta definizione di unità", p.pozzobon, (p.pesenato, p.scandaletti),
@@ -61,14 +61,14 @@
         - Analisi dei requisiti 
         Processo fondamentale nello sviluppo di un software. Prevede la raccolta, l'analisi e la definizione delle esigenze di un sistema o software, espresse o implicite degli stakeholder o degli utenti, e mira a identificare e documentare ciò che un sistema (o software) deve fare per soddisfare gli obiettivi di progetto.
 
-        - Analista 
-        Figura professionale che si occupa dell'analisi dei requisiti, della progettazione e dello sviluppo del software. L'analista è responsabile di raccogliere le informazioni necessarie, documentare le esigenze e garantire che il sistema finale soddisfi le aspettative degli utenti.
-
         - Analisi dinamica 
         Tecnica di analisi del software che esamina il comportamento del sistema durante l'esecuzione, in particolare per identificare errori, inefficienze o vulnerabilità che potrebbero emergere solo in fase di esecuzione.
 
         - Analisi statica 
         Tecnica di analisi del software che esamina il codice sorgente senza eseguirlo. Utilizzata per identificare errori, vulnerabilità o inefficienze nel codice, spesso prima che il sistema venga messo in produzione.
+
+        - Analista 
+        Figura professionale che si occupa dell'analisi dei requisiti, della progettazione e dello sviluppo del software. L'analista è responsabile di raccogliere le informazioni necessarie, documentare le esigenze e garantire che il sistema finale soddisfi le aspettative degli utenti.
 
         - API  
         Acronimo di Application Programming Interface, un insieme di regole e protocolli che consentono a diverse applicazioni software di comunicare tra loro, semplificando         l'integrazione.
@@ -296,14 +296,14 @@
         #pb();
 
         = M
+        - Manuale utente 
+        Documento che fornisce istruzioni dettagliate su come utilizzare e installare un'applicazione o un sistema. Il manuale utente descrive le funzionalità principali, le operazioni da eseguire, i requisiti di sistema, i passi per l'installazione, e le eventuali risoluzioni di problemi comuni, al fine di facilitare l'interazione dell'utente con il prodotto.
+
         - Milestone
         Termine che indica un evento significativo o un punto di riferimento importante nel ciclo di vita di un progetto. Le milestone rappresentano momenti chiave che segnano il completamento di una fase, un obiettivo intermedio o una decisione critica, sono utili per monitorare il progresso rispetto alla pianificazione del progetto.
 
         - Minimum Viable Product 
         L'MVP è una versione preliminare di un prodotto che include solo le caratteristiche essenziali per soddisfare i primi utenti. L'obiettivo di un MVP è testare il mercato e raccogliere feedback, riducendo al minimo il rischio e il tempo di sviluppo.
-
-        - Manuale utente 
-        Documento che fornisce istruzioni dettagliate su come utilizzare e installare un'applicazione o un sistema. Il manuale utente descrive le funzionalità principali, le operazioni da eseguire, i requisiti di sistema, i passi per l'installazione, e le eventuali risoluzioni di problemi comuni, al fine di facilitare l'interazione dell'utente con il prodotto.
 
         - MU
         Acronimo di _Manuale Utente_
@@ -314,12 +314,11 @@
         #pb();
         
         = N
+        - NdP
+        Acronimo di Norme di Progetto.
 
         - Node.js 
         Ambiente di esecuzione JavaScript lato server basato sul motore V8 di Google Chrome. Node.js permette di eseguire JavaScript al di fuori di un browser, rendendolo ideale per sviluppare applicazioni web ad alte prestazioni e scalabili. Utilizza un modello di I/O non bloccante e orientato agli eventi, che lo rende particolarmente adatto per gestire applicazioni real-time e server di rete.
-
-        - NdP
-        Acronimo di Norme di Progetto.
 
         - Norme di Progetto
         Documento che definisce le regole, procedure e linee guida che disciplinano le attività di un progetto, garantendone coerenza e qualità.
@@ -506,14 +505,11 @@
         - Sistema di ticketing 
         Strumento per la gestione delle richieste e dei problemi, che assegna un identificativo unico (ticket) per ogni attività da tracciare e risolvere.
 
-        - Sorgente dati 
-        Origine da cui vengono estratti dati per analisi o applicazioni.
-
         - Software 
         Insieme di programmi, applicazioni e istruzioni che permettono a un computer o a un altro dispositivo elettronico di eseguire specifiche funzioni o operazioni. Il software può essere di vari tipi, tra cui sistemi operativi, applicazioni, giochi, utility e programmi di gestione. A differenza dell'hardware, il software è intangibile e viene eseguito dal dispositivo per farlo operare secondo le necessità dell'utente.
 
-        - ST 
-        Sigla del documento Specifica Tecnica
+        - Sorgente dati 
+        Origine da cui vengono estratti dati per analisi o applicazioni.
 
         - Spring 
         Framework Java per lo sviluppo di applicazioni enterprise, modulare e basato su inversione di controllo.
@@ -524,20 +520,23 @@
         - SQL 
         Acronimo di _Structured Query Language_, linguaggio standard per interagire con database relazionali.
 
+        - ST 
+        Sigla del documento Specifica Tecnica
+
         - Standard 
         Insieme di regole o specifiche condivise per garantire qualità, interoperabilità e coerenza nei processi o nei prodotti.
 
         - Statement Coverage 
         Metodologia di testing che verifica l'esecuzione di ogni singola istruzione nel codice almeno una volta.
 
-        - Stub 
-        Componente software utilizzata nei test per simulare il comportamento di moduli esterni o non ancora sviluppati.
-
         - Strumenti 
         Software o risorse utilizzati per supportare attività di sviluppo, test, analisi o gestione del progetto.
 
         - Structural Coverage 
         Tecnica di testing che misura la copertura del codice in base alla struttura interna del programma (es. rami, condizioni, istruzioni).
+      
+        - Stub 
+        Componente software utilizzata nei test per simulare il comportamento di moduli esterni o non ancora sviluppati.
 
         - Svelte 
         Framework JavaScript per lo sviluppo di interfacce utente che compila i componenti in codice altamente ottimizzato senza utilizzare un Virtual DOM.
