@@ -107,6 +107,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC1 - SA],
 ) <imgMPC1_fasePB>
 
+*#glossario("PB")*:  Durante questa fase si osserva una continuità nel mantenimento di un elevato livello di Schedule Adherence, con valori costantemente sopra la soglia accettabile e in linea con il target ottimale. Questo andamento stabile evidenzia una buona maturità del team nel rispettare le scadenze pianificate, frutto dell’esperienza accumulata nelle fasi precedenti e del consolidamento delle pratiche di lavoro efficaci introdotte nel tempo.
+
  ==== MPC2 - Earned Value e Planned Value
 
  #figure(
@@ -119,6 +121,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/PB/MPC2-3.png", width: 80%),
   caption: [MPC1 - SA],
 ) <imgMPC2-3_fasePB>
+
+*#glossario("PB")*: Il grafico evidenzia un progressivo allineamento tra il valore guadagnato (EV) e quello pianificato (PV), con una distanza iniziale tra le due curve che tende a ridursi man mano che i periodi avanzano. Nell’ultima parte, le due curve risultano quasi sovrapposte, indicando una gestione più efficiente delle attività e una capacità crescente del team nel rispettare i piani previsti, sia in termini di tempi che di risultati attesi.
 
 
 ==== MPC4 - Schedule Variance
@@ -133,6 +137,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/PB/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
 ) <imgMPC4_fasePB>
+
+*#glossario("PB")*: In questa fase si evidenzia un netto miglioramento rispetto ai periodi iniziali: la Schedule Variance, che in precedenza mostrava valori negativi dovuti a ritardi, si stabilizza su uno zero costante a partire dal periodo 6. Questo indica un perfetto allineamento tra le attività pianificate e quelle effettivamente svolte, segno di una maturazione del processo di pianificazione e di esecuzione da parte del team, nonché di un’efficace gestione dei carichi e delle scadenze.
 
 
 ==== MPC5 - Actual Cost
@@ -149,6 +155,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC5 - AC],
 ) <imgMPC5_fasePB>
 
+*#glossario("PB")*: Durante questa si nota un incremento costante e progressivo del costo effettivamente sostenuto. Sebbene il trend di crescita dell’Actual Cost rimanga sotto controllo, il raggiungimento del valore target verso la fine del periodo suggerisce un’intensificazione degli sforzi, e quindi delle risorse impiegate, per garantire il completamento delle attività secondo la pianificazione. Tale sprint è frutto del lavoro full-time dedicato al progetto dai membri del team.
+
 
 ==== MPC6 - Cost Performance Index
 
@@ -162,6 +170,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/PB/MPC6.png", width: 80%),
   caption: [MPC6 - CPI],
 ) <imgMPC6_fasePB>
+
+*#glossario("PB")*: Durante tutta la fase PB, il Cost Performance Index si mantiene costantemente sul valore ottimale pari a 1, indicando un perfetto equilibrio tra costi sostenuti e valore guadagnato. Questo risultato conferma un’elevata efficienza nella gestione economica del progetto, senza sprechi né sovracosti, a dimostrazione di un controllo maturo e consolidato delle dinamiche di budget da parte del team.
 
 
 ==== MPC7 - Cost Variance
@@ -177,6 +187,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC7 - CV],
 ) <imgMPC7_fasePB>
 
+*#glossario("PB")*: Durante questa fase la Cost Variance mostra un andamento generalmente positivo, segnalando che nella maggior parte dei periodi il valore guadagnato (EV) ha superato il costo sostenuto (AC), a indicazione di una buona efficienza economica. Tuttavia, si evidenzia una flessione significativa intorno al periodo 9, dove si registra un picco negativo della CV. Questo potrebbe essere attribuito a un investimento straordinario o a un temporaneo disallineamento tra costi e risultati attesi. Nonostante ciò, il recupero nei periodi successivi evidenzia la capacità del team di riportare il controllo sui costi.
+
 
 ==== MPC8 - Estimated At Completion
 
@@ -191,6 +203,8 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC8 - EAC],
 ) <imgMPC8_fasePB>
 
+*#glossario("PB")*: Nella fase PB il valore dell’Estimated At Completion si mantiene costante, segno di una pianificazione economica stabile e sotto controllo. La linearità della curva indica che, nonostante l’avanzamento delle attività e le eventuali fluttuazioni nei costi sostenuti, non sono emerse criticità tali da richiedere una revisione del budget complessivo. Questo riflette una gestione del progetto orientata all’efficienza e al rispetto dei limiti economici prefissati.
+
 
 === MPC9 - Estimated To Complete
 
@@ -204,6 +218,9 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/PB/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
 ) <imgMPC9_fasePB>
+
+*#glossario("PB")*:  Durante questa fase si osserva un costante decremento dell’Estimated To Complete, coerente con l’avanzamento delle attività progettuali. Il grafico mostra chiaramente una progressiva riduzione delle risorse economiche necessarie al completamento del progetto, evidenziando una corretta esecuzione delle attività previste. Questo comportamento, inversamente proporzionale all’incremento dell’Actual Cost, conferma che il consumo delle risorse procede in linea con le aspettative, senza sprechi né variazioni critiche nella stima dei costi residui.
+
 
 === Processi di supporto
 #align(center)[
@@ -242,6 +259,9 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   image("/img/pdq/PB/MPC12.png", width: 80%),
   caption: [MPC12 - Rischi non previsti],
 ) <imgMPC12_fasePB>
+
+*#glossario("PB")*: Durante la fase PB, si osserva un’efficace capacità di gestione del rischio: dopo la ricomparsa di un rischio non previsto al periodo 7, il team è riuscito a intervenire prontamente, riportando il valore a zero già dal periodo successivo. Questo evidenzia un elevato grado di reattività e adattamento nella gestione dei rischi organizzativi, con una piena integrazione delle lezioni apprese nei cicli precedenti e una maggiore solidità nei processi di prevenzione e risposta.
+
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
