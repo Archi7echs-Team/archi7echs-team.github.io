@@ -94,53 +94,116 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 ]
  #align(center)[Tabella 1: Valori accettabili e preferibili per le metriche dei processi primari.] 
 
+ ==== MPC1 - Schedule Adherence
+
  #figure(
   image("/img/pdq/MPC1.png", width: 80%),
   caption: [MPC1 - SA],
-) <imgMPC1>
+) <imgMPC1_faseRTB>
 *#glossario("RTB")*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore è rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
+
+#figure(
+  image("/img/pdq/PB/MPC1.png", width: 80%),
+  caption: [MPC1 - SA],
+) <imgMPC1_fasePB>
+
+ ==== MPC2 - Earned Value e Planned Value
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
   caption: [MPC2-3 - rapporto EV e PV],
-) <imgMPC2-3> 
+) <imgMPC2-3faseRTB> 
 *#glossario("RTB")*: Si nota come nei primi periodi il valore guadagnato (Earned Value) era inferiore al valore pianificato (Planned Value) ma la curva del valore guadagnato è andato a sovrapporsi con la curva del valore pianificato negli ultimi periodi comunicando un allineamento agli obiettivi preposti.
+
+#figure(
+  image("/img/pdq/PB/MPC2-3.png", width: 80%),
+  caption: [MPC1 - SA],
+) <imgMPC2-3_fasePB>
+
+
+==== MPC4 - Schedule Variance
 
  #figure(
   image("/img/pdq/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
-) <imgMPC4>
+) <imgMPC4_faseRTB>
 *#glossario("RTB")*: Si nota come nei primi periodi, specialmente nel #glossario("periodo") 2, la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
+
+ #figure(
+  image("/img/pdq/PB/MPC4.png", width: 80%),
+  caption: [MPC4 - SV],
+) <imgMPC4_fasePB>
+
+
+==== MPC5 - Actual Cost
+
 
 #figure(
   image("/img/pdq/MPC5.png", width: 80%),
   caption: [MPC5 - AC],
-) <imgMPC5>
+) <imgMPC5_faseRTB>
 *#glossario("RTB")*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel #glossario("periodo") 4 il costo sia aumentato più rapidamente, assecondando la necessità di recuperare la SA ideale.
+
+#figure(
+  image("/img/pdq/PB/MPC5.png", width: 80%),
+  caption: [MPC5 - AC],
+) <imgMPC5_fasePB>
+
+
+==== MPC6 - Cost Performance Index
 
 #figure(
   image("/img/pdq/MPC6.png", width: 80%),
   caption: [MPC6 - CPI],
-) <imgMPC6>
+) <imgMPC6_faseRTB>
 *#glossario("RTB")*: Il grafico mostra l'efficienza dei costi di progetto, non essendoci distaccati da 1, il valore ottimale, possiamo dire di non aver avuto un costo effettivo maggiore del valore guadagnato.
+
+#figure(
+  image("/img/pdq/PB/MPC6.png", width: 80%),
+  caption: [MPC6 - CPI],
+) <imgMPC6_fasePB>
+
+
+==== MPC7 - Cost Variance
 
 #figure(
   image("/img/pdq/MPC7.png", width: 80%),
   caption: [MPC7 - CV],
-) <imgMPC7>
+) <imgMPC7_faseRTB>
 *#glossario("RTB")*: Il grafico mostra un distacco nel primo #glossario("periodo"), dove si stava ancora migliorando il way of working, generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
+
+#figure(
+  image("/img/pdq/PB/MPC7.png", width: 80%),
+  caption: [MPC7 - CV],
+) <imgMPC7_fasePB>
+
+
+==== MPC8 - Estimated At Completion
 
 #figure(
   image("/img/pdq/MPC8.png", width: 80%),
   caption: [MPC8 - EAC],
-) <imgMPC8>
+) <imgMPC8_faseRTB>
 *#glossario("RTB")*: Il grafico mostra come il costo totale al completamento sia rimasto fisso in ogni #glossario("periodo") essendo esso un limite invalicabile.
+
+#figure(
+  image("/img/pdq/PB/MPC8.png", width: 80%),
+  caption: [MPC8 - EAC],
+) <imgMPC8_fasePB>
+
+
+=== MPC9 - Estimated To Complete
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
-) <imgMPC9>
+) <imgMPC9_faseRTB>
 *#glossario("RTB")*: Il grafico mostra come la risorsa a nostra disposizione diminuisca #glossario("periodo") dopo #glossario("periodo"), inversamente al grafico dell'AC.
+
+#figure(
+  image("/img/pdq/PB/MPC9.png", width: 80%),
+  caption: [MPC9 - ETC],
+) <imgMPC9_fasePB>
 
 === Processi di supporto
 #align(center)[
@@ -172,8 +235,13 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   #figure(
   image("/img/pdq/MPC12.png", width: 80%),
   caption: [MPC12 - Rischi non previsti],
-) <imgMPC12>
+) <imgMPC12_faseRTB>
 *#glossario("RTB")*: Il grafico mostra la presenza di un rischio non previsto per molti periodi ma anche come esso sia poi stato gestito nei periodi 4,5 e 6 portando a 0 il numero di rischi non previsti dimostrando un adattamento ai rischi previsti.
+
+  #figure(
+  image("/img/pdq/PB/MPC12.png", width: 80%),
+  caption: [MPC12 - Rischi non previsti],
+) <imgMPC12_fasePB>
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
