@@ -156,7 +156,7 @@ Durante l’uso del file .env, è importante ricordare:
 = Guida all'uso di 3Dataviz
 Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
 == Schermata principale
-All'avvio del sito ci si troverà davanti un grafico di default utile per interagire direttamente con l'applicazione per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
+All'avvio del sito ci si troverà davanti un grafico di default utile per interagire direttamente con l'applicazione, per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
 #figure(
   image("/img/mu/avvio.jpg", width: 90%),
   caption: [Schermata principale],
