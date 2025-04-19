@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo, p.lucato),
     "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
@@ -86,6 +87,18 @@ A seguito della revisione RTB gli obiettivi che il gruppo si impegna di raggiung
     table.header([*Accettazione #glossario("milestone")*], [*Data*], ),
       [#glossario("RTB")- Requirements and Technology Baseline], [27/02/2025], 
     [#glossario("PB") - Product Baseline], [04/04/2025], 
+)
+
+=== Terza stesura - 16-03-2025
+Prima della revisione #glossario("PB"), gli obiettivi che il gruppo si impegna di raggiungere e rispettare sono soggetti ad un limite di tempo, con le date riportate di seguito:
+
+#table(
+    columns: (2fr, 1fr),
+    align: center,
+    inset: 6pt,
+    table.header([*Accettazione #glossario("milestone")*], [*Data*], ),
+      [#glossario("RTB")- Requirements and Technology Baseline], [27/02/2025], 
+    [#glossario("PB") - Product Baseline], [04/05/2025], 
 )
 
 == Costi del progetto
@@ -457,7 +470,7 @@ Cambiamenti operativi e gestionali individuati:
 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore primo periodo", display_style: "hor-legend-chart")
 }
-#pagebreak();
+#pb();
 *Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
@@ -1834,3 +1847,196 @@ Questo ha contribuito ad un avanzamento significativo del lavoro e ad una buona 
 
   pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 11", display_style: "hor-legend-chart",colors: (red, green))
 }
+
+== Periodo 12
+=== Pianificazione
+*#glossario("Periodo")*: 12/04/2025 - 04/05/2025 \
+*Ruoli*: Viene riportata di seguito la suddivisione del #glossario("periodo")
+#figure()[
+  #align(center)[
+    #table(
+      columns: 2,
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*], [*Membri*]),
+        [Responsabile(Re)],[#p.checchinato],
+        [Amministratore(Am)],[#p.lucato],
+        [Analista(An)],[#p.pesenato],
+        [Programmatore(Prg)],[#p.salvo],
+        [Verificatore(Ve)],[#p.pozzobon,#p.salvo,\ #p.scandaletti,#p.valdagno],
+        [Progettista(Prt)], [_non presente_]
+    )
+  ]
+]
+
+#pb()
+*Obiettivi*:\
+In questa fase conclusiva del progetto, l’obiettivo primario del team è completare lo sviluppo dell’#glossario("MVP") e finalizzare tutta la documentazione necessaria per la chiusura ufficiale delle attività. Il lavoro si è quindi concentrato sia sul consolidamento del prodotto software che sulla revisione tecnica e formale dei documenti richiesti.
+L’intento è garantire un rilascio stabile e ben documentato dell’applicazione, facilitando la valutazione del progetto e l’utilizzo da parte degli utenti.
+
+Nello specifico, gli obiettivi di questo periodo sono:
+  - *Finalizzazione #glossario("MVP")*: risolvere gli ultimi bug e ottimizzare le funzionalità implementate, garantendo un’applicazione stabile e performante.
+  - *Approvazione aziendale*: presentare il prodotto finale all’azienda ospitante, con l’obiettivo di ottenere un riscontro positivo e l’approvazione definitiva del progetto.
+	- *Revisione documentale*: rileggere e correggere i documenti prodotti, assicurandosi che siano aggiornati rispetto all’implementazione finale e coerenti tra loro.
+
+
+*Possibili rischi*\
+I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]
+- #link(<RI-6>)[*RI-6 - Sovraccarico di lavoro*]
+
+*Tabella preventivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[2],[0],[0],[0],[0],[0],[€ #(2*costo_ora.res)],
+      [Leonardo\ Lucato],[0],[2],[0],[0],[0],[0],[€ #(2*costo_ora.amm)],
+      [Giacomo\ Pesenato],[0],[0],[0],[0],[0],[2],[€ #(0*costo_ora.proge+2*costo_ora.ana)],
+      [Francesco\ Pozzobon],[0],[0],[2],[0],[0],[0],[€ #(2*costo_ora.ver)],
+      [Giovanni\ Salvò],[0],[0],[6],[0],[8],[0],[€ #(8*costo_ora.progr+6*costo_ora.ver)],
+      [Gioele\ Scandaletti],[0],[0],[10],[0],[0],[0],[€ #(10*costo_ora.ver)],
+      [Pietro\ Valdagno],[0],[0],[2],[0],[0],[0],[€ #(2*costo_ora.ver)],
+      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(20*costo_ora.ver)],[€ #(0*costo_ora.proge) ],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+300+0+120+50)*]],
+    )
+  ]
+]
+
+#pb()
+*Distribuzione preventivata delle ore:* \
+#{
+  let plot = plot(data: (
+    (2, "Responsabile - " + perc(2,34)),
+    (2, "Amministratore - " + perc(2,34)),
+    (20, "Verificatore - " + perc(20,34)),
+    (0, "Progettista - " + perc(0,34)),
+    (8, "Programmatore - " + perc(8,34)),
+    (2, "Analista - " + perc(2,34)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Preventivo divisione ore dodicesimo periodo", display_style: "hor-legend-chart")
+}
+
+=== Esito
+*Obiettivi non raggiunti*:\
+In questo dodicesimo #glossario("periodo") non sono stati rilevati obiettivi non raggiunti.
+
+*Problematiche non attese*:\
+In questo dodicesimo #glossario("periodo") non sono state rilevate delle problematiche non attese.
+
+*Mitigazione rischi verificati*:\
+Durante questo dodicesimo #glossario("periodo") si è verificato solo uno dei due rischi preventivati e queste sono le strategie di mitigazione adottate:
+- #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: Il rischio è stato mitigato tramite una riorganizzazione delle attività, redistribuendo i compiti urgenti tra i membri disponibili e mantenendo una comunicazione costante per garantire il rispetto delle scadenze.
+
+*Possibili cambiamenti*:\
+Durante il dodicesimo #glossario("periodo") il team ha raggiunto tutti gli obiettivi prefissati, completando con successo sia lo sviluppo del #glossario("MVP") sia la redazione e revisione della documentazione.
+Nonostante il verificarsi di un rischio, la risposta è stata tempestiva ed efficace, permettendo di mantenere il progetto allineato con le scadenze pianificate.
+Grazie a una gestione attenta delle attività e a una pianificazione coerente delle risorse, non sono emerse criticità rilevanti e il lavoro è proseguito senza intoppi, portando a un esito positivo per il progetto.
+#pb();
+*Tabella esito effettivo*:\
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*], [*Re.*], [*Am.*],[*Ve.*], [*Prt.*], [*Prg.*], [*An.*], [*Costo persona*]),
+      [Gabriele\ Checchinato],[2],[0],[0],[0],[0],[0],[€ #(2*costo_ora.res)],
+      [Leonardo\ Lucato],[0],[2],[0],[0],[0],[0],[€ #(2*costo_ora.amm)],
+      [Giacomo\ Pesenato],[0],[0],[0],[1 (#text(red)[+1])],[0],[2],[€ #(1*costo_ora.proge+2*costo_ora.ana) (#text(red)[+€ #(1*costo_ora.proge)])],
+      [Francesco\ Pozzobon],[0],[0],[3.5 \ (#text(red)[+1.5])],[0],[0],[0],[€ #(3.5*costo_ora.ver) (#text(red)[+€ #(1.5*costo_ora.ver)])],
+      [Giovanni\ Salvò],[0],[0],[6],[0],[8],[0],[€ #(8*costo_ora.progr+6*costo_ora.ver)],
+      [Gioele\ Scandaletti],[0],[0],[11.5 \ (#text(red)[+1.5])],[0],[0],[0],[€ #(11.5*costo_ora.ver) (#text(red)[+€ #(1.5*costo_ora.ver)])],
+      [Pietro\ Valdagno],[0],[0],[2],[0],[0],[0],[€ #(2*costo_ora.ver)],
+      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(23*costo_ora.ver) \ (#text(red)[+€ #(3*costo_ora.ver)]) ],[€ #(1*costo_ora.proge) \ (#text(red)[+€ #(1*costo_ora.proge)])],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+345+25+120+50)*]],
+    )
+  ]
+]
+
+*Distribuzione effettiva delle ore*:
+#{
+  let plot = plot(data: (
+    (2, "Responsabile - " + perc(2,38)),
+    (2, "Amministratore - " + perc(2,38)),
+    (23, "Verificatore - " + perc(23,38)),
+    (1, "Progettista - " + perc(1,38)),
+    (8, "Programmatore - " + perc(8,38)),
+    (2, "Analista - " + perc(2,38)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore dodicesimo periodo", display_style: "hor-legend-chart")
+}
+
+#pb()
+*Progresso delle #glossario("attività")*:\
+#{
+  let plot = plot(data: (
+    (0, "Non fatto - " + perc(0,100)),
+    (100, "Fatto - " + perc(100,100)),
+  ))
+
+  pie_chart(plot, (40%, 30%), caption: "Stato di avanzamento Periodo 12", display_style: "hor-legend-chart",colors: (red, green))
+}
+
+== Resoconto PB
+
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto, auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center, center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*],[*Periodo 7*], [*Periodo 8*], [*Periodo 9*],[*Periodo 10*], [*Periodo 11*], [*Periodo 12*], [*Costo tot*] ), 
+      [Responsabile],[€ 120],[€ 180],[€ 150],[€ 270],[€ 150],[€ 60],[€ #(120+180+150+270+150+60)],
+      [Amministratore],[€ 40],[€ 20],[€ 180],[€ 80],[€ 20],[€ 40],[€ #(40+20+180+80+20+40)],
+      [Verificatore],[€ 45],[€ 45],[€ 105],[€ 60],[€ 210],[€ 345],[€ #(45+45+105+60+210+345)],
+      [Progettista],[€ 600],[€ 350],[€ 325],[€ 825],[€ 175],[€25],[€ #(600+350+325+825+175+25)],
+      [Programmatore],[€ 0],[€ 720],[€ 585],[€ 427.5],[€ 660],[€ 120],[€ #(0+720+585+427.5+660+120)],
+      [Analista],[€ 231.25],[€ 25],[€ 50],[€ 150],[€ 75],[€ 50],[€ #(231.25+25+50+150+75+50)],
+      [*Costo per periodo*],[€ 1036.25],[€ 1340],[€ 1395],[€ 1812.5 ],[€ 1290],[€ 640],[#text(blue)[*€ #(1036.25+1340+1395+1812.5+1290+640)*]],
+    )
+  ]
+]
+
+#pb()
+
+== Resoconto finale
+Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Ecco un riepilogo delle ore e dei costi sostenuti durante il progetto:
+
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto, auto, auto),
+      align: (col, row) => (center, center, center, center).at(col),
+      inset: 6pt,
+      table.header([*Ruolo*],[*Costo/h*], [*Ore*], [*Costo Ruolo*]), 
+      [Responsabile],[€ 30],[67.25],[€ #(30*67.25)],
+      [Amministratore],[€ 20],[77.75],[€ #(20*77.75)],
+      [Verificatore],[€ 15],[113.75],[€ #(15*113.75)],
+      [Progettista],[€ 25],[92],[€ #(25*92)],
+      [Programmatore],[€ 15],[203.5],[€ #(15*203.5)],
+      [Analista],[€ 25],[€ 75.75],[€ #(25*75.75)],
+    )
+  ]
+]
+
+#figure()[
+  #align(center)[
+    #table(
+      columns: (auto, auto),
+      align: (col, row) => (center, center).at(col),
+      inset: 6pt,
+      table.header([*Persona*],[*Ore totali*]), 
+      [#p.checchinato],[92.75],
+      [#p.lucato],[91],
+      [#p.pesenato],[92],
+      [#p.pozzobon],[91],
+      [#p.salvo],[85],
+      [#p.scandaletti],[87],
+      [#p.valdagno],[91.25],
+    )
+  ]
+]
