@@ -8,8 +8,9 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "2.0.0","19-04-2025","Revisione per incontro PB", (p.valdagno), (""),
     "1.2.0","21-03-2025","Ampliamento sezione processi di supporto",(p.checchinato,p.valdagno), (p.salvo, p.pesenato),
-    "1.1.1","21-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
+    "1.1.1","21-03-2025","Modifica sezione riferimenti, documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
@@ -206,10 +207,10 @@ Il gruppo utilizza una serie di strumenti per supportare lo sviluppo e la proget
 ==== Utilizzo di Git e della #glossario("Repository")
 Tutto il codice del progetto è contenuto nell'apposita repository #glossario("GitHub").
 
-E' cura del programmatore tenere sempre la sua #glossario("repository") locale aggiornata con quella remota mediante l'utilizzo del comando ```bash git pull ```.
+È cura del programmatore tenere sempre la sua #glossario("repository") locale aggiornata con quella remota mediante l'utilizzo del comando ```bash git pull ```.
 
 Per lo sviluppo di codice, che sia questo a scopo implementativo o di fix, il programmatore dovrà seguire i seguenti passaggi: 
-+ posizionarsi in un branch locale dedicato, partendo da il *main*, mediante l'il comando ```bash git checkout -b nuovoBranch ```
++ posizionarsi in un branch locale dedicato, partendo dal *main*, mediante il comando ```bash git checkout -b nuovoBranch ```
 + eseguire il commit locale delle modifiche
 + una volta terminata l'attività di codifica associata al branch è necessario fare il pull dello stesso, mediante i comandi: 
   + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
@@ -276,7 +277,7 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
   - presenze
 
 
-Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra #glossario("OdG") ed orario di fine dell'incontro.
+Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*" indicando, se ci sono state, discussioni di punti extra #glossario("OdG") ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
 - una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la decisione presa.
@@ -287,19 +288,19 @@ Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la
 === Registro delle modifiche e versionamento <tabella_revisioni>
 Ogni documento, escluso allegati e carta intestata, contiene la tabella delle revisioni con il #glossario("registro delle modifiche"). 
 
-E' compito di colui che scrive o modifica un documento:
+È compito di colui che scrive o modifica un documento:
 + Aggiornare la tabella con:
   - versione del documento, in forma x.y.z (@numversione)
   - data della modifica
   - descrizione
   - autore della modifica
 
-E' compito del #glossario("verificatore"):
+È compito del #glossario("verificatore"):
 + verificare la correttezza, sia grammaticale/sintattica che di contenuto, delle modifiche apportate
 + assicurarsi che il numero di versione assegnato alla modifica sia corretto secondo le regole del team
 + inserire il proprio nome nell'apposita colonna della tabella
 
-E' compito del #glossario("responsabile"):
+È compito del #glossario("responsabile"):
 + verificare la correttezza dei contenuti
 + inserire il proprio nome nell'apposita colonna della tabella, insieme a quello del verificatore
 
