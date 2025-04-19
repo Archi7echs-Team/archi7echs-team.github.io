@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo),
+    "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo, p.lucato),
     "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
     "1.4.0", "01-04-2025", "Stesura nono periodo", p.salvo, (p.checchinato,p.lucato),
@@ -470,7 +470,7 @@ Cambiamenti operativi e gestionali individuati:
 
   pie_chart(plot, (40%, 30%), caption: "Effettiva divisione ore primo periodo", display_style: "hor-legend-chart")
 }
-#pagebreak();
+#pb();
 *Progresso delle #glossario("attività")*:\
 #{
   let plot = plot(data: (
