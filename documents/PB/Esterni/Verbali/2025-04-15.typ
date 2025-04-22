@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 1,
   changelog: (
-    "0.1.0", "18-04-2025",  "Prima stesura documento", p.salvo, (""),
+    "0.1.0", "18-04-2025",  "Prima stesura documento", p.salvo, (p.valdagno),
   )
 )
 
@@ -63,7 +63,7 @@ e in seguito revisione PB finale col #p.vardanega.
 
 == Varie ed eventuali
 Non essendoci altri argomenti da discutere l'incontro è terminato alle 17:30. \
-Il prossimo incontro verra comunicato a seguito delle revisioni con i professori. \
+Il prossimo incontro verrà comunicato a seguito delle revisioni con i professori. \
 ])
 
 = Decisioni
