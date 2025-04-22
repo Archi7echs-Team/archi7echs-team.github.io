@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,"",
+    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.valdagno),
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
@@ -351,7 +351,7 @@ Il valore ottenuto è ≥ 50, rispettando pienamente il valore accettabile. Il t
 ==== MPD6 - Failure Density
 La densità di failure è ≤ 10%, conforme al valore accettabile. Il codice presenta un livello di affidabilità adeguato.
 
-==== MPD7 - Statment Coverage
+==== MPD7 - Statement Coverage
 La copertura delle istruzioni è ≥ 80%, quindi conforme al valore accettabile e indica una buona estensione dei test eseguiti.
 
 ==== MPD8 - Branch Coverage
@@ -418,7 +418,7 @@ L’utilizzo delle risorse hardware/software è ≥ 75%, risultando conforme all
   )
     <tab:metricheManutenibilità>
 ]
- #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di manutenibilità.] 
+ #align(center)[Tabella 8: Valori accettabili e preferibili per le metriche di manutenibilità.] 
 
 
 ==== MPD14 - Complessità Ciclomatica
