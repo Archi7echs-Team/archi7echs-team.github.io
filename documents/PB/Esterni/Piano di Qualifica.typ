@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
+    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.checchinato,p.valdagno),
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
@@ -94,53 +95,134 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 ]
  #align(center)[Tabella 1: Valori accettabili e preferibili per le metriche dei processi primari.] 
 
+ ==== MPC1 - Schedule Adherence
+
  #figure(
   image("/img/pdq/MPC1.png", width: 80%),
   caption: [MPC1 - SA],
-) <imgMPC1>
+) <imgMPC1_faseRTB>
 *#glossario("RTB")*: Si nota come nei primi periodi il valore della Schedule Adherence (attività completate entro le scadenze prestabilite) era inferiore al valore accettabile ma il valore è rientrato nei limiti e ha raggiunto il valore preferibile una volta che il gruppo ha preso confidenza con il lavoro da effettuare e grazie ai miglioramenti al way of working.
+
+#figure(
+  image("/img/pdq/PB/MPC1.png", width: 80%),
+  caption: [MPC1 - SA],
+) <imgMPC1_fasePB>
+
+*#glossario("PB")*:  Durante questa fase si osserva una continuità nel mantenimento di un elevato livello di Schedule Adherence, con valori costantemente sopra la soglia accettabile e in linea con il target ottimale. Questo andamento stabile evidenzia una buona maturità del team nel rispettare le scadenze pianificate, frutto dell’esperienza accumulata nelle fasi precedenti e del consolidamento delle pratiche di lavoro efficaci introdotte nel tempo.
+
+ ==== MPC2 - Earned Value e Planned Value
 
  #figure(
   image("/img/pdq/MPC2-3.png", width: 80%),
   caption: [MPC2-3 - rapporto EV e PV],
-) <imgMPC2-3> 
+) <imgMPC2-3faseRTB> 
 *#glossario("RTB")*: Si nota come nei primi periodi il valore guadagnato (Earned Value) era inferiore al valore pianificato (Planned Value) ma la curva del valore guadagnato è andato a sovrapporsi con la curva del valore pianificato negli ultimi periodi comunicando un allineamento agli obiettivi preposti.
+
+#figure(
+  image("/img/pdq/PB/MPC2-3.png", width: 80%),
+  caption: [MPC1 - SA],
+) <imgMPC2-3_fasePB>
+
+*#glossario("PB")*: Il grafico evidenzia un progressivo allineamento tra il valore guadagnato (EV) e quello pianificato (PV), con una distanza iniziale tra le due curve che tende a ridursi man mano che i periodi avanzano. Nell’ultima parte, le due curve risultano quasi sovrapposte, indicando una gestione più efficiente delle attività e una capacità crescente del team nel rispettare i piani previsti, sia in termini di tempi che di risultati attesi.
+
+
+==== MPC4 - Schedule Variance
 
  #figure(
   image("/img/pdq/MPC4.png", width: 80%),
   caption: [MPC4 - SV],
-) <imgMPC4>
+) <imgMPC4_faseRTB>
 *#glossario("RTB")*: Si nota come nei primi periodi, specialmente nel #glossario("periodo") 2, la differenza tra il valore guadagnato e quello pianificato aveva raggiunto un valore negativo a causa del ritardo di completamento delle attività che hanno portato a un disallineamento tra attività pianificate e attività svolte. 
+
+ #figure(
+  image("/img/pdq/PB/MPC4.png", width: 80%),
+  caption: [MPC4 - SV],
+) <imgMPC4_fasePB>
+
+*#glossario("PB")*: In questa fase si evidenzia un netto miglioramento rispetto ai periodi iniziali: la Schedule Variance, che in precedenza mostrava valori negativi dovuti a ritardi, si stabilizza su uno zero costante a partire dal periodo 6. Questo indica un perfetto allineamento tra le attività pianificate e quelle effettivamente svolte, segno di una maturazione del processo di pianificazione e di esecuzione da parte del team, nonché di un’efficace gestione dei carichi e delle scadenze.
+
+
+==== MPC5 - Actual Cost
+
 
 #figure(
   image("/img/pdq/MPC5.png", width: 80%),
   caption: [MPC5 - AC],
-) <imgMPC5>
+) <imgMPC5_faseRTB>
 *#glossario("RTB")*: Il grafico mostra il costo totale sostenuto (Actual Cost). Possiamo osservare come nel #glossario("periodo") 4 il costo sia aumentato più rapidamente, assecondando la necessità di recuperare la SA ideale.
+
+#figure(
+  image("/img/pdq/PB/MPC5.png", width: 80%),
+  caption: [MPC5 - AC],
+) <imgMPC5_fasePB>
+
+*#glossario("PB")*: Durante questa fase si nota un incremento costante e progressivo del costo effettivamente sostenuto. Sebbene il trend di crescita dell’Actual Cost rimanga sotto controllo, il raggiungimento del valore target verso la fine del periodo suggerisce un’intensificazione degli sforzi, e quindi delle risorse impiegate, per garantire il completamento delle attività secondo la pianificazione. Tale sprint è frutto del lavoro full-time dedicato al progetto dai membri del team.
+
+
+==== MPC6 - Cost Performance Index
 
 #figure(
   image("/img/pdq/MPC6.png", width: 80%),
   caption: [MPC6 - CPI],
-) <imgMPC6>
+) <imgMPC6_faseRTB>
 *#glossario("RTB")*: Il grafico mostra l'efficienza dei costi di progetto, non essendoci distaccati da 1, il valore ottimale, possiamo dire di non aver avuto un costo effettivo maggiore del valore guadagnato.
+
+#figure(
+  image("/img/pdq/PB/MPC6.png", width: 80%),
+  caption: [MPC6 - CPI],
+) <imgMPC6_fasePB>
+
+*#glossario("PB")*: Durante tutta la fase PB, il Cost Performance Index si mantiene costantemente sul valore ottimale pari a 1, indicando un perfetto equilibrio tra costi sostenuti e valore guadagnato. Questo risultato conferma un’elevata efficienza nella gestione economica del progetto, senza sprechi né sovracosti, a dimostrazione di un controllo maturo e consolidato delle dinamiche di budget da parte del team.
+
+
+==== MPC7 - Cost Variance
 
 #figure(
   image("/img/pdq/MPC7.png", width: 80%),
   caption: [MPC7 - CV],
-) <imgMPC7>
+) <imgMPC7_faseRTB>
 *#glossario("RTB")*: Il grafico mostra un distacco nel primo #glossario("periodo"), dove si stava ancora migliorando il way of working, generando minor valore rispetto al costo totale (Earned Value minore di Actual Cost).
+
+#figure(
+  image("/img/pdq/PB/MPC7.png", width: 80%),
+  caption: [MPC7 - CV],
+) <imgMPC7_fasePB>
+
+*#glossario("PB")*: Durante questa fase la Cost Variance mostra un andamento generalmente positivo, segnalando che nella maggior parte dei periodi il valore guadagnato (EV) ha superato il costo sostenuto (AC), a indicazione di una buona efficienza economica. Tuttavia, si evidenzia una flessione significativa intorno al periodo 9, dove si registra un picco negativo della CV. Questo potrebbe essere attribuito a un investimento straordinario o a un temporaneo disallineamento tra costi e risultati attesi. Nonostante ciò, il recupero nei periodi successivi evidenzia la capacità del team di riportare il controllo sui costi.
+
+
+==== MPC8 - Estimated At Completion
 
 #figure(
   image("/img/pdq/MPC8.png", width: 80%),
   caption: [MPC8 - EAC],
-) <imgMPC8>
+) <imgMPC8_faseRTB>
 *#glossario("RTB")*: Il grafico mostra come il costo totale al completamento sia rimasto fisso in ogni #glossario("periodo") essendo esso un limite invalicabile.
+
+#figure(
+  image("/img/pdq/PB/MPC8.png", width: 80%),
+  caption: [MPC8 - EAC],
+) <imgMPC8_fasePB>
+
+*#glossario("PB")*: Nella fase PB il valore dell’Estimated At Completion si mantiene costante, segno di una pianificazione economica stabile e sotto controllo. La linearità della curva indica che, nonostante l’avanzamento delle attività e le eventuali fluttuazioni nei costi sostenuti, non sono emerse criticità tali da richiedere una revisione del budget complessivo. Questo riflette una gestione del progetto orientata all’efficienza e al rispetto dei limiti economici prefissati.
+
+
+=== MPC9 - Estimated To Complete
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
   caption: [MPC9 - ETC],
-) <imgMPC9>
+) <imgMPC9_faseRTB>
 *#glossario("RTB")*: Il grafico mostra come la risorsa a nostra disposizione diminuisca #glossario("periodo") dopo #glossario("periodo"), inversamente al grafico dell'AC.
+
+#figure(
+  image("/img/pdq/PB/MPC9.png", width: 80%),
+  caption: [MPC9 - ETC],
+) <imgMPC9_fasePB>
+
+*#glossario("PB")*:  Durante questa fase si osserva un costante decremento dell’Estimated To Complete, coerente con l’avanzamento delle attività progettuali. Il grafico mostra chiaramente una progressiva riduzione delle risorse economiche necessarie al completamento del progetto, evidenziando una corretta esecuzione delle attività previste. Questo comportamento, inversamente proporzionale all’incremento dell’Actual Cost, conferma che il consumo delle risorse procede in linea con le aspettative, senza sprechi né variazioni critiche nella stima dei costi residui.
+
+#pb();
 
 === Processi di supporto
 #align(center)[
@@ -155,6 +237,13 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
     <tab:metricheProcessiSupporto>
 ]
  #align(center)[Tabella 2: Valori accettabili e preferibili per le metriche dei #glossario("processi di supporto").] 
+
+
+==== MPC10 - Percentuale di Casi di Test Superati (PCTS)
+La percentuale di casi di test superati è pari o superiore all’80%, risultando conforme al valore accettabile. Ciò conferma l’efficacia e l’affidabilità dei test eseguiti.
+
+==== MPC11 - Percentuale di metriche soddisfatte
+È stata soddisfatta una percentuale di metriche pari o superiore all’85%, rispettando il valore accettabile. Questo indica un buon livello complessivo di qualità del progetto.
 
 === Processi organizzativi
 #align(center)[
@@ -172,8 +261,16 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   #figure(
   image("/img/pdq/MPC12.png", width: 80%),
   caption: [MPC12 - Rischi non previsti],
-) <imgMPC12>
+) <imgMPC12_faseRTB>
 *#glossario("RTB")*: Il grafico mostra la presenza di un rischio non previsto per molti periodi ma anche come esso sia poi stato gestito nei periodi 4,5 e 6 portando a 0 il numero di rischi non previsti dimostrando un adattamento ai rischi previsti.
+
+  #figure(
+  image("/img/pdq/PB/MPC12.png", width: 80%),
+  caption: [MPC12 - Rischi non previsti],
+) <imgMPC12_fasePB>
+
+*#glossario("PB")*: Durante la fase PB, si osserva un’efficace capacità di gestione del rischio: dopo la ricomparsa di un rischio non previsto al periodo 7, il team è riuscito a intervenire prontamente, riportando il valore a zero già dal periodo successivo. Questo evidenzia un elevato grado di reattività e adattamento nella gestione dei rischi organizzativi, con una piena integrazione delle lezioni apprese nei cicli precedenti e una maggiore solidità nei processi di prevenzione e risposta.
+
 
 == Qualità di prodotto
 La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
@@ -195,6 +292,34 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 ]
  #align(center)[Tabella 4: Valori accettabili e preferibili per le metriche di #glossario("funzionalità").] 
 
+==== MPD1 - ROBS
+
+#figure(
+  image("/img/pdq/PB/MPD1.png", width: 80%),
+  caption: [MPD1 - ROBS],
+) <imgMPD1_fasePB>
+
+*#glossario("PB")*:   Il grafico mostra che, a partire dal periodo 7, con l'inizio della fase,  si osserva una rapida crescita nel numero di requisiti soddisfatti, con un’accelerazione marcata tra i periodi 8 e 10. Il valore si stabilizza infine al massimo raggiunto nei periodi 11 e 12, indicando il pieno raggiungimento degli obiettivi prefissati. Questo andamento evidenzia una strategia di sviluppo concentrata in fasi successive e una buona capacità di recupero, con una chiusura efficace delle funzionalità obbligatorie entro la scadenza progettuale.
+
+==== MPD2 - RDS
+
+#figure(
+  image("/img/pdq/PB/MPD2.png", width: 80%),
+  caption: [MPD2 - RDS],
+) <imgMPD2_fasePB>
+
+*#glossario("PB")*:   Il grafico mostra che è stato soddisfatto uno tra i requisiti desiderabili. Tale implementazione si è svolta nel periodo 11, dopo essersi accertati di aver soddisfatto completamente i requisiti obbligatori.
+
+==== MPD3 - ROPS
+
+#figure(
+  image("/img/pdq/PB/MPD3.png", width: 80%),
+  caption: [MPD3 - ROPS],
+) <imgMPD3_fasePB>
+
+*#glossario("PB")*:   Da come si evince nel grafico non sono stati implementati requisiti opzionali.
+
+
 === Affidabilità
 #align(center)[
   #table(
@@ -213,6 +338,35 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 ]
  #align(center)[Tabella 5: Valori accettabili e preferibili per le metriche di affidabilità.] 
 
+ ==== MPD4 - Code Coverage
+#figure(
+  image("/img/pdq/PB/MPD4.png", width: 80%),
+  caption: [MPD4 - CC],
+) <imgMPD4_fasePB>
+
+*#glossario("PB")*:  Il grafico mostra un andamento inizialmente stazionario, con una copertura del codice nulla nei primi sei periodi, in quanto la fase di effettiva codifica non era prevista dalla fase precedente. A partire dal periodo 7 si assiste  a una crescita rapida e costante della code coverage, che supera la soglia dell’80% entro il periodo 11. Questo comportamento suggerisce una fase iniziale di impostazione e sviluppo del codice seguita da un’intensa attività di testing e validazione, che ha permesso di raggiungere e superare il valore target. L’incremento progressivo evidenzia un miglioramento nella qualità del software e una crescente attenzione alla copertura dei test.
+
+==== MPD5 - Indice Gulpease
+Il valore ottenuto è ≥ 50, rispettando pienamente il valore accettabile. Il testo risulta quindi leggibile secondo gli standard previsti.
+
+==== MPD6 - Failure Density
+La densità di failure è ≤ 10%, conforme al valore accettabile. Il codice presenta un livello di affidabilità adeguato.
+
+==== MPD7 - Statement Coverage
+La copertura delle istruzioni è ≥ 80%, quindi conforme al valore accettabile e indica una buona estensione dei test eseguiti.
+
+==== MPD8 - Branch Coverage
+
+#figure(
+  image("/img/pdq/PB/MPD8.png", width: 80%),
+  caption: [MPD8 - BC],
+) <imgMPD8_fasePB>
+
+*#glossario("PB")*: Il grafico evidenzia un andamento simile a quello della Code Coverage, con valori nulli nei primi sei periodi e un significativo incremento a partire dal periodo 7. In pochi intervalli la branch coverage supera la soglia dell’80%, raggiungendo un livello prossimo al 100% entro il periodo 11. Questo rapido miglioramento suggerisce una fase di testing intensivo e mirato all’identificazione e verifica di tutte le diramazioni del codice, indicativo di un elevato livello di attenzione alla qualità e affidabilità del software. Il raggiungimento di tali valori testimonia un’evoluzione matura del processo di verifica
+
+==== MPD9 - Correttezza Ortografica
+Nella documentazione non sono stati riscontrati errori ortografici, soddisfacendo completamente i criteri previsti dalla metrica.
+
 === Usabilità
 #align(center)[
   #table(
@@ -226,6 +380,13 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
     <tab:metricheUsabilità>
 ]
  #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di usabilità.] 
+
+
+==== MPD10 - Facilità di Utilizzo
+Il numero di click necessari per completare le operazioni principali è ≤ 10, rispettando il valore accettabile e garantendo una buona usabilità.
+
+==== MPD11 - Tempo di Apprendimento
+Il tempo richiesto per apprendere l’utilizzo del sistema è inferiore o uguale a 15 minuti, in linea con quanto previsto per un’interfaccia user-friendly.
  
 === Efficienza
 #align(center)[
@@ -241,6 +402,12 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 ]
  #align(center)[Tabella 7: Valori accettabili e preferibili per le metriche di efficienza.] 
 
+==== MPD12 - Tempo Medio di Risposta
+Il tempo medio di risposta del sistema è ≤ 10 secondi, soddisfacendo il valore accettabile e assicurando prestazioni adeguate.
+
+==== MPD13 - Utilizzo delle Risorse
+L’utilizzo delle risorse hardware/software è ≥ 75%, risultando conforme alle aspettative di efficienza.
+
 === Manutenibilità
 #align(center)[
   #table(
@@ -252,7 +419,11 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
   )
     <tab:metricheManutenibilità>
 ]
- #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di manutenibilità.] 
+ #align(center)[Tabella 8: Valori accettabili e preferibili per le metriche di manutenibilità.] 
+
+
+==== MPD14 - Complessità Ciclomatica
+Il valore è ≤ 8, rientrando nel limite accettabile e indicando un buon livello di manutenibilità del codice.
 
 #pb()
 
