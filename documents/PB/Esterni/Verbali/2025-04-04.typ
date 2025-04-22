@@ -32,7 +32,7 @@ _A seguito del lavoro svolto da parte del team durante il decimo #glossario("per
 
 = Verbale
 
-L'incontro inizia, come da programma alle ore 16.00. Sono presenti i seguenti membri del team:
+L'incontro inizia, come da programma alle ore 17.00. Sono presenti i seguenti membri del team:
 - #p.checchinato
 - #p.pesenato
 - #p.pozzobon
@@ -60,7 +60,7 @@ Fatto presente lo stato di avanzamento dei documenti e del #glossario("MVP") vie
 
 
 == Varie ed eventuali
-Non essendoci altri argomenti da discutere l'incontro è terminato alle 16:30. \
+Non essendoci altri argomenti da discutere l'incontro è terminato alle 17:30. \
 Il prossimo incontro #glossario("SAL") è stato programmato per il giorno 15/04/2025 alle 17:00. \
 ])
 
