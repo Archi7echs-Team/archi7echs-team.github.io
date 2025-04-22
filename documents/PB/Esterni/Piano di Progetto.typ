@@ -9,6 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
+    "2.0.0", "22-04-2025", "Revisione per incontro PB", p.checchinato, (p.valdagno,p.lucato),
     "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo, p.lucato),
     "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
@@ -89,7 +90,7 @@ A seguito della revisione RTB gli obiettivi che il gruppo si impegna di raggiung
     [#glossario("PB") - Product Baseline], [04/04/2025], 
 )
 
-=== Terza stesura - 16-03-2025
+=== Terza stesura - 16-04-2025
 Prima della revisione #glossario("PB"), gli obiettivi che il gruppo si impegna di raggiungere e rispettare sono soggetti ad un limite di tempo, con le date riportate di seguito:
 
 #table(
@@ -212,7 +213,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").
 
 == Struttura dell'esito effettivo
 
-+ *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. E' molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
++ *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. È molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
 + *Problematiche non attese*: identifica la sezione in cui vengono elencate tutte quelle problematiche che non erano state considerate durante la fase preliminare o nelle fasi preliminari di periodi precedenti.
 + *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il #glossario("periodo"). Questo permette di avere un feedback immediato sullo stato del #glossario("progetto") e di capire se le azioni intraprese sono state efficaci o meno.
 + *Possibili cambiamenti*: identifica la sezione in cui vengono discussi dei miglioramenti presi in considerazione in base a quanto rilevato durante il #glossario("periodo") affrontato. In questa parte il team ritiene molto importante identificare _tutti_ i cambiamenti da attuare, dunque non solo quelli per il #glossario("periodo") successivo ma anche (e soprattutto) in visione "a lungo raggio".
@@ -267,7 +268,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: difficoltà di gestione dei propri impegni personali (università, lavoro, impegni personali, ecc...)
 - *Probabilità*: alta
 - *Impatto*: alto
-- *Strategie di mitigazione*: il #glossario("responsabile") dovrà essere in grado di gestire le #glossario("attività") in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. E' importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà essere in grado di gestire le #glossario("attività") in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. È importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
 
 ==== Rischio 3 - Problemi di coordinamento <RI-3>
 - *Identificativo*: RI-3
@@ -311,7 +312,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: un membro del team potrebbe assentarsi a causa di malattia o di un impegno, compromettendo le scadenze e aumentando il carico di lavoro per il resto del team.
 - *Probabilità*: media
 - *Impatto*: alto
-- *Strategie di mitigazione*: prevedere una documentazione accurata e aggiornata delle #glossario("attività") svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
+- *Strategie di mitigazione*: prevedere una #glossario("documentazione") accurata e aggiornata delle #glossario("attività") svolte da ciascun membro del team, in modo da facilitare la continuità del lavoro e consentire ad altri di subentrare agevolmente se necessario. Assegnare i ruoli con una certa flessibilità per permettere una rapida riassegnazione dei compiti in caso di imprevisti. 
 
 === Problemi esterni al team
 ==== Rischio 1 - Problemi di comunicazione con l'azienda <RE-1>
@@ -650,7 +651,7 @@ Cambiamenti operativi e gestionali individuati:
   ]
 ]
 *Obiettivi*:\
-Durante il terzo #glossario("periodo") l'obiettivo del team è concentrarsi sulla documentazione, in modo da potenziare il lavoro in questa sezione in quanto, durante il #glossario("periodo") scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
+Durante il terzo #glossario("periodo") l'obiettivo del team è concentrarsi sulla #glossario("documentazione"), in modo da potenziare il lavoro in questa sezione in quanto, durante il #glossario("periodo") scorso, la progressione è stata, per programmazione del team, più lenta. Il gruppo si concentrerà quindi su #glossario("NdP") e #glossario("AdR"), con conseguente ricevimento con il committente, #p.cardin.
 
 Gli obiettivi principali di questa fase sono quindi:
 
@@ -716,7 +717,7 @@ Durante il #glossario("periodo") oltre alla problematica non attesa, non si sono
 *Possibili cambiamenti*:\
 La non presa in carico e termine dell'#glossario("issue") riferita al glossario e facente in origina parte del primo #glossario("Periodo") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, nel particolare: 
 
-- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). È a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 
 #pb()
 *Tabella esito effettivo*:\ 
@@ -788,9 +789,9 @@ La non presa in carico e termine dell'#glossario("issue") riferita al glossario 
 Durante il quarto #glossario("periodo") l'obiettivo del team è quello di concentrarsi sulla stesura dei documenti rimanenti, in particolare il #glossario("Piano di Qualifica"). Inoltre, verrà completata l'#glossario("Analisi dei Requisiti") e verranno ulteriormente aggiornate le #glossario("Norme di Progetto").
 
 In particolare, gli obiettivi principali di questa fase sono:
-- Ampliare la stesura delle #glossario("Norme di Progetto") con particolare attenzione alle metriche di qualità e la documentazione da consegnare.
+- Ampliare la stesura delle #glossario("Norme di Progetto") con particolare attenzione alle metriche di qualità e la #glossario("documentazione") da consegnare.
 - Per il #glossario("Piano di Qualifica") verrà completata la sezione relativa ai test e gli obiettivi di qualità.
-- Per quanto riguarda invece l'#glossario("Analisi dei Requisiti") verranno completati i diagrammi #glossario("UML") in vista della #glossario("revisione") con il #p.cardin.
+- Per quanto riguarda invece l'#glossario("Analisi dei Requisiti") verranno completati i #glossario("diagrammi") #glossario("UML") in vista della #glossario("revisione") con il #p.cardin.
 
 *Possibili rischi*:\
 I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
@@ -846,7 +847,7 @@ Durante il #glossario("periodo") oltre alla problematica non attesa, si è verif
 *Possibili cambiamenti*:\
 La non presa in carico e termine dell'#glossario("issue") riferita al fix del #glossario("template") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
 
-- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). È a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 - *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo #glossario("periodo"). Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del #glossario("periodo"), analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
 #pb()
 *Tabella esito effettivo*:\ 
@@ -919,7 +920,7 @@ Seppur un periodo molto pesante a causa degli impegni universitari di ognuno dei
 In particolare, gli obiettivi principali di questa fase sono:
 - PoC: inserire alcuni miglioramenti come la sua presentazione con colori e nomi degli assi congrui e la possibilità di visualizzare i dati in modo più chiaro.
 - #glossario("Piano di Qualifica"): verrà inserito un cruscotto di Grafana per la visualizzazione delle metriche di qualità e dello stato di avanzamento del progetto. Con questo cruscotto potremmo poi inserire le relative immagini dei grafici, così da poter avere una visione più chiara e veloce dello stato del progetto.
-- #glossario("Analisi dei Requisiti"): verrà completata la sezione relativa ai diagrammi #glossario("UML") con le loro relative modifiche.
+- #glossario("Analisi dei Requisiti"): verrà completata la sezione relativa ai #glossario("diagrammi") #glossario("UML") con le loro relative modifiche.
 - Glossario: verrà aggiornato con tutti i nuovi termini presenti nei vari documenti, con le relative definizioni.
 
 
@@ -1044,7 +1045,7 @@ Il quinto #glossario("periodo") è stato caratterizzato da una buona gestione de
   ]
 ]
 *Obiettivi*:\
-Il #glossario("periodo") attuale, analogamente al precedente, risulta particolarmente intenso per il nostro gruppo a causa degli impegni universitari. Nonostante il ritmo rallentato, ogni membro continuerà a contribuire al progetto. Questo sprint è tra i più impegnativi, poiché si conclude la stesura dei documenti per passare alla loro revisione e correzione in preparazione della candidatura #glossario("RTB"), che richiede una verifica scrupolosa e l'approvazione di ogni aspetto. Gli obiettivi del gruppo sono quindi di validare e perfezionare tutti i documenti per la candidatura.
+Il #glossario("periodo") attuale, analogamente al precedente, risulta particolarmente intenso per il nostro gruppo a causa degli impegni universitari. Nonostante il ritmo rallentato, ogni membro continuerà a contribuire al progetto. Questo sprint è tra i più impegnativi, poiché si conclude la stesura dei documenti per passare alla loro revisione e correzione in preparazione della candidatura #glossario("RTB"), che richiede una #glossario("verifica") scrupolosa e l'#glossario("approvazione") di ogni aspetto. Gli obiettivi del gruppo sono quindi di validare e perfezionare tutti i documenti per la candidatura.
 
 
 *Possibili rischi*:\
@@ -1191,12 +1192,12 @@ Durante il sesto #glossario("periodo") si è evidenziata un’efficace gestione 
 ]
 #pb()
 *Obiettivi*:\
-In questo periodo, il team si è concentrato sullo studio della progettazione software, approfondendo i pattern e le best practices per l’implementazione delle tecnologie adottate. Grazie alla presenza di più membri con il ruolo di #glossario("progettista"), è stato possibile analizzare diverse soluzioni e valutarne l’applicabilità nel contesto del progetto.
+In questo periodo, il team si è concentrato sullo studio della progettazione #glossario("software"), approfondendo i pattern e le best practices per l’implementazione delle tecnologie adottate. Grazie alla presenza di più membri con il ruolo di #glossario("progettista"), è stato possibile analizzare diverse soluzioni e valutarne l’applicabilità nel contesto del progetto.
 Gli obiettivi quindi sono stati:
 
-  - *Approfondimento della progettazione* : analisi dei principali pattern software e delle best practices per l’integrazione delle tecnologie utilizzate, con particolare attenzione alla scalabilità e alla manutenibilità del sistema.
-  - *Revisione del documento Analisi dei Requisiti* : applicazione delle modifiche richieste dal #p.cardin per affinare, correggere e migliorare il documento proposto in fase #glossario("RTB").
-  - *Aggiornamento del Piano di Qualifica*: a seguito delle correzioni apportate all'Analisi dei requisiti, è stato rivisto anche il Piano di Qualifica modificando i test di sistema e di accettazione.
+  - *Approfondimento della progettazione* : analisi dei principali pattern #glossario("software") e delle best practices per l’#glossario("integrazione") delle tecnologie utilizzate, con particolare attenzione alla scalabilità e alla manutenibilità del sistema.
+  - *#glossario("Revisione") del documento Analisi dei Requisiti* : applicazione delle modifiche richieste dal #p.cardin per affinare, correggere e migliorare il documento proposto in fase #glossario("RTB").
+  - *Aggiornamento del Piano di Qualifica*: a seguito delle correzioni apportate all'#glossario("Analisi dei requisiti"), è stato rivisto anche il Piano di Qualifica modificando i test di sistema e di accettazione.
 
 *Possibili rischi*\
 I rischi che ci aspettiamo di incontrare durante questo #glossario("periodo") sono:
@@ -1327,10 +1328,10 @@ Durante il settimo #glossario("periodo") si è evidenziata un'efficace gestione 
 #pb()
 
 *Obiettivi*:\
-In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione software e iniziare la fase di codifica del #glossario("MVP") per comprendere meglio quali pattern applicare e quindi affiancare la fase di progettazione. Per questi motivi i ruoli di #glossario("programmatore") e progettista sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato backend e uno del lato frontend dell'applicazione.\
+In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione #glossario("software") e iniziare la fase di codifica del #glossario("MVP") per comprendere meglio quali pattern applicare e quindi affiancare la fase di progettazione. Per questi motivi i ruoli di #glossario("programmatore") e progettista sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato backend e uno del lato frontend dell'applicazione.\
 Nello specifico gli obiettivi di questo periodo sono:
 
-  - *Continuazione della fase di progettazione* : continuare l'analisi dell'applicabilità dei pattern software studiati nel precedente periodo, supportandola concretamente con la fase di codifica.
+  - *Continuazione della fase di progettazione* : continuare l'analisi dell'applicabilità dei pattern #glossario("software") studiati nel precedente periodo, supportandola concretamente con la fase di codifica.
   - *Inizio codifica #glossario("MVP")* : avviare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra frontend e backend per approfondire lo studio delle tecnologie e dei pattern.
   - *#glossario("Norme di Progetto")* : ampliare e approfondire alcune sezioni già presenti, aggiungendo dettagli sulla fase di codifica e riferimenti sulla fase del #glossario("PB").
   - *#glossario("Piano di Qualifica")* : aggiornare il documento includendo la descrizione e l'analisi dei grafici relativi alle metriche adottate, specificando il loro significato e l'impatto sulla valutazione della qualità del progetto.
@@ -1463,10 +1464,10 @@ Durante l'ottavo #glossario("periodo") si è evidenziata un'efficace gestione e 
 #pb()
 
 *Obiettivi*:\
-In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione software e continuare la fase di codifica del #glossario("MVP"). Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato back-end e uno del lato front-end dell'applicazione.\
+In questo #glossario("periodo"), l'obiettivo del team è proseguire con lo studio della progettazione #glossario("software") e continuare la fase di codifica del #glossario("MVP"). Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori, inoltre, si divideranno i due sottogruppi: uno che si occuperà del lato #glossario("back-end") e uno del lato #glossario("front-end") dell'applicazione.\
 Nello specifico gli obiettivi di questo periodo sono:
-  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra front-end e back-end per approfondire lo studio delle tecnologie e dei pattern.
-  - *#glossario("Norme di Progetto")*: ampliare e approfondire alcune sezioni già presenti come la sezione sviluppo e la sezione processi di supporto.
+  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra #glossario("front-end") e #glossario("back-end") per approfondire lo studio delle tecnologie e dei pattern.
+  - *#glossario("Norme di Progetto")*: ampliare e approfondire alcune sezioni già presenti come la sezione sviluppo e la sezione #glossario("processi di supporto").
   - *#glossario("Analisi dei Requisiti")* : aggiornare il documento includendo le nuove tecnologie utilizzate a seguito del cambiamento deciso dal team e approvato dal #p.cardin e dall'azienda.
 
 
@@ -1598,11 +1599,11 @@ Durante il nono #glossario("periodo") si è evidenziata un'efficace gestione e m
 #pb()
 
 *Obiettivi*:\
-In questo #glossario("periodo"), l'obiettivo del team è continuare la fase di codifica del #glossario("MVP") inserendo inoltre i test per raggiungere un code coverage adatto. Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori e i progettisti si divideranno i due sottogruppi: uno che si occuperà del lato back-end e uno del lato front-end dell'applicazione.\
+In questo #glossario("periodo"), l'obiettivo del team è continuare la fase di codifica del #glossario("MVP") inserendo inoltre i test per raggiungere un code coverage adatto. Per questi motivi i ruoli di #glossario("programmatore") e #glossario("progettista") sono stati assegnati a più membri del team. I programmatori e i progettisti si divideranno i due sottogruppi: uno che si occuperà del lato #glossario("back-end") e uno del lato #glossario("front-end") dell'applicazione.\
 Nello specifico gli obiettivi di questo periodo sono:
-  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra front-end e back-end per facilitare il ruolo di #glossario("programmatore") e #glossario("progettista") .
-  - *#glossario("PdQ")* : aggiungere riferimenti ai test di unita e di integrazione.
-  - *#glossario("ST")* : scrivere sezioni su componenti front-end, back-end e sulle tecnologie utilizzate.
+  - *Continuazione codifica #glossario("MVP")* : continuare la fase di sviluppo del #glossario("MVP"), suddividendo il lavoro tra #glossario("front-end") e #glossario("back-end") per facilitare il ruolo di #glossario("programmatore") e #glossario("progettista") .
+  - *#glossario("PdQ")* : aggiungere riferimenti ai test di unita e di #glossario("integrazione").
+  - *#glossario("ST")* : scrivere sezioni su componenti #glossario("front-end"), #glossario("back-end") e sulle tecnologie utilizzate.
 
 
 *Possibili rischi*\
@@ -1731,10 +1732,10 @@ Durante il decimo #glossario("periodo") si è evidenziata un'efficace gestione e
 
 #pb()
 *Obiettivi*:\
-In questo #glossario("periodo"), l'obiettivo del team è completare le ultime attività previste prima della consegna finale del progetto. In particolare, l'attenzione si è focalizzata sulla finalizzazione del #glossario("MVP") e sull'aggiornamento dei documenti tecnici e di supporto. Per garantire il rispetto delle scadenze, è stata data priorità al testing del front-end e alla redazione della documentazione finale.
+In questo #glossario("periodo"), l'obiettivo del team è completare le ultime attività previste prima della consegna finale del progetto. In particolare, l'attenzione si è focalizzata sulla finalizzazione del #glossario("MVP") e sull'aggiornamento dei documenti tecnici e di supporto. Per garantire il rispetto delle scadenze, è stata data priorità al testing del #glossario("front-end") e alla redazione della #glossario("documentazione") finale.
 Nello specifico gli obiettivi di questo periodo sono:
-- *Completamento #glossario("MVP")*: portare a termine le funzionalità principali dell'applicazione, consolidando l'integrazione tra front-end e back-end.
-- *Testing front-end*: completare la scrittura e l'esecuzione dei test relativi all'interfaccia utente per garantire stabilità e corretto funzionamento delle funzionalità.
+- *Completamento #glossario("MVP")*: portare a termine le funzionalità principali dell'applicazione, consolidando l'#glossario("integrazione") tra #glossario("front-end") e #glossario("back-end").
+- *Testing #glossario("front-end")*: completare la scrittura e l'esecuzione dei test relativi all'interfaccia utente per garantire stabilità e corretto funzionamento delle funzionalità.
 - *#glossario("Analisi dei Requisiti")*: aggiornare il documento includendo le ultime modifiche tecniche introdotte nel sistema.
 - *#glossario("Piano di Qualifica")*: finalizzare il piano aggiornando le metriche di qualità e includendo i risultati ottenuti dal cruscotto di #glossario("Grafana").
 - *#glossario("Specifica Tecnica")*: completare la descrizione di tutti i componenti sviluppati e delle scelte architetturali adottate.
@@ -1863,7 +1864,7 @@ Questo ha contribuito ad un avanzamento significativo del lavoro e ad una buona 
         [Amministratore(Am)],[#p.lucato],
         [Analista(An)],[#p.pesenato],
         [Programmatore(Prg)],[#p.salvo],
-        [Verificatore(Ve)],[#p.pozzobon,#p.salvo,\ #p.scandaletti,#p.valdagno],
+        [Verificatore(Ve)],[#p.pozzobon, #p.salvo,\ #p.scandaletti, #p.valdagno],
         [Progettista(Prt)], [_non presente_]
     )
   ]
@@ -1871,13 +1872,13 @@ Questo ha contribuito ad un avanzamento significativo del lavoro e ad una buona 
 
 #pb()
 *Obiettivi*:\
-In questa fase conclusiva del progetto, l’obiettivo primario del team è completare lo sviluppo dell’#glossario("MVP") e finalizzare tutta la documentazione necessaria per la chiusura ufficiale delle attività. Il lavoro si è quindi concentrato sia sul consolidamento del prodotto software che sulla revisione tecnica e formale dei documenti richiesti.
-L’intento è garantire un rilascio stabile e ben documentato dell’applicazione, facilitando la valutazione del progetto e l’utilizzo da parte degli utenti.
+In questa fase conclusiva del progetto, l’obiettivo primario del team è completare lo sviluppo dell’#glossario("MVP") e finalizzare tutta la #glossario("documentazione") necessaria per la chiusura ufficiale delle attività. Il lavoro si è quindi concentrato sia sul consolidamento del #glossario("prodotto software") che sulla revisione tecnica e formale dei documenti richiesti.
+L’intento è garantire un #glossario("rilascio") stabile e ben documentato dell’applicazione, facilitando la valutazione del progetto e l’utilizzo da parte degli utenti.
 
 Nello specifico, gli obiettivi di questo periodo sono:
   - *Finalizzazione #glossario("MVP")*: risolvere gli ultimi bug e ottimizzare le funzionalità implementate, garantendo un’applicazione stabile e performante.
-  - *Approvazione aziendale*: presentare il prodotto finale all’azienda ospitante, con l’obiettivo di ottenere un riscontro positivo e l’approvazione definitiva del progetto.
-	- *Revisione documentale*: rileggere e correggere i documenti prodotti, assicurandosi che siano aggiornati rispetto all’implementazione finale e coerenti tra loro.
+  - *#glossario("Approvazione") aziendale*: presentare il prodotto finale all’azienda ospitante, con l’obiettivo di ottenere un riscontro positivo e l’#glossario("approvazione") definitiva del progetto.
+	- *#glossario("Revisione") documentale*: rileggere e correggere i documenti prodotti, assicurandosi che siano aggiornati rispetto all’implementazione finale e coerenti tra loro.
 
 
 *Possibili rischi*\
@@ -1932,7 +1933,7 @@ Durante questo dodicesimo #glossario("periodo") si è verificato solo uno dei du
 - #link(<RI-2>)[*RI-2 - Problemi personali dei membri del team*]: Il rischio è stato mitigato tramite una riorganizzazione delle attività, redistribuendo i compiti urgenti tra i membri disponibili e mantenendo una comunicazione costante per garantire il rispetto delle scadenze.
 
 *Possibili cambiamenti*:\
-Durante il dodicesimo #glossario("periodo") il team ha raggiunto tutti gli obiettivi prefissati, completando con successo sia lo sviluppo del #glossario("MVP") sia la redazione e revisione della documentazione.
+Durante il dodicesimo #glossario("periodo") il team ha raggiunto tutti gli obiettivi prefissati, completando con successo sia lo sviluppo del #glossario("MVP") sia la redazione e revisione della #glossario("documentazione").
 Nonostante il verificarsi di un rischio, la risposta è stata tempestiva ed efficace, permettendo di mantenere il progetto allineato con le scadenze pianificate.
 Grazie a una gestione attenta delle attività e a una pianificazione coerente delle risorse, non sono emerse criticità rilevanti e il lavoro è proseguito senza intoppi, portando a un esito positivo per il progetto.
 #pb();
@@ -1951,7 +1952,7 @@ Grazie a una gestione attenta delle attività e a una pianificazione coerente de
       [Giovanni\ Salvò],[0],[0],[6],[0],[8],[0],[€ #(8*costo_ora.progr+6*costo_ora.ver)],
       [Gioele\ Scandaletti],[0],[0],[11.5 \ (#text(red)[+1.5])],[0],[0],[0],[€ #(11.5*costo_ora.ver) (#text(red)[+€ #(1.5*costo_ora.ver)])],
       [Pietro\ Valdagno],[0],[0],[2],[0],[0],[0],[€ #(2*costo_ora.ver)],
-      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(23*costo_ora.ver) \ (#text(red)[+€ #(3*costo_ora.ver)]) ],[€ #(1*costo_ora.proge) \ (#text(red)[+€ #(1*costo_ora.proge)])],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+345+25+120+50)*]],
+      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(23*costo_ora.ver) \ (#text(red)[+€ #(3*costo_ora.ver)]) ],[€ #(1*costo_ora.proge) \ (#text(red)[+€ #(1*costo_ora.proge)])],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+345+25+120+50)*] (#text(red)[+€ 70])],
     )
   ]
 ]
@@ -2004,7 +2005,7 @@ Grazie a una gestione attenta delle attività e a una pianificazione coerente de
 #pb()
 
 == Resoconto finale
-Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Ecco un riepilogo delle ore e dei costi sostenuti durante il progetto:
+Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Di seguito viene riportato un riepilogo delle ore e dei costi sostenuti durante il progetto:
 
 #figure()[
   #align(center)[
