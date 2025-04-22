@@ -8,7 +8,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "0.2.0", "17-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (""),
+    "0.2.0", "17-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (p.pozzobon),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
   ),
 )
@@ -28,7 +28,7 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/04/2025_
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 10/03/2025_
 - Riferimento al glossario (v 2.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
-- Norme di Progetto (v 2.0.0)
+- Riferimento alle Norme di Progetto (v 2.0.0): #link("https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf", text(blue)[https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf])
 
 #pb()
 
@@ -320,7 +320,7 @@ Il file CSV deve seguire una struttura specifica per essere interpretato corrett
 
 *Esempio di struttura CSV:*
 ```csv
-X Label 1,X Label 2,X Label 3
+,X Label 1,X Label 2,X Label 3
 Z Label 1,10.5,12.1,15.3
 Z Label 2,9.8,11.5,14.2
 Z Label 3,10.1,11.9,15.0```
