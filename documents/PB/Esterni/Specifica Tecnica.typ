@@ -10,6 +10,7 @@
   outline_depth: 3,
   changelog: (
     "1.0.0", "17-04-2025", "Revisione per incontro PB", (p.salvo),(p.checchinato,p.valdagno),
+    "0.7.0", "15-04-2025", "Fix diagrammi", (p.pesenato, p.lucato),(p.checchinato,p.valdagno),
     "0.6.0", "12-04-2025", "Aggiunta tecnologie e modifica sezione componenti front-end", (p.checchinato),(p.valdagno,p.lucato),
     "0.5.0", "10-04-2025", "Fix e stesura architettura deployment", (p.pesenato),(p.lucato, p.pozzobon),
     "0.4.0", "07-04-2025", "Stesura sezione back-end descrizione moduli", (p.pesenato),(p.lucato,p.pozzobon),
@@ -1244,185 +1245,182 @@ Questo ci permetterà in un futuro di poter aggiungere in maniera incrementale d
 
 == Elaborazione dati Database
 
- #figure(
+#figure(
   image("/img/st/db.png", width: 90%),
-  caption: [Modulo di interazione con il #glossario("database")],
+  caption: [Diagramma delle classi per l'interazione con il #glossario("database")],
 ) <imgDB>
 
-Questo modulo di elaborazione dei dati attraverso #glossario("database") gestisce la raccolta di coordinate (CoordinateEntity) da un #glossario("repository") (CoordinateRepository) e le rielabora tramite un servizio (CoordinateService/DefaultCoordinateService) per restituire all'utente finale dati sotto forma di una matrice (MatrixData/MatrixDataImpl). Il controller (CoordinateController) funge da punto di accesso per l'applicazione, invocando i metodi del servizio e ritornando i risultati.
+Questo modulo gestisce la raccolta e l'elaborazione di coordinate. Il #glossario("controller") (`CoordinateController`) riceve le richieste e utilizza un #glossario("service") (`CoordinateService`) per orchestrare l'operazione. L'implementazione del servizio (`DefaultCoordinateService`) si avvale di una porta (`CoordinatesLoaderPort`) per caricare i dati. Un adattatore (`CoordinateJpaAdapter`), che implementa sia la porta che un #glossario("repository") (`CoordinateRepository`), dove verranno recuperati i dati salvati nel database. I dati vengono infine trasformati in una struttura a matrice (`MatrixData`/`MatrixDataImpl`) per la restituzione.
 
-L'obiettivo di questa struttura è fornire un flusso completo dal livello di accesso ai dati (Repository), passando per la logica di business (Service), sino all'output finale (Controller), incapsulato in una rappresentazione astratta di dati (MatrixData).
+L'obiettivo è separare le responsabilità: il controller gestisce le richieste web, il service la logica di business, la porta definisce come caricare i dati, l'adattatore implementa il caricamento specifico e il repository definisce le operazioni di base sui dati.
 
 === CoordinateController
-1. *Attributi*: 
-- *coordinateService: CoordinateService*. Riferimento all'interfaccia del service che fornisce la logica per ottenere le coordinate ed elaborarle.
+  - *Attributi*:\
+    - *coordinateService: CoordinateService*. Riferimento all'interfaccia del service.
 
-2. *Costruttore*:  
-- *CoordinateController(coordinateService: CoordinateService)*. Inietta l'implementazione di CoordinateService necessaria al controller.
+  - *Costruttore*:\
+    - *CoordinateController(coordinateService: CoordinateService)*. Inietta l'implementazione del service.
 
-3. *Metodi*
-- *getMatrixData(datasetType: String): MatrixData*. Chiama il servizio per ottenere i dati (filtrati o identificati da datasetType) e restituisce un oggetto MatrixData che incapsula le coordinate in forma di matrici.
-4. *Note*
--  Il controller costituisce il layer più #glossario("esterno"), tipicamente l'ingresso da parte di un client (es. chiamata HTTP).
+  - *Metodi*:\
+    - *getMatrixData(datasetType: String): MatrixData*. Gestisce la richiesta per ottenere i dati a matrice.\
+
+  - *Note*:\
+    - Il controller costituisce il layer più #glossario("esterno"), tipicamente l'ingresso da parte di un client (es. chiamata HTTP).
 
 === CoordinateService
-
-1. *Metodi*
-- *getCoordinates(datasetType: String): MatrixData*. Definisce la firma del metodo che dovrà fornire le coordinate sotto forma di `MatrixData`. Non contiene logica implementativa, solo la specifica del contratto.
+  - *Metodi*:\
+    - *getCoordinates(datasetType: String): MatrixData*. Specifica il contratto per ottenere i dati elaborati come `MatrixData`.
 
 === DefaultCoordinateService
+  - *Attributi*:\
+    - *coordinatesLoaderPort: CoordinatesLoaderPort*. Riferimento alla porta per caricare le coordinate.
 
-1. *Attributi*
-- *coordinateRepository: CoordinateRepository*. Riferimento al #glossario("repository") che fornisce l'accesso ai dati (entità `CoordinateEntity`).
+  - *Costruttore*:\
+    - *DefaultCoordinateService(coordinatesLoaderPort: CoordinatesLoaderPort)*. Inietta l'implementazione della porta.
 
-2. *Costruttore*
-- *DefaultCoordinateService(coordinateRepository: CoordinateRepository)*. Inietta l'istanza del #glossario("repository") necessaria per interrogare il #glossario("database") o la #glossario("sorgente dati").
+  - *Metodi*:\
+    - *getCoordinates(datasetType: String): MatrixData*. Implementa la logica per ottenere i dati a matrice. Chiama coordinatesLoaderPort.loadCoordinatesByDatasetType(datasetType) per caricare le entità e poi le trasforma in `MatrixData`.
 
-3. *Metodi*
-- *getCoordinates(datasetType: String): MatrixData*. Implementa la logica per:
-  - Richiamare il #glossario("repository") e ottenere la lista di entità relative a `datasetType`.
-  - Estrarre da ogni `CoordinateEntity` i campi x, y e z.
-  - Popolare e restituire un oggetto di tipo `MatrixDataImpl` (che è l'implementazione concreta di `MatrixData`).
+  - *Note*:\
+    - Contiene la logica di business principale per trasformare le entità grezze in dati strutturati (`MatrixData`). Potrebbe includere #glossario("validazione"), trasformazioni aggiuntive, ecc.
 
-4. *Note*
-- In uno scenario reale, qui si potrebbe gestire anche caching, mapping più complesso degli attributi, #glossario("validazione") del `datasetType`, ecc.
+=== CoordinatesLoaderPort
+  - *Metodi*:\
+    - *loadCoordinatesByDatasetType(type: String): List<CoordinateEntity>*. Definisce il contratto per caricare le entità `CoordinateEntity` basate su `datasetType`.
+
+  - *Note*:\
+    - Funge da astrazione tra il service e il meccanismo specifico di recupero dati (che può essere JPA, API esterne, file CSV, ecc.). Permette di cambiare l'implementazione senza modificare il service.
 
 === CoordinateRepository
+  - *Metodi*:\
+    - *findAllByDatasetType(type: String): List<CoordinateEntity>*. Definisce un'operazione standard per recuperare entità per tipo.
 
-1. *Metodi*
-- *findAllByDatasetType(type: String): List<CoordinateEntity>*. Permette di recuperare tutte le entità che corrispondono a uno specifico `datasetType`.
+=== CoordinateJpaAdapter
+  - *Attributi*:\
+    - *coordinateRepository: CoordinateRepository*. Riferimento al repository JPA per le operazioni CRUD.
 
-2. *Note*
-- In un contesto tipico (es. Spring Data JPA), questa interfaccia sarebbe automaticamente implementata dal framework, fornendo #glossario("query") su un #glossario("database") relazionale (o altro storage).
-- L'approccio a #glossario("repository") promuove il pattern di “separazione delle responsabilità”: la logica di persistenza è centralizzata in un solo punto.
+  - *Costruttore*:\
+    - *CoordinateJpaAdapter(coordinateRepository: CoordinateRepository)*. Inietta il repository.
 
-=== CoordinateEntity
-
-1. *Attributi*
-- *id*: Long — Identificatore univoco dell'entità.
-- *xLabel*: String — Etichetta associato all'asse X.  
-- *zLabel*: String — Etichetta associato all'asse Z.  
-- *yValue*: double — Valore numerico associato all'asse Y.  
-- *datasetType*: String — Categoria a cui appartiene l'entità.
-
-2. *Costruttore*
-- *CoordinateEntity(xLabel: String, zLabel: String, yValue: Double, datasetType: String)*. Inizializza i campi principali necessari all'entità.
-
-3. *Metodi (Getter)*
-- *getXLabel(): String*  
-- *getYValue(): double*  
-- *getZLabel(): String*  
-
-4. *Note*
-- In un'applicazione di persistenza reale, potremmo aggiungere annotazioni (es. `@Entity`, `@#glossario("Id")`, ecc.) per la mappatura con il #glossario("database").
+  - *Metodi*:\
+    - *loadCoordinatesByDatasetType(type: String): List<CoordinateEntity>*. Implementa la porta per caricare le entità dal repository.
+  - *Note*:\
+    - Adattatore che implementa la porta `CoordinatesLoaderPort` e utilizza il repository JPA per caricare i dati. Se in futuro si volesse cambiare il meccanismo di caricamento (es. API esterne), basterebbe implementare una nuova classe che rispetti l'interfaccia `CoordinatesLoaderPort`.
 
 === MatrixData
+  - *Metodi*:\
+    - *xLabels(): List<String>*\
+    - *zLabels(): List<String>*\
+    - *yValues(): double[][]*\
 
-1. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
-
-2. *Note*
-- Definisce il contratto di come dev'essere rappresentato il #glossario("set di dati") in forma di matrici o liste coordinate.
-- Può variare a seconda che si gestiscano singoli valori Y o matrici X-Y-Z.
+  - *Note*:\
+    - Definisce la struttura dati finale da restituire, disaccoppiata dalle `CoordinateEntity`. L'uso di `double[][]` qui rappresenta una matrice bidimensionale di valori `double`.
 
 === MatrixDataImpl
-1. *Attributi*
-- *xLabels: List<String>*  
-- *zLabels: List<String>* 
-- *yValues: double*
+  - *Attributi*:\
+    - *xLabels: List<String>*\
+    - *zLabels: List<String>*\
+    - *yValues: double[][]*\
+  - *Costruttore*:\
+    - *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double[][])*.
 
-2. *Costruttore*
-- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Inizializza i vari campi con i dati estratti dalle entità tramite il servizio.
+  - *Metodi*:\
+    - *xLabels(): List<String>* - Restituisce `this.xLabels`.\
+    - *zLabels(): List<String>* - Restituisce `this.zLabels`.\
+    - *yValues(): double[][]* - Restituisce `this.yValues`.\
 
-3. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
-
-4. *Note*
-- Qui avviene la concretizzazione di come i dati di `CoordinateEntity` vengono trasformati in una struttura di output leggibile dall'#glossario("esterno").
 
 == Modulo API Esterno
 
  #figure(
   image("/img/st/api.png", width: 90%),
-  caption: [Modulo di interazione con le #glossario("API") esterne],
+  caption: [Diagramma UML del Modulo API Esterno],
 ) <imgAPI>
 
-Il *Modulo API Esterno* è #glossario("responsabile") dell'interazione con una #glossario("sorgente dati") remota, #glossario("accessibile") tramite protocollo HTTP. L'obiettivo è quello di integrare nel sistema dati provenienti dal servizio Weather Forecast.
-Questo modulo segue lo stesso principio architetturale del modulo #glossario("interno") basato su #glossario("database"): utilizza un controller per esporre l'endpoint, un service per incapsulare la logica di accesso e trasformazione, e un'interfaccia comune (`MatrixData`) per unificare il formato del dato.
-
-Il componente principale che espone l'endpoint verso il client è `ExternalDataController`, che si occupa di inoltrare la richiesta al service e restituire il risultato in un formato standardizzato.
-
+Il *Modulo API Esterno* è responsabile dell'interazione con una sorgente dati remota accessibile tramite protocollo HTTP, specificamente per integrare dati dal servizio Weather Forecast. L'architettura prevede un controller (`ExternalDataController`), un service (`ExternalDataService` e la sua implementazione `DefaultExternalDataService`), un'interfaccia di porta (`ExternalDataPort`) con la sua implementazione adapter (`ExternalApiAdapter`), e un'interfaccia dati comune (`MatrixData`) con la sua implementazione (`MatrixDataImpl`).
 
 === ExternalDataController
+  - *Attributi*:\
+    - *externalDataService: ExternalDataService*. Riferimento all'interfaccia del service che gestisce la logica di accesso ai dati esterni.
 
-1. *Attributi*
-- *externalDataService: ExternalDataService*. Riferimento al servizio che gestisce la logica di comunicazione con una fonte dati esterna.
+  - *Costruttore*:\
+    - *ExternalDataController(externalDataService: ExternalDataService)*. Inietta l'implementazione del service per ottenere i dati esterni.
 
-2. *Costruttore*
-- *ExternalDataController(externalDataService: ExternalDataService)*. Inietta l'istanza del servizio che si occupa di ottenere dati #glossario("esterni").
+  - *Metodi*:\
+    - *fetchExternalData(): MatrixData*. Inoltra la richiesta al service per recuperare i dati e li restituisce nel formato `MatrixData`.
 
-3. *Metodi*
-- *fetchExternalData(): MatrixData*. Chiama il servizio per ottenere i dati #glossario("esterni") e restituisce il risultato incapsulato in un oggetto `MatrixData`.
-
-4. *Note*
-- Come nel modulo #glossario("interno"), il controller funge da punto d'ingresso per i client #glossario("esterni") all'applicazione (es. chiamate HTTP REST).
+  - *Note*:\
+    - Funge da punto d'ingresso per le richieste client dirette a questa funzionalità.
 
 === ExternalDataService
+  - *Metodi*:\
+    - *fetchData(): MatrixData*. Definisce il contratto per il recupero dei dati dalla fonte esterna.
 
-1. *Metodi*
-- *fetchData(): MatrixData*. Definisce la firma del metodo incaricato di recuperare dati da una fonte esterna.
-
-2. *Note*
-- L'interfaccia consente di astrarre la logica di fetch, permettendo implementazioni alternative in futuro (es. GraphQL, file, ecc.).
+  - *Note*:\
+    - Interfaccia che astrae la logica di recupero dati, permettendo diverse implementazioni del service.
 
 === DefaultExternalDataService
+  - *Attributi*:\
+    - *externalDataPort: ExternalDataPort*. Riferimento all'interfaccia della porta utilizzata per interagire con l'adapter specifico della API.
 
-1. *Attributi*
-- *objectMapper*: ObjectMapper — Per la deserializzazione del JSON in oggetti Java.  
-- *restTemplate*: RestTemplate — Per effettuare le richieste HTTP verso l'#glossario("API") esterna.  
-- *properties*: ExternalAPIProperties — Contiene le configurazioni (endpoint, headers, ecc.) dell'#glossario("API") esterna.
+  - *Costruttore*:\
+    - *DefaultExternalDataService(externalDataPort: ExternalDataPort)*. Inietta l'implementazione della porta (adapter) per comunicare con la fonte dati esterna.
 
-2. *Costruttore*
-- *DefaultExternalDataService(restTemplate: RestTemplate, properties: ExternalAPIProperties, objectMapper: ObjectMapper)*. Inizializza i componenti necessari per l'interazione con l'#glossario("API") esterna.
+  - *Metodi*:\
+    - *fetchData(): MatrixData*. Implementa il metodo dell'interfaccia `ExternalDataService`, delegando il recupero effettivo dei dati all'`externalDataPort`.
 
-3. *Metodi*
-- *fetchData(): MatrixData*. Esegue una richiesta all'#glossario("API") esterna, riceve una risposta JSON, la deserializzazione e restituisce i dati in formato `MatrixData`.
+  - *Note*:\
+    - Implementazione concreta di `ExternalDataService`. Incapsula la logica di orchestrazione, utilizzando l'interfaccia `ExternalDataPort` per separare la logica di business dalla logica di accesso alla API specifica.
 
-- *parseData(jsonResponse: String): MatrixData*. Metodo #glossario("interno") privato usato per convertire la risposta JSON in un oggetto `MatrixData`.
+=== ExternalDataPort
+  - *Metodi*:\
+    - *fetchData(): MatrixData*. Definisce il contratto per l'adapter che effettivamente recupera i dati dalla specifica API esterna.
 
-- *validateData(data: MatrixData)*. Metodo #glossario("interno") privato che #glossario("verifica") la correttezza dei dati ricevuti prima di restituirli.
+  - *Note*:\
+    - Interfaccia che rappresenta la porta per l'adapter. Permette di cambiare l'implementazione dell'adapter senza influenzare il service o il controller.
+
+=== ExternalApiAdapter
+  - *Attributi*:\
+    - *restTemplate: RestTemplate*. Componente per effettuare chiamate HTTP.
+    - *properties: ExternalAPIProperties*. Oggetto contenente le configurazioni dell'API (URL, chiavi, ecc.).
+    - *objectMapper: ObjectMapper*. Componente per la (de)serializzazione JSON.
+
+  - *Costruttore*:\
+    - *ExternalApiAdapter(restTemplate: RestTemplate, properties: ExternalAPIProperties, objectMapper: ObjectMapper)*. Inizializza i componenti necessari per l'interazione HTTP e la manipolazione JSON.
+
+  - *Metodi*:\
+    - *fetchData(): MatrixData*. Implementa il recupero dati chiamando l'API esterna tramite `RestTemplate`, deserializzando la risposta con `ObjectMapper`.
+    - *parseData(jsonResponse: String): MatrixData*. (Metodo privato) Converte la risposta JSON grezza in un oggetto `MatrixData`.
+    - *validateData(data: MatrixData)*. (Metodo privato) Valida i dati ottenuti prima della restituzione.
+
+  - *Note*:\
+    - Implementazione concreta di `ExternalDataPort`. Contiene la logica specifica per comunicare con il servizio Weather Forecast, gestire la richiesta HTTP, e trasformare la risposta nel formato `MatrixData`.
 
 === MatrixData
+  - *Metodi*:\
+    - *xLabels(): List<String>*
+    - *zLabels(): List<String>*
+    - *yValues(): double[][]*-
 
-1. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
-
-2. *Note*
-- Rappresenta una struttura astratta per contenere e manipolare i dati in forma tabellare o matriciale, utile per visualizzazioni o calcoli successivi.
+  - *Note*:\
+    - Interfaccia che definisce la struttura dati standardizzata per rappresentare i dati matriciali/tabellari all'interno dell'applicazione.
 
 === MatrixDataImpl
+  - *Attributi*:\
+    - *xLabels: List<String>*
+    - *zLabels: List<String>*
+    - *yValues: double[][]*
 
-1. *Attributi*
-- *xLabels*: List<String>  
-- *zLabels*: List<String>  
-- *yValues*: *double*
+  - *Costruttore*:\
+    - *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double[][])*. Costruisce l'oggetto dati concreto.
 
-2. *Costruttore*
-- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Costruisce l'oggetto a partire dai dati ricevuti (tipicamente elaborati da JSON esterni).
+  - *Metodi*:\
+    - *xLabels(): List<String>*
+    - *zLabels(): List<String>*
+    - *yValues(): double[][]*
 
-3. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
-
-4. *Note*
-- L'implementazione concreta di `MatrixData` usata per rappresentare in modo coerente i dati provenienti dal servizio #glossario("API") #glossario("esterno").
+  - *Note*:\
+    - Implementazione concreta di `MatrixData`, utilizzata per contenere i dati provenienti dall'adapter API esterno dopo la trasformazione.
 
 == Modulo CSV
 
@@ -1435,74 +1433,74 @@ Il modulo CSV ha il compito di ricevere in input un file caricato dall'utente, l
 
 === UploadController
 
-1. *Attributi*
-- *csvFileReader: CsvFileReader*. Riferimento all'interfaccia che incapsula la logica di parsing dei file CSV.
+-  *Attributi*
+  - *csvFileReader: CsvFileReader*. Riferimento all'interfaccia che incapsula la logica di parsing dei file CSV.
 
-2. *Costruttore*
-- *UploadController(csvFileReader: CsvFileReader)*. Inietta un'istanza dell'interfaccia `CsvFileReader` nel controller.
+-  *Costruttore*
+  - *UploadController(csvFileReader: CsvFileReader)*. Inietta un'istanza dell'interfaccia `CsvFileReader` nel controller.
 
-3. *Metodi*
-- *uploadCsv(file: MultipartFile): MatrixData*. Riceve un file caricato tramite richiesta HTTP (tipicamente da un form), lo passa al `CsvFileReader` per il parsing e restituisce l'oggetto `MatrixData`.
+- *Metodi*
+  - *uploadCsv(file: MultipartFile): MatrixData*. Riceve un file caricato tramite richiesta HTTP (tipicamente da un form), lo passa al `CsvFileReader` per il parsing e restituisce l'oggetto `MatrixData`.
 
-4. *Note*
-- Usa `MultipartFile`, un tipo comune in Spring per rappresentare i file caricati.
+- *Note*
+  - Usa `MultipartFile`, un tipo comune in Spring per rappresentare i file caricati.
 
 === CsvFileReader
 
-1. *Metodi*
-- *parseCsv(file: MultipartFile): MatrixData*. Definisce il contratto per trasformare un file CSV in una struttura `MatrixData`.
+- *Metodi*
+  - *parseCsv(file: MultipartFile): MatrixData*. Definisce il contratto per trasformare un file CSV in una struttura `MatrixData`.
 
-2. *Note*
-- L'interfaccia permette flessibilità: in futuro si potrebbero aggiungere nuovi reader per altri formati senza modificare il controller.
+- *Note*
+  - L'interfaccia permette flessibilità: in futuro si potrebbero aggiungere nuovi reader per altri formati senza modificare il controller.
 
 === DefaultCsvFileReader
 
-1. *Attributi*
-- *properties: DataProperties*. Parametri o configurazioni utilizzate per l'analisi dei file (es. delimitatori, righe da saltare, header, ecc.).
+- *Attributi*
+  - *properties: DataProperties*. Parametri o configurazioni utilizzate per l'analisi dei file (es. delimitatori, righe da saltare, header, ecc.).
 
-2. *Costruttore*
-- *DefaultCsvFileReader(properties: DataProperties)*. Inizializza la classe con le proprietà necessarie alla configurazione del reader.
+- *Costruttore*
+  - *DefaultCsvFileReader(properties: DataProperties)*. Inizializza la classe con le proprietà necessarie alla configurazione del reader.
 
-3. *Metodi*
-- *parseCsv(file: MultipartFile): MatrixData*. Metodo principale che esegue:
-  - Parsing del contenuto CSV.
-  - Estrazione di etichette X/Z e valori Y.
-  - Costruzione dell'oggetto `MatrixDataImpl`.
+- *Metodi*
+  - *parseCsv(file: MultipartFile): MatrixData*. Metodo principale che esegue:
+    - Parsing del contenuto CSV.
+    - Estrazione di etichette X/Z e valori Y.
+    - Costruzione dell'oggetto `MatrixDataImpl`.
 
-- *getXLabels(table: `List<List<String>>`): List<String>*. Estrae le etichette da usare come asse X dalla tabella CSV.
+  - *getXLabels(table: `List<List<String>>`): List<String>*. (Metodo privato) Estrae le etichette da usare come asse X dalla tabella CSV.
 
-- *readCsvAsTable(file: MultipartFile): `List<List<String>>`*. Converte il file CSV in una lista di righe (ogni riga è una lista di stringhe).
+  - *readCsvAsTable(file: MultipartFile): `List<List<String>>`*. (Metodo privato) Converte il file CSV in una lista di righe (ogni riga è una lista di stringhe).
 
-- *getStrings(record: CsvRecord): List<String>*. Estrae i campi testuali da un record CSV.
+  - *getStrings(record: CsvRecord): List<String>*. (Metodo privato) Estrae i campi testuali da un record CSV.
 
-4. *Note*
-- Incapsula completamente la logica di parsing del file e la trasformazione dei dati grezzi in una struttura coerente.
-- Può essere facilmente estesa per supportare più formati.
+- *Note*
+  - Incapsula completamente la logica di parsing del file e la trasformazione dei dati grezzi in una struttura coerente.
+  - Può essere facilmente estesa per supportare più formati.
 
 === MatrixData
 
-1. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
+- *Metodi*
+  - *xLabels(): List<String>*  
+  - *zLabels(): List<String>*  
+  - *yValues(): double*
 
-2. *Note*
-- Interfaccia comune che rappresenta una matrice di dati indipendentemente dalla loro origine.
+- *Note*
+  - Interfaccia comune che rappresenta una matrice di dati indipendentemente dalla loro origine.
 
 === MatrixDataImpl
 
-1. *Attributi*
-- *xLabels: List<String>* 
-- *zLabels: List<String>*
-- *yValues: double*
+- *Attributi*
+  - *xLabels: List<String>* 
+  - *zLabels: List<String>*
+  - *yValues: double*
 
-2. *Costruttore*
-- *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Costruisce l'oggetto dati completo per la successiva visualizzazione o analisi.
+- *Costruttore*
+  - *MatrixDataImpl(xLabels: List<String>, zLabels: List<String>, yValues: double)*. Costruisce l'oggetto dati completo per la successiva visualizzazione o analisi.
 
-3. *Metodi*
-- *xLabels(): List<String>*  
-- *zLabels(): List<String>*  
-- *yValues(): double*
+- *Metodi*
+  - *xLabels(): List<String>*  
+  - *zLabels(): List<String>*  
+  - *yValues(): double*
 
-4. *Note*
-- È la rappresentazione concreta dei dati tabellari letti dal CSV e convertiti in un formato uniforme.
+- *Note*
+  - È la rappresentazione concreta dei dati tabellari letti dal CSV e convertiti in un formato uniforme.
