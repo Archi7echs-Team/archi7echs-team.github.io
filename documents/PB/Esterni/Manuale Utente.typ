@@ -282,6 +282,22 @@ Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salv
   GET /api/coordinates?datasetType=SMALL
   ```
 
+=== Risposta successo (HTTP 200 OK)
+Se la richiesta ha successo, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto `MatrixData`.
+
+=== Corpo della risposta
+```json
+{
+  "xLabels": ["X Label 1", "X Label 2", "X Label 3"],
+  "zLabels": ["Z Label 1", "Z Label 2", "Z Label 3"],
+  "yValues": [
+    [10.5, 12.1, 15.3],
+    [9.8, 11.5, 14.2],
+    [10.1, 11.9, 15.0]
+  ]
+}
+```
+
 == POST `/api/uploadCsv`
 
 === Descrizione
@@ -322,20 +338,34 @@ Il file CSV caricato deve rispettare i seguenti vincoli, altrimenti verrà resti
   - Il numero di righe e colonne è limitato a 300.
   - Il numero totale di punti dati (Y values) è limitato a 1000.
 - *Struttura*: Deve contenere almeno una riga di header X e una riga di dati Z/Y.
-=== Risposta successo (HTTP 200 OK)
-
-Se il file CSV è valido e rispetta tutti i vincoli, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
-=== Risposta errore
-
-In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP di errore, tipicamente:
-
-  - *HTTP 400 Bad Request*: Se il file non è un CSV valido, ha un formato errato, contiene celle vuote non permesse, valori non numerici, struttura inconsistente, o supera i limiti dimensionali (righe/colonne/punti dati). Il corpo della risposta contiene un messaggio di errore dettagliato.
-  - *HTTP 413 Payload Too Large*: Se il file supera il limite massimo di dimensione (es. 10 MB).
 
 === Esempio di utilizzo
 ```bash
 curl -X POST -F "file=@/percorso/del/file.csv" http://localhost:8080/api/uploadCsv
 ```
+
+=== Risposta successo (HTTP 200 OK)
+Se il file CSV è valido e rispetta tutti i vincoli, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
+
+=== Risposta errore
+In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP di errore, tipicamente:
+
+  - *HTTP 400 Bad Request*: Se il file non è un CSV valido, ha un formato errato, contiene celle vuote non permesse, valori non numerici, struttura inconsistente, o supera i limiti dimensionali (righe/colonne/punti dati). Il corpo della risposta contiene un messaggio di errore dettagliato.
+  - *HTTP 413 Payload Too Large*: Se il file supera il limite massimo di dimensione (es. 10 MB).
+
+=== Corpo della risposta
+```json
+{
+  "xLabels": ["X Label 1", "X Label 2", "X Label 3"],
+  "zLabels": ["Z Label 1", "Z Label 2", "Z Label 3"],
+  "yValues": [
+    [10.5, 12.1, 15.3],
+    [9.8, 11.5, 14.2],
+    [10.1, 11.9, 15.0]
+  ]
+}
+```
+
 == GET /api/external/data
 === Descrizione
 
@@ -344,6 +374,11 @@ Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo c
 === Parametri
 
 Nessun parametro richiesto per questo endpoint. La sorgente dati e gli eventuali parametri per l'API esterna sono configurati nel backend.
+
+=== Esempio di utilizzo
+```bash
+curl -X GET http://localhost:8080/api/external/data
+```
 
 === Risposta successo (HTTP 200 OK)
 
@@ -360,7 +395,15 @@ Possono verificarsi diversi errori durante il tentativo di recuperare o processa
   - La risposta ricevuta dal servizio esterno non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
   - La risposta ricevuta, seppur valida, contiene un numero di punti dati superiore al limite massimo configurato nel backend (nel nostro caso 1000).
 
-=== Esempio di utilizzo
-```bash
-curl -X GET http://localhost:8080/api/external/data
+=== Corpo della risposta
+```json
+{
+  "xLabels": ["X Label 1", "X Label 2", "X Label 3"],
+  "zLabels": ["Z Label 1", "Z Label 2", "Z Label 3"],
+  "yValues": [
+    [10.5, 12.1, 15.3],
+    [9.8, 11.5, 14.2],
+    [10.1, 11.9, 15.0]
+  ]
+}
 ```
