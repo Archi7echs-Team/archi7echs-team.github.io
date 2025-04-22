@@ -8,8 +8,9 @@
   show_outline: true,
   outline_depth: 4,
   changelog: (
+    "2.0.0","22-04-2025","Revisione per incontro PB", (p.valdagno), (p.checchinato,p.salvo),
     "1.2.0","21-03-2025","Ampliamento sezione processi di supporto",(p.checchinato,p.valdagno), (p.salvo, p.pesenato),
-    "1.1.1","21-03-2025","Modifica sezione riferimenti,documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
+    "1.1.1","21-03-2025","Modifica sezione riferimenti, documentazione da consegnare e sviluppo",p.checchinato, (p.salvo, p.valdagno),
     "1.1.0","12-03-2025","Modifica sezioni da stile narrativo a procedurale. Aggiunta sezione relativa al versionamento. Aggiunti riferimenti alla fase PB. Aggiunto riferimento a fase di codifica - utilizzo di Git e della repo",p.pozzobon, (p.pesenato, p.scandaletti),
     "1.0.0","09-02-2025","Revisione per incontro RTB",p.pozzobon,(p.valdagno,p.lucato),
     "0.18.1", "31-01-2025",  "Aggiunta termini glossario", p.scandaletti, (p.pozzobon,p.lucato),
@@ -145,9 +146,9 @@ Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito
 + *Progettazione architetturale del software*
 + *Progettazione dettagliata del software*
 + *Codifica e testing del software*  
-+ *Integrazione del software* 
++ *#glossario("Integrazione") del software* 
 + *Test di qualifica del software*
-+ *Integrazione di sistema*  
++ *#glossario("Integrazione") di sistema*  
 + *Test di qualifica del sistema* 
 + *Installazione del software* 
 + *Supporto all'accettazione del software*
@@ -155,7 +156,7 @@ Secondo lo standard #glossario("ISO/IEC 12207:1995"), lo sviluppo viene definito
 Queste attività garantiscono che il ciclo di vita del software segua un processo strutturato e controllato, assicurando la qualità e la conformità ai requisiti stabiliti.  
 // applica il tag #glossario sui termini adeguati
 ==== Implementazione del processo
-Questa fase costituisce il punto di partenza del #glossario("ciclo di vita") del #glossario("software"), stabilendo il modello di sviluppo secondo lo standard #glossario("ISO/IEC 12207:1995"). Si definiscono le responsabilità dei vari attori coinvolti, includendo sviluppatori, responsabili della #glossario("documentazione") e del controllo qualità. Viene scelto un framework metodologico che guidi ogni fase del processo e si identificano gli #glossario("standard") e le best practice da applicare. #glossario("Strumenti"), linguaggi di programmazione e metodi vengono selezionati per supportare le #glossario("attività") successive. Si redige un piano operativo che definisca tappe, risorse e scadenze. La documentazione iniziale garantisce la tracciabilità delle decisioni. Infine, revisioni periodiche permettono di affinare il modello e rispondere ai requisiti emergenti.
+Questa fase costituisce il punto di partenza del #glossario("ciclo di vita") del #glossario("software"), stabilendo il modello di sviluppo secondo lo standard #glossario("ISO/IEC 12207:1995"). Si definiscono le responsabilità dei vari attori coinvolti, includendo sviluppatori, responsabili della #glossario("documentazione") e del controllo qualità. Viene scelto un #glossario("framework") metodologico che guidi ogni fase del processo e si identificano gli #glossario("standard") e le best practice da applicare. #glossario("Strumenti"), linguaggi di programmazione e metodi vengono selezionati per supportare le #glossario("attività") successive. Si redige un piano operativo che definisca tappe, risorse e scadenze. La documentazione iniziale garantisce la tracciabilità delle decisioni. Infine, revisioni periodiche permettono di affinare il modello e rispondere ai requisiti emergenti.
 
 ==== Analisi dei requisiti di sistema
 Questa fase si concentra sull'identificazione dettagliata delle esigenze a livello di #glossario("sistema") e sulla definizione dei #glossario("requisiti"). Si esaminano i contesti operativi, le condizioni ambientali e le prestazioni attese, considerando aspetti quali sicurezza, usabilità e affidabilità. Vengono analizzati i vincoli tecnici e organizzativi, e la raccolta dei requisiti include input da fonti interne ed esterne. Ogni requisito è documentato in modo chiaro e verificabile, assicurando la tracciabilità attraverso strumenti specifici. Revisioni periodiche garantiscono coerenza e fattibilità tecnica, fornendo la base per la progettazione architetturale del sistema.
@@ -164,13 +165,13 @@ Questa fase si concentra sull'identificazione dettagliata delle esigenze a livel
 In questa fase viene definita una visione d'insieme dell'intero #glossario("sistema"), individuando i principali componenti #glossario("hardware") e #glossario("software") e le relative operazioni manuali. Ogni requisito viene allocato in specifici elementi, mentre le interfacce tra i componenti vengono chiaramente delineate per garantire scalabilità e modularità. La documentazione prodotta descrive la configurazione dei componenti e include valutazioni di coerenza e fattibilità, fondamentali per le fasi successive. Revisioni congiunte assicurano l'aderenza ai criteri tecnici stabiliti.
 
 ==== Analisi dei requisiti software
-Questa fase traduce le esigenze del #glossario("sistema") in #glossario("requisiti") specifici per il #glossario("software"). Si dettagliano le funzionalità attese, le prestazioni, gli aspetti di sicurezza e usabilità, e i vincoli operativi. Ogni requisito viene documentato con specifiche chiare, distinguendo tra requisiti funzionali e non funzionali. Vengono inoltre definite le interfacce e i requisiti per la gestione dei dati e del database. La tracciabilità con i requisiti di sistema è garantita e revisioni periodiche confermano la coerenza e l'adeguatezza dei requisiti.
+Questa fase traduce le esigenze del #glossario("sistema") in #glossario("requisiti") specifici per il #glossario("software"). Si dettagliano le funzionalità attese, le prestazioni, gli aspetti di sicurezza e usabilità, e i vincoli operativi. Ogni requisito viene documentato con specifiche chiare, distinguendo tra requisiti funzionali e non funzionali. Vengono inoltre definite le interfacce e i requisiti per la gestione dei dati e del #glossario("database"). La tracciabilità con i requisiti di sistema è garantita e revisioni periodiche confermano la coerenza e l'adeguatezza dei requisiti.
 
 ==== Progettazione architetturale del software
-In questa fase i #glossario("requisiti") vengono convertiti in una struttura di alto livello per il #glossario("software"). Si identificano i moduli, i componenti e le interfacce interne ed esterne, assicurando una corretta distribuzione delle funzionalità. Vengono delineati anche i progetti preliminari per il database e la documentazione utente. La revisione degli #glossario("standard") di progettazione assicura coerenza e tracciabilità delle scelte tecniche, creando una solida base per la progettazione dettagliata.
+In questa fase i #glossario("requisiti") vengono convertiti in una struttura di alto livello per il #glossario("software"). Si identificano i moduli, i componenti e le interfacce interne ed esterne, assicurando una corretta distribuzione delle funzionalità. Vengono delineati anche i progetti preliminari per il #glossario("database") e la documentazione utente. La revisione degli #glossario("standard") di progettazione assicura coerenza e tracciabilità delle scelte tecniche, creando una solida base per la progettazione dettagliata.
 
 ==== Progettazione dettagliata del software
-Questa fase approfondisce la progettazione definendo algoritmi, strutture dati e logiche operative per ciascun componente del #glossario("software"). Si producono diagrammi, pseudocodice e documenti tecnici che supportano la codifica, specificando in dettaglio le interfacce tra unità. Vengono aggiornate le specifiche per il database e la #glossario("documentazione") utente, e si definiscono i requisiti di test. Revisioni interne garantiscono coerenza, completezza e prontezza per la fase di codifica.
+Questa fase approfondisce la progettazione definendo algoritmi, strutture dati e logiche operative per ciascun componente del #glossario("software"). Si producono diagrammi, pseudocodice e documenti tecnici che supportano la codifica, specificando in dettaglio le interfacce tra unità. Vengono aggiornate le specifiche per il #glossario("database") e la #glossario("documentazione") utente, e si definiscono i requisiti di test. Revisioni interne garantiscono coerenza, completezza e prontezza per la fase di codifica.
 
 ==== Codifica e testing del software
 In questa fase il codice del #glossario("software") viene sviluppato seguendo le specifiche della progettazione dettagliata. Ogni unità viene implementata in modo modulare e accompagnata da procedure di test unitari. I test verificano la conformità del codice ai #glossario("requisiti") e al design previsto, con i risultati accuratamente documentati. Si applicano standard di codifica e strumenti di testing per monitorare la qualità e la copertura dei test, aggiornando la #glossario("documentazione") in parallelo.
@@ -188,7 +189,7 @@ Questa attività combina il #glossario("software") con componenti hardware, proc
 In questa fase l'intero sistema, comprendente #glossario("hardware") e #glossario("software"), viene testato in condizioni operative reali. Vengono eseguiti casi di test che simulano scenari d'uso quotidiano, valutando funzionalità, performance e sicurezza a livello globale. I risultati sono documentati per verificare la copertura dei requisiti di sistema e la conformità ai risultati attesi. Revisioni congiunte e strumenti di testing automatizzati supportano la valutazione, garantendo che il sistema sia robusto e pronto per la consegna.
 
 ==== Installazione del software
-Questa fase riguarda la distribuzione del #glossario("software") nell'ambiente di destinazione, seguendo un piano di installazione dettagliato. Vengono identificate le risorse e le informazioni necessarie per configurare il sistema e assicurare il corretto avvio del codice e dei database. Il processo di installazione viene monitorato e documentato in ogni fase, garantendo il rispetto delle specifiche tecniche e operative. L'assistenza tecnica supporta la configurazione e risolve eventuali problematiche riscontrate durante il processo.
+Questa fase riguarda la distribuzione del #glossario("software") nell'ambiente di destinazione, seguendo un piano di installazione dettagliato. Vengono identificate le risorse e le informazioni necessarie per configurare il sistema e assicurare il corretto avvio del codice e dei #glossario("database"). Il processo di installazione viene monitorato e documentato in ogni fase, garantendo il rispetto delle specifiche tecniche e operative. L'assistenza tecnica supporta la configurazione e risolve eventuali problematiche riscontrate durante il processo.
 
 ==== Supporto all'accettazione del software
 Questa attività finale prevede l'assistenza durante le fasi di revisione e testing di accettazione da parte dell'acquirente. Il programmatore supporta la verifica della conformità del #glossario("software") ai requisiti contrattuali, coordinando sessioni di test congiunte e raccogliendo feedback. I risultati dei test e delle revisioni sono accuratamente documentati, garantendo trasparenza e tracciabilità. Viene fornita formazione finale agli utenti e stabilita una baseline definitiva per il prodotto consegnato. Il supporto post-consegna facilita la manutenzione e una transizione operativa fluida.
@@ -206,21 +207,21 @@ Il gruppo utilizza una serie di strumenti per supportare lo sviluppo e la proget
 ==== Utilizzo di Git e della #glossario("Repository")
 Tutto il codice del progetto è contenuto nell'apposita repository #glossario("GitHub").
 
-E' cura del programmatore tenere sempre la sua #glossario("repository") locale aggiornata con quella remota mediante l'utilizzo del comando ```bash git pull ```.
+È cura del programmatore tenere sempre la sua #glossario("repository") locale aggiornata con quella remota mediante l'utilizzo del comando ```bash git pull ```.
 
 Per lo sviluppo di codice, che sia questo a scopo implementativo o di fix, il programmatore dovrà seguire i seguenti passaggi: 
-+ posizionarsi in un branch locale dedicato, partendo da il *main*, mediante l'il comando ```bash git checkout -b nuovoBranch ```
++ posizionarsi in un branch locale dedicato, partendo dal *main*, mediante il comando ```bash git checkout -b nuovoBranch ```
 + eseguire il commit locale delle modifiche
 + una volta terminata l'attività di codifica associata al branch è necessario fare il pull dello stesso, mediante i comandi: 
   + ```bash git add .``` o ```bash git add --all``` --- per aggiungere i file modificati nell'area di staging
   + ```bash git commit -m "messaggio"``` --- per creare un commit con i file aggiunti in staging
   + ```bash git push --set-upstream origin <nome_branch>``` --- per caricare il nuovo branch e le modifiche sul #glossario("repository") remoto
-+ aprire la PR, assegnando il #glossario("responsabile") di progetto come revisore in quanto unica persona abilitata, dopo un controllo su quanto fatto, ad effettuare il merge sul main.
++ aprire la #glossario("PR"), assegnando il #glossario("responsabile") di progetto come #glossario("revisore") in quanto unica persona abilitata, dopo un controllo su quanto fatto, ad effettuare il merge sul main.
 
 Il responsabile di progetto è tenuto a:
 + verificare il lavoro fatto dal programmatore
-+ approvare la PR mediante l'apposita funzione di #glossario("GitHub")
-+ chiudere la PR effettuando il merge sul main ed eliminando il branch oppure richiedere modifiche al programmatore
++ approvare la #glossario("PR") mediante l'apposita funzione di #glossario("GitHub")
++ chiudere la #glossario("PR") effettuando il merge sul main ed eliminando il branch oppure richiedere modifiche al programmatore
   - in caso di richiesta modifiche l'iter riparte
 
 
@@ -276,7 +277,7 @@ Nella prima pagina di contenuto, ovvero la pagina nr. 3, è necessario indicare,
   - presenze
 
 
-Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*"" indicando, se ci sono state, discussioni di punti extra #glossario("OdG") ed orario di fine dell'incontro.
+Dopo le presenze si procede con il riassunto della discussione dei relativi punti dell'#glossario("OdG"), da riportare in ordine. L'ultima sezione deve sempre essere  "*Varie ed eventuali*" indicando, se ci sono state, discussioni di punti extra #glossario("OdG") ed orario di fine dell'incontro.
 
 Il verbale deve inoltre contenere, nella relativa sezione del #glossario("template"):
 - una tabella con un riassunto delle decisioni prese.  Ogni riga di questa deve contenere il riferimento al punto dell'#glossario("OdG"), per consentire al lettore di approfondire la sezione di interesse senza dover leggere tutto il documento, l'argomento e la decisione presa.
@@ -287,19 +288,19 @@ Alla fine del documento deve essere indicato Luogo e Data, sede del gruppo, e la
 === Registro delle modifiche e versionamento <tabella_revisioni>
 Ogni documento, escluso allegati e carta intestata, contiene la tabella delle revisioni con il #glossario("registro delle modifiche"). 
 
-E' compito di colui che scrive o modifica un documento:
+È compito di colui che scrive o modifica un documento:
 + Aggiornare la tabella con:
   - versione del documento, in forma x.y.z (@numversione)
   - data della modifica
   - descrizione
   - autore della modifica
 
-E' compito del #glossario("verificatore"):
+È compito del #glossario("verificatore"):
 + verificare la correttezza, sia grammaticale/sintattica che di contenuto, delle modifiche apportate
 + assicurarsi che il numero di versione assegnato alla modifica sia corretto secondo le regole del team
 + inserire il proprio nome nell'apposita colonna della tabella
 
-E' compito del #glossario("responsabile"):
+È compito del #glossario("responsabile"):
 + verificare la correttezza dei contenuti
 + inserire il proprio nome nell'apposita colonna della tabella, insieme a quello del verificatore
 
@@ -442,7 +443,7 @@ Pertanto, i figli possono aggiungere delle #glossario("funzionalità") rispetto 
 === Diagramma delle classi
 Nei futuri documenti, durante le fasi di progettazione, sarà necessario rappresentare graficamente non più solo quello che l'utente desidera poter fare (interazioni con il sistema) ma anche come lo si andrà ad implementare. A questo scopo è quindi fondamentale impostare delle regole #glossario("UML") per la rappresentazione delle classi tramite diagrammi. Le #glossario("funzionalità") principali sono:
 - *Modellare la struttura del sistema*: Forniscono una visione dettagliata di come le entità del sistema (classi) sono definite e come interagiscono tra loro.
-- *Progettazione e Documentazione*: Sono utili durante la fase di progettazione per definire l’architettura del software e durante lo sviluppo per documentare il sistema.
+- *Progettazione e #glossario("Documentazione")*: Sono utili durante la fase di progettazione per definire l’architettura del software e durante lo sviluppo per documentare il sistema.
 - *Supporto per il Codice*: Possono essere utilizzati durante la fase di sviluppo per scrivere il codice o per comprendere e modificare un sistema esistente.
 - *Facilitare la Comunicazione*: Rappresentano un linguaggio comune tra sviluppatori, analisti, progettisti e stakeholder.
 
@@ -889,7 +890,7 @@ Sarà compito del #glossario("responsabile") del #glossario("progetto") controll
 
 == Gestione e Analisi delle ore di lavoro
 
-La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite #glossario("Google Sheets"), che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con #glossario("Grafana"), un servizio che fornisce un cruscotto di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e #glossario("funzionalità").
+La gestione delle ore di lavoro e dei relativi costi è uno degli aspetti fondamentali per monitorare l’andamento del progetto. A tal fine, ogni membro del team dispone di una sezione del foglio ore creato tramite #glossario("Google Sheets"), che permette di registrare, riepilogare e analizzare le ore svolte e i costi associati. Inoltre, i dati inseriti nel foglio sono integrati con #glossario("Grafana"), un servizio che fornisce un #glossario("cruscotto") di monitoraggio visivo e analitico. Di seguito sono spiegate in dettaglio le diverse sezioni e #glossario("funzionalità").
 
 === Struttura e utilizzo del foglio ore
 Il foglio ore si compone di due parti principali:
@@ -1039,7 +1040,7 @@ Durante l'incontro periodico #glossario("SAL") con il proponente viene relaziona
 
 === Miglioramento
 L'#glossario("attività") di miglioramento è un aspetto fondamentale per garantire efficienza e qualità dei processi. Si identificano tutte quelle "aree" che necessitano degli accorgimenti che possono interessare questioni tempistiche e/o di qualità apportando quindi le dovute modifiche necessarie.
-L’identificazione si materializza attraverso la #glossario("retrospettiva") svolta durante ogni riunione (ampiamente descritto all'#glossario("interno") del #glossario("PdP")) e anche grazie al cruscotto che permette di avere una visione d'insieme dei processi e delle #glossario("issue") in corso.
+L’identificazione si materializza attraverso la #glossario("retrospettiva") svolta durante ogni riunione (ampiamente descritto all'#glossario("interno") del #glossario("PdP")) e anche grazie al #glossario("cruscotto") che permette di avere una visione d'insieme dei processi e delle #glossario("issue") in corso.
   
 
 === Formazione
