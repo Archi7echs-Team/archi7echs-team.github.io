@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.valdagno),
+    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.checchinato,p.valdagno),
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
@@ -222,6 +222,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 
 *#glossario("PB")*:  Durante questa fase si osserva un costante decremento dell’Estimated To Complete, coerente con l’avanzamento delle attività progettuali. Il grafico mostra chiaramente una progressiva riduzione delle risorse economiche necessarie al completamento del progetto, evidenziando una corretta esecuzione delle attività previste. Questo comportamento, inversamente proporzionale all’incremento dell’Actual Cost, conferma che il consumo delle risorse procede in linea con le aspettative, senza sprechi né variazioni critiche nella stima dei costi residui.
 
+#pb();
 
 === Processi di supporto
 #align(center)[
