@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "2.0.0", "22-04-2025", "Revisione per incontro PB", p.checchinato, (p.valdagno),
+    "2.0.0", "22-04-2025", "Revisione per incontro PB", p.checchinato, (p.valdagno,p.lucato),
     "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo, p.lucato),
     "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
@@ -1952,7 +1952,7 @@ Grazie a una gestione attenta delle attività e a una pianificazione coerente de
       [Giovanni\ Salvò],[0],[0],[6],[0],[8],[0],[€ #(8*costo_ora.progr+6*costo_ora.ver)],
       [Gioele\ Scandaletti],[0],[0],[11.5 \ (#text(red)[+1.5])],[0],[0],[0],[€ #(11.5*costo_ora.ver) (#text(red)[+€ #(1.5*costo_ora.ver)])],
       [Pietro\ Valdagno],[0],[0],[2],[0],[0],[0],[€ #(2*costo_ora.ver)],
-      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(23*costo_ora.ver) \ (#text(red)[+€ #(3*costo_ora.ver)]) ],[€ #(1*costo_ora.proge) \ (#text(red)[+€ #(1*costo_ora.proge)])],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+345+25+120+50)*]],
+      [*Costo per ruolo*],[€ #(2*costo_ora.res)],[€ #(2*costo_ora.amm)],[€ #(23*costo_ora.ver) \ (#text(red)[+€ #(3*costo_ora.ver)]) ],[€ #(1*costo_ora.proge) \ (#text(red)[+€ #(1*costo_ora.proge)])],[€ #(8*costo_ora.progr)],[€ #(2*costo_ora.ana)],[#text(blue)[*€ #(60+40+345+25+120+50)*] (#text(red)[+€ 70])],
     )
   ]
 ]
@@ -2005,7 +2005,7 @@ Grazie a una gestione attenta delle attività e a una pianificazione coerente de
 #pb()
 
 == Resoconto finale
-Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Ecco un riepilogo delle ore e dei costi sostenuti durante il progetto:
+Il consuntivo finale del progetto evidenzia una gestione efficace delle risorse, con uno scostamento minimo rispetto al preventivo iniziale. Nello specifico, durante la fase #glossario("RTB") sono stati impiegati *€5011,25*, mentre nella fase di #glossario("PB") sono stati spesi *€7513,75*, per un totale complessivo di *€12.525,00* sui *€12.530,00* preventivati. Inoltre la data prevista per la consegna del prodotto finale è entro il *04/05/2025*. Di seguito viene riportato un riepilogo delle ore e dei costi sostenuti durante il progetto:
 
 #figure()[
   #align(center)[
