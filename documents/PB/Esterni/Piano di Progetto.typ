@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 3,
   changelog: (
-    "2.0.0", "22-04-2025", "Revisione per incontro PB", p.checchinato, (""),
+    "2.0.0", "22-04-2025", "Revisione per incontro PB", p.checchinato, (p.valdagno),
     "1.7.0", "18-04-2025", "Stesura dodicesimo periodo e resoconto PB", p.checchinato, (p.salvo, p.lucato),
     "1.6.0", "12-04-2025", "Stesura undicesimo periodo", p.checchinato, (p.lucato,p.salvo),
     "1.5.0", "07-04-2025", "Stesura decimo periodo", p.salvo, (p.lucato, p.pesenato),
@@ -213,7 +213,7 @@ Il costo in #text(blue)[blu] è il costo preventivato del #glossario("periodo").
 
 == Struttura dell'esito effettivo
 
-+ *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. E' molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
++ *Obiettivi non raggiunti*: identifica la sezione in cui vengono elencati gli obiettivi che non sono stati raggiunti. È molto importante indicare le motivazioni reali e concrete, per permettere un miglioramento nelle pianificazioni successive o uno studio più approfondito dei rischi.
 + *Problematiche non attese*: identifica la sezione in cui vengono elencate tutte quelle problematiche che non erano state considerate durante la fase preliminare o nelle fasi preliminari di periodi precedenti.
 + *Mitigazione rischi verificati*: identifica la sezione in cui vengono elencate le azioni intraprese per mitigare i rischi (sia quelli preventivati che non)che si sono verificati durante il #glossario("periodo"). Questo permette di avere un feedback immediato sullo stato del #glossario("progetto") e di capire se le azioni intraprese sono state efficaci o meno.
 + *Possibili cambiamenti*: identifica la sezione in cui vengono discussi dei miglioramenti presi in considerazione in base a quanto rilevato durante il #glossario("periodo") affrontato. In questa parte il team ritiene molto importante identificare _tutti_ i cambiamenti da attuare, dunque non solo quelli per il #glossario("periodo") successivo ma anche (e soprattutto) in visione "a lungo raggio".
@@ -268,7 +268,7 @@ In questa sezione vengono elencati i rischi individuati dal team durante la fase
 - *Descrizione*: difficoltà di gestione dei propri impegni personali (università, lavoro, impegni personali, ecc...)
 - *Probabilità*: alta
 - *Impatto*: alto
-- *Strategie di mitigazione*: il #glossario("responsabile") dovrà essere in grado di gestire le #glossario("attività") in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. E' importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
+- *Strategie di mitigazione*: il #glossario("responsabile") dovrà essere in grado di gestire le #glossario("attività") in modo flessibile, cercando di assegnare compiti in base alle disponibilità di ciascun membro del team. È importante dunque che ci sia una partecipazione attiva nel comunicare eventuali problemi o difficoltà da parte di tutti i componenti del gruppo.
 
 ==== Rischio 3 - Problemi di coordinamento <RI-3>
 - *Identificativo*: RI-3
@@ -717,7 +717,7 @@ Durante il #glossario("periodo") oltre alla problematica non attesa, non si sono
 *Possibili cambiamenti*:\
 La non presa in carico e termine dell'#glossario("issue") riferita al glossario e facente in origina parte del primo #glossario("Periodo") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, nel particolare: 
 
-- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). È a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 
 #pb()
 *Tabella esito effettivo*:\ 
@@ -847,7 +847,7 @@ Durante il #glossario("periodo") oltre alla problematica non attesa, si è verif
 *Possibili cambiamenti*:\
 La non presa in carico e termine dell'#glossario("issue") riferita al fix del #glossario("template") indica come il team debba puntare maggiormente sulla corretta gestione delle priorità nello svolgimento dei tasks, inoltre è richiesto anche una maggior precisione nell'assegnazione delle ore preventivate per evitare queste variazioni.
 
-- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). E' a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
+- *Gestione delle priorità a livello di #glossario("issue")*: le #glossario("issue") che potenzialmente possono presentare rischi o che sono state rallentate da problematiche, previste o non previste, verificatesi durante il corso del #glossario("periodo") devono essere categorizzate come *HIGH PRIORITY*, mediante l'apposito campo del #glossario("sistema di ticketing"). È a cura del #glossario("responsabile") del #glossario("progetto") verificare personalmente l'avanzamento di tali #glossario("issue"), interfacciandosi direttamente con l'assegnatario, o gli assegnatari, preposti al completamento del #glossario("task"). Per questo tipo di #glossario("attività") si richiede ai componenti del gruppo una maggiore consapevolezza nell'organizzare il proprio lavoro per priorità.
 - *Gestione delle ore preventivate*: il team deve fare attenzione a non sottostimare le ore preventivate per evitare variazioni significative come quelle verificatesi in questo #glossario("periodo"). Potrebbe essere utile inserire un breve momento durante le riunioni interne per andare a studiare lo stato del #glossario("periodo"), analizzando quanto preventivato e quanto effettivamente svolto, in modo tale da poter correggere eventuali errori e migliorare la stima delle ore nei periodi successivi.
 #pb()
 *Tabella esito effettivo*:\ 
@@ -1864,7 +1864,7 @@ Questo ha contribuito ad un avanzamento significativo del lavoro e ad una buona 
         [Amministratore(Am)],[#p.lucato],
         [Analista(An)],[#p.pesenato],
         [Programmatore(Prg)],[#p.salvo],
-        [Verificatore(Ve)],[#p.pozzobon,#p.salvo,\ #p.scandaletti,#p.valdagno],
+        [Verificatore(Ve)],[#p.pozzobon, #p.salvo,\ #p.scandaletti, #p.valdagno],
         [Progettista(Prt)], [_non presente_]
     )
   ]
