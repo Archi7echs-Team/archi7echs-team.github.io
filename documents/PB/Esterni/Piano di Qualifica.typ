@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "1.6.0","18-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,"",
+    "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,"",
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
     "1.3.0","30-03-2025","Aggiunta test di unità e test di integrazione",p.lucato,(p.checchinato,p.salvo),
@@ -156,7 +156,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC5 - AC],
 ) <imgMPC5_fasePB>
 
-*#glossario("PB")*: Durante questa si nota un incremento costante e progressivo del costo effettivamente sostenuto. Sebbene il trend di crescita dell’Actual Cost rimanga sotto controllo, il raggiungimento del valore target verso la fine del periodo suggerisce un’intensificazione degli sforzi, e quindi delle risorse impiegate, per garantire il completamento delle attività secondo la pianificazione. Tale sprint è frutto del lavoro full-time dedicato al progetto dai membri del team.
+*#glossario("PB")*: Durante questa fase si nota un incremento costante e progressivo del costo effettivamente sostenuto. Sebbene il trend di crescita dell’Actual Cost rimanga sotto controllo, il raggiungimento del valore target verso la fine del periodo suggerisce un’intensificazione degli sforzi, e quindi delle risorse impiegate, per garantire il completamento delle attività secondo la pianificazione. Tale sprint è frutto del lavoro full-time dedicato al progetto dai membri del team.
 
 
 ==== MPC6 - Cost Performance Index
@@ -236,6 +236,13 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
     <tab:metricheProcessiSupporto>
 ]
  #align(center)[Tabella 2: Valori accettabili e preferibili per le metriche dei #glossario("processi di supporto").] 
+
+
+==== MPC10 - Percentuale di Casi di Test Superati (PCTS)
+La percentuale di casi di test superati è pari o superiore all’80%, risultando conforme al valore accettabile. Ciò conferma l’efficacia e l’affidabilità dei test eseguiti.
+
+==== MPC11 - Percentuale di metriche soddisfatte
+È stata soddisfatta una percentuale di metriche pari o superiore all’85%, rispettando il valore accettabile. Questo indica un buon livello complessivo di qualità del progetto.
 
 === Processi organizzativi
 #align(center)[
@@ -338,7 +345,17 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 
 *#glossario("PB")*:  Il grafico mostra un andamento inizialmente stazionario, con una copertura del codice nulla nei primi sei periodi, in quanto la fase di effettiva codifica non era prevista dalla fase precedente. A partire dal periodo 7 si assiste  a una crescita rapida e costante della code coverage, che supera la soglia dell’80% entro il periodo 11. Questo comportamento suggerisce una fase iniziale di impostazione e sviluppo del codice seguita da un’intensa attività di testing e validazione, che ha permesso di raggiungere e superare il valore target. L’incremento progressivo evidenzia un miglioramento nella qualità del software e una crescente attenzione alla copertura dei test.
 
+==== MPD5 - Indice Gulpease
+Il valore ottenuto è ≥ 50, rispettando pienamente il valore accettabile. Il testo risulta quindi leggibile secondo gli standard previsti.
+
+==== MPD6 - Failure Density
+La densità di failure è ≤ 10%, conforme al valore accettabile. Il codice presenta un livello di affidabilità adeguato.
+
+==== MPD7 - Statment Coverage
+La copertura delle istruzioni è ≥ 80%, quindi conforme al valore accettabile e indica una buona estensione dei test eseguiti.
+
 ==== MPD8 - Branch Coverage
+
 #figure(
   image("/img/pdq/PB/MPD8.png", width: 80%),
   caption: [MPD8 - BC],
@@ -346,6 +363,8 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 
 *#glossario("PB")*: Il grafico evidenzia un andamento simile a quello della Code Coverage, con valori nulli nei primi sei periodi e un significativo incremento a partire dal periodo 7. In pochi intervalli la branch coverage supera la soglia dell’80%, raggiungendo un livello prossimo al 100% entro il periodo 11. Questo rapido miglioramento suggerisce una fase di testing intensivo e mirato all’identificazione e verifica di tutte le diramazioni del codice, indicativo di un elevato livello di attenzione alla qualità e affidabilità del software. Il raggiungimento di tali valori testimonia un’evoluzione matura del processo di verifica
 
+==== MPD9 - Correttezza Ortografica
+Nella documentazione non sono stati riscontrati errori ortografici, soddisfacendo completamente i criteri previsti dalla metrica.
 
 === Usabilità
 #align(center)[
@@ -360,6 +379,13 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
     <tab:metricheUsabilità>
 ]
  #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di usabilità.] 
+
+
+==== MPD10 - Facilità di Utilizzo
+Il numero di click necessari per completare le operazioni principali è ≤ 10, rispettando il valore accettabile e garantendo una buona usabilità.
+
+==== MPD11 - Tempo di Apprendimento
+Il tempo richiesto per apprendere l’utilizzo del sistema è inferiore o uguale a 15 minuti, in linea con quanto previsto per un’interfaccia user-friendly.
  
 === Efficienza
 #align(center)[
@@ -375,6 +401,12 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
 ]
  #align(center)[Tabella 7: Valori accettabili e preferibili per le metriche di efficienza.] 
 
+==== MPD12 - Tempo Medio di Risposta
+Il tempo medio di risposta del sistema è ≤ 10 secondi, soddisfacendo il valore accettabile e assicurando prestazioni adeguate.
+
+==== MPD13 - Utilizzo delle Risorse
+L’utilizzo delle risorse hardware/software è ≥ 75%, risultando conforme alle aspettative di efficienza.
+
 === Manutenibilità
 #align(center)[
   #table(
@@ -387,6 +419,10 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
     <tab:metricheManutenibilità>
 ]
  #align(center)[Tabella 6: Valori accettabili e preferibili per le metriche di manutenibilità.] 
+
+
+==== MPD14 - Complessità Ciclomatica
+Il valore è ≤ 8, rientrando nel limite accettabile e indicando un buon livello di manutenibilità del codice.
 
 #pb()
 
