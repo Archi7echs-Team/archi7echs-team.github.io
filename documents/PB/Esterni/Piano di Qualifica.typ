@@ -9,7 +9,7 @@
   show_outline: true,
   outline_depth: 2,
   changelog: (
-    "2.0.0","22-04-2025","Revisione per incontro PB",p.pozzobon,(p.valdagno),
+    "2.0.0","23-04-2025","Revisione per incontro PB",p.pozzobon,(p.checchinato,p.valdagno),
     "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.checchinato,p.valdagno),
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
@@ -57,13 +57,13 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 #pb()
 
 == Dashboard
-A disposizione del team, del committente e del #glossario("proponente") è la dashboard online realizzata su Grafana. Tale sistema permette di visualizzare in tempo reale #glossario("infografiche") renderizzate automaticamente con i dati reperiti da #glossario("GitHub") e dal foglio ore. Sono inoltre visibili e aggiornati per #glossario("periodo") i grafici relativi alle metriche. \ 
+A disposizione del team, del committente e del #glossario("proponente") è la dashboard online realizzata su Grafana. Tale #glossario("sistema") permette di visualizzare in tempo reale #glossario("infografiche") renderizzate automaticamente con i dati reperiti da #glossario("GitHub") e dal foglio ore. Sono inoltre visibili e aggiornati per #glossario("periodo") i grafici relativi alle metriche. \ 
 La dashboard è raggiungibile al seguente link: \
 #align(center)[#link("https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b")[#text(blue)[https://archi7echs.grafana.net/public-dashboards/ec58c4df04ac4470ba7023a6f3fe808b]]] 
 _non è richiesta la registrazione o il login per la visualizzazione._
  
 = Obiettivi metrici di qualità
-Per valutare la qualità del software e l'efficacia dei processi vengono adottate delle metriche che sono elencate nella sezione _Metriche di qualità_ del documento _Norme di Progetto_. \ 
+Per valutare la qualità del #glossario("software") e l'efficacia dei processi vengono adottate delle metriche che sono elencate nella sezione _Metriche di qualità_ del documento _Norme di Progetto_. \ 
 In questa sezione vengono elencati i valori che le metriche devono rispettare affinché siano considerate accettate o pienamente soddisfatte.
 
 == Qualità di processo
@@ -205,7 +205,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
   caption: [MPC8 - EAC],
 ) <imgMPC8_fasePB>
 
-*#glossario("PB")*: Nella fase PB il valore dell’Estimated At Completion si mantiene costante, segno di una pianificazione economica stabile e sotto controllo. La linearità della curva indica che, nonostante l’avanzamento delle attività e le eventuali fluttuazioni nei costi sostenuti, non sono emerse criticità tali da richiedere una revisione del budget complessivo. Questo riflette una gestione del progetto orientata all’efficienza e al rispetto dei limiti economici prefissati.
+*#glossario("PB")*: Nella fase PB il valore dell’Estimated At Completion si mantiene costante, segno di una pianificazione economica stabile e sotto controllo. La linearità della curva indica che, nonostante l’avanzamento delle attività e le eventuali fluttuazioni nei costi sostenuti, non sono emerse criticità tali da richiedere una #glossario("revisione") del budget complessivo. Questo riflette una gestione del progetto orientata all’efficienza e al rispetto dei limiti economici prefissati.
 
 
 === MPC9 - Estimated To Complete
@@ -270,12 +270,12 @@ La percentuale di casi di test superati è pari o superiore all’80%, risultand
   caption: [MPC12 - Rischi non previsti],
 ) <imgMPC12_fasePB>
 
-*#glossario("PB")*: Durante la fase PB, si osserva un’efficace capacità di gestione del rischio: dopo la ricomparsa di un rischio non previsto al periodo 7, il team è riuscito a intervenire prontamente, riportando il valore a zero già dal periodo successivo. Questo evidenzia un elevato grado di reattività e adattamento nella gestione dei rischi organizzativi, con una piena integrazione delle lezioni apprese nei cicli precedenti e una maggiore solidità nei processi di prevenzione e risposta.
+*#glossario("PB")*: Durante la fase PB, si osserva un’efficace capacità di gestione del rischio: dopo la ricomparsa di un rischio non previsto al periodo 7, il team è riuscito a intervenire prontamente, riportando il valore a zero già dal periodo successivo. Questo evidenzia un elevato grado di reattività e adattamento nella gestione dei rischi organizzativi, con una piena #glossario("integrazione") delle lezioni apprese nei cicli precedenti e una maggiore solidità nei processi di prevenzione e risposta.
 
 
 == Qualità di prodotto
-La qualità di prodotto  garantisce che il software sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
-Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori consente di misurare in modo oggettivo caratteristiche fondamentali come #glossario("funzionalità"), affidabilità, usabilità, efficienza e manutenibilità. Tali metriche permettono di monitorare se il prodotto soddisfa gli standard richiesti e di intervenire tempestivamente nel caso in cui alcuni parametri risultino al di sotto dei livelli accettabili.
+La qualità di prodotto  garantisce che il #glossario("software") sviluppato soddisfi i requisiti funzionali e non funzionali definiti, offrendo quindi un prodotto finale stabile, efficiente e utilizzabile. La qualità del prodotto infatti incide direttamente sulla soddisfazione dell'utente finale.
+Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori consente di misurare in modo oggettivo caratteristiche fondamentali come #glossario("funzionalità"), affidabilità, usabilità, efficienza e manutenibilità. Tali metriche permettono di monitorare se il prodotto soddisfa gli #glossario("standard") richiesti e di intervenire tempestivamente nel caso in cui alcuni parametri risultino al di sotto dei livelli accettabili.
 
 
 === Funzionalità
@@ -331,7 +331,7 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
     [*MPD4*],[Code Coverage (*CC*)],[$ >=80% $],[100%],
     [*MPD5*],[Indice Gulpease (*MIG*)],[$ >= 50 $],[$ >= 80 $],
     [*MPD6*],[Failure Density (*FD*)],[$ <=10% $],[0%],
-    [*MPD7*],[Statement Coverage (*SC*)],[$ >= 80% $],[$ >= 90% $],
+    [*MPD7*],[#glossario("Statement Coverage") (*SC*)],[$ >= 80% $],[$ >= 90% $],
     [*MPD8*],[#glossario("Branch") Coverage (*BC*)],[$ >= 70% $],[$ >= 80% $],
     [*MPD9*],[Correttezza Ortografica (*CO*)],[0 errori],[0 errori],
   )
@@ -345,10 +345,10 @@ Stabilire quali metriche di qualità del prodotto utilizzare e relativi valori c
   caption: [MPD4 - CC],
 ) <imgMPD4_fasePB>
 
-*#glossario("PB")*:  Il grafico mostra un andamento inizialmente stazionario, con una copertura del codice nulla nei primi sei periodi, in quanto la fase di effettiva codifica non era prevista dalla fase precedente. A partire dal periodo 7 si assiste  a una crescita rapida e costante della code coverage, che supera la soglia dell’80% entro il periodo 11. Questo comportamento suggerisce una fase iniziale di impostazione e sviluppo del codice seguita da un’intensa attività di testing e validazione, che ha permesso di raggiungere e superare il valore target. L’incremento progressivo evidenzia un miglioramento nella qualità del software e una crescente attenzione alla copertura dei test.
+*#glossario("PB")*:  Il grafico mostra un andamento inizialmente stazionario, con una copertura del codice nulla nei primi sei periodi, in quanto la fase di effettiva codifica non era prevista dalla fase precedente. A partire dal periodo 7 si assiste  a una crescita rapida e costante della code coverage, che supera la soglia dell’80% entro il periodo 11. Questo comportamento suggerisce una fase iniziale di impostazione e sviluppo del codice seguita da un’intensa attività di testing e validazione, che ha permesso di raggiungere e superare il valore target. L’incremento progressivo evidenzia un miglioramento nella qualità del #glossario("software") e una crescente attenzione alla copertura dei test.
 
 ==== MPD5 - Indice Gulpease
-Il valore ottenuto è ≥ 50, rispettando pienamente il valore accettabile. Il testo risulta quindi leggibile secondo gli standard previsti.
+Il valore ottenuto è ≥ 50, rispettando pienamente il valore accettabile. Il testo risulta quindi leggibile secondo gli #glossario("standard") previsti.
 
 ==== MPD6 - Failure Density
 La densità di failure è ≤ 10%, conforme al valore accettabile. Il codice presenta un livello di affidabilità adeguato.
@@ -363,10 +363,10 @@ La copertura delle istruzioni è ≥ 80%, quindi conforme al valore accettabile 
   caption: [MPD8 - BC],
 ) <imgMPD8_fasePB>
 
-*#glossario("PB")*: Il grafico evidenzia un andamento simile a quello della Code Coverage, con valori nulli nei primi sei periodi e un significativo incremento a partire dal periodo 7. In pochi intervalli la branch coverage supera la soglia dell’80%, raggiungendo un livello prossimo al 100% entro il periodo 11. Questo rapido miglioramento suggerisce una fase di testing intensivo e mirato all’identificazione e verifica di tutte le diramazioni del codice, indicativo di un elevato livello di attenzione alla qualità e affidabilità del software. Il raggiungimento di tali valori testimonia un’evoluzione matura del processo di verifica
+*#glossario("PB")*: Il grafico evidenzia un andamento simile a quello della Code Coverage, con valori nulli nei primi sei periodi e un significativo incremento a partire dal periodo 7. In pochi intervalli la #glossario("branch coverage") supera la soglia dell’80%, raggiungendo un livello prossimo al 100% entro il periodo 11. Questo rapido miglioramento suggerisce una fase di testing intensivo e mirato all’identificazione e verifica di tutte le diramazioni del codice, indicativo di un elevato livello di attenzione alla qualità e affidabilità del #glossario("software"). Il raggiungimento di tali valori testimonia un’evoluzione matura del processo di verifica
 
 ==== MPD9 - Correttezza Ortografica
-Nella documentazione non sono stati riscontrati errori ortografici, soddisfacendo completamente i criteri previsti dalla metrica.
+Nella #glossario("documentazione") non sono stati riscontrati errori ortografici, soddisfacendo completamente i criteri previsti dalla metrica.
 
 === Usabilità
 #align(center)[
@@ -387,7 +387,7 @@ Nella documentazione non sono stati riscontrati errori ortografici, soddisfacend
 Il numero di click necessari per completare le operazioni principali è ≤ 10, rispettando il valore accettabile e garantendo una buona usabilità.
 
 ==== MPD11 - Tempo di Apprendimento
-Il tempo richiesto per apprendere l’utilizzo del sistema è inferiore o uguale a 15 minuti, in linea con quanto previsto per un’interfaccia user-friendly.
+Il tempo richiesto per apprendere l’utilizzo del #glossario("sistema") è inferiore o uguale a 15 minuti, in linea con quanto previsto per un’interfaccia user-friendly.
  
 === Efficienza
 #align(center)[
@@ -404,7 +404,7 @@ Il tempo richiesto per apprendere l’utilizzo del sistema è inferiore o uguale
  #align(center)[Tabella 7: Valori accettabili e preferibili per le metriche di efficienza.] 
 
 ==== MPD12 - Tempo Medio di Risposta
-Il tempo medio di risposta del sistema è ≤ 10 secondi, soddisfacendo il valore accettabile e assicurando prestazioni adeguate.
+Il tempo medio di risposta del #glossario("sistema") è ≤ 10 secondi, soddisfacendo il valore accettabile e assicurando prestazioni adeguate.
 
 ==== MPD13 - Utilizzo delle Risorse
 L’utilizzo delle risorse hardware/software è ≥ 75%, risultando conforme alle aspettative di efficienza.
@@ -431,10 +431,10 @@ Il valore è ≤ 8, rientrando nel limite accettabile e indicando un buon livell
 = Metodologie di testing
 In questa sezione vengono descritte le modalità di identificazione dei test che verranno applicati al #glossario("progetto") per controllare il rispetto delle metriche e l'implementazione degli #glossario("UC") individuati nell' #glossario("AdR"). \
 I test si suddividono in:
-- *Test di #glossario("Unità")*: i test effettuati su singole #glossario("unità") software del #glossario("progetto"). Questi test vengono implementati direttamente dai membri del team con il ruolo di #glossario("programmatore") e, successivamente, eseguiti automaticamente.
-- *Test di Integrazione*: i test applicati alle componenti individuate nel design , indispensabile per rilevare difetti di progettazione architetturale, assicurano infatti la corretta integrazione tra le molteplici parti che compongono il #glossario("prodotto software").
-- *Test di Sistema*: assicurano il corretto funzionamento del sistema durante l'esecuzione del #glossario("prodotto software"). Nello specifico lo scopo di questi test è quello di verificare che il sistema soddisfi i requisiti specificati nel documento dell'_Analisi dei Requisiti_.
-- *Test di Accettazione*: servono per verificare che il prodotto finale soddisfi tutti i requisiti indicati nel #glossario("capitolato"). 
+- *Test di #glossario("Unità")*: i test effettuati su singole #glossario("unità") #glossario("software") del #glossario("progetto"). Questi test vengono implementati direttamente dai membri del team con il ruolo di #glossario("programmatore") e, successivamente, eseguiti automaticamente.
+- *#glossario("Test di Integrazione")*: i test applicati alle componenti individuate nel design , indispensabile per rilevare difetti di progettazione architetturale, assicurano infatti la corretta #glossario("integrazione") tra le molteplici parti che compongono il #glossario("prodotto software").
+- *#glossario("Test di Sistema")*: assicurano il corretto funzionamento del #glossario("sistema") durante l'esecuzione del #glossario("prodotto software"). Nello specifico lo scopo di questi test è quello di verificare che il #glossario("sistema") soddisfi i requisiti specificati nel documento dell'_Analisi dei Requisiti_.
+- *#glossario("Test di Accettazione")*: servono per verificare che il prodotto finale soddisfi tutti i requisiti indicati nel #glossario("capitolato"). 
 
 == Identificazione dei test
 Ogni test viene identificato da un #glossario("codice univoco") composto come di seguito:
@@ -443,9 +443,9 @@ Ogni test viene identificato da un #glossario("codice univoco") composto come di
 Dove: \
 *Tipologia* indica il tipo di test, secondo quanto sopra, ovvero:
 - *U*, per indicare i test di #glossario("Unità")
-- *I*, per indicare i test di Integrazione
-- *S*, per indicare i test di Sistema
-- *A*, per indicare i test di Accettazione
+- *I*, per indicare i #glossario("test di Integrazione")
+- *S*, per indicare i #glossario("test di Sistema")
+- *A*, per indicare i #glossario("test di Accettazione")
 
 Ogni test è associato ad uno *stato* che può essere:
 - *S*, il test è stato superato
@@ -455,9 +455,9 @@ Ogni test è associato ad uno *stato* che può essere:
 
 == Test di Sistema
 
-I test di sistema sono finalizzati a verificare il corretto funzionamento dell’intero applicativo, inteso come sistema completo. Questi validano il comportamento del software rispetto ai requisiti funzionali definiti nell’Analisi dei Requisiti e simulano situazioni realistiche d’uso da parte dell’utente finale. Servono a garantire che tutte le componenti, già integrate tra loro, collaborino correttamente per raggiungere gli obiettivi del sistema.
+I #glossario("test di sistema") sono finalizzati a verificare il corretto funzionamento dell’intero applicativo, inteso come #glossario("sistema") completo. Questi validano il comportamento del #glossario("software") rispetto ai requisiti funzionali definiti nell’Analisi dei Requisiti e simulano situazioni realistiche d’uso da parte dell’utente finale. Servono a garantire che tutte le componenti, già integrate tra loro, collaborino correttamente per raggiungere gli obiettivi del #glossario("sistema").
 
-_Nella seguente tabella vengono indicati i test di sistema previsti, con relativo stato._
+_Nella seguente tabella vengono indicati i #glossario("test di sistema") previsti, con relativo stato._
 
 
 #align(center)[
@@ -513,7 +513,7 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
   [T.S.45], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a lasciare un input vuoto, quando invece è richiesto obbligatoriamente un valore],[F.3.5 - Opzionale] ,[S],
   [T.S.46], [Verificare che l'utente venga avvertito graficamente nel caso in cui la connessione al #glossario("database") locale sia fallita],[F.1.39] ,[S],
   [T.S.47], [Verificare che l'utente venga avvertito graficamente nel caso abbia provato a selezionare un file .csv con un peso che supera il limite consentito],[F.1.40] ,[S],
-  [T.S.48], [Verificare che l'utente possa accedere direttamente alla pagina dell'applicazione senza sistema di login],[F.1.41] ,[S],
+  [T.S.48], [Verificare che l'utente possa accedere direttamente alla pagina dell'applicazione senza #glossario("sistema") di login],[F.1.41] ,[S],
   [T.S.49], [Verificare che l'applicazione possa elaborare dati con coordinate X, Y e Z, dove X e Z definiscono il posizionamento della base della barra nel piano mentre Y definisce l’altezza della barra],[F.1.42] ,[S],
   [T.S.50], [Verificare che l'applicazione deve essere in grado di supportare una quantità massima di dati pari a 1000],[V.1.1] ,[S],
   [T.S.51], [Verificare che l'applicazione possa supportare  un massimo di 300 elementi per le coordinate X e Z mantenendo il limite di 1000 dati],[V.1.2] ,[S],
@@ -529,9 +529,9 @@ _Nella seguente tabella vengono indicati i test di sistema previsti, con relativ
 
 == Test di Accettazione
 
-I test di accettazione hanno lo scopo di verificare che il prodotto sviluppato soddisfi tutte le esigenze e i requisiti concordati con il #glossario("proponente"). Tali test sono stati eseguiti anche in presenza del rappresentate dell'azienda #glossario("proponente"), il quale ha potuto verificare che il prodotto finale fosse conforme a quanto richiesto. \
+I #glossario("test di accettazione") hanno lo scopo di verificare che il prodotto sviluppato soddisfi tutte le esigenze e i requisiti concordati con il #glossario("proponente"). Tali test sono stati eseguiti anche in presenza del rappresentate dell'azienda #glossario("proponente"), il quale ha potuto verificare che il prodotto finale fosse conforme a quanto richiesto. \
 
-_Nella seguente tabella vengono indicati i test di accettazione previsti, con relativo stato._
+_Nella seguente tabella vengono indicati i #glossario("test di accettazione") previsti, con relativo stato._
 
 
 #align(center)[
@@ -596,7 +596,7 @@ o di un’anomalia],[S]
 
 == Test di Unità
 
-I test di unità sono test a basso livello che si concentrano su singole porzioni di codice, come funzioni o componenti. Il loro scopo è assicurarsi che ogni unità del software si comporti come previsto isolatamente, indipendentemente dalle altre parti del sistema. Questi sono stati individuati ed implementati dai programmatori, durante la fase di codifica, e sono fondamentali per individuare rapidamente errori localizzati e favorire uno sviluppo incrementale e affidabile.
+I test di unità sono test a basso livello che si concentrano su singole porzioni di codice, come funzioni o componenti. Il loro scopo è assicurarsi che ogni unità del #glossario("software") si comporti come previsto isolatamente, indipendentemente dalle altre parti del #glossario("sistema"). Questi sono stati individuati ed implementati dai programmatori, durante la fase di codifica, e sono fondamentali per individuare rapidamente errori localizzati e favorire uno sviluppo incrementale e affidabile.
 
 _Nella seguente tabella vengono indicati i test di unità previsti, con relativo stato._
 
@@ -636,23 +636,23 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.28] ,[Verifica che il parsing di un CSV con più di 300 righe generi un'eccezione InvalidCsvException], [S],
   [T.U.29], [Verifica che il parsing di un CSV con più di 1000 dati totali generi un'eccezione TooMuchDataException], [S],
   [T.U.30], [Verifica che la funzione resetTarget() imposti il target alla posizione predefinita calcolata da utils.defaultTarget], [S],
-  [T.U.31], [Verifica che il componente Bar.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.32], [Verifica che il componente BarPane.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.33], [Verifica che BarPane.svelte venga #glossario("renderizzato") quando displayBarFilter è impostato su true], [S],
-  [T.U.34], [Verifica che BarPane.svelte non venga #glossario("renderizzato") quando displayBarFilter è impostato su false], [S],
-  [T.U.35], [Verifica che le etichette delle informazioni di selezione siano correttamente renderizzate in BarPane.svelte], [S],
-  [T.U.36], [Verifica che la funzione resetBarSelection venga chiamata quando viene cliccato il pulsante "Reset selection" in BarPane.svelte], [S],
-  [T.U.37], [Verifica che la funzione hideBarFilterPane venga chiamata quando viene cliccato il pulsante "Close" in BarPane.svelte], [S],
-  [T.U.38], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Display" in BarPane.svelte], [S],
-  [T.U.39], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Filter higher" in BarPane.svelte], [S],
-  [T.U.40], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Filter lower" in BarPane.svelte], [S],
-  [T.U.41], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Reset filter" in BarPane.svelte], [S],
-  [T.U.42], [Verifica che tutti i componenti di CameraSettings.svelte vengano caricati correttamente], [S],
-  [T.U.43], [Verifica che la funzione resetCamera venga chiamata quando viene cliccato il pulsante "Reset position" in CameraSettings.svelte], [S],
-  [T.U.44], [Verifica che la funzione zoomIn venga chiamata quando viene cliccato il pulsante "Zoom In" in CameraSettings.svelte], [S],
-  [T.U.45], [Verifica che la funzione zoomOut venga chiamata quando viene cliccato il pulsante "Zoom Out" in CameraSettings.svelte], [S],
-  [T.U.46], [Verifica che il componente Chart.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.47], [Verifica che il componente Color.svelte carichi correttamente tutti gli elementi, inclusi "Color type", "columns", "rows" e "values"], [S],
+  [T.U.31], [Verifica che il componente Bar.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.32], [Verifica che il componente BarPane.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.33], [Verifica che BarPane.#glossario("svelte") venga #glossario("renderizzato") quando displayBarFilter è impostato su true], [S],
+  [T.U.34], [Verifica che BarPane.#glossario("svelte") non venga #glossario("renderizzato") quando displayBarFilter è impostato su false], [S],
+  [T.U.35], [Verifica che le etichette delle informazioni di selezione siano correttamente renderizzate in BarPane.#glossario("svelte")], [S],
+  [T.U.36], [Verifica che la funzione resetBarSelection venga chiamata quando viene cliccato il pulsante "Reset selection" in BarPane.#glossario("svelte")], [S],
+  [T.U.37], [Verifica che la funzione hideBarFilterPane venga chiamata quando viene cliccato il pulsante "Close" in BarPane.#glossario("svelte")], [S],
+  [T.U.38], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Display" in BarPane.#glossario("svelte")], [S],
+  [T.U.39], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Filter higher" in BarPane.#glossario("svelte")], [S],
+  [T.U.40], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Filter lower" in BarPane.#glossario("svelte")], [S],
+  [T.U.41], [Verifica che la funzione setBarFilterSelection venga chiamata quando viene cliccato il pulsante "Reset filter" in BarPane.#glossario("svelte")], [S],
+  [T.U.42], [Verifica che tutti i componenti di CameraSettings.#glossario("svelte") vengano caricati correttamente], [S],
+  [T.U.43], [Verifica che la funzione resetCamera venga chiamata quando viene cliccato il pulsante "Reset position" in CameraSettings.#glossario("svelte")], [S],
+  [T.U.44], [Verifica che la funzione zoomIn venga chiamata quando viene cliccato il pulsante "Zoom In" in CameraSettings.#glossario("svelte")], [S],
+  [T.U.45], [Verifica che la funzione zoomOut venga chiamata quando viene cliccato il pulsante "Zoom Out" in CameraSettings.#glossario("svelte")], [S],
+  [T.U.46], [Verifica che il componente Chart.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.47], [Verifica che il componente Color.#glossario("svelte") carichi correttamente tutti gli elementi, inclusi "Color type", "columns", "rows" e "values"], [S],
   [T.U.48], [Verifica che la funzione fetchDbData restituisca i dati corretti se la risposta del fetch è positiva], [S],
   [T.U.49], [Verifica che la funzione fetchDbData lanci un errore se la risposta del fetch non è ok], [S],
   [T.U.50], [Verifica che la funzione fetchExternalData restituisca i dati corretti se la risposta del fetch è positiva], [S],
@@ -663,18 +663,18 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.55], [Verifica che la funzione uploadCsvFile lanci un errore se la richiesta fetch fallisce], [S],
   [T.U.56], [Verifica che la funzione uploadCsvFile restituisca i dati corretti se il file viene caricato correttamente], [S],
   [T.U.57], [Verifica che la funzione uploadCsvFile lanci un errore se la richiesta fetch fallisce con net::ERR_CONNECTION_REFUSED], [S],
-  [T.U.58], [Verifica che tutti i componenti di DataFilter.svelte vengano caricati correttamente, inclusi i testi di "Visualization interval", "Show average plane", "Values lower than the global average", "Values higher than the global average", e "Visualization reset"], [S],
-  [T.U.59], [Verifica che avgFilter venga impostato su 1 quando viene cliccato il pulsante "Lower than average" in DataFilter.svelte], [S],
-  [T.U.60], [Verifica che avgFilter e avgEnabled vengano impostati su 0 quando viene cliccato il pulsante "Reset" in DataFilter.svelte], [S],
-  [T.U.61], [Verifica che avgFilter venga impostato su 2 quando viene cliccato il pulsante "Greater than average" in DataFilter.svelte], [S],
-  [T.U.62], [Verifica che la checkbox "Show average plane" sia selezionabile e che avgEnabled venga impostato correttamente in DataFilter.svelte], [S],
-  [T.U.63], [Verifica che tutti i componenti di DataSource.svelte vengano caricati correttamente, inclusi i testi di "External API", "DB1", "File" e "Send file CSV"], [S],
-  [T.U.64], [Verifica che le funzioni fetchExternal e resetCamera vengano chiamate quando viene cliccato il pulsante "Select API" in DataSource.svelte], [S],
-  [T.U.65], [Verifica che le funzioni fetchDb e resetCamera vengano chiamate quando viene cliccato il pulsante "Select DB1" in DataSource.svelte], [S],
-  [T.U.66], [Verifica che la funzione uploadFile venga chiamata quando viene cliccato il pulsante "Select CSV" in DataSource.svelte], [S],
-  [T.U.67], [Verifica che il componente Export.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.68], [Verifica che tutti i componenti di Export.svelte vengano caricati correttamente, inclusi i testi di "Export as image" e "Screenshot"], [S],
-  [T.U.69], [Verifica che la funzione takeScreenshot venga chiamata quando viene cliccato il pulsante "Screenshot" in Export.svelte], [S],
+  [T.U.58], [Verifica che tutti i componenti di DataFilter.#glossario("svelte") vengano caricati correttamente, inclusi i testi di "Visualization interval", "Show average plane", "Values lower than the global average", "Values higher than the global average", e "Visualization reset"], [S],
+  [T.U.59], [Verifica che avgFilter venga impostato su 1 quando viene cliccato il pulsante "Lower than average" in DataFilter.#glossario("svelte")], [S],
+  [T.U.60], [Verifica che avgFilter e avgEnabled vengano impostati su 0 quando viene cliccato il pulsante "Reset" in DataFilter.#glossario("svelte")], [S],
+  [T.U.61], [Verifica che avgFilter venga impostato su 2 quando viene cliccato il pulsante "Greater than average" in DataFilter.#glossario("svelte")], [S],
+  [T.U.62], [Verifica che la checkbox "Show average plane" sia selezionabile e che avgEnabled venga impostato correttamente in DataFilter.#glossario("svelte")], [S],
+  [T.U.63], [Verifica che tutti i componenti di DataSource.#glossario("svelte") vengano caricati correttamente, inclusi i testi di "External API", "DB1", "File" e "Send file CSV"], [S],
+  [T.U.64], [Verifica che le funzioni fetchExternal e resetCamera vengano chiamate quando viene cliccato il pulsante "Select API" in DataSource.#glossario("svelte")], [S],
+  [T.U.65], [Verifica che le funzioni fetchDb e resetCamera vengano chiamate quando viene cliccato il pulsante "Select DB1" in DataSource.#glossario("svelte")], [S],
+  [T.U.66], [Verifica che la funzione uploadFile venga chiamata quando viene cliccato il pulsante "Select CSV" in DataSource.#glossario("svelte")], [S],
+  [T.U.67], [Verifica che il componente Export.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.68], [Verifica che tutti i componenti di Export.#glossario("svelte") vengano caricati correttamente, inclusi i testi di "Export as image" e "Screenshot"], [S],
+  [T.U.69], [Verifica che la funzione takeScreenshot venga chiamata quando viene cliccato il pulsante "Screenshot" in Export.#glossario("svelte")], [S],
   [T.U.70], [Verifica che la funzione getValueFromId restituisca il valore corretto per un dato #glossario("id")], [S],
   [T.U.71], [Verifica che la funzione selectionToggle aggiunga e rimuova correttamente l'#glossario("id") dall'array di selezione], [S],
   [T.U.72], [Verifica che il valore predefinito venga caricato correttamente nelle impostazioni di filtro], [S],
@@ -729,9 +729,9 @@ _Nella seguente tabella vengono indicati i test di unità previsti, con relativo
   [T.U.121], [Verifica che la funzione fetchExternal non aggiorni fetchedData se getExternalData restituisce null], [S],
   [T.U.122], [Verifica che la funzione isFirstIntersected restituisca true se l'oggetto è intersecato], [S],
   [T.U.123], [Verifica che la funzione isFirstIntersected restituisca false se l'oggetto non è intersecato], [S],
-  [T.U.124], [Verifica che il componente Scene.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.125], [Verifica che il componente SettingsPane.svelte venga #glossario("renderizzato") correttamente senza errori], [S],
-  [T.U.126], [Verifica che tutti i componenti di SettingsPane.svelte vengano caricati correttamente, inclusi i testi di "Settings", "Camera", "Source", "Filter", "Color" e "Export"], [S],
+  [T.U.124], [Verifica che il componente Scene.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.125], [Verifica che il componente SettingsPane.#glossario("svelte") venga #glossario("renderizzato") correttamente senza errori], [S],
+  [T.U.126], [Verifica che tutti i componenti di SettingsPane.#glossario("svelte") vengano caricati correttamente, inclusi i testi di "Settings", "Camera", "Source", "Filter", "Color" e "Export"], [S],
   )
     <tab:testdiunita>
 ]
