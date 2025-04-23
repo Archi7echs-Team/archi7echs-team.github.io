@@ -49,7 +49,7 @@ Si procede alla discussione in ordine dei punti all'#glossario("ordine del giorn
 
 #ordine_del_giorno([
 == Presentazione finale 
-#p.lucato inizia presentando i passaggi necessari per installare l'#glossario("MVP"), descritti anche nella repository.
+#p.lucato inizia presentando i passaggi necessari per installare l'#glossario("MVP"), descritti anche nel repository.
 Dopo aver spiegato l'installazione si è dimostrato il raggiungimento di un livello di code coverage maggiore del 90% in entrambe le sezioni da testare (front-end e back-end), inoltre è stata dimostrata la possibilità di consultare il code coverage tramite action nel repository. \
 Dopo la parte riguardante test e back-end si è passati alla parte front-end dimostrando il raggiungimento di tutti i requisiti specificati nel capitolato oltre a nuovi requisiti identificati durante lo sviluppo. \
 Continuando è stato chiesto un chiarimento sul documento riguardante la lista dei bug, il quale non era stato prodotto perché consultabile tramite le issue di GitHub, modalità accettata dall'azienda. \
@@ -100,7 +100,7 @@ Padova, 15 aprile 2025
     align: (col, row) => (left, right,).at(col),
     inset:0pt,
     [Per Sanmarco Informatica:\ Alex Beggiato \
-    /*#place(center, image("//img/smi_sign.png", width: 120%))*/
+    #place(center, image("/img/smi_sign.png", width: 120%))
     ],
   )]
 )
