@@ -7,7 +7,7 @@
   author: "Il team",
   intern: false,
   show_outline: true,
-  outline_depth: 2,
+  outline_depth: 3,
   changelog: (
     "2.0.0","23-04-2025","Revisione per incontro PB",p.pozzobon,(p.checchinato,p.valdagno),
     "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.checchinato,p.valdagno),
@@ -208,7 +208,7 @@ Stabilire quali metriche di qualità del #glossario("processo") utilizzare conse
 *#glossario("PB")*: Nella fase PB il valore dell’Estimated At Completion si mantiene costante, segno di una pianificazione economica stabile e sotto controllo. La linearità della curva indica che, nonostante l’avanzamento delle attività e le eventuali fluttuazioni nei costi sostenuti, non sono emerse criticità tali da richiedere una #glossario("revisione") del budget complessivo. Questo riflette una gestione del progetto orientata all’efficienza e al rispetto dei limiti economici prefissati.
 
 
-=== MPC9 - Estimated To Complete
+==== MPC9 - Estimated To Complete
 
 #figure(
   image("/img/pdq/MPC9.png", width: 80%),
