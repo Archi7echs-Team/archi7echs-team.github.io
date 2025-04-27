@@ -8,6 +8,7 @@
   outline_depth: 1,
   heading_numbers: none,
   changelog: (
+    "2.0.0","23-04-2025","Revisione per incontro PB", p.checchinato, (p.valdagno, p.lucato),
     "1.1.0","18-04-2025","Aggiunta termini e definizioni", p.checchinato, (p.valdagno,p.lucato),
     "1.0.0","09-02-2025","Revisione per incontro RTB", p.salvo, (p.pozzobon,p.lucato),
     "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
@@ -122,6 +123,9 @@ Identificatore unico e non ripetibile assegnato a elementi come utenti, oggetti 
 
 - Collaudo 
 Fase finale di un processo di verifica in cui un sistema, prodotto o componente viene testato per garantire che funzioni correttamente e soddisfi i requisiti previsti. Il collaudo include test finali che si effettuano prima del rilascio ufficiale o della consegna al cliente.
+
+- Controller
+In architettura software, il controller è un componente che gestisce la logica di interazione tra l'utente e il sistema. Riceve gli input dall'utente, elabora le richieste e coordina le azioni tra i moduli del sistema, come il modello (gestione dei dati) e la vista (interfaccia utente). Il controller funge da intermediario, assicurando che le operazioni siano eseguite correttamente e che l'utente riceva le informazioni appropriate.
 
 - Cruscotto 
 Interfaccia grafica che fornisce una panoramica visiva delle informazioni più rilevanti, come metriche, dati o notifiche. I cruscotti sono utilizzati per monitorare lo stato di un sistema o di un processo in tempo reale, facilitando la visualizzazione e l’analisi dei dati. In inglese viene chiamato _dashboard_.
@@ -496,6 +500,9 @@ Acronimo di _Requirements and Technology Baseline_. Documento o punto di riferim
   - Schema x.y.z  
   Convenzione di versionamento (es. major.minor.patch).
 
+  - Service
+  Componente software autonomo che fornisce una funzionalità specifica, generalmente accessibile tramite interfacce o API. I service sono spesso utilizzati per incapsulare logiche di business riutilizzabili o per esporre dati a diverse parti di un'applicazione o ad altri sistemi. Possono essere locali o distribuiti (es. microservizi).
+
 - Set di dati  
 Collezione organizzata di informazioni strutturate, utilizzata per analisi o elaborazione.
 
@@ -510,6 +517,9 @@ Insieme di programmi, applicazioni e istruzioni che permettono a un computer o a
 
 - Sorgente dati 
 Origine da cui vengono estratti dati per analisi o applicazioni.
+
+- Specifica tecnica
+Documento formale che definisce i requisiti tecnici, le funzionalità e le caratteristiche di un sistema o prodotto. La Specifica Tecnica fornisce dettagli su come il sistema e' progettato, implementato e testato, garantendo che soddisfi le aspettative degli utenti e gli standard di qualità richiesti.
 
 - Spring 
 Framework Java per lo sviluppo di applicazioni enterprise, modulare e basato su inversione di controllo.

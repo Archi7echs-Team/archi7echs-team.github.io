@@ -10,6 +10,7 @@
   outline_depth: 3,
   changelog: (
     "2.0.0","23-04-2025","Revisione per incontro PB",p.pozzobon,(p.checchinato,p.valdagno),
+    "1.7.0","22-04-2025","Correzione grafici",p.pozzobon,(p.checchinato,p.valdagno),
     "1.6.0","22-04-2025","Aggiunti grafici metriche fase PB con relativa descrizione ed analisi",p.pozzobon,(p.checchinato,p.valdagno),
     "1.5.0","16-04-2025","Aggiornamento tabella test di sistema",p.checchinato,(p.valdagno,p.lucato),
     "1.4.0","15-04-2025","Modifica numerazione e dettaglio req. funzionali. Aggiornamento test di unità. Aggiunta descrizione alle tabelle dei test",p.pozzobon,(p.lucato,p.checchinato),
