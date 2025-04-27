@@ -8,7 +8,7 @@
   outline_depth: 1,
   heading_numbers: none,
   changelog: (
-    "2.0.0","23-04-2025","Revisione per incontro PB", p.checchinato, (p.valdagno),
+    "2.0.0","23-04-2025","Revisione per incontro PB", p.checchinato, (p.valdagno, p.lucato),
     "1.1.0","18-04-2025","Aggiunta termini e definizioni", p.checchinato, (p.valdagno,p.lucato),
     "1.0.0","09-02-2025","Revisione per incontro RTB", p.salvo, (p.pozzobon,p.lucato),
     "0.1.4","31-01-2025","Aggiunti termini e definizioni", p.scandaletti, (p.pozzobon,p.lucato),
