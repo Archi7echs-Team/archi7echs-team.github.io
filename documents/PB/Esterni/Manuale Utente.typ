@@ -6,8 +6,12 @@
   subtitle: "",
   author: "Il team",
   show_outline: true,
+  intern: false,
   outline_depth: 3,
+  show_images_list: false,
   changelog: (
+    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), (p.checchinato,p.salvo),
+    "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), (p.checchinato,p.salvo),
     "0.2.0", "22-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (p.checchinato,p.pozzobon),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
   ),
@@ -18,7 +22,7 @@
 = Introduzione
 == Scopo del documento
 Il documento di #glossario("manuale utente") è un elemento fondamentale per spiegare ai committenti le modalità d'uso e di installazione del sistema informatico che il gruppo Archi7echs ha dovuto sviluppare per adempiere alle richieste effettuate dal committente.\
-All'interno del documento verranno illustrate le istruzioni per avviare il back-end e il front-end e il funzionamento dell'applicativo per dimostrare le funzionalità sviluppate.
+All'interno del documento verranno illustrate le istruzioni per avviare il #glossario("back-end") e il #glossario("front-end") e il funzionamento dell'applicativo per dimostrare le funzionalità sviluppate.
 
 == Glossario
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html", text(blue)[_glossario_]). Tutte le parole consultabili nel glossario saranno identificate da una "G", di colore blu, in pedice. Cliccando la parola, si aprirà il glossario nel sito web.
@@ -28,13 +32,13 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/04/2025_
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 10/03/2025_
 - Riferimento al glossario (v 2.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
-- Riferimento alle Norme di Progetto (v 2.0.0): #link("https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf", text(blue)[https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf])
+- Riferimento alle #glossario("Norme di Progetto") (v 2.0.0): #link("https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf", text(blue)[https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf])
 
 #pb()
 
 = Requisiti
 
-Per garantire il corretto funzionamento dell'applicativo sviluppato, è necessario che l'ambiente in cui viene eseguito soddisfi determinati requisiti tecnici, sia dal punto di vista hardware che software.
+Per garantire il corretto funzionamento dell'applicativo sviluppato, è necessario che l'ambiente in cui viene eseguito soddisfi determinati requisiti tecnici, sia dal punto di vista #glossario("hardware") che #glossario("software").
 
 == Requisiti hardware
 
@@ -46,7 +50,7 @@ Nonostante l'applicazione sia eseguita tramite container Docker, e quindi indipe
 
 == Requisiti software
 
-È necessario che il sistema sia dotato dei seguenti strumenti:
+È necessario che il sistema sia dotato dei seguenti #glossario("strumenti"):
 
 - *Docker Engine*: versione ≥ 20.10
 - *Docker Compose*: versione ≥ 1.29 oppure 
@@ -108,9 +112,9 @@ Il sistema è stato progettato per supportare una configurazione modulare. I ser
 === Servizi principali
 
 I seguenti servizi sono fondamentali per l'avvio del sistema completo:
-- *db*: istanza PostgreSQL per la persistenza dei dati;
-- *app*: backend sviluppato in Java con Spring Boot;
-- *frontend*: interfaccia utente Svelte.
+- *#glossario("db")*: istanza PostgreSQL per la persistenza dei dati;
+- *app*: backend sviluppato in #glossario("Java") con #glossario("Spring Boot");
+- *frontend*: interfaccia utente #glossario("Svelte").
 
 Questi tre servizi devono essere sempre inclusi, salvo configurazioni particolari.
 
@@ -136,8 +140,8 @@ _L'opzione -d avvia i container in background. In caso si desideri mantenere vis
 
 Per arrestare l’intera infrastruttura, mantenendo però i volumi dati si deve eseguire il seguente comando: ```bash docker compose down```
 
-Se si desidera rimuovere anche i volumi associati (ad esempio per un reset completo del database): ```bash docker compose down -v```. 
-In questo caso, il database verrà ricreato alla successiva esecuzione del sistema, ma tutti i dati precedentemente memorizzati andranno persi.
+Se si desidera rimuovere anche i volumi associati (ad esempio per un reset completo del #glossario("database")): ```bash docker compose down -v```. 
+In questo caso, il #glossario("database") verrà ricreato alla successiva esecuzione del sistema, ma tutti i dati precedentemente memorizzati andranno persi.
 
 == Ripristino completo del sistema
 
@@ -153,101 +157,129 @@ Durante l’uso del file .env, è importante ricordare:
 *IMPORTANTE*: la variabile _TESTCONTAINERS_HOST_OVERRIDE_ deve essere impostata a _host.docker.internal_ per garantire la corretta comunicazione tra i container e il sistema host *_SOLO PER WINDOWS E MACOS_*. In Linux, questa variabile non è necessaria e può essere omessa. 
 
 #pb()
+
 = Guida all'uso di 3Dataviz
-Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
+Per accedere all'applicazione #glossario("3Dataviz") bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
+
 == Schermata principale
-All'avvio del sito ci si troverà davanti un grafico di default utile per interagire direttamente con l'applicazione, per usare le funzionalità senza dover effettivamente caricare dei dati. Inoltre si potranno notare il pannello delle impostazioni in alto a destra e la gizmo in basso a sinistra. In questa schermata si possono effettuare tutte le operazioni necessarie per la navigazione 3D usando i tasti del mouse, rotation con il tasto sinistro, pan con il tasto destro e zoom con la ruota.
+All'avvio del sito verrà caricato un grafico di default, utile per poter prendere confidenza con l'interfaccia utente dell'applicazione, senza dover effettuare un caricamento di dati. \ Si può osservare il pannello per le impostazioni e i filtri di visualizzazione nell'angolo in alto a destra, mentre, nell'angolo in basso a sinistra, si posiziona il gizmo (@gizmo). \ 
+Per muoversi all'interno del grafico è possibile utilizzare i tasti del mouse, in particolare le seguenti operazioni verrano eseguite rispettivamente con: tenendo premuto il tasto sinistro e scorrendo per la _rotation_, tenendo premuto il tasto destro e scorrendo (o premendo _shift_ e contemporaneamente il tasto sinistro) per il _pan_ e la rotellina centrale (abitualmente dedicata alla funzione di scorrimento) per lo _zoom_.
+
 #figure(
   image("/img/mu/avvio.jpg", width: 90%),
   caption: [Schermata principale],
 ) <imgAVVIO>
+
 == Impostazioni
-In alto a destra nella schermata principale si trova il pannello delle impostazioni contente vari sotto-pannelli. Tramite questo pannello si potranno effettuare la operazioni che coinvolgono tutto il grafico.
+In alto a destra nella schermata principale si trova il pannello delle impostazioni (denominato "Settings") contente vari sotto-pannelli. Tramite questo pannello si potranno effettuare la operazioni che coinvolgono tutto il grafico.
+
 #figure(
   image("/img/mu/settings.jpg", width: 90%),
   caption: [Pannello delle impostazioni e sotto-pannelli],
 ) <imgSETTINGS>
 
-=== Caricamento fonte dati
-Nel sotto-pannello _Source_ è possibile scegliere la modalità con cui effettuare il caricamento dei dati:
-- *External API*: questa modalità caricherà i dati dal API esterna Weather Forecast al click sul bottone _Select API_
-- *DB1*: questa modalità caricherà i dati tramite chiamata al database al click sul bottone _Select DB_
-- *CSV*: per usufruire di questa modalità bisognerà prima caricare un file tramite drag-and-drop o cliccando e poi confermare il file scelto tramite il bottone _Select CVS_ oppure rimuovere il file caricato tramite il bottone _Delete_ che apparirà solo una volta caricato un file.
-#figure(
-  image("/img/mu/source.jpg", width: 90%),
-  caption: [Sotto-pannello Source],
-) <imgSOURCE>
+#pb();
+
 === Impostazioni per la camera
-Nel sotto-pannello _Camera_ è possibile:
-- *Reset*: ritornare alla visualizzazione di default tramite il bottone _Reset position_ 
-- *Zoom In*: aumentare il livello di zoom tramite il bottone _+_
-- *Zoom Out*: ridurre il livello di zoom tramite il bottone _-_
+Nel sotto-pannello _Camera_ sono presenti tre pulsanti con le seguenti funzionalità:
+- *Reset*: ritornare alla visualizzazione di default tramite il pulsante _Reset position_ 
+- *Zoom In*: aumentare il livello di zoom tramite il pulsante _+_
+- *Zoom Out*: ridurre il livello di zoom tramite il pulsante _-_
+
 #figure(
   image("/img/mu/camera.jpg", width: 90%),
   caption: [Sotto-pannello Camera],
 ) <imgCAMERA>
+
+=== Caricamento fonte dati
+Nel sotto-pannello _Source_ è possibile caricare i dati da visualizzare. Per farlo bisogna selezionare una delle tre modalità di caricamento dati tramite il corrispettivo pulsante _Select_. Le tre modalità sono:
+- *External #glossario("API")*: questa modalità caricherà i dati dall'#glossario("API") esterna "Weather Forecast" dopo aver cliccato il pulsante _Select API_
+- *DB1*: questa modalità caricherà i dati reperiti tramite una chiamata al #glossario("database"), dopo aver cliccato sul pulsante _Select DB_
+- *CSV*: questa modalità caricherà i dati a partire da un file CSV caricato dall'utente. Per usufruire di questa modalità bisognerà prima caricare il suddetto file trascinandolo all'interno dell'area dedicata, individuabile dall'icona di _upload_, (viene detto: _drag-and-drop_) o utilizzando l'interfaccia grafica dedicata, attivabile cliccando sulla stessa area; a questo punto sarà possibile confermare il file scelto con il pulsante _Select CSV_, oppure rimuovere il file caricato tramite il pulsante _Delete_, che apparirà solo una volta caricato un file.
+
+#figure(
+  image("/img/mu/source.jpg", width: 85%),
+  caption: [Sotto-pannello Source],
+) <imgSOURCE>
+
 === Impostazioni per il filtro
-Nel sotto-pannello _Filter_ è possibile:
-- *Visualization interval*: scegliere l'intervallo dei valori da visualizzare (i valori non compresi in questo intervallo produrranno delle colonne semi-trasparenti nella visualizzazione 3D)
-- *Show average plane*: attivare questa checkbox produrrà un piano che indica il valore medio di tutti i valori del grafico, mentre disattivare questa checkbox rimuoverà il piano
-- *Values lower than the global average*: tramite il bottone _Lower than average_ tutti i valori minori del valore medio produrranno colonne colorate mentre i valori maggiori verranno mostrati come colonne semi-trasparenti
-- *Values higher than the global average*: tramite il bottone _Higher than average_ tutti i valori maggior del valore medio produrranno colonne colorate mentre i valori minori verranno mostrati come colonne semi-trasparenti
-- *Hide the N highest values*: tramite questa selezione si decide quanti valori produrre come colonne semi-trasparenti partendo dal valore più alto
-- *Hide the N lowest values*: tramite questa selezione si decide quanti valori produrre come colonne semi-trasparenti partendo dal valore più basso
-- *Visualization reset*: tramite il bottone _Reset_ tutti i filtri applicati ai valori vengono reimpostati al loro valore di default
+Nel sotto-pannello _Filter_ è possibile regolare i filtri generali per la visualizzazione di particolari valori. Quando un valore verrà escluso o "nascosto", la barra verticale che lo rappresenta nel grafica diventerà semi-trasparente, a differenza dei valori inclusi che verranno rappresentati da una barra completamente opaca. \ I filtri sono:
+- *Visualization interval*: scegliere l'intervallo numerico per i valori da visualizzare.
+- *Show average plane*: l'attivazione o meno di questa checkbox causerà la presenza o meno di un piano posto a un'altezza corrispondente al valore medio di tutti i valori dei dati caricati
+- *Values lower than the global average*: tramite il pulsante _Lower than average_ tutti i valori minori del valore medio verranno inclusi
+- *Values higher than the global average*: tramite il pulsante _Higher than average_ tutti i valori maggior del valore medio verranno inclusi
+- *Hide the N highest values*: tramite questo slider è possibile decidere di nascondere le barre che rappresentano gli N valori più alti, dove N è il valore associato allo slider
+- *Hide the N lowest values*: tramite questo slider è possibile decidere di nascondere le barre che rappresentano gli N valori più bassi, dove N è il valore associato allo slider
+- *Visualization reset*: tramite il pulsante _Reset_ tutti i filtri applicati ai valori vengono reimpostati alle loro impostazioni di default
+
 #figure(
   image("/img/mu/filter.jpg", width: 90%),
   caption: [Sotto-pannello Filter],
 ) <imgFILTER>
+
 === Impostazioni per i colori
-Nel sotto-pannello _Color_ è possibile decidere in che modo le colonne verranno colorate tramite i campi del menu a tendina:
-- *rows*: ogni riga nella matrice avrà un colore diverso
-- *columns*: ogni colonna nella matrice avrà un colore diverso
-- *values*: ogni valore avrà un colore diverso partendo dal blu per i valori più bassi arrivando al rosso per i valori più alti
+Nel sotto-pannello _Color_ è possibile decidere in che modo le barre verranno colorate tramite i campi del menu a tendina:
+- *rows*: ogni barra in una stessa riga avrà lo stesso colore
+- *columns*: ogni barra in una stessa colonna avrà lo stesso colore
+- *values*: ogni barra con un valore uguale avrà lo stesso colore
+
 #figure(
   image("/img/mu/color.jpg", width: 90%),
   caption: [Sotto-pannello Color],
 ) <imgCOLOR>
+
 === Esportazione
-Nel sotto-pannello _Export_ è possibile esportare la vista corrente come immagine tramite il bottone _Screenshot_
+Nel sotto-pannello _Export_ è possibile esportare la vista corrente come immagine tramite il pulsante _Screenshot_
+
 #figure(
   image("/img/mu/export.jpg", width: 90%),
   caption: [Sotto-pannello Export],
 ) <imgEXPORT>
+
 == Operazioni su selezione
-A seguito di un click su una colonna nella schermata principale si trova il pannello della selezione contente vari sotto-pannelli. Tramite questo si potranno effettuare la operazioni che coinvolgono tutto il grafico basandosi sulle colonne selezionate o sull'ultima colonna selezionata. Per accedere ai sotto-panelli bisognerà cliccare sull'icona a destra del nome che permette di aprire e chiudere il menù a tendina. La chiusura di questo panello si può effettuare tramite il bottone _Close_ oppure cliccando ancora una volta su tutte le colonne selezionate.
+È possibile selezionare una o più barre del grafico cliccando su di esse. Per annullare la selezione, è sufficiente cliccare nuovamente sulla barra selezionata. È possibile selezionare più di una barra in contemporanea.  Inoltre, un doppio clic su una singola barra permette di deselezionare automaticamente le altre barre eventualmente selezionate. \
+La selezione di almeno una barra comporta l'attivazione del pannello _Selection info & filter_ che permette di visualizzare informazioni e filtri aggiuntivi applicabili alle barre selezionate. \
+Per espandere i sotto-panelli bisognerà cliccare sull'icona del menù a tendina a destra del corrispettivo nome. \
+La chiusura di questo panello si può effettuare tramite il pulsante _Close_ oppure deselezionando tutte le barre.
+
 #figure(
   image("/img/mu/selection.jpg", width: 90%),
   caption: [Pannello Selection info & filter],
 ) <imgSELECTION>
+
 === Informazioni sulla selezione
-Nel sotto-pannello _Info_ è possibile visualizzare tutte le informazioni relative all'ultima colonna selezionata:
-- *Row*: in che riga della matrice si trova 
-- *Column*: in che colonna della matrice si trova
+Nel sotto-pannello _Info_ è possibile visualizzare tutte le informazioni relative all'*ultima* barra selezionata:
+- *Row*: in che riga della matrice dei dati si trova
+- *Column*: in che colonna della matrice dei dati si trova
 - *Height*: il suo valore
-- *Avg X (Row)*: il valore medio dei valori nella riga della matrice
-- *Avg Z (Coloum)*: il valore medio dei valori nella colonna della matrice
+- *Avg X (Row)*: il valore medio dei valori nella stessa riga della matrice
+- *Avg Z (Column)*: il valore medio dei valori nella stessa colonna della matrice
 - *Avg Global*: il valore medio dei valori
+
 #figure(
   image("/img/mu/info.jpg", width: 90%),
   caption: [Sotto-pannello Info],
 ) <imgINFO>
+
 === Filtri applicabili sulla selezione
-Nel sotto-pannello _Filter_ è possibile effettuare operazioni sull'ultima colonna selezionata o su tutte quelle selezionate:
-- *Only selected bars*: tramite il bottone _Display_ vengono rese semi-trasparenti tutte le colonne che non sono tra quelle selezionate
-- *Values higher than the latest selected bar value*: tramite il bottone _Filter_ vengono rese semi-trasparenti tutte le colonne con un valore minore o uguale al valore dell'ultima colonna selezionata
-- *Values lower than the latest selected bar value*: tramite il bottone _Filter_ vengono rese semi-trasparenti tutte le colonne con un valore maggiore o uguale al valore dell'ultima colonna selezionata
-- *Filter reset*: tramite il bottone _Reset_ i filtri applicati e la selezione sono rimossi
-- *Show average row plane*: attivare questa checkbox produrrà un piano che indica il valore medio di tutti i valori nella riga della matrice, mentre disattivare questa checkbox rimuoverà il piano
-- *Show average column plane*: attivare questa checkbox produrrà un piano che indica il valore medio di tutti i valori nella colonna della matrice, mentre disattivare questa checkbox rimuoverà il piano
-- *Selected bars opacity*: cambiando questo valore si andrà a modificare l'opacità delle barre selezionate fino al minimo di 10%
-- *Reset selection*: tramite il bottone _Reset_ si rimuoverà la selezione sulle colonne selezionate rimuovendo quindi anche tutti i filtri applicati ad esse.
+Nel sotto-pannello _Filter_ è possibile effettuare operazioni sulle barre selezionate:
+- *Only selected bars*: tramite il pulsante _Display_ vengono "nascoste" tutte le barre non selezionate, rendendole quindi semi-trasparenti
+- *Values higher than the latest selected bar value*: tramite il pulsante _Filter_ vengono nascoste tutte le colonne con un valore minore o uguale al valore dell'ultima barra selezionata
+- *Values lower than the latest selected bar value*: tramite il pulsante _Filter_ vengono nascoste tutte le colonne con un valore maggiore o uguale al valore dell'ultima barra selezionata
+- *Filter reset*: tramite il pulsante _Reset_ la selezione viene rimossa e il pannello _Selection info & filter_ viene chiuso, inoltre vengono ripristinati i filtri applicati
+- *Show average row plane*: l'attivazione o meno di questa checkbox causerà la presenza o meno di un piano che indica il valore medio di quelli presenti nella stessa riga dell'ultima barra selezionata
+- *Show average column plane*: l'attivazione o meno di questa checkbox causerà la presenza o meno di un piano che indica il valore medio di quelli presenti nella stessa colonna dell'ultima barra selezionata
+- *Selected bars opacity*: cambiando questo valore si andrà a modificare l'opacità delle barre selezionate, da un minimo del 10% (quasi trasparenti) a un massimo del 100% (completamente opache)
+- *Reset selection*: tramite il pulsante _Reset_ la selezione viene rimossa e il pannello _Selection info & filter_ viene chiuso, ma senza ripristinare i filtri applicati
+
 #figure(
   image("/img/mu/selectFilter.jpg", width: 90%),
   caption: [Sotto-pannello Filter],
 ) <imgSELECTIONFILTER>
-== Gizmo
-In basso a sinistra nella schermata principale troviamo il gizmo, spesso presente in ambienti 3D, utile per ruotare la camera in posizioni fisse.
+
+== Gizmo <gizmo>
+Nell'angolo in basso a sinistra della schermata principale si trova il gizmo, uno strumento dell'ambiente tridimensionale che permette di tenere traccia dell'orientamento corrente. \
+
 #figure(
   image("/img/mu/gizmo.jpg", width: 30%),
   caption: [Gizmo],
@@ -261,14 +293,14 @@ In basso a sinistra nella schermata principale troviamo il gizmo, spesso present
 
 === Descrizione
 
-Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salvati all'interno del database. Restituisce le etichette univoche per gli assi X e Z e una matrice bidimensionale contenente i valori Y corrispondenti a ciascuna combinazione di etichette X e Z, pronta per essere utilizzata in visualizzazioni come mappe di calore.
+Questo endpoint permette di ottenere un #glossario("set di dati") di coordinate (x, y, z) salvati all'interno del #glossario("database"). Restituisce le etichette univoche per gli assi X e Z e una matrice bidimensionale contenente i valori Y corrispondenti a ciascuna combinazione di etichette X e Z, pronta per essere utilizzata in visualizzazioni come mappe di calore.
 
 === Parametri
 
 - *`datasetType`* (_Stringa, Opzionale_):
-  - *Scopo:* Permette di filtrare i dati e selezionare un specifico sottoinsieme di coordinate dal database.
+  - *Scopo:* Permette di filtrare i dati e selezionare un specifico sottoinsieme di coordinate dal #glossario("database").
   - *Valori Accettati:* `SMALL`, `MEDIUM`, `LARGE`.
-  - *Default:* Se questo parametro viene omesso nella richiesta, il sistema utilizzerà automaticamente il valore `"LARGE"` per recuperare il set di dati predefinito.
+  - *Default:* Se questo parametro viene omesso nella richiesta, il sistema utilizzerà automaticamente il valore `"LARGE"` per recuperare il #glossario("set di dati") predefinito.
 
 === Esempi di utilizzo
 
@@ -283,7 +315,7 @@ Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salv
   ```
 
 === Risposta successo (HTTP 200 OK)
-Se la richiesta ha successo, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto `MatrixData`.
+Se la richiesta ha successo, l'#glossario("API") risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto `MatrixData`.
 
 === Corpo della risposta
 ```json
@@ -345,10 +377,10 @@ curl -X POST -F "file=@/percorso/del/file.csv" http://localhost:8080/api/uploadC
 ```
 
 === Risposta successo (HTTP 200 OK)
-Se il file CSV è valido e rispetta tutti i vincoli, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
+Se il file CSV è valido e rispetta tutti i vincoli, l'#glossario("API") risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
 
 === Risposta errore
-In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP di errore, tipicamente:
+In caso di problemi con il file caricato, l'#glossario("API") risponderà con uno stato HTTP di errore, tipicamente:
 
   - *HTTP 400 Bad Request*: Se il file non è un CSV valido, ha un formato errato, contiene celle vuote non permesse, valori non numerici, struttura inconsistente, o supera i limiti dimensionali (righe/colonne/punti dati). Il corpo della risposta contiene un messaggio di errore dettagliato.
   - *HTTP 413 Payload Too Large*: Se il file supera il limite massimo di dimensione (es. 10 MB).
@@ -369,11 +401,11 @@ In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP d
 == GET /api/external/data
 === Descrizione
 
-Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo caso un servizio di previsioni meteo come Open-Meteo. Non richiede alcun parametro dall'utente. Il servizio backend contatta l'API esterna, ne interpreta la risposta (che si aspetta sia in formato JSON e segua una certa struttura, come quella di Open-Meteo con dati orari) e la trasforma nel formato standard `MatrixData` per la visualizzazione.
+Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo caso un servizio di previsioni meteo come Open-Meteo. Non richiede alcun parametro dall'utente. Il servizio backend contatta l'#glossario("API") esterna, ne interpreta la risposta (che si aspetta sia in formato JSON e segua una certa struttura, come quella di Open-Meteo con dati orari) e la trasforma nel formato #glossario("standard") `MatrixData` per la visualizzazione.
 
 === Parametri
 
-Nessun parametro richiesto per questo endpoint. La sorgente dati e gli eventuali parametri per l'API esterna sono configurati nel backend.
+Nessun parametro richiesto per questo endpoint. La #glossario("sorgente dati") e gli eventuali parametri per l'#glossario("API") esterna sono configurati nel backend.
 
 === Esempio di utilizzo
 ```bash
@@ -382,18 +414,20 @@ curl -X GET http://localhost:8080/api/external/data
 
 === Risposta successo (HTTP 200 OK)
 
-Se la comunicazione con l'API esterna ha successo e la risposta viene interpretata correttamente, l'API risponde con uno stato `HTTP 200 OK` e un corpo JSON contenente l'oggetto `MatrixData`.
+Se la comunicazione con l'#glossario("API") esterna ha successo e la risposta viene interpretata correttamente, l'#glossario("API") risponde con uno stato `HTTP 200 OK` e un corpo JSON contenente l'oggetto `MatrixData`.
 
 === Risposta errore
 
-Possono verificarsi diversi errori durante il tentativo di recuperare o processare i dati esterni. L'API risponderà tipicamente con uno stato HTTP di errore della serie 5xx, indicando un problema nel backend o nella comunicazione con il servizio esterno:
+Possono verificarsi diversi errori durante il tentativo di recuperare o processare i dati #glossario("esterni"). L'#glossario("API") risponderà tipicamente con uno stato HTTP di errore della serie 5xx, indicando un problema nel backend o nella comunicazione con il servizio #glossario("esterno"):
 
 - HTTP 5xx (es. 500 Internal Server Error, 502 Bad Gateway, 504 Gateway Timeout):
-  - Problemi di rete o impossibilità di raggiungere il servizio esterno configurato.
-  - Timeout scaduto durante l'attesa della risposta dal servizio esterno (basato sulla configurazione external.api.timeout).
-  - Il servizio esterno ha restituito un errore.
-  - La risposta ricevuta dal servizio esterno non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
+  - Problemi di rete o impossibilità di raggiungere il servizio #glossario("esterno") configurato.
+  - Timeout scaduto durante l'attesa della risposta dal servizio #glossario("esterno") (basato sulla configurazione external.api.timeout).
+  - Il servizio #glossario("esterno") ha restituito un errore.
+  - La risposta ricevuta dal servizio #glossario("esterno") non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
   - La risposta ricevuta, seppur valida, contiene un numero di punti dati superiore al limite massimo configurato nel backend (nel nostro caso 1000).
+
+#pb();
 
 === Corpo della risposta
 ```json
