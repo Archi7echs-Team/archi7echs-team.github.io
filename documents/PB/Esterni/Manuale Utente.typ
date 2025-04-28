@@ -427,6 +427,8 @@ Possono verificarsi diversi errori durante il tentativo di recuperare o processa
   - La risposta ricevuta dal servizio #glossario("esterno") non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
   - La risposta ricevuta, seppur valida, contiene un numero di punti dati superiore al limite massimo configurato nel backend (nel nostro caso 1000).
 
+#pb();
+
 === Corpo della risposta
 ```json
 {
