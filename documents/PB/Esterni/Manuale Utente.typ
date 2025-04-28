@@ -10,8 +10,8 @@
   outline_depth: 3,
   show_images_list: false,
   changelog: (
-    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), "",
-    "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), "",
+    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), (p.salvo),
+    "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), (p.salvo),
     "0.2.0", "22-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (p.checchinato,p.pozzobon),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
   ),
