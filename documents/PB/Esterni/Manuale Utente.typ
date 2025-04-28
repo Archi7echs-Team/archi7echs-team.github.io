@@ -10,6 +10,7 @@
   outline_depth: 3,
   show_images_list: false,
   changelog: (
+    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), "",
     "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), "",
     "0.2.0", "22-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (p.checchinato,p.pozzobon),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
@@ -250,7 +251,7 @@ Nel sotto-pannello _Info_ è possibile visualizzare tutte le informazioni relati
 - *Column*: in che colonna della matrice dei dati si trova
 - *Height*: il suo valore
 - *Avg X (Row)*: il valore medio dei valori nella stessa riga della matrice
-- *Avg Z (Coloum)*: il valore medio dei valori nella stessa colonna della matrice
+- *Avg Z (Column)*: il valore medio dei valori nella stessa colonna della matrice
 - *Avg Global*: il valore medio dei valori
 
 #figure(
