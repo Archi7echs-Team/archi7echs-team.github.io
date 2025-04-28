@@ -10,8 +10,8 @@
   outline_depth: 3,
   show_images_list: false,
   changelog: (
-    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), (p.salvo),
-    "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), (p.salvo),
+    "1.0.0", "28-04-2025",  "Revisione per incontro PB", (p.lucato), (p.checchinato,p.salvo),
+    "0.3.0", "28-04-2025",  "Sistemazione sezione \"Guida all'uso\"", (p.scandaletti), (p.checchinato,p.salvo),
     "0.2.0", "22-04-2025",  "Sistemazione e continuazione", (p.lucato,p.pesenato), (p.checchinato,p.pozzobon),
     "0.1.0", "10-04-2025",  "Inizio stesura documento", p.salvo, (p.lucato, p.pesenato),
   ),
@@ -22,7 +22,7 @@
 = Introduzione
 == Scopo del documento
 Il documento di #glossario("manuale utente") è un elemento fondamentale per spiegare ai committenti le modalità d'uso e di installazione del sistema informatico che il gruppo Archi7echs ha dovuto sviluppare per adempiere alle richieste effettuate dal committente.\
-All'interno del documento verranno illustrate le istruzioni per avviare il back-end e il front-end e il funzionamento dell'applicativo per dimostrare le funzionalità sviluppate.
+All'interno del documento verranno illustrate le istruzioni per avviare il #glossario("back-end") e il #glossario("front-end") e il funzionamento dell'applicativo per dimostrare le funzionalità sviluppate.
 
 == Glossario
 All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi o termini tecnici per semplificare la scrittura e la lettura. Per garantire che quanto scritto sia comprensibile a chiunque, è possibile usufruire del #link("https://archi7echs-team.github.io/glossario.html", text(blue)[_glossario_]). Tutte le parole consultabili nel glossario saranno identificate da una "G", di colore blu, in pedice. Cliccando la parola, si aprirà il glossario nel sito web.
@@ -32,13 +32,13 @@ All'#glossario("interno") del documento saranno spesso utilizzati degli acronimi
 - Riferimento al #glossario("capitolato") 5 di *_Sanmarco Informatica SPA - 3Dataviz_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C5.pdf]) - _Ultimo accesso al documento 22/04/2025_
 - Riferimento alle slide IS: *_Regolamento del #glossario("progetto") didattico_*: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf", text(blue)[https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf]) -  _Ultimo accesso al documento 10/03/2025_
 - Riferimento al glossario (v 2.0.0): #link("https://archi7echs-team.github.io/glossario.html", text(blue)[https://archi7echs-team.github.io/glossario.html])
-- Riferimento alle Norme di Progetto (v 2.0.0): #link("https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf", text(blue)[https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf])
+- Riferimento alle #glossario("Norme di Progetto") (v 2.0.0): #link("https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf", text(blue)[https://archi7echs-team.github.io/documents/PB/Esterni/Analisi%20dei%20Requisiti_v2.0.0.pdf])
 
 #pb()
 
 = Requisiti
 
-Per garantire il corretto funzionamento dell'applicativo sviluppato, è necessario che l'ambiente in cui viene eseguito soddisfi determinati requisiti tecnici, sia dal punto di vista hardware che software.
+Per garantire il corretto funzionamento dell'applicativo sviluppato, è necessario che l'ambiente in cui viene eseguito soddisfi determinati requisiti tecnici, sia dal punto di vista #glossario("hardware") che #glossario("software").
 
 == Requisiti hardware
 
@@ -50,7 +50,7 @@ Nonostante l'applicazione sia eseguita tramite container Docker, e quindi indipe
 
 == Requisiti software
 
-È necessario che il sistema sia dotato dei seguenti strumenti:
+È necessario che il sistema sia dotato dei seguenti #glossario("strumenti"):
 
 - *Docker Engine*: versione ≥ 20.10
 - *Docker Compose*: versione ≥ 1.29 oppure 
@@ -112,9 +112,9 @@ Il sistema è stato progettato per supportare una configurazione modulare. I ser
 === Servizi principali
 
 I seguenti servizi sono fondamentali per l'avvio del sistema completo:
-- *db*: istanza PostgreSQL per la persistenza dei dati;
-- *app*: backend sviluppato in Java con Spring Boot;
-- *frontend*: interfaccia utente Svelte.
+- *#glossario("db")*: istanza PostgreSQL per la persistenza dei dati;
+- *app*: backend sviluppato in #glossario("Java") con #glossario("Spring Boot");
+- *frontend*: interfaccia utente #glossario("Svelte").
 
 Questi tre servizi devono essere sempre inclusi, salvo configurazioni particolari.
 
@@ -140,8 +140,8 @@ _L'opzione -d avvia i container in background. In caso si desideri mantenere vis
 
 Per arrestare l’intera infrastruttura, mantenendo però i volumi dati si deve eseguire il seguente comando: ```bash docker compose down```
 
-Se si desidera rimuovere anche i volumi associati (ad esempio per un reset completo del database): ```bash docker compose down -v```. 
-In questo caso, il database verrà ricreato alla successiva esecuzione del sistema, ma tutti i dati precedentemente memorizzati andranno persi.
+Se si desidera rimuovere anche i volumi associati (ad esempio per un reset completo del #glossario("database")): ```bash docker compose down -v```. 
+In questo caso, il #glossario("database") verrà ricreato alla successiva esecuzione del sistema, ma tutti i dati precedentemente memorizzati andranno persi.
 
 == Ripristino completo del sistema
 
@@ -159,7 +159,7 @@ Durante l’uso del file .env, è importante ricordare:
 #pb()
 
 = Guida all'uso di 3Dataviz
-Per accedere all'applicazione 3Dataviz bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
+Per accedere all'applicazione #glossario("3Dataviz") bisogna recarsi al link _localhost:5173_ dopo aver svolto tutte le operazioni spiegate nella sezione di build e di avvio del sistema. (@build_sistema)
 
 == Schermata principale
 All'avvio del sito verrà caricato un grafico di default, utile per poter prendere confidenza con l'interfaccia utente dell'applicazione, senza dover effettuare un caricamento di dati. \ Si può osservare il pannello per le impostazioni e i filtri di visualizzazione nell'angolo in alto a destra, mentre, nell'angolo in basso a sinistra, si posiziona il gizmo (@gizmo). \ 
@@ -178,6 +178,8 @@ In alto a destra nella schermata principale si trova il pannello delle impostazi
   caption: [Pannello delle impostazioni e sotto-pannelli],
 ) <imgSETTINGS>
 
+#pb();
+
 === Impostazioni per la camera
 Nel sotto-pannello _Camera_ sono presenti tre pulsanti con le seguenti funzionalità:
 - *Reset*: ritornare alla visualizzazione di default tramite il pulsante _Reset position_ 
@@ -191,9 +193,9 @@ Nel sotto-pannello _Camera_ sono presenti tre pulsanti con le seguenti funzional
 
 === Caricamento fonte dati
 Nel sotto-pannello _Source_ è possibile caricare i dati da visualizzare. Per farlo bisogna selezionare una delle tre modalità di caricamento dati tramite il corrispettivo pulsante _Select_. Le tre modalità sono:
-- *External API*: questa modalità caricherà i dati dall'API esterna "Weather Forecast" dopo aver cliccato il pulsante _Select API_
-- *DB1*: questa modalità caricherà i dati reperiti tramite una chiamata al database, dopo aver cliccato sul pulsante _Select DB_
-- *CSV*: questa modalità caricherà i dati a partire da un file CSV caricato dall'utente. Per usufruire di questa modalità bisognerà prima caricare il suddetto file trascinandolo all'interno dell'area dedicata, individuabile dall'icona di _upload_, (viene detto: _drag-and-drop_) o utilizzando l'interfaccia grafica dedicata, attivabile cliccando sulla stessa area; a questo punto sarà possibile confermare il file scelto con il pulsante _Select CVS_, oppure rimuovere il file caricato tramite il pulsante _Delete_, che apparirà solo una volta caricato un file.
+- *External #glossario("API")*: questa modalità caricherà i dati dall'#glossario("API") esterna "Weather Forecast" dopo aver cliccato il pulsante _Select API_
+- *DB1*: questa modalità caricherà i dati reperiti tramite una chiamata al #glossario("database"), dopo aver cliccato sul pulsante _Select DB_
+- *CSV*: questa modalità caricherà i dati a partire da un file CSV caricato dall'utente. Per usufruire di questa modalità bisognerà prima caricare il suddetto file trascinandolo all'interno dell'area dedicata, individuabile dall'icona di _upload_, (viene detto: _drag-and-drop_) o utilizzando l'interfaccia grafica dedicata, attivabile cliccando sulla stessa area; a questo punto sarà possibile confermare il file scelto con il pulsante _Select CSV_, oppure rimuovere il file caricato tramite il pulsante _Delete_, che apparirà solo una volta caricato un file.
 
 #figure(
   image("/img/mu/source.jpg", width: 85%),
@@ -291,14 +293,14 @@ Nell'angolo in basso a sinistra della schermata principale si trova il gizmo, un
 
 === Descrizione
 
-Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salvati all'interno del database. Restituisce le etichette univoche per gli assi X e Z e una matrice bidimensionale contenente i valori Y corrispondenti a ciascuna combinazione di etichette X e Z, pronta per essere utilizzata in visualizzazioni come mappe di calore.
+Questo endpoint permette di ottenere un #glossario("set di dati") di coordinate (x, y, z) salvati all'interno del #glossario("database"). Restituisce le etichette univoche per gli assi X e Z e una matrice bidimensionale contenente i valori Y corrispondenti a ciascuna combinazione di etichette X e Z, pronta per essere utilizzata in visualizzazioni come mappe di calore.
 
 === Parametri
 
 - *`datasetType`* (_Stringa, Opzionale_):
-  - *Scopo:* Permette di filtrare i dati e selezionare un specifico sottoinsieme di coordinate dal database.
+  - *Scopo:* Permette di filtrare i dati e selezionare un specifico sottoinsieme di coordinate dal #glossario("database").
   - *Valori Accettati:* `SMALL`, `MEDIUM`, `LARGE`.
-  - *Default:* Se questo parametro viene omesso nella richiesta, il sistema utilizzerà automaticamente il valore `"LARGE"` per recuperare il set di dati predefinito.
+  - *Default:* Se questo parametro viene omesso nella richiesta, il sistema utilizzerà automaticamente il valore `"LARGE"` per recuperare il #glossario("set di dati") predefinito.
 
 === Esempi di utilizzo
 
@@ -313,7 +315,7 @@ Questo endpoint permette di ottenere un set di dati di coordinate (x, y, z) salv
   ```
 
 === Risposta successo (HTTP 200 OK)
-Se la richiesta ha successo, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto `MatrixData`.
+Se la richiesta ha successo, l'#glossario("API") risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto `MatrixData`.
 
 === Corpo della risposta
 ```json
@@ -375,10 +377,10 @@ curl -X POST -F "file=@/percorso/del/file.csv" http://localhost:8080/api/uploadC
 ```
 
 === Risposta successo (HTTP 200 OK)
-Se il file CSV è valido e rispetta tutti i vincoli, l'API risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
+Se il file CSV è valido e rispetta tutti i vincoli, l'#glossario("API") risponde con uno stato HTTP 200 OK e un corpo JSON contenente l'oggetto MatrixData.
 
 === Risposta errore
-In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP di errore, tipicamente:
+In caso di problemi con il file caricato, l'#glossario("API") risponderà con uno stato HTTP di errore, tipicamente:
 
   - *HTTP 400 Bad Request*: Se il file non è un CSV valido, ha un formato errato, contiene celle vuote non permesse, valori non numerici, struttura inconsistente, o supera i limiti dimensionali (righe/colonne/punti dati). Il corpo della risposta contiene un messaggio di errore dettagliato.
   - *HTTP 413 Payload Too Large*: Se il file supera il limite massimo di dimensione (es. 10 MB).
@@ -399,11 +401,11 @@ In caso di problemi con il file caricato, l'API risponderà con uno stato HTTP d
 == GET /api/external/data
 === Descrizione
 
-Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo caso un servizio di previsioni meteo come Open-Meteo. Non richiede alcun parametro dall'utente. Il servizio backend contatta l'API esterna, ne interpreta la risposta (che si aspetta sia in formato JSON e segua una certa struttura, come quella di Open-Meteo con dati orari) e la trasforma nel formato standard `MatrixData` per la visualizzazione.
+Questo endpoint recupera dati da una sorgente esterna preconfigurata in questo caso un servizio di previsioni meteo come Open-Meteo. Non richiede alcun parametro dall'utente. Il servizio backend contatta l'#glossario("API") esterna, ne interpreta la risposta (che si aspetta sia in formato JSON e segua una certa struttura, come quella di Open-Meteo con dati orari) e la trasforma nel formato #glossario("standard") `MatrixData` per la visualizzazione.
 
 === Parametri
 
-Nessun parametro richiesto per questo endpoint. La sorgente dati e gli eventuali parametri per l'API esterna sono configurati nel backend.
+Nessun parametro richiesto per questo endpoint. La #glossario("sorgente dati") e gli eventuali parametri per l'#glossario("API") esterna sono configurati nel backend.
 
 === Esempio di utilizzo
 ```bash
@@ -412,17 +414,17 @@ curl -X GET http://localhost:8080/api/external/data
 
 === Risposta successo (HTTP 200 OK)
 
-Se la comunicazione con l'API esterna ha successo e la risposta viene interpretata correttamente, l'API risponde con uno stato `HTTP 200 OK` e un corpo JSON contenente l'oggetto `MatrixData`.
+Se la comunicazione con l'#glossario("API") esterna ha successo e la risposta viene interpretata correttamente, l'#glossario("API") risponde con uno stato `HTTP 200 OK` e un corpo JSON contenente l'oggetto `MatrixData`.
 
 === Risposta errore
 
-Possono verificarsi diversi errori durante il tentativo di recuperare o processare i dati esterni. L'API risponderà tipicamente con uno stato HTTP di errore della serie 5xx, indicando un problema nel backend o nella comunicazione con il servizio esterno:
+Possono verificarsi diversi errori durante il tentativo di recuperare o processare i dati #glossario("esterni"). L'#glossario("API") risponderà tipicamente con uno stato HTTP di errore della serie 5xx, indicando un problema nel backend o nella comunicazione con il servizio #glossario("esterno"):
 
 - HTTP 5xx (es. 500 Internal Server Error, 502 Bad Gateway, 504 Gateway Timeout):
-  - Problemi di rete o impossibilità di raggiungere il servizio esterno configurato.
-  - Timeout scaduto durante l'attesa della risposta dal servizio esterno (basato sulla configurazione external.api.timeout).
-  - Il servizio esterno ha restituito un errore.
-  - La risposta ricevuta dal servizio esterno non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
+  - Problemi di rete o impossibilità di raggiungere il servizio #glossario("esterno") configurato.
+  - Timeout scaduto durante l'attesa della risposta dal servizio #glossario("esterno") (basato sulla configurazione external.api.timeout).
+  - Il servizio #glossario("esterno") ha restituito un errore.
+  - La risposta ricevuta dal servizio #glossario("esterno") non è nel formato atteso (es. non è JSON valido o manca la struttura dati richiesta come hourly).
   - La risposta ricevuta, seppur valida, contiene un numero di punti dati superiore al limite massimo configurato nel backend (nel nostro caso 1000).
 
 === Corpo della risposta
